@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Automation.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Automation.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Automation.V20200113Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Automation.V20200113Preview.PrivateEndpointConnectionArgs
         {
             AutomationAccountName = "ddb1",
             PrivateEndpointConnectionName = "privateEndpointConnectionName",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Automation.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Automation.V20200113Preview.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
             {
                 Description = "Approved by johndoe@contoso.com",
                 Status = "Approved",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.automation.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.automation.v20200113preview.PrivateEndpointConnection("privateEndpointConnection",
     automation_account_name="ddb1",
     private_endpoint_connection_name="privateEndpointConnectionName",
     private_link_service_connection_state={
@@ -74,7 +74,7 @@ private_endpoint_connection = azure_nextgen.automation.PrivateEndpointConnection
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.automation.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.automation.v20200113preview.PrivateEndpointConnection("privateEndpointConnection", {
     automationAccountName: "ddb1",
     privateEndpointConnectionName: "privateEndpointConnectionName",
     privateLinkServiceConnectionState: {

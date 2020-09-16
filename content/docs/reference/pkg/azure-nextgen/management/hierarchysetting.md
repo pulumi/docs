@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hierarchySetting = new AzureNextGen.Management.HierarchySetting("hierarchySetting", new AzureNextGen.Management.HierarchySettingArgs
+        var hierarchySetting = new AzureNextGen.Management.Latest.HierarchySetting("hierarchySetting", new AzureNextGen.Management.Latest.HierarchySettingArgs
         {
             DefaultManagementGroup = "/providers/Microsoft.Management/managementGroups/DefaultGroup",
             GroupId = "root",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hierarchy_setting = azure_nextgen.management.HierarchySetting("hierarchySetting",
+hierarchy_setting = azure_nextgen.management.latest.HierarchySetting("hierarchySetting",
     default_management_group="/providers/Microsoft.Management/managementGroups/DefaultGroup",
     group_id="root",
     require_authorization_for_group_creation=True)
@@ -65,7 +65,7 @@ hierarchy_setting = azure_nextgen.management.HierarchySetting("hierarchySetting"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hierarchySetting = new azure_nextgen.management.HierarchySetting("hierarchySetting", {
+const hierarchySetting = new azure_nextgen.management.latest.HierarchySetting("hierarchySetting", {
     defaultManagementGroup: "/providers/Microsoft.Management/managementGroups/DefaultGroup",
     groupId: "root",
     requireAuthorizationForGroupCreation: true,

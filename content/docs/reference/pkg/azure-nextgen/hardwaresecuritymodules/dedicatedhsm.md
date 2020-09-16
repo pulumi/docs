@@ -26,26 +26,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedHsm = new AzureNextGen.Hardwaresecuritymodules.DedicatedHsm("dedicatedHsm", new AzureNextGen.Hardwaresecuritymodules.DedicatedHsmArgs
+        var dedicatedHsm = new AzureNextGen.HardwareSecurityModules.V20181031Preview.DedicatedHsm("dedicatedHsm", new AzureNextGen.HardwareSecurityModules.V20181031Preview.DedicatedHsmArgs
         {
             Location = "westus",
             Name = "hsm1",
-            NetworkProfile = new AzureNextGen.Hardwaresecuritymodules.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Hardwaresecuritymodules.Inputs.NetworkInterfaceArgs
+                    new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.NetworkInterfaceArgs
                     {
                         PrivateIpAddress = "1.0.0.1",
                     },
                 },
-                Subnet = new AzureNextGen.Hardwaresecuritymodules.Inputs.ApiEntityReferenceArgs
+                Subnet = new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.ApiEntityReferenceArgs
                 {
                     Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
                 },
             },
             ResourceGroupName = "hsm-group",
-            Sku = new AzureNextGen.Hardwaresecuritymodules.Inputs.SkuArgs
+            Sku = new AzureNextGen.HardwareSecurityModules.V20181031Preview.Inputs.SkuArgs
             {
                 Name = "SafeNet Luna Network HSM A790",
             },
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_hsm = azure_nextgen.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm",
+dedicated_hsm = azure_nextgen.hardwaresecuritymodules.v20181031preview.DedicatedHsm("dedicatedHsm",
     location="westus",
     name="hsm1",
     network_profile={
@@ -105,7 +105,7 @@ dedicated_hsm = azure_nextgen.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm", {
+const dedicatedHsm = new azure_nextgen.hardwaresecuritymodules.v20181031preview.DedicatedHsm("dedicatedHsm", {
     location: "westus",
     name: "hsm1",
     networkProfile: {

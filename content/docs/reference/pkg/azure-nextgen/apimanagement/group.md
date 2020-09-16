@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @group = new AzureNextGen.Apimanagement.Group("group", new AzureNextGen.Apimanagement.GroupArgs
+        var @group = new AzureNextGen.ApiManagement.Latest.Group("group", new AzureNextGen.ApiManagement.Latest.GroupArgs
         {
             DisplayName = "temp group",
             GroupId = "tempgroup",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-group = azure_nextgen.apimanagement.Group("group",
+group = azure_nextgen.apimanagement.latest.Group("group",
     display_name="temp group",
     group_id="tempgroup",
     resource_group_name="rg1",
@@ -67,7 +67,7 @@ group = azure_nextgen.apimanagement.Group("group",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const group = new azure_nextgen.apimanagement.Group("group", {
+const group = new azure_nextgen.apimanagement.latest.Group("group", {
     displayName: "temp group",
     groupId: "tempgroup",
     resourceGroupName: "rg1",
@@ -88,7 +88,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @group = new AzureNextGen.Apimanagement.Group("group", new AzureNextGen.Apimanagement.GroupArgs
+        var @group = new AzureNextGen.ApiManagement.Latest.Group("group", new AzureNextGen.ApiManagement.Latest.GroupArgs
         {
             Description = "new group to test",
             DisplayName = "NewGroup (samiraad.onmicrosoft.com)",
@@ -116,7 +116,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-group = azure_nextgen.apimanagement.Group("group",
+group = azure_nextgen.apimanagement.latest.Group("group",
     description="new group to test",
     display_name="NewGroup (samiraad.onmicrosoft.com)",
     external_id="aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d",
@@ -135,7 +135,7 @@ group = azure_nextgen.apimanagement.Group("group",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const group = new azure_nextgen.apimanagement.Group("group", {
+const group = new azure_nextgen.apimanagement.latest.Group("group", {
     description: "new group to test",
     displayName: "NewGroup (samiraad.onmicrosoft.com)",
     externalId: "aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataConnector = new AzureNextGen.Operationalinsights.DataConnector("dataConnector", new AzureNextGen.Operationalinsights.DataConnectorArgs
+        var dataConnector = new AzureNextGen.OperationalInsights.Latest.DataConnector("dataConnector", new AzureNextGen.OperationalInsights.Latest.DataConnectorArgs
         {
             DataConnectorId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_connector = azure_nextgen.operationalinsights.DataConnector("dataConnector",
+data_connector = azure_nextgen.operationalinsights.latest.DataConnector("dataConnector",
     data_connector_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind="Office365",
@@ -69,7 +69,7 @@ data_connector = azure_nextgen.operationalinsights.DataConnector("dataConnector"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataConnector = new azure_nextgen.operationalinsights.DataConnector("dataConnector", {
+const dataConnector = new azure_nextgen.operationalinsights.latest.DataConnector("dataConnector", {
     dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind: "Office365",

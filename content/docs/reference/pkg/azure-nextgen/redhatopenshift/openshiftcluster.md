@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var openShiftCluster = new AzureNextGen.Redhatopenshift.OpenShiftCluster("openShiftCluster", new AzureNextGen.Redhatopenshift.OpenShiftClusterArgs
+        var openShiftCluster = new AzureNextGen.RedHatOpenShift.Latest.OpenShiftCluster("openShiftCluster", new AzureNextGen.RedHatOpenShift.Latest.OpenShiftClusterArgs
         {
-            ApiserverProfile = new AzureNextGen.Redhatopenshift.Inputs.APIServerProfileArgs
+            ApiserverProfile = new AzureNextGen.RedHatOpenShift.Latest.Inputs.APIServerProfileArgs
             {
                 Visibility = "Public",
             },
-            ClusterProfile = new AzureNextGen.Redhatopenshift.Inputs.ClusterProfileArgs
+            ClusterProfile = new AzureNextGen.RedHatOpenShift.Latest.Inputs.ClusterProfileArgs
             {
                 Domain = "cluster.location.aroapp.io",
                 PullSecret = "{\"auths\":{\"registry.connect.redhat.com\":{\"auth\":\"\"},\"registry.redhat.io\":{\"auth\":\"\"}}}",
@@ -41,26 +41,26 @@ class MyStack : Stack
             ConsoleProfile = ,
             IngressProfiles = 
             {
-                new AzureNextGen.Redhatopenshift.Inputs.IngressProfileArgs
+                new AzureNextGen.RedHatOpenShift.Latest.Inputs.IngressProfileArgs
                 {
                     Name = "default",
                     Visibility = "Public",
                 },
             },
             Location = "location",
-            MasterProfile = new AzureNextGen.Redhatopenshift.Inputs.MasterProfileArgs
+            MasterProfile = new AzureNextGen.RedHatOpenShift.Latest.Inputs.MasterProfileArgs
             {
                 SubnetId = "/subscriptions/subscriptionId/resourceGroups/vnetResourceGroup/providers/Microsoft.Network/virtualNetworks/vnet/subnets/master",
                 VmSize = "Standard_D8s_v3",
             },
-            NetworkProfile = new AzureNextGen.Redhatopenshift.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.RedHatOpenShift.Latest.Inputs.NetworkProfileArgs
             {
                 PodCidr = "10.128.0.0/14",
                 ServiceCidr = "172.30.0.0/16",
             },
             ResourceGroupName = "resourceGroup",
             ResourceName = "resourceName",
-            ServicePrincipalProfile = new AzureNextGen.Redhatopenshift.Inputs.ServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.RedHatOpenShift.Latest.Inputs.ServicePrincipalProfileArgs
             {
                 ClientId = "clientId",
                 ClientSecret = "clientSecret",
@@ -71,7 +71,7 @@ class MyStack : Stack
             },
             WorkerProfiles = 
             {
-                new AzureNextGen.Redhatopenshift.Inputs.WorkerProfileArgs
+                new AzureNextGen.RedHatOpenShift.Latest.Inputs.WorkerProfileArgs
                 {
                     Count = 3,
                     DiskSizeGB = 128,
@@ -99,7 +99,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-open_shift_cluster = azure_nextgen.redhatopenshift.OpenShiftCluster("openShiftCluster",
+open_shift_cluster = azure_nextgen.redhatopenshift.latest.OpenShiftCluster("openShiftCluster",
     apiserver_profile={
         "visibility": "Public",
     },
@@ -149,7 +149,7 @@ open_shift_cluster = azure_nextgen.redhatopenshift.OpenShiftCluster("openShiftCl
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const openShiftCluster = new azure_nextgen.redhatopenshift.OpenShiftCluster("openShiftCluster", {
+const openShiftCluster = new azure_nextgen.redhatopenshift.latest.OpenShiftCluster("openShiftCluster", {
     apiserverProfile: {
         visibility: "Public",
     },

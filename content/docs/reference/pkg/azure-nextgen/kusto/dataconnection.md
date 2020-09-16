@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataConnection = new AzureNextGen.Kusto.DataConnection("dataConnection", new AzureNextGen.Kusto.DataConnectionArgs
+        var dataConnection = new AzureNextGen.Kusto.Latest.DataConnection("dataConnection", new AzureNextGen.Kusto.Latest.DataConnectionArgs
         {
             ClusterName = "kustoclusterrptest4",
             DataConnectionName = "DataConnections8",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_connection = azure_nextgen.kusto.DataConnection("dataConnection",
+data_connection = azure_nextgen.kusto.latest.DataConnection("dataConnection",
     cluster_name="kustoclusterrptest4",
     data_connection_name="DataConnections8",
     database_name="KustoDatabase8",
@@ -71,7 +71,7 @@ data_connection = azure_nextgen.kusto.DataConnection("dataConnection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataConnection = new azure_nextgen.kusto.DataConnection("dataConnection", {
+const dataConnection = new azure_nextgen.kusto.latest.DataConnection("dataConnection", {
     clusterName: "kustoclusterrptest4",
     dataConnectionName: "DataConnections8",
     databaseName: "KustoDatabase8",

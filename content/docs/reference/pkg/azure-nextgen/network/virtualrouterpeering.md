@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualRouterPeering = new AzureNextGen.Network.VirtualRouterPeering("virtualRouterPeering", new AzureNextGen.Network.VirtualRouterPeeringArgs
+        var virtualRouterPeering = new AzureNextGen.Network.Latest.VirtualRouterPeering("virtualRouterPeering", new AzureNextGen.Network.Latest.VirtualRouterPeeringArgs
         {
             PeerAsn = 20000,
             PeerIp = "192.168.1.5",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_router_peering = azure_nextgen.network.VirtualRouterPeering("virtualRouterPeering",
+virtual_router_peering = azure_nextgen.network.latest.VirtualRouterPeering("virtualRouterPeering",
     peer_asn=20000,
     peer_ip="192.168.1.5",
     peering_name="peering1",
@@ -69,7 +69,7 @@ virtual_router_peering = azure_nextgen.network.VirtualRouterPeering("virtualRout
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualRouterPeering = new azure_nextgen.network.VirtualRouterPeering("virtualRouterPeering", {
+const virtualRouterPeering = new azure_nextgen.network.latest.VirtualRouterPeering("virtualRouterPeering", {
     peerAsn: 20000,
     peerIp: "192.168.1.5",
     peeringName: "peering1",

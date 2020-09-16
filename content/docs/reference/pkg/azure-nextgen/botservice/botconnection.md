@@ -12,6 +12,76 @@ meta_desc: "Explore the BotConnection resource of the botservice module, includi
 
 Bot channel resource definition
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Create Connection Setting
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var botConnection = new AzureNextGen.BotService.Latest.BotConnection("botConnection", new AzureNextGen.BotService.Latest.BotConnectionArgs
+        {
+            ConnectionName = "sampleConnection",
+            Etag = "etag1",
+            Location = "West US",
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+bot_connection = azure_nextgen.botservice.latest.BotConnection("botConnection",
+    connection_name="sampleConnection",
+    etag="etag1",
+    location="West US",
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure_nextgen";
+
+const botConnection = new azure_nextgen.botservice.latest.BotConnection("botConnection", {
+    connectionName: "sampleConnection",
+    etag: "etag1",
+    location: "West US",
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+});
+
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BotConnection Resource {#create}

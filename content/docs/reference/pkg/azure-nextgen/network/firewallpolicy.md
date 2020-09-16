@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicy = new AzureNextGen.Network.FirewallPolicy("firewallPolicy", new AzureNextGen.Network.FirewallPolicyArgs
+        var firewallPolicy = new AzureNextGen.Network.Latest.FirewallPolicy("firewallPolicy", new AzureNextGen.Network.Latest.FirewallPolicyArgs
         {
-            DnsSettings = new AzureNextGen.Network.Inputs.DnsSettingsArgs
+            DnsSettings = new AzureNextGen.Network.Latest.Inputs.DnsSettingsArgs
             {
                 EnableProxy = true,
                 RequireProxyForNetworkRules = false,
@@ -45,7 +45,7 @@ class MyStack : Stack
                 { "key1", "value1" },
             },
             ThreatIntelMode = "Alert",
-            ThreatIntelWhitelist = new AzureNextGen.Network.Inputs.FirewallPolicyThreatIntelWhitelistArgs
+            ThreatIntelWhitelist = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyThreatIntelWhitelistArgs
             {
                 Fqdns = 
                 {
@@ -75,7 +75,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy = azure_nextgen.network.FirewallPolicy("firewallPolicy",
+firewall_policy = azure_nextgen.network.latest.FirewallPolicy("firewallPolicy",
     dns_settings={
         "enableProxy": True,
         "requireProxyForNetworkRules": False,
@@ -103,7 +103,7 @@ firewall_policy = azure_nextgen.network.FirewallPolicy("firewallPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const firewallPolicy = new azure_nextgen.network.FirewallPolicy("firewallPolicy", {
+const firewallPolicy = new azure_nextgen.network.latest.FirewallPolicy("firewallPolicy", {
     dnsSettings: {
         enableProxy: true,
         requireProxyForNetworkRules: false,

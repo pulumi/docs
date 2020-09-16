@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Devices.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Devices.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Devices.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Devices.Latest.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "myPrivateEndpointConnection",
             ResourceGroupName = "myResourceGroup",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.devices.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.devices.latest.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="myPrivateEndpointConnection",
     resource_group_name="myResourceGroup",
     resource_name="testHub")
@@ -65,7 +65,7 @@ private_endpoint_connection = azure_nextgen.devices.PrivateEndpointConnection("p
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.devices.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.devices.latest.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "myPrivateEndpointConnection",
     resourceGroupName: "myResourceGroup",
     resourceName: "testHub",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var runbook = new AzureNextGen.Automation.Runbook("runbook", new AzureNextGen.Automation.RunbookArgs
+        var runbook = new AzureNextGen.Automation.Latest.Runbook("runbook", new AzureNextGen.Automation.Latest.RunbookArgs
         {
             AutomationAccountName = "ContoseAutomationAccount",
             Description = "Description of the Runbook",
@@ -35,9 +35,9 @@ class MyStack : Stack
             LogProgress = true,
             LogVerbose = false,
             Name = "Get-AzureVMTutorial",
-            PublishContentLink = new AzureNextGen.Automation.Inputs.ContentLinkArgs
+            PublishContentLink = new AzureNextGen.Automation.Latest.Inputs.ContentLinkArgs
             {
-                ContentHash = new AzureNextGen.Automation.Inputs.ContentHashArgs
+                ContentHash = new AzureNextGen.Automation.Latest.Inputs.ContentHashArgs
                 {
                     Algorithm = "SHA256",
                     Value = "115775B8FF2BE672D8A946BD0B489918C724DDE15A440373CA54461D53010A80",
@@ -71,7 +71,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-runbook = azure_nextgen.automation.Runbook("runbook",
+runbook = azure_nextgen.automation.latest.Runbook("runbook",
     automation_account_name="ContoseAutomationAccount",
     description="Description of the Runbook",
     location="East US 2",
@@ -104,7 +104,7 @@ runbook = azure_nextgen.automation.Runbook("runbook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const runbook = new azure_nextgen.automation.Runbook("runbook", {
+const runbook = new azure_nextgen.automation.latest.Runbook("runbook", {
     automationAccountName: "ContoseAutomationAccount",
     description: "Description of the Runbook",
     location: "East US 2",
@@ -142,7 +142,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var runbook = new AzureNextGen.Automation.Runbook("runbook", new AzureNextGen.Automation.RunbookArgs
+        var runbook = new AzureNextGen.Automation.Latest.Runbook("runbook", new AzureNextGen.Automation.Latest.RunbookArgs
         {
             AutomationAccountName = "ContoseAutomationAccount",
             Description = "Description of the Runbook",
@@ -178,7 +178,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-runbook = azure_nextgen.automation.Runbook("runbook",
+runbook = azure_nextgen.automation.latest.Runbook("runbook",
     automation_account_name="ContoseAutomationAccount",
     description="Description of the Runbook",
     draft={},
@@ -204,7 +204,7 @@ runbook = azure_nextgen.automation.Runbook("runbook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const runbook = new azure_nextgen.automation.Runbook("runbook", {
+const runbook = new azure_nextgen.automation.latest.Runbook("runbook", {
     automationAccountName: "ContoseAutomationAccount",
     description: "Description of the Runbook",
     draft: {},

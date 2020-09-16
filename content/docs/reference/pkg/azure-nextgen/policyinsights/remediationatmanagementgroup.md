@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var remediationAtManagementGroup = new AzureNextGen.Policyinsights.RemediationAtManagementGroup("remediationAtManagementGroup", new AzureNextGen.Policyinsights.RemediationAtManagementGroupArgs
+        var remediationAtManagementGroup = new AzureNextGen.PolicyInsights.Latest.RemediationAtManagementGroup("remediationAtManagementGroup", new AzureNextGen.PolicyInsights.Latest.RemediationAtManagementGroupArgs
         {
             ManagementGroupId = "financeMg",
             ManagementGroupsNamespace = "Microsoft.Management",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-remediation_at_management_group = azure_nextgen.policyinsights.RemediationAtManagementGroup("remediationAtManagementGroup",
+remediation_at_management_group = azure_nextgen.policyinsights.latest.RemediationAtManagementGroup("remediationAtManagementGroup",
     management_group_id="financeMg",
     management_groups_namespace="Microsoft.Management",
     policy_assignment_id="/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
@@ -67,7 +67,7 @@ remediation_at_management_group = azure_nextgen.policyinsights.RemediationAtMana
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const remediationAtManagementGroup = new azure_nextgen.policyinsights.RemediationAtManagementGroup("remediationAtManagementGroup", {
+const remediationAtManagementGroup = new azure_nextgen.policyinsights.latest.RemediationAtManagementGroup("remediationAtManagementGroup", {
     managementGroupId: "financeMg",
     managementGroupsNamespace: "Microsoft.Management",
     policyAssignmentId: "/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",

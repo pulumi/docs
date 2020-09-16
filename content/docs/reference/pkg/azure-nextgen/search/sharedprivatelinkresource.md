@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sharedPrivateLinkResource = new AzureNextGen.Search.SharedPrivateLinkResource("sharedPrivateLinkResource", new AzureNextGen.Search.SharedPrivateLinkResourceArgs
+        var sharedPrivateLinkResource = new AzureNextGen.Search.Latest.SharedPrivateLinkResource("sharedPrivateLinkResource", new AzureNextGen.Search.Latest.SharedPrivateLinkResourceArgs
         {
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-shared_private_link_resource = azure_nextgen.search.SharedPrivateLinkResource("sharedPrivateLinkResource",
+shared_private_link_resource = azure_nextgen.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource",
     resource_group_name="rg1",
     search_service_name="mysearchservice",
     shared_private_link_resource_name="testResource")
@@ -65,7 +65,7 @@ shared_private_link_resource = azure_nextgen.search.SharedPrivateLinkResource("s
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sharedPrivateLinkResource = new azure_nextgen.search.SharedPrivateLinkResource("sharedPrivateLinkResource", {
+const sharedPrivateLinkResource = new azure_nextgen.search.latest.SharedPrivateLinkResource("sharedPrivateLinkResource", {
     resourceGroupName: "rg1",
     searchServiceName: "mysearchservice",
     sharedPrivateLinkResourceName: "testResource",

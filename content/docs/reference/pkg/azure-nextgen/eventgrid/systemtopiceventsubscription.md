@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var systemTopicEventSubscription = new AzureNextGen.Eventgrid.SystemTopicEventSubscription("systemTopicEventSubscription", new AzureNextGen.Eventgrid.SystemTopicEventSubscriptionArgs
+        var systemTopicEventSubscription = new AzureNextGen.EventGrid.V20200401Preview.SystemTopicEventSubscription("systemTopicEventSubscription", new AzureNextGen.EventGrid.V20200401Preview.SystemTopicEventSubscriptionArgs
         {
             Destination = 
             {
@@ -37,7 +37,7 @@ class MyStack : Stack
                 } },
             },
             EventSubscriptionName = "exampleEventSubscriptionName1",
-            Filter = new AzureNextGen.Eventgrid.Inputs.EventSubscriptionFilterArgs
+            Filter = new AzureNextGen.EventGrid.V20200401Preview.Inputs.EventSubscriptionFilterArgs
             {
                 IsSubjectCaseSensitive = false,
                 SubjectBeginsWith = "ExamplePrefix",
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-system_topic_event_subscription = azure_nextgen.eventgrid.SystemTopicEventSubscription("systemTopicEventSubscription",
+system_topic_event_subscription = azure_nextgen.eventgrid.v20200401preview.SystemTopicEventSubscription("systemTopicEventSubscription",
     destination={
         "endpointType": "WebHook",
         "properties": {
@@ -90,7 +90,7 @@ system_topic_event_subscription = azure_nextgen.eventgrid.SystemTopicEventSubscr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const systemTopicEventSubscription = new azure_nextgen.eventgrid.SystemTopicEventSubscription("systemTopicEventSubscription", {
+const systemTopicEventSubscription = new azure_nextgen.eventgrid.v20200401preview.SystemTopicEventSubscription("systemTopicEventSubscription", {
     destination: {
         endpointType: "WebHook",
         properties: {

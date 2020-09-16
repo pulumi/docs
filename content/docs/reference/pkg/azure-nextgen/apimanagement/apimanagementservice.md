@@ -26,28 +26,28 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.Apimanagement.ApiManagementService("apiManagementService", new AzureNextGen.Apimanagement.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
         {
             AdditionalLocations = 
             {
-                new AzureNextGen.Apimanagement.Inputs.AdditionalLocationArgs
+                new AzureNextGen.ApiManagement.Latest.Inputs.AdditionalLocationArgs
                 {
                     DisableGateway = true,
                     Location = "East US",
-                    Sku = new AzureNextGen.Apimanagement.Inputs.ApiManagementServiceSkuPropertiesArgs
+                    Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
                     {
                         Capacity = 1,
                         Name = "Premium",
                     },
                 },
             },
-            ApiVersionConstraint = new AzureNextGen.Apimanagement.Inputs.ApiVersionConstraintArgs
+            ApiVersionConstraint = new AzureNextGen.ApiManagement.Latest.Inputs.ApiVersionConstraintArgs
             {
                 MinApiVersion = "2019-01-01",
             },
             HostnameConfigurations = 
             {
-                new AzureNextGen.Apimanagement.Inputs.HostnameConfigurationArgs
+                new AzureNextGen.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     DefaultSslBinding = true,
@@ -55,14 +55,14 @@ class MyStack : Stack
                     HostName = "gateway1.msitesting.net",
                     Type = "Proxy",
                 },
-                new AzureNextGen.Apimanagement.Inputs.HostnameConfigurationArgs
+                new AzureNextGen.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     EncodedCertificate = "****** Base 64 Encoded Certificate ************",
                     HostName = "mgmt.msitesting.net",
                     Type = "Management",
                 },
-                new AzureNextGen.Apimanagement.Inputs.HostnameConfigurationArgs
+                new AzureNextGen.ApiManagement.Latest.Inputs.HostnameConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     EncodedCertificate = "****** Base 64 Encoded Certificate ************",
@@ -75,7 +75,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.Apimanagement.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 1,
                 Name = "Premium",
@@ -106,7 +106,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
     additional_locations=[{
         "disableGateway": True,
         "location": "East US",
@@ -165,7 +165,7 @@ api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiMa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
     additionalLocations: [{
         disableGateway: true,
         location: "East US",
@@ -229,14 +229,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.Apimanagement.ApiManagementService("apiManagementService", new AzureNextGen.Apimanagement.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
         {
             Location = "South Central US",
             PublisherEmail = "foo@contoso.com",
             PublisherName = "foo",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.Apimanagement.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 1,
                 Name = "Developer",
@@ -265,7 +265,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
     location="South Central US",
     publisher_email="foo@contoso.com",
     publisher_name="foo",
@@ -290,7 +290,7 @@ api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiMa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
     location: "South Central US",
     publisherEmail: "foo@contoso.com",
     publisherName: "foo",
@@ -320,9 +320,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.Apimanagement.ApiManagementService("apiManagementService", new AzureNextGen.Apimanagement.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
         {
-            Identity = new AzureNextGen.Apimanagement.Inputs.ApiManagementServiceIdentityArgs
+            Identity = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -331,7 +331,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.Apimanagement.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 0,
                 Name = "Consumption",
@@ -361,7 +361,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
     identity={
         "type": "SystemAssigned",
     },
@@ -390,7 +390,7 @@ api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiMa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
     identity: {
         type: "SystemAssigned",
     },
@@ -424,11 +424,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.Apimanagement.ApiManagementService("apiManagementService", new AzureNextGen.Apimanagement.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
         {
             Certificates = 
             {
-                new AzureNextGen.Apimanagement.Inputs.CertificateConfigurationArgs
+                new AzureNextGen.ApiManagement.Latest.Inputs.CertificateConfigurationArgs
                 {
                     CertificatePassword = "Password",
                     EncodedCertificate = "*******Base64 encoded Certificate******************",
@@ -440,7 +440,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.Apimanagement.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 1,
                 Name = "Basic",
@@ -470,7 +470,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
     certificates=[{
         "certificatePassword": "Password",
         "encodedCertificate": "*******Base64 encoded Certificate******************",
@@ -501,7 +501,7 @@ api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiMa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
     certificates: [{
         certificatePassword: "Password",
         encodedCertificate: "*******Base64 encoded Certificate******************",
@@ -537,9 +537,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiManagementService = new AzureNextGen.Apimanagement.ApiManagementService("apiManagementService", new AzureNextGen.Apimanagement.ApiManagementServiceArgs
+        var apiManagementService = new AzureNextGen.ApiManagement.Latest.ApiManagementService("apiManagementService", new AzureNextGen.ApiManagement.Latest.ApiManagementServiceArgs
         {
-            Identity = new AzureNextGen.Apimanagement.Inputs.ApiManagementServiceIdentityArgs
+            Identity = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -552,7 +552,7 @@ class MyStack : Stack
             PublisherName = "autorestsdk",
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Sku = new AzureNextGen.Apimanagement.Inputs.ApiManagementServiceSkuPropertiesArgs
+            Sku = new AzureNextGen.ApiManagement.Latest.Inputs.ApiManagementServiceSkuPropertiesArgs
             {
                 Capacity = 0,
                 Name = "Consumption",
@@ -582,7 +582,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiManagementService",
+api_management_service = azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService",
     identity={
         "type": "UserAssigned",
         "userAssignedIdentities": {
@@ -614,7 +614,7 @@ api_management_service = azure_nextgen.apimanagement.ApiManagementService("apiMa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiManagementService = new azure_nextgen.apimanagement.ApiManagementService("apiManagementService", {
+const apiManagementService = new azure_nextgen.apimanagement.latest.ApiManagementService("apiManagementService", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {

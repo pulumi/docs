@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var costAllocationRule = new AzureNextGen.Billing.CostAllocationRule("costAllocationRule", new AzureNextGen.Billing.CostAllocationRuleArgs
+        var costAllocationRule = new AzureNextGen.Billing.V20200301Preview.CostAllocationRule("costAllocationRule", new AzureNextGen.Billing.V20200301Preview.CostAllocationRuleArgs
         {
             BillingAccountId = "100",
             RuleName = "testRule",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cost_allocation_rule = azure_nextgen.billing.CostAllocationRule("costAllocationRule",
+cost_allocation_rule = azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule",
     billing_account_id="100",
     rule_name="testRule")
 
@@ -63,7 +63,7 @@ cost_allocation_rule = azure_nextgen.billing.CostAllocationRule("costAllocationR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const costAllocationRule = new azure_nextgen.billing.CostAllocationRule("costAllocationRule", {
+const costAllocationRule = new azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule", {
     billingAccountId: "100",
     ruleName: "testRule",
 });
@@ -82,7 +82,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var costAllocationRule = new AzureNextGen.Billing.CostAllocationRule("costAllocationRule", new AzureNextGen.Billing.CostAllocationRuleArgs
+        var costAllocationRule = new AzureNextGen.Billing.V20200301Preview.CostAllocationRule("costAllocationRule", new AzureNextGen.Billing.V20200301Preview.CostAllocationRuleArgs
         {
             BillingAccountId = "100",
             RuleName = "testRule",
@@ -105,7 +105,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cost_allocation_rule = azure_nextgen.billing.CostAllocationRule("costAllocationRule",
+cost_allocation_rule = azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule",
     billing_account_id="100",
     rule_name="testRule")
 
@@ -119,7 +119,7 @@ cost_allocation_rule = azure_nextgen.billing.CostAllocationRule("costAllocationR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const costAllocationRule = new azure_nextgen.billing.CostAllocationRule("costAllocationRule", {
+const costAllocationRule = new azure_nextgen.billing.v20200301preview.CostAllocationRule("costAllocationRule", {
     billingAccountId: "100",
     ruleName: "testRule",
 });

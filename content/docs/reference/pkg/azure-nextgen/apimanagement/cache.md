@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cache = new AzureNextGen.Apimanagement.Cache("cache", new AzureNextGen.Apimanagement.CacheArgs
+        var cache = new AzureNextGen.ApiManagement.Latest.Cache("cache", new AzureNextGen.ApiManagement.Latest.CacheArgs
         {
             CacheId = "westindia",
             ConnectionString = "contoso5.redis.cache.windows.net,ssl=true,password=...",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cache = azure_nextgen.apimanagement.Cache("cache",
+cache = azure_nextgen.apimanagement.latest.Cache("cache",
     cache_id="westindia",
     connection_string="contoso5.redis.cache.windows.net,ssl=true,password=...",
     description="Redis cache instances in West India",
@@ -71,7 +71,7 @@ cache = azure_nextgen.apimanagement.Cache("cache",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cache = new azure_nextgen.apimanagement.Cache("cache", {
+const cache = new azure_nextgen.apimanagement.latest.Cache("cache", {
     cacheId: "westindia",
     connectionString: "contoso5.redis.cache.windows.net,ssl=true,password=...",
     description: "Redis cache instances in West India",

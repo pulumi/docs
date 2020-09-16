@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var availabilitySet = new AzureNextGen.Compute.AvailabilitySet("availabilitySet", new AzureNextGen.Compute.AvailabilitySetArgs
+        var availabilitySet = new AzureNextGen.Compute.Latest.AvailabilitySet("availabilitySet", new AzureNextGen.Compute.Latest.AvailabilitySetArgs
         {
             AvailabilitySetName = "myAvailabilitySet",
             Location = "westus",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-availability_set = azure_nextgen.compute.AvailabilitySet("availabilitySet",
+availability_set = azure_nextgen.compute.latest.AvailabilitySet("availabilitySet",
     availability_set_name="myAvailabilitySet",
     location="westus",
     platform_fault_domain_count=2,
@@ -69,7 +69,7 @@ availability_set = azure_nextgen.compute.AvailabilitySet("availabilitySet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const availabilitySet = new azure_nextgen.compute.AvailabilitySet("availabilitySet", {
+const availabilitySet = new azure_nextgen.compute.latest.AvailabilitySet("availabilitySet", {
     availabilitySetName: "myAvailabilitySet",
     location: "westus",
     platformFaultDomainCount: 2,

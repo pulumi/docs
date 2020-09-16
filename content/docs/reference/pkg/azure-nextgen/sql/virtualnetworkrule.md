@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkRule = new AzureNextGen.Sql.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.Sql.VirtualNetworkRuleArgs
+        var virtualNetworkRule = new AzureNextGen.Sql.V20150501Preview.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.Sql.V20150501Preview.VirtualNetworkRuleArgs
         {
             IgnoreMissingVnetServiceEndpoint = false,
             ResourceGroupName = "Default",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_rule = azure_nextgen.sql.VirtualNetworkRule("virtualNetworkRule",
+virtual_network_rule = azure_nextgen.sql.v20150501preview.VirtualNetworkRule("virtualNetworkRule",
     ignore_missing_vnet_service_endpoint=False,
     resource_group_name="Default",
     server_name="vnet-test-svr",
@@ -69,7 +69,7 @@ virtual_network_rule = azure_nextgen.sql.VirtualNetworkRule("virtualNetworkRule"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualNetworkRule = new azure_nextgen.sql.VirtualNetworkRule("virtualNetworkRule", {
+const virtualNetworkRule = new azure_nextgen.sql.v20150501preview.VirtualNetworkRule("virtualNetworkRule", {
     ignoreMissingVnetServiceEndpoint: false,
     resourceGroupName: "Default",
     serverName: "vnet-test-svr",

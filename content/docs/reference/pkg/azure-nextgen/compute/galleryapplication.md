@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryApplication = new AzureNextGen.Compute.GalleryApplication("galleryApplication", new AzureNextGen.Compute.GalleryApplicationArgs
+        var galleryApplication = new AzureNextGen.Compute.Latest.GalleryApplication("galleryApplication", new AzureNextGen.Compute.Latest.GalleryApplicationArgs
         {
             Description = "This is the gallery application description.",
             Eula = "This is the gallery application EULA.",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_application = azure_nextgen.compute.GalleryApplication("galleryApplication",
+gallery_application = azure_nextgen.compute.latest.GalleryApplication("galleryApplication",
     description="This is the gallery application description.",
     eula="This is the gallery application EULA.",
     gallery_application_name="myGalleryApplicationName",
@@ -77,7 +77,7 @@ gallery_application = azure_nextgen.compute.GalleryApplication("galleryApplicati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const galleryApplication = new azure_nextgen.compute.GalleryApplication("galleryApplication", {
+const galleryApplication = new azure_nextgen.compute.latest.GalleryApplication("galleryApplication", {
     description: "This is the gallery application description.",
     eula: "This is the gallery application EULA.",
     galleryApplicationName: "myGalleryApplicationName",

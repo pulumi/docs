@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.Batch.Application("application", new AzureNextGen.Batch.ApplicationArgs
+        var application = new AzureNextGen.Batch.Latest.Application("application", new AzureNextGen.Batch.Latest.ApplicationArgs
         {
             AccountName = "sampleacct",
             AllowUpdates = false,
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.batch.Application("application",
+application = azure_nextgen.batch.latest.Application("application",
     account_name="sampleacct",
     allow_updates=False,
     application_name="app1",
@@ -69,7 +69,7 @@ application = azure_nextgen.batch.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const application = new azure_nextgen.batch.Application("application", {
+const application = new azure_nextgen.batch.latest.Application("application", {
     accountName: "sampleacct",
     allowUpdates: false,
     applicationName: "app1",

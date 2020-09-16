@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobStep = new AzureNextGen.Sql.JobStep("jobStep", new AzureNextGen.Sql.JobStepArgs
+        var jobStep = new AzureNextGen.Sql.V20170301Preview.JobStep("jobStep", new AzureNextGen.Sql.V20170301Preview.JobStepArgs
         {
-            Action = new AzureNextGen.Sql.Inputs.JobStepActionArgs
+            Action = new AzureNextGen.Sql.V20170301Preview.Inputs.JobStepActionArgs
             {
                 Source = "Inline",
                 Type = "TSql",
                 Value = "select 2",
             },
             Credential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1",
-            ExecutionOptions = new AzureNextGen.Sql.Inputs.JobStepExecutionOptionsArgs
+            ExecutionOptions = new AzureNextGen.Sql.V20170301Preview.Inputs.JobStepExecutionOptionsArgs
             {
                 InitialRetryIntervalSeconds = 11,
                 MaximumRetryIntervalSeconds = 222,
@@ -45,7 +45,7 @@ class MyStack : Stack
             },
             JobAgentName = "agent1",
             JobName = "job1",
-            Output = new AzureNextGen.Sql.Inputs.JobStepOutputArgs
+            Output = new AzureNextGen.Sql.V20170301Preview.Inputs.JobStepOutputArgs
             {
                 Credential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred0",
                 DatabaseName = "database3",
@@ -80,7 +80,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_step = azure_nextgen.sql.JobStep("jobStep",
+job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
     action={
         "source": "Inline",
         "type": "TSql",
@@ -122,7 +122,7 @@ job_step = azure_nextgen.sql.JobStep("jobStep",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const jobStep = new azure_nextgen.sql.JobStep("jobStep", {
+const jobStep = new azure_nextgen.sql.v20170301preview.JobStep("jobStep", {
     action: {
         source: "Inline",
         type: "TSql",
@@ -169,9 +169,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobStep = new AzureNextGen.Sql.JobStep("jobStep", new AzureNextGen.Sql.JobStepArgs
+        var jobStep = new AzureNextGen.Sql.V20170301Preview.JobStep("jobStep", new AzureNextGen.Sql.V20170301Preview.JobStepArgs
         {
-            Action = new AzureNextGen.Sql.Inputs.JobStepActionArgs
+            Action = new AzureNextGen.Sql.V20170301Preview.Inputs.JobStepActionArgs
             {
                 Value = "select 1",
             },
@@ -201,7 +201,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_step = azure_nextgen.sql.JobStep("jobStep",
+job_step = azure_nextgen.sql.v20170301preview.JobStep("jobStep",
     action={
         "value": "select 1",
     },
@@ -223,7 +223,7 @@ job_step = azure_nextgen.sql.JobStep("jobStep",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const jobStep = new azure_nextgen.sql.JobStep("jobStep", {
+const jobStep = new azure_nextgen.sql.v20170301preview.JobStep("jobStep", {
     action: {
         value: "select 1",
     },

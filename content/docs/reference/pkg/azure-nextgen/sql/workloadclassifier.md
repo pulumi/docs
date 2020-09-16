@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadClassifier = new AzureNextGen.Sql.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.WorkloadClassifierArgs
+        var workloadClassifier = new AzureNextGen.Sql.V20190601Preview.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.V20190601Preview.WorkloadClassifierArgs
         {
             Context = "test_context",
             DatabaseName = "testdb",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_classifier = azure_nextgen.sql.WorkloadClassifier("workloadClassifier",
+workload_classifier = azure_nextgen.sql.v20190601preview.WorkloadClassifier("workloadClassifier",
     context="test_context",
     database_name="testdb",
     end_time="14:00",
@@ -81,7 +81,7 @@ workload_classifier = azure_nextgen.sql.WorkloadClassifier("workloadClassifier",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workloadClassifier = new azure_nextgen.sql.WorkloadClassifier("workloadClassifier", {
+const workloadClassifier = new azure_nextgen.sql.v20190601preview.WorkloadClassifier("workloadClassifier", {
     context: "test_context",
     databaseName: "testdb",
     endTime: "14:00",
@@ -109,7 +109,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadClassifier = new AzureNextGen.Sql.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.WorkloadClassifierArgs
+        var workloadClassifier = new AzureNextGen.Sql.V20190601Preview.WorkloadClassifier("workloadClassifier", new AzureNextGen.Sql.V20190601Preview.WorkloadClassifierArgs
         {
             DatabaseName = "testdb",
             MemberName = "dbo",
@@ -136,7 +136,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_classifier = azure_nextgen.sql.WorkloadClassifier("workloadClassifier",
+workload_classifier = azure_nextgen.sql.v20190601preview.WorkloadClassifier("workloadClassifier",
     database_name="testdb",
     member_name="dbo",
     resource_group_name="Default-SQL-SouthEastAsia",
@@ -154,7 +154,7 @@ workload_classifier = azure_nextgen.sql.WorkloadClassifier("workloadClassifier",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workloadClassifier = new azure_nextgen.sql.WorkloadClassifier("workloadClassifier", {
+const workloadClassifier = new azure_nextgen.sql.v20190601preview.WorkloadClassifier("workloadClassifier", {
     databaseName: "testdb",
     memberName: "dbo",
     resourceGroupName: "Default-SQL-SouthEastAsia",

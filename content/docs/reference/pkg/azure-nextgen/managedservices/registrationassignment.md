@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registrationAssignment = new AzureNextGen.Managedservices.RegistrationAssignment("registrationAssignment", new AzureNextGen.Managedservices.RegistrationAssignmentArgs
+        var registrationAssignment = new AzureNextGen.ManagedServices.Latest.RegistrationAssignment("registrationAssignment", new AzureNextGen.ManagedServices.Latest.RegistrationAssignmentArgs
         {
             RegistrationAssignmentId = "26c128c2-fefa-4340-9bb1-6e081c90ada2",
             Scope = "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registration_assignment = azure_nextgen.managedservices.RegistrationAssignment("registrationAssignment",
+registration_assignment = azure_nextgen.managedservices.latest.RegistrationAssignment("registrationAssignment",
     registration_assignment_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
     scope="subscription/0afefe50-734e-4610-8a82-a144ahf49dea")
 
@@ -63,7 +63,7 @@ registration_assignment = azure_nextgen.managedservices.RegistrationAssignment("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const registrationAssignment = new azure_nextgen.managedservices.RegistrationAssignment("registrationAssignment", {
+const registrationAssignment = new azure_nextgen.managedservices.latest.RegistrationAssignment("registrationAssignment", {
     registrationAssignmentId: "26c128c2-fefa-4340-9bb1-6e081c90ada2",
     scope: "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
 });

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cloudEndpoint = new AzureNextGen.Storagesync.CloudEndpoint("cloudEndpoint", new AzureNextGen.Storagesync.CloudEndpointArgs
+        var cloudEndpoint = new AzureNextGen.StorageSync.Latest.CloudEndpoint("cloudEndpoint", new AzureNextGen.StorageSync.Latest.CloudEndpointArgs
         {
             AzureFileShareName = "cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4",
             CloudEndpointName = "SampleCloudEndpoint_1",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cloud_endpoint = azure_nextgen.storagesync.CloudEndpoint("cloudEndpoint",
+cloud_endpoint = azure_nextgen.storagesync.latest.CloudEndpoint("cloudEndpoint",
     azure_file_share_name="cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4",
     cloud_endpoint_name="SampleCloudEndpoint_1",
     friendly_name="ankushbsubscriptionmgmtmab",
@@ -75,7 +75,7 @@ cloud_endpoint = azure_nextgen.storagesync.CloudEndpoint("cloudEndpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cloudEndpoint = new azure_nextgen.storagesync.CloudEndpoint("cloudEndpoint", {
+const cloudEndpoint = new azure_nextgen.storagesync.latest.CloudEndpoint("cloudEndpoint", {
     azureFileShareName: "cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4",
     cloudEndpointName: "SampleCloudEndpoint_1",
     friendlyName: "ankushbsubscriptionmgmtmab",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var componentLinkedStorageAccount = new AzureNextGen.Insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount", new AzureNextGen.Insights.ComponentLinkedStorageAccountArgs
+        var componentLinkedStorageAccount = new AzureNextGen.Insights.V20200301Preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount", new AzureNextGen.Insights.V20200301Preview.ComponentLinkedStorageAccountArgs
         {
             LinkedStorageAccount = "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
             ResourceGroupName = "someResourceGroupName",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-component_linked_storage_account = azure_nextgen.insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount",
+component_linked_storage_account = azure_nextgen.insights.v20200301preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount",
     linked_storage_account="/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
     resource_group_name="someResourceGroupName",
     resource_name="myComponent",
@@ -67,7 +67,7 @@ component_linked_storage_account = azure_nextgen.insights.ComponentLinkedStorage
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const componentLinkedStorageAccount = new azure_nextgen.insights.ComponentLinkedStorageAccount("componentLinkedStorageAccount", {
+const componentLinkedStorageAccount = new azure_nextgen.insights.v20200301preview.ComponentLinkedStorageAccount("componentLinkedStorageAccount", {
     linkedStorageAccount: "/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname",
     resourceGroupName: "someResourceGroupName",
     resourceName: "myComponent",

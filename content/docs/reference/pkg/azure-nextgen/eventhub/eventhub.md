@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventHub = new AzureNextGen.Eventhub.EventHub("eventHub", new AzureNextGen.Eventhub.EventHubArgs
+        var eventHub = new AzureNextGen.EventHub.Latest.EventHub("eventHub", new AzureNextGen.EventHub.Latest.EventHubArgs
         {
-            CaptureDescription = new AzureNextGen.Eventhub.Inputs.CaptureDescriptionArgs
+            CaptureDescription = new AzureNextGen.EventHub.Latest.Inputs.CaptureDescriptionArgs
             {
-                Destination = new AzureNextGen.Eventhub.Inputs.DestinationArgs
+                Destination = new AzureNextGen.EventHub.Latest.Inputs.DestinationArgs
                 {
                     Name = "EventHubArchive.AzureBlockBlob",
                 },
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_hub = azure_nextgen.eventhub.EventHub("eventHub",
+event_hub = azure_nextgen.eventhub.latest.EventHub("eventHub",
     capture_description={
         "destination": {
             "name": "EventHubArchive.AzureBlockBlob",
@@ -91,7 +91,7 @@ event_hub = azure_nextgen.eventhub.EventHub("eventHub",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventHub = new azure_nextgen.eventhub.EventHub("eventHub", {
+const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
     captureDescription: {
         destination: {
             name: "EventHubArchive.AzureBlockBlob",

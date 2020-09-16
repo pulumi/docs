@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifact = new AzureNextGen.Management.Artifact("artifact", new AzureNextGen.Management.ArtifactArgs
+        var artifact = new AzureNextGen.Management.V20171111Preview.Artifact("artifact", new AzureNextGen.Management.V20171111Preview.ArtifactArgs
         {
             ArtifactName = "storageTemplate",
             BlueprintName = "simpleBlueprint",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact = azure_nextgen.management.Artifact("artifact",
+artifact = azure_nextgen.management.v20171111preview.Artifact("artifact",
     artifact_name="storageTemplate",
     blueprint_name="simpleBlueprint",
     kind="template",
@@ -67,7 +67,7 @@ artifact = azure_nextgen.management.Artifact("artifact",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const artifact = new azure_nextgen.management.Artifact("artifact", {
+const artifact = new azure_nextgen.management.v20171111preview.Artifact("artifact", {
     artifactName: "storageTemplate",
     blueprintName: "simpleBlueprint",
     kind: "template",
@@ -88,7 +88,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifact = new AzureNextGen.Management.Artifact("artifact", new AzureNextGen.Management.ArtifactArgs
+        var artifact = new AzureNextGen.Management.V20171111Preview.Artifact("artifact", new AzureNextGen.Management.V20171111Preview.ArtifactArgs
         {
             ArtifactName = "costCenterPolicy",
             BlueprintName = "simpleBlueprint",
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact = azure_nextgen.management.Artifact("artifact",
+artifact = azure_nextgen.management.v20171111preview.Artifact("artifact",
     artifact_name="costCenterPolicy",
     blueprint_name="simpleBlueprint",
     kind="policyAssignment",
@@ -129,7 +129,7 @@ artifact = azure_nextgen.management.Artifact("artifact",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const artifact = new azure_nextgen.management.Artifact("artifact", {
+const artifact = new azure_nextgen.management.v20171111preview.Artifact("artifact", {
     artifactName: "costCenterPolicy",
     blueprintName: "simpleBlueprint",
     kind: "policyAssignment",
@@ -150,7 +150,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifact = new AzureNextGen.Management.Artifact("artifact", new AzureNextGen.Management.ArtifactArgs
+        var artifact = new AzureNextGen.Management.V20171111Preview.Artifact("artifact", new AzureNextGen.Management.V20171111Preview.ArtifactArgs
         {
             ArtifactName = "ownerAssignment",
             BlueprintName = "simpleBlueprint",
@@ -175,7 +175,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact = azure_nextgen.management.Artifact("artifact",
+artifact = azure_nextgen.management.v20171111preview.Artifact("artifact",
     artifact_name="ownerAssignment",
     blueprint_name="simpleBlueprint",
     kind="roleAssignment",
@@ -191,7 +191,7 @@ artifact = azure_nextgen.management.Artifact("artifact",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const artifact = new azure_nextgen.management.Artifact("artifact", {
+const artifact = new azure_nextgen.management.v20171111preview.Artifact("artifact", {
     artifactName: "ownerAssignment",
     blueprintName: "simpleBlueprint",
     kind: "roleAssignment",

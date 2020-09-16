@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var openShiftManagedCluster = new AzureNextGen.Containerservice.OpenShiftManagedCluster("openShiftManagedCluster", new AzureNextGen.Containerservice.OpenShiftManagedClusterArgs
+        var openShiftManagedCluster = new AzureNextGen.ContainerService.Latest.OpenShiftManagedCluster("openShiftManagedCluster", new AzureNextGen.ContainerService.Latest.OpenShiftManagedClusterArgs
         {
             AgentPoolProfiles = 
             {
-                new AzureNextGen.Containerservice.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
                 {
                     Count = 2,
                     Name = "infra",
@@ -39,7 +39,7 @@ class MyStack : Stack
                     SubnetCidr = "10.0.0.0/24",
                     VmSize = "Standard_D4s_v3",
                 },
-                new AzureNextGen.Containerservice.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
                 {
                     Count = 4,
                     Name = "compute",
@@ -49,14 +49,14 @@ class MyStack : Stack
                     VmSize = "Standard_D4s_v3",
                 },
             },
-            AuthProfile = new AzureNextGen.Containerservice.Inputs.OpenShiftManagedClusterAuthProfileArgs
+            AuthProfile = new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAuthProfileArgs
             {
                 IdentityProviders = 
                 {
-                    new AzureNextGen.Containerservice.Inputs.OpenShiftManagedClusterIdentityProviderArgs
+                    new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterIdentityProviderArgs
                     {
                         Name = "Azure AD",
-                        Provider = new AzureNextGen.Containerservice.Inputs.OpenShiftManagedClusterAADIdentityProviderArgs
+                        Provider = new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterAADIdentityProviderArgs
                         {
                             ClientId = "clientId",
                             CustomerAdminGroupId = "customerAdminGroupId",
@@ -68,7 +68,7 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            MasterPoolProfile = new AzureNextGen.Containerservice.Inputs.OpenShiftManagedClusterMasterPoolProfileArgs
+            MasterPoolProfile = new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftManagedClusterMasterPoolProfileArgs
             {
                 Count = 3,
                 Name = "master",
@@ -76,7 +76,7 @@ class MyStack : Stack
                 SubnetCidr = "10.0.0.0/24",
                 VmSize = "Standard_D4s_v3",
             },
-            NetworkProfile = new AzureNextGen.Containerservice.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.NetworkProfileArgs
             {
                 VnetCidr = "10.0.0.0/8",
             },
@@ -85,7 +85,7 @@ class MyStack : Stack
             ResourceName = "clustername1",
             RouterProfiles = 
             {
-                new AzureNextGen.Containerservice.Inputs.OpenShiftRouterProfileArgs
+                new AzureNextGen.ContainerService.Latest.Inputs.OpenShiftRouterProfileArgs
                 {
                     Name = "default",
                 },
@@ -114,7 +114,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-open_shift_managed_cluster = azure_nextgen.containerservice.OpenShiftManagedCluster("openShiftManagedCluster",
+open_shift_managed_cluster = azure_nextgen.containerservice.latest.OpenShiftManagedCluster("openShiftManagedCluster",
     agent_pool_profiles=[
         {
             "count": 2,
@@ -177,7 +177,7 @@ open_shift_managed_cluster = azure_nextgen.containerservice.OpenShiftManagedClus
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const openShiftManagedCluster = new azure_nextgen.containerservice.OpenShiftManagedCluster("openShiftManagedCluster", {
+const openShiftManagedCluster = new azure_nextgen.containerservice.latest.OpenShiftManagedCluster("openShiftManagedCluster", {
     agentPoolProfiles: [
         {
             count: 2,

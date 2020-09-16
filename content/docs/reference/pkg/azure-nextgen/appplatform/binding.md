@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var binding = new AzureNextGen.Appplatform.Binding("binding", new AzureNextGen.Appplatform.BindingArgs
+        var binding = new AzureNextGen.AppPlatform.Latest.Binding("binding", new AzureNextGen.AppPlatform.Latest.BindingArgs
         {
             AppName = "myapp",
             BindingName = "mybinding",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-binding = azure_nextgen.appplatform.Binding("binding",
+binding = azure_nextgen.appplatform.latest.Binding("binding",
     app_name="myapp",
     binding_name="mybinding",
     resource_group_name="myResourceGroup",
@@ -67,7 +67,7 @@ binding = azure_nextgen.appplatform.Binding("binding",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const binding = new azure_nextgen.appplatform.Binding("binding", {
+const binding = new azure_nextgen.appplatform.latest.Binding("binding", {
     appName: "myapp",
     bindingName: "mybinding",
     resourceGroupName: "myResourceGroup",

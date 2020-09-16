@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationMigrationItem = new AzureNextGen.Recoveryservices.ReplicationMigrationItem("replicationMigrationItem", new AzureNextGen.Recoveryservices.ReplicationMigrationItemArgs
+        var replicationMigrationItem = new AzureNextGen.RecoveryServices.Latest.ReplicationMigrationItem("replicationMigrationItem", new AzureNextGen.RecoveryServices.Latest.ReplicationMigrationItemArgs
         {
             FabricName = "vmwarefabric1",
             MigrationItemName = "virtualmachine1",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_migration_item = azure_nextgen.recoveryservices.ReplicationMigrationItem("replicationMigrationItem",
+replication_migration_item = azure_nextgen.recoveryservices.latest.ReplicationMigrationItem("replicationMigrationItem",
     fabric_name="vmwarefabric1",
     migration_item_name="virtualmachine1",
     protection_container_name="vmwareContainer1",
@@ -69,7 +69,7 @@ replication_migration_item = azure_nextgen.recoveryservices.ReplicationMigration
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const replicationMigrationItem = new azure_nextgen.recoveryservices.ReplicationMigrationItem("replicationMigrationItem", {
+const replicationMigrationItem = new azure_nextgen.recoveryservices.latest.ReplicationMigrationItem("replicationMigrationItem", {
     fabricName: "vmwarefabric1",
     migrationItemName: "virtualmachine1",
     protectionContainerName: "vmwareContainer1",

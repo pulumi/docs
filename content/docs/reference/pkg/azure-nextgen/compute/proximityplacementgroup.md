@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var proximityPlacementGroup = new AzureNextGen.Compute.ProximityPlacementGroup("proximityPlacementGroup", new AzureNextGen.Compute.ProximityPlacementGroupArgs
+        var proximityPlacementGroup = new AzureNextGen.Compute.Latest.ProximityPlacementGroup("proximityPlacementGroup", new AzureNextGen.Compute.Latest.ProximityPlacementGroupArgs
         {
             Location = "westus",
             ProximityPlacementGroupName = "myProximityPlacementGroup",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-proximity_placement_group = azure_nextgen.compute.ProximityPlacementGroup("proximityPlacementGroup",
+proximity_placement_group = azure_nextgen.compute.latest.ProximityPlacementGroup("proximityPlacementGroup",
     location="westus",
     proximity_placement_group_name="myProximityPlacementGroup",
     proximity_placement_group_type="Standard",
@@ -67,7 +67,7 @@ proximity_placement_group = azure_nextgen.compute.ProximityPlacementGroup("proxi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const proximityPlacementGroup = new azure_nextgen.compute.ProximityPlacementGroup("proximityPlacementGroup", {
+const proximityPlacementGroup = new azure_nextgen.compute.latest.ProximityPlacementGroup("proximityPlacementGroup", {
     location: "westus",
     proximityPlacementGroupName: "myProximityPlacementGroup",
     proximityPlacementGroupType: "Standard",

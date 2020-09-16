@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connection = new AzureNextGen.Web.Connection("connection", new AzureNextGen.Web.ConnectionArgs
+        var connection = new AzureNextGen.Web.Latest.Connection("connection", new AzureNextGen.Web.Latest.ConnectionArgs
         {
             ConnectionName = "testManagedApi",
             ResourceGroupName = "testResourceGroup",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection = azure_nextgen.web.Connection("connection",
+connection = azure_nextgen.web.latest.Connection("connection",
     connection_name="testManagedApi",
     resource_group_name="testResourceGroup")
 
@@ -63,7 +63,7 @@ connection = azure_nextgen.web.Connection("connection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connection = new azure_nextgen.web.Connection("connection", {
+const connection = new azure_nextgen.web.latest.Connection("connection", {
     connectionName: "testManagedApi",
     resourceGroupName: "testResourceGroup",
 });

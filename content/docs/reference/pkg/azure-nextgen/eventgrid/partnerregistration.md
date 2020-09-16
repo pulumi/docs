@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var partnerRegistration = new AzureNextGen.Eventgrid.PartnerRegistration("partnerRegistration", new AzureNextGen.Eventgrid.PartnerRegistrationArgs
+        var partnerRegistration = new AzureNextGen.EventGrid.V20200401Preview.PartnerRegistration("partnerRegistration", new AzureNextGen.EventGrid.V20200401Preview.PartnerRegistrationArgs
         {
             AuthorizedAzureSubscriptionIds = 
             {
@@ -66,7 +66,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-partner_registration = azure_nextgen.eventgrid.PartnerRegistration("partnerRegistration",
+partner_registration = azure_nextgen.eventgrid.v20200401preview.PartnerRegistration("partnerRegistration",
     authorized_azure_subscription_ids=["d48566a8-2428-4a6c-8347-9675d09fb851"],
     location="global",
     logo_uri="https://www.example.com/logo.png",
@@ -93,7 +93,7 @@ partner_registration = azure_nextgen.eventgrid.PartnerRegistration("partnerRegis
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const partnerRegistration = new azure_nextgen.eventgrid.PartnerRegistration("partnerRegistration", {
+const partnerRegistration = new azure_nextgen.eventgrid.v20200401preview.PartnerRegistration("partnerRegistration", {
     authorizedAzureSubscriptionIds: ["d48566a8-2428-4a6c-8347-9675d09fb851"],
     location: "global",
     logoUri: "https://www.example.com/logo.png",

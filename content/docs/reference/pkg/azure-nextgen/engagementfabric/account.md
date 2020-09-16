@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Engagementfabric.Account("account", new AzureNextGen.Engagementfabric.AccountArgs
+        var account = new AzureNextGen.EngagementFabric.V20180901Preview.Account("account", new AzureNextGen.EngagementFabric.V20180901Preview.AccountArgs
         {
             AccountName = "ExampleAccount",
             Location = "WestUS",
             ResourceGroupName = "ExampleRg",
-            Sku = new AzureNextGen.Engagementfabric.Inputs.SKUArgs
+            Sku = new AzureNextGen.EngagementFabric.V20180901Preview.Inputs.SKUArgs
             {
                 Name = "B1",
             },
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.engagementfabric.Account("account",
+account = azure_nextgen.engagementfabric.v20180901preview.Account("account",
     account_name="ExampleAccount",
     location="WestUS",
     resource_group_name="ExampleRg",
@@ -72,7 +72,7 @@ account = azure_nextgen.engagementfabric.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.engagementfabric.Account("account", {
+const account = new azure_nextgen.engagementfabric.v20180901preview.Account("account", {
     accountName: "ExampleAccount",
     location: "WestUS",
     resourceGroupName: "ExampleRg",

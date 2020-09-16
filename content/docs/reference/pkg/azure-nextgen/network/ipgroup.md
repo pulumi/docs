@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ipGroup = new AzureNextGen.Network.IpGroup("ipGroup", new AzureNextGen.Network.IpGroupArgs
+        var ipGroup = new AzureNextGen.Network.Latest.IpGroup("ipGroup", new AzureNextGen.Network.Latest.IpGroupArgs
         {
             IpAddresses = 
             {
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ip_group = azure_nextgen.network.IpGroup("ipGroup",
+ip_group = azure_nextgen.network.latest.IpGroup("ipGroup",
     ip_addresses=[
         "13.64.39.16/32",
         "40.74.146.80/31",
@@ -83,7 +83,7 @@ ip_group = azure_nextgen.network.IpGroup("ipGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const ipGroup = new azure_nextgen.network.IpGroup("ipGroup", {
+const ipGroup = new azure_nextgen.network.latest.IpGroup("ipGroup", {
     ipAddresses: [
         "13.64.39.16/32",
         "40.74.146.80/31",

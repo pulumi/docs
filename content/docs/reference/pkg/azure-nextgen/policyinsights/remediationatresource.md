@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var remediationAtResource = new AzureNextGen.Policyinsights.RemediationAtResource("remediationAtResource", new AzureNextGen.Policyinsights.RemediationAtResourceArgs
+        var remediationAtResource = new AzureNextGen.PolicyInsights.Latest.RemediationAtResource("remediationAtResource", new AzureNextGen.PolicyInsights.Latest.RemediationAtResourceArgs
         {
             PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
             RemediationName = "storageRemediation",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-remediation_at_resource = azure_nextgen.policyinsights.RemediationAtResource("remediationAtResource",
+remediation_at_resource = azure_nextgen.policyinsights.latest.RemediationAtResource("remediationAtResource",
     policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
     remediation_name="storageRemediation",
     resource_id="subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourcegroups/myResourceGroup/providers/microsoft.storage/storageaccounts/storAc1")
@@ -65,7 +65,7 @@ remediation_at_resource = azure_nextgen.policyinsights.RemediationAtResource("re
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const remediationAtResource = new azure_nextgen.policyinsights.RemediationAtResource("remediationAtResource", {
+const remediationAtResource = new azure_nextgen.policyinsights.latest.RemediationAtResource("remediationAtResource", {
     policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
     remediationName: "storageRemediation",
     resourceId: "subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourcegroups/myResourceGroup/providers/microsoft.storage/storageaccounts/storAc1",

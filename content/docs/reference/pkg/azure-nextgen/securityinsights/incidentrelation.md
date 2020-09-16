@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var incidentRelation = new AzureNextGen.Securityinsights.IncidentRelation("incidentRelation", new AzureNextGen.Securityinsights.IncidentRelationArgs
+        var incidentRelation = new AzureNextGen.SecurityInsights.V20190101Preview.IncidentRelation("incidentRelation", new AzureNextGen.SecurityInsights.V20190101Preview.IncidentRelationArgs
         {
             IncidentId = "afbd324f-6c48-459c-8710-8d1e1cd03812",
             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-incident_relation = azure_nextgen.securityinsights.IncidentRelation("incidentRelation",
+incident_relation = azure_nextgen.securityinsights.v20190101preview.IncidentRelation("incidentRelation",
     incident_id="afbd324f-6c48-459c-8710-8d1e1cd03812",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
     related_resource_id="/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096",
@@ -71,7 +71,7 @@ incident_relation = azure_nextgen.securityinsights.IncidentRelation("incidentRel
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const incidentRelation = new azure_nextgen.securityinsights.IncidentRelation("incidentRelation", {
+const incidentRelation = new azure_nextgen.securityinsights.v20190101preview.IncidentRelation("incidentRelation", {
     incidentId: "afbd324f-6c48-459c-8710-8d1e1cd03812",
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     relatedResourceId: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096",

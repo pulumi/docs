@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var userAssignedIdentity = new AzureNextGen.Managedidentity.UserAssignedIdentity("userAssignedIdentity", new AzureNextGen.Managedidentity.UserAssignedIdentityArgs
+        var userAssignedIdentity = new AzureNextGen.ManagedIdentity.Latest.UserAssignedIdentity("userAssignedIdentity", new AzureNextGen.ManagedIdentity.Latest.UserAssignedIdentityArgs
         {
             Location = "eastus",
             ResourceGroupName = "rgName",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user_assigned_identity = azure_nextgen.managedidentity.UserAssignedIdentity("userAssignedIdentity",
+user_assigned_identity = azure_nextgen.managedidentity.latest.UserAssignedIdentity("userAssignedIdentity",
     location="eastus",
     resource_group_name="rgName",
     resource_name="resourceName",
@@ -74,7 +74,7 @@ user_assigned_identity = azure_nextgen.managedidentity.UserAssignedIdentity("use
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const userAssignedIdentity = new azure_nextgen.managedidentity.UserAssignedIdentity("userAssignedIdentity", {
+const userAssignedIdentity = new azure_nextgen.managedidentity.latest.UserAssignedIdentity("userAssignedIdentity", {
     location: "eastus",
     resourceGroupName: "rgName",
     resourceName: "resourceName",

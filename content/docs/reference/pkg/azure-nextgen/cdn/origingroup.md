@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var originGroup = new AzureNextGen.Cdn.OriginGroup("originGroup", new AzureNextGen.Cdn.OriginGroupArgs
+        var originGroup = new AzureNextGen.Cdn.Latest.OriginGroup("originGroup", new AzureNextGen.Cdn.Latest.OriginGroupArgs
         {
             EndpointName = "endpoint1",
-            HealthProbeSettings = new AzureNextGen.Cdn.Inputs.HealthProbeParametersArgs
+            HealthProbeSettings = new AzureNextGen.Cdn.Latest.Inputs.HealthProbeParametersArgs
             {
                 ProbeIntervalInSeconds = 120,
                 ProbePath = "/health.aspx",
@@ -39,14 +39,14 @@ class MyStack : Stack
             OriginGroupName = "origingroup1",
             Origins = 
             {
-                new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
+                new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
                 },
             },
             ProfileName = "profile1",
             ResourceGroupName = "RG",
-            ResponseBasedOriginErrorDetectionSettings = new AzureNextGen.Cdn.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
+            ResponseBasedOriginErrorDetectionSettings = new AzureNextGen.Cdn.Latest.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
             {
                 ResponseBasedDetectedErrorTypes = "TcpErrorsOnly",
                 ResponseBasedFailoverThresholdPercentage = 10,
@@ -70,7 +70,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-origin_group = azure_nextgen.cdn.OriginGroup("originGroup",
+origin_group = azure_nextgen.cdn.latest.OriginGroup("originGroup",
     endpoint_name="endpoint1",
     health_probe_settings={
         "probeIntervalInSeconds": 120,
@@ -99,7 +99,7 @@ origin_group = azure_nextgen.cdn.OriginGroup("originGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const originGroup = new azure_nextgen.cdn.OriginGroup("originGroup", {
+const originGroup = new azure_nextgen.cdn.latest.OriginGroup("originGroup", {
     endpointName: "endpoint1",
     healthProbeSettings: {
         probeIntervalInSeconds: 120,

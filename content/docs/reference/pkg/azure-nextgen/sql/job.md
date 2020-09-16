@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.Sql.Job("job", new AzureNextGen.Sql.JobArgs
+        var job = new AzureNextGen.Sql.V20170301Preview.Job("job", new AzureNextGen.Sql.V20170301Preview.JobArgs
         {
             Description = "my favourite job",
             JobAgentName = "agent1",
             JobName = "job1",
             ResourceGroupName = "group1",
-            Schedule = new AzureNextGen.Sql.Inputs.JobScheduleArgs
+            Schedule = new AzureNextGen.Sql.V20170301Preview.Inputs.JobScheduleArgs
             {
                 Enabled = true,
                 EndTime = "2015-09-24T23:59:59Z",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.sql.Job("job",
+job = azure_nextgen.sql.v20170301preview.Job("job",
     description="my favourite job",
     job_agent_name="agent1",
     job_name="job1",
@@ -84,7 +84,7 @@ job = azure_nextgen.sql.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const job = new azure_nextgen.sql.Job("job", {
+const job = new azure_nextgen.sql.v20170301preview.Job("job", {
     description: "my favourite job",
     jobAgentName: "agent1",
     jobName: "job1",
@@ -113,7 +113,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.Sql.Job("job", new AzureNextGen.Sql.JobArgs
+        var job = new AzureNextGen.Sql.V20170301Preview.Job("job", new AzureNextGen.Sql.V20170301Preview.JobArgs
         {
             JobAgentName = "agent1",
             JobName = "job1",
@@ -138,7 +138,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.sql.Job("job",
+job = azure_nextgen.sql.v20170301preview.Job("job",
     job_agent_name="agent1",
     job_name="job1",
     resource_group_name="group1",
@@ -154,7 +154,7 @@ job = azure_nextgen.sql.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const job = new azure_nextgen.sql.Job("job", {
+const job = new azure_nextgen.sql.v20170301preview.Job("job", {
     jobAgentName: "agent1",
     jobName: "job1",
     resourceGroupName: "group1",

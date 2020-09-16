@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.Securityinsights.AlertRule("alertRule", new AzureNextGen.Securityinsights.AlertRuleArgs
+        var alertRule = new AzureNextGen.SecurityInsights.V20190101Preview.AlertRule("alertRule", new AzureNextGen.SecurityInsights.V20190101Preview.AlertRuleArgs
         {
             Etag = "3d00c3ca-0000-0100-0000-5d42d5010000",
             Kind = "Fusion",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
+alert_rule = azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule",
     etag="3d00c3ca-0000-0100-0000-5d42d5010000",
     kind="Fusion",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
@@ -71,7 +71,7 @@ alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const alertRule = new azure_nextgen.securityinsights.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule", {
     etag: "3d00c3ca-0000-0100-0000-5d42d5010000",
     kind: "Fusion",
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
@@ -94,7 +94,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.Securityinsights.AlertRule("alertRule", new AzureNextGen.Securityinsights.AlertRuleArgs
+        var alertRule = new AzureNextGen.SecurityInsights.V20190101Preview.AlertRule("alertRule", new AzureNextGen.SecurityInsights.V20190101Preview.AlertRuleArgs
         {
             Etag = "\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
             Kind = "MicrosoftSecurityIncidentCreation",
@@ -121,7 +121,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
+alert_rule = azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule",
     etag="\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
     kind="MicrosoftSecurityIncidentCreation",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
@@ -139,7 +139,7 @@ alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const alertRule = new azure_nextgen.securityinsights.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule", {
     etag: "\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
     kind: "MicrosoftSecurityIncidentCreation",
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
@@ -162,7 +162,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.Securityinsights.AlertRule("alertRule", new AzureNextGen.Securityinsights.AlertRuleArgs
+        var alertRule = new AzureNextGen.SecurityInsights.V20190101Preview.AlertRule("alertRule", new AzureNextGen.SecurityInsights.V20190101Preview.AlertRuleArgs
         {
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
             Kind = "Scheduled",
@@ -189,7 +189,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
+alert_rule = azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind="Scheduled",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
@@ -207,7 +207,7 @@ alert_rule = azure_nextgen.securityinsights.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const alertRule = new azure_nextgen.securityinsights.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.securityinsights.v20190101preview.AlertRule("alertRule", {
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind: "Scheduled",
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",

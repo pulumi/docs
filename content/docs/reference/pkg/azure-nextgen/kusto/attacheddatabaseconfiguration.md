@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var attachedDatabaseConfiguration = new AzureNextGen.Kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", new AzureNextGen.Kusto.AttachedDatabaseConfigurationArgs
+        var attachedDatabaseConfiguration = new AzureNextGen.Kusto.Latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", new AzureNextGen.Kusto.Latest.AttachedDatabaseConfigurationArgs
         {
             AttachedDatabaseConfigurationName = "attachedDatabaseConfigurations1",
             ClusterName = "kustoclusterrptest4",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-attached_database_configuration = azure_nextgen.kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration",
+attached_database_configuration = azure_nextgen.kusto.latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration",
     attached_database_configuration_name="attachedDatabaseConfigurations1",
     cluster_name="kustoclusterrptest4",
     cluster_resource_id="/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
@@ -73,7 +73,7 @@ attached_database_configuration = azure_nextgen.kusto.AttachedDatabaseConfigurat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const attachedDatabaseConfiguration = new azure_nextgen.kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", {
+const attachedDatabaseConfiguration = new azure_nextgen.kusto.latest.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", {
     attachedDatabaseConfigurationName: "attachedDatabaseConfigurations1",
     clusterName: "kustoclusterrptest4",
     clusterResourceId: "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",

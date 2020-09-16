@@ -26,19 +26,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var budget = new AzureNextGen.Consumption.Budget("budget", new AzureNextGen.Consumption.BudgetArgs
+        var budget = new AzureNextGen.Consumption.Latest.Budget("budget", new AzureNextGen.Consumption.Latest.BudgetArgs
         {
             Amount = 100.65,
             BudgetName = "TestBudget",
             Category = "Cost",
             ETag = "\"1d34d016a593709\"",
-            Filter = new AzureNextGen.Consumption.Inputs.BudgetFilterArgs
+            Filter = new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterArgs
             {
                 And = 
                 {
-                    new AzureNextGen.Consumption.Inputs.BudgetFilterPropertiesArgs
+                    new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
                     {
-                        Dimensions = new AzureNextGen.Consumption.Inputs.BudgetComparisonExpressionArgs
+                        Dimensions = new AzureNextGen.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
                         {
                             Name = "ResourceId",
                             Operator = "In",
@@ -49,9 +49,9 @@ class MyStack : Stack
                             },
                         },
                     },
-                    new AzureNextGen.Consumption.Inputs.BudgetFilterPropertiesArgs
+                    new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
                     {
-                        Tags = new AzureNextGen.Consumption.Inputs.BudgetComparisonExpressionArgs
+                        Tags = new AzureNextGen.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
                         {
                             Name = "category",
                             Operator = "In",
@@ -62,9 +62,9 @@ class MyStack : Stack
                             },
                         },
                     },
-                    new AzureNextGen.Consumption.Inputs.BudgetFilterPropertiesArgs
+                    new AzureNextGen.Consumption.Latest.Inputs.BudgetFilterPropertiesArgs
                     {
-                        Tags = new AzureNextGen.Consumption.Inputs.BudgetComparisonExpressionArgs
+                        Tags = new AzureNextGen.Consumption.Latest.Inputs.BudgetComparisonExpressionArgs
                         {
                             Name = "department",
                             Operator = "In",
@@ -79,7 +79,7 @@ class MyStack : Stack
             },
             Notifications = 
             {
-                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption.Inputs.NotificationArgs
+                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption.Latest.Inputs.NotificationArgs
                 {
                     ContactEmails = 
                     {
@@ -103,7 +103,7 @@ class MyStack : Stack
             },
             Scope = "subscriptions/00000000-0000-0000-0000-000000000000",
             TimeGrain = "Monthly",
-            TimePeriod = new AzureNextGen.Consumption.Inputs.BudgetTimePeriodArgs
+            TimePeriod = new AzureNextGen.Consumption.Latest.Inputs.BudgetTimePeriodArgs
             {
                 EndDate = "2018-10-31T00:00:00Z",
                 StartDate = "2017-10-01T00:00:00Z",
@@ -127,7 +127,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-budget = azure_nextgen.consumption.Budget("budget",
+budget = azure_nextgen.consumption.latest.Budget("budget",
     amount=100.65,
     budget_name="TestBudget",
     category="Cost",
@@ -200,7 +200,7 @@ budget = azure_nextgen.consumption.Budget("budget",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const budget = new azure_nextgen.consumption.Budget("budget", {
+const budget = new azure_nextgen.consumption.latest.Budget("budget", {
     amount: 100.65,
     budgetName: "TestBudget",
     category: "Cost",

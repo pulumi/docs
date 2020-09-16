@@ -26,39 +26,39 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gremlinResourceGremlinGraph = new AzureNextGen.Documentdb.GremlinResourceGremlinGraph("gremlinResourceGremlinGraph", new AzureNextGen.Documentdb.GremlinResourceGremlinGraphArgs
+        var gremlinResourceGremlinGraph = new AzureNextGen.DocumentDB.Latest.GremlinResourceGremlinGraph("gremlinResourceGremlinGraph", new AzureNextGen.DocumentDB.Latest.GremlinResourceGremlinGraphArgs
         {
             AccountName = "ddb1",
             DatabaseName = "databaseName",
             GraphName = "graphName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.GremlinGraphResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.GremlinGraphResourceArgs
             {
-                ConflictResolutionPolicy = new AzureNextGen.Documentdb.Inputs.ConflictResolutionPolicyArgs
+                ConflictResolutionPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.ConflictResolutionPolicyArgs
                 {
                     ConflictResolutionPath = "/path",
                     Mode = "LastWriterWins",
                 },
                 DefaultTtl = 100,
                 Id = "graphName",
-                IndexingPolicy = new AzureNextGen.Documentdb.Inputs.IndexingPolicyArgs
+                IndexingPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.IndexingPolicyArgs
                 {
                     Automatic = true,
                     ExcludedPaths = {},
                     IncludedPaths = 
                     {
-                        new AzureNextGen.Documentdb.Inputs.IncludedPathArgs
+                        new AzureNextGen.DocumentDB.Latest.Inputs.IncludedPathArgs
                         {
                             Indexes = 
                             {
-                                new AzureNextGen.Documentdb.Inputs.IndexesArgs
+                                new AzureNextGen.DocumentDB.Latest.Inputs.IndexesArgs
                                 {
                                     DataType = "String",
                                     Kind = "Range",
                                     Precision = -1,
                                 },
-                                new AzureNextGen.Documentdb.Inputs.IndexesArgs
+                                new AzureNextGen.DocumentDB.Latest.Inputs.IndexesArgs
                                 {
                                     DataType = "Number",
                                     Kind = "Range",
@@ -70,7 +70,7 @@ class MyStack : Stack
                     },
                     IndexingMode = "Consistent",
                 },
-                PartitionKey = new AzureNextGen.Documentdb.Inputs.ContainerPartitionKeyArgs
+                PartitionKey = new AzureNextGen.DocumentDB.Latest.Inputs.ContainerPartitionKeyArgs
                 {
                     Kind = "Hash",
                     Paths = 
@@ -78,11 +78,11 @@ class MyStack : Stack
                         "/AccountNumber",
                     },
                 },
-                UniqueKeyPolicy = new AzureNextGen.Documentdb.Inputs.UniqueKeyPolicyArgs
+                UniqueKeyPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.UniqueKeyPolicyArgs
                 {
                     UniqueKeys = 
                     {
-                        new AzureNextGen.Documentdb.Inputs.UniqueKeyArgs
+                        new AzureNextGen.DocumentDB.Latest.Inputs.UniqueKeyArgs
                         {
                             Paths = 
                             {
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gremlin_resource_gremlin_graph = azure_nextgen.documentdb.GremlinResourceGremlinGraph("gremlinResourceGremlinGraph",
+gremlin_resource_gremlin_graph = azure_nextgen.documentdb.latest.GremlinResourceGremlinGraph("gremlinResourceGremlinGraph",
     account_name="ddb1",
     database_name="databaseName",
     graph_name="graphName",
@@ -169,7 +169,7 @@ gremlin_resource_gremlin_graph = azure_nextgen.documentdb.GremlinResourceGremlin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const gremlinResourceGremlinGraph = new azure_nextgen.documentdb.GremlinResourceGremlinGraph("gremlinResourceGremlinGraph", {
+const gremlinResourceGremlinGraph = new azure_nextgen.documentdb.latest.GremlinResourceGremlinGraph("gremlinResourceGremlinGraph", {
     accountName: "ddb1",
     databaseName: "databaseName",
     graphName: "graphName",

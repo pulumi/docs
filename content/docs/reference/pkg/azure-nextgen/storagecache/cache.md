@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cache = new AzureNextGen.Storagecache.Cache("cache", new AzureNextGen.Storagecache.CacheArgs
+        var cache = new AzureNextGen.StorageCache.Latest.Cache("cache", new AzureNextGen.StorageCache.Latest.CacheArgs
         {
             CacheName = "sc1",
             CacheSizeGB = 3072,
             Location = "westus",
             ResourceGroupName = "scgroup",
-            Sku = new AzureNextGen.Storagecache.Inputs.CacheSkuArgs
+            Sku = new AzureNextGen.StorageCache.Latest.Inputs.CacheSkuArgs
             {
                 Name = "Standard_2G",
             },
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cache = azure_nextgen.storagecache.Cache("cache",
+cache = azure_nextgen.storagecache.latest.Cache("cache",
     cache_name="sc1",
     cache_size_gb=3072,
     location="westus",
@@ -83,7 +83,7 @@ cache = azure_nextgen.storagecache.Cache("cache",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cache = new azure_nextgen.storagecache.Cache("cache", {
+const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
     cacheName: "sc1",
     cacheSizeGB: 3072,
     location: "westus",

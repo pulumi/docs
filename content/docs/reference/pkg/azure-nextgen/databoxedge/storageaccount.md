@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccount = new AzureNextGen.Databoxedge.StorageAccount("storageAccount", new AzureNextGen.Databoxedge.StorageAccountArgs
+        var storageAccount = new AzureNextGen.DataBoxEdge.Latest.StorageAccount("storageAccount", new AzureNextGen.DataBoxEdge.Latest.StorageAccountArgs
         {
             DataPolicy = "Cloud",
             Description = "It's an awesome storage account",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account = azure_nextgen.databoxedge.StorageAccount("storageAccount",
+storage_account = azure_nextgen.databoxedge.latest.StorageAccount("storageAccount",
     data_policy="Cloud",
     description="It's an awesome storage account",
     device_name="testedgedevice",
@@ -73,7 +73,7 @@ storage_account = azure_nextgen.databoxedge.StorageAccount("storageAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const storageAccount = new azure_nextgen.databoxedge.StorageAccount("storageAccount", {
+const storageAccount = new azure_nextgen.databoxedge.latest.StorageAccount("storageAccount", {
     dataPolicy: "Cloud",
     description: "It's an awesome storage account",
     deviceName: "testedgedevice",

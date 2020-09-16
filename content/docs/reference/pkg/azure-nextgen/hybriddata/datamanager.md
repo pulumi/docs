@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataManager = new AzureNextGen.Hybriddata.DataManager("dataManager", new AzureNextGen.Hybriddata.DataManagerArgs
+        var dataManager = new AzureNextGen.HybridData.Latest.DataManager("dataManager", new AzureNextGen.HybridData.Latest.DataManagerArgs
         {
             DataManagerName = "TestAzureSDKOperations",
             Location = "westus",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_manager = azure_nextgen.hybriddata.DataManager("dataManager",
+data_manager = azure_nextgen.hybriddata.latest.DataManager("dataManager",
     data_manager_name="TestAzureSDKOperations",
     location="westus",
     resource_group_name="ResourceGroupForSDKTest")
@@ -65,7 +65,7 @@ data_manager = azure_nextgen.hybriddata.DataManager("dataManager",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataManager = new azure_nextgen.hybriddata.DataManager("dataManager", {
+const dataManager = new azure_nextgen.hybriddata.latest.DataManager("dataManager", {
     dataManagerName: "TestAzureSDKOperations",
     location: "westus",
     resourceGroupName: "ResourceGroupForSDKTest",

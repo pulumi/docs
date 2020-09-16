@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlUserDefinedFunction = new AzureNextGen.Documentdb.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", new AzureNextGen.Documentdb.SqlResourceSqlUserDefinedFunctionArgs
+        var sqlResourceSqlUserDefinedFunction = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlUserDefinedFunctionArgs
         {
             AccountName = "ddb1",
             ContainerName = "containerName",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.SqlUserDefinedFunctionResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlUserDefinedFunctionResourceArgs
             {
                 Body = "body",
                 Id = "userDefinedFunctionName",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_user_defined_function = azure_nextgen.documentdb.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction",
+sql_resource_sql_user_defined_function = azure_nextgen.documentdb.latest.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction",
     account_name="ddb1",
     container_name="containerName",
     database_name="databaseName",
@@ -80,7 +80,7 @@ sql_resource_sql_user_defined_function = azure_nextgen.documentdb.SqlResourceSql
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlResourceSqlUserDefinedFunction = new azure_nextgen.documentdb.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", {
+const sqlResourceSqlUserDefinedFunction = new azure_nextgen.documentdb.latest.SqlResourceSqlUserDefinedFunction("sqlResourceSqlUserDefinedFunction", {
     accountName: "ddb1",
     containerName: "containerName",
     databaseName: "databaseName",

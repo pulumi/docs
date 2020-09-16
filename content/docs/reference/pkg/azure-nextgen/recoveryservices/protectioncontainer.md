@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var protectionContainer = new AzureNextGen.Recoveryservices.ProtectionContainer("protectionContainer", new AzureNextGen.Recoveryservices.ProtectionContainerArgs
+        var protectionContainer = new AzureNextGen.RecoveryServices.Latest.ProtectionContainer("protectionContainer", new AzureNextGen.RecoveryServices.Latest.ProtectionContainerArgs
         {
             ContainerName = "VMAppContainer;Compute;testRG;testSQL",
             FabricName = "Azure",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-protection_container = azure_nextgen.recoveryservices.ProtectionContainer("protectionContainer",
+protection_container = azure_nextgen.recoveryservices.latest.ProtectionContainer("protectionContainer",
     container_name="VMAppContainer;Compute;testRG;testSQL",
     fabric_name="Azure",
     resource_group_name="test-rg",
@@ -67,7 +67,7 @@ protection_container = azure_nextgen.recoveryservices.ProtectionContainer("prote
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const protectionContainer = new azure_nextgen.recoveryservices.ProtectionContainer("protectionContainer", {
+const protectionContainer = new azure_nextgen.recoveryservices.latest.ProtectionContainer("protectionContainer", {
     containerName: "VMAppContainer;Compute;testRG;testSQL",
     fabricName: "Azure",
     resourceGroupName: "test-rg",

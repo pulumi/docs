@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var budgetByResourceGroupName = new AzureNextGen.Consumption.BudgetByResourceGroupName("budgetByResourceGroupName", new AzureNextGen.Consumption.BudgetByResourceGroupNameArgs
+        var budgetByResourceGroupName = new AzureNextGen.Consumption.Latest.BudgetByResourceGroupName("budgetByResourceGroupName", new AzureNextGen.Consumption.Latest.BudgetByResourceGroupNameArgs
         {
             Amount = 100.65,
             BudgetName = "TestBudget",
             Category = "Cost",
             ETag = "\"1d34d016a593709\"",
-            Filters = new AzureNextGen.Consumption.Inputs.FiltersArgs
+            Filters = new AzureNextGen.Consumption.Latest.Inputs.FiltersArgs
             {
                 Meters = 
                 {
@@ -63,7 +63,7 @@ class MyStack : Stack
             },
             Notifications = 
             {
-                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption.Inputs.NotificationArgs
+                { "Actual_GreaterThan_80_Percent", new AzureNextGen.Consumption.Latest.Inputs.NotificationArgs
                 {
                     ContactEmails = 
                     {
@@ -86,7 +86,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "MYDEVTESTRG",
             TimeGrain = "Monthly",
-            TimePeriod = new AzureNextGen.Consumption.Inputs.BudgetTimePeriodArgs
+            TimePeriod = new AzureNextGen.Consumption.Latest.Inputs.BudgetTimePeriodArgs
             {
                 EndDate = "2018-10-31T00:00:00Z",
                 StartDate = "2017-10-01T00:00:00Z",
@@ -110,7 +110,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-budget_by_resource_group_name = azure_nextgen.consumption.BudgetByResourceGroupName("budgetByResourceGroupName",
+budget_by_resource_group_name = azure_nextgen.consumption.latest.BudgetByResourceGroupName("budgetByResourceGroupName",
     amount=100.65,
     budget_name="TestBudget",
     category="Cost",
@@ -166,7 +166,7 @@ budget_by_resource_group_name = azure_nextgen.consumption.BudgetByResourceGroupN
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const budgetByResourceGroupName = new azure_nextgen.consumption.BudgetByResourceGroupName("budgetByResourceGroupName", {
+const budgetByResourceGroupName = new azure_nextgen.consumption.latest.BudgetByResourceGroupName("budgetByResourceGroupName", {
     amount: 100.65,
     budgetName: "TestBudget",
     category: "Cost",

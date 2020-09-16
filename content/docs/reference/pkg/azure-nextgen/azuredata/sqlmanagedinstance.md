@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlManagedInstance = new AzureNextGen.Azuredata.SqlManagedInstance("sqlManagedInstance", new AzureNextGen.Azuredata.SqlManagedInstanceArgs
+        var sqlManagedInstance = new AzureNextGen.AzureData.V20190724Preview.SqlManagedInstance("sqlManagedInstance", new AzureNextGen.AzureData.V20190724Preview.SqlManagedInstanceArgs
         {
             Admin = "Admin user",
             EndTime = "Instance end time",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_managed_instance = azure_nextgen.azuredata.SqlManagedInstance("sqlManagedInstance",
+sql_managed_instance = azure_nextgen.azuredata.v20190724preview.SqlManagedInstance("sqlManagedInstance",
     admin="Admin user",
     end_time="Instance end time",
     instance_endpoint="The on premise instance endpoint",
@@ -80,7 +80,7 @@ sql_managed_instance = azure_nextgen.azuredata.SqlManagedInstance("sqlManagedIns
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlManagedInstance = new azure_nextgen.azuredata.SqlManagedInstance("sqlManagedInstance", {
+const sqlManagedInstance = new azure_nextgen.azuredata.v20190724preview.SqlManagedInstance("sqlManagedInstance", {
     admin: "Admin user",
     endTime: "Instance end time",
     instanceEndpoint: "The on premise instance endpoint",

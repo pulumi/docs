@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlStoredProcedure = new AzureNextGen.Documentdb.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", new AzureNextGen.Documentdb.SqlResourceSqlStoredProcedureArgs
+        var sqlResourceSqlStoredProcedure = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlStoredProcedureArgs
         {
             AccountName = "ddb1",
             ContainerName = "containerName",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.SqlStoredProcedureResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlStoredProcedureResourceArgs
             {
                 Body = "body",
                 Id = "storedProcedureName",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_stored_procedure = azure_nextgen.documentdb.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure",
+sql_resource_sql_stored_procedure = azure_nextgen.documentdb.latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure",
     account_name="ddb1",
     container_name="containerName",
     database_name="databaseName",
@@ -80,7 +80,7 @@ sql_resource_sql_stored_procedure = azure_nextgen.documentdb.SqlResourceSqlStore
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", {
+const sqlResourceSqlStoredProcedure = new azure_nextgen.documentdb.latest.SqlResourceSqlStoredProcedure("sqlResourceSqlStoredProcedure", {
     accountName: "ddb1",
     containerName: "containerName",
     databaseName: "databaseName",

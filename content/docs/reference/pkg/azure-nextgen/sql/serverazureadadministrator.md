@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverAzureADAdministrator = new AzureNextGen.Sql.ServerAzureADAdministrator("serverAzureADAdministrator", new AzureNextGen.Sql.ServerAzureADAdministratorArgs
+        var serverAzureADAdministrator = new AzureNextGen.Sql.Latest.ServerAzureADAdministrator("serverAzureADAdministrator", new AzureNextGen.Sql.Latest.ServerAzureADAdministratorArgs
         {
             AdministratorName = "activeDirectory",
             AdministratorType = "ActiveDirectory",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_azure_ad_administrator = azure_nextgen.sql.ServerAzureADAdministrator("serverAzureADAdministrator",
+server_azure_ad_administrator = azure_nextgen.sql.latest.ServerAzureADAdministrator("serverAzureADAdministrator",
     administrator_name="activeDirectory",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
@@ -73,7 +73,7 @@ server_azure_ad_administrator = azure_nextgen.sql.ServerAzureADAdministrator("se
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serverAzureADAdministrator = new azure_nextgen.sql.ServerAzureADAdministrator("serverAzureADAdministrator", {
+const serverAzureADAdministrator = new azure_nextgen.sql.latest.ServerAzureADAdministrator("serverAzureADAdministrator", {
     administratorName: "activeDirectory",
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",

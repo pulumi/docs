@@ -26,28 +26,28 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.Servicefabric.ManagedCluster("managedCluster", new AzureNextGen.Servicefabric.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ServiceFabric.V20200101Preview.ManagedCluster("managedCluster", new AzureNextGen.ServiceFabric.V20200101Preview.ManagedClusterArgs
         {
             AdminPassword = "{vm-password}",
             AdminUserName = "vmadmin",
             ClientConnectionPort = 19000,
             ClusterCodeVersion = "7.1.168.9494",
             ClusterName = "myCluster",
-            ClusterUpgradeDescription = new AzureNextGen.Servicefabric.Inputs.ClusterUpgradePolicyArgs
+            ClusterUpgradeDescription = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ClusterUpgradePolicyArgs
             {
-                DeltaHealthPolicy = new AzureNextGen.Servicefabric.Inputs.ClusterUpgradeDeltaHealthPolicyArgs
+                DeltaHealthPolicy = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ClusterUpgradeDeltaHealthPolicyArgs
                 {
                     ApplicationDeltaHealthPolicies = 
                     {
-                        { "fabric:/myApp1", new AzureNextGen.Servicefabric.Inputs.ApplicationDeltaHealthPolicyArgs
+                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ApplicationDeltaHealthPolicyArgs
                         {
-                            DefaultServiceTypeDeltaHealthPolicy = new AzureNextGen.Servicefabric.Inputs.ServiceTypeDeltaHealthPolicyArgs
+                            DefaultServiceTypeDeltaHealthPolicy = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ServiceTypeDeltaHealthPolicyArgs
                             {
                                 MaxPercentDeltaUnhealthyServices = 0,
                             },
                             ServiceTypeDeltaHealthPolicies = 
                             {
-                                { "myServiceType1", new AzureNextGen.Servicefabric.Inputs.ServiceTypeDeltaHealthPolicyArgs
+                                { "myServiceType1", new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ServiceTypeDeltaHealthPolicyArgs
                                 {
                                     MaxPercentDeltaUnhealthyServices = 0,
                                 } },
@@ -62,19 +62,19 @@ class MyStack : Stack
                 HealthCheckRetryTimeout = "00:05:00",
                 HealthCheckStableDuration = "00:00:30",
                 HealthCheckWaitDuration = "00:00:30",
-                HealthPolicy = new AzureNextGen.Servicefabric.Inputs.ClusterHealthPolicyArgs
+                HealthPolicy = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ClusterHealthPolicyArgs
                 {
                     ApplicationHealthPolicies = 
                     {
-                        { "fabric:/myApp1", new AzureNextGen.Servicefabric.Inputs.ApplicationHealthPolicyArgs
+                        { "fabric:/myApp1", new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ApplicationHealthPolicyArgs
                         {
-                            DefaultServiceTypeHealthPolicy = new AzureNextGen.Servicefabric.Inputs.ServiceTypeHealthPolicyArgs
+                            DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ServiceTypeHealthPolicyArgs
                             {
                                 MaxPercentUnhealthyServices = 0,
                             },
                             ServiceTypeHealthPolicies = 
                             {
-                                { "myServiceType1", new AzureNextGen.Servicefabric.Inputs.ServiceTypeHealthPolicyArgs
+                                { "myServiceType1", new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.ServiceTypeHealthPolicyArgs
                                 {
                                     MaxPercentUnhealthyServices = 100,
                                 } },
@@ -92,12 +92,12 @@ class MyStack : Stack
             DnsName = "myCluster",
             FabricSettings = 
             {
-                new AzureNextGen.Servicefabric.Inputs.SettingsSectionDescriptionArgs
+                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsSectionDescriptionArgs
                 {
                     Name = "ManagedIdentityTokenService",
                     Parameters = 
                     {
-                        new AzureNextGen.Servicefabric.Inputs.SettingsParameterDescriptionArgs
+                        new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsParameterDescriptionArgs
                         {
                             Name = "IsEnabled",
                             Value = "true",
@@ -108,21 +108,21 @@ class MyStack : Stack
             HttpGatewayConnectionPort = 19080,
             LoadBalancingRules = 
             {
-                new AzureNextGen.Servicefabric.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
                 {
                     BackendPort = 80,
                     FrontendPort = 80,
                     ProbeProtocol = "http",
                     Protocol = "http",
                 },
-                new AzureNextGen.Servicefabric.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
                 {
                     BackendPort = 443,
                     FrontendPort = 443,
                     ProbeProtocol = "http",
                     Protocol = "http",
                 },
-                new AzureNextGen.Servicefabric.Inputs.LoadBalancingRuleArgs
+                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.LoadBalancingRuleArgs
                 {
                     BackendPort = 10000,
                     FrontendPort = 10000,
@@ -132,7 +132,7 @@ class MyStack : Stack
             },
             Location = "eastus",
             ResourceGroupName = "resRg",
-            Sku = new AzureNextGen.Servicefabric.Inputs.SkuArgs
+            Sku = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SkuArgs
             {
                 Name = "Basic",
             },
@@ -156,7 +156,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.servicefabric.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster",
     admin_password="{vm-password}",
     admin_user_name="vmadmin",
     client_connection_port=19000,
@@ -251,7 +251,7 @@ managed_cluster = azure_nextgen.servicefabric.ManagedCluster("managedCluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedCluster = new azure_nextgen.servicefabric.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster", {
     adminPassword: "{vm-password}",
     adminUserName: "vmadmin",
     clientConnectionPort: 19000,
@@ -351,7 +351,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.Servicefabric.ManagedCluster("managedCluster", new AzureNextGen.Servicefabric.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ServiceFabric.V20200101Preview.ManagedCluster("managedCluster", new AzureNextGen.ServiceFabric.V20200101Preview.ManagedClusterArgs
         {
             AdminPassword = "{vm-password}",
             AdminUserName = "vmadmin",
@@ -360,12 +360,12 @@ class MyStack : Stack
             DnsName = "myCluster",
             FabricSettings = 
             {
-                new AzureNextGen.Servicefabric.Inputs.SettingsSectionDescriptionArgs
+                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsSectionDescriptionArgs
                 {
                     Name = "ManagedIdentityTokenService",
                     Parameters = 
                     {
-                        new AzureNextGen.Servicefabric.Inputs.SettingsParameterDescriptionArgs
+                        new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SettingsParameterDescriptionArgs
                         {
                             Name = "IsEnabled",
                             Value = "true",
@@ -394,7 +394,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.servicefabric.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster",
     admin_password="{vm-password}",
     admin_user_name="vmadmin",
     cluster_code_version="7.1.168.9494",
@@ -420,7 +420,7 @@ managed_cluster = azure_nextgen.servicefabric.ManagedCluster("managedCluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedCluster = new azure_nextgen.servicefabric.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedCluster("managedCluster", {
     adminPassword: "{vm-password}",
     adminUserName: "vmadmin",
     clusterCodeVersion: "7.1.168.9494",

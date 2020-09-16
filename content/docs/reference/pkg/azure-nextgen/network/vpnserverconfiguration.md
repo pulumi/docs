@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vpnServerConfiguration = new AzureNextGen.Network.VpnServerConfiguration("vpnServerConfiguration", new AzureNextGen.Network.VpnServerConfigurationArgs
+        var vpnServerConfiguration = new AzureNextGen.Network.Latest.VpnServerConfiguration("vpnServerConfiguration", new AzureNextGen.Network.Latest.VpnServerConfigurationArgs
         {
             Location = "West US",
             RadiusClientRootCertificates = 
             {
-                new AzureNextGen.Network.Inputs.VpnServerConfigRadiusClientRootCertificateArgs
+                new AzureNextGen.Network.Latest.Inputs.VpnServerConfigRadiusClientRootCertificateArgs
                 {
                     Name = "vpnServerConfigRadiusClientRootCert1",
                     Thumbprint = "83FFBFC8848B5A5836C94D0112367E16148A286F",
@@ -39,7 +39,7 @@ class MyStack : Stack
             },
             RadiusServerRootCertificates = 
             {
-                new AzureNextGen.Network.Inputs.VpnServerConfigRadiusServerRootCertificateArgs
+                new AzureNextGen.Network.Latest.Inputs.VpnServerConfigRadiusServerRootCertificateArgs
                 {
                     Name = "vpnServerConfigRadiusServerRootCer1",
                     PublicCertData = "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM",
@@ -47,7 +47,7 @@ class MyStack : Stack
             },
             RadiusServers = 
             {
-                new AzureNextGen.Network.Inputs.RadiusServerArgs
+                new AzureNextGen.Network.Latest.Inputs.RadiusServerArgs
                 {
                     RadiusServerAddress = "10.0.0.0",
                     RadiusServerScore = 25,
@@ -61,7 +61,7 @@ class MyStack : Stack
             },
             VpnClientIpsecPolicies = 
             {
-                new AzureNextGen.Network.Inputs.IpsecPolicyArgs
+                new AzureNextGen.Network.Latest.Inputs.IpsecPolicyArgs
                 {
                     DhGroup = "DHGroup14",
                     IkeEncryption = "AES256",
@@ -75,7 +75,7 @@ class MyStack : Stack
             },
             VpnClientRevokedCertificates = 
             {
-                new AzureNextGen.Network.Inputs.VpnServerConfigVpnClientRevokedCertificateArgs
+                new AzureNextGen.Network.Latest.Inputs.VpnServerConfigVpnClientRevokedCertificateArgs
                 {
                     Name = "vpnServerConfigVpnClientRevokedCert1",
                     Thumbprint = "83FFBFC8848B5A5836C94D0112367E16148A286F",
@@ -83,7 +83,7 @@ class MyStack : Stack
             },
             VpnClientRootCertificates = 
             {
-                new AzureNextGen.Network.Inputs.VpnServerConfigVpnClientRootCertificateArgs
+                new AzureNextGen.Network.Latest.Inputs.VpnServerConfigVpnClientRootCertificateArgs
                 {
                     Name = "vpnServerConfigVpnClientRootCert1",
                     PublicCertData = "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN",
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vpn_server_configuration = azure_nextgen.network.VpnServerConfiguration("vpnServerConfiguration",
+vpn_server_configuration = azure_nextgen.network.latest.VpnServerConfiguration("vpnServerConfiguration",
     location="West US",
     radius_client_root_certificates=[{
         "name": "vpnServerConfigRadiusClientRootCert1",
@@ -163,7 +163,7 @@ vpn_server_configuration = azure_nextgen.network.VpnServerConfiguration("vpnServ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vpnServerConfiguration = new azure_nextgen.network.VpnServerConfiguration("vpnServerConfiguration", {
+const vpnServerConfiguration = new azure_nextgen.network.latest.VpnServerConfiguration("vpnServerConfiguration", {
     location: "West US",
     radiusClientRootCertificates: [{
         name: "vpnServerConfigRadiusClientRootCert1",

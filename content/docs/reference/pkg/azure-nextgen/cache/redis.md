@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var redis = new AzureNextGen.Cache.Redis("redis", new AzureNextGen.Cache.RedisArgs
+        var redis = new AzureNextGen.Cache.Latest.Redis("redis", new AzureNextGen.Cache.Latest.RedisArgs
         {
             EnableNonSslPort = true,
             Location = "West US",
@@ -39,7 +39,7 @@ class MyStack : Stack
             ReplicasPerMaster = 2,
             ResourceGroupName = "rg1",
             ShardCount = 2,
-            Sku = new AzureNextGen.Cache.Inputs.SkuArgs
+            Sku = new AzureNextGen.Cache.Latest.Inputs.SkuArgs
             {
                 Capacity = 1,
                 Family = "P",
@@ -70,7 +70,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-redis = azure_nextgen.cache.Redis("redis",
+redis = azure_nextgen.cache.latest.Redis("redis",
     enable_non_ssl_port=True,
     location="West US",
     minimum_tls_version="1.2",
@@ -100,7 +100,7 @@ redis = azure_nextgen.cache.Redis("redis",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const redis = new azure_nextgen.cache.Redis("redis", {
+const redis = new azure_nextgen.cache.latest.Redis("redis", {
     enableNonSslPort: true,
     location: "West US",
     minimumTlsVersion: "1.2",

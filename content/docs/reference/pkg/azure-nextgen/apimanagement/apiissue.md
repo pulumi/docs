@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiIssue = new AzureNextGen.Apimanagement.ApiIssue("apiIssue", new AzureNextGen.Apimanagement.ApiIssueArgs
+        var apiIssue = new AzureNextGen.ApiManagement.Latest.ApiIssue("apiIssue", new AzureNextGen.ApiManagement.Latest.ApiIssueArgs
         {
             ApiId = "57d1f7558aa04f15146d9d8a",
             CreatedDate = "2018-02-01T22:21:20.467Z",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_issue = azure_nextgen.apimanagement.ApiIssue("apiIssue",
+api_issue = azure_nextgen.apimanagement.latest.ApiIssue("apiIssue",
     api_id="57d1f7558aa04f15146d9d8a",
     created_date="2018-02-01T22:21:20.467Z",
     description="New API issue description",
@@ -77,7 +77,7 @@ api_issue = azure_nextgen.apimanagement.ApiIssue("apiIssue",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiIssue = new azure_nextgen.apimanagement.ApiIssue("apiIssue", {
+const apiIssue = new azure_nextgen.apimanagement.latest.ApiIssue("apiIssue", {
     apiId: "57d1f7558aa04f15146d9d8a",
     createdDate: "2018-02-01T22:21:20.467Z",
     description: "New API issue description",

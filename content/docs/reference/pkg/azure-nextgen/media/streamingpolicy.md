@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingPolicy = new AzureNextGen.Media.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.StreamingPolicyArgs
+        var streamingPolicy = new AzureNextGen.Media.Latest.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.Latest.StreamingPolicyArgs
         {
             AccountName = "contosomedia",
-            NoEncryption = new AzureNextGen.Media.Inputs.NoEncryptionArgs
+            NoEncryption = new AzureNextGen.Media.Latest.Inputs.NoEncryptionArgs
             {
-                EnabledProtocols = new AzureNextGen.Media.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
                 {
                     Dash = true,
                     Download = true,
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
+streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
     no_encryption={
         "enabledProtocols": {
@@ -83,7 +83,7 @@ streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingPolicy = new azure_nextgen.media.StreamingPolicy("streamingPolicy", {
+const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamingPolicy", {
     accountName: "contosomedia",
     noEncryption: {
         enabledProtocols: {
@@ -111,27 +111,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingPolicy = new AzureNextGen.Media.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.StreamingPolicyArgs
+        var streamingPolicy = new AzureNextGen.Media.Latest.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.Latest.StreamingPolicyArgs
         {
             AccountName = "contosomedia",
-            CommonEncryptionCbcs = new AzureNextGen.Media.Inputs.CommonEncryptionCbcsArgs
+            CommonEncryptionCbcs = new AzureNextGen.Media.Latest.Inputs.CommonEncryptionCbcsArgs
             {
-                ContentKeys = new AzureNextGen.Media.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
                     {
                         Label = "cbcsDefaultKey",
                     },
                 },
-                Drm = new AzureNextGen.Media.Inputs.CbcsDrmConfigurationArgs
+                Drm = new AzureNextGen.Media.Latest.Inputs.CbcsDrmConfigurationArgs
                 {
-                    FairPlay = new AzureNextGen.Media.Inputs.StreamingPolicyFairPlayConfigurationArgs
+                    FairPlay = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyFairPlayConfigurationArgs
                     {
                         AllowPersistentLicense = true,
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
                     },
                 },
-                EnabledProtocols = new AzureNextGen.Media.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
                 {
                     Dash = false,
                     Download = false,
@@ -161,7 +161,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
+streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
     common_encryption_cbcs={
         "contentKeys": {
@@ -196,7 +196,7 @@ streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingPolicy = new azure_nextgen.media.StreamingPolicy("streamingPolicy", {
+const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamingPolicy", {
     accountName: "contosomedia",
     commonEncryptionCbcs: {
         contentKeys: {
@@ -236,18 +236,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingPolicy = new AzureNextGen.Media.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.StreamingPolicyArgs
+        var streamingPolicy = new AzureNextGen.Media.Latest.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.Latest.StreamingPolicyArgs
         {
             AccountName = "contosomedia",
-            CommonEncryptionCenc = new AzureNextGen.Media.Inputs.CommonEncryptionCencArgs
+            CommonEncryptionCenc = new AzureNextGen.Media.Latest.Inputs.CommonEncryptionCencArgs
             {
                 ClearTracks = 
                 {
-                    new AzureNextGen.Media.Inputs.TrackSelectionArgs
+                    new AzureNextGen.Media.Latest.Inputs.TrackSelectionArgs
                     {
                         TrackSelections = 
                         {
-                            new AzureNextGen.Media.Inputs.TrackPropertyConditionArgs
+                            new AzureNextGen.Media.Latest.Inputs.TrackPropertyConditionArgs
                             {
                                 Operation = "Equal",
                                 Property = "FourCC",
@@ -256,26 +256,26 @@ class MyStack : Stack
                         },
                     },
                 },
-                ContentKeys = new AzureNextGen.Media.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
                     {
                         Label = "cencDefaultKey",
                     },
                 },
-                Drm = new AzureNextGen.Media.Inputs.CencDrmConfigurationArgs
+                Drm = new AzureNextGen.Media.Latest.Inputs.CencDrmConfigurationArgs
                 {
-                    PlayReady = new AzureNextGen.Media.Inputs.StreamingPolicyPlayReadyConfigurationArgs
+                    PlayReady = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyPlayReadyConfigurationArgs
                     {
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
                         PlayReadyCustomAttributes = "PlayReady CustomAttributes",
                     },
-                    Widevine = new AzureNextGen.Media.Inputs.StreamingPolicyWidevineConfigurationArgs
+                    Widevine = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyWidevineConfigurationArgs
                     {
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
                     },
                 },
-                EnabledProtocols = new AzureNextGen.Media.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
                 {
                     Dash = true,
                     Download = false,
@@ -305,7 +305,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
+streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
     common_encryption_cenc={
         "clearTracks": [{
@@ -350,7 +350,7 @@ streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingPolicy = new azure_nextgen.media.StreamingPolicy("streamingPolicy", {
+const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamingPolicy", {
     accountName: "contosomedia",
     commonEncryptionCenc: {
         clearTracks: [{
@@ -400,21 +400,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingPolicy = new AzureNextGen.Media.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.StreamingPolicyArgs
+        var streamingPolicy = new AzureNextGen.Media.Latest.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.Latest.StreamingPolicyArgs
         {
             AccountName = "contosomedia",
             DefaultContentKeyPolicyName = "PolicyWithClearKeyOptionAndTokenRestriction",
-            EnvelopeEncryption = new AzureNextGen.Media.Inputs.EnvelopeEncryptionArgs
+            EnvelopeEncryption = new AzureNextGen.Media.Latest.Inputs.EnvelopeEncryptionArgs
             {
-                ContentKeys = new AzureNextGen.Media.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
                     {
                         Label = "aesDefaultKey",
                     },
                 },
                 CustomKeyAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
-                EnabledProtocols = new AzureNextGen.Media.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
                 {
                     Dash = true,
                     Download = false,
@@ -443,7 +443,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
+streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
     default_content_key_policy_name="PolicyWithClearKeyOptionAndTokenRestriction",
     envelope_encryption={
@@ -473,7 +473,7 @@ streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingPolicy = new azure_nextgen.media.StreamingPolicy("streamingPolicy", {
+const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamingPolicy", {
     accountName: "contosomedia",
     defaultContentKeyPolicyName: "PolicyWithClearKeyOptionAndTokenRestriction",
     envelopeEncryption: {
@@ -508,27 +508,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingPolicy = new AzureNextGen.Media.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.StreamingPolicyArgs
+        var streamingPolicy = new AzureNextGen.Media.Latest.StreamingPolicy("streamingPolicy", new AzureNextGen.Media.Latest.StreamingPolicyArgs
         {
             AccountName = "contosomedia",
-            CommonEncryptionCbcs = new AzureNextGen.Media.Inputs.CommonEncryptionCbcsArgs
+            CommonEncryptionCbcs = new AzureNextGen.Media.Latest.Inputs.CommonEncryptionCbcsArgs
             {
-                ContentKeys = new AzureNextGen.Media.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
                     {
                         Label = "cbcsDefaultKey",
                     },
                 },
-                Drm = new AzureNextGen.Media.Inputs.CbcsDrmConfigurationArgs
+                Drm = new AzureNextGen.Media.Latest.Inputs.CbcsDrmConfigurationArgs
                 {
-                    FairPlay = new AzureNextGen.Media.Inputs.StreamingPolicyFairPlayConfigurationArgs
+                    FairPlay = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyFairPlayConfigurationArgs
                     {
                         AllowPersistentLicense = true,
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/fairplay/{ContentKeyId}",
                     },
                 },
-                EnabledProtocols = new AzureNextGen.Media.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
                 {
                     Dash = false,
                     Download = false,
@@ -536,15 +536,15 @@ class MyStack : Stack
                     SmoothStreaming = false,
                 },
             },
-            CommonEncryptionCenc = new AzureNextGen.Media.Inputs.CommonEncryptionCencArgs
+            CommonEncryptionCenc = new AzureNextGen.Media.Latest.Inputs.CommonEncryptionCencArgs
             {
                 ClearTracks = 
                 {
-                    new AzureNextGen.Media.Inputs.TrackSelectionArgs
+                    new AzureNextGen.Media.Latest.Inputs.TrackSelectionArgs
                     {
                         TrackSelections = 
                         {
-                            new AzureNextGen.Media.Inputs.TrackPropertyConditionArgs
+                            new AzureNextGen.Media.Latest.Inputs.TrackPropertyConditionArgs
                             {
                                 Operation = "Equal",
                                 Property = "FourCC",
@@ -553,26 +553,26 @@ class MyStack : Stack
                         },
                     },
                 },
-                ContentKeys = new AzureNextGen.Media.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
                     {
                         Label = "cencDefaultKey",
                     },
                 },
-                Drm = new AzureNextGen.Media.Inputs.CencDrmConfigurationArgs
+                Drm = new AzureNextGen.Media.Latest.Inputs.CencDrmConfigurationArgs
                 {
-                    PlayReady = new AzureNextGen.Media.Inputs.StreamingPolicyPlayReadyConfigurationArgs
+                    PlayReady = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyPlayReadyConfigurationArgs
                     {
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/playready/{ContentKeyId}",
                         PlayReadyCustomAttributes = "PlayReady CustomAttributes",
                     },
-                    Widevine = new AzureNextGen.Media.Inputs.StreamingPolicyWidevineConfigurationArgs
+                    Widevine = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyWidevineConfigurationArgs
                     {
                         CustomLicenseAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/widevine/{ContentKeyId",
                     },
                 },
-                EnabledProtocols = new AzureNextGen.Media.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
                 {
                     Dash = true,
                     Download = false,
@@ -581,17 +581,17 @@ class MyStack : Stack
                 },
             },
             DefaultContentKeyPolicyName = "PolicyWithMultipleOptions",
-            EnvelopeEncryption = new AzureNextGen.Media.Inputs.EnvelopeEncryptionArgs
+            EnvelopeEncryption = new AzureNextGen.Media.Latest.Inputs.EnvelopeEncryptionArgs
             {
-                ContentKeys = new AzureNextGen.Media.Inputs.StreamingPolicyContentKeysArgs
+                ContentKeys = new AzureNextGen.Media.Latest.Inputs.StreamingPolicyContentKeysArgs
                 {
-                    DefaultKey = new AzureNextGen.Media.Inputs.DefaultKeyArgs
+                    DefaultKey = new AzureNextGen.Media.Latest.Inputs.DefaultKeyArgs
                     {
                         Label = "aesDefaultKey",
                     },
                 },
                 CustomKeyAcquisitionUrlTemplate = "https://contoso.com/{AssetAlternativeId}/envelope/{ContentKeyId}",
-                EnabledProtocols = new AzureNextGen.Media.Inputs.EnabledProtocolsArgs
+                EnabledProtocols = new AzureNextGen.Media.Latest.Inputs.EnabledProtocolsArgs
                 {
                     Dash = true,
                     Download = false,
@@ -620,7 +620,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
+streaming_policy = azure_nextgen.media.latest.StreamingPolicy("streamingPolicy",
     account_name="contosomedia",
     common_encryption_cbcs={
         "contentKeys": {
@@ -698,7 +698,7 @@ streaming_policy = azure_nextgen.media.StreamingPolicy("streamingPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingPolicy = new azure_nextgen.media.StreamingPolicy("streamingPolicy", {
+const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamingPolicy", {
     accountName: "contosomedia",
     commonEncryptionCbcs: {
         contentKeys: {

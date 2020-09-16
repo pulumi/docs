@@ -26,26 +26,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hubVirtualNetworkConnection = new AzureNextGen.Network.HubVirtualNetworkConnection("hubVirtualNetworkConnection", new AzureNextGen.Network.HubVirtualNetworkConnectionArgs
+        var hubVirtualNetworkConnection = new AzureNextGen.Network.Latest.HubVirtualNetworkConnection("hubVirtualNetworkConnection", new AzureNextGen.Network.Latest.HubVirtualNetworkConnectionArgs
         {
             ConnectionName = "connection1",
             EnableInternetSecurity = false,
-            RemoteVirtualNetwork = new AzureNextGen.Network.Inputs.SubResourceArgs
+            RemoteVirtualNetwork = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1",
             },
             ResourceGroupName = "rg1",
-            RoutingConfiguration = new AzureNextGen.Network.Inputs.RoutingConfigurationArgs
+            RoutingConfiguration = new AzureNextGen.Network.Latest.Inputs.RoutingConfigurationArgs
             {
-                AssociatedRouteTable = new AzureNextGen.Network.Inputs.SubResourceArgs
+                AssociatedRouteTable = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
                 },
-                PropagatedRouteTables = new AzureNextGen.Network.Inputs.PropagatedRouteTableArgs
+                PropagatedRouteTables = new AzureNextGen.Network.Latest.Inputs.PropagatedRouteTableArgs
                 {
                     Ids = 
                     {
-                        new AzureNextGen.Network.Inputs.SubResourceArgs
+                        new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
                         {
                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
                         },
@@ -56,11 +56,11 @@ class MyStack : Stack
                         "label2",
                     },
                 },
-                VnetRoutes = new AzureNextGen.Network.Inputs.VnetRouteArgs
+                VnetRoutes = new AzureNextGen.Network.Latest.Inputs.VnetRouteArgs
                 {
                     StaticRoutes = 
                     {
-                        new AzureNextGen.Network.Inputs.StaticRouteArgs
+                        new AzureNextGen.Network.Latest.Inputs.StaticRouteArgs
                         {
                             AddressPrefixes = 
                             {
@@ -70,7 +70,7 @@ class MyStack : Stack
                             Name = "route1",
                             NextHopIpAddress = "10.0.0.68",
                         },
-                        new AzureNextGen.Network.Inputs.StaticRouteArgs
+                        new AzureNextGen.Network.Latest.Inputs.StaticRouteArgs
                         {
                             AddressPrefixes = 
                             {
@@ -103,7 +103,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hub_virtual_network_connection = azure_nextgen.network.HubVirtualNetworkConnection("hubVirtualNetworkConnection",
+hub_virtual_network_connection = azure_nextgen.network.latest.HubVirtualNetworkConnection("hubVirtualNetworkConnection",
     connection_name="connection1",
     enable_internet_security=False,
     remote_virtual_network={
@@ -156,7 +156,7 @@ hub_virtual_network_connection = azure_nextgen.network.HubVirtualNetworkConnecti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hubVirtualNetworkConnection = new azure_nextgen.network.HubVirtualNetworkConnection("hubVirtualNetworkConnection", {
+const hubVirtualNetworkConnection = new azure_nextgen.network.latest.HubVirtualNetworkConnection("hubVirtualNetworkConnection", {
     connectionName: "connection1",
     enableInternetSecurity: false,
     remoteVirtualNetwork: {

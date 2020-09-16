@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var project = new AzureNextGen.Machinelearningexperimentation.Project("project", new AzureNextGen.Machinelearningexperimentation.ProjectArgs
+        var project = new AzureNextGen.MachineLearningExperimentation.V20170501Preview.Project("project", new AzureNextGen.MachineLearningExperimentation.V20170501Preview.ProjectArgs
         {
             AccountName = "testaccount",
             FriendlyName = "testName",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-project = azure_nextgen.machinelearningexperimentation.Project("project",
+project = azure_nextgen.machinelearningexperimentation.v20170501preview.Project("project",
     account_name="testaccount",
     friendly_name="testName",
     gitrepo="https://github/abc",
@@ -80,7 +80,7 @@ project = azure_nextgen.machinelearningexperimentation.Project("project",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const project = new azure_nextgen.machinelearningexperimentation.Project("project", {
+const project = new azure_nextgen.machinelearningexperimentation.v20170501preview.Project("project", {
     accountName: "testaccount",
     friendlyName: "testName",
     gitrepo: "https://github/abc",

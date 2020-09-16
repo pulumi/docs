@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var securityRule = new AzureNextGen.Network.SecurityRule("securityRule", new AzureNextGen.Network.SecurityRuleArgs
+        var securityRule = new AzureNextGen.Network.Latest.SecurityRule("securityRule", new AzureNextGen.Network.Latest.SecurityRuleArgs
         {
             Access = "Deny",
             DestinationAddressPrefix = "11.0.0.0/8",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-security_rule = azure_nextgen.network.SecurityRule("securityRule",
+security_rule = azure_nextgen.network.latest.SecurityRule("securityRule",
     access="Deny",
     destination_address_prefix="11.0.0.0/8",
     destination_port_range="8080",
@@ -81,7 +81,7 @@ security_rule = azure_nextgen.network.SecurityRule("securityRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const securityRule = new azure_nextgen.network.SecurityRule("securityRule", {
+const securityRule = new azure_nextgen.network.latest.SecurityRule("securityRule", {
     access: "Deny",
     destinationAddressPrefix: "11.0.0.0/8",
     destinationPortRange: "8080",

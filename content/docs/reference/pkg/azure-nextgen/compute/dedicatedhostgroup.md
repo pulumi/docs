@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedHostGroup = new AzureNextGen.Compute.DedicatedHostGroup("dedicatedHostGroup", new AzureNextGen.Compute.DedicatedHostGroupArgs
+        var dedicatedHostGroup = new AzureNextGen.Compute.Latest.DedicatedHostGroup("dedicatedHostGroup", new AzureNextGen.Compute.Latest.DedicatedHostGroupArgs
         {
             HostGroupName = "myDedicatedHostGroup",
             Location = "westus",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_host_group = azure_nextgen.compute.DedicatedHostGroup("dedicatedHostGroup",
+dedicated_host_group = azure_nextgen.compute.latest.DedicatedHostGroup("dedicatedHostGroup",
     host_group_name="myDedicatedHostGroup",
     location="westus",
     platform_fault_domain_count=3,
@@ -81,7 +81,7 @@ dedicated_host_group = azure_nextgen.compute.DedicatedHostGroup("dedicatedHostGr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dedicatedHostGroup = new azure_nextgen.compute.DedicatedHostGroup("dedicatedHostGroup", {
+const dedicatedHostGroup = new azure_nextgen.compute.latest.DedicatedHostGroup("dedicatedHostGroup", {
     hostGroupName: "myDedicatedHostGroup",
     location: "westus",
     platformFaultDomainCount: 3,

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cloudConnector = new AzureNextGen.Costmanagement.CloudConnector("cloudConnector", new AzureNextGen.Costmanagement.CloudConnectorArgs
+        var cloudConnector = new AzureNextGen.CostManagement.V20190301Preview.CloudConnector("cloudConnector", new AzureNextGen.CostManagement.V20190301Preview.CloudConnectorArgs
         {
             ConnectorName = "aws-123456789012",
             CredentialsKey = "arn:aws:iam::123456789012:role/AzureCostManagementRole",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cloud_connector = azure_nextgen.costmanagement.CloudConnector("cloudConnector",
+cloud_connector = azure_nextgen.costmanagement.v20190301preview.CloudConnector("cloudConnector",
     connector_name="aws-123456789012",
     credentials_key="arn:aws:iam::123456789012:role/AzureCostManagementRole",
     credentials_secret="external-id",
@@ -69,7 +69,7 @@ cloud_connector = azure_nextgen.costmanagement.CloudConnector("cloudConnector",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cloudConnector = new azure_nextgen.costmanagement.CloudConnector("cloudConnector", {
+const cloudConnector = new azure_nextgen.costmanagement.v20190301preview.CloudConnector("cloudConnector", {
     connectorName: "aws-123456789012",
     credentialsKey: "arn:aws:iam::123456789012:role/AzureCostManagementRole",
     credentialsSecret: "external-id",

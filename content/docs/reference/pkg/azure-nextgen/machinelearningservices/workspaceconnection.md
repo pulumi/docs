@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspaceConnection = new AzureNextGen.Machinelearningservices.WorkspaceConnection("workspaceConnection", new AzureNextGen.Machinelearningservices.WorkspaceConnectionArgs
+        var workspaceConnection = new AzureNextGen.MachineLearningServices.Latest.WorkspaceConnection("workspaceConnection", new AzureNextGen.MachineLearningServices.Latest.WorkspaceConnectionArgs
         {
             AuthType = "PAT",
             Category = "ACR",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace_connection = azure_nextgen.machinelearningservices.WorkspaceConnection("workspaceConnection",
+workspace_connection = azure_nextgen.machinelearningservices.latest.WorkspaceConnection("workspaceConnection",
     auth_type="PAT",
     category="ACR",
     connection_name="connection-1",
@@ -75,7 +75,7 @@ workspace_connection = azure_nextgen.machinelearningservices.WorkspaceConnection
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspaceConnection = new azure_nextgen.machinelearningservices.WorkspaceConnection("workspaceConnection", {
+const workspaceConnection = new azure_nextgen.machinelearningservices.latest.WorkspaceConnection("workspaceConnection", {
     authType: "PAT",
     category: "ACR",
     connectionName: "connection-1",

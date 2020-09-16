@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bookmark = new AzureNextGen.Securityinsights.Bookmark("bookmark", new AzureNextGen.Securityinsights.BookmarkArgs
+        var bookmark = new AzureNextGen.SecurityInsights.V20190101Preview.Bookmark("bookmark", new AzureNextGen.SecurityInsights.V20190101Preview.BookmarkArgs
         {
             BookmarkId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             Created = "2019-01-01T13:15:30Z",
-            CreatedBy = new AzureNextGen.Securityinsights.Inputs.UserInfoArgs
+            CreatedBy = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -47,7 +47,7 @@ class MyStack : Stack
             QueryResult = "Security Event query result",
             ResourceGroupName = "myRg",
             Updated = "2019-01-01T13:15:30Z",
-            UpdatedBy = new AzureNextGen.Securityinsights.Inputs.UserInfoArgs
+            UpdatedBy = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -71,7 +71,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bookmark = azure_nextgen.securityinsights.Bookmark("bookmark",
+bookmark = azure_nextgen.securityinsights.v20190101preview.Bookmark("bookmark",
     bookmark_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     created="2019-01-01T13:15:30Z",
     created_by={
@@ -104,7 +104,7 @@ bookmark = azure_nextgen.securityinsights.Bookmark("bookmark",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const bookmark = new azure_nextgen.securityinsights.Bookmark("bookmark", {
+const bookmark = new azure_nextgen.securityinsights.v20190101preview.Bookmark("bookmark", {
     bookmarkId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     created: "2019-01-01T13:15:30Z",
     createdBy: {

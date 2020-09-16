@@ -26,19 +26,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var containerGroup = new AzureNextGen.Containerinstance.ContainerGroup("containerGroup", new AzureNextGen.Containerinstance.ContainerGroupArgs
+        var containerGroup = new AzureNextGen.ContainerInstance.Latest.ContainerGroup("containerGroup", new AzureNextGen.ContainerInstance.Latest.ContainerGroupArgs
         {
             ContainerGroupName = "demo1",
             Containers = 
             {
-                new AzureNextGen.Containerinstance.Inputs.ContainerArgs
+                new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerArgs
                 {
                     Name = "demo1",
                 },
             },
-            Diagnostics = new AzureNextGen.Containerinstance.Inputs.ContainerGroupDiagnosticsArgs
+            Diagnostics = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupDiagnosticsArgs
             {
-                LogAnalytics = new AzureNextGen.Containerinstance.Inputs.LogAnalyticsArgs
+                LogAnalytics = new AzureNextGen.ContainerInstance.Latest.Inputs.LogAnalyticsArgs
                 {
                     LogType = "ContainerInsights",
                     Metadata = 
@@ -49,7 +49,7 @@ class MyStack : Stack
                     WorkspaceKey = "workspaceKey",
                 },
             },
-            DnsConfig = new AzureNextGen.Containerinstance.Inputs.DnsConfigurationArgs
+            DnsConfig = new AzureNextGen.ContainerInstance.Latest.Inputs.DnsConfigurationArgs
             {
                 NameServers = 
                 {
@@ -58,17 +58,17 @@ class MyStack : Stack
                 Options = "ndots:2",
                 SearchDomains = "cluster.local svc.cluster.local",
             },
-            Identity = new AzureNextGen.Containerinstance.Inputs.ContainerGroupIdentityArgs
+            Identity = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupIdentityArgs
             {
                 Type = "SystemAssigned, UserAssigned",
             },
             ImageRegistryCredentials = {},
-            IpAddress = new AzureNextGen.Containerinstance.Inputs.IpAddressArgs
+            IpAddress = new AzureNextGen.ContainerInstance.Latest.Inputs.IpAddressArgs
             {
                 DnsNameLabel = "dnsnamelabel1",
                 Ports = 
                 {
-                    new AzureNextGen.Containerinstance.Inputs.PortArgs
+                    new AzureNextGen.ContainerInstance.Latest.Inputs.PortArgs
                     {
                         Port = 80,
                         Protocol = "TCP",
@@ -77,7 +77,7 @@ class MyStack : Stack
                 Type = "Public",
             },
             Location = "west us",
-            NetworkProfile = new AzureNextGen.Containerinstance.Inputs.ContainerGroupNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupNetworkProfileArgs
             {
                 Id = "test-network-profile-id",
             },
@@ -85,9 +85,9 @@ class MyStack : Stack
             ResourceGroupName = "demo",
             Volumes = 
             {
-                new AzureNextGen.Containerinstance.Inputs.VolumeArgs
+                new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeArgs
                 {
-                    AzureFile = new AzureNextGen.Containerinstance.Inputs.AzureFileVolumeArgs
+                    AzureFile = new AzureNextGen.ContainerInstance.Latest.Inputs.AzureFileVolumeArgs
                     {
                         ShareName = "shareName",
                         StorageAccountKey = "accountKey",
@@ -95,12 +95,12 @@ class MyStack : Stack
                     },
                     Name = "volume1",
                 },
-                new AzureNextGen.Containerinstance.Inputs.VolumeArgs
+                new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeArgs
                 {
                     EmptyDir = ,
                     Name = "volume2",
                 },
-                new AzureNextGen.Containerinstance.Inputs.VolumeArgs
+                new AzureNextGen.ContainerInstance.Latest.Inputs.VolumeArgs
                 {
                     Name = "volume3",
                     Secret = 
@@ -129,7 +129,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-container_group = azure_nextgen.containerinstance.ContainerGroup("containerGroup",
+container_group = azure_nextgen.containerinstance.latest.ContainerGroup("containerGroup",
     container_group_name="demo1",
     containers=[{
         "name": "demo1",
@@ -199,7 +199,7 @@ container_group = azure_nextgen.containerinstance.ContainerGroup("containerGroup
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const containerGroup = new azure_nextgen.containerinstance.ContainerGroup("containerGroup", {
+const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup("containerGroup", {
     containerGroupName: "demo1",
     containers: [{
         name: "demo1",

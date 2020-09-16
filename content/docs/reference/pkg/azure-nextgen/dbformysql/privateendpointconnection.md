@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Dbformysql.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Dbformysql.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.DBforMySQL.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.DBforMySQL.Latest.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "private-endpoint-connection-name",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Dbformysql.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.DBforMySQL.Latest.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
             {
                 Description = "Approved by johndoe@contoso.com",
                 Status = "Approved",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.dbformysql.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.dbformysql.latest.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="private-endpoint-connection-name",
     private_link_service_connection_state={
         "description": "Approved by johndoe@contoso.com",
@@ -74,7 +74,7 @@ private_endpoint_connection = azure_nextgen.dbformysql.PrivateEndpointConnection
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.dbformysql.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.dbformysql.latest.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "private-endpoint-connection-name",
     privateLinkServiceConnectionState: {
         description: "Approved by johndoe@contoso.com",

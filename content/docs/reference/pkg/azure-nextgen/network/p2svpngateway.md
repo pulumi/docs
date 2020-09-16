@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var p2sVpnGateway = new AzureNextGen.Network.P2sVpnGateway("p2sVpnGateway", new AzureNextGen.Network.P2sVpnGatewayArgs
+        var p2sVpnGateway = new AzureNextGen.Network.Latest.P2sVpnGateway("p2sVpnGateway", new AzureNextGen.Network.Latest.P2sVpnGatewayArgs
         {
             CustomDnsServers = 
             {
@@ -37,7 +37,7 @@ class MyStack : Stack
             Location = "West US",
             P2SConnectionConfigurations = 
             {
-                new AzureNextGen.Network.Inputs.P2SConnectionConfigurationArgs
+                new AzureNextGen.Network.Latest.Inputs.P2SConnectionConfigurationArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
                     Name = "P2SConnectionConfig1",
@@ -48,12 +48,12 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            VirtualHub = new AzureNextGen.Network.Inputs.SubResourceArgs
+            VirtualHub = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
             },
             VpnGatewayScaleUnit = 1,
-            VpnServerConfiguration = new AzureNextGen.Network.Inputs.SubResourceArgs
+            VpnServerConfiguration = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
             },
@@ -76,7 +76,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-p2s_vpn_gateway = azure_nextgen.network.P2sVpnGateway("p2sVpnGateway",
+p2s_vpn_gateway = azure_nextgen.network.latest.P2sVpnGateway("p2sVpnGateway",
     custom_dns_servers=[
         "1.1.1.1",
         "2.2.2.2",
@@ -109,7 +109,7 @@ p2s_vpn_gateway = azure_nextgen.network.P2sVpnGateway("p2sVpnGateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const p2sVpnGateway = new azure_nextgen.network.P2sVpnGateway("p2sVpnGateway", {
+const p2sVpnGateway = new azure_nextgen.network.latest.P2sVpnGateway("p2sVpnGateway", {
     customDnsServers: [
         "1.1.1.1",
         "2.2.2.2",

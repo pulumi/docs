@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queueAuthorizationRule = new AzureNextGen.Servicebus.QueueAuthorizationRule("queueAuthorizationRule", new AzureNextGen.Servicebus.QueueAuthorizationRuleArgs
+        var queueAuthorizationRule = new AzureNextGen.ServiceBus.Latest.QueueAuthorizationRule("queueAuthorizationRule", new AzureNextGen.ServiceBus.Latest.QueueAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-AuthRules-5800",
             NamespaceName = "sdk-Namespace-7982",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-queue_authorization_rule = azure_nextgen.servicebus.QueueAuthorizationRule("queueAuthorizationRule",
+queue_authorization_rule = azure_nextgen.servicebus.latest.QueueAuthorizationRule("queueAuthorizationRule",
     authorization_rule_name="sdk-AuthRules-5800",
     namespace_name="sdk-Namespace-7982",
     queue_name="sdk-Queues-2317",
@@ -76,7 +76,7 @@ queue_authorization_rule = azure_nextgen.servicebus.QueueAuthorizationRule("queu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const queueAuthorizationRule = new azure_nextgen.servicebus.QueueAuthorizationRule("queueAuthorizationRule", {
+const queueAuthorizationRule = new azure_nextgen.servicebus.latest.QueueAuthorizationRule("queueAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-5800",
     namespaceName: "sdk-Namespace-7982",
     queueName: "sdk-Queues-2317",

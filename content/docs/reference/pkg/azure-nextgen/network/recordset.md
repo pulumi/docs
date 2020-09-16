@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
         {
             ARecords = 
             {
-                new AzureNextGen.Network.Inputs.ARecordArgs
+                new AzureNextGen.Network.Latest.Inputs.ARecordArgs
                 {
                     Ipv4Address = "1.2.3.4",
                 },
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.RecordSet("recordSet",
+record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     a_records=[{
         "ipv4Address": "1.2.3.4",
     }],
@@ -86,7 +86,7 @@ record_set = azure_nextgen.network.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     aRecords: [{
         ipv4Address: "1.2.3.4",
     }],
@@ -114,11 +114,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
         {
             AaaaRecords = 
             {
-                new AzureNextGen.Network.Inputs.AaaaRecordArgs
+                new AzureNextGen.Network.Latest.Inputs.AaaaRecordArgs
                 {
                     Ipv6Address = "::1",
                 },
@@ -151,7 +151,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.RecordSet("recordSet",
+record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     aaaa_records=[{
         "ipv6Address": "::1",
     }],
@@ -174,7 +174,7 @@ record_set = azure_nextgen.network.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     aaaaRecords: [{
         ipv6Address: "::1",
     }],
@@ -202,9 +202,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
         {
-            CnameRecord = new AzureNextGen.Network.Inputs.CnameRecordArgs
+            CnameRecord = new AzureNextGen.Network.Latest.Inputs.CnameRecordArgs
             {
                 Cname = "contoso.com",
             },
@@ -236,7 +236,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.RecordSet("recordSet",
+record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     cname_record={
         "cname": "contoso.com",
     },
@@ -259,7 +259,7 @@ record_set = azure_nextgen.network.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     cnameRecord: {
         cname: "contoso.com",
     },
@@ -287,7 +287,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
         {
             Metadata = 
             {
@@ -295,7 +295,7 @@ class MyStack : Stack
             },
             MxRecords = 
             {
-                new AzureNextGen.Network.Inputs.MxRecordArgs
+                new AzureNextGen.Network.Latest.Inputs.MxRecordArgs
                 {
                     Exchange = "mail.privatezone1.com",
                     Preference = 0,
@@ -325,7 +325,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.RecordSet("recordSet",
+record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
@@ -349,7 +349,7 @@ record_set = azure_nextgen.network.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     metadata: {
         key1: "value1",
     },
@@ -378,7 +378,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
         {
             Metadata = 
             {
@@ -387,7 +387,7 @@ class MyStack : Stack
             PrivateZoneName = "0.0.127.in-addr.arpa",
             PtrRecords = 
             {
-                new AzureNextGen.Network.Inputs.PtrRecordArgs
+                new AzureNextGen.Network.Latest.Inputs.PtrRecordArgs
                 {
                     Ptrdname = "localhost",
                 },
@@ -415,7 +415,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.RecordSet("recordSet",
+record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
@@ -438,7 +438,7 @@ record_set = azure_nextgen.network.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     metadata: {
         key1: "value1",
     },
@@ -466,7 +466,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
         {
             Metadata = 
             {
@@ -476,7 +476,7 @@ class MyStack : Stack
             RecordType = "SOA",
             RelativeRecordSetName = "@",
             ResourceGroupName = "resourceGroup1",
-            SoaRecord = new AzureNextGen.Network.Inputs.SoaRecordArgs
+            SoaRecord = new AzureNextGen.Network.Latest.Inputs.SoaRecordArgs
             {
                 Email = "azureprivatedns-hostmaster.microsoft.com",
                 ExpireTime = 2419200,
@@ -506,7 +506,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.RecordSet("recordSet",
+record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
@@ -535,7 +535,7 @@ record_set = azure_nextgen.network.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     metadata: {
         key1: "value1",
     },
@@ -569,7 +569,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
         {
             Metadata = 
             {
@@ -581,7 +581,7 @@ class MyStack : Stack
             ResourceGroupName = "resourceGroup1",
             SrvRecords = 
             {
-                new AzureNextGen.Network.Inputs.SrvRecordArgs
+                new AzureNextGen.Network.Latest.Inputs.SrvRecordArgs
                 {
                     Port = 80,
                     Priority = 0,
@@ -609,7 +609,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.RecordSet("recordSet",
+record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
@@ -635,7 +635,7 @@ record_set = azure_nextgen.network.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     metadata: {
         key1: "value1",
     },
@@ -666,7 +666,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var recordSet = new AzureNextGen.Network.RecordSet("recordSet", new AzureNextGen.Network.RecordSetArgs
+        var recordSet = new AzureNextGen.Network.Latest.RecordSet("recordSet", new AzureNextGen.Network.Latest.RecordSetArgs
         {
             Metadata = 
             {
@@ -679,7 +679,7 @@ class MyStack : Stack
             Ttl = 3600,
             TxtRecords = 
             {
-                new AzureNextGen.Network.Inputs.TxtRecordArgs
+                new AzureNextGen.Network.Latest.Inputs.TxtRecordArgs
                 {
                     Value = 
                     {
@@ -707,7 +707,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-record_set = azure_nextgen.network.RecordSet("recordSet",
+record_set = azure_nextgen.network.latest.RecordSet("recordSet",
     metadata={
         "key1": "value1",
     },
@@ -733,7 +733,7 @@ record_set = azure_nextgen.network.RecordSet("recordSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const recordSet = new azure_nextgen.network.RecordSet("recordSet", {
+const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
     metadata: {
         key1: "value1",
     },

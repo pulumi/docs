@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyAssignment = new AzureNextGen.Authorization.PolicyAssignment("policyAssignment", new AzureNextGen.Authorization.PolicyAssignmentArgs
+        var policyAssignment = new AzureNextGen.Authorization.Latest.PolicyAssignment("policyAssignment", new AzureNextGen.Authorization.Latest.PolicyAssignmentArgs
         {
             Description = "Force resource names to begin with given DeptA and end with -LC",
             DisplayName = "Enforce resource naming rules",
@@ -36,11 +36,11 @@ class MyStack : Stack
             },
             Parameters = 
             {
-                { "prefix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                 {
                     Value = "DeptA",
                 } },
-                { "suffix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                 {
                     Value = "-LC",
                 } },
@@ -67,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_assignment = azure_nextgen.authorization.PolicyAssignment("policyAssignment",
+policy_assignment = azure_nextgen.authorization.latest.PolicyAssignment("policyAssignment",
     description="Force resource names to begin with given DeptA and end with -LC",
     display_name="Enforce resource naming rules",
     metadata={
@@ -95,7 +95,7 @@ policy_assignment = azure_nextgen.authorization.PolicyAssignment("policyAssignme
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policyAssignment = new azure_nextgen.authorization.PolicyAssignment("policyAssignment", {
+const policyAssignment = new azure_nextgen.authorization.latest.PolicyAssignment("policyAssignment", {
     description: "Force resource names to begin with given DeptA and end with -LC",
     displayName: "Enforce resource naming rules",
     metadata: {
@@ -128,12 +128,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyAssignment = new AzureNextGen.Authorization.PolicyAssignment("policyAssignment", new AzureNextGen.Authorization.PolicyAssignmentArgs
+        var policyAssignment = new AzureNextGen.Authorization.Latest.PolicyAssignment("policyAssignment", new AzureNextGen.Authorization.Latest.PolicyAssignmentArgs
         {
             Description = "Force resource names to begin with given DeptA and end with -LC",
             DisplayName = "Enforce resource naming rules",
             EnforcementMode = "Default",
-            Identity = new AzureNextGen.Authorization.Inputs.IdentityArgs
+            Identity = new AzureNextGen.Authorization.Latest.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -144,11 +144,11 @@ class MyStack : Stack
             },
             Parameters = 
             {
-                { "prefix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                 {
                     Value = "DeptA",
                 } },
-                { "suffix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                 {
                     Value = "-LC",
                 } },
@@ -175,7 +175,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_assignment = azure_nextgen.authorization.PolicyAssignment("policyAssignment",
+policy_assignment = azure_nextgen.authorization.latest.PolicyAssignment("policyAssignment",
     description="Force resource names to begin with given DeptA and end with -LC",
     display_name="Enforce resource naming rules",
     enforcement_mode="Default",
@@ -208,7 +208,7 @@ policy_assignment = azure_nextgen.authorization.PolicyAssignment("policyAssignme
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policyAssignment = new azure_nextgen.authorization.PolicyAssignment("policyAssignment", {
+const policyAssignment = new azure_nextgen.authorization.latest.PolicyAssignment("policyAssignment", {
     description: "Force resource names to begin with given DeptA and end with -LC",
     displayName: "Enforce resource naming rules",
     enforcementMode: "Default",
@@ -246,7 +246,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyAssignment = new AzureNextGen.Authorization.PolicyAssignment("policyAssignment", new AzureNextGen.Authorization.PolicyAssignmentArgs
+        var policyAssignment = new AzureNextGen.Authorization.Latest.PolicyAssignment("policyAssignment", new AzureNextGen.Authorization.Latest.PolicyAssignmentArgs
         {
             Description = "Force resource names to begin with given DeptA and end with -LC",
             DisplayName = "Enforce resource naming rules",
@@ -257,11 +257,11 @@ class MyStack : Stack
             },
             Parameters = 
             {
-                { "prefix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                 {
                     Value = "DeptA",
                 } },
-                { "suffix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                 {
                     Value = "-LC",
                 } },
@@ -288,7 +288,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_assignment = azure_nextgen.authorization.PolicyAssignment("policyAssignment",
+policy_assignment = azure_nextgen.authorization.latest.PolicyAssignment("policyAssignment",
     description="Force resource names to begin with given DeptA and end with -LC",
     display_name="Enforce resource naming rules",
     enforcement_mode="DoNotEnforce",
@@ -317,7 +317,7 @@ policy_assignment = azure_nextgen.authorization.PolicyAssignment("policyAssignme
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policyAssignment = new azure_nextgen.authorization.PolicyAssignment("policyAssignment", {
+const policyAssignment = new azure_nextgen.authorization.latest.PolicyAssignment("policyAssignment", {
     description: "Force resource names to begin with given DeptA and end with -LC",
     displayName: "Enforce resource naming rules",
     enforcementMode: "DoNotEnforce",

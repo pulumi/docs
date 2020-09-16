@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Workspace("workspace", new AzureNextGen.Databricks.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
             {
-                PrepareEncryption = new AzureNextGen.Databricks.Inputs.WorkspaceCustomBooleanParameterArgs
+                PrepareEncryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomBooleanParameterArgs
                 {
                     Value = true,
                 },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.Workspace("workspace",
+workspace = azure_nextgen.databricks.latest.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
     parameters={
@@ -79,7 +79,7 @@ workspace = azure_nextgen.databricks.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.databricks.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -105,7 +105,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Workspace("workspace", new AzureNextGen.Databricks.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
@@ -130,7 +130,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.Workspace("workspace",
+workspace = azure_nextgen.databricks.latest.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
     resource_group_name="rg",
@@ -146,7 +146,7 @@ workspace = azure_nextgen.databricks.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.databricks.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     resourceGroupName: "rg",
@@ -167,21 +167,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Workspace("workspace", new AzureNextGen.Databricks.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
             {
-                CustomPrivateSubnetName = new AzureNextGen.Databricks.Inputs.WorkspaceCustomStringParameterArgs
+                CustomPrivateSubnetName = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
                 {
                     Value = "myPrivateSubnet",
                 },
-                CustomPublicSubnetName = new AzureNextGen.Databricks.Inputs.WorkspaceCustomStringParameterArgs
+                CustomPublicSubnetName = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
                 {
                     Value = "myPublicSubnet",
                 },
-                CustomVirtualNetworkId = new AzureNextGen.Databricks.Inputs.WorkspaceCustomStringParameterArgs
+                CustomVirtualNetworkId = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomStringParameterArgs
                 {
                     Value = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
                 },
@@ -207,7 +207,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.Workspace("workspace",
+workspace = azure_nextgen.databricks.latest.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
     parameters={
@@ -234,7 +234,7 @@ workspace = azure_nextgen.databricks.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.databricks.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -266,15 +266,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Workspace("workspace", new AzureNextGen.Databricks.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
             {
-                Encryption = new AzureNextGen.Databricks.Inputs.WorkspaceEncryptionParameterArgs
+                Encryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceEncryptionParameterArgs
                 {
-                    Value = new AzureNextGen.Databricks.Inputs.EncryptionArgs
+                    Value = new AzureNextGen.Databricks.Latest.Inputs.EncryptionArgs
                     {
                         KeyName = "myKeyName",
                         KeySource = "Microsoft.Keyvault",
@@ -282,7 +282,7 @@ class MyStack : Stack
                         KeyVersion = "00000000000000000000000000000000",
                     },
                 },
-                PrepareEncryption = new AzureNextGen.Databricks.Inputs.WorkspaceCustomBooleanParameterArgs
+                PrepareEncryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomBooleanParameterArgs
                 {
                     Value = true,
                 },
@@ -308,7 +308,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.Workspace("workspace",
+workspace = azure_nextgen.databricks.latest.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
     parameters={
@@ -337,7 +337,7 @@ workspace = azure_nextgen.databricks.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.databricks.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {
@@ -371,15 +371,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Databricks.Workspace("workspace", new AzureNextGen.Databricks.WorkspaceArgs
+        var workspace = new AzureNextGen.Databricks.Latest.Workspace("workspace", new AzureNextGen.Databricks.Latest.WorkspaceArgs
         {
             Location = "westus",
             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
-            Parameters = new AzureNextGen.Databricks.Inputs.WorkspaceCustomParametersArgs
+            Parameters = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceCustomParametersArgs
             {
-                Encryption = new AzureNextGen.Databricks.Inputs.WorkspaceEncryptionParameterArgs
+                Encryption = new AzureNextGen.Databricks.Latest.Inputs.WorkspaceEncryptionParameterArgs
                 {
-                    Value = new AzureNextGen.Databricks.Inputs.EncryptionArgs
+                    Value = new AzureNextGen.Databricks.Latest.Inputs.EncryptionArgs
                     {
                         KeySource = "Default",
                     },
@@ -406,7 +406,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.databricks.Workspace("workspace",
+workspace = azure_nextgen.databricks.latest.Workspace("workspace",
     location="westus",
     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
     parameters={
@@ -429,7 +429,7 @@ workspace = azure_nextgen.databricks.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.databricks.Workspace("workspace", {
+const workspace = new azure_nextgen.databricks.latest.Workspace("workspace", {
     location: "westus",
     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
     parameters: {

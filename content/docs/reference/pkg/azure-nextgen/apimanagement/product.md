@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var product = new AzureNextGen.Apimanagement.Product("product", new AzureNextGen.Apimanagement.ProductArgs
+        var product = new AzureNextGen.ApiManagement.Latest.Product("product", new AzureNextGen.ApiManagement.Latest.ProductArgs
         {
             DisplayName = "Test Template ProductName 4",
             ProductId = "testproduct",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-product = azure_nextgen.apimanagement.Product("product",
+product = azure_nextgen.apimanagement.latest.Product("product",
     display_name="Test Template ProductName 4",
     product_id="testproduct",
     resource_group_name="rg1",
@@ -67,7 +67,7 @@ product = azure_nextgen.apimanagement.Product("product",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const product = new azure_nextgen.apimanagement.Product("product", {
+const product = new azure_nextgen.apimanagement.latest.Product("product", {
     displayName: "Test Template ProductName 4",
     productId: "testproduct",
     resourceGroupName: "rg1",

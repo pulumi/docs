@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobCredential = new AzureNextGen.Sql.JobCredential("jobCredential", new AzureNextGen.Sql.JobCredentialArgs
+        var jobCredential = new AzureNextGen.Sql.V20170301Preview.JobCredential("jobCredential", new AzureNextGen.Sql.V20170301Preview.JobCredentialArgs
         {
             CredentialName = "cred1",
             JobAgentName = "agent1",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_credential = azure_nextgen.sql.JobCredential("jobCredential",
+job_credential = azure_nextgen.sql.v20170301preview.JobCredential("jobCredential",
     credential_name="cred1",
     job_agent_name="agent1",
     password="<password>",
@@ -71,7 +71,7 @@ job_credential = azure_nextgen.sql.JobCredential("jobCredential",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const jobCredential = new azure_nextgen.sql.JobCredential("jobCredential", {
+const jobCredential = new azure_nextgen.sql.v20170301preview.JobCredential("jobCredential", {
     credentialName: "cred1",
     jobAgentName: "agent1",
     password: "<password>",

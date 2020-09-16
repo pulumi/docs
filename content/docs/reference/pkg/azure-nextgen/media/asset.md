@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var asset = new AzureNextGen.Media.Asset("asset", new AzureNextGen.Media.AssetArgs
+        var asset = new AzureNextGen.Media.Latest.Asset("asset", new AzureNextGen.Media.Latest.AssetArgs
         {
             AccountName = "contosomedia",
             AssetName = "ClimbingMountLogan",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-asset = azure_nextgen.media.Asset("asset",
+asset = azure_nextgen.media.latest.Asset("asset",
     account_name="contosomedia",
     asset_name="ClimbingMountLogan",
     description="A documentary showing the ascent of Mount Logan",
@@ -69,7 +69,7 @@ asset = azure_nextgen.media.Asset("asset",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const asset = new azure_nextgen.media.Asset("asset", {
+const asset = new azure_nextgen.media.latest.Asset("asset", {
     accountName: "contosomedia",
     assetName: "ClimbingMountLogan",
     description: "A documentary showing the ascent of Mount Logan",

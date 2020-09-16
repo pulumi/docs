@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sapMonitor = new AzureNextGen.Hanaonazure.SapMonitor("sapMonitor", new AzureNextGen.Hanaonazure.SapMonitorArgs
+        var sapMonitor = new AzureNextGen.HanaOnAzure.V20200207Preview.SapMonitor("sapMonitor", new AzureNextGen.HanaOnAzure.V20200207Preview.SapMonitorArgs
         {
             EnableCustomerAnalytics = true,
             Location = "westus",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sap_monitor = azure_nextgen.hanaonazure.SapMonitor("sapMonitor",
+sap_monitor = azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sapMonitor",
     enable_customer_analytics=True,
     location="westus",
     log_analytics_workspace_arm_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
@@ -82,7 +82,7 @@ sap_monitor = azure_nextgen.hanaonazure.SapMonitor("sapMonitor",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sapMonitor = new azure_nextgen.hanaonazure.SapMonitor("sapMonitor", {
+const sapMonitor = new azure_nextgen.hanaonazure.v20200207preview.SapMonitor("sapMonitor", {
     enableCustomerAnalytics: true,
     location: "westus",
     logAnalyticsWorkspaceArmId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",

@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var user = new AzureNextGen.Databoxedge.User("user", new AzureNextGen.Databoxedge.UserArgs
+        var user = new AzureNextGen.DataBoxEdge.Latest.User("user", new AzureNextGen.DataBoxEdge.Latest.UserArgs
         {
             DeviceName = "testedgedevice",
-            EncryptedPassword = new AzureNextGen.Databoxedge.Inputs.AsymmetricEncryptedSecretArgs
+            EncryptedPassword = new AzureNextGen.DataBoxEdge.Latest.Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "None",
                 EncryptionCertThumbprint = "blah",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user = azure_nextgen.databoxedge.User("user",
+user = azure_nextgen.databoxedge.latest.User("user",
     device_name="testedgedevice",
     encrypted_password={
         "encryptionAlgorithm": "None",
@@ -80,7 +80,7 @@ user = azure_nextgen.databoxedge.User("user",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const user = new azure_nextgen.databoxedge.User("user", {
+const user = new azure_nextgen.databoxedge.latest.User("user", {
     deviceName: "testedgedevice",
     encryptedPassword: {
         encryptionAlgorithm: "None",

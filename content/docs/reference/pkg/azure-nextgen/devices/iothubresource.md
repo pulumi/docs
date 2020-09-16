@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotHubResource = new AzureNextGen.Devices.IotHubResource("iotHubResource", new AzureNextGen.Devices.IotHubResourceArgs
+        var iotHubResource = new AzureNextGen.Devices.Latest.IotHubResource("iotHubResource", new AzureNextGen.Devices.Latest.IotHubResourceArgs
         {
             Etag = "AAAAAAFD6M4=",
             Location = "centraluseuap",
             ResourceGroupName = "myResourceGroup",
             ResourceName = "testHub",
-            Sku = new AzureNextGen.Devices.Inputs.IotHubSkuInfoArgs
+            Sku = new AzureNextGen.Devices.Latest.Inputs.IotHubSkuInfoArgs
             {
                 Capacity = 1,
                 Name = "S1",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_hub_resource = azure_nextgen.devices.IotHubResource("iotHubResource",
+iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
     etag="AAAAAAFD6M4=",
     location="centraluseuap",
     resource_group_name="myResourceGroup",
@@ -78,7 +78,7 @@ iot_hub_resource = azure_nextgen.devices.IotHubResource("iotHubResource",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const iotHubResource = new azure_nextgen.devices.IotHubResource("iotHubResource", {
+const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubResource", {
     etag: "AAAAAAFD6M4=",
     location: "centraluseuap",
     resourceGroupName: "myResourceGroup",

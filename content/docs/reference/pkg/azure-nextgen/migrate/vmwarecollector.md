@@ -25,7 +25,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vMwareCollector = new AzureNextGen.Migrate.VMwareCollector("vMwareCollector", new AzureNextGen.Migrate.VMwareCollectorArgs
+        var vMwareCollector = new AzureNextGen.Migrate.Latest.VMwareCollector("vMwareCollector", new AzureNextGen.Migrate.Latest.VMwareCollectorArgs
         {
             ETag = "\"01003d32-0000-0d00-0000-5d74d2e50000\"",
             ProjectName = "abgoyalWEselfhostb72bproject",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-v_mware_collector = azure_nextgen.migrate.VMwareCollector("vMwareCollector",
+v_mware_collector = azure_nextgen.migrate.latest.VMwareCollector("vMwareCollector",
     e_tag="\"01003d32-0000-0d00-0000-5d74d2e50000\"",
     project_name="abgoyalWEselfhostb72bproject",
     resource_group_name="abgoyal-westEurope",
@@ -66,7 +66,7 @@ v_mware_collector = azure_nextgen.migrate.VMwareCollector("vMwareCollector",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vMwareCollector = new azure_nextgen.migrate.VMwareCollector("vMwareCollector", {
+const vMwareCollector = new azure_nextgen.migrate.latest.VMwareCollector("vMwareCollector", {
     eTag: "\"01003d32-0000-0d00-0000-5d74d2e50000\"",
     projectName: "abgoyalWEselfhostb72bproject",
     resourceGroupName: "abgoyal-westEurope",

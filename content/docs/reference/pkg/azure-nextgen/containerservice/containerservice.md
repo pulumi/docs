@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var containerService = new AzureNextGen.Containerservice.ContainerService("containerService", new AzureNextGen.Containerservice.ContainerServiceArgs
+        var containerService = new AzureNextGen.ContainerService.Latest.ContainerService("containerService", new AzureNextGen.ContainerService.Latest.ContainerServiceArgs
         {
             ContainerServiceName = "acs1",
             Location = "location1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-container_service = azure_nextgen.containerservice.ContainerService("containerService",
+container_service = azure_nextgen.containerservice.latest.ContainerService("containerService",
     container_service_name="acs1",
     location="location1",
     resource_group_name="rg1")
@@ -65,7 +65,7 @@ container_service = azure_nextgen.containerservice.ContainerService("containerSe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const containerService = new azure_nextgen.containerservice.ContainerService("containerService", {
+const containerService = new azure_nextgen.containerservice.latest.ContainerService("containerService", {
     containerServiceName: "acs1",
     location: "location1",
     resourceGroupName: "rg1",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var productSetting = new AzureNextGen.Securityinsights.ProductSetting("productSetting", new AzureNextGen.Securityinsights.ProductSettingArgs
+        var productSetting = new AzureNextGen.SecurityInsights.V20190101Preview.ProductSetting("productSetting", new AzureNextGen.SecurityInsights.V20190101Preview.ProductSettingArgs
         {
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
             Kind = "EyesOn",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-product_setting = azure_nextgen.securityinsights.ProductSetting("productSetting",
+product_setting = azure_nextgen.securityinsights.v20190101preview.ProductSetting("productSetting",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind="EyesOn",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
@@ -71,7 +71,7 @@ product_setting = azure_nextgen.securityinsights.ProductSetting("productSetting"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const productSetting = new azure_nextgen.securityinsights.ProductSetting("productSetting", {
+const productSetting = new azure_nextgen.securityinsights.v20190101preview.ProductSetting("productSetting", {
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind: "EyesOn",
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",

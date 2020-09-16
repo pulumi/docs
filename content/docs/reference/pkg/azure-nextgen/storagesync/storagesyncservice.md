@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageSyncService = new AzureNextGen.Storagesync.StorageSyncService("storageSyncService", new AzureNextGen.Storagesync.StorageSyncServiceArgs
+        var storageSyncService = new AzureNextGen.StorageSync.Latest.StorageSyncService("storageSyncService", new AzureNextGen.StorageSync.Latest.StorageSyncServiceArgs
         {
             IncomingTrafficPolicy = "AllowAllTraffic",
             Location = "WestUS",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_sync_service = azure_nextgen.storagesync.StorageSyncService("storageSyncService",
+storage_sync_service = azure_nextgen.storagesync.latest.StorageSyncService("storageSyncService",
     incoming_traffic_policy="AllowAllTraffic",
     location="WestUS",
     resource_group_name="SampleResourceGroup_1",
@@ -69,7 +69,7 @@ storage_sync_service = azure_nextgen.storagesync.StorageSyncService("storageSync
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const storageSyncService = new azure_nextgen.storagesync.StorageSyncService("storageSyncService", {
+const storageSyncService = new azure_nextgen.storagesync.latest.StorageSyncService("storageSyncService", {
     incomingTrafficPolicy: "AllowAllTraffic",
     location: "WestUS",
     resourceGroupName: "SampleResourceGroup_1",

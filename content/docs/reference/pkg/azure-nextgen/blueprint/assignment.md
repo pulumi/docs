@@ -26,23 +26,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assignment = new AzureNextGen.Blueprint.Assignment("assignment", new AzureNextGen.Blueprint.AssignmentArgs
+        var assignment = new AzureNextGen.Blueprint.V20181101Preview.Assignment("assignment", new AzureNextGen.Blueprint.V20181101Preview.AssignmentArgs
         {
             AssignmentName = "assignSimpleBlueprint",
             BlueprintId = "/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
             Description = "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-            Identity = new AzureNextGen.Blueprint.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Blueprint.V20181101Preview.Inputs.ManagedServiceIdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "eastus",
             Parameters = 
             {
-                { "costCenter", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "costCenter", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = "Contoso/Online/Shopping/Production",
                 } },
-                { "owners", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "owners", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = 
                     {
@@ -50,14 +50,14 @@ class MyStack : Stack
                         "johnsteam@contoso.com",
                     },
                 } },
-                { "storageAccountType", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "storageAccountType", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = "Standard_LRS",
                 } },
             },
             ResourceGroups = 
             {
-                { "storageRG", new AzureNextGen.Blueprint.Inputs.ResourceGroupValueArgs
+                { "storageRG", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupValueArgs
                 {
                     Location = "eastus",
                     Name = "defaultRG",
@@ -84,7 +84,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assignment = azure_nextgen.blueprint.Assignment("assignment",
+assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
     assignment_name="assignSimpleBlueprint",
     blueprint_id="/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description="enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
@@ -125,7 +125,7 @@ assignment = azure_nextgen.blueprint.Assignment("assignment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const assignment = new azure_nextgen.blueprint.Assignment("assignment", {
+const assignment = new azure_nextgen.blueprint.v20181101preview.Assignment("assignment", {
     assignmentName: "assignSimpleBlueprint",
     blueprintId: "/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description: "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
@@ -171,23 +171,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assignment = new AzureNextGen.Blueprint.Assignment("assignment", new AzureNextGen.Blueprint.AssignmentArgs
+        var assignment = new AzureNextGen.Blueprint.V20181101Preview.Assignment("assignment", new AzureNextGen.Blueprint.V20181101Preview.AssignmentArgs
         {
             AssignmentName = "assignSimpleBlueprint",
             BlueprintId = "/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
             Description = "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-            Identity = new AzureNextGen.Blueprint.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Blueprint.V20181101Preview.Inputs.ManagedServiceIdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "eastus",
             Parameters = 
             {
-                { "costCenter", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "costCenter", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = "Contoso/Online/Shopping/Production",
                 } },
-                { "owners", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "owners", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = 
                     {
@@ -195,14 +195,14 @@ class MyStack : Stack
                         "johnsteam@contoso.com",
                     },
                 } },
-                { "storageAccountType", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "storageAccountType", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = "Standard_LRS",
                 } },
             },
             ResourceGroups = 
             {
-                { "storageRG", new AzureNextGen.Blueprint.Inputs.ResourceGroupValueArgs
+                { "storageRG", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupValueArgs
                 {
                     Location = "eastus",
                     Name = "defaultRG",
@@ -228,7 +228,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assignment = azure_nextgen.blueprint.Assignment("assignment",
+assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
     assignment_name="assignSimpleBlueprint",
     blueprint_id="/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description="enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
@@ -268,7 +268,7 @@ assignment = azure_nextgen.blueprint.Assignment("assignment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const assignment = new azure_nextgen.blueprint.Assignment("assignment", {
+const assignment = new azure_nextgen.blueprint.v20181101preview.Assignment("assignment", {
     assignmentName: "assignSimpleBlueprint",
     blueprintId: "/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description: "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
@@ -313,12 +313,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assignment = new AzureNextGen.Blueprint.Assignment("assignment", new AzureNextGen.Blueprint.AssignmentArgs
+        var assignment = new AzureNextGen.Blueprint.V20181101Preview.Assignment("assignment", new AzureNextGen.Blueprint.V20181101Preview.AssignmentArgs
         {
             AssignmentName = "assignSimpleBlueprint",
             BlueprintId = "/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
             Description = "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-            Identity = new AzureNextGen.Blueprint.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Blueprint.V20181101Preview.Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -329,11 +329,11 @@ class MyStack : Stack
             Location = "eastus",
             Parameters = 
             {
-                { "costCenter", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "costCenter", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = "Contoso/Online/Shopping/Production",
                 } },
-                { "owners", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "owners", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = 
                     {
@@ -341,14 +341,14 @@ class MyStack : Stack
                         "johnsteam@contoso.com",
                     },
                 } },
-                { "storageAccountType", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "storageAccountType", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = "Standard_LRS",
                 } },
             },
             ResourceGroups = 
             {
-                { "storageRG", new AzureNextGen.Blueprint.Inputs.ResourceGroupValueArgs
+                { "storageRG", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupValueArgs
                 {
                     Location = "eastus",
                     Name = "defaultRG",
@@ -375,7 +375,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assignment = azure_nextgen.blueprint.Assignment("assignment",
+assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
     assignment_name="assignSimpleBlueprint",
     blueprint_id="/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description="enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
@@ -419,7 +419,7 @@ assignment = azure_nextgen.blueprint.Assignment("assignment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const assignment = new azure_nextgen.blueprint.Assignment("assignment", {
+const assignment = new azure_nextgen.blueprint.v20181101preview.Assignment("assignment", {
     assignmentName: "assignSimpleBlueprint",
     blueprintId: "/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description: "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
@@ -468,12 +468,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assignment = new AzureNextGen.Blueprint.Assignment("assignment", new AzureNextGen.Blueprint.AssignmentArgs
+        var assignment = new AzureNextGen.Blueprint.V20181101Preview.Assignment("assignment", new AzureNextGen.Blueprint.V20181101Preview.AssignmentArgs
         {
             AssignmentName = "assignSimpleBlueprint",
             BlueprintId = "/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
             Description = "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
-            Identity = new AzureNextGen.Blueprint.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Blueprint.V20181101Preview.Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -484,11 +484,11 @@ class MyStack : Stack
             Location = "eastus",
             Parameters = 
             {
-                { "costCenter", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "costCenter", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = "Contoso/Online/Shopping/Production",
                 } },
-                { "owners", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "owners", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = 
                     {
@@ -496,14 +496,14 @@ class MyStack : Stack
                         "johnsteam@contoso.com",
                     },
                 } },
-                { "storageAccountType", new AzureNextGen.Blueprint.Inputs.ParameterValueArgs
+                { "storageAccountType", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterValueArgs
                 {
                     Value = "Standard_LRS",
                 } },
             },
             ResourceGroups = 
             {
-                { "storageRG", new AzureNextGen.Blueprint.Inputs.ResourceGroupValueArgs
+                { "storageRG", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupValueArgs
                 {
                     Location = "eastus",
                     Name = "defaultRG",
@@ -529,7 +529,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assignment = azure_nextgen.blueprint.Assignment("assignment",
+assignment = azure_nextgen.blueprint.v20181101preview.Assignment("assignment",
     assignment_name="assignSimpleBlueprint",
     blueprint_id="/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description="enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",
@@ -572,7 +572,7 @@ assignment = azure_nextgen.blueprint.Assignment("assignment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const assignment = new azure_nextgen.blueprint.Assignment("assignment", {
+const assignment = new azure_nextgen.blueprint.v20181101preview.Assignment("assignment", {
     assignmentName: "assignSimpleBlueprint",
     blueprintId: "/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint",
     description: "enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.",

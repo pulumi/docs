@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.Containerservice.AgentPool("agentPool", new AzureNextGen.Containerservice.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     orchestrator_version="",
@@ -77,7 +77,7 @@ agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     orchestratorVersion: "",
@@ -103,7 +103,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.Containerservice.AgentPool("agentPool", new AzureNextGen.Containerservice.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -132,7 +132,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     orchestrator_version="",
@@ -152,7 +152,7 @@ agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     orchestratorVersion: "",
@@ -177,7 +177,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.Containerservice.AgentPool("agentPool", new AzureNextGen.Containerservice.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -219,7 +219,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     node_labels={
@@ -247,7 +247,7 @@ agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     nodeLabels: {
@@ -280,7 +280,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.Containerservice.AgentPool("agentPool", new AzureNextGen.Containerservice.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -323,7 +323,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     mode="User",
@@ -352,7 +352,7 @@ agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     mode: "User",
@@ -386,7 +386,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.Containerservice.AgentPool("agentPool", new AzureNextGen.Containerservice.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
         {
             AgentPoolName = "agentpool1",
             Count = 3,
@@ -423,7 +423,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
     agent_pool_name="agentpool1",
     count=3,
     enable_auto_scaling=True,
@@ -448,7 +448,7 @@ agent_pool = azure_nextgen.containerservice.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const agentPool = new azure_nextgen.containerservice.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
     agentPoolName: "agentpool1",
     count: 3,
     enableAutoScaling: true,

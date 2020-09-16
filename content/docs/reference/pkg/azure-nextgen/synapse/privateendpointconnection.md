@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Synapse.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Synapse.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Synapse.V20190601Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Synapse.V20190601Preview.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "ExamplePrivateEndpointConnection",
             ResourceGroupName = "ExampleResourceGroup",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.synapse.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.synapse.v20190601preview.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="ExamplePrivateEndpointConnection",
     resource_group_name="ExampleResourceGroup",
     workspace_name="ExampleWorkspace")
@@ -65,7 +65,7 @@ private_endpoint_connection = azure_nextgen.synapse.PrivateEndpointConnection("p
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.synapse.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.synapse.v20190601preview.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "ExamplePrivateEndpointConnection",
     resourceGroupName: "ExampleResourceGroup",
     workspaceName: "ExampleWorkspace",

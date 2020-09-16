@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Eventhub.Cluster("cluster", new AzureNextGen.Eventhub.ClusterArgs
+        var cluster = new AzureNextGen.EventHub.V20180101Preview.Cluster("cluster", new AzureNextGen.EventHub.V20180101Preview.ClusterArgs
         {
             ClusterName = "testCluster",
             Location = "South Central US",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Eventhub.Inputs.ClusterSkuArgs
+            Sku = new AzureNextGen.EventHub.V20180101Preview.Inputs.ClusterSkuArgs
             {
                 Capacity = 1,
                 Name = "Dedicated",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.eventhub.Cluster("cluster",
+cluster = azure_nextgen.eventhub.v20180101preview.Cluster("cluster",
     cluster_name="testCluster",
     location="South Central US",
     resource_group_name="myResourceGroup",
@@ -83,7 +83,7 @@ cluster = azure_nextgen.eventhub.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.eventhub.Cluster("cluster", {
+const cluster = new azure_nextgen.eventhub.v20180101preview.Cluster("cluster", {
     clusterName: "testCluster",
     location: "South Central US",
     resourceGroupName: "myResourceGroup",

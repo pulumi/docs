@@ -26,19 +26,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Kusto.Cluster("cluster", new AzureNextGen.Kusto.ClusterArgs
+        var cluster = new AzureNextGen.Kusto.Latest.Cluster("cluster", new AzureNextGen.Kusto.Latest.ClusterArgs
         {
             ClusterName = "kustoclusterrptest4",
             EnableDoubleEncryption = false,
             EnablePurge = true,
             EnableStreamingIngest = true,
-            Identity = new AzureNextGen.Kusto.Inputs.IdentityArgs
+            Identity = new AzureNextGen.Kusto.Latest.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "westus",
             ResourceGroupName = "kustorptest",
-            Sku = new AzureNextGen.Kusto.Inputs.AzureSkuArgs
+            Sku = new AzureNextGen.Kusto.Latest.Inputs.AzureSkuArgs
             {
                 Capacity = 2,
                 Name = "Standard_L8s",
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.kusto.Cluster("cluster",
+cluster = azure_nextgen.kusto.latest.Cluster("cluster",
     cluster_name="kustoclusterrptest4",
     enable_double_encryption=False,
     enable_purge=True,
@@ -89,7 +89,7 @@ cluster = azure_nextgen.kusto.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.kusto.Cluster("cluster", {
+const cluster = new azure_nextgen.kusto.latest.Cluster("cluster", {
     clusterName: "kustoclusterrptest4",
     enableDoubleEncryption: false,
     enablePurge: true,

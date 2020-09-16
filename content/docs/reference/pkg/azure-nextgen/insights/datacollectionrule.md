@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataCollectionRule = new AzureNextGen.Insights.DataCollectionRule("dataCollectionRule", new AzureNextGen.Insights.DataCollectionRuleArgs
+        var dataCollectionRule = new AzureNextGen.Insights.V20191101Preview.DataCollectionRule("dataCollectionRule", new AzureNextGen.Insights.V20191101Preview.DataCollectionRuleArgs
         {
             DataCollectionRuleName = "myCollectionRule",
             DataFlows = 
             {
-                new AzureNextGen.Insights.Inputs.DataFlowArgs
+                new AzureNextGen.Insights.V20191101Preview.Inputs.DataFlowArgs
                 {
                     Destinations = 
                     {
@@ -45,11 +45,11 @@ class MyStack : Stack
                     },
                 },
             },
-            DataSources = new AzureNextGen.Insights.Inputs.DataCollectionRuleDataSourcesArgs
+            DataSources = new AzureNextGen.Insights.V20191101Preview.Inputs.DataCollectionRuleDataSourcesArgs
             {
                 PerformanceCounters = 
                 {
-                    new AzureNextGen.Insights.Inputs.PerfCounterDataSourceArgs
+                    new AzureNextGen.Insights.V20191101Preview.Inputs.PerfCounterDataSourceArgs
                     {
                         CounterSpecifiers = 
                         {
@@ -66,7 +66,7 @@ class MyStack : Stack
                             "Microsoft-Perf",
                         },
                     },
-                    new AzureNextGen.Insights.Inputs.PerfCounterDataSourceArgs
+                    new AzureNextGen.Insights.V20191101Preview.Inputs.PerfCounterDataSourceArgs
                     {
                         CounterSpecifiers = 
                         {
@@ -83,7 +83,7 @@ class MyStack : Stack
                 },
                 Syslog = 
                 {
-                    new AzureNextGen.Insights.Inputs.SyslogDataSourceArgs
+                    new AzureNextGen.Insights.V20191101Preview.Inputs.SyslogDataSourceArgs
                     {
                         FacilityNames = 
                         {
@@ -101,7 +101,7 @@ class MyStack : Stack
                             "Microsoft-Syslog",
                         },
                     },
-                    new AzureNextGen.Insights.Inputs.SyslogDataSourceArgs
+                    new AzureNextGen.Insights.V20191101Preview.Inputs.SyslogDataSourceArgs
                     {
                         FacilityNames = 
                         {
@@ -122,7 +122,7 @@ class MyStack : Stack
                 },
                 WindowsEventLogs = 
                 {
-                    new AzureNextGen.Insights.Inputs.WindowsEventLogDataSourceArgs
+                    new AzureNextGen.Insights.V20191101Preview.Inputs.WindowsEventLogDataSourceArgs
                     {
                         Name = "cloudSecurityTeamEvents",
                         ScheduledTransferPeriod = "PT1M",
@@ -135,7 +135,7 @@ class MyStack : Stack
                             "Security!",
                         },
                     },
-                    new AzureNextGen.Insights.Inputs.WindowsEventLogDataSourceArgs
+                    new AzureNextGen.Insights.V20191101Preview.Inputs.WindowsEventLogDataSourceArgs
                     {
                         Name = "appTeam1AppEvents",
                         ScheduledTransferPeriod = "PT5M",
@@ -151,11 +151,11 @@ class MyStack : Stack
                     },
                 },
             },
-            Destinations = new AzureNextGen.Insights.Inputs.DataCollectionRuleDestinationsArgs
+            Destinations = new AzureNextGen.Insights.V20191101Preview.Inputs.DataCollectionRuleDestinationsArgs
             {
                 LogAnalytics = 
                 {
-                    new AzureNextGen.Insights.Inputs.LogAnalyticsDestinationArgs
+                    new AzureNextGen.Insights.V20191101Preview.Inputs.LogAnalyticsDestinationArgs
                     {
                         Name = "centralWorkspace",
                         WorkspaceResourceId = "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
@@ -183,7 +183,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_collection_rule = azure_nextgen.insights.DataCollectionRule("dataCollectionRule",
+data_collection_rule = azure_nextgen.insights.v20191101preview.DataCollectionRule("dataCollectionRule",
     data_collection_rule_name="myCollectionRule",
     data_flows=[{
         "destinations": ["centralWorkspace"],
@@ -274,7 +274,7 @@ data_collection_rule = azure_nextgen.insights.DataCollectionRule("dataCollection
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataCollectionRule = new azure_nextgen.insights.DataCollectionRule("dataCollectionRule", {
+const dataCollectionRule = new azure_nextgen.insights.v20191101preview.DataCollectionRule("dataCollectionRule", {
     dataCollectionRuleName: "myCollectionRule",
     dataFlows: [{
         destinations: ["centralWorkspace"],

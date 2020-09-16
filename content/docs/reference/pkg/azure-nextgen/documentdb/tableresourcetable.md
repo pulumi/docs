@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tableResourceTable = new AzureNextGen.Documentdb.TableResourceTable("tableResourceTable", new AzureNextGen.Documentdb.TableResourceTableArgs
+        var tableResourceTable = new AzureNextGen.DocumentDB.Latest.TableResourceTable("tableResourceTable", new AzureNextGen.DocumentDB.Latest.TableResourceTableArgs
         {
             AccountName = "ddb1",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.TableResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.TableResourceArgs
             {
                 Id = "tableName",
             },
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-table_resource_table = azure_nextgen.documentdb.TableResourceTable("tableResourceTable",
+table_resource_table = azure_nextgen.documentdb.latest.TableResourceTable("tableResourceTable",
     account_name="ddb1",
     location="West US",
     options={},
@@ -78,7 +78,7 @@ table_resource_table = azure_nextgen.documentdb.TableResourceTable("tableResourc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const tableResourceTable = new azure_nextgen.documentdb.TableResourceTable("tableResourceTable", {
+const tableResourceTable = new azure_nextgen.documentdb.latest.TableResourceTable("tableResourceTable", {
     accountName: "ddb1",
     location: "West US",
     options: {},

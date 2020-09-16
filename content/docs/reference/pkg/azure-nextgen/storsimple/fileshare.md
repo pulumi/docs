@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.Storsimple.FileShare("fileShare", new AzureNextGen.Storsimple.FileShareArgs
+        var fileShare = new AzureNextGen.StorSimple.Latest.FileShare("fileShare", new AzureNextGen.StorSimple.Latest.FileShareArgs
         {
             AdminUser = "fareast\\idcdlslb",
             DataPolicy = "Tiered",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storsimple.FileShare("fileShare",
+file_share = azure_nextgen.storsimple.latest.FileShare("fileShare",
     admin_user="fareast\\idcdlslb",
     data_policy="Tiered",
     description="Demo FileShare for SDK Test Tiered",
@@ -81,7 +81,7 @@ file_share = azure_nextgen.storsimple.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const fileShare = new azure_nextgen.storsimple.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storsimple.latest.FileShare("fileShare", {
     adminUser: "fareast\\idcdlslb",
     dataPolicy: "Tiered",
     description: "Demo FileShare for SDK Test Tiered",

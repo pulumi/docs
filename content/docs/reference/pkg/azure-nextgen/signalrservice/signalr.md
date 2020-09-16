@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var signalR = new AzureNextGen.Signalrservice.SignalR("signalR", new AzureNextGen.Signalrservice.SignalRArgs
+        var signalR = new AzureNextGen.SignalRService.Latest.SignalR("signalR", new AzureNextGen.SignalRService.Latest.SignalRArgs
         {
-            Cors = new AzureNextGen.Signalrservice.Inputs.SignalRCorsSettingsArgs
+            Cors = new AzureNextGen.SignalRService.Latest.Inputs.SignalRCorsSettingsArgs
             {
                 AllowedOrigins = 
                 {
@@ -38,19 +38,19 @@ class MyStack : Stack
             },
             Features = 
             {
-                new AzureNextGen.Signalrservice.Inputs.SignalRFeatureArgs
+                new AzureNextGen.SignalRService.Latest.Inputs.SignalRFeatureArgs
                 {
                     Flag = "ServiceMode",
                     Properties = ,
                     Value = "Serverless",
                 },
-                new AzureNextGen.Signalrservice.Inputs.SignalRFeatureArgs
+                new AzureNextGen.SignalRService.Latest.Inputs.SignalRFeatureArgs
                 {
                     Flag = "EnableConnectivityLogs",
                     Properties = ,
                     Value = "True",
                 },
-                new AzureNextGen.Signalrservice.Inputs.SignalRFeatureArgs
+                new AzureNextGen.SignalRService.Latest.Inputs.SignalRFeatureArgs
                 {
                     Flag = "EnableMessagingLogs",
                     Properties = ,
@@ -59,12 +59,12 @@ class MyStack : Stack
             },
             Kind = "SignalR",
             Location = "eastus",
-            NetworkACLs = new AzureNextGen.Signalrservice.Inputs.SignalRNetworkACLsArgs
+            NetworkACLs = new AzureNextGen.SignalRService.Latest.Inputs.SignalRNetworkACLsArgs
             {
                 DefaultAction = "Deny",
                 PrivateEndpoints = 
                 {
-                    new AzureNextGen.Signalrservice.Inputs.PrivateEndpointACLArgs
+                    new AzureNextGen.SignalRService.Latest.Inputs.PrivateEndpointACLArgs
                     {
                         Allow = 
                         {
@@ -73,7 +73,7 @@ class MyStack : Stack
                         Name = "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
                     },
                 },
-                PublicNetwork = new AzureNextGen.Signalrservice.Inputs.NetworkACLArgs
+                PublicNetwork = new AzureNextGen.SignalRService.Latest.Inputs.NetworkACLArgs
                 {
                     Allow = 
                     {
@@ -83,7 +83,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "myResourceGroup",
             ResourceName = "mySignalRService",
-            Sku = new AzureNextGen.Signalrservice.Inputs.ResourceSkuArgs
+            Sku = new AzureNextGen.SignalRService.Latest.Inputs.ResourceSkuArgs
             {
                 Capacity = 1,
                 Name = "Standard_S1",
@@ -93,11 +93,11 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            Upstream = new AzureNextGen.Signalrservice.Inputs.ServerlessUpstreamSettingsArgs
+            Upstream = new AzureNextGen.SignalRService.Latest.Inputs.ServerlessUpstreamSettingsArgs
             {
                 Templates = 
                 {
-                    new AzureNextGen.Signalrservice.Inputs.UpstreamTemplateArgs
+                    new AzureNextGen.SignalRService.Latest.Inputs.UpstreamTemplateArgs
                     {
                         CategoryPattern = "*",
                         EventPattern = "connect,disconnect",
@@ -125,7 +125,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-signal_r = azure_nextgen.signalrservice.SignalR("signalR",
+signal_r = azure_nextgen.signalrservice.latest.SignalR("signalR",
     cors={
         "allowedOrigins": [
             "https://foo.com",
@@ -190,7 +190,7 @@ signal_r = azure_nextgen.signalrservice.SignalR("signalR",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const signalR = new azure_nextgen.signalrservice.SignalR("signalR", {
+const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
     cors: {
         allowedOrigins: [
             "https://foo.com",

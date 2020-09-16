@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var buildStep = new AzureNextGen.Containerregistry.BuildStep("buildStep", new AzureNextGen.Containerregistry.BuildStepArgs
+        var buildStep = new AzureNextGen.ContainerRegistry.V20180201Preview.BuildStep("buildStep", new AzureNextGen.ContainerRegistry.V20180201Preview.BuildStepArgs
         {
             BuildTaskName = "myBuildTask",
             RegistryName = "myRegistry",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-build_step = azure_nextgen.containerregistry.BuildStep("buildStep",
+build_step = azure_nextgen.containerregistry.v20180201preview.BuildStep("buildStep",
     build_task_name="myBuildTask",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
@@ -67,7 +67,7 @@ build_step = azure_nextgen.containerregistry.BuildStep("buildStep",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const buildStep = new azure_nextgen.containerregistry.BuildStep("buildStep", {
+const buildStep = new azure_nextgen.containerregistry.v20180201preview.BuildStep("buildStep", {
     buildTaskName: "myBuildTask",
     registryName: "myRegistry",
     resourceGroupName: "myResourceGroup",

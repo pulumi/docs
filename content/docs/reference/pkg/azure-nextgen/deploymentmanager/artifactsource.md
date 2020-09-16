@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifactSource = new AzureNextGen.Deploymentmanager.ArtifactSource("artifactSource", new AzureNextGen.Deploymentmanager.ArtifactSourceArgs
+        var artifactSource = new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSource("artifactSource", new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSourceArgs
         {
             ArtifactSourceName = "myArtifactSource",
-            Authentication = new AzureNextGen.Deploymentmanager.Inputs.SasAuthenticationArgs
+            Authentication = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.SasAuthenticationArgs
             {
                 Type = "Sas",
             },
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact_source = azure_nextgen.deploymentmanager.ArtifactSource("artifactSource",
+artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource",
     artifact_source_name="myArtifactSource",
     authentication={
         "type": "Sas",
@@ -76,7 +76,7 @@ artifact_source = azure_nextgen.deploymentmanager.ArtifactSource("artifactSource
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const artifactSource = new azure_nextgen.deploymentmanager.ArtifactSource("artifactSource", {
+const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
     artifactSourceName: "myArtifactSource",
     authentication: {
         type: "Sas",
@@ -101,11 +101,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var artifactSource = new AzureNextGen.Deploymentmanager.ArtifactSource("artifactSource", new AzureNextGen.Deploymentmanager.ArtifactSourceArgs
+        var artifactSource = new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSource("artifactSource", new AzureNextGen.DeploymentManager.V20191101Preview.ArtifactSourceArgs
         {
             ArtifactRoot = "1.0.0.0",
             ArtifactSourceName = "myArtifactSource",
-            Authentication = new AzureNextGen.Deploymentmanager.Inputs.SasAuthenticationArgs
+            Authentication = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.SasAuthenticationArgs
             {
                 Type = "Sas",
             },
@@ -132,7 +132,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-artifact_source = azure_nextgen.deploymentmanager.ArtifactSource("artifactSource",
+artifact_source = azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource",
     artifact_root="1.0.0.0",
     artifact_source_name="myArtifactSource",
     authentication={
@@ -153,7 +153,7 @@ artifact_source = azure_nextgen.deploymentmanager.ArtifactSource("artifactSource
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const artifactSource = new azure_nextgen.deploymentmanager.ArtifactSource("artifactSource", {
+const artifactSource = new azure_nextgen.deploymentmanager.v20191101preview.ArtifactSource("artifactSource", {
     artifactRoot: "1.0.0.0",
     artifactSourceName: "myArtifactSource",
     authentication: {

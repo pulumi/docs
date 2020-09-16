@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobContainer = new AzureNextGen.Storage.BlobContainer("blobContainer", new AzureNextGen.Storage.BlobContainerArgs
+        var blobContainer = new AzureNextGen.Storage.Latest.BlobContainer("blobContainer", new AzureNextGen.Storage.Latest.BlobContainerArgs
         {
             AccountName = "sto328",
             ContainerName = "container6185",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_container = azure_nextgen.storage.BlobContainer("blobContainer",
+blob_container = azure_nextgen.storage.latest.BlobContainer("blobContainer",
     account_name="sto328",
     container_name="container6185",
     default_encryption_scope="encryptionscope185",
@@ -69,7 +69,7 @@ blob_container = azure_nextgen.storage.BlobContainer("blobContainer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const blobContainer = new azure_nextgen.storage.BlobContainer("blobContainer", {
+const blobContainer = new azure_nextgen.storage.latest.BlobContainer("blobContainer", {
     accountName: "sto328",
     containerName: "container6185",
     defaultEncryptionScope: "encryptionscope185",
@@ -91,7 +91,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobContainer = new AzureNextGen.Storage.BlobContainer("blobContainer", new AzureNextGen.Storage.BlobContainerArgs
+        var blobContainer = new AzureNextGen.Storage.Latest.BlobContainer("blobContainer", new AzureNextGen.Storage.Latest.BlobContainerArgs
         {
             AccountName = "sto328",
             ContainerName = "container6185",
@@ -115,7 +115,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_container = azure_nextgen.storage.BlobContainer("blobContainer",
+blob_container = azure_nextgen.storage.latest.BlobContainer("blobContainer",
     account_name="sto328",
     container_name="container6185",
     resource_group_name="res3376")
@@ -130,7 +130,7 @@ blob_container = azure_nextgen.storage.BlobContainer("blobContainer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const blobContainer = new azure_nextgen.storage.BlobContainer("blobContainer", {
+const blobContainer = new azure_nextgen.storage.latest.BlobContainer("blobContainer", {
     accountName: "sto328",
     containerName: "container6185",
     resourceGroupName: "res3376",

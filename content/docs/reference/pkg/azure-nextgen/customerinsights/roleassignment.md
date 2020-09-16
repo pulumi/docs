@@ -26,18 +26,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var roleAssignment = new AzureNextGen.Customerinsights.RoleAssignment("roleAssignment", new AzureNextGen.Customerinsights.RoleAssignmentArgs
+        var roleAssignment = new AzureNextGen.CustomerInsights.Latest.RoleAssignment("roleAssignment", new AzureNextGen.CustomerInsights.Latest.RoleAssignmentArgs
         {
             AssignmentName = "assignmentName8976",
             HubName = "sdkTestHub",
             Principals = 
             {
-                new AzureNextGen.Customerinsights.Inputs.AssignmentPrincipalArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.AssignmentPrincipalArgs
                 {
                     PrincipalId = "4c54c38ffa9b416ba5a6d6c8a20cbe7e",
                     PrincipalType = "User",
                 },
-                new AzureNextGen.Customerinsights.Inputs.AssignmentPrincipalArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.AssignmentPrincipalArgs
                 {
                     PrincipalId = "93061d15a5054f2b9948ae25724cf9d5",
                     PrincipalType = "User",
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-role_assignment = azure_nextgen.customerinsights.RoleAssignment("roleAssignment",
+role_assignment = azure_nextgen.customerinsights.latest.RoleAssignment("roleAssignment",
     assignment_name="assignmentName8976",
     hub_name="sdkTestHub",
     principals=[
@@ -90,7 +90,7 @@ role_assignment = azure_nextgen.customerinsights.RoleAssignment("roleAssignment"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const roleAssignment = new azure_nextgen.customerinsights.RoleAssignment("roleAssignment", {
+const roleAssignment = new azure_nextgen.customerinsights.latest.RoleAssignment("roleAssignment", {
     assignmentName: "assignmentName8976",
     hubName: "sdkTestHub",
     principals: [

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Machinelearningexperimentation.Workspace("workspace", new AzureNextGen.Machinelearningexperimentation.WorkspaceArgs
+        var workspace = new AzureNextGen.MachineLearningExperimentation.V20170501Preview.Workspace("workspace", new AzureNextGen.MachineLearningExperimentation.V20170501Preview.WorkspaceArgs
         {
             AccountName = "testaccount",
             FriendlyName = "testName",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.machinelearningexperimentation.Workspace("workspace",
+workspace = azure_nextgen.machinelearningexperimentation.v20170501preview.Workspace("workspace",
     account_name="testaccount",
     friendly_name="testName",
     location="East US",
@@ -76,7 +76,7 @@ workspace = azure_nextgen.machinelearningexperimentation.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.machinelearningexperimentation.Workspace("workspace", {
+const workspace = new azure_nextgen.machinelearningexperimentation.v20170501preview.Workspace("workspace", {
     accountName: "testaccount",
     friendlyName: "testName",
     location: "East US",

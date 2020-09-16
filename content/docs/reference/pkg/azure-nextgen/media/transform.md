@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var transform = new AzureNextGen.Media.Transform("transform", new AzureNextGen.Media.TransformArgs
+        var transform = new AzureNextGen.Media.Latest.Transform("transform", new AzureNextGen.Media.Latest.TransformArgs
         {
             AccountName = "contosomedia",
             Description = "Example Transform to illustrate create and update.",
             Outputs = 
             {
-                new AzureNextGen.Media.Inputs.TransformOutputArgs
+                new AzureNextGen.Media.Latest.Inputs.TransformOutputArgs
                 {
                     Preset = 
                     {
@@ -62,7 +62,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-transform = azure_nextgen.media.Transform("transform",
+transform = azure_nextgen.media.latest.Transform("transform",
     account_name="contosomedia",
     description="Example Transform to illustrate create and update.",
     outputs=[{
@@ -84,7 +84,7 @@ transform = azure_nextgen.media.Transform("transform",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const transform = new azure_nextgen.media.Transform("transform", {
+const transform = new azure_nextgen.media.latest.Transform("transform", {
     accountName: "contosomedia",
     description: "Example Transform to illustrate create and update.",
     outputs: [{

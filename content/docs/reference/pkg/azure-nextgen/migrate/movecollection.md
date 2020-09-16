@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var moveCollection = new AzureNextGen.Migrate.MoveCollection("moveCollection", new AzureNextGen.Migrate.MoveCollectionArgs
+        var moveCollection = new AzureNextGen.Migrate.V20191001Preview.MoveCollection("moveCollection", new AzureNextGen.Migrate.V20191001Preview.MoveCollectionArgs
         {
             MoveCollectionName = "movecollection1",
             ResourceGroupName = "rg1",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-move_collection = azure_nextgen.migrate.MoveCollection("moveCollection",
+move_collection = azure_nextgen.migrate.v20191001preview.MoveCollection("moveCollection",
     move_collection_name="movecollection1",
     resource_group_name="rg1")
 
@@ -63,7 +63,7 @@ move_collection = azure_nextgen.migrate.MoveCollection("moveCollection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const moveCollection = new azure_nextgen.migrate.MoveCollection("moveCollection", {
+const moveCollection = new azure_nextgen.migrate.v20191001preview.MoveCollection("moveCollection", {
     moveCollectionName: "movecollection1",
     resourceGroupName: "rg1",
 });

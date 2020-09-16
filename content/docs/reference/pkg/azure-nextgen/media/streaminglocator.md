@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingLocator = new AzureNextGen.Media.StreamingLocator("streamingLocator", new AzureNextGen.Media.StreamingLocatorArgs
+        var streamingLocator = new AzureNextGen.Media.Latest.StreamingLocator("streamingLocator", new AzureNextGen.Media.Latest.StreamingLocatorArgs
         {
             AccountName = "contosomedia",
             AssetName = "ClimbingMountRainier",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_locator = azure_nextgen.media.StreamingLocator("streamingLocator",
+streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocator",
     account_name="contosomedia",
     asset_name="ClimbingMountRainier",
     resource_group_name="contoso",
@@ -69,7 +69,7 @@ streaming_locator = azure_nextgen.media.StreamingLocator("streamingLocator",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingLocator = new azure_nextgen.media.StreamingLocator("streamingLocator", {
+const streamingLocator = new azure_nextgen.media.latest.StreamingLocator("streamingLocator", {
     accountName: "contosomedia",
     assetName: "ClimbingMountRainier",
     resourceGroupName: "contoso",
@@ -91,7 +91,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingLocator = new AzureNextGen.Media.StreamingLocator("streamingLocator", new AzureNextGen.Media.StreamingLocatorArgs
+        var streamingLocator = new AzureNextGen.Media.Latest.StreamingLocator("streamingLocator", new AzureNextGen.Media.Latest.StreamingLocatorArgs
         {
             AccountName = "contosomedia",
             AssetName = "ClimbingMountRainier",
@@ -119,7 +119,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_locator = azure_nextgen.media.StreamingLocator("streamingLocator",
+streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocator",
     account_name="contosomedia",
     asset_name="ClimbingMountRainier",
     end_time="2028-12-31T23:59:59.9999999Z",
@@ -138,7 +138,7 @@ streaming_locator = azure_nextgen.media.StreamingLocator("streamingLocator",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingLocator = new azure_nextgen.media.StreamingLocator("streamingLocator", {
+const streamingLocator = new azure_nextgen.media.latest.StreamingLocator("streamingLocator", {
     accountName: "contosomedia",
     assetName: "ClimbingMountRainier",
     endTime: "2028-12-31T23:59:59.9999999Z",
@@ -162,25 +162,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingLocator = new AzureNextGen.Media.StreamingLocator("streamingLocator", new AzureNextGen.Media.StreamingLocatorArgs
+        var streamingLocator = new AzureNextGen.Media.Latest.StreamingLocator("streamingLocator", new AzureNextGen.Media.Latest.StreamingLocatorArgs
         {
             AccountName = "contosomedia",
             AssetName = "ClimbingMountRainier",
             ContentKeys = 
             {
-                new AzureNextGen.Media.Inputs.StreamingLocatorContentKeyArgs
+                new AzureNextGen.Media.Latest.Inputs.StreamingLocatorContentKeyArgs
                 {
                     Id = "60000000-0000-0000-0000-000000000001",
                     LabelReferenceInStreamingPolicy = "aesDefaultKey",
                     Value = "1UqLohAfWsEGkULYxHjYZg==",
                 },
-                new AzureNextGen.Media.Inputs.StreamingLocatorContentKeyArgs
+                new AzureNextGen.Media.Latest.Inputs.StreamingLocatorContentKeyArgs
                 {
                     Id = "60000000-0000-0000-0000-000000000004",
                     LabelReferenceInStreamingPolicy = "cencDefaultKey",
                     Value = "4UqLohAfWsEGkULYxHjYZg==",
                 },
-                new AzureNextGen.Media.Inputs.StreamingLocatorContentKeyArgs
+                new AzureNextGen.Media.Latest.Inputs.StreamingLocatorContentKeyArgs
                 {
                     Id = "60000000-0000-0000-0000-000000000007",
                     LabelReferenceInStreamingPolicy = "cbcsDefaultKey",
@@ -210,7 +210,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_locator = azure_nextgen.media.StreamingLocator("streamingLocator",
+streaming_locator = azure_nextgen.media.latest.StreamingLocator("streamingLocator",
     account_name="contosomedia",
     asset_name="ClimbingMountRainier",
     content_keys=[
@@ -245,7 +245,7 @@ streaming_locator = azure_nextgen.media.StreamingLocator("streamingLocator",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingLocator = new azure_nextgen.media.StreamingLocator("streamingLocator", {
+const streamingLocator = new azure_nextgen.media.latest.StreamingLocator("streamingLocator", {
     accountName: "contosomedia",
     assetName: "ClimbingMountRainier",
     contentKeys: [

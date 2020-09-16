@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureADMetric = new AzureNextGen.Aadiam.AzureADMetric("azureADMetric", new AzureNextGen.Aadiam.AzureADMetricArgs
+        var azureADMetric = new AzureNextGen.Aadiam.V20200701Preview.AzureADMetric("azureADMetric", new AzureNextGen.Aadiam.V20200701Preview.AzureADMetricArgs
         {
             AzureADMetricsName = "ddb1",
             Location = "West US",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_ad_metric = azure_nextgen.aadiam.AzureADMetric("azureADMetric",
+azure_ad_metric = azure_nextgen.aadiam.v20200701preview.AzureADMetric("azureADMetric",
     azure_ad_metrics_name="ddb1",
     location="West US",
     resource_group_name="rg1",
@@ -67,7 +67,7 @@ azure_ad_metric = azure_nextgen.aadiam.AzureADMetric("azureADMetric",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const azureADMetric = new azure_nextgen.aadiam.AzureADMetric("azureADMetric", {
+const azureADMetric = new azure_nextgen.aadiam.v20200701preview.AzureADMetric("azureADMetric", {
     azureADMetricsName: "ddb1",
     location: "West US",
     resourceGroupName: "rg1",

@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var order = new AzureNextGen.Databoxedge.Order("order", new AzureNextGen.Databoxedge.OrderArgs
+        var order = new AzureNextGen.DataBoxEdge.Latest.Order("order", new AzureNextGen.DataBoxEdge.Latest.OrderArgs
         {
-            ContactInformation = new AzureNextGen.Databoxedge.Inputs.ContactDetailsArgs
+            ContactInformation = new AzureNextGen.DataBoxEdge.Latest.Inputs.ContactDetailsArgs
             {
                 CompanyName = "Microsoft",
                 ContactPerson = "John Mcclane",
@@ -40,7 +40,7 @@ class MyStack : Stack
             },
             DeviceName = "testedgedevice",
             ResourceGroupName = "GroupForEdgeAutomation",
-            ShippingAddress = new AzureNextGen.Databoxedge.Inputs.AddressArgs
+            ShippingAddress = new AzureNextGen.DataBoxEdge.Latest.Inputs.AddressArgs
             {
                 AddressLine1 = "Microsoft Corporation",
                 AddressLine2 = "One Microsoft Way",
@@ -69,7 +69,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-order = azure_nextgen.databoxedge.Order("order",
+order = azure_nextgen.databoxedge.latest.Order("order",
     contact_information={
         "companyName": "Microsoft",
         "contactPerson": "John Mcclane",
@@ -98,7 +98,7 @@ order = azure_nextgen.databoxedge.Order("order",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const order = new azure_nextgen.databoxedge.Order("order", {
+const order = new azure_nextgen.databoxedge.latest.Order("order", {
     contactInformation: {
         companyName: "Microsoft",
         contactPerson: "John Mcclane",

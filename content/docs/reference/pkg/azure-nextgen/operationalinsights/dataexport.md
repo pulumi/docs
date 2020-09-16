@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataExport = new AzureNextGen.Operationalinsights.DataExport("dataExport", new AzureNextGen.Operationalinsights.DataExportArgs
+        var dataExport = new AzureNextGen.OperationalInsights.Latest.DataExport("dataExport", new AzureNextGen.OperationalInsights.Latest.DataExportArgs
         {
             DataExportName = "export1",
             ResourceGroupName = "RgTest1",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_export = azure_nextgen.operationalinsights.DataExport("dataExport",
+data_export = azure_nextgen.operationalinsights.latest.DataExport("dataExport",
     data_export_name="export1",
     resource_group_name="RgTest1",
     table_names=["Heartbeat"],
@@ -70,7 +70,7 @@ data_export = azure_nextgen.operationalinsights.DataExport("dataExport",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataExport = new azure_nextgen.operationalinsights.DataExport("dataExport", {
+const dataExport = new azure_nextgen.operationalinsights.latest.DataExport("dataExport", {
     dataExportName: "export1",
     resourceGroupName: "RgTest1",
     tableNames: ["Heartbeat"],

@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cassandraResourceCassandraKeyspace = new AzureNextGen.Documentdb.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", new AzureNextGen.Documentdb.CassandraResourceCassandraKeyspaceArgs
+        var cassandraResourceCassandraKeyspace = new AzureNextGen.DocumentDB.Latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", new AzureNextGen.DocumentDB.Latest.CassandraResourceCassandraKeyspaceArgs
         {
             AccountName = "ddb1",
             KeyspaceName = "keyspaceName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.CassandraKeyspaceResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.CassandraKeyspaceResourceArgs
             {
                 Id = "keyspaceName",
             },
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cassandra_resource_cassandra_keyspace = azure_nextgen.documentdb.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace",
+cassandra_resource_cassandra_keyspace = azure_nextgen.documentdb.latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace",
     account_name="ddb1",
     keyspace_name="keyspaceName",
     location="West US",
@@ -78,7 +78,7 @@ cassandra_resource_cassandra_keyspace = azure_nextgen.documentdb.CassandraResour
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", {
+const cassandraResourceCassandraKeyspace = new azure_nextgen.documentdb.latest.CassandraResourceCassandraKeyspace("cassandraResourceCassandraKeyspace", {
     accountName: "ddb1",
     keyspaceName: "keyspaceName",
     location: "West US",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.Desktopvirtualization.Application("application", new AzureNextGen.Desktopvirtualization.ApplicationArgs
+        var application = new AzureNextGen.DesktopVirtualization.V20191210Preview.Application("application", new AzureNextGen.DesktopVirtualization.V20191210Preview.ApplicationArgs
         {
             ApplicationGroupName = "applicationGroup1",
             ApplicationName = "application1",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.desktopvirtualization.Application("application",
+application = azure_nextgen.desktopvirtualization.v20191210preview.Application("application",
     application_group_name="applicationGroup1",
     application_name="application1",
     command_line_arguments="arguments",
@@ -81,7 +81,7 @@ application = azure_nextgen.desktopvirtualization.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const application = new azure_nextgen.desktopvirtualization.Application("application", {
+const application = new azure_nextgen.desktopvirtualization.v20191210preview.Application("application", {
     applicationGroupName: "applicationGroup1",
     applicationName: "application1",
     commandLineArguments: "arguments",

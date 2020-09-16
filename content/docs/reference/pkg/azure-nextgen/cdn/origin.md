@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var origin = new AzureNextGen.Cdn.Origin("origin", new AzureNextGen.Cdn.OriginArgs
+        var origin = new AzureNextGen.Cdn.Latest.Origin("origin", new AzureNextGen.Cdn.Latest.OriginArgs
         {
             Enabled = true,
             EndpointName = "endpoint1",
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-origin = azure_nextgen.cdn.Origin("origin",
+origin = azure_nextgen.cdn.latest.Origin("origin",
     enabled=True,
     endpoint_name="endpoint1",
     host_name="www.someDomain.net",
@@ -87,7 +87,7 @@ origin = azure_nextgen.cdn.Origin("origin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const origin = new azure_nextgen.cdn.Origin("origin", {
+const origin = new azure_nextgen.cdn.latest.Origin("origin", {
     enabled: true,
     endpointName: "endpoint1",
     hostName: "www.someDomain.net",

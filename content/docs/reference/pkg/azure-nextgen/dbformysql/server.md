@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Dbformysql.Server("server", new AzureNextGen.Dbformysql.ServerArgs
+        var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
         {
             Location = "brazilsouth",
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
-            Sku = new AzureNextGen.Dbformysql.Inputs.SkuArgs
+            Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
             {
                 Capacity = 2,
                 Family = "Gen5",
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbformysql.Server("server",
+server = azure_nextgen.dbformysql.latest.Server("server",
     location="brazilsouth",
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
@@ -85,7 +85,7 @@ server = azure_nextgen.dbformysql.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const server = new azure_nextgen.dbformysql.Server("server", {
+const server = new azure_nextgen.dbformysql.latest.Server("server", {
     location: "brazilsouth",
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",
@@ -114,12 +114,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Dbformysql.Server("server", new AzureNextGen.Dbformysql.ServerArgs
+        var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
         {
             Location = "westus",
             ResourceGroupName = "testrg",
             ServerName = "mysqltestsvc4",
-            Sku = new AzureNextGen.Dbformysql.Inputs.SkuArgs
+            Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
             {
                 Capacity = 2,
                 Family = "Gen5",
@@ -149,7 +149,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbformysql.Server("server",
+server = azure_nextgen.dbformysql.latest.Server("server",
     location="westus",
     resource_group_name="testrg",
     server_name="mysqltestsvc4",
@@ -173,7 +173,7 @@ server = azure_nextgen.dbformysql.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const server = new azure_nextgen.dbformysql.Server("server", {
+const server = new azure_nextgen.dbformysql.latest.Server("server", {
     location: "westus",
     resourceGroupName: "testrg",
     serverName: "mysqltestsvc4",
@@ -202,7 +202,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Dbformysql.Server("server", new AzureNextGen.Dbformysql.ServerArgs
+        var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
         {
             Location = "westus",
             ResourceGroupName = "TargetResourceGroup",
@@ -226,7 +226,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbformysql.Server("server",
+server = azure_nextgen.dbformysql.latest.Server("server",
     location="westus",
     resource_group_name="TargetResourceGroup",
     server_name="targetserver")
@@ -241,7 +241,7 @@ server = azure_nextgen.dbformysql.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const server = new azure_nextgen.dbformysql.Server("server", {
+const server = new azure_nextgen.dbformysql.latest.Server("server", {
     location: "westus",
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",
@@ -261,12 +261,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Dbformysql.Server("server", new AzureNextGen.Dbformysql.ServerArgs
+        var server = new AzureNextGen.DBforMySQL.Latest.Server("server", new AzureNextGen.DBforMySQL.Latest.ServerArgs
         {
             Location = "westus",
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
-            Sku = new AzureNextGen.Dbformysql.Inputs.SkuArgs
+            Sku = new AzureNextGen.DBforMySQL.Latest.Inputs.SkuArgs
             {
                 Capacity = 2,
                 Family = "Gen5",
@@ -296,7 +296,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbformysql.Server("server",
+server = azure_nextgen.dbformysql.latest.Server("server",
     location="westus",
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
@@ -320,7 +320,7 @@ server = azure_nextgen.dbformysql.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const server = new azure_nextgen.dbformysql.Server("server", {
+const server = new azure_nextgen.dbformysql.latest.Server("server", {
     location: "westus",
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",

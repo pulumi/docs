@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backup = new AzureNextGen.Netapp.Backup("backup", new AzureNextGen.Netapp.BackupArgs
+        var backup = new AzureNextGen.NetApp.Latest.Backup("backup", new AzureNextGen.NetApp.Latest.BackupArgs
         {
             AccountName = "account1",
             BackupName = "backup1",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup = azure_nextgen.netapp.Backup("backup",
+backup = azure_nextgen.netapp.latest.Backup("backup",
     account_name="account1",
     backup_name="backup1",
     label="myLabel",
@@ -73,7 +73,7 @@ backup = azure_nextgen.netapp.Backup("backup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const backup = new azure_nextgen.netapp.Backup("backup", {
+const backup = new azure_nextgen.netapp.latest.Backup("backup", {
     accountName: "account1",
     backupName: "backup1",
     label: "myLabel",

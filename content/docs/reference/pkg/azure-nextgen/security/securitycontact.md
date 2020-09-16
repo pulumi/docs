@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var securityContact = new AzureNextGen.Security.SecurityContact("securityContact", new AzureNextGen.Security.SecurityContactArgs
+        var securityContact = new AzureNextGen.Security.V20200101Preview.SecurityContact("securityContact", new AzureNextGen.Security.V20200101Preview.SecurityContactArgs
         {
             SecurityContactName = "default",
         });
@@ -48,7 +48,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-security_contact = azure_nextgen.security.SecurityContact("securityContact", security_contact_name="default")
+security_contact = azure_nextgen.security.v20200101preview.SecurityContact("securityContact", security_contact_name="default")
 
 ```
 
@@ -60,7 +60,7 @@ security_contact = azure_nextgen.security.SecurityContact("securityContact", sec
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const securityContact = new azure_nextgen.security.SecurityContact("securityContact", {securityContactName: "default"});
+const securityContact = new azure_nextgen.security.v20200101preview.SecurityContact("securityContact", {securityContactName: "default"});
 
 ```
 

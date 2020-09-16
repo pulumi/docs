@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceVirtualNetworkRule = new AzureNextGen.Eventhub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", new AzureNextGen.Eventhub.NamespaceVirtualNetworkRuleArgs
+        var namespaceVirtualNetworkRule = new AzureNextGen.EventHub.V20180101Preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", new AzureNextGen.EventHub.V20180101Preview.NamespaceVirtualNetworkRuleArgs
         {
             NamespaceName = "sdk-Namespace-6019",
             ResourceGroupName = "ResourceGroup",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_virtual_network_rule = azure_nextgen.eventhub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule",
+namespace_virtual_network_rule = azure_nextgen.eventhub.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule",
     namespace_name="sdk-Namespace-6019",
     resource_group_name="ResourceGroup",
     virtual_network_rule_name="sdk-VirtualNetworkRules-9191",
@@ -67,7 +67,7 @@ namespace_virtual_network_rule = azure_nextgen.eventhub.NamespaceVirtualNetworkR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
+const namespaceVirtualNetworkRule = new azure_nextgen.eventhub.v20180101preview.NamespaceVirtualNetworkRule("namespaceVirtualNetworkRule", {
     namespaceName: "sdk-Namespace-6019",
     resourceGroupName: "ResourceGroup",
     virtualNetworkRuleName: "sdk-VirtualNetworkRules-9191",

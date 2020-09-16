@@ -26,40 +26,40 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Customerinsights.Profile("profile", new AzureNextGen.Customerinsights.ProfileArgs
+        var profile = new AzureNextGen.CustomerInsights.Latest.Profile("profile", new AzureNextGen.CustomerInsights.Latest.ProfileArgs
         {
             ApiEntitySetName = "TestProfileType396",
             Fields = 
             {
-                new AzureNextGen.Customerinsights.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "Id",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.Customerinsights.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "ProfileId",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.Customerinsights.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "LastName",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.Customerinsights.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "TestProfileType396",
                     FieldType = "Edm.String",
                     IsArray = false,
                     IsRequired = true,
                 },
-                new AzureNextGen.Customerinsights.Inputs.PropertyDefinitionArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.PropertyDefinitionArgs
                 {
                     FieldName = "SavingAccountBalance",
                     FieldType = "Edm.Int32",
@@ -76,7 +76,7 @@ class MyStack : Stack
             SmallImage = "\\\\Images\\\\smallImage",
             StrongIds = 
             {
-                new AzureNextGen.Customerinsights.Inputs.StrongIdArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.StrongIdArgs
                 {
                     KeyPropertyNames = 
                     {
@@ -85,7 +85,7 @@ class MyStack : Stack
                     },
                     StrongIdName = "Id",
                 },
-                new AzureNextGen.Customerinsights.Inputs.StrongIdArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.StrongIdArgs
                 {
                     KeyPropertyNames = 
                     {
@@ -114,7 +114,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.customerinsights.Profile("profile",
+profile = azure_nextgen.customerinsights.latest.Profile("profile",
     api_entity_set_name="TestProfileType396",
     fields=[
         {
@@ -182,7 +182,7 @@ profile = azure_nextgen.customerinsights.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const profile = new azure_nextgen.customerinsights.Profile("profile", {
+const profile = new azure_nextgen.customerinsights.latest.Profile("profile", {
     apiEntitySetName: "TestProfileType396",
     fields: [
         {

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var component = new AzureNextGen.Insights.Component("component", new AzureNextGen.Insights.ComponentArgs
+        var component = new AzureNextGen.Insights.Latest.Component("component", new AzureNextGen.Insights.Latest.ComponentArgs
         {
             ApplicationType = "web",
             FlowType = "Bluefield",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-component = azure_nextgen.insights.Component("component",
+component = azure_nextgen.insights.latest.Component("component",
     application_type="web",
     flow_type="Bluefield",
     kind="web",
@@ -73,7 +73,7 @@ component = azure_nextgen.insights.Component("component",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const component = new azure_nextgen.insights.Component("component", {
+const component = new azure_nextgen.insights.latest.Component("component", {
     applicationType: "web",
     flowType: "Bluefield",
     kind: "web",
@@ -97,7 +97,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var component = new AzureNextGen.Insights.Component("component", new AzureNextGen.Insights.ComponentArgs
+        var component = new AzureNextGen.Insights.Latest.Component("component", new AzureNextGen.Insights.Latest.ComponentArgs
         {
             Kind = "web",
             Location = "South Central US",
@@ -127,7 +127,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-component = azure_nextgen.insights.Component("component",
+component = azure_nextgen.insights.latest.Component("component",
     kind="web",
     location="South Central US",
     resource_group_name="my-resource-group",
@@ -147,7 +147,7 @@ component = azure_nextgen.insights.Component("component",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const component = new azure_nextgen.insights.Component("component", {
+const component = new azure_nextgen.insights.latest.Component("component", {
     kind: "web",
     location: "South Central US",
     resourceGroupName: "my-resource-group",

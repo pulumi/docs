@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiOperationPolicy = new AzureNextGen.Apimanagement.ApiOperationPolicy("apiOperationPolicy", new AzureNextGen.Apimanagement.ApiOperationPolicyArgs
+        var apiOperationPolicy = new AzureNextGen.ApiManagement.Latest.ApiOperationPolicy("apiOperationPolicy", new AzureNextGen.ApiManagement.Latest.ApiOperationPolicyArgs
         {
             ApiId = "5600b57e7e8880006a040001",
             Format = "xml",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_operation_policy = azure_nextgen.apimanagement.ApiOperationPolicy("apiOperationPolicy",
+api_operation_policy = azure_nextgen.apimanagement.latest.ApiOperationPolicy("apiOperationPolicy",
     api_id="5600b57e7e8880006a040001",
     format="xml",
     operation_id="5600b57e7e8880006a080001",
@@ -73,7 +73,7 @@ api_operation_policy = azure_nextgen.apimanagement.ApiOperationPolicy("apiOperat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiOperationPolicy = new azure_nextgen.apimanagement.ApiOperationPolicy("apiOperationPolicy", {
+const apiOperationPolicy = new azure_nextgen.apimanagement.latest.ApiOperationPolicy("apiOperationPolicy", {
     apiId: "5600b57e7e8880006a040001",
     format: "xml",
     operationId: "5600b57e7e8880006a080001",

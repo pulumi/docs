@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var actionGroup = new AzureNextGen.Insights.ActionGroup("actionGroup", new AzureNextGen.Insights.ActionGroupArgs
+        var actionGroup = new AzureNextGen.Insights.Latest.ActionGroup("actionGroup", new AzureNextGen.Insights.Latest.ActionGroupArgs
         {
             ActionGroupName = "SampleActionGroup",
             ArmRoleReceivers = 
             {
-                new AzureNextGen.Insights.Inputs.ArmRoleReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.ArmRoleReceiverArgs
                 {
                     Name = "Sample armRole",
                     RoleId = "8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
@@ -40,7 +40,7 @@ class MyStack : Stack
             },
             AutomationRunbookReceivers = 
             {
-                new AzureNextGen.Insights.Inputs.AutomationRunbookReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.AutomationRunbookReceiverArgs
                 {
                     AutomationAccountId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest",
                     IsGlobalRunbook = false,
@@ -53,7 +53,7 @@ class MyStack : Stack
             },
             AzureAppPushReceivers = 
             {
-                new AzureNextGen.Insights.Inputs.AzureAppPushReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.AzureAppPushReceiverArgs
                 {
                     EmailAddress = "johndoe@email.com",
                     Name = "Sample azureAppPush",
@@ -61,7 +61,7 @@ class MyStack : Stack
             },
             AzureFunctionReceivers = 
             {
-                new AzureNextGen.Insights.Inputs.AzureFunctionReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.AzureFunctionReceiverArgs
                 {
                     FunctionAppResourceId = "/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
                     FunctionName = "HttpTriggerCSharp1",
@@ -72,13 +72,13 @@ class MyStack : Stack
             },
             EmailReceivers = 
             {
-                new AzureNextGen.Insights.Inputs.EmailReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.EmailReceiverArgs
                 {
                     EmailAddress = "johndoe@email.com",
                     Name = "John Doe's email",
                     UseCommonAlertSchema = false,
                 },
-                new AzureNextGen.Insights.Inputs.EmailReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.EmailReceiverArgs
                 {
                     EmailAddress = "janesmith@email.com",
                     Name = "Jane Smith's email",
@@ -89,7 +89,7 @@ class MyStack : Stack
             GroupShortName = "sample",
             ItsmReceivers = 
             {
-                new AzureNextGen.Insights.Inputs.ItsmReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.ItsmReceiverArgs
                 {
                     ConnectionId = "a3b9076c-ce8e-434e-85b4-aff10cb3c8f1",
                     Name = "Sample itsm",
@@ -101,7 +101,7 @@ class MyStack : Stack
             Location = "Global",
             LogicAppReceivers = 
             {
-                new AzureNextGen.Insights.Inputs.LogicAppReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.LogicAppReceiverArgs
                 {
                     CallbackUrl = "https://prod-27.northcentralus.logic.azure.com/workflows/68e572e818e5457ba898763b7db90877/triggers/manual/paths/invoke/azns/test?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Abpsb72UYJxPPvmDo937uzofupO5r_vIeWEx7KVHo7w",
                     Name = "Sample logicApp",
@@ -112,13 +112,13 @@ class MyStack : Stack
             ResourceGroupName = "Default-NotificationRules",
             SmsReceivers = 
             {
-                new AzureNextGen.Insights.Inputs.SmsReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.SmsReceiverArgs
                 {
                     CountryCode = "1",
                     Name = "John Doe's mobile",
                     PhoneNumber = "1234567890",
                 },
-                new AzureNextGen.Insights.Inputs.SmsReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.SmsReceiverArgs
                 {
                     CountryCode = "1",
                     Name = "Jane Smith's mobile",
@@ -128,7 +128,7 @@ class MyStack : Stack
             Tags = ,
             VoiceReceivers = 
             {
-                new AzureNextGen.Insights.Inputs.VoiceReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.VoiceReceiverArgs
                 {
                     CountryCode = "1",
                     Name = "Sample voice",
@@ -137,13 +137,13 @@ class MyStack : Stack
             },
             WebhookReceivers = 
             {
-                new AzureNextGen.Insights.Inputs.WebhookReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.WebhookReceiverArgs
                 {
                     Name = "Sample webhook 1",
                     ServiceUri = "http://www.example.com/webhook1",
                     UseCommonAlertSchema = true,
                 },
-                new AzureNextGen.Insights.Inputs.WebhookReceiverArgs
+                new AzureNextGen.Insights.Latest.Inputs.WebhookReceiverArgs
                 {
                     IdentifierUri = "http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a",
                     Name = "Sample webhook 2",
@@ -173,7 +173,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-action_group = azure_nextgen.insights.ActionGroup("actionGroup",
+action_group = azure_nextgen.insights.latest.ActionGroup("actionGroup",
     action_group_name="SampleActionGroup",
     arm_role_receivers=[{
         "name": "Sample armRole",
@@ -274,7 +274,7 @@ action_group = azure_nextgen.insights.ActionGroup("actionGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const actionGroup = new azure_nextgen.insights.ActionGroup("actionGroup", {
+const actionGroup = new azure_nextgen.insights.latest.ActionGroup("actionGroup", {
     actionGroupName: "SampleActionGroup",
     armRoleReceivers: [{
         name: "Sample armRole",

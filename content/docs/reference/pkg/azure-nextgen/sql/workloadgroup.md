@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadGroup = new AzureNextGen.Sql.WorkloadGroup("workloadGroup", new AzureNextGen.Sql.WorkloadGroupArgs
+        var workloadGroup = new AzureNextGen.Sql.V20190601Preview.WorkloadGroup("workloadGroup", new AzureNextGen.Sql.V20190601Preview.WorkloadGroupArgs
         {
             DatabaseName = "testdb",
             Importance = "normal",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_group = azure_nextgen.sql.WorkloadGroup("workloadGroup",
+workload_group = azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup",
     database_name="testdb",
     importance="normal",
     max_resource_percent=100,
@@ -79,7 +79,7 @@ workload_group = azure_nextgen.sql.WorkloadGroup("workloadGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workloadGroup = new azure_nextgen.sql.WorkloadGroup("workloadGroup", {
+const workloadGroup = new azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup", {
     databaseName: "testdb",
     importance: "normal",
     maxResourcePercent: 100,
@@ -106,7 +106,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workloadGroup = new AzureNextGen.Sql.WorkloadGroup("workloadGroup", new AzureNextGen.Sql.WorkloadGroupArgs
+        var workloadGroup = new AzureNextGen.Sql.V20190601Preview.WorkloadGroup("workloadGroup", new AzureNextGen.Sql.V20190601Preview.WorkloadGroupArgs
         {
             DatabaseName = "testdb",
             MaxResourcePercent = 100,
@@ -134,7 +134,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workload_group = azure_nextgen.sql.WorkloadGroup("workloadGroup",
+workload_group = azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup",
     database_name="testdb",
     max_resource_percent=100,
     min_resource_percent=0,
@@ -153,7 +153,7 @@ workload_group = azure_nextgen.sql.WorkloadGroup("workloadGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workloadGroup = new azure_nextgen.sql.WorkloadGroup("workloadGroup", {
+const workloadGroup = new azure_nextgen.sql.v20190601preview.WorkloadGroup("workloadGroup", {
     databaseName: "testdb",
     maxResourcePercent: 100,
     minResourcePercent: 0,

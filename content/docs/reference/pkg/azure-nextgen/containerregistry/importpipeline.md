@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var importPipeline = new AzureNextGen.Containerregistry.ImportPipeline("importPipeline", new AzureNextGen.Containerregistry.ImportPipelineArgs
+        var importPipeline = new AzureNextGen.ContainerRegistry.V20191201Preview.ImportPipeline("importPipeline", new AzureNextGen.ContainerRegistry.V20191201Preview.ImportPipelineArgs
         {
-            Identity = new AzureNextGen.Containerregistry.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.IdentityPropertiesArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -46,7 +46,7 @@ class MyStack : Stack
             },
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            Source = new AzureNextGen.Containerregistry.Inputs.ImportPipelineSourcePropertiesArgs
+            Source = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.ImportPipelineSourcePropertiesArgs
             {
                 KeyVaultUri = "https://myvault.vault.azure.net/secrets/acrimportsas",
                 Type = "AzureStorageBlobContainer",
@@ -71,7 +71,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-import_pipeline = azure_nextgen.containerregistry.ImportPipeline("importPipeline",
+import_pipeline = azure_nextgen.containerregistry.v20191201preview.ImportPipeline("importPipeline",
     identity={
         "type": "UserAssigned",
         "userAssignedIdentities": {
@@ -103,7 +103,7 @@ import_pipeline = azure_nextgen.containerregistry.ImportPipeline("importPipeline
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const importPipeline = new azure_nextgen.containerregistry.ImportPipeline("importPipeline", {
+const importPipeline = new azure_nextgen.containerregistry.v20191201preview.ImportPipeline("importPipeline", {
     identity: {
         type: "UserAssigned",
         userAssignedIdentities: {

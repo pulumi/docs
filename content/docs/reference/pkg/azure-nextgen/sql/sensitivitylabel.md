@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sensitivityLabel = new AzureNextGen.Sql.SensitivityLabel("sensitivityLabel", new AzureNextGen.Sql.SensitivityLabelArgs
+        var sensitivityLabel = new AzureNextGen.Sql.V20170301Preview.SensitivityLabel("sensitivityLabel", new AzureNextGen.Sql.V20170301Preview.SensitivityLabelArgs
         {
             ColumnName = "myColumn",
             DatabaseName = "myDatabase",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sensitivity_label = azure_nextgen.sql.SensitivityLabel("sensitivityLabel",
+sensitivity_label = azure_nextgen.sql.v20170301preview.SensitivityLabel("sensitivityLabel",
     column_name="myColumn",
     database_name="myDatabase",
     information_type="PhoneNumber",
@@ -81,7 +81,7 @@ sensitivity_label = azure_nextgen.sql.SensitivityLabel("sensitivityLabel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sensitivityLabel = new azure_nextgen.sql.SensitivityLabel("sensitivityLabel", {
+const sensitivityLabel = new azure_nextgen.sql.v20170301preview.SensitivityLabel("sensitivityLabel", {
     columnName: "myColumn",
     databaseName: "myDatabase",
     informationType: "PhoneNumber",

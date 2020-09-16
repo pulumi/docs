@@ -26,27 +26,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountMongoDBCollection = new AzureNextGen.Documentdb.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection", new AzureNextGen.Documentdb.DatabaseAccountMongoDBCollectionArgs
+        var databaseAccountMongoDBCollection = new AzureNextGen.DocumentDB.Latest.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection", new AzureNextGen.DocumentDB.Latest.DatabaseAccountMongoDBCollectionArgs
         {
             AccountName = "ddb1",
             CollectionName = "collectionName",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.MongoDBCollectionResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.MongoDBCollectionResourceArgs
             {
                 Id = "testcoll",
                 Indexes = 
                 {
-                    new AzureNextGen.Documentdb.Inputs.MongoIndexArgs
+                    new AzureNextGen.DocumentDB.Latest.Inputs.MongoIndexArgs
                     {
-                        Key = new AzureNextGen.Documentdb.Inputs.MongoIndexKeysArgs
+                        Key = new AzureNextGen.DocumentDB.Latest.Inputs.MongoIndexKeysArgs
                         {
                             Keys = 
                             {
                                 "testKey",
                             },
                         },
-                        Options = new AzureNextGen.Documentdb.Inputs.MongoIndexOptionsArgs
+                        Options = new AzureNextGen.DocumentDB.Latest.Inputs.MongoIndexOptionsArgs
                         {
                             ExpireAfterSeconds = 100,
                             Unique = true,
@@ -78,7 +78,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_mongo_db_collection = azure_nextgen.documentdb.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection",
+database_account_mongo_db_collection = azure_nextgen.documentdb.latest.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection",
     account_name="ddb1",
     collection_name="collectionName",
     database_name="databaseName",
@@ -110,7 +110,7 @@ database_account_mongo_db_collection = azure_nextgen.documentdb.DatabaseAccountM
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const databaseAccountMongoDBCollection = new azure_nextgen.documentdb.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection", {
+const databaseAccountMongoDBCollection = new azure_nextgen.documentdb.latest.DatabaseAccountMongoDBCollection("databaseAccountMongoDBCollection", {
     accountName: "ddb1",
     collectionName: "collectionName",
     databaseName: "databaseName",

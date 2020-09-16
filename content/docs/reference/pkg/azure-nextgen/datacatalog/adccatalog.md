@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var adcCatalog = new AzureNextGen.Datacatalog.ADCCatalog("adcCatalog", new AzureNextGen.Datacatalog.ADCCatalogArgs
+        var adcCatalog = new AzureNextGen.DataCatalog.Latest.ADCCatalog("adcCatalog", new AzureNextGen.DataCatalog.Latest.ADCCatalogArgs
         {
             Admins = 
             {
-                new AzureNextGen.Datacatalog.Inputs.PrincipalsArgs
+                new AzureNextGen.DataCatalog.Latest.Inputs.PrincipalsArgs
                 {
                     ObjectId = "99999999-9999-9999-999999999999",
                     Upn = "myupn@microsoft.com",
@@ -49,7 +49,7 @@ class MyStack : Stack
             Units = 1,
             Users = 
             {
-                new AzureNextGen.Datacatalog.Inputs.PrincipalsArgs
+                new AzureNextGen.DataCatalog.Latest.Inputs.PrincipalsArgs
                 {
                     ObjectId = "99999999-9999-9999-999999999999",
                     Upn = "myupn@microsoft.com",
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-adc_catalog = azure_nextgen.datacatalog.ADCCatalog("adcCatalog",
+adc_catalog = azure_nextgen.datacatalog.latest.ADCCatalog("adcCatalog",
     admins=[{
         "objectId": "99999999-9999-9999-999999999999",
         "upn": "myupn@microsoft.com",
@@ -104,7 +104,7 @@ adc_catalog = azure_nextgen.datacatalog.ADCCatalog("adcCatalog",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const adcCatalog = new azure_nextgen.datacatalog.ADCCatalog("adcCatalog", {
+const adcCatalog = new azure_nextgen.datacatalog.latest.ADCCatalog("adcCatalog", {
     admins: [{
         objectId: "99999999-9999-9999-999999999999",
         upn: "myupn@microsoft.com",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.Cache.FirewallRule("firewallRule", new AzureNextGen.Cache.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.Cache.Latest.FirewallRule("firewallRule", new AzureNextGen.Cache.Latest.FirewallRuleArgs
         {
             CacheName = "cache1",
             EndIP = "192.168.1.4",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.cache.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.cache.latest.FirewallRule("firewallRule",
     cache_name="cache1",
     end_ip="192.168.1.4",
     resource_group_name="rg1",
@@ -69,7 +69,7 @@ firewall_rule = azure_nextgen.cache.FirewallRule("firewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const firewallRule = new azure_nextgen.cache.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.cache.latest.FirewallRule("firewallRule", {
     cacheName: "cache1",
     endIP: "192.168.1.4",
     resourceGroupName: "rg1",

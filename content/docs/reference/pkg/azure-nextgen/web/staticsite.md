@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var staticSite = new AzureNextGen.Web.StaticSite("staticSite", new AzureNextGen.Web.StaticSiteArgs
+        var staticSite = new AzureNextGen.Web.Latest.StaticSite("staticSite", new AzureNextGen.Web.Latest.StaticSiteArgs
         {
             Branch = "master",
-            BuildProperties = new AzureNextGen.Web.Inputs.StaticSiteBuildPropertiesArgs
+            BuildProperties = new AzureNextGen.Web.Latest.Inputs.StaticSiteBuildPropertiesArgs
             {
                 ApiLocation = "api",
                 AppArtifactLocation = "build",
@@ -40,7 +40,7 @@ class MyStack : Stack
             RepositoryToken = "repoToken123",
             RepositoryUrl = "https://github.com/username/RepoName",
             ResourceGroupName = "rg",
-            Sku = new AzureNextGen.Web.Inputs.SkuDescriptionArgs
+            Sku = new AzureNextGen.Web.Latest.Inputs.SkuDescriptionArgs
             {
                 Name = "Basic",
                 Tier = "Basic",
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-static_site = azure_nextgen.web.StaticSite("staticSite",
+static_site = azure_nextgen.web.latest.StaticSite("staticSite",
     branch="master",
     build_properties={
         "apiLocation": "api",
@@ -91,7 +91,7 @@ static_site = azure_nextgen.web.StaticSite("staticSite",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const staticSite = new azure_nextgen.web.StaticSite("staticSite", {
+const staticSite = new azure_nextgen.web.latest.StaticSite("staticSite", {
     branch: "master",
     buildProperties: {
         apiLocation: "api",

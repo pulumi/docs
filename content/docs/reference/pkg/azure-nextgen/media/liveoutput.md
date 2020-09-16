@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var liveOutput = new AzureNextGen.Media.LiveOutput("liveOutput", new AzureNextGen.Media.LiveOutputArgs
+        var liveOutput = new AzureNextGen.Media.Latest.LiveOutput("liveOutput", new AzureNextGen.Media.Latest.LiveOutputArgs
         {
             AccountName = "slitestmedia10",
             ArchiveWindowLength = "PT5M",
             AssetName = "6f3264f5-a189-48b4-a29a-a40f22575212",
             Description = "test live output 1",
-            Hls = new AzureNextGen.Media.Inputs.HlsArgs
+            Hls = new AzureNextGen.Media.Latest.Inputs.HlsArgs
             {
                 FragmentsPerTsSegment = 5,
             },
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-live_output = azure_nextgen.media.LiveOutput("liveOutput",
+live_output = azure_nextgen.media.latest.LiveOutput("liveOutput",
     account_name="slitestmedia10",
     archive_window_length="PT5M",
     asset_name="6f3264f5-a189-48b4-a29a-a40f22575212",
@@ -82,7 +82,7 @@ live_output = azure_nextgen.media.LiveOutput("liveOutput",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const liveOutput = new azure_nextgen.media.LiveOutput("liveOutput", {
+const liveOutput = new azure_nextgen.media.latest.LiveOutput("liveOutput", {
     accountName: "slitestmedia10",
     archiveWindowLength: "PT5M",
     assetName: "6f3264f5-a189-48b4-a29a-a40f22575212",

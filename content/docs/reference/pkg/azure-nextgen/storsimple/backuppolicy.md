@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backupPolicy = new AzureNextGen.Storsimple.BackupPolicy("backupPolicy", new AzureNextGen.Storsimple.BackupPolicyArgs
+        var backupPolicy = new AzureNextGen.StorSimple.Latest.BackupPolicy("backupPolicy", new AzureNextGen.StorSimple.Latest.BackupPolicyArgs
         {
             BackupPolicyName = "BkUpPolicy01ForSDKTest",
             DeviceName = "Device05ForSDKTest",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup_policy = azure_nextgen.storsimple.BackupPolicy("backupPolicy",
+backup_policy = azure_nextgen.storsimple.latest.BackupPolicy("backupPolicy",
     backup_policy_name="BkUpPolicy01ForSDKTest",
     device_name="Device05ForSDKTest",
     kind="Series8000",
@@ -78,7 +78,7 @@ backup_policy = azure_nextgen.storsimple.BackupPolicy("backupPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const backupPolicy = new azure_nextgen.storsimple.BackupPolicy("backupPolicy", {
+const backupPolicy = new azure_nextgen.storsimple.latest.BackupPolicy("backupPolicy", {
     backupPolicyName: "BkUpPolicy01ForSDKTest",
     deviceName: "Device05ForSDKTest",
     kind: "Series8000",

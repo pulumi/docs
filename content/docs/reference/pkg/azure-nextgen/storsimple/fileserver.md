@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileServer = new AzureNextGen.Storsimple.FileServer("fileServer", new AzureNextGen.Storsimple.FileServerArgs
+        var fileServer = new AzureNextGen.StorSimple.Latest.FileServer("fileServer", new AzureNextGen.StorSimple.Latest.FileServerArgs
         {
             BackupScheduleGroupId = "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest",
             Description = "Demo FileServer for SDK Test",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_server = azure_nextgen.storsimple.FileServer("fileServer",
+file_server = azure_nextgen.storsimple.latest.FileServer("fileServer",
     backup_schedule_group_id="/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest",
     description="Demo FileServer for SDK Test",
     device_name="HSDK-4XY4FI2IVG",
@@ -75,7 +75,7 @@ file_server = azure_nextgen.storsimple.FileServer("fileServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const fileServer = new azure_nextgen.storsimple.FileServer("fileServer", {
+const fileServer = new azure_nextgen.storsimple.latest.FileServer("fileServer", {
     backupScheduleGroupId: "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/hsdk-4xy4fi2ivg/backupScheduleGroups/BackupSchGroupForSDKTest",
     description: "Demo FileServer for SDK Test",
     deviceName: "HSDK-4XY4FI2IVG",

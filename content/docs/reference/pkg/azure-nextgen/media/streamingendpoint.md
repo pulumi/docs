@@ -26,21 +26,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingEndpoint = new AzureNextGen.Media.StreamingEndpoint("streamingEndpoint", new AzureNextGen.Media.StreamingEndpointArgs
+        var streamingEndpoint = new AzureNextGen.Media.Latest.StreamingEndpoint("streamingEndpoint", new AzureNextGen.Media.Latest.StreamingEndpointArgs
         {
-            AccessControl = new AzureNextGen.Media.Inputs.StreamingEndpointAccessControlArgs
+            AccessControl = new AzureNextGen.Media.Latest.Inputs.StreamingEndpointAccessControlArgs
             {
-                Akamai = new AzureNextGen.Media.Inputs.AkamaiAccessControlArgs
+                Akamai = new AzureNextGen.Media.Latest.Inputs.AkamaiAccessControlArgs
                 {
                     AkamaiSignatureHeaderAuthenticationKeyList = 
                     {
-                        new AzureNextGen.Media.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
+                        new AzureNextGen.Media.Latest.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
                         {
                             Base64Key = "dGVzdGlkMQ==",
                             Expiration = "2029-12-31T16:00:00-08:00",
                             Identifier = "id1",
                         },
-                        new AzureNextGen.Media.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
+                        new AzureNextGen.Media.Latest.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
                         {
                             Base64Key = "dGVzdGlkMQ==",
                             Expiration = "2030-12-31T16:00:00-08:00",
@@ -48,11 +48,11 @@ class MyStack : Stack
                         },
                     },
                 },
-                Ip = new AzureNextGen.Media.Inputs.IPAccessControlArgs
+                Ip = new AzureNextGen.Media.Latest.Inputs.IPAccessControlArgs
                 {
                     Allow = 
                     {
-                        new AzureNextGen.Media.Inputs.IPRangeArgs
+                        new AzureNextGen.Media.Latest.Inputs.IPRangeArgs
                         {
                             Address = "192.168.1.1",
                             Name = "AllowedIp",
@@ -92,7 +92,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_endpoint = azure_nextgen.media.StreamingEndpoint("streamingEndpoint",
+streaming_endpoint = azure_nextgen.media.latest.StreamingEndpoint("streamingEndpoint",
     access_control={
         "akamai": {
             "akamaiSignatureHeaderAuthenticationKeyList": [
@@ -138,7 +138,7 @@ streaming_endpoint = azure_nextgen.media.StreamingEndpoint("streamingEndpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingEndpoint = new azure_nextgen.media.StreamingEndpoint("streamingEndpoint", {
+const streamingEndpoint = new azure_nextgen.media.latest.StreamingEndpoint("streamingEndpoint", {
     accessControl: {
         akamai: {
             akamaiSignatureHeaderAuthenticationKeyList: [

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScope = new AzureNextGen.Hybridcompute.PrivateLinkScope("privateLinkScope", new AzureNextGen.Hybridcompute.PrivateLinkScopeArgs
+        var privateLinkScope = new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScope("privateLinkScope", new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScopeArgs
         {
             Location = "westus",
             ResourceGroupName = "my-resource-group",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scope = azure_nextgen.hybridcompute.PrivateLinkScope("privateLinkScope",
+private_link_scope = azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScope("privateLinkScope",
     location="westus",
     resource_group_name="my-resource-group",
     scope_name="my-privatelinkscope")
@@ -65,7 +65,7 @@ private_link_scope = azure_nextgen.hybridcompute.PrivateLinkScope("privateLinkSc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateLinkScope = new azure_nextgen.hybridcompute.PrivateLinkScope("privateLinkScope", {
+const privateLinkScope = new azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScope("privateLinkScope", {
     location: "westus",
     resourceGroupName: "my-resource-group",
     scopeName: "my-privatelinkscope",
@@ -85,7 +85,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScope = new AzureNextGen.Hybridcompute.PrivateLinkScope("privateLinkScope", new AzureNextGen.Hybridcompute.PrivateLinkScopeArgs
+        var privateLinkScope = new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScope("privateLinkScope", new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScopeArgs
         {
             Location = "westus",
             ResourceGroupName = "my-resource-group",
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scope = azure_nextgen.hybridcompute.PrivateLinkScope("privateLinkScope",
+private_link_scope = azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScope("privateLinkScope",
     location="westus",
     resource_group_name="my-resource-group",
     scope_name="my-privatelinkscope",
@@ -131,7 +131,7 @@ private_link_scope = azure_nextgen.hybridcompute.PrivateLinkScope("privateLinkSc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateLinkScope = new azure_nextgen.hybridcompute.PrivateLinkScope("privateLinkScope", {
+const privateLinkScope = new azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScope("privateLinkScope", {
     location: "westus",
     resourceGroupName: "my-resource-group",
     scopeName: "my-privatelinkscope",

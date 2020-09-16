@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Operationalinsights.Workspace("workspace", new AzureNextGen.Operationalinsights.WorkspaceArgs
+        var workspace = new AzureNextGen.OperationalInsights.Latest.Workspace("workspace", new AzureNextGen.OperationalInsights.Latest.WorkspaceArgs
         {
             Location = "australiasoutheast",
             ResourceGroupName = "oiautorest6685",
             RetentionInDays = 30,
-            Sku = new AzureNextGen.Operationalinsights.Inputs.WorkspaceSkuArgs
+            Sku = new AzureNextGen.OperationalInsights.Latest.Inputs.WorkspaceSkuArgs
             {
                 Name = "PerGB2018",
             },
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.operationalinsights.Workspace("workspace",
+workspace = azure_nextgen.operationalinsights.latest.Workspace("workspace",
     location="australiasoutheast",
     resource_group_name="oiautorest6685",
     retention_in_days=30,
@@ -81,7 +81,7 @@ workspace = azure_nextgen.operationalinsights.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.operationalinsights.Workspace("workspace", {
+const workspace = new azure_nextgen.operationalinsights.latest.Workspace("workspace", {
     location: "australiasoutheast",
     resourceGroupName: "oiautorest6685",
     retentionInDays: 30,

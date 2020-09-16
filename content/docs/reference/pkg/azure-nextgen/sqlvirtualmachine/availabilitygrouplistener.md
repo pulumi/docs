@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var availabilityGroupListener = new AzureNextGen.Sqlvirtualmachine.AvailabilityGroupListener("availabilityGroupListener", new AzureNextGen.Sqlvirtualmachine.AvailabilityGroupListenerArgs
+        var availabilityGroupListener = new AzureNextGen.SqlVirtualMachine.V20170301Preview.AvailabilityGroupListener("availabilityGroupListener", new AzureNextGen.SqlVirtualMachine.V20170301Preview.AvailabilityGroupListenerArgs
         {
             AvailabilityGroupListenerName = "agl-test",
             AvailabilityGroupName = "ag-test",
             LoadBalancerConfigurations = 
             {
-                new AzureNextGen.Sqlvirtualmachine.Inputs.LoadBalancerConfigurationArgs
+                new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.LoadBalancerConfigurationArgs
                 {
                     LoadBalancerResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test",
-                    PrivateIpAddress = new AzureNextGen.Sqlvirtualmachine.Inputs.PrivateIPAddressArgs
+                    PrivateIpAddress = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.PrivateIPAddressArgs
                     {
                         IpAddress = "10.1.0.112",
                         SubnetResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default",
@@ -70,7 +70,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-availability_group_listener = azure_nextgen.sqlvirtualmachine.AvailabilityGroupListener("availabilityGroupListener",
+availability_group_listener = azure_nextgen.sqlvirtualmachine.v20170301preview.AvailabilityGroupListener("availabilityGroupListener",
     availability_group_listener_name="agl-test",
     availability_group_name="ag-test",
     load_balancer_configurations=[{
@@ -99,7 +99,7 @@ availability_group_listener = azure_nextgen.sqlvirtualmachine.AvailabilityGroupL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.AvailabilityGroupListener("availabilityGroupListener", {
+const availabilityGroupListener = new azure_nextgen.sqlvirtualmachine.v20170301preview.AvailabilityGroupListener("availabilityGroupListener", {
     availabilityGroupListenerName: "agl-test",
     availabilityGroupName: "ag-test",
     loadBalancerConfigurations: [{

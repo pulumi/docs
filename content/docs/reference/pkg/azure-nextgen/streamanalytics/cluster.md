@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Streamanalytics.Cluster("cluster", new AzureNextGen.Streamanalytics.ClusterArgs
+        var cluster = new AzureNextGen.StreamAnalytics.V20200301Preview.Cluster("cluster", new AzureNextGen.StreamAnalytics.V20200301Preview.ClusterArgs
         {
             ClusterName = "An Example Cluster",
             Location = "North US",
             ResourceGroupName = "sjrg",
-            Sku = new AzureNextGen.Streamanalytics.Inputs.ClusterSkuArgs
+            Sku = new AzureNextGen.StreamAnalytics.V20200301Preview.Inputs.ClusterSkuArgs
             {
                 Capacity = 48,
                 Name = "Default",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.streamanalytics.Cluster("cluster",
+cluster = azure_nextgen.streamanalytics.v20200301preview.Cluster("cluster",
     cluster_name="An Example Cluster",
     location="North US",
     resource_group_name="sjrg",
@@ -81,7 +81,7 @@ cluster = azure_nextgen.streamanalytics.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.streamanalytics.Cluster("cluster", {
+const cluster = new azure_nextgen.streamanalytics.v20200301preview.Cluster("cluster", {
     clusterName: "An Example Cluster",
     location: "North US",
     resourceGroupName: "sjrg",

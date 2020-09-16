@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hybridConnectionAuthorizationRule = new AzureNextGen.Relay.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", new AzureNextGen.Relay.HybridConnectionAuthorizationRuleArgs
+        var hybridConnectionAuthorizationRule = new AzureNextGen.Relay.Latest.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", new AzureNextGen.Relay.Latest.HybridConnectionAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-RelayAuthRules-01",
             HybridConnectionName = "sdk-Relay-Hybrid-01",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hybrid_connection_authorization_rule = azure_nextgen.relay.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule",
+hybrid_connection_authorization_rule = azure_nextgen.relay.latest.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule",
     authorization_rule_name="sdk-RelayAuthRules-01",
     hybrid_connection_name="sdk-Relay-Hybrid-01",
     namespace_name="sdk-RelayNamespace-01",
@@ -76,7 +76,7 @@ hybrid_connection_authorization_rule = azure_nextgen.relay.HybridConnectionAutho
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hybridConnectionAuthorizationRule = new azure_nextgen.relay.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", {
+const hybridConnectionAuthorizationRule = new azure_nextgen.relay.latest.HybridConnectionAuthorizationRule("hybridConnectionAuthorizationRule", {
     authorizationRuleName: "sdk-RelayAuthRules-01",
     hybridConnectionName: "sdk-Relay-Hybrid-01",
     namespaceName: "sdk-RelayNamespace-01",

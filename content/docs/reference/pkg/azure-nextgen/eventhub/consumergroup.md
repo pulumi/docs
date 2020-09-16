@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var consumerGroup = new AzureNextGen.Eventhub.ConsumerGroup("consumerGroup", new AzureNextGen.Eventhub.ConsumerGroupArgs
+        var consumerGroup = new AzureNextGen.EventHub.Latest.ConsumerGroup("consumerGroup", new AzureNextGen.EventHub.Latest.ConsumerGroupArgs
         {
             ConsumerGroupName = "sdk-ConsumerGroup-5563",
             EventHubName = "sdk-EventHub-6681",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-consumer_group = azure_nextgen.eventhub.ConsumerGroup("consumerGroup",
+consumer_group = azure_nextgen.eventhub.latest.ConsumerGroup("consumerGroup",
     consumer_group_name="sdk-ConsumerGroup-5563",
     event_hub_name="sdk-EventHub-6681",
     namespace_name="sdk-Namespace-2661",
@@ -69,7 +69,7 @@ consumer_group = azure_nextgen.eventhub.ConsumerGroup("consumerGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const consumerGroup = new azure_nextgen.eventhub.ConsumerGroup("consumerGroup", {
+const consumerGroup = new azure_nextgen.eventhub.latest.ConsumerGroup("consumerGroup", {
     consumerGroupName: "sdk-ConsumerGroup-5563",
     eventHubName: "sdk-EventHub-6681",
     namespaceName: "sdk-Namespace-2661",

@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Machinelearningservices.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Machinelearningservices.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.MachineLearningServices.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.MachineLearningServices.Latest.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "{privateEndpointConnectionName}",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Machinelearningservices.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.MachineLearningServices.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "Auto-Approved",
                 Status = "Approved",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.machinelearningservices.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.machinelearningservices.latest.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="{privateEndpointConnectionName}",
     private_link_service_connection_state={
         "description": "Auto-Approved",
@@ -74,7 +74,7 @@ private_endpoint_connection = azure_nextgen.machinelearningservices.PrivateEndpo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.machinelearningservices.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.machinelearningservices.latest.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "{privateEndpointConnectionName}",
     privateLinkServiceConnectionState: {
         description: "Auto-Approved",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var relationshipLink = new AzureNextGen.Customerinsights.RelationshipLink("relationshipLink", new AzureNextGen.Customerinsights.RelationshipLinkArgs
+        var relationshipLink = new AzureNextGen.CustomerInsights.Latest.RelationshipLink("relationshipLink", new AzureNextGen.CustomerInsights.Latest.RelationshipLinkArgs
         {
             Description = 
             {
@@ -40,7 +40,7 @@ class MyStack : Stack
             InteractionType = "testInteraction4332",
             ProfilePropertyReferences = 
             {
-                new AzureNextGen.Customerinsights.Inputs.ParticipantProfilePropertyReferenceArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.ParticipantProfilePropertyReferenceArgs
                 {
                     InteractionPropertyName = "profile1",
                     ProfilePropertyName = "ProfileId",
@@ -48,7 +48,7 @@ class MyStack : Stack
             },
             RelatedProfilePropertyReferences = 
             {
-                new AzureNextGen.Customerinsights.Inputs.ParticipantProfilePropertyReferenceArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.ParticipantProfilePropertyReferenceArgs
                 {
                     InteractionPropertyName = "profile1",
                     ProfilePropertyName = "ProfileId",
@@ -76,7 +76,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-relationship_link = azure_nextgen.customerinsights.RelationshipLink("relationshipLink",
+relationship_link = azure_nextgen.customerinsights.latest.RelationshipLink("relationshipLink",
     description={
         "en-us": "Link Description",
     },
@@ -107,7 +107,7 @@ relationship_link = azure_nextgen.customerinsights.RelationshipLink("relationshi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const relationshipLink = new azure_nextgen.customerinsights.RelationshipLink("relationshipLink", {
+const relationshipLink = new azure_nextgen.customerinsights.latest.RelationshipLink("relationshipLink", {
     description: {
         "en-us": "Link Description",
     },

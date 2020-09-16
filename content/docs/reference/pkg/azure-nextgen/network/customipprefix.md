@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var customIPPrefix = new AzureNextGen.Network.CustomIPPrefix("customIPPrefix", new AzureNextGen.Network.CustomIPPrefixArgs
+        var customIPPrefix = new AzureNextGen.Network.Latest.CustomIPPrefix("customIPPrefix", new AzureNextGen.Network.Latest.CustomIPPrefixArgs
         {
             Cidr = "0.0.0.0/24",
             CustomIpPrefixName = "test-customipprefix",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-custom_ip_prefix = azure_nextgen.network.CustomIPPrefix("customIPPrefix",
+custom_ip_prefix = azure_nextgen.network.latest.CustomIPPrefix("customIPPrefix",
     cidr="0.0.0.0/24",
     custom_ip_prefix_name="test-customipprefix",
     location="westus",
@@ -67,7 +67,7 @@ custom_ip_prefix = azure_nextgen.network.CustomIPPrefix("customIPPrefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const customIPPrefix = new azure_nextgen.network.CustomIPPrefix("customIPPrefix", {
+const customIPPrefix = new azure_nextgen.network.latest.CustomIPPrefix("customIPPrefix", {
     cidr: "0.0.0.0/24",
     customIpPrefixName: "test-customipprefix",
     location: "westus",

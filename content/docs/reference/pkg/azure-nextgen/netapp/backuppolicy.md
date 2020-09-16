@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backupPolicy = new AzureNextGen.Netapp.BackupPolicy("backupPolicy", new AzureNextGen.Netapp.BackupPolicyArgs
+        var backupPolicy = new AzureNextGen.NetApp.Latest.BackupPolicy("backupPolicy", new AzureNextGen.NetApp.Latest.BackupPolicyArgs
         {
             AccountName = "account1",
             BackupPolicyName = "backupPolicyName",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup_policy = azure_nextgen.netapp.BackupPolicy("backupPolicy",
+backup_policy = azure_nextgen.netapp.latest.BackupPolicy("backupPolicy",
     account_name="account1",
     backup_policy_name="backupPolicyName",
     daily_backups_to_keep=10,
@@ -75,7 +75,7 @@ backup_policy = azure_nextgen.netapp.BackupPolicy("backupPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const backupPolicy = new azure_nextgen.netapp.BackupPolicy("backupPolicy", {
+const backupPolicy = new azure_nextgen.netapp.latest.BackupPolicy("backupPolicy", {
     accountName: "account1",
     backupPolicyName: "backupPolicyName",
     dailyBackupsToKeep: 10,

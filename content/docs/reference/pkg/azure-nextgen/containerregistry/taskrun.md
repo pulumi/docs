@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var taskRun = new AzureNextGen.Containerregistry.TaskRun("taskRun", new AzureNextGen.Containerregistry.TaskRunArgs
+        var taskRun = new AzureNextGen.ContainerRegistry.V20190601Preview.TaskRun("taskRun", new AzureNextGen.ContainerRegistry.V20190601Preview.TaskRunArgs
         {
             ForceUpdateTag = "test",
             RegistryName = "myRegistry",
@@ -37,7 +37,7 @@ class MyStack : Stack
                 { "credentials",  },
                 { "encodedTaskContent", "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K" },
                 { "encodedValuesContent", "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==" },
-                { "platform", new AzureNextGen.Containerregistry.Inputs.PlatformPropertiesArgs
+                { "platform", new AzureNextGen.ContainerRegistry.V20190601Preview.Inputs.PlatformPropertiesArgs
                 {
                     Architecture = "amd64",
                     Os = "Linux",
@@ -65,7 +65,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-task_run = azure_nextgen.containerregistry.TaskRun("taskRun",
+task_run = azure_nextgen.containerregistry.v20190601preview.TaskRun("taskRun",
     force_update_tag="test",
     registry_name="myRegistry",
     resource_group_name="myResourceGroup",
@@ -92,7 +92,7 @@ task_run = azure_nextgen.containerregistry.TaskRun("taskRun",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const taskRun = new azure_nextgen.containerregistry.TaskRun("taskRun", {
+const taskRun = new azure_nextgen.containerregistry.v20190601preview.TaskRun("taskRun", {
     forceUpdateTag: "test",
     registryName: "myRegistry",
     resourceGroupName: "myResourceGroup",

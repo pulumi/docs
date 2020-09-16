@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileServer = new AzureNextGen.Batchai.FileServer("fileServer", new AzureNextGen.Batchai.FileServerArgs
+        var fileServer = new AzureNextGen.BatchAI.Latest.FileServer("fileServer", new AzureNextGen.BatchAI.Latest.FileServerArgs
         {
-            DataDisks = new AzureNextGen.Batchai.Inputs.DataDisksArgs
+            DataDisks = new AzureNextGen.BatchAI.Latest.Inputs.DataDisksArgs
             {
                 DiskCount = 2,
                 DiskSizeInGB = 10,
@@ -36,9 +36,9 @@ class MyStack : Stack
             },
             FileServerName = "demo_nfs",
             ResourceGroupName = "demo_resource_group",
-            SshConfiguration = new AzureNextGen.Batchai.Inputs.SshConfigurationArgs
+            SshConfiguration = new AzureNextGen.BatchAI.Latest.Inputs.SshConfigurationArgs
             {
-                UserAccountSettings = new AzureNextGen.Batchai.Inputs.UserAccountSettingsArgs
+                UserAccountSettings = new AzureNextGen.BatchAI.Latest.Inputs.UserAccountSettingsArgs
                 {
                     AdminUserName = "admin_user_name",
                     AdminUserPassword = "admin_user_password",
@@ -65,7 +65,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_server = azure_nextgen.batchai.FileServer("fileServer",
+file_server = azure_nextgen.batchai.latest.FileServer("fileServer",
     data_disks={
         "diskCount": 2,
         "diskSizeInGB": 10,
@@ -92,7 +92,7 @@ file_server = azure_nextgen.batchai.FileServer("fileServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const fileServer = new azure_nextgen.batchai.FileServer("fileServer", {
+const fileServer = new azure_nextgen.batchai.latest.FileServer("fileServer", {
     dataDisks: {
         diskCount: 2,
         diskSizeInGB: 10,

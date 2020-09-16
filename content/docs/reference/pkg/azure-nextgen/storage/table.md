@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var table = new AzureNextGen.Storage.Table("table", new AzureNextGen.Storage.TableArgs
+        var table = new AzureNextGen.Storage.Latest.Table("table", new AzureNextGen.Storage.Latest.TableArgs
         {
             AccountName = "sto328",
             ResourceGroupName = "res3376",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-table = azure_nextgen.storage.Table("table",
+table = azure_nextgen.storage.latest.Table("table",
     account_name="sto328",
     resource_group_name="res3376",
     table_name="table6185")
@@ -65,7 +65,7 @@ table = azure_nextgen.storage.Table("table",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const table = new azure_nextgen.storage.Table("table", {
+const table = new azure_nextgen.storage.latest.Table("table", {
     accountName: "sto328",
     resourceGroupName: "res3376",
     tableName: "table6185",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publishedBlueprint = new AzureNextGen.Blueprint.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint.PublishedBlueprintArgs
+        var publishedBlueprint = new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-published_blueprint = azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint",
+published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint",
     blueprint_name="simpleBlueprint",
     resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
     version_id="v2")
@@ -65,7 +65,7 @@ published_blueprint = azure_nextgen.blueprint.PublishedBlueprint("publishedBluep
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const publishedBlueprint = new azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint", {
+const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint", {
     blueprintName: "simpleBlueprint",
     resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
     versionId: "v2",
@@ -85,7 +85,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publishedBlueprint = new AzureNextGen.Blueprint.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint.PublishedBlueprintArgs
+        var publishedBlueprint = new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Blueprint.V20181101Preview.PublishedBlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
@@ -109,7 +109,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-published_blueprint = azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint",
+published_blueprint = azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint",
     blueprint_name="simpleBlueprint",
     resource_scope="subscriptions/00000000-0000-0000-0000-000000000000",
     version_id="v2")
@@ -124,7 +124,7 @@ published_blueprint = azure_nextgen.blueprint.PublishedBlueprint("publishedBluep
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const publishedBlueprint = new azure_nextgen.blueprint.PublishedBlueprint("publishedBlueprint", {
+const publishedBlueprint = new azure_nextgen.blueprint.v20181101preview.PublishedBlueprint("publishedBlueprint", {
     blueprintName: "simpleBlueprint",
     resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
     versionId: "v2",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ipFirewallRule = new AzureNextGen.Synapse.IpFirewallRule("ipFirewallRule", new AzureNextGen.Synapse.IpFirewallRuleArgs
+        var ipFirewallRule = new AzureNextGen.Synapse.V20190601Preview.IpFirewallRule("ipFirewallRule", new AzureNextGen.Synapse.V20190601Preview.IpFirewallRuleArgs
         {
             EndIpAddress = "10.0.0.254",
             ResourceGroupName = "ExampleResourceGroup",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ip_firewall_rule = azure_nextgen.synapse.IpFirewallRule("ipFirewallRule",
+ip_firewall_rule = azure_nextgen.synapse.v20190601preview.IpFirewallRule("ipFirewallRule",
     end_ip_address="10.0.0.254",
     resource_group_name="ExampleResourceGroup",
     rule_name="ExampleIpFirewallRule",
@@ -69,7 +69,7 @@ ip_firewall_rule = azure_nextgen.synapse.IpFirewallRule("ipFirewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const ipFirewallRule = new azure_nextgen.synapse.IpFirewallRule("ipFirewallRule", {
+const ipFirewallRule = new azure_nextgen.synapse.v20190601preview.IpFirewallRule("ipFirewallRule", {
     endIpAddress: "10.0.0.254",
     resourceGroupName: "ExampleResourceGroup",
     ruleName: "ExampleIpFirewallRule",

@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataController = new AzureNextGen.Azuredata.DataController("dataController", new AzureNextGen.Azuredata.DataControllerArgs
+        var dataController = new AzureNextGen.AzureData.V20190724Preview.DataController("dataController", new AzureNextGen.AzureData.V20190724Preview.DataControllerArgs
         {
             DataControllerName = "testdataController",
             Location = "northeurope",
-            OnPremiseProperty = new AzureNextGen.Azuredata.Inputs.OnPremisePropertyArgs
+            OnPremiseProperty = new AzureNextGen.AzureData.V20190724Preview.Inputs.OnPremisePropertyArgs
             {
                 Id = "12345678-1234-1234-ab12-1a2b3c4d5e6f",
                 PublicSigningKey = "publicOnPremSigningKey",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_controller = azure_nextgen.azuredata.DataController("dataController",
+data_controller = azure_nextgen.azuredata.v20190724preview.DataController("dataController",
     data_controller_name="testdataController",
     location="northeurope",
     on_premise_property={
@@ -81,7 +81,7 @@ data_controller = azure_nextgen.azuredata.DataController("dataController",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataController = new azure_nextgen.azuredata.DataController("dataController", {
+const dataController = new azure_nextgen.azuredata.v20190724preview.DataController("dataController", {
     dataControllerName: "testdataController",
     location: "northeurope",
     onPremiseProperty: {

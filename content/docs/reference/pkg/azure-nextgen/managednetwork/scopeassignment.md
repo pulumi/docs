@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scopeAssignment = new AzureNextGen.Managednetwork.ScopeAssignment("scopeAssignment", new AzureNextGen.Managednetwork.ScopeAssignmentArgs
+        var scopeAssignment = new AzureNextGen.ManagedNetwork.V20190601Preview.ScopeAssignment("scopeAssignment", new AzureNextGen.ManagedNetwork.V20190601Preview.ScopeAssignmentArgs
         {
             AssignedManagedNetwork = "/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
             Scope = "subscriptions/subscriptionC",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scope_assignment = azure_nextgen.managednetwork.ScopeAssignment("scopeAssignment",
+scope_assignment = azure_nextgen.managednetwork.v20190601preview.ScopeAssignment("scopeAssignment",
     assigned_managed_network="/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
     scope="subscriptions/subscriptionC",
     scope_assignment_name="subscriptionCAssignment")
@@ -65,7 +65,7 @@ scope_assignment = azure_nextgen.managednetwork.ScopeAssignment("scopeAssignment
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const scopeAssignment = new azure_nextgen.managednetwork.ScopeAssignment("scopeAssignment", {
+const scopeAssignment = new azure_nextgen.managednetwork.v20190601preview.ScopeAssignment("scopeAssignment", {
     assignedManagedNetwork: "/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
     scope: "subscriptions/subscriptionC",
     scopeAssignmentName: "subscriptionCAssignment",

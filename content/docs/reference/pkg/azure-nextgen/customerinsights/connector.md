@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connector = new AzureNextGen.Customerinsights.Connector("connector", new AzureNextGen.Customerinsights.ConnectorArgs
+        var connector = new AzureNextGen.CustomerInsights.Latest.Connector("connector", new AzureNextGen.CustomerInsights.Latest.ConnectorArgs
         {
             ConnectorName = "testConnector",
             ConnectorProperties = 
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector = azure_nextgen.customerinsights.Connector("connector",
+connector = azure_nextgen.customerinsights.latest.Connector("connector",
     connector_name="testConnector",
     connector_properties={
         "connectionKeyVaultUrl": {
@@ -85,7 +85,7 @@ connector = azure_nextgen.customerinsights.Connector("connector",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connector = new azure_nextgen.customerinsights.Connector("connector", {
+const connector = new azure_nextgen.customerinsights.latest.Connector("connector", {
     connectorName: "testConnector",
     connectorProperties: {
         connectionKeyVaultUrl: {

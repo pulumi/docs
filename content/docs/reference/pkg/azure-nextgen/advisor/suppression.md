@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var suppression = new AzureNextGen.Advisor.Suppression("suppression", new AzureNextGen.Advisor.SuppressionArgs
+        var suppression = new AzureNextGen.Advisor.Latest.Suppression("suppression", new AzureNextGen.Advisor.Latest.SuppressionArgs
         {
             Name = "suppressionName1",
             RecommendationId = "recommendationId",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-suppression = azure_nextgen.advisor.Suppression("suppression",
+suppression = azure_nextgen.advisor.latest.Suppression("suppression",
     name="suppressionName1",
     recommendation_id="recommendationId",
     resource_uri="resourceUri",
@@ -67,7 +67,7 @@ suppression = azure_nextgen.advisor.Suppression("suppression",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const suppression = new azure_nextgen.advisor.Suppression("suppression", {
+const suppression = new azure_nextgen.advisor.latest.Suppression("suppression", {
     name: "suppressionName1",
     recommendationId: "recommendationId",
     resourceUri: "resourceUri",

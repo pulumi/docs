@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var nodeType = new AzureNextGen.Servicefabric.NodeType("nodeType", new AzureNextGen.Servicefabric.NodeTypeArgs
+        var nodeType = new AzureNextGen.ServiceFabric.V20200101Preview.NodeType("nodeType", new AzureNextGen.ServiceFabric.V20200101Preview.NodeTypeArgs
         {
             Capacities = 
             {
@@ -45,7 +45,7 @@ class MyStack : Stack
             ResourceGroupName = "resRg",
             VmExtensions = 
             {
-                new AzureNextGen.Servicefabric.Inputs.VMSSExtensionArgs
+                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.VMSSExtensionArgs
                 {
                     Name = "Microsoft.Azure.Geneva.GenevaMonitoring",
                 },
@@ -57,15 +57,15 @@ class MyStack : Stack
             VmInstanceCount = 10,
             VmSecrets = 
             {
-                new AzureNextGen.Servicefabric.Inputs.VaultSecretGroupArgs
+                new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.VaultSecretGroupArgs
                 {
-                    SourceVault = new AzureNextGen.Servicefabric.Inputs.SubResourceArgs
+                    SourceVault = new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.SubResourceArgs
                     {
                         Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault",
                     },
                     VaultCertificates = 
                     {
-                        new AzureNextGen.Servicefabric.Inputs.VaultCertificateArgs
+                        new AzureNextGen.ServiceFabric.V20200101Preview.Inputs.VaultCertificateArgs
                         {
                             CertificateStore = "My",
                             CertificateUrl = "https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c",
@@ -93,7 +93,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-node_type = azure_nextgen.servicefabric.NodeType("nodeType",
+node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
     capacities={
         "ClientConnections": "65536",
     },
@@ -136,7 +136,7 @@ node_type = azure_nextgen.servicefabric.NodeType("nodeType",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const nodeType = new azure_nextgen.servicefabric.NodeType("nodeType", {
+const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType", {
     capacities: {
         ClientConnections: "65536",
     },
@@ -184,7 +184,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var nodeType = new AzureNextGen.Servicefabric.NodeType("nodeType", new AzureNextGen.Servicefabric.NodeTypeArgs
+        var nodeType = new AzureNextGen.ServiceFabric.V20200101Preview.NodeType("nodeType", new AzureNextGen.ServiceFabric.V20200101Preview.NodeTypeArgs
         {
             ClusterName = "myCluster",
             DataDiskSizeGB = 200,
@@ -216,7 +216,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-node_type = azure_nextgen.servicefabric.NodeType("nodeType",
+node_type = azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType",
     cluster_name="myCluster",
     data_disk_size_gb=200,
     is_primary=False,
@@ -239,7 +239,7 @@ node_type = azure_nextgen.servicefabric.NodeType("nodeType",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const nodeType = new azure_nextgen.servicefabric.NodeType("nodeType", {
+const nodeType = new azure_nextgen.servicefabric.v20200101preview.NodeType("nodeType", {
     clusterName: "myCluster",
     dataDiskSizeGB: 200,
     isPrimary: false,

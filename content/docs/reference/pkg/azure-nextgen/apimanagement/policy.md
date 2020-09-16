@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policy = new AzureNextGen.Apimanagement.Policy("policy", new AzureNextGen.Apimanagement.PolicyArgs
+        var policy = new AzureNextGen.ApiManagement.Latest.Policy("policy", new AzureNextGen.ApiManagement.Latest.PolicyArgs
         {
             Format = "xml",
             PolicyId = "policy",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy = azure_nextgen.apimanagement.Policy("policy",
+policy = azure_nextgen.apimanagement.latest.Policy("policy",
     format="xml",
     policy_id="policy",
     resource_group_name="rg1",
@@ -81,7 +81,7 @@ policy = azure_nextgen.apimanagement.Policy("policy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policy = new azure_nextgen.apimanagement.Policy("policy", {
+const policy = new azure_nextgen.apimanagement.latest.Policy("policy", {
     format: "xml",
     policyId: "policy",
     resourceGroupName: "rg1",

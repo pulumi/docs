@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.Streamanalytics.Output("output", new AzureNextGen.Streamanalytics.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
         {
             Datasource = 
             {
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.Output("output",
+output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
         "properties": {
             "accountId": "someAccountId",
@@ -89,7 +89,7 @@ output = azure_nextgen.streamanalytics.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const output = new azure_nextgen.streamanalytics.Output("output", {
+const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
         properties: {
             accountId: "someAccountId",
@@ -120,7 +120,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.Streamanalytics.Output("output", new AzureNextGen.Streamanalytics.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
         {
             Datasource = 
             {
@@ -158,7 +158,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.Output("output",
+output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
         "properties": {
             "dataset": "someDataset",
@@ -185,7 +185,7 @@ output = azure_nextgen.streamanalytics.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const output = new azure_nextgen.streamanalytics.Output("output", {
+const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
         properties: {
             dataset: "someDataset",
@@ -217,7 +217,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.Streamanalytics.Output("output", new AzureNextGen.Streamanalytics.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
         {
             Datasource = 
             {
@@ -261,7 +261,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.Output("output",
+output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
         "properties": {
             "propertyColumns": [
@@ -292,7 +292,7 @@ output = azure_nextgen.streamanalytics.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const output = new azure_nextgen.streamanalytics.Output("output", {
+const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
         properties: {
             propertyColumns: [
@@ -328,7 +328,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.Streamanalytics.Output("output", new AzureNextGen.Streamanalytics.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
         {
             Datasource = 
             {
@@ -377,7 +377,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.Output("output",
+output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
         "properties": {
             "propertyColumns": [
@@ -412,7 +412,7 @@ output = azure_nextgen.streamanalytics.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const output = new azure_nextgen.streamanalytics.Output("output", {
+const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
         properties: {
             propertyColumns: [
@@ -452,7 +452,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.Streamanalytics.Output("output", new AzureNextGen.Streamanalytics.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
         {
             Datasource = 
             {
@@ -504,7 +504,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.Output("output",
+output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
         "properties": {
             "container": "state",
@@ -539,7 +539,7 @@ output = azure_nextgen.streamanalytics.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const output = new azure_nextgen.streamanalytics.Output("output", {
+const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
         properties: {
             container: "state",
@@ -579,7 +579,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.Streamanalytics.Output("output", new AzureNextGen.Streamanalytics.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
         {
             Datasource = 
             {
@@ -627,7 +627,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.Output("output",
+output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
         "properties": {
             "accountName": "someaccount",
@@ -662,7 +662,7 @@ output = azure_nextgen.streamanalytics.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const output = new azure_nextgen.streamanalytics.Output("output", {
+const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
         properties: {
             accountName: "someaccount",
@@ -702,7 +702,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.Streamanalytics.Output("output", new AzureNextGen.Streamanalytics.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
         {
             Datasource = 
             {
@@ -738,7 +738,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.Output("output",
+output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
         "properties": {
             "database": "someDatabase",
@@ -763,7 +763,7 @@ output = azure_nextgen.streamanalytics.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const output = new azure_nextgen.streamanalytics.Output("output", {
+const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
         properties: {
             database: "someDatabase",
@@ -793,7 +793,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.Streamanalytics.Output("output", new AzureNextGen.Streamanalytics.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
         {
             Datasource = 
             {
@@ -835,7 +835,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.Output("output",
+output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
         "properties": {
             "accountKey": "accountKey==",
@@ -865,7 +865,7 @@ output = azure_nextgen.streamanalytics.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const output = new azure_nextgen.streamanalytics.Output("output", {
+const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
         properties: {
             accountKey: "accountKey==",
@@ -900,7 +900,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var output = new AzureNextGen.Streamanalytics.Output("output", new AzureNextGen.Streamanalytics.OutputArgs
+        var output = new AzureNextGen.StreamAnalytics.Latest.Output("output", new AzureNextGen.StreamAnalytics.Latest.OutputArgs
         {
             Datasource = 
             {
@@ -945,7 +945,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-output = azure_nextgen.streamanalytics.Output("output",
+output = azure_nextgen.streamanalytics.latest.Output("output",
     datasource={
         "properties": {
             "eventHubName": "sdkeventhub",
@@ -977,7 +977,7 @@ output = azure_nextgen.streamanalytics.Output("output",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const output = new azure_nextgen.streamanalytics.Output("output", {
+const output = new azure_nextgen.streamanalytics.latest.Output("output", {
     datasource: {
         properties: {
             eventHubName: "sdkeventhub",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var remediationAtSubscription = new AzureNextGen.Policyinsights.RemediationAtSubscription("remediationAtSubscription", new AzureNextGen.Policyinsights.RemediationAtSubscriptionArgs
+        var remediationAtSubscription = new AzureNextGen.PolicyInsights.Latest.RemediationAtSubscription("remediationAtSubscription", new AzureNextGen.PolicyInsights.Latest.RemediationAtSubscriptionArgs
         {
             PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
             RemediationName = "storageRemediation",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-remediation_at_subscription = azure_nextgen.policyinsights.RemediationAtSubscription("remediationAtSubscription",
+remediation_at_subscription = azure_nextgen.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription",
     policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
     remediation_name="storageRemediation")
 
@@ -63,7 +63,7 @@ remediation_at_subscription = azure_nextgen.policyinsights.RemediationAtSubscrip
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const remediationAtSubscription = new azure_nextgen.policyinsights.RemediationAtSubscription("remediationAtSubscription", {
+const remediationAtSubscription = new azure_nextgen.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription", {
     policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
     remediationName: "storageRemediation",
 });
@@ -82,9 +82,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var remediationAtSubscription = new AzureNextGen.Policyinsights.RemediationAtSubscription("remediationAtSubscription", new AzureNextGen.Policyinsights.RemediationAtSubscriptionArgs
+        var remediationAtSubscription = new AzureNextGen.PolicyInsights.Latest.RemediationAtSubscription("remediationAtSubscription", new AzureNextGen.PolicyInsights.Latest.RemediationAtSubscriptionArgs
         {
-            Filters = new AzureNextGen.Policyinsights.Inputs.RemediationFiltersArgs
+            Filters = new AzureNextGen.PolicyInsights.Latest.Inputs.RemediationFiltersArgs
             {
                 Locations = 
                 {
@@ -115,7 +115,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-remediation_at_subscription = azure_nextgen.policyinsights.RemediationAtSubscription("remediationAtSubscription",
+remediation_at_subscription = azure_nextgen.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription",
     filters={
         "locations": [
             "eastus",
@@ -137,7 +137,7 @@ remediation_at_subscription = azure_nextgen.policyinsights.RemediationAtSubscrip
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const remediationAtSubscription = new azure_nextgen.policyinsights.RemediationAtSubscription("remediationAtSubscription", {
+const remediationAtSubscription = new azure_nextgen.policyinsights.latest.RemediationAtSubscription("remediationAtSubscription", {
     filters: {
         locations: [
             "eastus",

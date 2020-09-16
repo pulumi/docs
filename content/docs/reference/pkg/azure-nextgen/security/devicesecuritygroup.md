@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deviceSecurityGroup = new AzureNextGen.Security.DeviceSecurityGroup("deviceSecurityGroup", new AzureNextGen.Security.DeviceSecurityGroupArgs
+        var deviceSecurityGroup = new AzureNextGen.Security.Latest.DeviceSecurityGroup("deviceSecurityGroup", new AzureNextGen.Security.Latest.DeviceSecurityGroupArgs
         {
             DeviceSecurityGroupName = "samplesecuritygroup",
             ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
             TimeWindowRules = 
             {
-                new AzureNextGen.Security.Inputs.TimeWindowCustomAlertRuleArgs
+                new AzureNextGen.Security.Latest.Inputs.TimeWindowCustomAlertRuleArgs
                 {
                     IsEnabled = true,
                     MaxThreshold = 30,
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-device_security_group = azure_nextgen.security.DeviceSecurityGroup("deviceSecurityGroup",
+device_security_group = azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup",
     device_security_group_name="samplesecuritygroup",
     resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
     time_window_rules=[{
@@ -81,7 +81,7 @@ device_security_group = azure_nextgen.security.DeviceSecurityGroup("deviceSecuri
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const deviceSecurityGroup = new azure_nextgen.security.DeviceSecurityGroup("deviceSecurityGroup", {
+const deviceSecurityGroup = new azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup", {
     deviceSecurityGroupName: "samplesecuritygroup",
     resourceId: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
     timeWindowRules: [{

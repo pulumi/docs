@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @group = new AzureNextGen.Migrate.Group("group", new AzureNextGen.Migrate.GroupArgs
+        var @group = new AzureNextGen.Migrate.Latest.Group("group", new AzureNextGen.Migrate.Latest.GroupArgs
         {
             ETag = "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
             GroupName = "Group2",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-group = azure_nextgen.migrate.Group("group",
+group = azure_nextgen.migrate.latest.Group("group",
     e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     group_name="Group2",
     project_name="abgoyalWEselfhostb72bproject",
@@ -67,7 +67,7 @@ group = azure_nextgen.migrate.Group("group",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const group = new azure_nextgen.migrate.Group("group", {
+const group = new azure_nextgen.migrate.latest.Group("group", {
     eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     groupName: "Group2",
     projectName: "abgoyalWEselfhostb72bproject",

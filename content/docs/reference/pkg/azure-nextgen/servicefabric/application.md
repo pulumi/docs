@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.Servicefabric.Application("application", new AzureNextGen.Servicefabric.ApplicationArgs
+        var application = new AzureNextGen.ServiceFabric.Latest.Application("application", new AzureNextGen.ServiceFabric.Latest.ApplicationArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
             MaximumNodes = 3,
             Metrics = 
             {
-                new AzureNextGen.Servicefabric.Inputs.ApplicationMetricDescriptionArgs
+                new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationMetricDescriptionArgs
                 {
                     MaximumCapacity = 3,
                     Name = "metric1",
@@ -50,12 +50,12 @@ class MyStack : Stack
             ResourceGroupName = "resRg",
             TypeName = "myAppType",
             TypeVersion = "1.0",
-            UpgradePolicy = new AzureNextGen.Servicefabric.Inputs.ApplicationUpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ApplicationUpgradePolicyArgs
             {
-                ApplicationHealthPolicy = new AzureNextGen.Servicefabric.Inputs.ArmApplicationHealthPolicyArgs
+                ApplicationHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ArmApplicationHealthPolicyArgs
                 {
                     ConsiderWarningAsError = true,
-                    DefaultServiceTypeHealthPolicy = new AzureNextGen.Servicefabric.Inputs.ArmServiceTypeHealthPolicyArgs
+                    DefaultServiceTypeHealthPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ArmServiceTypeHealthPolicyArgs
                     {
                         MaxPercentUnhealthyPartitionsPerService = 0,
                         MaxPercentUnhealthyReplicasPerPartition = 0,
@@ -64,7 +64,7 @@ class MyStack : Stack
                     MaxPercentUnhealthyDeployedApplications = 0,
                 },
                 ForceRestart = false,
-                RollingUpgradeMonitoringPolicy = new AzureNextGen.Servicefabric.Inputs.ArmRollingUpgradeMonitoringPolicyArgs
+                RollingUpgradeMonitoringPolicy = new AzureNextGen.ServiceFabric.Latest.Inputs.ArmRollingUpgradeMonitoringPolicyArgs
                 {
                     FailureAction = "Rollback",
                     HealthCheckRetryTimeout = "00:10:00",
@@ -95,7 +95,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.servicefabric.Application("application",
+application = azure_nextgen.servicefabric.latest.Application("application",
     application_name="myApp",
     cluster_name="myCluster",
     maximum_nodes=3,
@@ -146,7 +146,7 @@ application = azure_nextgen.servicefabric.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const application = new azure_nextgen.servicefabric.Application("application", {
+const application = new azure_nextgen.servicefabric.latest.Application("application", {
     applicationName: "myApp",
     clusterName: "myCluster",
     maximumNodes: 3,
@@ -202,7 +202,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.Servicefabric.Application("application", new AzureNextGen.Servicefabric.ApplicationArgs
+        var application = new AzureNextGen.ServiceFabric.Latest.Application("application", new AzureNextGen.ServiceFabric.Latest.ApplicationArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
@@ -229,7 +229,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.servicefabric.Application("application",
+application = azure_nextgen.servicefabric.latest.Application("application",
     application_name="myApp",
     cluster_name="myCluster",
     remove_application_capacity=False,
@@ -247,7 +247,7 @@ application = azure_nextgen.servicefabric.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const application = new azure_nextgen.servicefabric.Application("application", {
+const application = new azure_nextgen.servicefabric.latest.Application("application", {
     applicationName: "myApp",
     clusterName: "myCluster",
     removeApplicationCapacity: false,

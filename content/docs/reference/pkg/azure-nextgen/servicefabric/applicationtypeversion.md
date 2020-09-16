@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationTypeVersion = new AzureNextGen.Servicefabric.ApplicationTypeVersion("applicationTypeVersion", new AzureNextGen.Servicefabric.ApplicationTypeVersionArgs
+        var applicationTypeVersion = new AzureNextGen.ServiceFabric.Latest.ApplicationTypeVersion("applicationTypeVersion", new AzureNextGen.ServiceFabric.Latest.ApplicationTypeVersionArgs
         {
             AppPackageUrl = "http://fakelink.test.com/MyAppType",
             ApplicationTypeName = "myAppType",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_type_version = azure_nextgen.servicefabric.ApplicationTypeVersion("applicationTypeVersion",
+application_type_version = azure_nextgen.servicefabric.latest.ApplicationTypeVersion("applicationTypeVersion",
     app_package_url="http://fakelink.test.com/MyAppType",
     application_type_name="myAppType",
     cluster_name="myCluster",
@@ -69,7 +69,7 @@ application_type_version = azure_nextgen.servicefabric.ApplicationTypeVersion("a
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const applicationTypeVersion = new azure_nextgen.servicefabric.ApplicationTypeVersion("applicationTypeVersion", {
+const applicationTypeVersion = new azure_nextgen.servicefabric.latest.ApplicationTypeVersion("applicationTypeVersion", {
     appPackageUrl: "http://fakelink.test.com/MyAppType",
     applicationTypeName: "myAppType",
     clusterName: "myCluster",

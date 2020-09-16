@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Devtestlab.VirtualMachine("virtualMachine", new AzureNextGen.Devtestlab.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.DevTestLab.Latest.VirtualMachine("virtualMachine", new AzureNextGen.DevTestLab.Latest.VirtualMachineArgs
         {
             AllowClaim = true,
             DisallowPublicIpAddress = true,
-            GalleryImageReference = new AzureNextGen.Devtestlab.Inputs.GalleryImageReferenceArgs
+            GalleryImageReference = new AzureNextGen.DevTestLab.Latest.Inputs.GalleryImageReferenceArgs
             {
                 Offer = "UbuntuServer",
                 OsType = "Linux",
@@ -72,7 +72,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.devtestlab.VirtualMachine("virtualMachine",
+virtual_machine = azure_nextgen.devtestlab.latest.VirtualMachine("virtualMachine",
     allow_claim=True,
     disallow_public_ip_address=True,
     gallery_image_reference={
@@ -107,7 +107,7 @@ virtual_machine = azure_nextgen.devtestlab.VirtualMachine("virtualMachine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachine = new azure_nextgen.devtestlab.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.devtestlab.latest.VirtualMachine("virtualMachine", {
     allowClaim: true,
     disallowPublicIpAddress: true,
     galleryImageReference: {

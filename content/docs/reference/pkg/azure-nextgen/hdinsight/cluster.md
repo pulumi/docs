@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1")
 
@@ -63,7 +63,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
 });
@@ -82,7 +82,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -109,7 +109,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1",
     tags={
@@ -126,7 +126,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
     tags: {
@@ -148,7 +148,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -175,7 +175,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1",
     tags={
@@ -192,7 +192,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
     tags: {
@@ -214,7 +214,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -241,7 +241,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1",
     tags={
@@ -258,7 +258,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
     tags: {
@@ -280,7 +280,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -303,7 +303,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1")
 
@@ -317,7 +317,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
 });
@@ -336,7 +336,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -363,7 +363,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1",
     tags={
@@ -380,7 +380,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
     tags: {
@@ -402,7 +402,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -429,7 +429,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1",
     tags={
@@ -446,7 +446,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
     tags: {
@@ -468,7 +468,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -491,7 +491,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1")
 
@@ -505,7 +505,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
 });
@@ -524,7 +524,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -547,7 +547,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1")
 
@@ -561,7 +561,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
 });
@@ -580,7 +580,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -603,7 +603,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1")
 
@@ -617,7 +617,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
 });
@@ -636,7 +636,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Hdinsight.Cluster("cluster", new AzureNextGen.Hdinsight.ClusterArgs
+        var cluster = new AzureNextGen.HDInsight.V20180601Preview.Cluster("cluster", new AzureNextGen.HDInsight.V20180601Preview.ClusterArgs
         {
             ClusterName = "cluster1",
             ResourceGroupName = "rg1",
@@ -659,7 +659,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.hdinsight.Cluster("cluster",
+cluster = azure_nextgen.hdinsight.v20180601preview.Cluster("cluster",
     cluster_name="cluster1",
     resource_group_name="rg1")
 
@@ -673,7 +673,7 @@ cluster = azure_nextgen.hdinsight.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.hdinsight.Cluster("cluster", {
+const cluster = new azure_nextgen.hdinsight.v20180601preview.Cluster("cluster", {
     clusterName: "cluster1",
     resourceGroupName: "rg1",
 });

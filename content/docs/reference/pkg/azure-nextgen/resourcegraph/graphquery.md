@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var graphQuery = new AzureNextGen.Resourcegraph.GraphQuery("graphQuery", new AzureNextGen.Resourcegraph.GraphQueryArgs
+        var graphQuery = new AzureNextGen.ResourceGraph.V20200401Preview.GraphQuery("graphQuery", new AzureNextGen.ResourceGraph.V20200401Preview.GraphQueryArgs
         {
             Description = "Docker VMs in PROD",
             Query = "where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-graph_query = azure_nextgen.resourcegraph.GraphQuery("graphQuery",
+graph_query = azure_nextgen.resourcegraph.v20200401preview.GraphQuery("graphQuery",
     description="Docker VMs in PROD",
     query="where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
     resource_group_name="my-resource-group",
@@ -69,7 +69,7 @@ graph_query = azure_nextgen.resourcegraph.GraphQuery("graphQuery",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const graphQuery = new azure_nextgen.resourcegraph.GraphQuery("graphQuery", {
+const graphQuery = new azure_nextgen.resourcegraph.v20200401preview.GraphQuery("graphQuery", {
     description: "Docker VMs in PROD",
     query: "where isnotnull(tags['Prod']) and properties.extensions[0].Name == 'docker'",
     resourceGroupName: "my-resource-group",

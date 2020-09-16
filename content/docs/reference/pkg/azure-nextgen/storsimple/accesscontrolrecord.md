@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var accessControlRecord = new AzureNextGen.Storsimple.AccessControlRecord("accessControlRecord", new AzureNextGen.Storsimple.AccessControlRecordArgs
+        var accessControlRecord = new AzureNextGen.StorSimple.Latest.AccessControlRecord("accessControlRecord", new AzureNextGen.StorSimple.Latest.AccessControlRecordArgs
         {
             AccessControlRecordName = "ACRForTest",
             InitiatorName = "iqn.2017-06.com.contoso:ForTest",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-access_control_record = azure_nextgen.storsimple.AccessControlRecord("accessControlRecord",
+access_control_record = azure_nextgen.storsimple.latest.AccessControlRecord("accessControlRecord",
     access_control_record_name="ACRForTest",
     initiator_name="iqn.2017-06.com.contoso:ForTest",
     manager_name="ManagerForSDKTest1",
@@ -67,7 +67,7 @@ access_control_record = azure_nextgen.storsimple.AccessControlRecord("accessCont
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const accessControlRecord = new azure_nextgen.storsimple.AccessControlRecord("accessControlRecord", {
+const accessControlRecord = new azure_nextgen.storsimple.latest.AccessControlRecord("accessControlRecord", {
     accessControlRecordName: "ACRForTest",
     initiatorName: "iqn.2017-06.com.contoso:ForTest",
     managerName: "ManagerForSDKTest1",

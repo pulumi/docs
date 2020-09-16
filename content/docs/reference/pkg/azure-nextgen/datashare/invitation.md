@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var invitation = new AzureNextGen.Datashare.Invitation("invitation", new AzureNextGen.Datashare.InvitationArgs
+        var invitation = new AzureNextGen.DataShare.Latest.Invitation("invitation", new AzureNextGen.DataShare.Latest.InvitationArgs
         {
             AccountName = "Account1",
             InvitationName = "Invitation1",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-invitation = azure_nextgen.datashare.Invitation("invitation",
+invitation = azure_nextgen.datashare.latest.Invitation("invitation",
     account_name="Account1",
     invitation_name="Invitation1",
     resource_group_name="SampleResourceGroup",
@@ -69,7 +69,7 @@ invitation = azure_nextgen.datashare.Invitation("invitation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const invitation = new azure_nextgen.datashare.Invitation("invitation", {
+const invitation = new azure_nextgen.datashare.latest.Invitation("invitation", {
     accountName: "Account1",
     invitationName: "Invitation1",
     resourceGroupName: "SampleResourceGroup",

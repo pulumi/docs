@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var guestDiagnosticsSettingsAssociation = new AzureNextGen.Insights.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation", new AzureNextGen.Insights.GuestDiagnosticsSettingsAssociationArgs
+        var guestDiagnosticsSettingsAssociation = new AzureNextGen.Insights.V20180601Preview.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation", new AzureNextGen.Insights.V20180601Preview.GuestDiagnosticsSettingsAssociationArgs
         {
             AssociationName = "healthSystemMachineConfigAssociation",
             GuestDiagnosticSettingsName = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-guest_diagnostics_settings_association = azure_nextgen.insights.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation",
+guest_diagnostics_settings_association = azure_nextgen.insights.v20180601preview.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation",
     association_name="healthSystemMachineConfigAssociation",
     guest_diagnostic_settings_name="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity",
     location="Global",
@@ -69,7 +69,7 @@ guest_diagnostics_settings_association = azure_nextgen.insights.GuestDiagnostics
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const guestDiagnosticsSettingsAssociation = new azure_nextgen.insights.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation", {
+const guestDiagnosticsSettingsAssociation = new azure_nextgen.insights.v20180601preview.GuestDiagnosticsSettingsAssociation("guestDiagnosticsSettingsAssociation", {
     associationName: "healthSystemMachineConfigAssociation",
     guestDiagnosticSettingsName: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity",
     location: "Global",

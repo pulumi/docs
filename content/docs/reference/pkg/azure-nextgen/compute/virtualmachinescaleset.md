@@ -26,46 +26,46 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        Image = new AzureNextGen.Compute.Inputs.VirtualHardDiskArgs
+                        Image = new AzureNextGen.Compute.Latest.Inputs.VirtualHardDiskArgs
                         {
                             Uri = "http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd",
                         },
@@ -93,7 +93,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -139,7 +139,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -190,49 +190,49 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
@@ -268,7 +268,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -324,7 +324,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -385,50 +385,50 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -455,7 +455,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -503,7 +503,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -556,52 +556,52 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_DS1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
                     DataDisks = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetDataDiskArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetDataDiskArgs
                         {
                             Caching = "ReadWrite",
                             CreateOption = "Empty",
                             DiskSizeGB = 1023,
                             Lun = 0,
-                            ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                            ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                             {
-                                DiskEncryptionSet = new AzureNextGen.Compute.Inputs.DiskEncryptionSetParametersArgs
+                                DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
                                 {
                                     Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                                 },
@@ -609,17 +609,17 @@ class MyStack : Stack
                             },
                         },
                     },
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
-                            DiskEncryptionSet = new AzureNextGen.Compute.Inputs.DiskEncryptionSetParametersArgs
+                            DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
                             {
                                 Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                             },
@@ -648,7 +648,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -711,7 +711,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -779,63 +779,63 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
-            Plan = new AzureNextGen.Compute.Inputs.PlanArgs
+            Plan = new AzureNextGen.Compute.Latest.Inputs.PlanArgs
             {
                 Name = "windows2016",
                 Product = "windows-data-science-vm",
                 Publisher = "microsoft-ads",
             },
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_DS1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                SecurityProfile = new AzureNextGen.Compute.Inputs.SecurityProfileArgs
+                SecurityProfile = new AzureNextGen.Compute.Latest.Inputs.SecurityProfileArgs
                 {
                     EncryptionAtHost = true,
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "windows-data-science-vm",
                         Publisher = "microsoft-ads",
                         Sku = "windows2016",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadOnly",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -862,7 +862,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     plan={
@@ -921,7 +921,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     plan: {
@@ -985,59 +985,59 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
-            Plan = new AzureNextGen.Compute.Inputs.PlanArgs
+            Plan = new AzureNextGen.Compute.Latest.Inputs.PlanArgs
             {
                 Name = "windows2016",
                 Product = "windows-data-science-vm",
                 Publisher = "microsoft-ads",
             },
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "windows-data-science-vm",
                         Publisher = "microsoft-ads",
                         Sku = "windows2016",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -1064,7 +1064,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     plan={
@@ -1120,7 +1120,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     plan: {
@@ -1181,53 +1181,53 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -1254,7 +1254,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -1305,7 +1305,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -1361,53 +1361,53 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -1434,7 +1434,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -1485,7 +1485,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -1541,9 +1541,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
-            AutomaticRepairsPolicy = new AzureNextGen.Compute.Inputs.AutomaticRepairsPolicyArgs
+            AutomaticRepairsPolicy = new AzureNextGen.Compute.Latest.Inputs.AutomaticRepairsPolicyArgs
             {
                 Enabled = true,
                 GracePeriod = "PT30M",
@@ -1551,48 +1551,48 @@ class MyStack : Stack
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -1619,7 +1619,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     automatic_repairs_policy={
         "enabled": True,
         "gracePeriod": "PT30M",
@@ -1674,7 +1674,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     automaticRepairsPolicy: {
         enabled: true,
         gracePeriod: "PT30M",
@@ -1734,61 +1734,61 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                DiagnosticsProfile = new AzureNextGen.Compute.Inputs.DiagnosticsProfileArgs
+                DiagnosticsProfile = new AzureNextGen.Compute.Latest.Inputs.DiagnosticsProfileArgs
                 {
-                    BootDiagnostics = new AzureNextGen.Compute.Inputs.BootDiagnosticsArgs
+                    BootDiagnostics = new AzureNextGen.Compute.Latest.Inputs.BootDiagnosticsArgs
                     {
                         Enabled = true,
                         StorageUri = "http://{existing-storage-account-name}.blob.core.windows.net",
                     },
                 },
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -1815,7 +1815,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -1872,7 +1872,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -1934,69 +1934,69 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D2_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
                     DataDisks = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetDataDiskArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetDataDiskArgs
                         {
                             CreateOption = "Empty",
                             DiskSizeGB = 1023,
                             Lun = 0,
                         },
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetDataDiskArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetDataDiskArgs
                         {
                             CreateOption = "Empty",
                             DiskSizeGB = 1023,
                             Lun = 1,
                         },
                     },
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
                         DiskSizeGB = 512,
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -2023,7 +2023,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -2087,7 +2087,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -2156,64 +2156,64 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
-            Plan = new AzureNextGen.Compute.Inputs.PlanArgs
+            Plan = new AzureNextGen.Compute.Latest.Inputs.PlanArgs
             {
                 Name = "windows2016",
                 Product = "windows-data-science-vm",
                 Publisher = "microsoft-ads",
             },
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_DS1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "windows-data-science-vm",
                         Publisher = "microsoft-ads",
                         Sku = "windows2016",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadOnly",
                         CreateOption = "FromImage",
-                        DiffDiskSettings = new AzureNextGen.Compute.Inputs.DiffDiskSettingsArgs
+                        DiffDiskSettings = new AzureNextGen.Compute.Latest.Inputs.DiffDiskSettingsArgs
                         {
                             Option = "Local",
                             Placement = "ResourceDisk",
                         },
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -2240,7 +2240,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     plan={
@@ -2300,7 +2300,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     plan: {
@@ -2365,63 +2365,63 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
-            Plan = new AzureNextGen.Compute.Inputs.PlanArgs
+            Plan = new AzureNextGen.Compute.Latest.Inputs.PlanArgs
             {
                 Name = "windows2016",
                 Product = "windows-data-science-vm",
                 Publisher = "microsoft-ads",
             },
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_DS1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "windows-data-science-vm",
                         Publisher = "microsoft-ads",
                         Sku = "windows2016",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadOnly",
                         CreateOption = "FromImage",
-                        DiffDiskSettings = new AzureNextGen.Compute.Inputs.DiffDiskSettingsArgs
+                        DiffDiskSettings = new AzureNextGen.Compute.Latest.Inputs.DiffDiskSettingsArgs
                         {
                             Option = "Local",
                         },
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -2448,7 +2448,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     plan={
@@ -2507,7 +2507,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     plan: {
@@ -2571,72 +2571,72 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                DiagnosticsProfile = new AzureNextGen.Compute.Inputs.DiagnosticsProfileArgs
+                DiagnosticsProfile = new AzureNextGen.Compute.Latest.Inputs.DiagnosticsProfileArgs
                 {
-                    BootDiagnostics = new AzureNextGen.Compute.Inputs.BootDiagnosticsArgs
+                    BootDiagnostics = new AzureNextGen.Compute.Latest.Inputs.BootDiagnosticsArgs
                     {
                         Enabled = true,
                         StorageUri = "http://{existing-storage-account-name}.blob.core.windows.net",
                     },
                 },
-                ExtensionProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetExtensionProfileArgs
+                ExtensionProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetExtensionProfileArgs
                 {
                     Extensions = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetExtensionArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetExtensionArgs
                         {
                             Name = "{extension-name}",
                         },
                     },
                     ExtensionsTimeBudget = "PT1H20M",
                 },
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -2663,7 +2663,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -2726,7 +2726,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -2794,60 +2794,60 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                DiagnosticsProfile = new AzureNextGen.Compute.Inputs.DiagnosticsProfileArgs
+                DiagnosticsProfile = new AzureNextGen.Compute.Latest.Inputs.DiagnosticsProfileArgs
                 {
-                    BootDiagnostics = new AzureNextGen.Compute.Inputs.BootDiagnosticsArgs
+                    BootDiagnostics = new AzureNextGen.Compute.Latest.Inputs.BootDiagnosticsArgs
                     {
                         Enabled = true,
                     },
                 },
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -2874,7 +2874,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -2930,7 +2930,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -2991,53 +2991,53 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -3064,7 +3064,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -3115,7 +3115,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -3171,53 +3171,53 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Premium_LRS",
                         },
@@ -3244,7 +3244,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -3295,7 +3295,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -3351,45 +3351,45 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
-                    LinuxConfiguration = new AzureNextGen.Compute.Inputs.LinuxConfigurationArgs
+                    LinuxConfiguration = new AzureNextGen.Compute.Latest.Inputs.LinuxConfigurationArgs
                     {
                         DisablePasswordAuthentication = true,
-                        Ssh = new AzureNextGen.Compute.Inputs.SshConfigurationArgs
+                        Ssh = new AzureNextGen.Compute.Latest.Inputs.SshConfigurationArgs
                         {
                             PublicKeys = 
                             {
-                                new AzureNextGen.Compute.Inputs.SshPublicKeyArgs
+                                new AzureNextGen.Compute.Latest.Inputs.SshPublicKeyArgs
                                 {
                                     KeyData = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1",
                                     Path = "/home/{your-username}/.ssh/authorized_keys",
@@ -3398,20 +3398,20 @@ class MyStack : Stack
                         },
                     },
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -3438,7 +3438,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -3497,7 +3497,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -3561,61 +3561,61 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "westus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 3,
                 Name = "Standard_D1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Manual",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                ScheduledEventsProfile = new AzureNextGen.Compute.Inputs.ScheduledEventsProfileArgs
+                ScheduledEventsProfile = new AzureNextGen.Compute.Latest.Inputs.ScheduledEventsProfileArgs
                 {
-                    TerminateNotificationProfile = new AzureNextGen.Compute.Inputs.TerminateNotificationProfileArgs
+                    TerminateNotificationProfile = new AzureNextGen.Compute.Latest.Inputs.TerminateNotificationProfileArgs
                     {
                         Enable = true,
                         NotBeforeTimeout = "PT5M",
                     },
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -3642,7 +3642,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="westus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -3699,7 +3699,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "westus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",
@@ -3761,69 +3761,69 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSet = new AzureNextGen.Compute.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.VirtualMachineScaleSetArgs
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
         {
             Location = "centralus",
             Overprovision = true,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Capacity = 2,
                 Name = "Standard_A1_v2",
                 Tier = "Standard",
             },
-            UpgradePolicy = new AzureNextGen.Compute.Inputs.UpgradePolicyArgs
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
             {
                 Mode = "Automatic",
             },
-            VirtualMachineProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetVMProfileArgs
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
             {
-                NetworkProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
                 {
                     NetworkInterfaceConfigurations = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
                         {
                             Name = "{vmss-name}",
                         },
                     },
                 },
-                OsProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSProfileArgs
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
                 {
                     AdminPassword = "{your-password}",
                     AdminUsername = "{your-username}",
                     ComputerNamePrefix = "{vmss-name}",
                 },
-                StorageProfile = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
                 {
                     DataDisks = 
                     {
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetDataDiskArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetDataDiskArgs
                         {
                             CreateOption = "Empty",
                             DiskSizeGB = 1023,
                             Lun = 0,
                         },
-                        new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetDataDiskArgs
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetDataDiskArgs
                         {
                             CreateOption = "Empty",
                             DiskSizeGB = 1023,
                             Lun = 1,
                         },
                     },
-                    ImageReference = new AzureNextGen.Compute.Inputs.ImageReferenceArgs
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
                     {
                         Offer = "WindowsServer",
                         Publisher = "MicrosoftWindowsServer",
                         Sku = "2016-Datacenter",
                         Version = "latest",
                     },
-                    OsDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
                     {
                         Caching = "ReadWrite",
                         CreateOption = "FromImage",
                         DiskSizeGB = 512,
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
                         {
                             StorageAccountType = "Standard_LRS",
                         },
@@ -3855,7 +3855,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet",
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
     location="centralus",
     overprovision=True,
     resource_group_name="myResourceGroup",
@@ -3923,7 +3923,7 @@ virtual_machine_scale_set = azure_nextgen.compute.VirtualMachineScaleSet("virtua
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSet = new azure_nextgen.compute.VirtualMachineScaleSet("virtualMachineScaleSet", {
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
     location: "centralus",
     overprovision: true,
     resourceGroupName: "myResourceGroup",

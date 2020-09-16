@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverKey = new AzureNextGen.Sql.ServerKey("serverKey", new AzureNextGen.Sql.ServerKeyArgs
+        var serverKey = new AzureNextGen.Sql.V20150501Preview.ServerKey("serverKey", new AzureNextGen.Sql.V20150501Preview.ServerKeyArgs
         {
             KeyName = "someVault_someKey_01234567890123456789012345678901",
             ResourceGroupName = "sqlcrudtest-7398",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_key = azure_nextgen.sql.ServerKey("serverKey",
+server_key = azure_nextgen.sql.v20150501preview.ServerKey("serverKey",
     key_name="someVault_someKey_01234567890123456789012345678901",
     resource_group_name="sqlcrudtest-7398",
     server_key_type="AzureKeyVault",
@@ -69,7 +69,7 @@ server_key = azure_nextgen.sql.ServerKey("serverKey",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serverKey = new azure_nextgen.sql.ServerKey("serverKey", {
+const serverKey = new azure_nextgen.sql.v20150501preview.ServerKey("serverKey", {
     keyName: "someVault_someKey_01234567890123456789012345678901",
     resourceGroupName: "sqlcrudtest-7398",
     serverKeyType: "AzureKeyVault",

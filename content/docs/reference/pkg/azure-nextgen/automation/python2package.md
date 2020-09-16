@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var python2Package = new AzureNextGen.Automation.Python2Package("python2Package", new AzureNextGen.Automation.Python2PackageArgs
+        var python2Package = new AzureNextGen.Automation.Latest.Python2Package("python2Package", new AzureNextGen.Automation.Latest.Python2PackageArgs
         {
             AutomationAccountName = "myAutomationAccount33",
-            ContentLink = new AzureNextGen.Automation.Inputs.ContentLinkArgs
+            ContentLink = new AzureNextGen.Automation.Latest.Inputs.ContentLinkArgs
             {
-                ContentHash = new AzureNextGen.Automation.Inputs.ContentHashArgs
+                ContentHash = new AzureNextGen.Automation.Latest.Inputs.ContentHashArgs
                 {
                     Algorithm = "sha265",
                     Value = "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-python2_package = azure_nextgen.automation.Python2Package("python2Package",
+python2_package = azure_nextgen.automation.latest.Python2Package("python2Package",
     automation_account_name="myAutomationAccount33",
     content_link={
         "contentHash": {
@@ -85,7 +85,7 @@ python2_package = azure_nextgen.automation.Python2Package("python2Package",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const python2Package = new azure_nextgen.automation.Python2Package("python2Package", {
+const python2Package = new azure_nextgen.automation.latest.Python2Package("python2Package", {
     automationAccountName: "myAutomationAccount33",
     contentLink: {
         contentHash: {

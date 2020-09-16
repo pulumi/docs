@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var chapSetting = new AzureNextGen.Storsimple.ChapSetting("chapSetting", new AzureNextGen.Storsimple.ChapSettingArgs
+        var chapSetting = new AzureNextGen.StorSimple.Latest.ChapSetting("chapSetting", new AzureNextGen.StorSimple.Latest.ChapSettingArgs
         {
             ChapUserName = "ChapSettingForSDK",
             DeviceName = "HSDK-WSJQERQW3F",
             ManagerName = "hAzureSDKOperations",
-            Password = new AzureNextGen.Storsimple.Inputs.AsymmetricEncryptedSecretArgs
+            Password = new AzureNextGen.StorSimple.Latest.Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
                 Value = "W4xL3maActbzoehB9Ny1nr16uyjZZfvuJ70f8yBQgtS3vU4SLrOpoggmutOsbcgOgmgNHZnKe73WRZxzJFxzUQqcFNrAV+dReDkO5I/L1GxDjT5rsWn+74dRl8ditTew4z6OcwrT6RXtjG0njkUNsxXuawuylXsdHdvgQtSWbXBSao6KVhSbGQ57/V++CXqBbG2zoGLlHMdZF9OQccvCgh7qwD4ua7FLwqvQ8vYYVXryKm+XDmmT+GYWDqxPly0M2mJl/GLB/c6rNem4oRHBsf/vKfEKm8WGLWNsRZGcbxZKGiGsKC8QsxDHou6Ci3rfphVJE2R/9TxL+/1lUu2poQ==",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-chap_setting = azure_nextgen.storsimple.ChapSetting("chapSetting",
+chap_setting = azure_nextgen.storsimple.latest.ChapSetting("chapSetting",
     chap_user_name="ChapSettingForSDK",
     device_name="HSDK-WSJQERQW3F",
     manager_name="hAzureSDKOperations",
@@ -76,7 +76,7 @@ chap_setting = azure_nextgen.storsimple.ChapSetting("chapSetting",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const chapSetting = new azure_nextgen.storsimple.ChapSetting("chapSetting", {
+const chapSetting = new azure_nextgen.storsimple.latest.ChapSetting("chapSetting", {
     chapUserName: "ChapSettingForSDK",
     deviceName: "HSDK-WSJQERQW3F",
     managerName: "hAzureSDKOperations",

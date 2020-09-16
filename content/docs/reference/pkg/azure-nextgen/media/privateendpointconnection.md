@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Media.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Media.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Media.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Media.Latest.PrivateEndpointConnectionArgs
         {
             AccountName = "contososports",
             Name = "connectionName1",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Media.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Media.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "Test description.",
                 Status = "Approved",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.media.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.media.latest.PrivateEndpointConnection("privateEndpointConnection",
     account_name="contososports",
     name="connectionName1",
     private_link_service_connection_state={
@@ -74,7 +74,7 @@ private_endpoint_connection = azure_nextgen.media.PrivateEndpointConnection("pri
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.media.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.media.latest.PrivateEndpointConnection("privateEndpointConnection", {
     accountName: "contososports",
     name: "connectionName1",
     privateLinkServiceConnectionState: {

@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rosettaNetProcessConfiguration = new AzureNextGen.Logic.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", new AzureNextGen.Logic.RosettaNetProcessConfigurationArgs
+        var rosettaNetProcessConfiguration = new AzureNextGen.Logic.Latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", new AzureNextGen.Logic.Latest.RosettaNetProcessConfigurationArgs
         {
-            ActivitySettings = new AzureNextGen.Logic.Inputs.RosettaNetPipActivitySettingsArgs
+            ActivitySettings = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipActivitySettingsArgs
             {
-                AcknowledgmentOfReceiptSettings = new AzureNextGen.Logic.Inputs.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs
+                AcknowledgmentOfReceiptSettings = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs
                 {
                     IsNonRepudiationRequired = false,
                     TimeToAcknowledgeInSeconds = 600,
                 },
-                ActivityBehavior = new AzureNextGen.Logic.Inputs.RosettaNetPipActivityBehaviorArgs
+                ActivityBehavior = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipActivityBehaviorArgs
                 {
                     ActionType = "DoubleAction",
                     IsAuthorizationRequired = false,
@@ -49,10 +49,10 @@ class MyStack : Stack
                 ActivityType = "RequestResponse",
             },
             Description = "Test description",
-            InitiatorRoleSettings = new AzureNextGen.Logic.Inputs.RosettaNetPipRoleSettingsArgs
+            InitiatorRoleSettings = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipRoleSettingsArgs
             {
                 Action = "Purchase Order Request",
-                BusinessDocument = new AzureNextGen.Logic.Inputs.RosettaNetPipBusinessDocumentArgs
+                BusinessDocument = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipBusinessDocumentArgs
                 {
                     Description = "A request to accept a purchase order for fulfillment..",
                     Name = "Purchase Order Request",
@@ -69,10 +69,10 @@ class MyStack : Stack
             ProcessName = "Request Purchase Order",
             ProcessVersion = "V02.02.00",
             ResourceGroupName = "testrg123",
-            ResponderRoleSettings = new AzureNextGen.Logic.Inputs.RosettaNetPipRoleSettingsArgs
+            ResponderRoleSettings = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipRoleSettingsArgs
             {
                 Action = "Purchase Order Confirmation Action",
-                BusinessDocument = new AzureNextGen.Logic.Inputs.RosettaNetPipBusinessDocumentArgs
+                BusinessDocument = new AzureNextGen.Logic.Latest.Inputs.RosettaNetPipBusinessDocumentArgs
                 {
                     Description = "Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
                     Name = "Purchase Order Confirmation",
@@ -104,7 +104,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rosetta_net_process_configuration = azure_nextgen.logic.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration",
+rosetta_net_process_configuration = azure_nextgen.logic.latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration",
     activity_settings={
         "acknowledgmentOfReceiptSettings": {
             "isNonRepudiationRequired": False,
@@ -166,7 +166,7 @@ rosetta_net_process_configuration = azure_nextgen.logic.RosettaNetProcessConfigu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const rosettaNetProcessConfiguration = new azure_nextgen.logic.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", {
+const rosettaNetProcessConfiguration = new azure_nextgen.logic.latest.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", {
     activitySettings: {
         acknowledgmentOfReceiptSettings: {
             isNonRepudiationRequired: false,

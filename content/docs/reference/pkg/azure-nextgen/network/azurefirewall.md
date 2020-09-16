@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.AzureFirewall("azureFirewall", new AzureNextGen.Network.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
         {
             ApplicationRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallApplicationRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
                     Name = "apprulecoll",
                 },
@@ -38,7 +38,7 @@ class MyStack : Stack
             AzureFirewallName = "azurefirewall",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallIPConfigurationArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
                 },
@@ -46,20 +46,20 @@ class MyStack : Stack
             Location = "West US",
             NatRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallNatRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
                 {
                     Name = "natrulecoll",
                 },
             },
             NetworkRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallNetworkRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
                     Name = "netrulecoll",
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_VNet",
                 Tier = "Standard",
@@ -89,7 +89,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
+azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     application_rule_collections=[{
         "name": "apprulecoll",
     }],
@@ -125,7 +125,7 @@ azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
         name: "apprulecoll",
     }],
@@ -166,7 +166,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.AzureFirewall("azureFirewall", new AzureNextGen.Network.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
         {
             AdditionalProperties = 
             {
@@ -175,7 +175,7 @@ class MyStack : Stack
             },
             ApplicationRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallApplicationRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
                     Name = "apprulecoll",
                 },
@@ -183,7 +183,7 @@ class MyStack : Stack
             AzureFirewallName = "azurefirewall",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallIPConfigurationArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
                 },
@@ -191,20 +191,20 @@ class MyStack : Stack
             Location = "West US",
             NatRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallNatRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
                 {
                     Name = "natrulecoll",
                 },
             },
             NetworkRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallNetworkRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
                     Name = "netrulecoll",
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_VNet",
                 Tier = "Standard",
@@ -234,7 +234,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
+azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     additional_properties={
         "key1": "value1",
         "key2": "value2",
@@ -274,7 +274,7 @@ azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     additionalProperties: {
         key1: "value1",
         key2: "value2",
@@ -319,11 +319,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.AzureFirewall("azureFirewall", new AzureNextGen.Network.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
         {
             ApplicationRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallApplicationRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
                     Name = "apprulecoll",
                 },
@@ -331,7 +331,7 @@ class MyStack : Stack
             AzureFirewallName = "azurefirewall",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallIPConfigurationArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
                 },
@@ -339,20 +339,20 @@ class MyStack : Stack
             Location = "West US",
             NatRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallNatRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
                 {
                     Name = "natrulecoll",
                 },
             },
             NetworkRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallNetworkRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
                     Name = "netrulecoll",
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_VNet",
                 Tier = "Standard",
@@ -382,7 +382,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
+azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     application_rule_collections=[{
         "name": "apprulecoll",
     }],
@@ -418,7 +418,7 @@ azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
         name: "apprulecoll",
     }],
@@ -459,11 +459,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.AzureFirewall("azureFirewall", new AzureNextGen.Network.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
         {
             ApplicationRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallApplicationRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
                     Name = "apprulecoll",
                 },
@@ -471,7 +471,7 @@ class MyStack : Stack
             AzureFirewallName = "azurefirewall",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallIPConfigurationArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
                 },
@@ -479,20 +479,20 @@ class MyStack : Stack
             Location = "West US 2",
             NatRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallNatRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
                 {
                     Name = "natrulecoll",
                 },
             },
             NetworkRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallNetworkRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
                     Name = "netrulecoll",
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_VNet",
                 Tier = "Standard",
@@ -527,7 +527,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
+azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     application_rule_collections=[{
         "name": "apprulecoll",
     }],
@@ -567,7 +567,7 @@ azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
         name: "apprulecoll",
     }],
@@ -612,11 +612,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.AzureFirewall("azureFirewall", new AzureNextGen.Network.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
         {
             ApplicationRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallApplicationRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallApplicationRuleCollectionArgs
                 {
                     Name = "apprulecoll",
                 },
@@ -624,32 +624,32 @@ class MyStack : Stack
             AzureFirewallName = "azurefirewall",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallIPConfigurationArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
                 {
                     Name = "azureFirewallIpConfiguration",
                 },
             },
             Location = "West US",
-            ManagementIpConfiguration = new AzureNextGen.Network.Inputs.AzureFirewallIPConfigurationArgs
+            ManagementIpConfiguration = new AzureNextGen.Network.Latest.Inputs.AzureFirewallIPConfigurationArgs
             {
                 Name = "azureFirewallMgmtIpConfiguration",
             },
             NatRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallNatRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNatRuleCollectionArgs
                 {
                     Name = "natrulecoll",
                 },
             },
             NetworkRuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.AzureFirewallNetworkRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.AzureFirewallNetworkRuleCollectionArgs
                 {
                     Name = "netrulecoll",
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_VNet",
                 Tier = "Standard",
@@ -679,7 +679,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
+azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     application_rule_collections=[{
         "name": "apprulecoll",
     }],
@@ -718,7 +718,7 @@ azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     applicationRuleCollections: [{
         name: "apprulecoll",
     }],
@@ -762,16 +762,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var azureFirewall = new AzureNextGen.Network.AzureFirewall("azureFirewall", new AzureNextGen.Network.AzureFirewallArgs
+        var azureFirewall = new AzureNextGen.Network.Latest.AzureFirewall("azureFirewall", new AzureNextGen.Network.Latest.AzureFirewallArgs
         {
             AzureFirewallName = "azurefirewall",
-            FirewallPolicy = new AzureNextGen.Network.Inputs.SubResourceArgs
+            FirewallPolicy = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1",
             },
-            HubIPAddresses = new AzureNextGen.Network.Inputs.HubIPAddressesArgs
+            HubIPAddresses = new AzureNextGen.Network.Latest.Inputs.HubIPAddressesArgs
             {
-                PublicIPs = new AzureNextGen.Network.Inputs.HubPublicIPAddressesArgs
+                PublicIPs = new AzureNextGen.Network.Latest.Inputs.HubPublicIPAddressesArgs
                 {
                     Addresses = {},
                     Count = 1,
@@ -779,7 +779,7 @@ class MyStack : Stack
             },
             Location = "West US",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Inputs.AzureFirewallSkuArgs
+            Sku = new AzureNextGen.Network.Latest.Inputs.AzureFirewallSkuArgs
             {
                 Name = "AZFW_Hub",
                 Tier = "Standard",
@@ -789,7 +789,7 @@ class MyStack : Stack
                 { "key1", "value1" },
             },
             ThreatIntelMode = "Alert",
-            VirtualHub = new AzureNextGen.Network.Inputs.SubResourceArgs
+            VirtualHub = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
             },
@@ -813,7 +813,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
+azure_firewall = azure_nextgen.network.latest.AzureFirewall("azureFirewall",
     azure_firewall_name="azurefirewall",
     firewall_policy={
         "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1",
@@ -849,7 +849,7 @@ azure_firewall = azure_nextgen.network.AzureFirewall("azureFirewall",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const azureFirewall = new azure_nextgen.network.AzureFirewall("azureFirewall", {
+const azureFirewall = new azure_nextgen.network.latest.AzureFirewall("azureFirewall", {
     azureFirewallName: "azurefirewall",
     firewallPolicy: {
         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/policy1",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trigger = new AzureNextGen.Datafactory.Trigger("trigger", new AzureNextGen.Datafactory.TriggerArgs
+        var trigger = new AzureNextGen.DataFactory.Latest.Trigger("trigger", new AzureNextGen.DataFactory.Latest.TriggerArgs
         {
             FactoryName = "exampleFactoryName",
             ResourceGroupName = "exampleResourceGroup",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trigger = azure_nextgen.datafactory.Trigger("trigger",
+trigger = azure_nextgen.datafactory.latest.Trigger("trigger",
     factory_name="exampleFactoryName",
     resource_group_name="exampleResourceGroup",
     trigger_name="exampleTrigger")
@@ -65,7 +65,7 @@ trigger = azure_nextgen.datafactory.Trigger("trigger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const trigger = new azure_nextgen.datafactory.Trigger("trigger", {
+const trigger = new azure_nextgen.datafactory.latest.Trigger("trigger", {
     factoryName: "exampleFactoryName",
     resourceGroupName: "exampleResourceGroup",
     triggerName: "exampleTrigger",
@@ -85,7 +85,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trigger = new AzureNextGen.Datafactory.Trigger("trigger", new AzureNextGen.Datafactory.TriggerArgs
+        var trigger = new AzureNextGen.DataFactory.Latest.Trigger("trigger", new AzureNextGen.DataFactory.Latest.TriggerArgs
         {
             FactoryName = "exampleFactoryName",
             ResourceGroupName = "exampleResourceGroup",
@@ -109,7 +109,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trigger = azure_nextgen.datafactory.Trigger("trigger",
+trigger = azure_nextgen.datafactory.latest.Trigger("trigger",
     factory_name="exampleFactoryName",
     resource_group_name="exampleResourceGroup",
     trigger_name="exampleTrigger")
@@ -124,7 +124,7 @@ trigger = azure_nextgen.datafactory.Trigger("trigger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const trigger = new azure_nextgen.datafactory.Trigger("trigger", {
+const trigger = new azure_nextgen.datafactory.latest.Trigger("trigger", {
     factoryName: "exampleFactoryName",
     resourceGroupName: "exampleResourceGroup",
     triggerName: "exampleTrigger",

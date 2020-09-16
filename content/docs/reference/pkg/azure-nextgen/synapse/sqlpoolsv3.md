@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlPoolsV3 = new AzureNextGen.Synapse.SqlPoolsV3("sqlPoolsV3", new AzureNextGen.Synapse.SqlPoolsV3Args
+        var sqlPoolsV3 = new AzureNextGen.Synapse.V20200401Preview.SqlPoolsV3("sqlPoolsV3", new AzureNextGen.Synapse.V20200401Preview.SqlPoolsV3Args
         {
             Location = "westus",
             ResourceGroupName = "rg_fb5ce457-3576-425e-b22d-7300689fbea0",
-            Sku = new AzureNextGen.Synapse.Inputs.SkuArgs
+            Sku = new AzureNextGen.Synapse.V20200401Preview.Inputs.SkuArgs
             {
                 Name = "DW1000f",
                 Tier = "Synapse",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_pools_v3 = azure_nextgen.synapse.SqlPoolsV3("sqlPoolsV3",
+sql_pools_v3 = azure_nextgen.synapse.v20200401preview.SqlPoolsV3("sqlPoolsV3",
     location="westus",
     resource_group_name="rg_fb5ce457-3576-425e-b22d-7300689fbea0",
     sku={
@@ -83,7 +83,7 @@ sql_pools_v3 = azure_nextgen.synapse.SqlPoolsV3("sqlPoolsV3",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlPoolsV3 = new azure_nextgen.synapse.SqlPoolsV3("sqlPoolsV3", {
+const sqlPoolsV3 = new azure_nextgen.synapse.v20200401preview.SqlPoolsV3("sqlPoolsV3", {
     location: "westus",
     resourceGroupName: "rg_fb5ce457-3576-425e-b22d-7300689fbea0",
     sku: {

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedCloudService = new AzureNextGen.Vmwarecloudsimple.DedicatedCloudService("dedicatedCloudService", new AzureNextGen.Vmwarecloudsimple.DedicatedCloudServiceArgs
+        var dedicatedCloudService = new AzureNextGen.VMwareCloudSimple.Latest.DedicatedCloudService("dedicatedCloudService", new AzureNextGen.VMwareCloudSimple.Latest.DedicatedCloudServiceArgs
         {
             DedicatedCloudServiceName = "myService",
             GatewaySubnet = "10.0.0.0",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_cloud_service = azure_nextgen.vmwarecloudsimple.DedicatedCloudService("dedicatedCloudService",
+dedicated_cloud_service = azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudService("dedicatedCloudService",
     dedicated_cloud_service_name="myService",
     gateway_subnet="10.0.0.0",
     location="westus",
@@ -67,7 +67,7 @@ dedicated_cloud_service = azure_nextgen.vmwarecloudsimple.DedicatedCloudService(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dedicatedCloudService = new azure_nextgen.vmwarecloudsimple.DedicatedCloudService("dedicatedCloudService", {
+const dedicatedCloudService = new azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudService("dedicatedCloudService", {
     dedicatedCloudServiceName: "myService",
     gatewaySubnet: "10.0.0.0",
     location: "westus",

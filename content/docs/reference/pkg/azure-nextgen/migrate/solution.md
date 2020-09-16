@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var solution = new AzureNextGen.Migrate.Solution("solution", new AzureNextGen.Migrate.SolutionArgs
+        var solution = new AzureNextGen.Migrate.V20180901Preview.Solution("solution", new AzureNextGen.Migrate.V20180901Preview.SolutionArgs
         {
             MigrateProjectName = "project01",
             ResourceGroupName = "myResourceGroup",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-solution = azure_nextgen.migrate.Solution("solution",
+solution = azure_nextgen.migrate.v20180901preview.Solution("solution",
     migrate_project_name="project01",
     resource_group_name="myResourceGroup",
     solution_name="dbsolution")
@@ -65,7 +65,7 @@ solution = azure_nextgen.migrate.Solution("solution",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const solution = new azure_nextgen.migrate.Solution("solution", {
+const solution = new azure_nextgen.migrate.v20180901preview.Solution("solution", {
     migrateProjectName: "project01",
     resourceGroupName: "myResourceGroup",
     solutionName: "dbsolution",

@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Dbformariadb.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Dbformariadb.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.DBforMariaDB.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.DBforMariaDB.Latest.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "private-endpoint-connection-name",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Dbformariadb.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.DBforMariaDB.Latest.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
             {
                 Description = "Approved by johndoe@contoso.com",
                 Status = "Approved",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.dbformariadb.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.dbformariadb.latest.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="private-endpoint-connection-name",
     private_link_service_connection_state={
         "description": "Approved by johndoe@contoso.com",
@@ -74,7 +74,7 @@ private_endpoint_connection = azure_nextgen.dbformariadb.PrivateEndpointConnecti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.dbformariadb.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.dbformariadb.latest.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "private-endpoint-connection-name",
     privateLinkServiceConnectionState: {
         description: "Approved by johndoe@contoso.com",

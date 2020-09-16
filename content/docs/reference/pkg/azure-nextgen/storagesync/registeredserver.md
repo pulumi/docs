@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registeredServer = new AzureNextGen.Storagesync.RegisteredServer("registeredServer", new AzureNextGen.Storagesync.RegisteredServerArgs
+        var registeredServer = new AzureNextGen.StorageSync.Latest.RegisteredServer("registeredServer", new AzureNextGen.StorageSync.Latest.RegisteredServerArgs
         {
             AgentVersion = "1.0.277.0",
             LastHeartBeat = "\"2017-08-08T18:29:06.470652Z\"",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registered_server = azure_nextgen.storagesync.RegisteredServer("registeredServer",
+registered_server = azure_nextgen.storagesync.latest.RegisteredServer("registeredServer",
     agent_version="1.0.277.0",
     last_heart_beat="\"2017-08-08T18:29:06.470652Z\"",
     resource_group_name="SampleResourceGroup_1",
@@ -75,7 +75,7 @@ registered_server = azure_nextgen.storagesync.RegisteredServer("registeredServer
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const registeredServer = new azure_nextgen.storagesync.RegisteredServer("registeredServer", {
+const registeredServer = new azure_nextgen.storagesync.latest.RegisteredServer("registeredServer", {
     agentVersion: "1.0.277.0",
     lastHeartBeat: "\"2017-08-08T18:29:06.470652Z\"",
     resourceGroupName: "SampleResourceGroup_1",

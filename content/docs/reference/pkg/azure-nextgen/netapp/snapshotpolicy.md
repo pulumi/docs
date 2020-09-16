@@ -26,22 +26,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshotPolicy = new AzureNextGen.Netapp.SnapshotPolicy("snapshotPolicy", new AzureNextGen.Netapp.SnapshotPolicyArgs
+        var snapshotPolicy = new AzureNextGen.NetApp.Latest.SnapshotPolicy("snapshotPolicy", new AzureNextGen.NetApp.Latest.SnapshotPolicyArgs
         {
             AccountName = "account1",
-            DailySchedule = new AzureNextGen.Netapp.Inputs.DailyScheduleArgs
+            DailySchedule = new AzureNextGen.NetApp.Latest.Inputs.DailyScheduleArgs
             {
                 Hour = 14,
                 Minute = 30,
                 SnapshotsToKeep = 4,
             },
-            HourlySchedule = new AzureNextGen.Netapp.Inputs.HourlyScheduleArgs
+            HourlySchedule = new AzureNextGen.NetApp.Latest.Inputs.HourlyScheduleArgs
             {
                 Minute = 50,
                 SnapshotsToKeep = 2,
             },
             Location = "eastus",
-            MonthlySchedule = new AzureNextGen.Netapp.Inputs.MonthlyScheduleArgs
+            MonthlySchedule = new AzureNextGen.NetApp.Latest.Inputs.MonthlyScheduleArgs
             {
                 DaysOfMonth = "10,11,12",
                 Hour = 14,
@@ -50,7 +50,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "myRG",
             SnapshotPolicyName = "snapshotPolicyName",
-            WeeklySchedule = new AzureNextGen.Netapp.Inputs.WeeklyScheduleArgs
+            WeeklySchedule = new AzureNextGen.NetApp.Latest.Inputs.WeeklyScheduleArgs
             {
                 Day = "Wednesday",
                 Hour = 14,
@@ -76,7 +76,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot_policy = azure_nextgen.netapp.SnapshotPolicy("snapshotPolicy",
+snapshot_policy = azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy",
     account_name="account1",
     daily_schedule={
         "hour": 14,
@@ -113,7 +113,7 @@ snapshot_policy = azure_nextgen.netapp.SnapshotPolicy("snapshotPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const snapshotPolicy = new azure_nextgen.netapp.SnapshotPolicy("snapshotPolicy", {
+const snapshotPolicy = new azure_nextgen.netapp.latest.SnapshotPolicy("snapshotPolicy", {
     accountName: "account1",
     dailySchedule: {
         hour: 14,

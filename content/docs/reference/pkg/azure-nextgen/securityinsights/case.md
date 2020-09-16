@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @case = new AzureNextGen.Securityinsights.Case("case", new AzureNextGen.Securityinsights.CaseArgs
+        var @case = new AzureNextGen.SecurityInsights.V20190101Preview.Case("case", new AzureNextGen.SecurityInsights.V20190101Preview.CaseArgs
         {
             CaseId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             CloseReason = "Resolved",
@@ -39,7 +39,7 @@ class MyStack : Stack
                 "Tag2",
             },
             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
-            Owner = new AzureNextGen.Securityinsights.Inputs.UserInfoArgs
+            Owner = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -68,7 +68,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-case = azure_nextgen.securityinsights.Case("case",
+case = azure_nextgen.securityinsights.v20190101preview.Case("case",
     case_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     close_reason="Resolved",
     description="This is a demo case",
@@ -99,7 +99,7 @@ case = azure_nextgen.securityinsights.Case("case",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const _case = new azure_nextgen.securityinsights.Case("case", {
+const _case = new azure_nextgen.securityinsights.v20190101preview.Case("case", {
     caseId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     closeReason: "Resolved",
     description: "This is a demo case",

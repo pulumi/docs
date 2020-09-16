@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hybridConnection = new AzureNextGen.Relay.HybridConnection("hybridConnection", new AzureNextGen.Relay.HybridConnectionArgs
+        var hybridConnection = new AzureNextGen.Relay.Latest.HybridConnection("hybridConnection", new AzureNextGen.Relay.Latest.HybridConnectionArgs
         {
             HybridConnectionName = "sdk-Relay-Hybrid-01",
             NamespaceName = "sdk-RelayNamespace-01",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hybrid_connection = azure_nextgen.relay.HybridConnection("hybridConnection",
+hybrid_connection = azure_nextgen.relay.latest.HybridConnection("hybridConnection",
     hybrid_connection_name="sdk-Relay-Hybrid-01",
     namespace_name="sdk-RelayNamespace-01",
     requires_client_authorization=True,
@@ -67,7 +67,7 @@ hybrid_connection = azure_nextgen.relay.HybridConnection("hybridConnection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hybridConnection = new azure_nextgen.relay.HybridConnection("hybridConnection", {
+const hybridConnection = new azure_nextgen.relay.latest.HybridConnection("hybridConnection", {
     hybridConnectionName: "sdk-Relay-Hybrid-01",
     namespaceName: "sdk-RelayNamespace-01",
     requiresClientAuthorization: true,

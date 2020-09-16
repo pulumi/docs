@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var clusterPrincipalAssignment = new AzureNextGen.Kusto.ClusterPrincipalAssignment("clusterPrincipalAssignment", new AzureNextGen.Kusto.ClusterPrincipalAssignmentArgs
+        var clusterPrincipalAssignment = new AzureNextGen.Kusto.Latest.ClusterPrincipalAssignment("clusterPrincipalAssignment", new AzureNextGen.Kusto.Latest.ClusterPrincipalAssignmentArgs
         {
             ClusterName = "kustoclusterrptest4",
             PrincipalAssignmentName = "kustoprincipal1",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster_principal_assignment = azure_nextgen.kusto.ClusterPrincipalAssignment("clusterPrincipalAssignment",
+cluster_principal_assignment = azure_nextgen.kusto.latest.ClusterPrincipalAssignment("clusterPrincipalAssignment",
     cluster_name="kustoclusterrptest4",
     principal_assignment_name="kustoprincipal1",
     principal_id="87654321-1234-1234-1234-123456789123",
@@ -73,7 +73,7 @@ cluster_principal_assignment = azure_nextgen.kusto.ClusterPrincipalAssignment("c
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const clusterPrincipalAssignment = new azure_nextgen.kusto.ClusterPrincipalAssignment("clusterPrincipalAssignment", {
+const clusterPrincipalAssignment = new azure_nextgen.kusto.latest.ClusterPrincipalAssignment("clusterPrincipalAssignment", {
     clusterName: "kustoclusterrptest4",
     principalAssignmentName: "kustoprincipal1",
     principalId: "87654321-1234-1234-1234-123456789123",

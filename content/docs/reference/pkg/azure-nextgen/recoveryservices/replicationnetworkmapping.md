@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationNetworkMapping = new AzureNextGen.Recoveryservices.ReplicationNetworkMapping("replicationNetworkMapping", new AzureNextGen.Recoveryservices.ReplicationNetworkMappingArgs
+        var replicationNetworkMapping = new AzureNextGen.RecoveryServices.Latest.ReplicationNetworkMapping("replicationNetworkMapping", new AzureNextGen.RecoveryServices.Latest.ReplicationNetworkMappingArgs
         {
             FabricName = "b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
             NetworkMappingName = "corpe2amap",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_network_mapping = azure_nextgen.recoveryservices.ReplicationNetworkMapping("replicationNetworkMapping",
+replication_network_mapping = azure_nextgen.recoveryservices.latest.ReplicationNetworkMapping("replicationNetworkMapping",
     fabric_name="b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
     network_mapping_name="corpe2amap",
     network_name="e2267b5c-2650-49bd-ab3f-d66aae694c06",
@@ -69,7 +69,7 @@ replication_network_mapping = azure_nextgen.recoveryservices.ReplicationNetworkM
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const replicationNetworkMapping = new azure_nextgen.recoveryservices.ReplicationNetworkMapping("replicationNetworkMapping", {
+const replicationNetworkMapping = new azure_nextgen.recoveryservices.latest.ReplicationNetworkMapping("replicationNetworkMapping", {
     fabricName: "b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac",
     networkMappingName: "corpe2amap",
     networkName: "e2267b5c-2650-49bd-ab3f-d66aae694c06",

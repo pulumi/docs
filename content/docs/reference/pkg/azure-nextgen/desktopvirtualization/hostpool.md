@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hostPool = new AzureNextGen.Desktopvirtualization.HostPool("hostPool", new AzureNextGen.Desktopvirtualization.HostPoolArgs
+        var hostPool = new AzureNextGen.DesktopVirtualization.V20191210Preview.HostPool("hostPool", new AzureNextGen.DesktopVirtualization.V20191210Preview.HostPoolArgs
         {
             Description = "des1",
             FriendlyName = "friendly",
@@ -37,7 +37,7 @@ class MyStack : Stack
             MaxSessionLimit = 999999,
             PersonalDesktopAssignmentType = "Automatic",
             PreferredAppGroupType = "Desktop",
-            RegistrationInfo = new AzureNextGen.Desktopvirtualization.Inputs.RegistrationInfoArgs
+            RegistrationInfo = new AzureNextGen.DesktopVirtualization.V20191210Preview.Inputs.RegistrationInfoArgs
             {
                 ExpirationTime = "2020-10-01T14:01:54.9571247Z",
                 RegistrationTokenOperation = "Update",
@@ -68,7 +68,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-host_pool = azure_nextgen.desktopvirtualization.HostPool("hostPool",
+host_pool = azure_nextgen.desktopvirtualization.v20191210preview.HostPool("hostPool",
     description="des1",
     friendly_name="friendly",
     host_pool_name="hostPool1",
@@ -99,7 +99,7 @@ host_pool = azure_nextgen.desktopvirtualization.HostPool("hostPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hostPool = new azure_nextgen.desktopvirtualization.HostPool("hostPool", {
+const hostPool = new azure_nextgen.desktopvirtualization.v20191210preview.HostPool("hostPool", {
     description: "des1",
     friendlyName: "friendly",
     hostPoolName: "hostPool1",

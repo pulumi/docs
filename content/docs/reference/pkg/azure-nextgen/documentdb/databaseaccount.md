@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccount = new AzureNextGen.Documentdb.DatabaseAccount("databaseAccount", new AzureNextGen.Documentdb.DatabaseAccountArgs
+        var databaseAccount = new AzureNextGen.DocumentDB.Latest.DatabaseAccount("databaseAccount", new AzureNextGen.DocumentDB.Latest.DatabaseAccountArgs
         {
             AccountName = "ddb1",
-            ApiProperties = new AzureNextGen.Documentdb.Inputs.ApiPropertiesArgs
+            ApiProperties = new AzureNextGen.DocumentDB.Latest.Inputs.ApiPropertiesArgs
             {
                 ServerVersion = "3.2",
             },
-            ConsistencyPolicy = new AzureNextGen.Documentdb.Inputs.ConsistencyPolicyArgs
+            ConsistencyPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.ConsistencyPolicyArgs
             {
                 DefaultConsistencyLevel = "BoundedStaleness",
                 MaxIntervalInSeconds = 10,
@@ -41,7 +41,7 @@ class MyStack : Stack
             },
             Cors = 
             {
-                new AzureNextGen.Documentdb.Inputs.CorsPolicyArgs
+                new AzureNextGen.DocumentDB.Latest.Inputs.CorsPolicyArgs
                 {
                     AllowedOrigins = "https://test",
                 },
@@ -51,11 +51,11 @@ class MyStack : Stack
             EnableFreeTier = false,
             IpRules = 
             {
-                new AzureNextGen.Documentdb.Inputs.IpAddressOrRangeArgs
+                new AzureNextGen.DocumentDB.Latest.Inputs.IpAddressOrRangeArgs
                 {
                     IpAddressOrRange = "23.43.230.120",
                 },
-                new AzureNextGen.Documentdb.Inputs.IpAddressOrRangeArgs
+                new AzureNextGen.DocumentDB.Latest.Inputs.IpAddressOrRangeArgs
                 {
                     IpAddressOrRange = "110.12.240.0/12",
                 },
@@ -66,13 +66,13 @@ class MyStack : Stack
             Location = "westus",
             Locations = 
             {
-                new AzureNextGen.Documentdb.Inputs.LocationArgs
+                new AzureNextGen.DocumentDB.Latest.Inputs.LocationArgs
                 {
                     FailoverPriority = 0,
                     IsZoneRedundant = false,
                     LocationName = "southcentralus",
                 },
-                new AzureNextGen.Documentdb.Inputs.LocationArgs
+                new AzureNextGen.DocumentDB.Latest.Inputs.LocationArgs
                 {
                     FailoverPriority = 1,
                     IsZoneRedundant = false,
@@ -83,7 +83,7 @@ class MyStack : Stack
             Tags = ,
             VirtualNetworkRules = 
             {
-                new AzureNextGen.Documentdb.Inputs.VirtualNetworkRuleArgs
+                new AzureNextGen.DocumentDB.Latest.Inputs.VirtualNetworkRuleArgs
                 {
                     Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
                     IgnoreMissingVNetServiceEndpoint = false,
@@ -108,7 +108,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account = azure_nextgen.documentdb.DatabaseAccount("databaseAccount",
+database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount",
     account_name="ddb1",
     api_properties={
         "serverVersion": "3.2",
@@ -165,7 +165,7 @@ database_account = azure_nextgen.documentdb.DatabaseAccount("databaseAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const databaseAccount = new azure_nextgen.documentdb.DatabaseAccount("databaseAccount", {
+const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount", {
     accountName: "ddb1",
     apiProperties: {
         serverVersion: "3.2",
@@ -227,14 +227,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccount = new AzureNextGen.Documentdb.DatabaseAccount("databaseAccount", new AzureNextGen.Documentdb.DatabaseAccountArgs
+        var databaseAccount = new AzureNextGen.DocumentDB.Latest.DatabaseAccount("databaseAccount", new AzureNextGen.DocumentDB.Latest.DatabaseAccountArgs
         {
             AccountName = "ddb1",
             DatabaseAccountOfferType = "Standard",
             Location = "westus",
             Locations = 
             {
-                new AzureNextGen.Documentdb.Inputs.LocationArgs
+                new AzureNextGen.DocumentDB.Latest.Inputs.LocationArgs
                 {
                     FailoverPriority = 0,
                     IsZoneRedundant = false,
@@ -261,7 +261,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account = azure_nextgen.documentdb.DatabaseAccount("databaseAccount",
+database_account = azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount",
     account_name="ddb1",
     database_account_offer_type="Standard",
     location="westus",
@@ -282,7 +282,7 @@ database_account = azure_nextgen.documentdb.DatabaseAccount("databaseAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const databaseAccount = new azure_nextgen.documentdb.DatabaseAccount("databaseAccount", {
+const databaseAccount = new azure_nextgen.documentdb.latest.DatabaseAccount("databaseAccount", {
     accountName: "ddb1",
     databaseAccountOfferType: "Standard",
     location: "westus",

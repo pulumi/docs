@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diagnostic = new AzureNextGen.Apimanagement.Diagnostic("diagnostic", new AzureNextGen.Apimanagement.DiagnosticArgs
+        var diagnostic = new AzureNextGen.ApiManagement.Latest.Diagnostic("diagnostic", new AzureNextGen.ApiManagement.Latest.DiagnosticArgs
         {
             AlwaysLog = "allErrors",
-            Backend = new AzureNextGen.Apimanagement.Inputs.PipelineDiagnosticSettingsArgs
+            Backend = new AzureNextGen.ApiManagement.Latest.Inputs.PipelineDiagnosticSettingsArgs
             {
-                Request = new AzureNextGen.Apimanagement.Inputs.HttpMessageDiagnosticArgs
+                Request = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.Apimanagement.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -42,9 +42,9 @@ class MyStack : Stack
                         "Content-type",
                     },
                 },
-                Response = new AzureNextGen.Apimanagement.Inputs.HttpMessageDiagnosticArgs
+                Response = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.Apimanagement.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -55,11 +55,11 @@ class MyStack : Stack
                 },
             },
             DiagnosticId = "applicationinsights",
-            Frontend = new AzureNextGen.Apimanagement.Inputs.PipelineDiagnosticSettingsArgs
+            Frontend = new AzureNextGen.ApiManagement.Latest.Inputs.PipelineDiagnosticSettingsArgs
             {
-                Request = new AzureNextGen.Apimanagement.Inputs.HttpMessageDiagnosticArgs
+                Request = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.Apimanagement.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -68,9 +68,9 @@ class MyStack : Stack
                         "Content-type",
                     },
                 },
-                Response = new AzureNextGen.Apimanagement.Inputs.HttpMessageDiagnosticArgs
+                Response = new AzureNextGen.ApiManagement.Latest.Inputs.HttpMessageDiagnosticArgs
                 {
-                    Body = new AzureNextGen.Apimanagement.Inputs.BodyDiagnosticSettingsArgs
+                    Body = new AzureNextGen.ApiManagement.Latest.Inputs.BodyDiagnosticSettingsArgs
                     {
                         Bytes = 512,
                     },
@@ -82,7 +82,7 @@ class MyStack : Stack
             },
             LoggerId = "/loggers/azuremonitor",
             ResourceGroupName = "rg1",
-            Sampling = new AzureNextGen.Apimanagement.Inputs.SamplingSettingsArgs
+            Sampling = new AzureNextGen.ApiManagement.Latest.Inputs.SamplingSettingsArgs
             {
                 Percentage = 50,
                 SamplingType = "fixed",
@@ -107,7 +107,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-diagnostic = azure_nextgen.apimanagement.Diagnostic("diagnostic",
+diagnostic = azure_nextgen.apimanagement.latest.Diagnostic("diagnostic",
     always_log="allErrors",
     backend={
         "request": {
@@ -156,7 +156,7 @@ diagnostic = azure_nextgen.apimanagement.Diagnostic("diagnostic",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const diagnostic = new azure_nextgen.apimanagement.Diagnostic("diagnostic", {
+const diagnostic = new azure_nextgen.apimanagement.latest.Diagnostic("diagnostic", {
     alwaysLog: "allErrors",
     backend: {
         request: {

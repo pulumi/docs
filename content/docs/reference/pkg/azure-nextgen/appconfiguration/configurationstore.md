@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationStore = new AzureNextGen.Appconfiguration.ConfigurationStore("configurationStore", new AzureNextGen.Appconfiguration.ConfigurationStoreArgs
+        var configurationStore = new AzureNextGen.AppConfiguration.Latest.ConfigurationStore("configurationStore", new AzureNextGen.AppConfiguration.Latest.ConfigurationStoreArgs
         {
             ConfigStoreName = "contoso",
             Location = "westus",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Appconfiguration.Inputs.SkuArgs
+            Sku = new AzureNextGen.AppConfiguration.Latest.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_store = azure_nextgen.appconfiguration.ConfigurationStore("configurationStore",
+configuration_store = azure_nextgen.appconfiguration.latest.ConfigurationStore("configurationStore",
     config_store_name="contoso",
     location="westus",
     resource_group_name="myResourceGroup",
@@ -79,7 +79,7 @@ configuration_store = azure_nextgen.appconfiguration.ConfigurationStore("configu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const configurationStore = new azure_nextgen.appconfiguration.ConfigurationStore("configurationStore", {
+const configurationStore = new azure_nextgen.appconfiguration.latest.ConfigurationStore("configurationStore", {
     configStoreName: "contoso",
     location: "westus",
     resourceGroupName: "myResourceGroup",
@@ -105,16 +105,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationStore = new AzureNextGen.Appconfiguration.ConfigurationStore("configurationStore", new AzureNextGen.Appconfiguration.ConfigurationStoreArgs
+        var configurationStore = new AzureNextGen.AppConfiguration.Latest.ConfigurationStore("configurationStore", new AzureNextGen.AppConfiguration.Latest.ConfigurationStoreArgs
         {
             ConfigStoreName = "contoso",
-            Identity = new AzureNextGen.Appconfiguration.Inputs.ResourceIdentityArgs
+            Identity = new AzureNextGen.AppConfiguration.Latest.Inputs.ResourceIdentityArgs
             {
                 Type = "SystemAssigned, UserAssigned",
             },
             Location = "westus",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Appconfiguration.Inputs.SkuArgs
+            Sku = new AzureNextGen.AppConfiguration.Latest.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -141,7 +141,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_store = azure_nextgen.appconfiguration.ConfigurationStore("configurationStore",
+configuration_store = azure_nextgen.appconfiguration.latest.ConfigurationStore("configurationStore",
     config_store_name="contoso",
     identity={
         "type": "SystemAssigned, UserAssigned",
@@ -165,7 +165,7 @@ configuration_store = azure_nextgen.appconfiguration.ConfigurationStore("configu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const configurationStore = new azure_nextgen.appconfiguration.ConfigurationStore("configurationStore", {
+const configurationStore = new azure_nextgen.appconfiguration.latest.ConfigurationStore("configurationStore", {
     configStoreName: "contoso",
     identity: {
         type: "SystemAssigned, UserAssigned",

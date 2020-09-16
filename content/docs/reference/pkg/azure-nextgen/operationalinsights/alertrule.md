@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.Operationalinsights.AlertRule("alertRule", new AzureNextGen.Operationalinsights.AlertRuleArgs
+        var alertRule = new AzureNextGen.OperationalInsights.Latest.AlertRule("alertRule", new AzureNextGen.OperationalInsights.Latest.AlertRuleArgs
         {
             Etag = "3d00c3ca-0000-0100-0000-5d42d5010000",
             Kind = "Fusion",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.operationalinsights.AlertRule("alertRule",
+alert_rule = azure_nextgen.operationalinsights.latest.AlertRule("alertRule",
     etag="3d00c3ca-0000-0100-0000-5d42d5010000",
     kind="Fusion",
     resource_group_name="myRg",
@@ -69,7 +69,7 @@ alert_rule = azure_nextgen.operationalinsights.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const alertRule = new azure_nextgen.operationalinsights.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.operationalinsights.latest.AlertRule("alertRule", {
     etag: "3d00c3ca-0000-0100-0000-5d42d5010000",
     kind: "Fusion",
     resourceGroupName: "myRg",
@@ -91,7 +91,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.Operationalinsights.AlertRule("alertRule", new AzureNextGen.Operationalinsights.AlertRuleArgs
+        var alertRule = new AzureNextGen.OperationalInsights.Latest.AlertRule("alertRule", new AzureNextGen.OperationalInsights.Latest.AlertRuleArgs
         {
             Etag = "\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
             Kind = "MicrosoftSecurityIncidentCreation",
@@ -117,7 +117,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.operationalinsights.AlertRule("alertRule",
+alert_rule = azure_nextgen.operationalinsights.latest.AlertRule("alertRule",
     etag="\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
     kind="MicrosoftSecurityIncidentCreation",
     resource_group_name="myRg",
@@ -134,7 +134,7 @@ alert_rule = azure_nextgen.operationalinsights.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const alertRule = new azure_nextgen.operationalinsights.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.operationalinsights.latest.AlertRule("alertRule", {
     etag: "\"260097e0-0000-0d00-0000-5d6fa88f0000\"",
     kind: "MicrosoftSecurityIncidentCreation",
     resourceGroupName: "myRg",
@@ -156,7 +156,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.Operationalinsights.AlertRule("alertRule", new AzureNextGen.Operationalinsights.AlertRuleArgs
+        var alertRule = new AzureNextGen.OperationalInsights.Latest.AlertRule("alertRule", new AzureNextGen.OperationalInsights.Latest.AlertRuleArgs
         {
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
             Kind = "Scheduled",
@@ -182,7 +182,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.operationalinsights.AlertRule("alertRule",
+alert_rule = azure_nextgen.operationalinsights.latest.AlertRule("alertRule",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind="Scheduled",
     resource_group_name="myRg",
@@ -199,7 +199,7 @@ alert_rule = azure_nextgen.operationalinsights.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const alertRule = new azure_nextgen.operationalinsights.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.operationalinsights.latest.AlertRule("alertRule", {
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
     kind: "Scheduled",
     resourceGroupName: "myRg",

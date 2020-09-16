@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var smartDetectorAlertRule = new AzureNextGen.Alertsmanagement.SmartDetectorAlertRule("smartDetectorAlertRule", new AzureNextGen.Alertsmanagement.SmartDetectorAlertRuleArgs
+        var smartDetectorAlertRule = new AzureNextGen.AlertsManagement.Latest.SmartDetectorAlertRule("smartDetectorAlertRule", new AzureNextGen.AlertsManagement.Latest.SmartDetectorAlertRuleArgs
         {
-            ActionGroups = new AzureNextGen.Alertsmanagement.Inputs.ActionGroupsInformationArgs
+            ActionGroups = new AzureNextGen.AlertsManagement.Latest.Inputs.ActionGroupsInformationArgs
             {
                 CustomEmailSubject = "My custom email subject",
                 CustomWebhookPayload = "{\"AlertRuleName\":\"#alertrulename\"}",
@@ -39,7 +39,7 @@ class MyStack : Stack
             },
             AlertRuleName = "MyAlertRule",
             Description = "Sample smart detector alert rule description",
-            Detector = new AzureNextGen.Alertsmanagement.Inputs.DetectorArgs
+            Detector = new AzureNextGen.AlertsManagement.Latest.Inputs.DetectorArgs
             {
                 Id = "VMMemoryLeak",
             },
@@ -51,7 +51,7 @@ class MyStack : Stack
             },
             Severity = "Sev3",
             State = "Enabled",
-            Throttling = new AzureNextGen.Alertsmanagement.Inputs.ThrottlingInformationArgs
+            Throttling = new AzureNextGen.AlertsManagement.Latest.Inputs.ThrottlingInformationArgs
             {
                 Duration = "PT20M",
             },
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-smart_detector_alert_rule = azure_nextgen.alertsmanagement.SmartDetectorAlertRule("smartDetectorAlertRule",
+smart_detector_alert_rule = azure_nextgen.alertsmanagement.latest.SmartDetectorAlertRule("smartDetectorAlertRule",
     action_groups={
         "customEmailSubject": "My custom email subject",
         "customWebhookPayload": "{\"AlertRuleName\":\"#alertrulename\"}",
@@ -104,7 +104,7 @@ smart_detector_alert_rule = azure_nextgen.alertsmanagement.SmartDetectorAlertRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const smartDetectorAlertRule = new azure_nextgen.alertsmanagement.SmartDetectorAlertRule("smartDetectorAlertRule", {
+const smartDetectorAlertRule = new azure_nextgen.alertsmanagement.latest.SmartDetectorAlertRule("smartDetectorAlertRule", {
     actionGroups: {
         customEmailSubject: "My custom email subject",
         customWebhookPayload: "{\"AlertRuleName\":\"#alertrulename\"}",

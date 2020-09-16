@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.Datalakestore.FirewallRule("firewallRule", new AzureNextGen.Datalakestore.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.DataLakeStore.Latest.FirewallRule("firewallRule", new AzureNextGen.DataLakeStore.Latest.FirewallRuleArgs
         {
             AccountName = "contosoadla",
             EndIpAddress = "2.2.2.2",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.datalakestore.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.datalakestore.latest.FirewallRule("firewallRule",
     account_name="contosoadla",
     end_ip_address="2.2.2.2",
     firewall_rule_name="test_rule",
@@ -69,7 +69,7 @@ firewall_rule = azure_nextgen.datalakestore.FirewallRule("firewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const firewallRule = new azure_nextgen.datalakestore.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.datalakestore.latest.FirewallRule("firewallRule", {
     accountName: "contosoadla",
     endIpAddress: "2.2.2.2",
     firewallRuleName: "test_rule",

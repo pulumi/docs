@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bandwidthSetting = new AzureNextGen.Storsimple.BandwidthSetting("bandwidthSetting", new AzureNextGen.Storsimple.BandwidthSettingArgs
+        var bandwidthSetting = new AzureNextGen.StorSimple.Latest.BandwidthSetting("bandwidthSetting", new AzureNextGen.StorSimple.Latest.BandwidthSettingArgs
         {
             BandwidthSettingName = "BWSForTest",
             ManagerName = "ManagerForSDKTest1",
             ResourceGroupName = "ResourceGroupForSDKTest",
             Schedules = 
             {
-                new AzureNextGen.Storsimple.Inputs.BandwidthScheduleArgs
+                new AzureNextGen.StorSimple.Latest.Inputs.BandwidthScheduleArgs
                 {
                     Days = 
                     {
@@ -41,13 +41,13 @@ class MyStack : Stack
                         "Sunday",
                     },
                     RateInMbps = 10,
-                    Start = new AzureNextGen.Storsimple.Inputs.TimeArgs
+                    Start = new AzureNextGen.StorSimple.Latest.Inputs.TimeArgs
                     {
                         Hours = 10,
                         Minutes = 0,
                         Seconds = 0,
                     },
-                    Stop = new AzureNextGen.Storsimple.Inputs.TimeArgs
+                    Stop = new AzureNextGen.StorSimple.Latest.Inputs.TimeArgs
                     {
                         Hours = 20,
                         Minutes = 0,
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bandwidth_setting = azure_nextgen.storsimple.BandwidthSetting("bandwidthSetting",
+bandwidth_setting = azure_nextgen.storsimple.latest.BandwidthSetting("bandwidthSetting",
     bandwidth_setting_name="BWSForTest",
     manager_name="ManagerForSDKTest1",
     resource_group_name="ResourceGroupForSDKTest",
@@ -106,7 +106,7 @@ bandwidth_setting = azure_nextgen.storsimple.BandwidthSetting("bandwidthSetting"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const bandwidthSetting = new azure_nextgen.storsimple.BandwidthSetting("bandwidthSetting", {
+const bandwidthSetting = new azure_nextgen.storsimple.latest.BandwidthSetting("bandwidthSetting", {
     bandwidthSettingName: "BWSForTest",
     managerName: "ManagerForSDKTest1",
     resourceGroupName: "ResourceGroupForSDKTest",

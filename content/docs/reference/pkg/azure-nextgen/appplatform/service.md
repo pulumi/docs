@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Appplatform.Service("service", new AzureNextGen.Appplatform.ServiceArgs
+        var service = new AzureNextGen.AppPlatform.Latest.Service("service", new AzureNextGen.AppPlatform.Latest.ServiceArgs
         {
             Location = "eastus",
             ResourceGroupName = "myResourceGroup",
             ServiceName = "myservice",
-            Sku = new AzureNextGen.Appplatform.Inputs.SkuArgs
+            Sku = new AzureNextGen.AppPlatform.Latest.Inputs.SkuArgs
             {
                 Name = "S0",
                 Tier = "Standard",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.appplatform.Service("service",
+service = azure_nextgen.appplatform.latest.Service("service",
     location="eastus",
     resource_group_name="myResourceGroup",
     service_name="myservice",
@@ -81,7 +81,7 @@ service = azure_nextgen.appplatform.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.appplatform.Service("service", {
+const service = new azure_nextgen.appplatform.latest.Service("service", {
     location: "eastus",
     resourceGroupName: "myResourceGroup",
     serviceName: "myservice",
@@ -108,12 +108,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Appplatform.Service("service", new AzureNextGen.Appplatform.ServiceArgs
+        var service = new AzureNextGen.AppPlatform.Latest.Service("service", new AzureNextGen.AppPlatform.Latest.ServiceArgs
         {
             Location = "eastus",
             ResourceGroupName = "myResourceGroup",
             ServiceName = "myservice",
-            Sku = new AzureNextGen.Appplatform.Inputs.SkuArgs
+            Sku = new AzureNextGen.AppPlatform.Latest.Inputs.SkuArgs
             {
                 Name = "S0",
                 Tier = "Standard",
@@ -141,7 +141,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.appplatform.Service("service",
+service = azure_nextgen.appplatform.latest.Service("service",
     location="eastus",
     resource_group_name="myResourceGroup",
     service_name="myservice",
@@ -163,7 +163,7 @@ service = azure_nextgen.appplatform.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.appplatform.Service("service", {
+const service = new azure_nextgen.appplatform.latest.Service("service", {
     location: "eastus",
     resourceGroupName: "myResourceGroup",
     serviceName: "myservice",

@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Containerservice.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Containerservice.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.ContainerService.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.ContainerService.Latest.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "privateendpointconnection1",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Containerservice.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.ContainerService.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Status = "Approved",
             },
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.containerservice.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.containerservice.latest.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="privateendpointconnection1",
     private_link_service_connection_state={
         "status": "Approved",
@@ -72,7 +72,7 @@ private_endpoint_connection = azure_nextgen.containerservice.PrivateEndpointConn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.containerservice.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.containerservice.latest.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "privateendpointconnection1",
     privateLinkServiceConnectionState: {
         status: "Approved",

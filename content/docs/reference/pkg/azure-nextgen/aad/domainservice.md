@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var domainService = new AzureNextGen.Aad.DomainService("domainService", new AzureNextGen.Aad.DomainServiceArgs
+        var domainService = new AzureNextGen.Aad.Latest.DomainService("domainService", new AzureNextGen.Aad.Latest.DomainServiceArgs
         {
             DomainName = "TestDomainService.com",
-            DomainSecuritySettings = new AzureNextGen.Aad.Inputs.DomainSecuritySettingsArgs
+            DomainSecuritySettings = new AzureNextGen.Aad.Latest.Inputs.DomainSecuritySettingsArgs
             {
                 NtlmV1 = "Enabled",
                 SyncNtlmPasswords = "Enabled",
@@ -37,7 +37,7 @@ class MyStack : Stack
             },
             DomainServiceName = "TestDomainService.com",
             FilteredSync = "Enabled",
-            LdapsSettings = new AzureNextGen.Aad.Inputs.LdapsSettingsArgs
+            LdapsSettings = new AzureNextGen.Aad.Latest.Inputs.LdapsSettingsArgs
             {
                 ExternalAccess = "Enabled",
                 Ldaps = "Enabled",
@@ -45,7 +45,7 @@ class MyStack : Stack
                 PfxCertificatePassword = "Password01",
             },
             Location = "West US",
-            NotificationSettings = new AzureNextGen.Aad.Inputs.NotificationSettingsArgs
+            NotificationSettings = new AzureNextGen.Aad.Latest.Inputs.NotificationSettingsArgs
             {
                 AdditionalRecipients = 
                 {
@@ -57,7 +57,7 @@ class MyStack : Stack
             },
             ReplicaSets = 
             {
-                new AzureNextGen.Aad.Inputs.ReplicaSetArgs
+                new AzureNextGen.Aad.Latest.Inputs.ReplicaSetArgs
                 {
                     Location = "West US",
                     SubnetId = "/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS",
@@ -83,7 +83,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-domain_service = azure_nextgen.aad.DomainService("domainService",
+domain_service = azure_nextgen.aad.latest.DomainService("domainService",
     domain_name="TestDomainService.com",
     domain_security_settings={
         "ntlmV1": "Enabled",
@@ -123,7 +123,7 @@ domain_service = azure_nextgen.aad.DomainService("domainService",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const domainService = new azure_nextgen.aad.DomainService("domainService", {
+const domainService = new azure_nextgen.aad.latest.DomainService("domainService", {
     domainName: "TestDomainService.com",
     domainSecuritySettings: {
         ntlmV1: "Enabled",

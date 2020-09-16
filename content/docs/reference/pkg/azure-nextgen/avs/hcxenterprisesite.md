@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hcxEnterpriseSite = new AzureNextGen.Avs.HcxEnterpriseSite("hcxEnterpriseSite", new AzureNextGen.Avs.HcxEnterpriseSiteArgs
+        var hcxEnterpriseSite = new AzureNextGen.AVS.Latest.HcxEnterpriseSite("hcxEnterpriseSite", new AzureNextGen.AVS.Latest.HcxEnterpriseSiteArgs
         {
             HcxEnterpriseSiteName = "site1",
             PrivateCloudName = "cloud1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hcx_enterprise_site = azure_nextgen.avs.HcxEnterpriseSite("hcxEnterpriseSite",
+hcx_enterprise_site = azure_nextgen.avs.latest.HcxEnterpriseSite("hcxEnterpriseSite",
     hcx_enterprise_site_name="site1",
     private_cloud_name="cloud1",
     resource_group_name="group1")
@@ -65,7 +65,7 @@ hcx_enterprise_site = azure_nextgen.avs.HcxEnterpriseSite("hcxEnterpriseSite",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hcxEnterpriseSite = new azure_nextgen.avs.HcxEnterpriseSite("hcxEnterpriseSite", {
+const hcxEnterpriseSite = new azure_nextgen.avs.latest.HcxEnterpriseSite("hcxEnterpriseSite", {
     hcxEnterpriseSiteName: "site1",
     privateCloudName: "cloud1",
     resourceGroupName: "group1",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachineGroup = new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachineGroup("sqlVirtualMachineGroup", new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachineGroupArgs
+        var sqlVirtualMachineGroup = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineGroup("sqlVirtualMachineGroup", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineGroupArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
@@ -37,7 +37,7 @@ class MyStack : Stack
             {
                 { "mytag", "myval" },
             },
-            WsfcDomainProfile = new AzureNextGen.Sqlvirtualmachine.Inputs.WsfcDomainProfileArgs
+            WsfcDomainProfile = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.WsfcDomainProfileArgs
             {
                 ClusterBootstrapAccount = "testrpadmin",
                 ClusterOperatorAccount = "testrp@testdomain.com",
@@ -66,7 +66,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine_group = azure_nextgen.sqlvirtualmachine.SqlVirtualMachineGroup("sqlVirtualMachineGroup",
+sql_virtual_machine_group = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachineGroup("sqlVirtualMachineGroup",
     location="northeurope",
     resource_group_name="testrg",
     sql_image_offer="SQL2016-WS2016",
@@ -95,7 +95,7 @@ sql_virtual_machine_group = azure_nextgen.sqlvirtualmachine.SqlVirtualMachineGro
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlVirtualMachineGroup = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachineGroup("sqlVirtualMachineGroup", {
+const sqlVirtualMachineGroup = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachineGroup("sqlVirtualMachineGroup", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlImageOffer: "SQL2016-WS2016",

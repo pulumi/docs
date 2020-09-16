@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountGremlinDatabase = new AzureNextGen.Documentdb.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", new AzureNextGen.Documentdb.DatabaseAccountGremlinDatabaseArgs
+        var databaseAccountGremlinDatabase = new AzureNextGen.DocumentDB.Latest.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", new AzureNextGen.DocumentDB.Latest.DatabaseAccountGremlinDatabaseArgs
         {
             AccountName = "ddb1",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.GremlinDatabaseResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.GremlinDatabaseResourceArgs
             {
                 Id = "databaseName",
             },
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_gremlin_database = azure_nextgen.documentdb.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase",
+database_account_gremlin_database = azure_nextgen.documentdb.latest.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase",
     account_name="ddb1",
     database_name="databaseName",
     options={},
@@ -74,7 +74,7 @@ database_account_gremlin_database = azure_nextgen.documentdb.DatabaseAccountGrem
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const databaseAccountGremlinDatabase = new azure_nextgen.documentdb.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", {
+const databaseAccountGremlinDatabase = new azure_nextgen.documentdb.latest.DatabaseAccountGremlinDatabase("databaseAccountGremlinDatabase", {
     accountName: "ddb1",
     databaseName: "databaseName",
     options: {},

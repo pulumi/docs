@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @namespace = new AzureNextGen.Eventhub.Namespace("namespace", new AzureNextGen.Eventhub.NamespaceArgs
+        var @namespace = new AzureNextGen.EventHub.Latest.Namespace("namespace", new AzureNextGen.EventHub.Latest.NamespaceArgs
         {
             Location = "South Central US",
             NamespaceName = "sdk-Namespace-5849",
             ResourceGroupName = "ArunMonocle",
-            Sku = new AzureNextGen.Eventhub.Inputs.SkuArgs
+            Sku = new AzureNextGen.EventHub.Latest.Inputs.SkuArgs
             {
                 Name = "Standard",
                 Tier = "Standard",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace = azure_nextgen.eventhub.Namespace("namespace",
+namespace = azure_nextgen.eventhub.latest.Namespace("namespace",
     location="South Central US",
     namespace_name="sdk-Namespace-5849",
     resource_group_name="ArunMonocle",
@@ -83,7 +83,7 @@ namespace = azure_nextgen.eventhub.Namespace("namespace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const namespace = new azure_nextgen.eventhub.Namespace("namespace", {
+const namespace = new azure_nextgen.eventhub.latest.Namespace("namespace", {
     location: "South Central US",
     namespaceName: "sdk-Namespace-5849",
     resourceGroupName: "ArunMonocle",

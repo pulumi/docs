@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwin = new AzureNextGen.Digitaltwins.DigitalTwin("digitalTwin", new AzureNextGen.Digitaltwins.DigitalTwinArgs
+        var digitalTwin = new AzureNextGen.DigitalTwins.Latest.DigitalTwin("digitalTwin", new AzureNextGen.DigitalTwins.Latest.DigitalTwinArgs
         {
             Location = "WestUS",
             ResourceGroupName = "resRg",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twin = azure_nextgen.digitaltwins.DigitalTwin("digitalTwin",
+digital_twin = azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin",
     location="WestUS",
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
@@ -65,7 +65,7 @@ digital_twin = azure_nextgen.digitaltwins.DigitalTwin("digitalTwin",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const digitalTwin = new azure_nextgen.digitaltwins.DigitalTwin("digitalTwin", {
+const digitalTwin = new azure_nextgen.digitaltwins.latest.DigitalTwin("digitalTwin", {
     location: "WestUS",
     resourceGroupName: "resRg",
     resourceName: "myDigitalTwinsService",

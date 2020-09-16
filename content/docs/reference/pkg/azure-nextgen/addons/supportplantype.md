@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var supportPlanType = new AzureNextGen.Addons.SupportPlanType("supportPlanType", new AzureNextGen.Addons.SupportPlanTypeArgs
+        var supportPlanType = new AzureNextGen.Addons.Latest.SupportPlanType("supportPlanType", new AzureNextGen.Addons.Latest.SupportPlanTypeArgs
         {
             PlanTypeName = "Standard",
             ProviderName = "Canonical",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-support_plan_type = azure_nextgen.addons.SupportPlanType("supportPlanType",
+support_plan_type = azure_nextgen.addons.latest.SupportPlanType("supportPlanType",
     plan_type_name="Standard",
     provider_name="Canonical")
 
@@ -63,7 +63,7 @@ support_plan_type = azure_nextgen.addons.SupportPlanType("supportPlanType",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const supportPlanType = new azure_nextgen.addons.SupportPlanType("supportPlanType", {
+const supportPlanType = new azure_nextgen.addons.latest.SupportPlanType("supportPlanType", {
     planTypeName: "Standard",
     providerName: "Canonical",
 });

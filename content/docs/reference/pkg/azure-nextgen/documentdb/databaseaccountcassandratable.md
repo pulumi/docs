@@ -26,20 +26,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountCassandraTable = new AzureNextGen.Documentdb.DatabaseAccountCassandraTable("databaseAccountCassandraTable", new AzureNextGen.Documentdb.DatabaseAccountCassandraTableArgs
+        var databaseAccountCassandraTable = new AzureNextGen.DocumentDB.Latest.DatabaseAccountCassandraTable("databaseAccountCassandraTable", new AzureNextGen.DocumentDB.Latest.DatabaseAccountCassandraTableArgs
         {
             AccountName = "ddb1",
             KeyspaceName = "tableName",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.CassandraTableResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.CassandraTableResourceArgs
             {
                 DefaultTtl = 100,
                 Id = "tableName",
-                Schema = new AzureNextGen.Documentdb.Inputs.CassandraSchemaArgs
+                Schema = new AzureNextGen.DocumentDB.Latest.Inputs.CassandraSchemaArgs
                 {
                     ClusterKeys = 
                     {
-                        new AzureNextGen.Documentdb.Inputs.ClusterKeyArgs
+                        new AzureNextGen.DocumentDB.Latest.Inputs.ClusterKeyArgs
                         {
                             Name = "columnA",
                             OrderBy = "Asc",
@@ -47,7 +47,7 @@ class MyStack : Stack
                     },
                     Columns = 
                     {
-                        new AzureNextGen.Documentdb.Inputs.ColumnArgs
+                        new AzureNextGen.DocumentDB.Latest.Inputs.ColumnArgs
                         {
                             Name = "columnA",
                             Type = "Ascii",
@@ -55,7 +55,7 @@ class MyStack : Stack
                     },
                     PartitionKeys = 
                     {
-                        new AzureNextGen.Documentdb.Inputs.CassandraPartitionKeyArgs
+                        new AzureNextGen.DocumentDB.Latest.Inputs.CassandraPartitionKeyArgs
                         {
                             Name = "columnA",
                         },
@@ -83,7 +83,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_cassandra_table = azure_nextgen.documentdb.DatabaseAccountCassandraTable("databaseAccountCassandraTable",
+database_account_cassandra_table = azure_nextgen.documentdb.latest.DatabaseAccountCassandraTable("databaseAccountCassandraTable",
     account_name="ddb1",
     keyspace_name="tableName",
     options={},
@@ -117,7 +117,7 @@ database_account_cassandra_table = azure_nextgen.documentdb.DatabaseAccountCassa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const databaseAccountCassandraTable = new azure_nextgen.documentdb.DatabaseAccountCassandraTable("databaseAccountCassandraTable", {
+const databaseAccountCassandraTable = new azure_nextgen.documentdb.latest.DatabaseAccountCassandraTable("databaseAccountCassandraTable", {
     accountName: "ddb1",
     keyspaceName: "tableName",
     options: {},

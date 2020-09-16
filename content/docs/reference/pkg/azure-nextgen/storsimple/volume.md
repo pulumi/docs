@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var volume = new AzureNextGen.Storsimple.Volume("volume", new AzureNextGen.Storsimple.VolumeArgs
+        var volume = new AzureNextGen.StorSimple.Latest.Volume("volume", new AzureNextGen.StorSimple.Latest.VolumeArgs
         {
             AccessControlRecordIds = 
             {
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-volume = azure_nextgen.storsimple.Volume("volume",
+volume = azure_nextgen.storsimple.latest.Volume("volume",
     access_control_record_ids=["/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2"],
     device_name="Device05ForSDKTest",
     manager_name="ManagerForSDKTest1",
@@ -82,7 +82,7 @@ volume = azure_nextgen.storsimple.Volume("volume",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const volume = new azure_nextgen.storsimple.Volume("volume", {
+const volume = new azure_nextgen.storsimple.latest.Volume("volume", {
     accessControlRecordIds: ["/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACR2"],
     deviceName: "Device05ForSDKTest",
     managerName: "ManagerForSDKTest1",

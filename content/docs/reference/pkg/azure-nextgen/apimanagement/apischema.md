@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiSchema = new AzureNextGen.Apimanagement.ApiSchema("apiSchema", new AzureNextGen.Apimanagement.ApiSchemaArgs
+        var apiSchema = new AzureNextGen.ApiManagement.Latest.ApiSchema("apiSchema", new AzureNextGen.ApiManagement.Latest.ApiSchemaArgs
         {
             ApiId = "59d6bb8f1f7fab13dc67ec9b",
             ContentType = "application/vnd.ms-azure-apim.xsd+xml",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_schema = azure_nextgen.apimanagement.ApiSchema("apiSchema",
+api_schema = azure_nextgen.apimanagement.latest.ApiSchema("apiSchema",
     api_id="59d6bb8f1f7fab13dc67ec9b",
     content_type="application/vnd.ms-azure-apim.xsd+xml",
     resource_group_name="rg1",
@@ -69,7 +69,7 @@ api_schema = azure_nextgen.apimanagement.ApiSchema("apiSchema",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiSchema = new azure_nextgen.apimanagement.ApiSchema("apiSchema", {
+const apiSchema = new azure_nextgen.apimanagement.latest.ApiSchema("apiSchema", {
     apiId: "59d6bb8f1f7fab13dc67ec9b",
     contentType: "application/vnd.ms-azure-apim.xsd+xml",
     resourceGroupName: "rg1",

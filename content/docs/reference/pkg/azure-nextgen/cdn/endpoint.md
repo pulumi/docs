@@ -26,23 +26,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var endpoint = new AzureNextGen.Cdn.Endpoint("endpoint", new AzureNextGen.Cdn.EndpointArgs
+        var endpoint = new AzureNextGen.Cdn.Latest.Endpoint("endpoint", new AzureNextGen.Cdn.Latest.EndpointArgs
         {
             ContentTypesToCompress = 
             {
                 "text/html",
                 "application/octet-stream",
             },
-            DefaultOriginGroup = new AzureNextGen.Cdn.Inputs.ResourceReferenceArgs
+            DefaultOriginGroup = new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1",
             },
-            DeliveryPolicy = new AzureNextGen.Cdn.Inputs.EndpointPropertiesUpdateParametersDeliveryPolicyArgs
+            DeliveryPolicy = new AzureNextGen.Cdn.Latest.Inputs.EndpointPropertiesUpdateParametersDeliveryPolicyArgs
             {
                 Description = "Test description for a policy.",
                 Rules = 
                 {
-                    new AzureNextGen.Cdn.Inputs.DeliveryRuleArgs
+                    new AzureNextGen.Cdn.Latest.Inputs.DeliveryRuleArgs
                     {
                         Actions = 
                         {
@@ -110,7 +110,7 @@ class MyStack : Stack
             Location = "WestUs",
             OriginGroups = 
             {
-                new AzureNextGen.Cdn.Inputs.DeepCreatedOriginGroupArgs
+                new AzureNextGen.Cdn.Latest.Inputs.DeepCreatedOriginGroupArgs
                 {
                     Name = "originGroup1",
                 },
@@ -119,11 +119,11 @@ class MyStack : Stack
             OriginPath = "/photos",
             Origins = 
             {
-                new AzureNextGen.Cdn.Inputs.DeepCreatedOriginArgs
+                new AzureNextGen.Cdn.Latest.Inputs.DeepCreatedOriginArgs
                 {
                     Name = "origin1",
                 },
-                new AzureNextGen.Cdn.Inputs.DeepCreatedOriginArgs
+                new AzureNextGen.Cdn.Latest.Inputs.DeepCreatedOriginArgs
                 {
                     Name = "origin2",
                 },
@@ -154,7 +154,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-endpoint = azure_nextgen.cdn.Endpoint("endpoint",
+endpoint = azure_nextgen.cdn.latest.Endpoint("endpoint",
     content_types_to_compress=[
         "text/html",
         "application/octet-stream",
@@ -245,7 +245,7 @@ endpoint = azure_nextgen.cdn.Endpoint("endpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const endpoint = new azure_nextgen.cdn.Endpoint("endpoint", {
+const endpoint = new azure_nextgen.cdn.latest.Endpoint("endpoint", {
     contentTypesToCompress: [
         "text/html",
         "application/octet-stream",

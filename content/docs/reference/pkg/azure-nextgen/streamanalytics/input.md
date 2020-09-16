@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.Streamanalytics.Input("input", new AzureNextGen.Streamanalytics.InputArgs
+        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
         {
             InputName = "input7225",
             JobName = "sj9597",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.Input("input",
+input = azure_nextgen.streamanalytics.latest.Input("input",
     input_name="input7225",
     job_name="sj9597",
     resource_group_name="sjrg8440")
@@ -65,7 +65,7 @@ input = azure_nextgen.streamanalytics.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const input = new azure_nextgen.streamanalytics.Input("input", {
+const input = new azure_nextgen.streamanalytics.latest.Input("input", {
     inputName: "input7225",
     jobName: "sj9597",
     resourceGroupName: "sjrg8440",
@@ -85,7 +85,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.Streamanalytics.Input("input", new AzureNextGen.Streamanalytics.InputArgs
+        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
         {
             InputName = "input7425",
             JobName = "sj197",
@@ -109,7 +109,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.Input("input",
+input = azure_nextgen.streamanalytics.latest.Input("input",
     input_name="input7425",
     job_name="sj197",
     resource_group_name="sjrg3139")
@@ -124,7 +124,7 @@ input = azure_nextgen.streamanalytics.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const input = new azure_nextgen.streamanalytics.Input("input", {
+const input = new azure_nextgen.streamanalytics.latest.Input("input", {
     inputName: "input7425",
     jobName: "sj197",
     resourceGroupName: "sjrg3139",
@@ -144,7 +144,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.Streamanalytics.Input("input", new AzureNextGen.Streamanalytics.InputArgs
+        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
         {
             InputName = "input7970",
             JobName = "sj9742",
@@ -168,7 +168,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.Input("input",
+input = azure_nextgen.streamanalytics.latest.Input("input",
     input_name="input7970",
     job_name="sj9742",
     resource_group_name="sjrg3467")
@@ -183,7 +183,7 @@ input = azure_nextgen.streamanalytics.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const input = new azure_nextgen.streamanalytics.Input("input", {
+const input = new azure_nextgen.streamanalytics.latest.Input("input", {
     inputName: "input7970",
     jobName: "sj9742",
     resourceGroupName: "sjrg3467",
@@ -203,7 +203,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var input = new AzureNextGen.Streamanalytics.Input("input", new AzureNextGen.Streamanalytics.InputArgs
+        var input = new AzureNextGen.StreamAnalytics.Latest.Input("input", new AzureNextGen.StreamAnalytics.Latest.InputArgs
         {
             InputName = "input8899",
             JobName = "sj6695",
@@ -227,7 +227,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-input = azure_nextgen.streamanalytics.Input("input",
+input = azure_nextgen.streamanalytics.latest.Input("input",
     input_name="input8899",
     job_name="sj6695",
     resource_group_name="sjrg8161")
@@ -242,7 +242,7 @@ input = azure_nextgen.streamanalytics.Input("input",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const input = new azure_nextgen.streamanalytics.Input("input", {
+const input = new azure_nextgen.streamanalytics.latest.Input("input", {
     inputName: "input8899",
     jobName: "sj6695",
     resourceGroupName: "sjrg8161",

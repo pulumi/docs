@@ -26,17 +26,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryApplicationVersion = new AzureNextGen.Compute.GalleryApplicationVersion("galleryApplicationVersion", new AzureNextGen.Compute.GalleryApplicationVersionArgs
+        var galleryApplicationVersion = new AzureNextGen.Compute.Latest.GalleryApplicationVersion("galleryApplicationVersion", new AzureNextGen.Compute.Latest.GalleryApplicationVersionArgs
         {
             GalleryApplicationName = "myGalleryApplicationName",
             GalleryApplicationVersionName = "1.0.0",
             GalleryName = "myGalleryName",
             Location = "West US",
-            PublishingProfile = new AzureNextGen.Compute.Inputs.GalleryApplicationVersionPublishingProfileArgs
+            PublishingProfile = new AzureNextGen.Compute.Latest.Inputs.GalleryApplicationVersionPublishingProfileArgs
             {
                 EndOfLifeDate = "2019-07-01T07:00:00Z",
                 ReplicaCount = 1,
-                Source = new AzureNextGen.Compute.Inputs.UserArtifactSourceArgs
+                Source = new AzureNextGen.Compute.Latest.Inputs.UserArtifactSourceArgs
                 {
                     FileName = "package.zip",
                     MediaLink = "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
@@ -44,7 +44,7 @@ class MyStack : Stack
                 StorageAccountType = "Standard_LRS",
                 TargetRegions = 
                 {
-                    new AzureNextGen.Compute.Inputs.TargetRegionArgs
+                    new AzureNextGen.Compute.Latest.Inputs.TargetRegionArgs
                     {
                         Name = "West US",
                         RegionalReplicaCount = 1,
@@ -72,7 +72,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_application_version = azure_nextgen.compute.GalleryApplicationVersion("galleryApplicationVersion",
+gallery_application_version = azure_nextgen.compute.latest.GalleryApplicationVersion("galleryApplicationVersion",
     gallery_application_name="myGalleryApplicationName",
     gallery_application_version_name="1.0.0",
     gallery_name="myGalleryName",
@@ -103,7 +103,7 @@ gallery_application_version = azure_nextgen.compute.GalleryApplicationVersion("g
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const galleryApplicationVersion = new azure_nextgen.compute.GalleryApplicationVersion("galleryApplicationVersion", {
+const galleryApplicationVersion = new azure_nextgen.compute.latest.GalleryApplicationVersion("galleryApplicationVersion", {
     galleryApplicationName: "myGalleryApplicationName",
     galleryApplicationVersionName: "1.0.0",
     galleryName: "myGalleryName",

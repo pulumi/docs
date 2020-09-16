@@ -26,17 +26,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var referenceDataSet = new AzureNextGen.Timeseriesinsights.ReferenceDataSet("referenceDataSet", new AzureNextGen.Timeseriesinsights.ReferenceDataSetArgs
+        var referenceDataSet = new AzureNextGen.TimeSeriesInsights.Latest.ReferenceDataSet("referenceDataSet", new AzureNextGen.TimeSeriesInsights.Latest.ReferenceDataSetArgs
         {
             EnvironmentName = "env1",
             KeyProperties = 
             {
-                new AzureNextGen.Timeseriesinsights.Inputs.ReferenceDataSetKeyPropertyArgs
+                new AzureNextGen.TimeSeriesInsights.Latest.Inputs.ReferenceDataSetKeyPropertyArgs
                 {
                     Name = "DeviceId1",
                     Type = "String",
                 },
-                new AzureNextGen.Timeseriesinsights.Inputs.ReferenceDataSetKeyPropertyArgs
+                new AzureNextGen.TimeSeriesInsights.Latest.Inputs.ReferenceDataSetKeyPropertyArgs
                 {
                     Name = "DeviceFloor",
                     Type = "Double",
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-reference_data_set = azure_nextgen.timeseriesinsights.ReferenceDataSet("referenceDataSet",
+reference_data_set = azure_nextgen.timeseriesinsights.latest.ReferenceDataSet("referenceDataSet",
     environment_name="env1",
     key_properties=[
         {
@@ -90,7 +90,7 @@ reference_data_set = azure_nextgen.timeseriesinsights.ReferenceDataSet("referenc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const referenceDataSet = new azure_nextgen.timeseriesinsights.ReferenceDataSet("referenceDataSet", {
+const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDataSet("referenceDataSet", {
     environmentName: "env1",
     keyProperties: [
         {

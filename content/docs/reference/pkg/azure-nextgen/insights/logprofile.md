@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var logProfile = new AzureNextGen.Insights.LogProfile("logProfile", new AzureNextGen.Insights.LogProfileArgs
+        var logProfile = new AzureNextGen.Insights.Latest.LogProfile("logProfile", new AzureNextGen.Insights.Latest.LogProfileArgs
         {
             Categories = 
             {
@@ -40,7 +40,7 @@ class MyStack : Stack
                 "global",
             },
             LogProfileName = "Rac46PostSwapRG",
-            RetentionPolicy = new AzureNextGen.Insights.Inputs.RetentionPolicyArgs
+            RetentionPolicy = new AzureNextGen.Insights.Latest.Inputs.RetentionPolicyArgs
             {
                 Days = 3,
                 Enabled = true,
@@ -67,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-log_profile = azure_nextgen.insights.LogProfile("logProfile",
+log_profile = azure_nextgen.insights.latest.LogProfile("logProfile",
     categories=[
         "Write",
         "Delete",
@@ -94,7 +94,7 @@ log_profile = azure_nextgen.insights.LogProfile("logProfile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const logProfile = new azure_nextgen.insights.LogProfile("logProfile", {
+const logProfile = new azure_nextgen.insights.latest.LogProfile("logProfile", {
     categories: [
         "Write",
         "Delete",

@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Netapp.Account("account", new AzureNextGen.Netapp.AccountArgs
+        var account = new AzureNextGen.NetApp.Latest.Account("account", new AzureNextGen.NetApp.Latest.AccountArgs
         {
             AccountName = "account1",
             ActiveDirectories = 
             {
-                new AzureNextGen.Netapp.Inputs.ActiveDirectoryArgs
+                new AzureNextGen.NetApp.Latest.Inputs.ActiveDirectoryArgs
                 {
                     Dns = "10.10.10.3, 10.10.10.4",
                     Domain = "10.10.10.3",
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.netapp.Account("account",
+account = azure_nextgen.netapp.latest.Account("account",
     account_name="account1",
     active_directories=[{
         "dns": "10.10.10.3, 10.10.10.4",
@@ -87,7 +87,7 @@ account = azure_nextgen.netapp.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.netapp.Account("account", {
+const account = new azure_nextgen.netapp.latest.Account("account", {
     accountName: "account1",
     activeDirectories: [{
         dns: "10.10.10.3, 10.10.10.4",

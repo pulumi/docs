@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkWatcher = new AzureNextGen.Network.NetworkWatcher("networkWatcher", new AzureNextGen.Network.NetworkWatcherArgs
+        var networkWatcher = new AzureNextGen.Network.Latest.NetworkWatcher("networkWatcher", new AzureNextGen.Network.Latest.NetworkWatcherArgs
         {
             Location = "eastus",
             NetworkWatcherName = "nw1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_watcher = azure_nextgen.network.NetworkWatcher("networkWatcher",
+network_watcher = azure_nextgen.network.latest.NetworkWatcher("networkWatcher",
     location="eastus",
     network_watcher_name="nw1",
     resource_group_name="rg1")
@@ -65,7 +65,7 @@ network_watcher = azure_nextgen.network.NetworkWatcher("networkWatcher",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const networkWatcher = new azure_nextgen.network.NetworkWatcher("networkWatcher", {
+const networkWatcher = new azure_nextgen.network.latest.NetworkWatcher("networkWatcher", {
     location: "eastus",
     networkWatcherName: "nw1",
     resourceGroupName: "rg1",

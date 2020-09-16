@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var subscriptionDiagnosticSetting = new AzureNextGen.Insights.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", new AzureNextGen.Insights.SubscriptionDiagnosticSettingArgs
+        var subscriptionDiagnosticSetting = new AzureNextGen.Insights.V20170501Preview.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", new AzureNextGen.Insights.V20170501Preview.SubscriptionDiagnosticSettingArgs
         {
             EventHubAuthorizationRuleId = "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
             EventHubName = "myeventhub",
             Logs = 
             {
-                new AzureNextGen.Insights.Inputs.SubscriptionLogSettingsArgs
+                new AzureNextGen.Insights.V20170501Preview.Inputs.SubscriptionLogSettingsArgs
                 {
                     Category = "Security",
                     Enabled = true,
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-subscription_diagnostic_setting = azure_nextgen.insights.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting",
+subscription_diagnostic_setting = azure_nextgen.insights.v20170501preview.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting",
     event_hub_authorization_rule_id="/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     event_hub_name="myeventhub",
     logs=[{
@@ -81,7 +81,7 @@ subscription_diagnostic_setting = azure_nextgen.insights.SubscriptionDiagnosticS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const subscriptionDiagnosticSetting = new azure_nextgen.insights.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", {
+const subscriptionDiagnosticSetting = new azure_nextgen.insights.v20170501preview.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", {
     eventHubAuthorizationRuleId: "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     eventHubName: "myeventhub",
     logs: [{

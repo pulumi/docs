@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var volume = new AzureNextGen.Netapp.Volume("volume", new AzureNextGen.Netapp.VolumeArgs
+        var volume = new AzureNextGen.NetApp.Latest.Volume("volume", new AzureNextGen.NetApp.Latest.VolumeArgs
         {
             AccountName = "account1",
             CreationToken = "my-unique-file-path",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-volume = azure_nextgen.netapp.Volume("volume",
+volume = azure_nextgen.netapp.latest.Volume("volume",
     account_name="account1",
     creation_token="my-unique-file-path",
     location="eastus",
@@ -79,7 +79,7 @@ volume = azure_nextgen.netapp.Volume("volume",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const volume = new azure_nextgen.netapp.Volume("volume", {
+const volume = new azure_nextgen.netapp.latest.Volume("volume", {
     accountName: "account1",
     creationToken: "my-unique-file-path",
     location: "eastus",

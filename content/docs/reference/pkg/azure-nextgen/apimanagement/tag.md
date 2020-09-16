@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tag = new AzureNextGen.Apimanagement.Tag("tag", new AzureNextGen.Apimanagement.TagArgs
+        var tag = new AzureNextGen.ApiManagement.Latest.Tag("tag", new AzureNextGen.ApiManagement.Latest.TagArgs
         {
             DisplayName = "tag1",
             ResourceGroupName = "rg1",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag = azure_nextgen.apimanagement.Tag("tag",
+tag = azure_nextgen.apimanagement.latest.Tag("tag",
     display_name="tag1",
     resource_group_name="rg1",
     service_name="apimService1",
@@ -67,7 +67,7 @@ tag = azure_nextgen.apimanagement.Tag("tag",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const tag = new azure_nextgen.apimanagement.Tag("tag", {
+const tag = new azure_nextgen.apimanagement.latest.Tag("tag", {
     displayName: "tag1",
     resourceGroupName: "rg1",
     serviceName: "apimService1",

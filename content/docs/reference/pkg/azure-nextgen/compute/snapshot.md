@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshot = new AzureNextGen.Compute.Snapshot("snapshot", new AzureNextGen.Compute.SnapshotArgs
+        var snapshot = new AzureNextGen.Compute.Latest.Snapshot("snapshot", new AzureNextGen.Compute.Latest.SnapshotArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Import",
                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot = azure_nextgen.compute.Snapshot("snapshot",
+snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
     creation_data={
         "createOption": "Import",
         "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -76,7 +76,7 @@ snapshot = azure_nextgen.compute.Snapshot("snapshot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const snapshot = new azure_nextgen.compute.Snapshot("snapshot", {
+const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
     creationData: {
         createOption: "Import",
         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -101,9 +101,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshot = new AzureNextGen.Compute.Snapshot("snapshot", new AzureNextGen.Compute.SnapshotArgs
+        var snapshot = new AzureNextGen.Compute.Latest.Snapshot("snapshot", new AzureNextGen.Compute.Latest.SnapshotArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Import",
                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -130,7 +130,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot = azure_nextgen.compute.Snapshot("snapshot",
+snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
     creation_data={
         "createOption": "Import",
         "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -149,7 +149,7 @@ snapshot = azure_nextgen.compute.Snapshot("snapshot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const snapshot = new azure_nextgen.compute.Snapshot("snapshot", {
+const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
     creationData: {
         createOption: "Import",
         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -173,9 +173,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshot = new AzureNextGen.Compute.Snapshot("snapshot", new AzureNextGen.Compute.SnapshotArgs
+        var snapshot = new AzureNextGen.Compute.Latest.Snapshot("snapshot", new AzureNextGen.Compute.Latest.SnapshotArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Copy",
                 SourceResourceId = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
@@ -202,7 +202,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot = azure_nextgen.compute.Snapshot("snapshot",
+snapshot = azure_nextgen.compute.latest.Snapshot("snapshot",
     creation_data={
         "createOption": "Copy",
         "sourceResourceId": "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
@@ -221,7 +221,7 @@ snapshot = azure_nextgen.compute.Snapshot("snapshot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const snapshot = new azure_nextgen.compute.Snapshot("snapshot", {
+const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
     creationData: {
         createOption: "Copy",
         sourceResourceId: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",

@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceUnit = new AzureNextGen.Deploymentmanager.ServiceUnit("serviceUnit", new AzureNextGen.Deploymentmanager.ServiceUnitArgs
+        var serviceUnit = new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnit("serviceUnit", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnitArgs
         {
-            Artifacts = new AzureNextGen.Deploymentmanager.Inputs.ServiceUnitArtifactsArgs
+            Artifacts = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.ServiceUnitArtifactsArgs
             {
                 ParametersUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
                 TemplateUri = "https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_unit = azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit",
+service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit",
     artifacts={
         "parametersUri": "https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
         "templateUri": "https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
@@ -84,7 +84,7 @@ service_unit = azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serviceUnit = new azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit", {
+const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit", {
     artifacts: {
         parametersUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
         templateUri: `https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D`,
@@ -113,9 +113,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceUnit = new AzureNextGen.Deploymentmanager.ServiceUnit("serviceUnit", new AzureNextGen.Deploymentmanager.ServiceUnitArgs
+        var serviceUnit = new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnit("serviceUnit", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceUnitArgs
         {
-            Artifacts = new AzureNextGen.Deploymentmanager.Inputs.ServiceUnitArtifactsArgs
+            Artifacts = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.ServiceUnitArtifactsArgs
             {
                 ParametersArtifactSourceRelativePath = "parameter/myTopologyUnit.parameters.json",
                 TemplateArtifactSourceRelativePath = "templates/myTopologyUnit.template.json",
@@ -147,7 +147,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_unit = azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit",
+service_unit = azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit",
     artifacts={
         "parametersArtifactSourceRelativePath": "parameter/myTopologyUnit.parameters.json",
         "templateArtifactSourceRelativePath": "templates/myTopologyUnit.template.json",
@@ -171,7 +171,7 @@ service_unit = azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serviceUnit = new azure_nextgen.deploymentmanager.ServiceUnit("serviceUnit", {
+const serviceUnit = new azure_nextgen.deploymentmanager.v20191101preview.ServiceUnit("serviceUnit", {
     artifacts: {
         parametersArtifactSourceRelativePath: "parameter/myTopologyUnit.parameters.json",
         templateArtifactSourceRelativePath: "templates/myTopologyUnit.template.json",

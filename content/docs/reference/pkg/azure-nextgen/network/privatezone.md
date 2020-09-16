@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateZone = new AzureNextGen.Network.PrivateZone("privateZone", new AzureNextGen.Network.PrivateZoneArgs
+        var privateZone = new AzureNextGen.Network.Latest.PrivateZone("privateZone", new AzureNextGen.Network.Latest.PrivateZoneArgs
         {
             Location = "Global",
             PrivateZoneName = "privatezone1.com",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_zone = azure_nextgen.network.PrivateZone("privateZone",
+private_zone = azure_nextgen.network.latest.PrivateZone("privateZone",
     location="Global",
     private_zone_name="privatezone1.com",
     resource_group_name="resourceGroup1",
@@ -72,7 +72,7 @@ private_zone = azure_nextgen.network.PrivateZone("privateZone",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateZone = new azure_nextgen.network.PrivateZone("privateZone", {
+const privateZone = new azure_nextgen.network.latest.PrivateZone("privateZone", {
     location: "Global",
     privateZoneName: "privatezone1.com",
     resourceGroupName: "resourceGroup1",

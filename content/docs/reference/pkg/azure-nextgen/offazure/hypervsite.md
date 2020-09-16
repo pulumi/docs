@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hyperVSite = new AzureNextGen.Offazure.HyperVSite("hyperVSite", new AzureNextGen.Offazure.HyperVSiteArgs
+        var hyperVSite = new AzureNextGen.OffAzure.Latest.HyperVSite("hyperVSite", new AzureNextGen.OffAzure.Latest.HyperVSiteArgs
         {
             Location = "eastus",
             ResourceGroupName = "pajindTest",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hyper_v_site = azure_nextgen.offazure.HyperVSite("hyperVSite",
+hyper_v_site = azure_nextgen.offazure.latest.HyperVSite("hyperVSite",
     location="eastus",
     resource_group_name="pajindTest",
     site_name="appliance1e39site")
@@ -65,7 +65,7 @@ hyper_v_site = azure_nextgen.offazure.HyperVSite("hyperVSite",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hyperVSite = new azure_nextgen.offazure.HyperVSite("hyperVSite", {
+const hyperVSite = new azure_nextgen.offazure.latest.HyperVSite("hyperVSite", {
     location: "eastus",
     resourceGroupName: "pajindTest",
     siteName: "appliance1e39site",

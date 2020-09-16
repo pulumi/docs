@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publicIPPrefix = new AzureNextGen.Network.PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network.PublicIPPrefixArgs
+        var publicIPPrefix = new AzureNextGen.Network.Latest.PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network.Latest.PublicIPPrefixArgs
         {
             Location = "westus",
             PrefixLength = 30,
             PublicIPAddressVersion = "IPv4",
             PublicIpPrefixName = "test-ipprefix",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Inputs.PublicIPPrefixSkuArgs
+            Sku = new AzureNextGen.Network.Latest.Inputs.PublicIPPrefixSkuArgs
             {
                 Name = "Standard",
             },
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-public_ip_prefix = azure_nextgen.network.PublicIPPrefix("publicIPPrefix",
+public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
     location="westus",
     prefix_length=30,
     public_ip_address_version="IPv4",
@@ -76,7 +76,7 @@ public_ip_prefix = azure_nextgen.network.PublicIPPrefix("publicIPPrefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const publicIPPrefix = new azure_nextgen.network.PublicIPPrefix("publicIPPrefix", {
+const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix", {
     location: "westus",
     prefixLength: 30,
     publicIPAddressVersion: "IPv4",
@@ -101,13 +101,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publicIPPrefix = new AzureNextGen.Network.PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network.PublicIPPrefixArgs
+        var publicIPPrefix = new AzureNextGen.Network.Latest.PublicIPPrefix("publicIPPrefix", new AzureNextGen.Network.Latest.PublicIPPrefixArgs
         {
             Location = "westus",
             PrefixLength = 30,
             PublicIpPrefixName = "test-ipprefix",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Inputs.PublicIPPrefixSkuArgs
+            Sku = new AzureNextGen.Network.Latest.Inputs.PublicIPPrefixSkuArgs
             {
                 Name = "Standard",
             },
@@ -130,7 +130,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-public_ip_prefix = azure_nextgen.network.PublicIPPrefix("publicIPPrefix",
+public_ip_prefix = azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix",
     location="westus",
     prefix_length=30,
     public_ip_prefix_name="test-ipprefix",
@@ -149,7 +149,7 @@ public_ip_prefix = azure_nextgen.network.PublicIPPrefix("publicIPPrefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const publicIPPrefix = new azure_nextgen.network.PublicIPPrefix("publicIPPrefix", {
+const publicIPPrefix = new azure_nextgen.network.latest.PublicIPPrefix("publicIPPrefix", {
     location: "westus",
     prefixLength: 30,
     publicIpPrefixName: "test-ipprefix",

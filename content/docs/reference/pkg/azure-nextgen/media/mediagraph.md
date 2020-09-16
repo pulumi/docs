@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var mediaGraph = new AzureNextGen.Media.MediaGraph("mediaGraph", new AzureNextGen.Media.MediaGraphArgs
+        var mediaGraph = new AzureNextGen.Media.V20200201Preview.MediaGraph("mediaGraph", new AzureNextGen.Media.V20200201Preview.MediaGraphArgs
         {
             AccountName = "contosomedia",
             Description = "updated description",
@@ -34,7 +34,7 @@ class MyStack : Stack
             ResourceGroupName = "contoso",
             Sinks = 
             {
-                new AzureNextGen.Media.Inputs.MediaGraphAssetSinkArgs
+                new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphAssetSinkArgs
                 {
                     AssetName = "SampleAsset",
                     Inputs = 
@@ -47,12 +47,12 @@ class MyStack : Stack
             },
             Sources = 
             {
-                new AzureNextGen.Media.Inputs.MediaGraphRtspSourceArgs
+                new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphRtspSourceArgs
                 {
                     Endpoint = 
                     {
                         { "@odata.type", "#Microsoft.Media.MediaGraphClearEndpoint" },
-                        { "credentials", new AzureNextGen.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+                        { "credentials", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphUsernamePasswordCredentialsArgs
                         {
                             %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression) },
                             { "url", "rtsp://contoso.com:554/stream1" },
@@ -81,7 +81,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-media_graph = azure_nextgen.media.MediaGraph("mediaGraph",
+media_graph = azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph",
     account_name="contosomedia",
     description="updated description",
     media_graph_name="SampleMediaGraph",
@@ -117,7 +117,7 @@ media_graph = azure_nextgen.media.MediaGraph("mediaGraph",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const mediaGraph = new azure_nextgen.media.MediaGraph("mediaGraph", {
+const mediaGraph = new azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph", {
     accountName: "contosomedia",
     description: "updated description",
     mediaGraphName: "SampleMediaGraph",
@@ -158,7 +158,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var mediaGraph = new AzureNextGen.Media.MediaGraph("mediaGraph", new AzureNextGen.Media.MediaGraphArgs
+        var mediaGraph = new AzureNextGen.Media.V20200201Preview.MediaGraph("mediaGraph", new AzureNextGen.Media.V20200201Preview.MediaGraphArgs
         {
             AccountName = "contosomedia",
             Description = "updated description",
@@ -166,7 +166,7 @@ class MyStack : Stack
             ResourceGroupName = "contoso",
             Sinks = 
             {
-                new AzureNextGen.Media.Inputs.MediaGraphAssetSinkArgs
+                new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphAssetSinkArgs
                 {
                     AssetName = "SampleAsset",
                     Inputs = 
@@ -179,19 +179,19 @@ class MyStack : Stack
             },
             Sources = 
             {
-                new AzureNextGen.Media.Inputs.MediaGraphRtspSourceArgs
+                new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphRtspSourceArgs
                 {
                     Endpoint = 
                     {
                         { "@odata.type", "#Microsoft.Media.MediaGraphTlsEndpoint" },
-                        { "credentials", new AzureNextGen.Media.Inputs.MediaGraphUsernamePasswordCredentialsArgs
+                        { "credentials", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphUsernamePasswordCredentialsArgs
                         {
                             %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression) },
-                            { "trustedCertificates", new AzureNextGen.Media.Inputs.MediaGraphPemCertificateListArgs
+                            { "trustedCertificates", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphPemCertificateListArgs
                             {
                                 %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression) },
                                 { "url", "rtsps://contoso.com:443/stream1" },
-                                { "validationOptions", new AzureNextGen.Media.Inputs.MediaGraphTlsValidationOptionsArgs
+                                { "validationOptions", new AzureNextGen.Media.V20200201Preview.Inputs.MediaGraphTlsValidationOptionsArgs
                                 {
                                     IgnoreHostname = true,
                                     IgnoreSignature = false,
@@ -221,7 +221,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-media_graph = azure_nextgen.media.MediaGraph("mediaGraph",
+media_graph = azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph",
     account_name="contosomedia",
     description="updated description",
     media_graph_name="SampleMediaGraph",
@@ -285,7 +285,7 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const mediaGraph = new azure_nextgen.media.MediaGraph("mediaGraph", {
+const mediaGraph = new azure_nextgen.media.v20200201preview.MediaGraph("mediaGraph", {
     accountName: "contosomedia",
     description: "updated description",
     mediaGraphName: "SampleMediaGraph",

@@ -26,15 +26,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rulesEngine = new AzureNextGen.Network.RulesEngine("rulesEngine", new AzureNextGen.Network.RulesEngineArgs
+        var rulesEngine = new AzureNextGen.Network.Latest.RulesEngine("rulesEngine", new AzureNextGen.Network.Latest.RulesEngineArgs
         {
             FrontDoorName = "frontDoor1",
             ResourceGroupName = "rg1",
             Rules = 
             {
-                new AzureNextGen.Network.Inputs.RulesEngineRuleArgs
+                new AzureNextGen.Network.Latest.Inputs.RulesEngineRuleArgs
                 {
-                    Action = new AzureNextGen.Network.Inputs.RulesEngineActionArgs
+                    Action = new AzureNextGen.Network.Latest.Inputs.RulesEngineActionArgs
                     {
                         RouteConfigurationOverride = 
                         {
@@ -49,7 +49,7 @@ class MyStack : Stack
                     },
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Inputs.RulesEngineMatchConditionArgs
+                        new AzureNextGen.Network.Latest.Inputs.RulesEngineMatchConditionArgs
                         {
                             RulesEngineMatchValue = 
                             {
@@ -63,13 +63,13 @@ class MyStack : Stack
                     Name = "Rule1",
                     Priority = 1,
                 },
-                new AzureNextGen.Network.Inputs.RulesEngineRuleArgs
+                new AzureNextGen.Network.Latest.Inputs.RulesEngineRuleArgs
                 {
-                    Action = new AzureNextGen.Network.Inputs.RulesEngineActionArgs
+                    Action = new AzureNextGen.Network.Latest.Inputs.RulesEngineActionArgs
                     {
                         ResponseHeaderActions = 
                         {
-                            new AzureNextGen.Network.Inputs.HeaderActionArgs
+                            new AzureNextGen.Network.Latest.Inputs.HeaderActionArgs
                             {
                                 HeaderActionType = "Overwrite",
                                 HeaderName = "Cache-Control",
@@ -79,7 +79,7 @@ class MyStack : Stack
                     },
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Inputs.RulesEngineMatchConditionArgs
+                        new AzureNextGen.Network.Latest.Inputs.RulesEngineMatchConditionArgs
                         {
                             RulesEngineMatchValue = 
                             {
@@ -96,18 +96,18 @@ class MyStack : Stack
                     Name = "Rule2",
                     Priority = 2,
                 },
-                new AzureNextGen.Network.Inputs.RulesEngineRuleArgs
+                new AzureNextGen.Network.Latest.Inputs.RulesEngineRuleArgs
                 {
-                    Action = new AzureNextGen.Network.Inputs.RulesEngineActionArgs
+                    Action = new AzureNextGen.Network.Latest.Inputs.RulesEngineActionArgs
                     {
                         RouteConfigurationOverride = 
                         {
                             { "@odata.type", "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration" },
-                            { "backendPool", new AzureNextGen.Network.Inputs.SubResourceArgs
+                            { "backendPool", new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
                             {
                                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
                             } },
-                            { "cacheConfiguration", new AzureNextGen.Network.Inputs.CacheConfigurationArgs
+                            { "cacheConfiguration", new AzureNextGen.Network.Latest.Inputs.CacheConfigurationArgs
                             {
                                 CacheDuration = "P1DT12H20M30S",
                                 DynamicCompression = "Disabled",
@@ -120,7 +120,7 @@ class MyStack : Stack
                     },
                     MatchConditions = 
                     {
-                        new AzureNextGen.Network.Inputs.RulesEngineMatchConditionArgs
+                        new AzureNextGen.Network.Latest.Inputs.RulesEngineMatchConditionArgs
                         {
                             NegateCondition = false,
                             RulesEngineMatchValue = 
@@ -160,7 +160,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rules_engine = azure_nextgen.network.RulesEngine("rulesEngine",
+rules_engine = azure_nextgen.network.latest.RulesEngine("rulesEngine",
     front_door_name="frontDoor1",
     resource_group_name="rg1",
     rules=[
@@ -243,7 +243,7 @@ rules_engine = azure_nextgen.network.RulesEngine("rulesEngine",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const rulesEngine = new azure_nextgen.network.RulesEngine("rulesEngine", {
+const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", {
     frontDoorName: "frontDoor1",
     resourceGroupName: "rg1",
     rules: [

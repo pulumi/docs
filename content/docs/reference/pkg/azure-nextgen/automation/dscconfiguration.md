@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dscConfiguration = new AzureNextGen.Automation.DscConfiguration("dscConfiguration", new AzureNextGen.Automation.DscConfigurationArgs
+        var dscConfiguration = new AzureNextGen.Automation.Latest.DscConfiguration("dscConfiguration", new AzureNextGen.Automation.Latest.DscConfigurationArgs
         {
             AutomationAccountName = "myAutomationAccount18",
             ConfigurationName = "SetupServer",
@@ -34,9 +34,9 @@ class MyStack : Stack
             Location = "East US 2",
             Name = "SetupServer",
             ResourceGroupName = "rg",
-            Source = new AzureNextGen.Automation.Inputs.ContentSourceArgs
+            Source = new AzureNextGen.Automation.Latest.Inputs.ContentSourceArgs
             {
-                Hash = new AzureNextGen.Automation.Inputs.ContentHashArgs
+                Hash = new AzureNextGen.Automation.Latest.Inputs.ContentHashArgs
                 {
                     Algorithm = "sha256",
                     Value = "A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F",
@@ -70,7 +70,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dsc_configuration = azure_nextgen.automation.DscConfiguration("dscConfiguration",
+dsc_configuration = azure_nextgen.automation.latest.DscConfiguration("dscConfiguration",
     automation_account_name="myAutomationAccount18",
     configuration_name="SetupServer",
     description="sample configuration",
@@ -103,7 +103,7 @@ dsc_configuration = azure_nextgen.automation.DscConfiguration("dscConfiguration"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dscConfiguration = new azure_nextgen.automation.DscConfiguration("dscConfiguration", {
+const dscConfiguration = new azure_nextgen.automation.latest.DscConfiguration("dscConfiguration", {
     automationAccountName: "myAutomationAccount18",
     configurationName: "SetupServer",
     description: "sample configuration",

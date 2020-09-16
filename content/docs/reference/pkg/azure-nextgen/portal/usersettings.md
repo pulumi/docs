@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var userSettings = new AzureNextGen.Portal.UserSettings("userSettings", new AzureNextGen.Portal.UserSettingsArgs
+        var userSettings = new AzureNextGen.Portal.Latest.UserSettings("userSettings", new AzureNextGen.Portal.Latest.UserSettingsArgs
         {
             UserSettingsName = "cloudconsole",
         });
@@ -48,7 +48,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user_settings = azure_nextgen.portal.UserSettings("userSettings", user_settings_name="cloudconsole")
+user_settings = azure_nextgen.portal.latest.UserSettings("userSettings", user_settings_name="cloudconsole")
 
 ```
 
@@ -60,7 +60,7 @@ user_settings = azure_nextgen.portal.UserSettings("userSettings", user_settings_
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const userSettings = new azure_nextgen.portal.UserSettings("userSettings", {userSettingsName: "cloudconsole"});
+const userSettings = new azure_nextgen.portal.latest.UserSettings("userSettings", {userSettingsName: "cloudconsole"});
 
 ```
 

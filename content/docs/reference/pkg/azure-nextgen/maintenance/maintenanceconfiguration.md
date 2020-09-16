@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var maintenanceConfiguration = new AzureNextGen.Maintenance.MaintenanceConfiguration("maintenanceConfiguration", new AzureNextGen.Maintenance.MaintenanceConfigurationArgs
+        var maintenanceConfiguration = new AzureNextGen.Maintenance.Latest.MaintenanceConfiguration("maintenanceConfiguration", new AzureNextGen.Maintenance.Latest.MaintenanceConfigurationArgs
         {
             Location = "westus2",
             Namespace = "Microsoft.Maintenance",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-maintenance_configuration = azure_nextgen.maintenance.MaintenanceConfiguration("maintenanceConfiguration",
+maintenance_configuration = azure_nextgen.maintenance.latest.MaintenanceConfiguration("maintenanceConfiguration",
     location="westus2",
     namespace="Microsoft.Maintenance",
     resource_group_name="examplerg",
@@ -67,7 +67,7 @@ maintenance_configuration = azure_nextgen.maintenance.MaintenanceConfiguration("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const maintenanceConfiguration = new azure_nextgen.maintenance.MaintenanceConfiguration("maintenanceConfiguration", {
+const maintenanceConfiguration = new azure_nextgen.maintenance.latest.MaintenanceConfiguration("maintenanceConfiguration", {
     location: "westus2",
     namespace: "Microsoft.Maintenance",
     resourceGroupName: "examplerg",

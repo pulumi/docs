@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var userSettingsWithLocation = new AzureNextGen.Portal.UserSettingsWithLocation("userSettingsWithLocation", new AzureNextGen.Portal.UserSettingsWithLocationArgs
+        var userSettingsWithLocation = new AzureNextGen.Portal.Latest.UserSettingsWithLocation("userSettingsWithLocation", new AzureNextGen.Portal.Latest.UserSettingsWithLocationArgs
         {
             Location = "eastus",
             UserSettingsName = "cloudconsole",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user_settings_with_location = azure_nextgen.portal.UserSettingsWithLocation("userSettingsWithLocation",
+user_settings_with_location = azure_nextgen.portal.latest.UserSettingsWithLocation("userSettingsWithLocation",
     location="eastus",
     user_settings_name="cloudconsole")
 
@@ -63,7 +63,7 @@ user_settings_with_location = azure_nextgen.portal.UserSettingsWithLocation("use
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const userSettingsWithLocation = new azure_nextgen.portal.UserSettingsWithLocation("userSettingsWithLocation", {
+const userSettingsWithLocation = new azure_nextgen.portal.latest.UserSettingsWithLocation("userSettingsWithLocation", {
     location: "eastus",
     userSettingsName: "cloudconsole",
 });

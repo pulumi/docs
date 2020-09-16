@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobAgent = new AzureNextGen.Sql.JobAgent("jobAgent", new AzureNextGen.Sql.JobAgentArgs
+        var jobAgent = new AzureNextGen.Sql.V20170301Preview.JobAgent("jobAgent", new AzureNextGen.Sql.V20170301Preview.JobAgentArgs
         {
             DatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
             JobAgentName = "agent1",
             Location = "southeastasia",
             ResourceGroupName = "group1",
             ServerName = "server1",
-            Sku = new AzureNextGen.Sql.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql.V20170301Preview.Inputs.SkuArgs
             {
                 Capacity = 100,
                 Name = "Agent",
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_agent = azure_nextgen.sql.JobAgent("jobAgent",
+job_agent = azure_nextgen.sql.v20170301preview.JobAgent("jobAgent",
     database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
     job_agent_name="agent1",
     location="southeastasia",
@@ -85,7 +85,7 @@ job_agent = azure_nextgen.sql.JobAgent("jobAgent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const jobAgent = new azure_nextgen.sql.JobAgent("jobAgent", {
+const jobAgent = new azure_nextgen.sql.v20170301preview.JobAgent("jobAgent", {
     databaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
     jobAgentName: "agent1",
     location: "southeastasia",
@@ -114,7 +114,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobAgent = new AzureNextGen.Sql.JobAgent("jobAgent", new AzureNextGen.Sql.JobAgentArgs
+        var jobAgent = new AzureNextGen.Sql.V20170301Preview.JobAgent("jobAgent", new AzureNextGen.Sql.V20170301Preview.JobAgentArgs
         {
             DatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
             JobAgentName = "agent1",
@@ -140,7 +140,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_agent = azure_nextgen.sql.JobAgent("jobAgent",
+job_agent = azure_nextgen.sql.v20170301preview.JobAgent("jobAgent",
     database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
     job_agent_name="agent1",
     location="southeastasia",
@@ -157,7 +157,7 @@ job_agent = azure_nextgen.sql.JobAgent("jobAgent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const jobAgent = new azure_nextgen.sql.JobAgent("jobAgent", {
+const jobAgent = new azure_nextgen.sql.v20170301preview.JobAgent("jobAgent", {
     databaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/databases/db1",
     jobAgentName: "agent1",
     location: "southeastasia",

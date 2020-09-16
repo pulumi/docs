@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataFlow = new AzureNextGen.Datafactory.DataFlow("dataFlow", new AzureNextGen.Datafactory.DataFlowArgs
+        var dataFlow = new AzureNextGen.DataFactory.Latest.DataFlow("dataFlow", new AzureNextGen.DataFactory.Latest.DataFlowArgs
         {
             DataFlowName = "exampleDataFlow",
             FactoryName = "exampleFactoryName",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_flow = azure_nextgen.datafactory.DataFlow("dataFlow",
+data_flow = azure_nextgen.datafactory.latest.DataFlow("dataFlow",
     data_flow_name="exampleDataFlow",
     factory_name="exampleFactoryName",
     resource_group_name="exampleResourceGroup")
@@ -65,7 +65,7 @@ data_flow = azure_nextgen.datafactory.DataFlow("dataFlow",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataFlow = new azure_nextgen.datafactory.DataFlow("dataFlow", {
+const dataFlow = new azure_nextgen.datafactory.latest.DataFlow("dataFlow", {
     dataFlowName: "exampleDataFlow",
     factoryName: "exampleFactoryName",
     resourceGroupName: "exampleResourceGroup",
@@ -85,7 +85,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataFlow = new AzureNextGen.Datafactory.DataFlow("dataFlow", new AzureNextGen.Datafactory.DataFlowArgs
+        var dataFlow = new AzureNextGen.DataFactory.Latest.DataFlow("dataFlow", new AzureNextGen.DataFactory.Latest.DataFlowArgs
         {
             DataFlowName = "exampleDataFlow",
             FactoryName = "exampleFactoryName",
@@ -109,7 +109,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_flow = azure_nextgen.datafactory.DataFlow("dataFlow",
+data_flow = azure_nextgen.datafactory.latest.DataFlow("dataFlow",
     data_flow_name="exampleDataFlow",
     factory_name="exampleFactoryName",
     resource_group_name="exampleResourceGroup")
@@ -124,7 +124,7 @@ data_flow = azure_nextgen.datafactory.DataFlow("dataFlow",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataFlow = new azure_nextgen.datafactory.DataFlow("dataFlow", {
+const dataFlow = new azure_nextgen.datafactory.latest.DataFlow("dataFlow", {
     dataFlowName: "exampleDataFlow",
     factoryName: "exampleFactoryName",
     resourceGroupName: "exampleResourceGroup",

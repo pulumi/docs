@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sourceControl = new AzureNextGen.Automation.SourceControl("sourceControl", new AzureNextGen.Automation.SourceControlArgs
+        var sourceControl = new AzureNextGen.Automation.V20170515Preview.SourceControl("sourceControl", new AzureNextGen.Automation.V20170515Preview.SourceControlArgs
         {
             AutoSync = true,
             AutomationAccountName = "sampleAccount9",
@@ -36,7 +36,7 @@ class MyStack : Stack
             PublishRunbook = true,
             RepoUrl = "https://sampleUser.visualstudio.com/myProject/_git/myRepository",
             ResourceGroupName = "rg",
-            SecurityToken = new AzureNextGen.Automation.Inputs.SourceControlSecurityTokenPropertiesArgs
+            SecurityToken = new AzureNextGen.Automation.V20170515Preview.Inputs.SourceControlSecurityTokenPropertiesArgs
             {
                 AccessToken = "3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
                 TokenType = "PersonalAccessToken",
@@ -62,7 +62,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-source_control = azure_nextgen.automation.SourceControl("sourceControl",
+source_control = azure_nextgen.automation.v20170515preview.SourceControl("sourceControl",
     auto_sync=True,
     automation_account_name="sampleAccount9",
     branch="master",
@@ -88,7 +88,7 @@ source_control = azure_nextgen.automation.SourceControl("sourceControl",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sourceControl = new azure_nextgen.automation.SourceControl("sourceControl", {
+const sourceControl = new azure_nextgen.automation.v20170515preview.SourceControl("sourceControl", {
     autoSync: true,
     automationAccountName: "sampleAccount9",
     branch: "master",

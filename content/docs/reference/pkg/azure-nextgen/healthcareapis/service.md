@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Healthcareapis.Service("service", new AzureNextGen.Healthcareapis.ServiceArgs
+        var service = new AzureNextGen.HealthcareApis.Latest.Service("service", new AzureNextGen.HealthcareApis.Latest.ServiceArgs
         {
-            Identity = new AzureNextGen.Healthcareapis.Inputs.ResourceIdentityArgs
+            Identity = new AzureNextGen.HealthcareApis.Latest.Inputs.ResourceIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.healthcareapis.Service("service",
+service = azure_nextgen.healthcareapis.latest.Service("service",
     identity={
         "type": "SystemAssigned",
     },
@@ -76,7 +76,7 @@ service = azure_nextgen.healthcareapis.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.healthcareapis.Service("service", {
+const service = new azure_nextgen.healthcareapis.latest.Service("service", {
     identity: {
         type: "SystemAssigned",
     },
@@ -101,7 +101,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Healthcareapis.Service("service", new AzureNextGen.Healthcareapis.ServiceArgs
+        var service = new AzureNextGen.HealthcareApis.Latest.Service("service", new AzureNextGen.HealthcareApis.Latest.ServiceArgs
         {
             Kind = "fhir-R4",
             Location = "westus2",
@@ -127,7 +127,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.healthcareapis.Service("service",
+service = azure_nextgen.healthcareapis.latest.Service("service",
     kind="fhir-R4",
     location="westus2",
     resource_group_name="rg1",
@@ -144,7 +144,7 @@ service = azure_nextgen.healthcareapis.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.healthcareapis.Service("service", {
+const service = new azure_nextgen.healthcareapis.latest.Service("service", {
     kind: "fhir-R4",
     location: "westus2",
     resourceGroupName: "rg1",

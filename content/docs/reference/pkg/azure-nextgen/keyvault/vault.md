@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.Keyvault.Vault("vault", new AzureNextGen.Keyvault.VaultArgs
+        var vault = new AzureNextGen.KeyVault.Latest.Vault("vault", new AzureNextGen.KeyVault.Latest.VaultArgs
         {
             Location = "westus",
             ResourceGroupName = "sample-resource-group",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.keyvault.Vault("vault",
+vault = azure_nextgen.keyvault.latest.Vault("vault",
     location="westus",
     resource_group_name="sample-resource-group",
     vault_name="sample-vault")
@@ -65,7 +65,7 @@ vault = azure_nextgen.keyvault.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vault = new azure_nextgen.keyvault.Vault("vault", {
+const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
     location: "westus",
     resourceGroupName: "sample-resource-group",
     vaultName: "sample-vault",
@@ -85,7 +85,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.Keyvault.Vault("vault", new AzureNextGen.Keyvault.VaultArgs
+        var vault = new AzureNextGen.KeyVault.Latest.Vault("vault", new AzureNextGen.KeyVault.Latest.VaultArgs
         {
             Location = "westus",
             ResourceGroupName = "sample-resource-group",
@@ -109,7 +109,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.keyvault.Vault("vault",
+vault = azure_nextgen.keyvault.latest.Vault("vault",
     location="westus",
     resource_group_name="sample-resource-group",
     vault_name="sample-vault")
@@ -124,7 +124,7 @@ vault = azure_nextgen.keyvault.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vault = new azure_nextgen.keyvault.Vault("vault", {
+const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
     location: "westus",
     resourceGroupName: "sample-resource-group",
     vaultName: "sample-vault",

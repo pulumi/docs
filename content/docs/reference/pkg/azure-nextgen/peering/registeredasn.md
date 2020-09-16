@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registeredAsn = new AzureNextGen.Peering.RegisteredAsn("registeredAsn", new AzureNextGen.Peering.RegisteredAsnArgs
+        var registeredAsn = new AzureNextGen.Peering.Latest.RegisteredAsn("registeredAsn", new AzureNextGen.Peering.Latest.RegisteredAsnArgs
         {
             Asn = 65000,
             PeeringName = "peeringName",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registered_asn = azure_nextgen.peering.RegisteredAsn("registeredAsn",
+registered_asn = azure_nextgen.peering.latest.RegisteredAsn("registeredAsn",
     asn=65000,
     peering_name="peeringName",
     registered_asn_name="registeredAsnName",
@@ -67,7 +67,7 @@ registered_asn = azure_nextgen.peering.RegisteredAsn("registeredAsn",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const registeredAsn = new azure_nextgen.peering.RegisteredAsn("registeredAsn", {
+const registeredAsn = new azure_nextgen.peering.latest.RegisteredAsn("registeredAsn", {
     asn: 65000,
     peeringName: "peeringName",
     registeredAsnName: "registeredAsnName",

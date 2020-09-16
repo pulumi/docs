@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverDetails = new AzureNextGen.Analysisservices.ServerDetails("serverDetails", new AzureNextGen.Analysisservices.ServerDetailsArgs
+        var serverDetails = new AzureNextGen.AnalysisServices.Latest.ServerDetails("serverDetails", new AzureNextGen.AnalysisServices.Latest.ServerDetailsArgs
         {
-            AsAdministrators = new AzureNextGen.Analysisservices.Inputs.ServerAdministratorsArgs
+            AsAdministrators = new AzureNextGen.AnalysisServices.Latest.Inputs.ServerAdministratorsArgs
             {
                 Members = 
                 {
@@ -39,7 +39,7 @@ class MyStack : Stack
             Location = "West US",
             ResourceGroupName = "TestRG",
             ServerName = "azsdktest",
-            Sku = new AzureNextGen.Analysisservices.Inputs.ResourceSkuArgs
+            Sku = new AzureNextGen.AnalysisServices.Latest.Inputs.ResourceSkuArgs
             {
                 Capacity = 1,
                 Name = "S1",
@@ -68,7 +68,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_details = azure_nextgen.analysisservices.ServerDetails("serverDetails",
+server_details = azure_nextgen.analysisservices.latest.ServerDetails("serverDetails",
     as_administrators={
         "members": [
             "azsdktest@microsoft.com",
@@ -97,7 +97,7 @@ server_details = azure_nextgen.analysisservices.ServerDetails("serverDetails",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serverDetails = new azure_nextgen.analysisservices.ServerDetails("serverDetails", {
+const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("serverDetails", {
     asAdministrators: {
         members: [
             "azsdktest@microsoft.com",

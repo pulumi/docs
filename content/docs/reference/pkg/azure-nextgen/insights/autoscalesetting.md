@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var autoscaleSetting = new AzureNextGen.Insights.AutoscaleSetting("autoscaleSetting", new AzureNextGen.Insights.AutoscaleSettingArgs
+        var autoscaleSetting = new AzureNextGen.Insights.Latest.AutoscaleSetting("autoscaleSetting", new AzureNextGen.Insights.Latest.AutoscaleSettingArgs
         {
             AutoscaleSettingName = "MySetting",
             Enabled = true,
             Location = "West US",
             Notifications = 
             {
-                new AzureNextGen.Insights.Inputs.AutoscaleNotificationArgs
+                new AzureNextGen.Insights.Latest.Inputs.AutoscaleNotificationArgs
                 {
-                    Email = new AzureNextGen.Insights.Inputs.EmailNotificationArgs
+                    Email = new AzureNextGen.Insights.Latest.Inputs.EmailNotificationArgs
                     {
                         CustomEmails = 
                         {
@@ -48,7 +48,7 @@ class MyStack : Stack
                     Operation = "Scale",
                     Webhooks = 
                     {
-                        new AzureNextGen.Insights.Inputs.WebhookNotificationArgs
+                        new AzureNextGen.Insights.Latest.Inputs.WebhookNotificationArgs
                         {
                             Properties = ,
                             ServiceUri = "http://myservice.com",
@@ -58,15 +58,15 @@ class MyStack : Stack
             },
             Profiles = 
             {
-                new AzureNextGen.Insights.Inputs.AutoscaleProfileArgs
+                new AzureNextGen.Insights.Latest.Inputs.AutoscaleProfileArgs
                 {
-                    Capacity = new AzureNextGen.Insights.Inputs.ScaleCapacityArgs
+                    Capacity = new AzureNextGen.Insights.Latest.Inputs.ScaleCapacityArgs
                     {
                         Default = "1",
                         Maximum = "10",
                         Minimum = "1",
                     },
-                    FixedDate = new AzureNextGen.Insights.Inputs.TimeWindowArgs
+                    FixedDate = new AzureNextGen.Insights.Latest.Inputs.TimeWindowArgs
                     {
                         End = "2015-03-05T14:30:00Z",
                         Start = "2015-03-05T14:00:00Z",
@@ -75,9 +75,9 @@ class MyStack : Stack
                     Name = "adios",
                     Rules = 
                     {
-                        new AzureNextGen.Insights.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -88,7 +88,7 @@ class MyStack : Stack
                                 TimeGrain = "PT1M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT5M",
                                 Direction = "Increase",
@@ -96,9 +96,9 @@ class MyStack : Stack
                                 Value = "1",
                             },
                         },
-                        new AzureNextGen.Insights.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -109,7 +109,7 @@ class MyStack : Stack
                                 TimeGrain = "PT2M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT6M",
                                 Direction = "Decrease",
@@ -119,19 +119,19 @@ class MyStack : Stack
                         },
                     },
                 },
-                new AzureNextGen.Insights.Inputs.AutoscaleProfileArgs
+                new AzureNextGen.Insights.Latest.Inputs.AutoscaleProfileArgs
                 {
-                    Capacity = new AzureNextGen.Insights.Inputs.ScaleCapacityArgs
+                    Capacity = new AzureNextGen.Insights.Latest.Inputs.ScaleCapacityArgs
                     {
                         Default = "1",
                         Maximum = "10",
                         Minimum = "1",
                     },
                     Name = "saludos",
-                    Recurrence = new AzureNextGen.Insights.Inputs.RecurrenceArgs
+                    Recurrence = new AzureNextGen.Insights.Latest.Inputs.RecurrenceArgs
                     {
                         Frequency = "Week",
-                        Schedule = new AzureNextGen.Insights.Inputs.RecurrentScheduleArgs
+                        Schedule = new AzureNextGen.Insights.Latest.Inputs.RecurrentScheduleArgs
                         {
                             Days = 
                             {
@@ -150,9 +150,9 @@ class MyStack : Stack
                     },
                     Rules = 
                     {
-                        new AzureNextGen.Insights.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -163,7 +163,7 @@ class MyStack : Stack
                                 TimeGrain = "PT1M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT5M",
                                 Direction = "Increase",
@@ -171,9 +171,9 @@ class MyStack : Stack
                                 Value = "1",
                             },
                         },
-                        new AzureNextGen.Insights.Inputs.ScaleRuleArgs
+                        new AzureNextGen.Insights.Latest.Inputs.ScaleRuleArgs
                         {
-                            MetricTrigger = new AzureNextGen.Insights.Inputs.MetricTriggerArgs
+                            MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.MetricTriggerArgs
                             {
                                 MetricName = "Percentage CPU",
                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
@@ -184,7 +184,7 @@ class MyStack : Stack
                                 TimeGrain = "PT2M",
                                 TimeWindow = "PT5M",
                             },
-                            ScaleAction = new AzureNextGen.Insights.Inputs.ScaleActionArgs
+                            ScaleAction = new AzureNextGen.Insights.Latest.Inputs.ScaleActionArgs
                             {
                                 Cooldown = "PT6M",
                                 Direction = "Decrease",
@@ -217,7 +217,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-autoscale_setting = azure_nextgen.insights.AutoscaleSetting("autoscaleSetting",
+autoscale_setting = azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSetting",
     autoscale_setting_name="MySetting",
     enabled=True,
     location="West US",
@@ -358,7 +358,7 @@ autoscale_setting = azure_nextgen.insights.AutoscaleSetting("autoscaleSetting",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const autoscaleSetting = new azure_nextgen.insights.AutoscaleSetting("autoscaleSetting", {
+const autoscaleSetting = new azure_nextgen.insights.latest.AutoscaleSetting("autoscaleSetting", {
     autoscaleSettingName: "MySetting",
     enabled: true,
     location: "West US",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRoutePort = new AzureNextGen.Network.ExpressRoutePort("expressRoutePort", new AzureNextGen.Network.ExpressRoutePortArgs
+        var expressRoutePort = new AzureNextGen.Network.Latest.ExpressRoutePort("expressRoutePort", new AzureNextGen.Network.Latest.ExpressRoutePortArgs
         {
             BandwidthInGbps = 100,
             Encapsulation = "QinQ",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_port = azure_nextgen.network.ExpressRoutePort("expressRoutePort",
+express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort",
     bandwidth_in_gbps=100,
     encapsulation="QinQ",
     express_route_port_name="portName",
@@ -71,7 +71,7 @@ express_route_port = azure_nextgen.network.ExpressRoutePort("expressRoutePort",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const expressRoutePort = new azure_nextgen.network.ExpressRoutePort("expressRoutePort", {
+const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort", {
     bandwidthInGbps: 100,
     encapsulation: "QinQ",
     expressRoutePortName: "portName",
@@ -94,14 +94,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRoutePort = new AzureNextGen.Network.ExpressRoutePort("expressRoutePort", new AzureNextGen.Network.ExpressRoutePortArgs
+        var expressRoutePort = new AzureNextGen.Network.Latest.ExpressRoutePort("expressRoutePort", new AzureNextGen.Network.Latest.ExpressRoutePortArgs
         {
             BandwidthInGbps = 100,
             Encapsulation = "QinQ",
             ExpressRoutePortName = "portName",
             Links = 
             {
-                new AzureNextGen.Network.Inputs.ExpressRouteLinkArgs
+                new AzureNextGen.Network.Latest.Inputs.ExpressRouteLinkArgs
                 {
                     Name = "link1",
                 },
@@ -128,7 +128,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_port = azure_nextgen.network.ExpressRoutePort("expressRoutePort",
+express_route_port = azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort",
     bandwidth_in_gbps=100,
     encapsulation="QinQ",
     express_route_port_name="portName",
@@ -149,7 +149,7 @@ express_route_port = azure_nextgen.network.ExpressRoutePort("expressRoutePort",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const expressRoutePort = new azure_nextgen.network.ExpressRoutePort("expressRoutePort", {
+const expressRoutePort = new azure_nextgen.network.latest.ExpressRoutePort("expressRoutePort", {
     bandwidthInGbps: 100,
     encapsulation: "QinQ",
     expressRoutePortName: "portName",

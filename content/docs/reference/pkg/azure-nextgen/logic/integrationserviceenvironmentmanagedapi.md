@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationServiceEnvironmentManagedApi = new AzureNextGen.Logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", new AzureNextGen.Logic.IntegrationServiceEnvironmentManagedApiArgs
+        var integrationServiceEnvironmentManagedApi = new AzureNextGen.Logic.Latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", new AzureNextGen.Logic.Latest.IntegrationServiceEnvironmentManagedApiArgs
         {
             ApiName = "servicebus",
             IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_service_environment_managed_api = azure_nextgen.logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi",
+integration_service_environment_managed_api = azure_nextgen.logic.latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi",
     api_name="servicebus",
     integration_service_environment_name="testIntegrationServiceEnvironment",
     resource_group="testResourceGroup")
@@ -65,7 +65,7 @@ integration_service_environment_managed_api = azure_nextgen.logic.IntegrationSer
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", {
+const integrationServiceEnvironmentManagedApi = new azure_nextgen.logic.latest.IntegrationServiceEnvironmentManagedApi("integrationServiceEnvironmentManagedApi", {
     apiName: "servicebus",
     integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
     resourceGroup: "testResourceGroup",

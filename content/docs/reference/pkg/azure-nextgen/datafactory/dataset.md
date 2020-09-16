@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataset = new AzureNextGen.Datafactory.Dataset("dataset", new AzureNextGen.Datafactory.DatasetArgs
+        var dataset = new AzureNextGen.DataFactory.Latest.Dataset("dataset", new AzureNextGen.DataFactory.Latest.DatasetArgs
         {
             DatasetName = "exampleDataset",
             FactoryName = "exampleFactoryName",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dataset = azure_nextgen.datafactory.Dataset("dataset",
+dataset = azure_nextgen.datafactory.latest.Dataset("dataset",
     dataset_name="exampleDataset",
     factory_name="exampleFactoryName",
     resource_group_name="exampleResourceGroup")
@@ -65,7 +65,7 @@ dataset = azure_nextgen.datafactory.Dataset("dataset",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataset = new azure_nextgen.datafactory.Dataset("dataset", {
+const dataset = new azure_nextgen.datafactory.latest.Dataset("dataset", {
     datasetName: "exampleDataset",
     factoryName: "exampleFactoryName",
     resourceGroupName: "exampleResourceGroup",
@@ -85,7 +85,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataset = new AzureNextGen.Datafactory.Dataset("dataset", new AzureNextGen.Datafactory.DatasetArgs
+        var dataset = new AzureNextGen.DataFactory.Latest.Dataset("dataset", new AzureNextGen.DataFactory.Latest.DatasetArgs
         {
             DatasetName = "exampleDataset",
             FactoryName = "exampleFactoryName",
@@ -109,7 +109,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dataset = azure_nextgen.datafactory.Dataset("dataset",
+dataset = azure_nextgen.datafactory.latest.Dataset("dataset",
     dataset_name="exampleDataset",
     factory_name="exampleFactoryName",
     resource_group_name="exampleResourceGroup")
@@ -124,7 +124,7 @@ dataset = azure_nextgen.datafactory.Dataset("dataset",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataset = new azure_nextgen.datafactory.Dataset("dataset", {
+const dataset = new azure_nextgen.datafactory.latest.Dataset("dataset", {
     datasetName: "exampleDataset",
     factoryName: "exampleFactoryName",
     resourceGroupName: "exampleResourceGroup",

@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedService = new AzureNextGen.Machinelearningservices.LinkedService("linkedService", new AzureNextGen.Machinelearningservices.LinkedServiceArgs
+        var linkedService = new AzureNextGen.MachineLearningServices.V20200901Preview.LinkedService("linkedService", new AzureNextGen.MachineLearningServices.V20200901Preview.LinkedServiceArgs
         {
-            Identity = new AzureNextGen.Machinelearningservices.Inputs.IdentityArgs
+            Identity = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_service = azure_nextgen.machinelearningservices.LinkedService("linkedService",
+linked_service = azure_nextgen.machinelearningservices.v20200901preview.LinkedService("linkedService",
     identity={
         "type": "SystemAssigned",
     },
@@ -76,7 +76,7 @@ linked_service = azure_nextgen.machinelearningservices.LinkedService("linkedServ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const linkedService = new azure_nextgen.machinelearningservices.LinkedService("linkedService", {
+const linkedService = new azure_nextgen.machinelearningservices.v20200901preview.LinkedService("linkedService", {
     identity: {
         type: "SystemAssigned",
     },

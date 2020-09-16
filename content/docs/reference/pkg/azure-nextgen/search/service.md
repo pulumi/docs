@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Service("service", new AzureNextGen.Search.ServiceArgs
+        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
         {
             HostingMode = "default",
             Location = "westus",
@@ -34,7 +34,7 @@ class MyStack : Stack
             ReplicaCount = 3,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.Service("service",
+service = azure_nextgen.search.latest.Service("service",
     hosting_mode="default",
     location="westus",
     partition_count=1,
@@ -85,7 +85,7 @@ service = azure_nextgen.search.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.search.Service("service", {
+const service = new azure_nextgen.search.latest.Service("service", {
     hostingMode: "default",
     location: "westus",
     partitionCount: 1,
@@ -114,7 +114,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Service("service", new AzureNextGen.Search.ServiceArgs
+        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
         {
             HostingMode = "default",
             Location = "westus",
@@ -123,7 +123,7 @@ class MyStack : Stack
             ReplicaCount = 3,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -150,7 +150,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.Service("service",
+service = azure_nextgen.search.latest.Service("service",
     hosting_mode="default",
     location="westus",
     partition_count=1,
@@ -175,7 +175,7 @@ service = azure_nextgen.search.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.search.Service("service", {
+const service = new azure_nextgen.search.latest.Service("service", {
     hostingMode: "default",
     location: "westus",
     partitionCount: 1,
@@ -205,19 +205,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Service("service", new AzureNextGen.Search.ServiceArgs
+        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
         {
             HostingMode = "default",
             Location = "westus",
-            NetworkRuleSet = new AzureNextGen.Search.Inputs.NetworkRuleSetArgs
+            NetworkRuleSet = new AzureNextGen.Search.Latest.Inputs.NetworkRuleSetArgs
             {
                 IpRules = 
                 {
-                    new AzureNextGen.Search.Inputs.IpRuleArgs
+                    new AzureNextGen.Search.Latest.Inputs.IpRuleArgs
                     {
                         Value = "123.4.5.6",
                     },
-                    new AzureNextGen.Search.Inputs.IpRuleArgs
+                    new AzureNextGen.Search.Latest.Inputs.IpRuleArgs
                     {
                         Value = "123.4.6.0/18",
                     },
@@ -227,7 +227,7 @@ class MyStack : Stack
             ReplicaCount = 1,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -254,7 +254,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.Service("service",
+service = azure_nextgen.search.latest.Service("service",
     hosting_mode="default",
     location="westus",
     network_rule_set={
@@ -288,7 +288,7 @@ service = azure_nextgen.search.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.search.Service("service", {
+const service = new azure_nextgen.search.latest.Service("service", {
     hostingMode: "default",
     location: "westus",
     networkRuleSet: {
@@ -327,10 +327,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Search.Service("service", new AzureNextGen.Search.ServiceArgs
+        var service = new AzureNextGen.Search.Latest.Service("service", new AzureNextGen.Search.Latest.ServiceArgs
         {
             HostingMode = "default",
-            Identity = new AzureNextGen.Search.Inputs.IdentityArgs
+            Identity = new AzureNextGen.Search.Latest.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -339,7 +339,7 @@ class MyStack : Stack
             ReplicaCount = 3,
             ResourceGroupName = "rg1",
             SearchServiceName = "mysearchservice",
-            Sku = new AzureNextGen.Search.Inputs.SkuArgs
+            Sku = new AzureNextGen.Search.Latest.Inputs.SkuArgs
             {
                 Name = "standard",
             },
@@ -366,7 +366,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.search.Service("service",
+service = azure_nextgen.search.latest.Service("service",
     hosting_mode="default",
     identity={
         "type": "SystemAssigned",
@@ -393,7 +393,7 @@ service = azure_nextgen.search.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.search.Service("service", {
+const service = new azure_nextgen.search.latest.Service("service", {
     hostingMode: "default",
     identity: {
         type: "SystemAssigned",

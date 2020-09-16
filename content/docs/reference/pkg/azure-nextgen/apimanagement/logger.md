@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var logger = new AzureNextGen.Apimanagement.Logger("logger", new AzureNextGen.Apimanagement.LoggerArgs
+        var logger = new AzureNextGen.ApiManagement.Latest.Logger("logger", new AzureNextGen.ApiManagement.Latest.LoggerArgs
         {
             Credentials = 
             {
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-logger = azure_nextgen.apimanagement.Logger("logger",
+logger = azure_nextgen.apimanagement.latest.Logger("logger",
     credentials={
         "instrumentation_key": "11................a1",
     },
@@ -76,7 +76,7 @@ logger = azure_nextgen.apimanagement.Logger("logger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const logger = new azure_nextgen.apimanagement.Logger("logger", {
+const logger = new azure_nextgen.apimanagement.latest.Logger("logger", {
     credentials: {
         instrumentationKey: "11................a1",
     },
@@ -101,7 +101,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var logger = new AzureNextGen.Apimanagement.Logger("logger", new AzureNextGen.Apimanagement.LoggerArgs
+        var logger = new AzureNextGen.ApiManagement.Latest.Logger("logger", new AzureNextGen.ApiManagement.Latest.LoggerArgs
         {
             Credentials = 
             {
@@ -132,7 +132,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-logger = azure_nextgen.apimanagement.Logger("logger",
+logger = azure_nextgen.apimanagement.latest.Logger("logger",
     credentials={
         "connection_string": "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=",
         "name": "hydraeventhub",
@@ -153,7 +153,7 @@ logger = azure_nextgen.apimanagement.Logger("logger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const logger = new azure_nextgen.apimanagement.Logger("logger", {
+const logger = new azure_nextgen.apimanagement.latest.Logger("logger", {
     credentials: {
         connectionString: "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=",
         name: "hydraeventhub",

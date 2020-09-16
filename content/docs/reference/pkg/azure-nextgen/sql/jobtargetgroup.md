@@ -26,26 +26,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobTargetGroup = new AzureNextGen.Sql.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.JobTargetGroupArgs
+        var jobTargetGroup = new AzureNextGen.Sql.V20170301Preview.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.V20170301Preview.JobTargetGroupArgs
         {
             JobAgentName = "agent1",
             Members = 
             {
-                new AzureNextGen.Sql.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.V20170301Preview.Inputs.JobTargetArgs
                 {
                     DatabaseName = "database1",
                     MembershipType = "Exclude",
                     ServerName = "server1",
                     Type = "SqlDatabase",
                 },
-                new AzureNextGen.Sql.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.V20170301Preview.Inputs.JobTargetArgs
                 {
                     MembershipType = "Include",
                     RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
                     ServerName = "server1",
                     Type = "SqlServer",
                 },
-                new AzureNextGen.Sql.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.V20170301Preview.Inputs.JobTargetArgs
                 {
                     ElasticPoolName = "pool1",
                     MembershipType = "Include",
@@ -53,7 +53,7 @@ class MyStack : Stack
                     ServerName = "server2",
                     Type = "SqlElasticPool",
                 },
-                new AzureNextGen.Sql.Inputs.JobTargetArgs
+                new AzureNextGen.Sql.V20170301Preview.Inputs.JobTargetArgs
                 {
                     DatabaseName = "database1",
                     MembershipType = "Include",
@@ -85,7 +85,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_target_group = azure_nextgen.sql.JobTargetGroup("jobTargetGroup",
+job_target_group = azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetGroup",
     job_agent_name="agent1",
     members=[
         {
@@ -130,7 +130,7 @@ job_target_group = azure_nextgen.sql.JobTargetGroup("jobTargetGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const jobTargetGroup = new azure_nextgen.sql.JobTargetGroup("jobTargetGroup", {
+const jobTargetGroup = new azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetGroup", {
     jobAgentName: "agent1",
     members: [
         {
@@ -180,7 +180,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobTargetGroup = new AzureNextGen.Sql.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.JobTargetGroupArgs
+        var jobTargetGroup = new AzureNextGen.Sql.V20170301Preview.JobTargetGroup("jobTargetGroup", new AzureNextGen.Sql.V20170301Preview.JobTargetGroupArgs
         {
             JobAgentName = "agent1",
             Members = {},
@@ -206,7 +206,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_target_group = azure_nextgen.sql.JobTargetGroup("jobTargetGroup",
+job_target_group = azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetGroup",
     job_agent_name="agent1",
     members=[],
     resource_group_name="group1",
@@ -223,7 +223,7 @@ job_target_group = azure_nextgen.sql.JobTargetGroup("jobTargetGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const jobTargetGroup = new azure_nextgen.sql.JobTargetGroup("jobTargetGroup", {
+const jobTargetGroup = new azure_nextgen.sql.v20170301preview.JobTargetGroup("jobTargetGroup", {
     jobAgentName: "agent1",
     members: [],
     resourceGroupName: "group1",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceKey = new AzureNextGen.Sql.ManagedInstanceKey("managedInstanceKey", new AzureNextGen.Sql.ManagedInstanceKeyArgs
+        var managedInstanceKey = new AzureNextGen.Sql.V20171001Preview.ManagedInstanceKey("managedInstanceKey", new AzureNextGen.Sql.V20171001Preview.ManagedInstanceKeyArgs
         {
             KeyName = "someVault_someKey_01234567890123456789012345678901",
             ManagedInstanceName = "sqlcrudtest-4645",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_key = azure_nextgen.sql.ManagedInstanceKey("managedInstanceKey",
+managed_instance_key = azure_nextgen.sql.v20171001preview.ManagedInstanceKey("managedInstanceKey",
     key_name="someVault_someKey_01234567890123456789012345678901",
     managed_instance_name="sqlcrudtest-4645",
     resource_group_name="sqlcrudtest-7398",
@@ -69,7 +69,7 @@ managed_instance_key = azure_nextgen.sql.ManagedInstanceKey("managedInstanceKey"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedInstanceKey = new azure_nextgen.sql.ManagedInstanceKey("managedInstanceKey", {
+const managedInstanceKey = new azure_nextgen.sql.v20171001preview.ManagedInstanceKey("managedInstanceKey", {
     keyName: "someVault_someKey_01234567890123456789012345678901",
     managedInstanceName: "sqlcrudtest-4645",
     resourceGroupName: "sqlcrudtest-7398",

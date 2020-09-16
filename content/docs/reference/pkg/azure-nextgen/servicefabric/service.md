@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Servicefabric.Service("service", new AzureNextGen.Servicefabric.ServiceArgs
+        var service = new AzureNextGen.ServiceFabric.Latest.Service("service", new AzureNextGen.ServiceFabric.Latest.ServiceArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
             CorrelationScheme = 
             {
-                new AzureNextGen.Servicefabric.Inputs.ServiceCorrelationDescriptionArgs
+                new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceCorrelationDescriptionArgs
                 {
                     Scheme = "Affinity",
                     ServiceName = "fabric:/app1/app1~svc1",
@@ -49,7 +49,7 @@ class MyStack : Stack
             ServiceKind = "Stateless",
             ServiceLoadMetrics = 
             {
-                new AzureNextGen.Servicefabric.Inputs.ServiceLoadMetricDescriptionArgs
+                new AzureNextGen.ServiceFabric.Latest.Inputs.ServiceLoadMetricDescriptionArgs
                 {
                     Name = "metric1",
                     Weight = "Low",
@@ -78,7 +78,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.servicefabric.Service("service",
+service = azure_nextgen.servicefabric.latest.Service("service",
     application_name="myApp",
     cluster_name="myCluster",
     correlation_scheme=[{
@@ -112,7 +112,7 @@ service = azure_nextgen.servicefabric.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.servicefabric.Service("service", {
+const service = new azure_nextgen.servicefabric.latest.Service("service", {
     applicationName: "myApp",
     clusterName: "myCluster",
     correlationScheme: [{
@@ -151,7 +151,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Servicefabric.Service("service", new AzureNextGen.Servicefabric.ServiceArgs
+        var service = new AzureNextGen.ServiceFabric.Latest.Service("service", new AzureNextGen.ServiceFabric.Latest.ServiceArgs
         {
             ApplicationName = "myApp",
             ClusterName = "myCluster",
@@ -182,7 +182,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.servicefabric.Service("service",
+service = azure_nextgen.servicefabric.latest.Service("service",
     application_name="myApp",
     cluster_name="myCluster",
     partition_description={
@@ -203,7 +203,7 @@ service = azure_nextgen.servicefabric.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.servicefabric.Service("service", {
+const service = new azure_nextgen.servicefabric.latest.Service("service", {
     applicationName: "myApp",
     clusterName: "myCluster",
     partitionDescription: {

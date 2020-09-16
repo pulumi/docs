@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var openIdConnectProvider = new AzureNextGen.Apimanagement.OpenIdConnectProvider("openIdConnectProvider", new AzureNextGen.Apimanagement.OpenIdConnectProviderArgs
+        var openIdConnectProvider = new AzureNextGen.ApiManagement.Latest.OpenIdConnectProvider("openIdConnectProvider", new AzureNextGen.ApiManagement.Latest.OpenIdConnectProviderArgs
         {
             ClientId = "oidprovidertemplate3",
             ClientSecret = "x",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-open_id_connect_provider = azure_nextgen.apimanagement.OpenIdConnectProvider("openIdConnectProvider",
+open_id_connect_provider = azure_nextgen.apimanagement.latest.OpenIdConnectProvider("openIdConnectProvider",
     client_id="oidprovidertemplate3",
     client_secret="x",
     display_name="templateoidprovider3",
@@ -73,7 +73,7 @@ open_id_connect_provider = azure_nextgen.apimanagement.OpenIdConnectProvider("op
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const openIdConnectProvider = new azure_nextgen.apimanagement.OpenIdConnectProvider("openIdConnectProvider", {
+const openIdConnectProvider = new azure_nextgen.apimanagement.latest.OpenIdConnectProvider("openIdConnectProvider", {
     clientId: "oidprovidertemplate3",
     clientSecret: "x",
     displayName: "templateoidprovider3",

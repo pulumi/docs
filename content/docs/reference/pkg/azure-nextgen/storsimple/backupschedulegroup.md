@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backupScheduleGroup = new AzureNextGen.Storsimple.BackupScheduleGroup("backupScheduleGroup", new AzureNextGen.Storsimple.BackupScheduleGroupArgs
+        var backupScheduleGroup = new AzureNextGen.StorSimple.Latest.BackupScheduleGroup("backupScheduleGroup", new AzureNextGen.StorSimple.Latest.BackupScheduleGroupArgs
         {
             DeviceName = "HSDK-4XY4FI2IVG",
             ManagerName = "hAzureSDKOperations",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup_schedule_group = azure_nextgen.storsimple.BackupScheduleGroup("backupScheduleGroup",
+backup_schedule_group = azure_nextgen.storsimple.latest.BackupScheduleGroup("backupScheduleGroup",
     device_name="HSDK-4XY4FI2IVG",
     manager_name="hAzureSDKOperations",
     resource_group_name="ResourceGroupForSDKTest",
@@ -69,7 +69,7 @@ backup_schedule_group = azure_nextgen.storsimple.BackupScheduleGroup("backupSche
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const backupScheduleGroup = new azure_nextgen.storsimple.BackupScheduleGroup("backupScheduleGroup", {
+const backupScheduleGroup = new azure_nextgen.storsimple.latest.BackupScheduleGroup("backupScheduleGroup", {
     deviceName: "HSDK-4XY4FI2IVG",
     managerName: "hAzureSDKOperations",
     resourceGroupName: "ResourceGroupForSDKTest",

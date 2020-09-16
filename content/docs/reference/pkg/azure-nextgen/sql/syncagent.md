@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncAgent = new AzureNextGen.Sql.SyncAgent("syncAgent", new AzureNextGen.Sql.SyncAgentArgs
+        var syncAgent = new AzureNextGen.Sql.V20150501Preview.SyncAgent("syncAgent", new AzureNextGen.Sql.V20150501Preview.SyncAgentArgs
         {
             ResourceGroupName = "syncagentcrud-65440",
             ServerName = "syncagentcrud-8475",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_agent = azure_nextgen.sql.SyncAgent("syncAgent",
+sync_agent = azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent",
     resource_group_name="syncagentcrud-65440",
     server_name="syncagentcrud-8475",
     sync_agent_name="syncagentcrud-3187",
@@ -67,7 +67,7 @@ sync_agent = azure_nextgen.sql.SyncAgent("syncAgent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const syncAgent = new azure_nextgen.sql.SyncAgent("syncAgent", {
+const syncAgent = new azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent", {
     resourceGroupName: "syncagentcrud-65440",
     serverName: "syncagentcrud-8475",
     syncAgentName: "syncagentcrud-3187",
@@ -88,7 +88,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncAgent = new AzureNextGen.Sql.SyncAgent("syncAgent", new AzureNextGen.Sql.SyncAgentArgs
+        var syncAgent = new AzureNextGen.Sql.V20150501Preview.SyncAgent("syncAgent", new AzureNextGen.Sql.V20150501Preview.SyncAgentArgs
         {
             ResourceGroupName = "syncagentcrud-65440",
             ServerName = "syncagentcrud-8475",
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_agent = azure_nextgen.sql.SyncAgent("syncAgent",
+sync_agent = azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent",
     resource_group_name="syncagentcrud-65440",
     server_name="syncagentcrud-8475",
     sync_agent_name="syncagentcrud-3187",
@@ -129,7 +129,7 @@ sync_agent = azure_nextgen.sql.SyncAgent("syncAgent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const syncAgent = new azure_nextgen.sql.SyncAgent("syncAgent", {
+const syncAgent = new azure_nextgen.sql.v20150501preview.SyncAgent("syncAgent", {
     resourceGroupName: "syncagentcrud-65440",
     serverName: "syncagentcrud-8475",
     syncAgentName: "syncagentcrud-3187",

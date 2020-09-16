@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var controllerDetails = new AzureNextGen.Delegatednetwork.ControllerDetails("controllerDetails", new AzureNextGen.Delegatednetwork.ControllerDetailsArgs
+        var controllerDetails = new AzureNextGen.DelegatedNetwork.V20200808Preview.ControllerDetails("controllerDetails", new AzureNextGen.DelegatedNetwork.V20200808Preview.ControllerDetailsArgs
         {
             ControllerType = "Kubernetes",
             KubernetesProperties = 
             {
-                new AzureNextGen.Delegatednetwork.Inputs.KubernetesPropertiesArgs
+                new AzureNextGen.DelegatedNetwork.V20200808Preview.Inputs.KubernetesPropertiesArgs
                 {
                     ApiServerEndpoint = "https://testk8s.cloudapp.net",
                     ClusterRootCA = "ddsadsad344mfdsfdl",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-controller_details = azure_nextgen.delegatednetwork.ControllerDetails("controllerDetails",
+controller_details = azure_nextgen.delegatednetwork.v20200808preview.ControllerDetails("controllerDetails",
     controller_type="Kubernetes",
     kubernetes_properties=[{
         "apiServerEndpoint": "https://testk8s.cloudapp.net",
@@ -81,7 +81,7 @@ controller_details = azure_nextgen.delegatednetwork.ControllerDetails("controlle
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const controllerDetails = new azure_nextgen.delegatednetwork.ControllerDetails("controllerDetails", {
+const controllerDetails = new azure_nextgen.delegatednetwork.v20200808preview.ControllerDetails("controllerDetails", {
     controllerType: "Kubernetes",
     kubernetesProperties: [{
         apiServerEndpoint: "https://testk8s.cloudapp.net",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dashboard = new AzureNextGen.Portal.Dashboard("dashboard", new AzureNextGen.Portal.DashboardArgs
+        var dashboard = new AzureNextGen.Portal.V20200901Preview.Dashboard("dashboard", new AzureNextGen.Portal.V20200901Preview.DashboardArgs
         {
             DashboardName = "testDashboard",
             Lenses = 
@@ -100,7 +100,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dashboard = azure_nextgen.portal.Dashboard("dashboard",
+dashboard = azure_nextgen.portal.v20200901preview.Dashboard("dashboard",
     dashboard_name="testDashboard",
     lenses=[
         {
@@ -154,7 +154,7 @@ dashboard = azure_nextgen.portal.Dashboard("dashboard",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dashboard = new azure_nextgen.portal.Dashboard("dashboard", {
+const dashboard = new azure_nextgen.portal.v20200901preview.Dashboard("dashboard", {
     dashboardName: "testDashboard",
     lenses: [
         {

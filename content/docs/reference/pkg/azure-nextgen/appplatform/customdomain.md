@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var customDomain = new AzureNextGen.Appplatform.CustomDomain("customDomain", new AzureNextGen.Appplatform.CustomDomainArgs
+        var customDomain = new AzureNextGen.AppPlatform.Latest.CustomDomain("customDomain", new AzureNextGen.AppPlatform.Latest.CustomDomainArgs
         {
             AppName = "myapp",
             DomainName = "mydomain.com",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-custom_domain = azure_nextgen.appplatform.CustomDomain("customDomain",
+custom_domain = azure_nextgen.appplatform.latest.CustomDomain("customDomain",
     app_name="myapp",
     domain_name="mydomain.com",
     resource_group_name="myResourceGroup",
@@ -67,7 +67,7 @@ custom_domain = azure_nextgen.appplatform.CustomDomain("customDomain",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const customDomain = new azure_nextgen.appplatform.CustomDomain("customDomain", {
+const customDomain = new azure_nextgen.appplatform.latest.CustomDomain("customDomain", {
     appName: "myapp",
     domainName: "mydomain.com",
     resourceGroupName: "myResourceGroup",

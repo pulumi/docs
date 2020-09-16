@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var query = new AzureNextGen.Insights.Query("query", new AzureNextGen.Insights.QueryArgs
+        var query = new AzureNextGen.Insights.V20190901Preview.Query("query", new AzureNextGen.Insights.V20190901Preview.QueryArgs
         {
             Body = @"let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
@@ -45,7 +45,7 @@ exceptions
             DisplayName = "Exceptions - New in the last 24 hours",
             Id = "a449f8af-8e64-4b3a-9b16-5a7165ff98c4",
             QueryPackName = "my-querypack",
-            Related = new AzureNextGen.Insights.Inputs.LogAnalyticsQueryPackQueryPropertiesRelatedArgs
+            Related = new AzureNextGen.Insights.V20190901Preview.Inputs.LogAnalyticsQueryPackQueryPropertiesRelatedArgs
             {
                 Categories = 
                 {
@@ -83,7 +83,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-query = azure_nextgen.insights.Query("query",
+query = azure_nextgen.insights.v20190901preview.Query("query",
     body="""let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
 exceptions
@@ -120,7 +120,7 @@ exceptions
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const query = new azure_nextgen.insights.Query("query", {
+const query = new azure_nextgen.insights.v20190901preview.Query("query", {
     body: `let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
 exceptions

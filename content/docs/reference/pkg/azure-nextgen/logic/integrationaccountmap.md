@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountMap = new AzureNextGen.Logic.IntegrationAccountMap("integrationAccountMap", new AzureNextGen.Logic.IntegrationAccountMapArgs
+        var integrationAccountMap = new AzureNextGen.Logic.Latest.IntegrationAccountMap("integrationAccountMap", new AzureNextGen.Logic.Latest.IntegrationAccountMapArgs
         {
             Content = @"<?xml version=""1.0"" encoding=""UTF-16""?>
 <xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0 userCSharp"" version=""1.0"" xmlns:ns0=""http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema"" xmlns:s0=""http://BizTalk_Server_Project4.StringFunctoidsSourceSchema"" xmlns:userCSharp=""http://schemas.microsoft.com/BizTalk/2003/userCSharp"">
@@ -106,7 +106,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_map = azure_nextgen.logic.IntegrationAccountMap("integrationAccountMap",
+integration_account_map = azure_nextgen.logic.latest.IntegrationAccountMap("integrationAccountMap",
     content="""<?xml version="1.0" encoding="UTF-16"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:var="http://schemas.microsoft.com/BizTalk/2003/var" exclude-result-prefixes="msxsl var s0 userCSharp" version="1.0" xmlns:ns0="http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema" xmlns:s0="http://BizTalk_Server_Project4.StringFunctoidsSourceSchema" xmlns:userCSharp="http://schemas.microsoft.com/BizTalk/2003/userCSharp">
   <xsl:import href="http://btsfunctoids.blob.core.windows.net/functoids/functoids.xslt" />
@@ -177,7 +177,7 @@ integration_account_map = azure_nextgen.logic.IntegrationAccountMap("integration
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationAccountMap = new azure_nextgen.logic.IntegrationAccountMap("integrationAccountMap", {
+const integrationAccountMap = new azure_nextgen.logic.latest.IntegrationAccountMap("integrationAccountMap", {
     content: `<?xml version="1.0" encoding="UTF-16"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:var="http://schemas.microsoft.com/BizTalk/2003/var" exclude-result-prefixes="msxsl var s0 userCSharp" version="1.0" xmlns:ns0="http://BizTalk_Server_Project4.StringFunctoidsDestinationSchema" xmlns:s0="http://BizTalk_Server_Project4.StringFunctoidsSourceSchema" xmlns:userCSharp="http://schemas.microsoft.com/BizTalk/2003/userCSharp">
   <xsl:import href="http://btsfunctoids.blob.core.windows.net/functoids/functoids.xslt" />

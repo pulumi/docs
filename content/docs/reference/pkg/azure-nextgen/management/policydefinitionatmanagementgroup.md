@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyDefinitionAtManagementGroup = new AzureNextGen.Management.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", new AzureNextGen.Management.PolicyDefinitionAtManagementGroupArgs
+        var policyDefinitionAtManagementGroup = new AzureNextGen.Management.Latest.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", new AzureNextGen.Management.Latest.PolicyDefinitionAtManagementGroupArgs
         {
             Description = "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
             DisplayName = "Enforce resource naming convention",
@@ -38,18 +38,18 @@ class MyStack : Stack
             Mode = "All",
             Parameters = 
             {
-                { "prefix", new AzureNextGen.Management.Inputs.ParameterDefinitionsValueArgs
+                { "prefix", new AzureNextGen.Management.Latest.Inputs.ParameterDefinitionsValueArgs
                 {
-                    Metadata = new AzureNextGen.Management.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Management.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         Description = "Resource name prefix",
                         DisplayName = "Prefix",
                     },
                     Type = "String",
                 } },
-                { "suffix", new AzureNextGen.Management.Inputs.ParameterDefinitionsValueArgs
+                { "suffix", new AzureNextGen.Management.Latest.Inputs.ParameterDefinitionsValueArgs
                 {
-                    Metadata = new AzureNextGen.Management.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Management.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         Description = "Resource name suffix",
                         DisplayName = "Suffix",
@@ -92,7 +92,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_definition_at_management_group = azure_nextgen.management.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup",
+policy_definition_at_management_group = azure_nextgen.management.latest.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup",
     description="Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
     display_name="Enforce resource naming convention",
     management_group_id="MyManagementGroup",
@@ -139,7 +139,7 @@ policy_definition_at_management_group = azure_nextgen.management.PolicyDefinitio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policyDefinitionAtManagementGroup = new azure_nextgen.management.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", {
+const policyDefinitionAtManagementGroup = new azure_nextgen.management.latest.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", {
     description: "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
     displayName: "Enforce resource naming convention",
     managementGroupId: "MyManagementGroup",

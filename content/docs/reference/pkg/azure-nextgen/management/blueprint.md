@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blueprint = new AzureNextGen.Management.Blueprint("blueprint", new AzureNextGen.Management.BlueprintArgs
+        var blueprint = new AzureNextGen.Management.V20171111Preview.Blueprint("blueprint", new AzureNextGen.Management.V20171111Preview.BlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             Description = "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
             ManagementGroupName = "ContosoOnlineGroup",
             Parameters = 
             {
-                { "costCenter", new AzureNextGen.Management.Inputs.ParameterDefinitionArgs
+                { "costCenter", new AzureNextGen.Management.V20171111Preview.Inputs.ParameterDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -41,7 +41,7 @@ class MyStack : Stack
                     },
                     Type = "string",
                 } },
-                { "owners", new AzureNextGen.Management.Inputs.ParameterDefinitionArgs
+                { "owners", new AzureNextGen.Management.V20171111Preview.Inputs.ParameterDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -49,7 +49,7 @@ class MyStack : Stack
                     },
                     Type = "array",
                 } },
-                { "storageAccountType", new AzureNextGen.Management.Inputs.ParameterDefinitionArgs
+                { "storageAccountType", new AzureNextGen.Management.V20171111Preview.Inputs.ParameterDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -60,7 +60,7 @@ class MyStack : Stack
             },
             ResourceGroups = 
             {
-                { "storageRG", new AzureNextGen.Management.Inputs.ResourceGroupDefinitionArgs
+                { "storageRG", new AzureNextGen.Management.V20171111Preview.Inputs.ResourceGroupDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -89,7 +89,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blueprint = azure_nextgen.management.Blueprint("blueprint",
+blueprint = azure_nextgen.management.v20171111preview.Blueprint("blueprint",
     blueprint_name="simpleBlueprint",
     description="blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     management_group_name="ContosoOnlineGroup",
@@ -133,7 +133,7 @@ blueprint = azure_nextgen.management.Blueprint("blueprint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const blueprint = new azure_nextgen.management.Blueprint("blueprint", {
+const blueprint = new azure_nextgen.management.v20171111preview.Blueprint("blueprint", {
     blueprintName: "simpleBlueprint",
     description: "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     managementGroupName: "ContosoOnlineGroup",

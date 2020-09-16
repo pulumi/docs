@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ddosCustomPolicy = new AzureNextGen.Network.DdosCustomPolicy("ddosCustomPolicy", new AzureNextGen.Network.DdosCustomPolicyArgs
+        var ddosCustomPolicy = new AzureNextGen.Network.Latest.DdosCustomPolicy("ddosCustomPolicy", new AzureNextGen.Network.Latest.DdosCustomPolicyArgs
         {
             DdosCustomPolicyName = "test-ddos-custom-policy",
             Location = "centraluseuap",
             ProtocolCustomSettings = 
             {
-                new AzureNextGen.Network.Inputs.ProtocolCustomSettingsFormatArgs
+                new AzureNextGen.Network.Latest.Inputs.ProtocolCustomSettingsFormatArgs
                 {
                     Protocol = "Tcp",
                 },
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ddos_custom_policy = azure_nextgen.network.DdosCustomPolicy("ddosCustomPolicy",
+ddos_custom_policy = azure_nextgen.network.latest.DdosCustomPolicy("ddosCustomPolicy",
     ddos_custom_policy_name="test-ddos-custom-policy",
     location="centraluseuap",
     protocol_custom_settings=[{
@@ -75,7 +75,7 @@ ddos_custom_policy = azure_nextgen.network.DdosCustomPolicy("ddosCustomPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const ddosCustomPolicy = new azure_nextgen.network.DdosCustomPolicy("ddosCustomPolicy", {
+const ddosCustomPolicy = new azure_nextgen.network.latest.DdosCustomPolicy("ddosCustomPolicy", {
     ddosCustomPolicyName: "test-ddos-custom-policy",
     location: "centraluseuap",
     protocolCustomSettings: [{

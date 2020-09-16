@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var elasticPool = new AzureNextGen.Sql.ElasticPool("elasticPool", new AzureNextGen.Sql.ElasticPoolArgs
+        var elasticPool = new AzureNextGen.Sql.Latest.ElasticPool("elasticPool", new AzureNextGen.Sql.Latest.ElasticPoolArgs
         {
             DatabaseDtuMax = 5,
             DatabaseDtuMin = 0,
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-elastic_pool = azure_nextgen.sql.ElasticPool("elasticPool",
+elastic_pool = azure_nextgen.sql.latest.ElasticPool("elasticPool",
     database_dtu_max=5,
     database_dtu_min=0,
     dtu=50,
@@ -77,7 +77,7 @@ elastic_pool = azure_nextgen.sql.ElasticPool("elasticPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const elasticPool = new azure_nextgen.sql.ElasticPool("elasticPool", {
+const elasticPool = new azure_nextgen.sql.latest.ElasticPool("elasticPool", {
     databaseDtuMax: 5,
     databaseDtuMin: 0,
     dtu: 50,
@@ -103,7 +103,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var elasticPool = new AzureNextGen.Sql.ElasticPool("elasticPool", new AzureNextGen.Sql.ElasticPoolArgs
+        var elasticPool = new AzureNextGen.Sql.Latest.ElasticPool("elasticPool", new AzureNextGen.Sql.Latest.ElasticPoolArgs
         {
             ElasticPoolName = "sqlcrudtest-8102",
             Location = "Japan East",
@@ -128,7 +128,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-elastic_pool = azure_nextgen.sql.ElasticPool("elasticPool",
+elastic_pool = azure_nextgen.sql.latest.ElasticPool("elasticPool",
     elastic_pool_name="sqlcrudtest-8102",
     location="Japan East",
     resource_group_name="sqlcrudtest-2369",
@@ -144,7 +144,7 @@ elastic_pool = azure_nextgen.sql.ElasticPool("elasticPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const elasticPool = new azure_nextgen.sql.ElasticPool("elasticPool", {
+const elasticPool = new azure_nextgen.sql.latest.ElasticPool("elasticPool", {
     elasticPoolName: "sqlcrudtest-8102",
     location: "Japan East",
     resourceGroupName: "sqlcrudtest-2369",

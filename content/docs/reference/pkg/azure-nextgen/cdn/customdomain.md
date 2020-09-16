@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var customDomain = new AzureNextGen.Cdn.CustomDomain("customDomain", new AzureNextGen.Cdn.CustomDomainArgs
+        var customDomain = new AzureNextGen.Cdn.Latest.CustomDomain("customDomain", new AzureNextGen.Cdn.Latest.CustomDomainArgs
         {
             CustomDomainName = "www-someDomain-net",
             EndpointName = "endpoint1",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-custom_domain = azure_nextgen.cdn.CustomDomain("customDomain",
+custom_domain = azure_nextgen.cdn.latest.CustomDomain("customDomain",
     custom_domain_name="www-someDomain-net",
     endpoint_name="endpoint1",
     host_name="www.someDomain.net",
@@ -69,7 +69,7 @@ custom_domain = azure_nextgen.cdn.CustomDomain("customDomain",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const customDomain = new azure_nextgen.cdn.CustomDomain("customDomain", {
+const customDomain = new azure_nextgen.cdn.latest.CustomDomain("customDomain", {
     customDomainName: "www-someDomain-net",
     endpointName: "endpoint1",
     hostName: "www.someDomain.net",

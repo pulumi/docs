@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replication = new AzureNextGen.Containerregistry.Replication("replication", new AzureNextGen.Containerregistry.ReplicationArgs
+        var replication = new AzureNextGen.ContainerRegistry.Latest.Replication("replication", new AzureNextGen.ContainerRegistry.Latest.ReplicationArgs
         {
             Location = "eastus",
             RegistryName = "myRegistry",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication = azure_nextgen.containerregistry.Replication("replication",
+replication = azure_nextgen.containerregistry.latest.Replication("replication",
     location="eastus",
     registry_name="myRegistry",
     replication_name="myReplication",
@@ -74,7 +74,7 @@ replication = azure_nextgen.containerregistry.Replication("replication",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const replication = new azure_nextgen.containerregistry.Replication("replication", {
+const replication = new azure_nextgen.containerregistry.latest.Replication("replication", {
     location: "eastus",
     registryName: "myRegistry",
     replicationName: "myReplication",

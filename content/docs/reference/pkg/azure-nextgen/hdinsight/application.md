@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.Hdinsight.Application("application", new AzureNextGen.Hdinsight.ApplicationArgs
+        var application = new AzureNextGen.HDInsight.V20180601Preview.Application("application", new AzureNextGen.HDInsight.V20180601Preview.ApplicationArgs
         {
             ApplicationName = "hue",
             ClusterName = "cluster1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.hdinsight.Application("application",
+application = azure_nextgen.hdinsight.v20180601preview.Application("application",
     application_name="hue",
     cluster_name="cluster1",
     resource_group_name="rg1")
@@ -65,7 +65,7 @@ application = azure_nextgen.hdinsight.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const application = new azure_nextgen.hdinsight.Application("application", {
+const application = new azure_nextgen.hdinsight.v20180601preview.Application("application", {
     applicationName: "hue",
     clusterName: "cluster1",
     resourceGroupName: "rg1",

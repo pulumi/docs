@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Dbforpostgresql.Server("server", new AzureNextGen.Dbforpostgresql.ServerArgs
+        var server = new AzureNextGen.DBforPostgreSQL.Latest.Server("server", new AzureNextGen.DBforPostgreSQL.Latest.ServerArgs
         {
             Location = "brazilsouth",
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
-            Sku = new AzureNextGen.Dbforpostgresql.Inputs.SkuArgs
+            Sku = new AzureNextGen.DBforPostgreSQL.Latest.Inputs.SkuArgs
             {
                 Capacity = 2,
                 Family = "Gen5",
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbforpostgresql.Server("server",
+server = azure_nextgen.dbforpostgresql.latest.Server("server",
     location="brazilsouth",
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
@@ -85,7 +85,7 @@ server = azure_nextgen.dbforpostgresql.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const server = new azure_nextgen.dbforpostgresql.Server("server", {
+const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "brazilsouth",
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",
@@ -114,12 +114,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Dbforpostgresql.Server("server", new AzureNextGen.Dbforpostgresql.ServerArgs
+        var server = new AzureNextGen.DBforPostgreSQL.Latest.Server("server", new AzureNextGen.DBforPostgreSQL.Latest.ServerArgs
         {
             Location = "westus",
             ResourceGroupName = "TestGroup",
             ServerName = "pgtestsvc4",
-            Sku = new AzureNextGen.Dbforpostgresql.Inputs.SkuArgs
+            Sku = new AzureNextGen.DBforPostgreSQL.Latest.Inputs.SkuArgs
             {
                 Capacity = 2,
                 Family = "Gen5",
@@ -149,7 +149,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbforpostgresql.Server("server",
+server = azure_nextgen.dbforpostgresql.latest.Server("server",
     location="westus",
     resource_group_name="TestGroup",
     server_name="pgtestsvc4",
@@ -173,7 +173,7 @@ server = azure_nextgen.dbforpostgresql.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const server = new azure_nextgen.dbforpostgresql.Server("server", {
+const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "westus",
     resourceGroupName: "TestGroup",
     serverName: "pgtestsvc4",
@@ -202,12 +202,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Dbforpostgresql.Server("server", new AzureNextGen.Dbforpostgresql.ServerArgs
+        var server = new AzureNextGen.DBforPostgreSQL.Latest.Server("server", new AzureNextGen.DBforPostgreSQL.Latest.ServerArgs
         {
             Location = "westcentralus",
             ResourceGroupName = "TestGroup_WestCentralUS",
             ServerName = "testserver-replica1",
-            Sku = new AzureNextGen.Dbforpostgresql.Inputs.SkuArgs
+            Sku = new AzureNextGen.DBforPostgreSQL.Latest.Inputs.SkuArgs
             {
                 Capacity = 2,
                 Family = "Gen5",
@@ -233,7 +233,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbforpostgresql.Server("server",
+server = azure_nextgen.dbforpostgresql.latest.Server("server",
     location="westcentralus",
     resource_group_name="TestGroup_WestCentralUS",
     server_name="testserver-replica1",
@@ -254,7 +254,7 @@ server = azure_nextgen.dbforpostgresql.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const server = new azure_nextgen.dbforpostgresql.Server("server", {
+const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "westcentralus",
     resourceGroupName: "TestGroup_WestCentralUS",
     serverName: "testserver-replica1",
@@ -280,12 +280,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Dbforpostgresql.Server("server", new AzureNextGen.Dbforpostgresql.ServerArgs
+        var server = new AzureNextGen.DBforPostgreSQL.Latest.Server("server", new AzureNextGen.DBforPostgreSQL.Latest.ServerArgs
         {
             Location = "westus",
             ResourceGroupName = "TargetResourceGroup",
             ServerName = "targetserver",
-            Sku = new AzureNextGen.Dbforpostgresql.Inputs.SkuArgs
+            Sku = new AzureNextGen.DBforPostgreSQL.Latest.Inputs.SkuArgs
             {
                 Capacity = 2,
                 Family = "Gen5",
@@ -315,7 +315,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.dbforpostgresql.Server("server",
+server = azure_nextgen.dbforpostgresql.latest.Server("server",
     location="westus",
     resource_group_name="TargetResourceGroup",
     server_name="targetserver",
@@ -339,7 +339,7 @@ server = azure_nextgen.dbforpostgresql.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const server = new azure_nextgen.dbforpostgresql.Server("server", {
+const server = new azure_nextgen.dbforpostgresql.latest.Server("server", {
     location: "westus",
     resourceGroupName: "TargetResourceGroup",
     serverName: "targetserver",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var digitalTwinsEndpoint = new AzureNextGen.Digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.Digitaltwins.DigitalTwinsEndpointArgs
+        var digitalTwinsEndpoint = new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNextGen.DigitalTwins.Latest.DigitalTwinsEndpointArgs
         {
             EndpointName = "myServiceBus",
             ResourceGroupName = "resRg",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-digital_twins_endpoint = azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
+digital_twins_endpoint = azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint",
     endpoint_name="myServiceBus",
     resource_group_name="resRg",
     resource_name="myDigitalTwinsService")
@@ -65,7 +65,7 @@ digital_twins_endpoint = azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digita
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
+const digitalTwinsEndpoint = new azure_nextgen.digitaltwins.latest.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
     endpointName: "myServiceBus",
     resourceGroupName: "resRg",
     resourceName: "myDigitalTwinsService",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var shareSubscription = new AzureNextGen.Datashare.ShareSubscription("shareSubscription", new AzureNextGen.Datashare.ShareSubscriptionArgs
+        var shareSubscription = new AzureNextGen.DataShare.Latest.ShareSubscription("shareSubscription", new AzureNextGen.DataShare.Latest.ShareSubscriptionArgs
         {
             AccountName = "Account1",
             InvitationId = "12345678-1234-1234-12345678abd",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-share_subscription = azure_nextgen.datashare.ShareSubscription("shareSubscription",
+share_subscription = azure_nextgen.datashare.latest.ShareSubscription("shareSubscription",
     account_name="Account1",
     invitation_id="12345678-1234-1234-12345678abd",
     resource_group_name="SampleResourceGroup",
@@ -69,7 +69,7 @@ share_subscription = azure_nextgen.datashare.ShareSubscription("shareSubscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const shareSubscription = new azure_nextgen.datashare.ShareSubscription("shareSubscription", {
+const shareSubscription = new azure_nextgen.datashare.latest.ShareSubscription("shareSubscription", {
     accountName: "Account1",
     invitationId: "12345678-1234-1234-12345678abd",
     resourceGroupName: "SampleResourceGroup",

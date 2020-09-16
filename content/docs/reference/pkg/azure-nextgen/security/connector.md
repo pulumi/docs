@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connector = new AzureNextGen.Security.Connector("connector", new AzureNextGen.Security.ConnectorArgs
+        var connector = new AzureNextGen.Security.V20200101Preview.Connector("connector", new AzureNextGen.Security.V20200101Preview.ConnectorArgs
         {
             AuthenticationDetails = 
             {
@@ -35,17 +35,17 @@ class MyStack : Stack
                 { "awsExternalId", "20ff7fc3-e762-44dd-bd96-b71116dcdc23" },
             },
             ConnectorName = "aws_dev2",
-            HybridComputeSettings = new AzureNextGen.Security.Inputs.HybridComputeSettingsPropertiesArgs
+            HybridComputeSettings = new AzureNextGen.Security.V20200101Preview.Inputs.HybridComputeSettingsPropertiesArgs
             {
                 AutoProvision = "On",
-                ProxyServer = new AzureNextGen.Security.Inputs.ProxyServerPropertiesArgs
+                ProxyServer = new AzureNextGen.Security.V20200101Preview.Inputs.ProxyServerPropertiesArgs
                 {
                     Ip = "167.220.197.140",
                     Port = "34",
                 },
                 Region = "West US 2",
                 ResourceGroupName = "AwsConnectorRG",
-                ServicePrincipal = new AzureNextGen.Security.Inputs.ServicePrincipalPropertiesArgs
+                ServicePrincipal = new AzureNextGen.Security.V20200101Preview.Inputs.ServicePrincipalPropertiesArgs
                 {
                     ApplicationId = "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
                     Secret = "x2yS:FnCHssRkH0@CJY5pATzlEs@r5m.",
@@ -70,7 +70,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector = azure_nextgen.security.Connector("connector",
+connector = azure_nextgen.security.v20200101preview.Connector("connector",
     authentication_details={
         "authenticationType": "awsAssumeRole",
         "awsAssumeRoleArn": "arn:aws:iam::81231569658:role/AscConnector",
@@ -101,7 +101,7 @@ connector = azure_nextgen.security.Connector("connector",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connector = new azure_nextgen.security.Connector("connector", {
+const connector = new azure_nextgen.security.v20200101preview.Connector("connector", {
     authenticationDetails: {
         authenticationType: "awsAssumeRole",
         awsAssumeRoleArn: "arn:aws:iam::81231569658:role/AscConnector",
@@ -137,7 +137,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connector = new AzureNextGen.Security.Connector("connector", new AzureNextGen.Security.ConnectorArgs
+        var connector = new AzureNextGen.Security.V20200101Preview.Connector("connector", new AzureNextGen.Security.V20200101Preview.ConnectorArgs
         {
             AuthenticationDetails = 
             {
@@ -146,17 +146,17 @@ class MyStack : Stack
                 { "awsSecretAccessKey", "aF6CjwMAUR5b4lmZN7e8gVi0My+JAWzMeiqDR2o7" },
             },
             ConnectorName = "aws_dev1",
-            HybridComputeSettings = new AzureNextGen.Security.Inputs.HybridComputeSettingsPropertiesArgs
+            HybridComputeSettings = new AzureNextGen.Security.V20200101Preview.Inputs.HybridComputeSettingsPropertiesArgs
             {
                 AutoProvision = "On",
-                ProxyServer = new AzureNextGen.Security.Inputs.ProxyServerPropertiesArgs
+                ProxyServer = new AzureNextGen.Security.V20200101Preview.Inputs.ProxyServerPropertiesArgs
                 {
                     Ip = "167.220.197.140",
                     Port = "34",
                 },
                 Region = "West US 2",
                 ResourceGroupName = "AwsConnectorRG",
-                ServicePrincipal = new AzureNextGen.Security.Inputs.ServicePrincipalPropertiesArgs
+                ServicePrincipal = new AzureNextGen.Security.V20200101Preview.Inputs.ServicePrincipalPropertiesArgs
                 {
                     ApplicationId = "ad9bcd79-be9c-45ab-abd8-80ca1654a7d1",
                     Secret = "x2yS:FnCHssRkH0@CJY5pATzlEs@r5m.",
@@ -181,7 +181,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector = azure_nextgen.security.Connector("connector",
+connector = azure_nextgen.security.v20200101preview.Connector("connector",
     authentication_details={
         "authenticationType": "awsCreds",
         "awsAccessKeyId": "AKIARPZCNODDNAEQFSOE",
@@ -212,7 +212,7 @@ connector = azure_nextgen.security.Connector("connector",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connector = new azure_nextgen.security.Connector("connector", {
+const connector = new azure_nextgen.security.v20200101preview.Connector("connector", {
     authenticationDetails: {
         authenticationType: "awsCreds",
         awsAccessKeyId: "AKIARPZCNODDNAEQFSOE",
@@ -248,7 +248,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connector = new AzureNextGen.Security.Connector("connector", new AzureNextGen.Security.ConnectorArgs
+        var connector = new AzureNextGen.Security.V20200101Preview.Connector("connector", new AzureNextGen.Security.V20200101Preview.ConnectorArgs
         {
             AuthenticationDetails = 
             {
@@ -294,7 +294,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
                 { "type", "service_account" },
             },
             ConnectorName = "gcp_dev",
-            HybridComputeSettings = new AzureNextGen.Security.Inputs.HybridComputeSettingsPropertiesArgs
+            HybridComputeSettings = new AzureNextGen.Security.V20200101Preview.Inputs.HybridComputeSettingsPropertiesArgs
             {
                 AutoProvision = "Off",
             },
@@ -317,7 +317,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector = azure_nextgen.security.Connector("connector",
+connector = azure_nextgen.security.v20200101preview.Connector("connector",
     authentication_details={
         "authProviderX509CertUrl": "https://www.googleapis.com/oauth2/v1/certs",
         "authUri": "https://accounts.google.com/o/oauth2/auth",
@@ -375,7 +375,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connector = new azure_nextgen.security.Connector("connector", {
+const connector = new azure_nextgen.security.v20200101preview.Connector("connector", {
     authenticationDetails: {
         authProviderX509CertUrl: "https://www.googleapis.com/oauth2/v1/certs",
         authUri: "https://accounts.google.com/o/oauth2/auth",

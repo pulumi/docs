@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policySetDefinitionAtManagementGroup = new AzureNextGen.Management.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", new AzureNextGen.Management.PolicySetDefinitionAtManagementGroupArgs
+        var policySetDefinitionAtManagementGroup = new AzureNextGen.Management.Latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", new AzureNextGen.Management.Latest.PolicySetDefinitionAtManagementGroupArgs
         {
             Description = "Policies to enforce low cost storage SKUs",
             DisplayName = "Cost Management",
@@ -37,11 +37,11 @@ class MyStack : Stack
             },
             PolicyDefinitions = 
             {
-                new AzureNextGen.Management.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Management.Latest.Inputs.PolicyDefinitionReferenceArgs
                 {
                     Parameters = 
                     {
-                        { "listOfAllowedSKUs", new AzureNextGen.Management.Inputs.ParameterValuesValueArgs
+                        { "listOfAllowedSKUs", new AzureNextGen.Management.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = 
                             {
@@ -53,15 +53,15 @@ class MyStack : Stack
                     PolicyDefinitionId = "/providers/Microsoft.Management/managementgroups/MyManagementGroup/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
                     PolicyDefinitionReferenceId = "Limit_Skus",
                 },
-                new AzureNextGen.Management.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Management.Latest.Inputs.PolicyDefinitionReferenceArgs
                 {
                     Parameters = 
                     {
-                        { "prefix", new AzureNextGen.Management.Inputs.ParameterValuesValueArgs
+                        { "prefix", new AzureNextGen.Management.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = "DeptA",
                         } },
-                        { "suffix", new AzureNextGen.Management.Inputs.ParameterValuesValueArgs
+                        { "suffix", new AzureNextGen.Management.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = "-LC",
                         } },
@@ -90,7 +90,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_set_definition_at_management_group = azure_nextgen.management.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup",
+policy_set_definition_at_management_group = azure_nextgen.management.latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup",
     description="Policies to enforce low cost storage SKUs",
     display_name="Cost Management",
     management_group_id="MyManagementGroup",
@@ -135,7 +135,7 @@ policy_set_definition_at_management_group = azure_nextgen.management.PolicySetDe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policySetDefinitionAtManagementGroup = new azure_nextgen.management.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", {
+const policySetDefinitionAtManagementGroup = new azure_nextgen.management.latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", {
     description: "Policies to enforce low cost storage SKUs",
     displayName: "Cost Management",
     managementGroupId: "MyManagementGroup",
@@ -185,7 +185,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policySetDefinitionAtManagementGroup = new AzureNextGen.Management.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", new AzureNextGen.Management.PolicySetDefinitionAtManagementGroupArgs
+        var policySetDefinitionAtManagementGroup = new AzureNextGen.Management.Latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", new AzureNextGen.Management.Latest.PolicySetDefinitionAtManagementGroupArgs
         {
             Description = "Policies to enforce low cost storage SKUs",
             DisplayName = "Cost Management",
@@ -196,13 +196,13 @@ class MyStack : Stack
             },
             PolicyDefinitionGroups = 
             {
-                new AzureNextGen.Management.Inputs.PolicyDefinitionGroupArgs
+                new AzureNextGen.Management.Latest.Inputs.PolicyDefinitionGroupArgs
                 {
                     Description = "Policies designed to control spend within a subscription.",
                     DisplayName = "Cost Management Policies",
                     Name = "CostSaving",
                 },
-                new AzureNextGen.Management.Inputs.PolicyDefinitionGroupArgs
+                new AzureNextGen.Management.Latest.Inputs.PolicyDefinitionGroupArgs
                 {
                     Description = "Policies that help enforce resource organization standards within a subscription.",
                     DisplayName = "Organizational Policies",
@@ -211,7 +211,7 @@ class MyStack : Stack
             },
             PolicyDefinitions = 
             {
-                new AzureNextGen.Management.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Management.Latest.Inputs.PolicyDefinitionReferenceArgs
                 {
                     GroupNames = 
                     {
@@ -219,7 +219,7 @@ class MyStack : Stack
                     },
                     Parameters = 
                     {
-                        { "listOfAllowedSKUs", new AzureNextGen.Management.Inputs.ParameterValuesValueArgs
+                        { "listOfAllowedSKUs", new AzureNextGen.Management.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = 
                             {
@@ -231,7 +231,7 @@ class MyStack : Stack
                     PolicyDefinitionId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
                     PolicyDefinitionReferenceId = "Limit_Skus",
                 },
-                new AzureNextGen.Management.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Management.Latest.Inputs.PolicyDefinitionReferenceArgs
                 {
                     GroupNames = 
                     {
@@ -239,11 +239,11 @@ class MyStack : Stack
                     },
                     Parameters = 
                     {
-                        { "prefix", new AzureNextGen.Management.Inputs.ParameterValuesValueArgs
+                        { "prefix", new AzureNextGen.Management.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = "DeptA",
                         } },
-                        { "suffix", new AzureNextGen.Management.Inputs.ParameterValuesValueArgs
+                        { "suffix", new AzureNextGen.Management.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = "-LC",
                         } },
@@ -272,7 +272,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_set_definition_at_management_group = azure_nextgen.management.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup",
+policy_set_definition_at_management_group = azure_nextgen.management.latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup",
     description="Policies to enforce low cost storage SKUs",
     display_name="Cost Management",
     management_group_id="MyManagementGroup",
@@ -331,7 +331,7 @@ policy_set_definition_at_management_group = azure_nextgen.management.PolicySetDe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policySetDefinitionAtManagementGroup = new azure_nextgen.management.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", {
+const policySetDefinitionAtManagementGroup = new azure_nextgen.management.latest.PolicySetDefinitionAtManagementGroup("policySetDefinitionAtManagementGroup", {
     description: "Policies to enforce low cost storage SKUs",
     displayName: "Cost Management",
     managementGroupId: "MyManagementGroup",

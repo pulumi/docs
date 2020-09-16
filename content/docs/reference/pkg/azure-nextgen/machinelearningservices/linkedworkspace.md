@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedWorkspace = new AzureNextGen.Machinelearningservices.LinkedWorkspace("linkedWorkspace", new AzureNextGen.Machinelearningservices.LinkedWorkspaceArgs
+        var linkedWorkspace = new AzureNextGen.MachineLearningServices.Latest.LinkedWorkspace("linkedWorkspace", new AzureNextGen.MachineLearningServices.Latest.LinkedWorkspaceArgs
         {
             LinkName = "link-1",
             Name = "link-1",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_workspace = azure_nextgen.machinelearningservices.LinkedWorkspace("linkedWorkspace",
+linked_workspace = azure_nextgen.machinelearningservices.latest.LinkedWorkspace("linkedWorkspace",
     link_name="link-1",
     name="link-1",
     resource_group_name="resourceGroup-1",
@@ -67,7 +67,7 @@ linked_workspace = azure_nextgen.machinelearningservices.LinkedWorkspace("linked
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const linkedWorkspace = new azure_nextgen.machinelearningservices.LinkedWorkspace("linkedWorkspace", {
+const linkedWorkspace = new azure_nextgen.machinelearningservices.latest.LinkedWorkspace("linkedWorkspace", {
     linkName: "link-1",
     name: "link-1",
     resourceGroupName: "resourceGroup-1",

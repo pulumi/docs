@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancePool = new AzureNextGen.Sql.InstancePool("instancePool", new AzureNextGen.Sql.InstancePoolArgs
+        var instancePool = new AzureNextGen.Sql.V20180601Preview.InstancePool("instancePool", new AzureNextGen.Sql.V20180601Preview.InstancePoolArgs
         {
             InstancePoolName = "testIP",
             LicenseType = "LicenseIncluded",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.Sql.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql.V20180601Preview.Inputs.SkuArgs
             {
                 Family = "Gen5",
                 Name = "GP_Gen5",
@@ -62,7 +62,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-instance_pool = azure_nextgen.sql.InstancePool("instancePool",
+instance_pool = azure_nextgen.sql.v20180601preview.InstancePool("instancePool",
     instance_pool_name="testIP",
     license_type="LicenseIncluded",
     resource_group_name="group1",
@@ -87,7 +87,7 @@ instance_pool = azure_nextgen.sql.InstancePool("instancePool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const instancePool = new azure_nextgen.sql.InstancePool("instancePool", {
+const instancePool = new azure_nextgen.sql.v20180601preview.InstancePool("instancePool", {
     instancePoolName: "testIP",
     licenseType: "LicenseIncluded",
     resourceGroupName: "group1",
@@ -117,12 +117,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancePool = new AzureNextGen.Sql.InstancePool("instancePool", new AzureNextGen.Sql.InstancePoolArgs
+        var instancePool = new AzureNextGen.Sql.V20180601Preview.InstancePool("instancePool", new AzureNextGen.Sql.V20180601Preview.InstancePoolArgs
         {
             InstancePoolName = "testIP",
             LicenseType = "LicenseIncluded",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.Sql.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql.V20180601Preview.Inputs.SkuArgs
             {
                 Family = "Gen5",
                 Name = "GP_Gen5",
@@ -149,7 +149,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-instance_pool = azure_nextgen.sql.InstancePool("instancePool",
+instance_pool = azure_nextgen.sql.v20180601preview.InstancePool("instancePool",
     instance_pool_name="testIP",
     license_type="LicenseIncluded",
     resource_group_name="group1",
@@ -171,7 +171,7 @@ instance_pool = azure_nextgen.sql.InstancePool("instancePool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const instancePool = new azure_nextgen.sql.InstancePool("instancePool", {
+const instancePool = new azure_nextgen.sql.v20180601preview.InstancePool("instancePool", {
     instancePoolName: "testIP",
     licenseType: "LicenseIncluded",
     resourceGroupName: "group1",

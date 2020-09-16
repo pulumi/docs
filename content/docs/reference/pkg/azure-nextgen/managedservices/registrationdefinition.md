@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registrationDefinition = new AzureNextGen.Managedservices.RegistrationDefinition("registrationDefinition", new AzureNextGen.Managedservices.RegistrationDefinitionArgs
+        var registrationDefinition = new AzureNextGen.ManagedServices.Latest.RegistrationDefinition("registrationDefinition", new AzureNextGen.ManagedServices.Latest.RegistrationDefinitionArgs
         {
-            Plan = new AzureNextGen.Managedservices.Inputs.PlanArgs
+            Plan = new AzureNextGen.ManagedServices.Latest.Inputs.PlanArgs
             {
                 Name = "addesai-plan",
                 Product = "test",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registration_definition = azure_nextgen.managedservices.RegistrationDefinition("registrationDefinition",
+registration_definition = azure_nextgen.managedservices.latest.RegistrationDefinition("registrationDefinition",
     plan={
         "name": "addesai-plan",
         "product": "test",
@@ -76,7 +76,7 @@ registration_definition = azure_nextgen.managedservices.RegistrationDefinition("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const registrationDefinition = new azure_nextgen.managedservices.RegistrationDefinition("registrationDefinition", {
+const registrationDefinition = new azure_nextgen.managedservices.latest.RegistrationDefinition("registrationDefinition", {
     plan: {
         name: "addesai-plan",
         product: "test",

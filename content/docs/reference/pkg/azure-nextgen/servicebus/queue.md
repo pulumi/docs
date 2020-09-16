@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queue = new AzureNextGen.Servicebus.Queue("queue", new AzureNextGen.Servicebus.QueueArgs
+        var queue = new AzureNextGen.ServiceBus.Latest.Queue("queue", new AzureNextGen.ServiceBus.Latest.QueueArgs
         {
             EnablePartitioning = true,
             NamespaceName = "sdk-Namespace-3174",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-queue = azure_nextgen.servicebus.Queue("queue",
+queue = azure_nextgen.servicebus.latest.Queue("queue",
     enable_partitioning=True,
     namespace_name="sdk-Namespace-3174",
     queue_name="sdk-Queues-5647",
@@ -67,7 +67,7 @@ queue = azure_nextgen.servicebus.Queue("queue",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const queue = new azure_nextgen.servicebus.Queue("queue", {
+const queue = new azure_nextgen.servicebus.latest.Queue("queue", {
     enablePartitioning: true,
     namespaceName: "sdk-Namespace-3174",
     queueName: "sdk-Queues-5647",

@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var share = new AzureNextGen.Databoxedge.Share("share", new AzureNextGen.Databoxedge.ShareArgs
+        var share = new AzureNextGen.DataBoxEdge.Latest.Share("share", new AzureNextGen.DataBoxEdge.Latest.ShareArgs
         {
             AccessProtocol = "SMB",
-            AzureContainerInfo = new AzureNextGen.Databoxedge.Inputs.AzureContainerInfoArgs
+            AzureContainerInfo = new AzureNextGen.DataBoxEdge.Latest.Inputs.AzureContainerInfoArgs
             {
                 ContainerName = "testContainerSMB",
                 DataFormat = "BlockBlob",
@@ -44,7 +44,7 @@ class MyStack : Stack
             ShareStatus = "Online",
             UserAccessRights = 
             {
-                new AzureNextGen.Databoxedge.Inputs.UserAccessRightArgs
+                new AzureNextGen.DataBoxEdge.Latest.Inputs.UserAccessRightArgs
                 {
                     AccessType = "Change",
                     UserId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
@@ -69,7 +69,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-share = azure_nextgen.databoxedge.Share("share",
+share = azure_nextgen.databoxedge.latest.Share("share",
     access_protocol="SMB",
     azure_container_info={
         "containerName": "testContainerSMB",
@@ -98,7 +98,7 @@ share = azure_nextgen.databoxedge.Share("share",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const share = new azure_nextgen.databoxedge.Share("share", {
+const share = new azure_nextgen.databoxedge.latest.Share("share", {
     accessProtocol: "SMB",
     azureContainerInfo: {
         containerName: "testContainerSMB",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Search.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Search.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Search.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Search.Latest.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
             ResourceGroupName = "rg1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.search.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.search.latest.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
     resource_group_name="rg1",
     search_service_name="mysearchservice")
@@ -65,7 +65,7 @@ private_endpoint_connection = azure_nextgen.search.PrivateEndpointConnection("pr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.search.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.search.latest.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
     resourceGroupName: "rg1",
     searchServiceName: "mysearchservice",

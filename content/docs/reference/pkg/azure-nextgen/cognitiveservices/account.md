@@ -26,17 +26,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Cognitiveservices.Account("account", new AzureNextGen.Cognitiveservices.AccountArgs
+        var account = new AzureNextGen.CognitiveServices.Latest.Account("account", new AzureNextGen.CognitiveServices.Latest.AccountArgs
         {
             AccountName = "testCreate1",
-            Identity = new AzureNextGen.Cognitiveservices.Inputs.IdentityArgs
+            Identity = new AzureNextGen.CognitiveServices.Latest.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Kind = "Emotion",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Cognitiveservices.Inputs.SkuArgs
+            Sku = new AzureNextGen.CognitiveServices.Latest.Inputs.SkuArgs
             {
                 Name = "S0",
             },
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.cognitiveservices.Account("account",
+account = azure_nextgen.cognitiveservices.latest.Account("account",
     account_name="testCreate1",
     identity={
         "type": "SystemAssigned",
@@ -81,7 +81,7 @@ account = azure_nextgen.cognitiveservices.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.cognitiveservices.Account("account", {
+const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
     accountName: "testCreate1",
     identity: {
         type: "SystemAssigned",
@@ -108,17 +108,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Cognitiveservices.Account("account", new AzureNextGen.Cognitiveservices.AccountArgs
+        var account = new AzureNextGen.CognitiveServices.Latest.Account("account", new AzureNextGen.CognitiveServices.Latest.AccountArgs
         {
             AccountName = "testCreate1",
-            Identity = new AzureNextGen.Cognitiveservices.Inputs.IdentityArgs
+            Identity = new AzureNextGen.CognitiveServices.Latest.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Kind = "CognitiveServices",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Cognitiveservices.Inputs.SkuArgs
+            Sku = new AzureNextGen.CognitiveServices.Latest.Inputs.SkuArgs
             {
                 Name = "S0",
             },
@@ -141,7 +141,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.cognitiveservices.Account("account",
+account = azure_nextgen.cognitiveservices.latest.Account("account",
     account_name="testCreate1",
     identity={
         "type": "SystemAssigned",
@@ -163,7 +163,7 @@ account = azure_nextgen.cognitiveservices.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.cognitiveservices.Account("account", {
+const account = new azure_nextgen.cognitiveservices.latest.Account("account", {
     accountName: "testCreate1",
     identity: {
         type: "SystemAssigned",

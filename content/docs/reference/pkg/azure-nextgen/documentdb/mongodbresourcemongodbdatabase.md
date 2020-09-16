@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var mongoDBResourceMongoDBDatabase = new AzureNextGen.Documentdb.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase", new AzureNextGen.Documentdb.MongoDBResourceMongoDBDatabaseArgs
+        var mongoDBResourceMongoDBDatabase = new AzureNextGen.DocumentDB.Latest.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase", new AzureNextGen.DocumentDB.Latest.MongoDBResourceMongoDBDatabaseArgs
         {
             AccountName = "ddb1",
             DatabaseName = "databaseName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.MongoDBDatabaseResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.MongoDBDatabaseResourceArgs
             {
                 Id = "databaseName",
             },
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-mongo_db_resource_mongo_db_database = azure_nextgen.documentdb.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase",
+mongo_db_resource_mongo_db_database = azure_nextgen.documentdb.latest.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase",
     account_name="ddb1",
     database_name="databaseName",
     location="West US",
@@ -78,7 +78,7 @@ mongo_db_resource_mongo_db_database = azure_nextgen.documentdb.MongoDBResourceMo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const mongoDBResourceMongoDBDatabase = new azure_nextgen.documentdb.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase", {
+const mongoDBResourceMongoDBDatabase = new azure_nextgen.documentdb.latest.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase", {
     accountName: "ddb1",
     databaseName: "databaseName",
     location: "West US",

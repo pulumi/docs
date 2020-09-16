@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var mediaService = new AzureNextGen.Media.MediaService("mediaService", new AzureNextGen.Media.MediaServiceArgs
+        var mediaService = new AzureNextGen.Media.Latest.MediaService("mediaService", new AzureNextGen.Media.Latest.MediaServiceArgs
         {
             AccountName = "contososports",
             Location = "South Central US",
             ResourceGroupName = "contoso",
             StorageAccounts = 
             {
-                new AzureNextGen.Media.Inputs.StorageAccountArgs
+                new AzureNextGen.Media.Latest.Inputs.StorageAccountArgs
                 {
                     Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore",
                     Type = "Primary",
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-media_service = azure_nextgen.media.MediaService("mediaService",
+media_service = azure_nextgen.media.latest.MediaService("mediaService",
     account_name="contososports",
     location="South Central US",
     resource_group_name="contoso",
@@ -86,7 +86,7 @@ media_service = azure_nextgen.media.MediaService("mediaService",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const mediaService = new azure_nextgen.media.MediaService("mediaService", {
+const mediaService = new azure_nextgen.media.latest.MediaService("mediaService", {
     accountName: "contososports",
     location: "South Central US",
     resourceGroupName: "contoso",

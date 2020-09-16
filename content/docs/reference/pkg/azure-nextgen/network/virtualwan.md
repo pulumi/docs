@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualWan = new AzureNextGen.Network.VirtualWan("virtualWan", new AzureNextGen.Network.VirtualWanArgs
+        var virtualWan = new AzureNextGen.Network.Latest.VirtualWan("virtualWan", new AzureNextGen.Network.Latest.VirtualWanArgs
         {
             DisableVpnEncryption = false,
             Location = "West US",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_wan = azure_nextgen.network.VirtualWan("virtualWan",
+virtual_wan = azure_nextgen.network.latest.VirtualWan("virtualWan",
     disable_vpn_encryption=False,
     location="West US",
     resource_group_name="rg1",
@@ -76,7 +76,7 @@ virtual_wan = azure_nextgen.network.VirtualWan("virtualWan",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualWan = new azure_nextgen.network.VirtualWan("virtualWan", {
+const virtualWan = new azure_nextgen.network.latest.VirtualWan("virtualWan", {
     disableVpnEncryption: false,
     location: "West US",
     resourceGroupName: "rg1",

@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var frontDoor = new AzureNextGen.Network.FrontDoor("frontDoor", new AzureNextGen.Network.FrontDoorArgs
+        var frontDoor = new AzureNextGen.Network.Latest.FrontDoor("frontDoor", new AzureNextGen.Network.Latest.FrontDoorArgs
         {
             BackendPools = 
             {
-                new AzureNextGen.Network.Inputs.BackendPoolArgs
+                new AzureNextGen.Network.Latest.Inputs.BackendPoolArgs
                 {
                     Name = "backendPool1",
                 },
             },
-            BackendPoolsSettings = new AzureNextGen.Network.Inputs.BackendPoolsSettingsArgs
+            BackendPoolsSettings = new AzureNextGen.Network.Latest.Inputs.BackendPoolsSettingsArgs
             {
                 EnforceCertificateNameCheck = "Enabled",
                 SendRecvTimeoutSeconds = 60,
@@ -44,25 +44,25 @@ class MyStack : Stack
             FrontDoorName = "frontDoor1",
             FrontendEndpoints = 
             {
-                new AzureNextGen.Network.Inputs.FrontendEndpointArgs
+                new AzureNextGen.Network.Latest.Inputs.FrontendEndpointArgs
                 {
                     Name = "frontendEndpoint1",
                 },
-                new AzureNextGen.Network.Inputs.FrontendEndpointArgs
+                new AzureNextGen.Network.Latest.Inputs.FrontendEndpointArgs
                 {
                     Name = "default",
                 },
             },
             HealthProbeSettings = 
             {
-                new AzureNextGen.Network.Inputs.HealthProbeSettingsModelArgs
+                new AzureNextGen.Network.Latest.Inputs.HealthProbeSettingsModelArgs
                 {
                     Name = "healthProbeSettings1",
                 },
             },
             LoadBalancingSettings = 
             {
-                new AzureNextGen.Network.Inputs.LoadBalancingSettingsModelArgs
+                new AzureNextGen.Network.Latest.Inputs.LoadBalancingSettingsModelArgs
                 {
                     Name = "loadBalancingSettings1",
                 },
@@ -71,7 +71,7 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             RoutingRules = 
             {
-                new AzureNextGen.Network.Inputs.RoutingRuleArgs
+                new AzureNextGen.Network.Latest.Inputs.RoutingRuleArgs
                 {
                     Name = "routingRule1",
                 },
@@ -100,7 +100,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-front_door = azure_nextgen.network.FrontDoor("frontDoor",
+front_door = azure_nextgen.network.latest.FrontDoor("frontDoor",
     backend_pools=[{
         "name": "backendPool1",
     }],
@@ -144,7 +144,7 @@ front_door = azure_nextgen.network.FrontDoor("frontDoor",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const frontDoor = new azure_nextgen.network.FrontDoor("frontDoor", {
+const frontDoor = new azure_nextgen.network.latest.FrontDoor("frontDoor", {
     backendPools: [{
         name: "backendPool1",
     }],

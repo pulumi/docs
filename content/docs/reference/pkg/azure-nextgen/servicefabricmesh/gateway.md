@@ -26,45 +26,45 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gateway = new AzureNextGen.Servicefabricmesh.Gateway("gateway", new AzureNextGen.Servicefabricmesh.GatewayArgs
+        var gateway = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Gateway("gateway", new AzureNextGen.ServiceFabricMesh.V20180901Preview.GatewayArgs
         {
             Description = "Service Fabric Mesh sample gateway.",
-            DestinationNetwork = new AzureNextGen.Servicefabricmesh.Inputs.NetworkRefArgs
+            DestinationNetwork = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
             {
                 Name = "helloWorldNetwork",
             },
             GatewayResourceName = "sampleGateway",
             Http = 
             {
-                new AzureNextGen.Servicefabricmesh.Inputs.HttpConfigArgs
+                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpConfigArgs
                 {
                     Hosts = 
                     {
-                        new AzureNextGen.Servicefabricmesh.Inputs.HttpHostConfigArgs
+                        new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpHostConfigArgs
                         {
                             Name = "contoso.com",
                             Routes = 
                             {
-                                new AzureNextGen.Servicefabricmesh.Inputs.HttpRouteConfigArgs
+                                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteConfigArgs
                                 {
-                                    Destination = new AzureNextGen.Servicefabricmesh.Inputs.GatewayDestinationArgs
+                                    Destination = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.GatewayDestinationArgs
                                     {
                                         ApplicationName = "httpHelloWorldApp",
                                         EndpointName = "indexHttpEndpoint",
                                         ServiceName = "indexService",
                                     },
-                                    Match = new AzureNextGen.Servicefabricmesh.Inputs.HttpRouteMatchRuleArgs
+                                    Match = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchRuleArgs
                                     {
                                         Headers = 
                                         {
-                                            new AzureNextGen.Servicefabricmesh.Inputs.HttpRouteMatchHeaderArgs
+                                            new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchHeaderArgs
                                             {
                                                 Name = "accept",
                                                 Type = "exact",
                                                 Value = "application/json",
                                             },
                                         },
-                                        Path = new AzureNextGen.Servicefabricmesh.Inputs.HttpRouteMatchPathArgs
+                                        Path = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.HttpRouteMatchPathArgs
                                         {
                                             Rewrite = "/",
                                             Type = "prefix",
@@ -82,16 +82,16 @@ class MyStack : Stack
             },
             Location = "EastUS",
             ResourceGroupName = "sbz_demo",
-            SourceNetwork = new AzureNextGen.Servicefabricmesh.Inputs.NetworkRefArgs
+            SourceNetwork = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.NetworkRefArgs
             {
                 Name = "Open",
             },
             Tags = ,
             Tcp = 
             {
-                new AzureNextGen.Servicefabricmesh.Inputs.TcpConfigArgs
+                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.TcpConfigArgs
                 {
-                    Destination = new AzureNextGen.Servicefabricmesh.Inputs.GatewayDestinationArgs
+                    Destination = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.GatewayDestinationArgs
                     {
                         ApplicationName = "helloWorldApp",
                         EndpointName = "helloWorldListener",
@@ -120,7 +120,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gateway = azure_nextgen.servicefabricmesh.Gateway("gateway",
+gateway = azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway",
     description="Service Fabric Mesh sample gateway.",
     destination_network={
         "name": "helloWorldNetwork",
@@ -179,7 +179,7 @@ gateway = azure_nextgen.servicefabricmesh.Gateway("gateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const gateway = new azure_nextgen.servicefabricmesh.Gateway("gateway", {
+const gateway = new azure_nextgen.servicefabricmesh.v20180901preview.Gateway("gateway", {
     description: "Service Fabric Mesh sample gateway.",
     destinationNetwork: {
         name: "helloWorldNetwork",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var zone = new AzureNextGen.Network.Zone("zone", new AzureNextGen.Network.ZoneArgs
+        var zone = new AzureNextGen.Network.Latest.Zone("zone", new AzureNextGen.Network.Latest.ZoneArgs
         {
             Location = "Global",
             ResourceGroupName = "rg1",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-zone = azure_nextgen.network.Zone("zone",
+zone = azure_nextgen.network.latest.Zone("zone",
     location="Global",
     resource_group_name="rg1",
     tags={
@@ -72,7 +72,7 @@ zone = azure_nextgen.network.Zone("zone",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const zone = new azure_nextgen.network.Zone("zone", {
+const zone = new azure_nextgen.network.latest.Zone("zone", {
     location: "Global",
     resourceGroupName: "rg1",
     tags: {

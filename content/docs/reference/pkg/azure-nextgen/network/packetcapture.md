@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var packetCapture = new AzureNextGen.Network.PacketCapture("packetCapture", new AzureNextGen.Network.PacketCaptureArgs
+        var packetCapture = new AzureNextGen.Network.Latest.PacketCapture("packetCapture", new AzureNextGen.Network.Latest.PacketCaptureArgs
         {
             BytesToCapturePerPacket = 10000,
             Filters = 
             {
-                new AzureNextGen.Network.Inputs.PacketCaptureFilterArgs
+                new AzureNextGen.Network.Latest.Inputs.PacketCaptureFilterArgs
                 {
                     LocalIPAddress = "10.0.0.4",
                     LocalPort = "80",
@@ -41,7 +41,7 @@ class MyStack : Stack
             NetworkWatcherName = "nw1",
             PacketCaptureName = "pc1",
             ResourceGroupName = "rg1",
-            StorageLocation = new AzureNextGen.Network.Inputs.PacketCaptureStorageLocationArgs
+            StorageLocation = new AzureNextGen.Network.Latest.Inputs.PacketCaptureStorageLocationArgs
             {
                 FilePath = "D:\\capture\\pc1.cap",
                 StorageId = "/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Storage/storageAccounts/pcstore",
@@ -69,7 +69,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-packet_capture = azure_nextgen.network.PacketCapture("packetCapture",
+packet_capture = azure_nextgen.network.latest.PacketCapture("packetCapture",
     bytes_to_capture_per_packet=10000,
     filters=[{
         "localIPAddress": "10.0.0.4",
@@ -98,7 +98,7 @@ packet_capture = azure_nextgen.network.PacketCapture("packetCapture",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const packetCapture = new azure_nextgen.network.PacketCapture("packetCapture", {
+const packetCapture = new azure_nextgen.network.latest.PacketCapture("packetCapture", {
     bytesToCapturePerPacket: 10000,
     filters: [{
         localIPAddress: "10.0.0.4",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingJob = new AzureNextGen.Streamanalytics.StreamingJob("streamingJob", new AzureNextGen.Streamanalytics.StreamingJobArgs
+        var streamingJob = new AzureNextGen.StreamAnalytics.Latest.StreamingJob("streamingJob", new AzureNextGen.StreamAnalytics.Latest.StreamingJobArgs
         {
             CompatibilityLevel = "1.0",
             DataLocale = "en-US",
@@ -36,7 +36,7 @@ class MyStack : Stack
             Functions = {},
             Inputs = 
             {
-                new AzureNextGen.Streamanalytics.Inputs.InputArgs
+                new AzureNextGen.StreamAnalytics.Latest.Inputs.InputArgs
                 {
                     Name = "inputtest",
                     Properties = 
@@ -75,13 +75,13 @@ class MyStack : Stack
             OutputErrorPolicy = "Drop",
             Outputs = 
             {
-                new AzureNextGen.Streamanalytics.Inputs.OutputArgs
+                new AzureNextGen.StreamAnalytics.Latest.Inputs.OutputArgs
                 {
                     Name = "outputtest",
                 },
             },
             ResourceGroupName = "sjrg3276",
-            Sku = new AzureNextGen.Streamanalytics.Inputs.SkuArgs
+            Sku = new AzureNextGen.StreamAnalytics.Latest.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -91,7 +91,7 @@ class MyStack : Stack
                 { "key3", "value3" },
                 { "randomKey", "randomValue" },
             },
-            Transformation = new AzureNextGen.Streamanalytics.Inputs.TransformationArgs
+            Transformation = new AzureNextGen.StreamAnalytics.Latest.Inputs.TransformationArgs
             {
                 Name = "transformationtest",
             },
@@ -114,7 +114,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_job = azure_nextgen.streamanalytics.StreamingJob("streamingJob",
+streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob",
     compatibility_level="1.0",
     data_locale="en-US",
     events_late_arrival_max_delay_in_seconds=5,
@@ -173,7 +173,7 @@ streaming_job = azure_nextgen.streamanalytics.StreamingJob("streamingJob",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingJob = new azure_nextgen.streamanalytics.StreamingJob("streamingJob", {
+const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob", {
     compatibilityLevel: "1.0",
     dataLocale: "en-US",
     eventsLateArrivalMaxDelayInSeconds: 5,
@@ -237,7 +237,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var streamingJob = new AzureNextGen.Streamanalytics.StreamingJob("streamingJob", new AzureNextGen.Streamanalytics.StreamingJobArgs
+        var streamingJob = new AzureNextGen.StreamAnalytics.Latest.StreamingJob("streamingJob", new AzureNextGen.StreamAnalytics.Latest.StreamingJobArgs
         {
             CompatibilityLevel = "1.0",
             DataLocale = "en-US",
@@ -251,7 +251,7 @@ class MyStack : Stack
             OutputErrorPolicy = "Drop",
             Outputs = {},
             ResourceGroupName = "sjrg6936",
-            Sku = new AzureNextGen.Streamanalytics.Inputs.SkuArgs
+            Sku = new AzureNextGen.StreamAnalytics.Latest.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -280,7 +280,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-streaming_job = azure_nextgen.streamanalytics.StreamingJob("streamingJob",
+streaming_job = azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob",
     compatibility_level="1.0",
     data_locale="en-US",
     events_late_arrival_max_delay_in_seconds=16,
@@ -312,7 +312,7 @@ streaming_job = azure_nextgen.streamanalytics.StreamingJob("streamingJob",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const streamingJob = new azure_nextgen.streamanalytics.StreamingJob("streamingJob", {
+const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("streamingJob", {
     compatibilityLevel: "1.0",
     dataLocale: "en-US",
     eventsLateArrivalMaxDelayInSeconds: 16,

@@ -26,18 +26,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vpnConnection = new AzureNextGen.Network.VpnConnection("vpnConnection", new AzureNextGen.Network.VpnConnectionArgs
+        var vpnConnection = new AzureNextGen.Network.Latest.VpnConnection("vpnConnection", new AzureNextGen.Network.Latest.VpnConnectionArgs
         {
             ConnectionName = "vpnConnection1",
             GatewayName = "gateway1",
-            RemoteVpnSite = new AzureNextGen.Network.Inputs.SubResourceArgs
+            RemoteVpnSite = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
             },
             ResourceGroupName = "rg1",
             VpnLinkConnections = 
             {
-                new AzureNextGen.Network.Inputs.VpnSiteLinkConnectionArgs
+                new AzureNextGen.Network.Latest.Inputs.VpnSiteLinkConnectionArgs
                 {
                     Name = "Connection-Link1",
                 },
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vpn_connection = azure_nextgen.network.VpnConnection("vpnConnection",
+vpn_connection = azure_nextgen.network.latest.VpnConnection("vpnConnection",
     connection_name="vpnConnection1",
     gateway_name="gateway1",
     remote_vpn_site={
@@ -82,7 +82,7 @@ vpn_connection = azure_nextgen.network.VpnConnection("vpnConnection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vpnConnection = new azure_nextgen.network.VpnConnection("vpnConnection", {
+const vpnConnection = new azure_nextgen.network.latest.VpnConnection("vpnConnection", {
     connectionName: "vpnConnection1",
     gatewayName: "gateway1",
     remoteVpnSite: {

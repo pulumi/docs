@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedService = new AzureNextGen.Operationalinsights.LinkedService("linkedService", new AzureNextGen.Operationalinsights.LinkedServiceArgs
+        var linkedService = new AzureNextGen.OperationalInsights.Latest.LinkedService("linkedService", new AzureNextGen.OperationalInsights.Latest.LinkedServiceArgs
         {
             LinkedServiceName = "Cluster",
             ResourceGroupName = "mms-eus",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_service = azure_nextgen.operationalinsights.LinkedService("linkedService",
+linked_service = azure_nextgen.operationalinsights.latest.LinkedService("linkedService",
     linked_service_name="Cluster",
     resource_group_name="mms-eus",
     workspace_name="TestLinkWS",
@@ -67,7 +67,7 @@ linked_service = azure_nextgen.operationalinsights.LinkedService("linkedService"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const linkedService = new azure_nextgen.operationalinsights.LinkedService("linkedService", {
+const linkedService = new azure_nextgen.operationalinsights.latest.LinkedService("linkedService", {
     linkedServiceName: "Cluster",
     resourceGroupName: "mms-eus",
     workspaceName: "TestLinkWS",

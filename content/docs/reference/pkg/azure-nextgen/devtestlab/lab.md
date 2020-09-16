@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var lab = new AzureNextGen.Devtestlab.Lab("lab", new AzureNextGen.Devtestlab.LabArgs
+        var lab = new AzureNextGen.DevTestLab.Latest.Lab("lab", new AzureNextGen.DevTestLab.Latest.LabArgs
         {
             LabStorageType = "{Standard|Premium}",
             Location = "{azure-location}",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-lab = azure_nextgen.devtestlab.Lab("lab",
+lab = azure_nextgen.devtestlab.latest.Lab("lab",
     lab_storage_type="{Standard|Premium}",
     location="{azure-location}",
     name="{devtestlab-name}",
@@ -74,7 +74,7 @@ lab = azure_nextgen.devtestlab.Lab("lab",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const lab = new azure_nextgen.devtestlab.Lab("lab", {
+const lab = new azure_nextgen.devtestlab.latest.Lab("lab", {
     labStorageType: "{Standard|Premium}",
     location: "{azure-location}",
     name: "{devtestlab-name}",

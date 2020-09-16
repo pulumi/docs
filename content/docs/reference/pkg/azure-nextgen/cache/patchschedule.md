@@ -26,20 +26,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var patchSchedule = new AzureNextGen.Cache.PatchSchedule("patchSchedule", new AzureNextGen.Cache.PatchScheduleArgs
+        var patchSchedule = new AzureNextGen.Cache.Latest.PatchSchedule("patchSchedule", new AzureNextGen.Cache.Latest.PatchScheduleArgs
         {
             Default = "default",
             Name = "cache1",
             ResourceGroupName = "rg1",
             ScheduleEntries = 
             {
-                new AzureNextGen.Cache.Inputs.ScheduleEntryArgs
+                new AzureNextGen.Cache.Latest.Inputs.ScheduleEntryArgs
                 {
                     DayOfWeek = "Monday",
                     MaintenanceWindow = "PT5H",
                     StartHourUtc = 12,
                 },
-                new AzureNextGen.Cache.Inputs.ScheduleEntryArgs
+                new AzureNextGen.Cache.Latest.Inputs.ScheduleEntryArgs
                 {
                     DayOfWeek = "Tuesday",
                     StartHourUtc = 12,
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-patch_schedule = azure_nextgen.cache.PatchSchedule("patchSchedule",
+patch_schedule = azure_nextgen.cache.latest.PatchSchedule("patchSchedule",
     default="default",
     name="cache1",
     resource_group_name="rg1",
@@ -90,7 +90,7 @@ patch_schedule = azure_nextgen.cache.PatchSchedule("patchSchedule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const patchSchedule = new azure_nextgen.cache.PatchSchedule("patchSchedule", {
+const patchSchedule = new azure_nextgen.cache.latest.PatchSchedule("patchSchedule", {
     "default": "default",
     name: "cache1",
     resourceGroupName: "rg1",

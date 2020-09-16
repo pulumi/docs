@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationRuntime = new AzureNextGen.Synapse.IntegrationRuntime("integrationRuntime", new AzureNextGen.Synapse.IntegrationRuntimeArgs
+        var integrationRuntime = new AzureNextGen.Synapse.V20190601Preview.IntegrationRuntime("integrationRuntime", new AzureNextGen.Synapse.V20190601Preview.IntegrationRuntimeArgs
         {
             IntegrationRuntimeName = "exampleIntegrationRuntime",
             ResourceGroupName = "exampleResourceGroup",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_runtime = azure_nextgen.synapse.IntegrationRuntime("integrationRuntime",
+integration_runtime = azure_nextgen.synapse.v20190601preview.IntegrationRuntime("integrationRuntime",
     integration_runtime_name="exampleIntegrationRuntime",
     resource_group_name="exampleResourceGroup",
     workspace_name="exampleWorkspace")
@@ -65,7 +65,7 @@ integration_runtime = azure_nextgen.synapse.IntegrationRuntime("integrationRunti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationRuntime = new azure_nextgen.synapse.IntegrationRuntime("integrationRuntime", {
+const integrationRuntime = new azure_nextgen.synapse.v20190601preview.IntegrationRuntime("integrationRuntime", {
     integrationRuntimeName: "exampleIntegrationRuntime",
     resourceGroupName: "exampleResourceGroup",
     workspaceName: "exampleWorkspace",

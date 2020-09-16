@@ -26,39 +26,39 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlContainer = new AzureNextGen.Documentdb.SqlResourceSqlContainer("sqlResourceSqlContainer", new AzureNextGen.Documentdb.SqlResourceSqlContainerArgs
+        var sqlResourceSqlContainer = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlContainer("sqlResourceSqlContainer", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlContainerArgs
         {
             AccountName = "ddb1",
             ContainerName = "containerName",
             DatabaseName = "databaseName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.SqlContainerResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlContainerResourceArgs
             {
-                ConflictResolutionPolicy = new AzureNextGen.Documentdb.Inputs.ConflictResolutionPolicyArgs
+                ConflictResolutionPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.ConflictResolutionPolicyArgs
                 {
                     ConflictResolutionPath = "/path",
                     Mode = "LastWriterWins",
                 },
                 DefaultTtl = 100,
                 Id = "containerName",
-                IndexingPolicy = new AzureNextGen.Documentdb.Inputs.IndexingPolicyArgs
+                IndexingPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.IndexingPolicyArgs
                 {
                     Automatic = true,
                     ExcludedPaths = {},
                     IncludedPaths = 
                     {
-                        new AzureNextGen.Documentdb.Inputs.IncludedPathArgs
+                        new AzureNextGen.DocumentDB.Latest.Inputs.IncludedPathArgs
                         {
                             Indexes = 
                             {
-                                new AzureNextGen.Documentdb.Inputs.IndexesArgs
+                                new AzureNextGen.DocumentDB.Latest.Inputs.IndexesArgs
                                 {
                                     DataType = "String",
                                     Kind = "Range",
                                     Precision = -1,
                                 },
-                                new AzureNextGen.Documentdb.Inputs.IndexesArgs
+                                new AzureNextGen.DocumentDB.Latest.Inputs.IndexesArgs
                                 {
                                     DataType = "Number",
                                     Kind = "Range",
@@ -70,7 +70,7 @@ class MyStack : Stack
                     },
                     IndexingMode = "Consistent",
                 },
-                PartitionKey = new AzureNextGen.Documentdb.Inputs.ContainerPartitionKeyArgs
+                PartitionKey = new AzureNextGen.DocumentDB.Latest.Inputs.ContainerPartitionKeyArgs
                 {
                     Kind = "Hash",
                     Paths = 
@@ -78,11 +78,11 @@ class MyStack : Stack
                         "/AccountNumber",
                     },
                 },
-                UniqueKeyPolicy = new AzureNextGen.Documentdb.Inputs.UniqueKeyPolicyArgs
+                UniqueKeyPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.UniqueKeyPolicyArgs
                 {
                     UniqueKeys = 
                     {
-                        new AzureNextGen.Documentdb.Inputs.UniqueKeyArgs
+                        new AzureNextGen.DocumentDB.Latest.Inputs.UniqueKeyArgs
                         {
                             Paths = 
                             {
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_container = azure_nextgen.documentdb.SqlResourceSqlContainer("sqlResourceSqlContainer",
+sql_resource_sql_container = azure_nextgen.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer",
     account_name="ddb1",
     container_name="containerName",
     database_name="databaseName",
@@ -169,7 +169,7 @@ sql_resource_sql_container = azure_nextgen.documentdb.SqlResourceSqlContainer("s
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlResourceSqlContainer = new azure_nextgen.documentdb.SqlResourceSqlContainer("sqlResourceSqlContainer", {
+const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceSqlContainer("sqlResourceSqlContainer", {
     accountName: "ddb1",
     containerName: "containerName",
     databaseName: "databaseName",

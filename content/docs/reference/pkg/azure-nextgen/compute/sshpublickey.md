@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sshPublicKey = new AzureNextGen.Compute.SshPublicKey("sshPublicKey", new AzureNextGen.Compute.SshPublicKeyArgs
+        var sshPublicKey = new AzureNextGen.Compute.Latest.SshPublicKey("sshPublicKey", new AzureNextGen.Compute.Latest.SshPublicKeyArgs
         {
             Location = "westus",
             PublicKey = "{ssh-rsa public key}",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ssh_public_key = azure_nextgen.compute.SshPublicKey("sshPublicKey",
+ssh_public_key = azure_nextgen.compute.latest.SshPublicKey("sshPublicKey",
     location="westus",
     public_key="{ssh-rsa public key}",
     resource_group_name="myResourceGroup",
@@ -67,7 +67,7 @@ ssh_public_key = azure_nextgen.compute.SshPublicKey("sshPublicKey",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sshPublicKey = new azure_nextgen.compute.SshPublicKey("sshPublicKey", {
+const sshPublicKey = new azure_nextgen.compute.latest.SshPublicKey("sshPublicKey", {
     location: "westus",
     publicKey: "{ssh-rsa public key}",
     resourceGroupName: "myResourceGroup",

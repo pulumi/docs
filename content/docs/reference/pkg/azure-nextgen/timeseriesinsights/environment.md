@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var environment = new AzureNextGen.Timeseriesinsights.Environment("environment", new AzureNextGen.Timeseriesinsights.EnvironmentArgs
+        var environment = new AzureNextGen.TimeSeriesInsights.Latest.Environment("environment", new AzureNextGen.TimeSeriesInsights.Latest.EnvironmentArgs
         {
             EnvironmentName = "env1",
             Kind = "Gen1",
             Location = "West US",
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Timeseriesinsights.Inputs.SkuArgs
+            Sku = new AzureNextGen.TimeSeriesInsights.Latest.Inputs.SkuArgs
             {
                 Capacity = 1,
                 Name = "S1",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-environment = azure_nextgen.timeseriesinsights.Environment("environment",
+environment = azure_nextgen.timeseriesinsights.latest.Environment("environment",
     environment_name="env1",
     kind="Gen1",
     location="West US",
@@ -76,7 +76,7 @@ environment = azure_nextgen.timeseriesinsights.Environment("environment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const environment = new azure_nextgen.timeseriesinsights.Environment("environment", {
+const environment = new azure_nextgen.timeseriesinsights.latest.Environment("environment", {
     environmentName: "env1",
     kind: "Gen1",
     location: "West US",

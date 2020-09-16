@@ -26,26 +26,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var natGateway = new AzureNextGen.Network.NatGateway("natGateway", new AzureNextGen.Network.NatGatewayArgs
+        var natGateway = new AzureNextGen.Network.Latest.NatGateway("natGateway", new AzureNextGen.Network.Latest.NatGatewayArgs
         {
             Location = "westus",
             NatGatewayName = "test-natgateway",
             PublicIpAddresses = 
             {
-                new AzureNextGen.Network.Inputs.SubResourceArgs
+                new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1",
                 },
             },
             PublicIpPrefixes = 
             {
-                new AzureNextGen.Network.Inputs.SubResourceArgs
+                new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1",
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Network.Inputs.NatGatewaySkuArgs
+            Sku = new AzureNextGen.Network.Latest.Inputs.NatGatewaySkuArgs
             {
                 Name = "Standard",
             },
@@ -68,7 +68,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-nat_gateway = azure_nextgen.network.NatGateway("natGateway",
+nat_gateway = azure_nextgen.network.latest.NatGateway("natGateway",
     location="westus",
     nat_gateway_name="test-natgateway",
     public_ip_addresses=[{
@@ -92,7 +92,7 @@ nat_gateway = azure_nextgen.network.NatGateway("natGateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const natGateway = new azure_nextgen.network.NatGateway("natGateway", {
+const natGateway = new azure_nextgen.network.latest.NatGateway("natGateway", {
     location: "westus",
     natGatewayName: "test-natgateway",
     publicIpAddresses: [{

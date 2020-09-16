@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var console = new AzureNextGen.Portal.Console("console", new AzureNextGen.Portal.ConsoleArgs
+        var console = new AzureNextGen.Portal.Latest.Console("console", new AzureNextGen.Portal.Latest.ConsoleArgs
         {
             ConsoleName = "default",
         });
@@ -48,7 +48,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-console = azure_nextgen.portal.Console("console", console_name="default")
+console = azure_nextgen.portal.latest.Console("console", console_name="default")
 
 ```
 
@@ -60,7 +60,7 @@ console = azure_nextgen.portal.Console("console", console_name="default")
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const console = new azure_nextgen.portal.Console("console", {consoleName: "default"});
+const console = new azure_nextgen.portal.latest.Console("console", {consoleName: "default"});
 
 ```
 

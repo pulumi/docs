@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var migrationConfig = new AzureNextGen.Servicebus.MigrationConfig("migrationConfig", new AzureNextGen.Servicebus.MigrationConfigArgs
+        var migrationConfig = new AzureNextGen.ServiceBus.Latest.MigrationConfig("migrationConfig", new AzureNextGen.ServiceBus.Latest.MigrationConfigArgs
         {
             ConfigName = "$default",
             NamespaceName = "sdk-Namespace-41",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-migration_config = azure_nextgen.servicebus.MigrationConfig("migrationConfig",
+migration_config = azure_nextgen.servicebus.latest.MigrationConfig("migrationConfig",
     config_name="$default",
     namespace_name="sdk-Namespace-41",
     post_migration_name="sdk-PostMigration-5919",
@@ -69,7 +69,7 @@ migration_config = azure_nextgen.servicebus.MigrationConfig("migrationConfig",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const migrationConfig = new azure_nextgen.servicebus.MigrationConfig("migrationConfig", {
+const migrationConfig = new azure_nextgen.servicebus.latest.MigrationConfig("migrationConfig", {
     configName: `$default`,
     namespaceName: "sdk-Namespace-41",
     postMigrationName: "sdk-PostMigration-5919",

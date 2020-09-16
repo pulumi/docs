@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var association = new AzureNextGen.Customproviders.Association("association", new AzureNextGen.Customproviders.AssociationArgs
+        var association = new AzureNextGen.CustomProviders.V20180901Preview.Association("association", new AzureNextGen.CustomProviders.V20180901Preview.AssociationArgs
         {
             AssociationName = "associationName",
             Scope = "scope",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-association = azure_nextgen.customproviders.Association("association",
+association = azure_nextgen.customproviders.v20180901preview.Association("association",
     association_name="associationName",
     scope="scope",
     target_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName")
@@ -65,7 +65,7 @@ association = azure_nextgen.customproviders.Association("association",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const association = new azure_nextgen.customproviders.Association("association", {
+const association = new azure_nextgen.customproviders.v20180901preview.Association("association", {
     associationName: "associationName",
     scope: "scope",
     targetResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName",

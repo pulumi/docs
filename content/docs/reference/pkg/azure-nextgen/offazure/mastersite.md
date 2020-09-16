@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var masterSite = new AzureNextGen.Offazure.MasterSite("masterSite", new AzureNextGen.Offazure.MasterSiteArgs
+        var masterSite = new AzureNextGen.OffAzure.Latest.MasterSite("masterSite", new AzureNextGen.OffAzure.Latest.MasterSiteArgs
         {
             Location = "eastus",
             ResourceGroupName = "poshukla",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-master_site = azure_nextgen.offazure.MasterSite("masterSite",
+master_site = azure_nextgen.offazure.latest.MasterSite("masterSite",
     location="eastus",
     resource_group_name="poshukla",
     site_name="masterSite1")
@@ -65,7 +65,7 @@ master_site = azure_nextgen.offazure.MasterSite("masterSite",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const masterSite = new azure_nextgen.offazure.MasterSite("masterSite", {
+const masterSite = new azure_nextgen.offazure.latest.MasterSite("masterSite", {
     location: "eastus",
     resourceGroupName: "poshukla",
     siteName: "masterSite1",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineImageTemplate = new AzureNextGen.Virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.Virtualmachineimages.VirtualMachineImageTemplateArgs
+        var virtualMachineImageTemplate = new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplateArgs
         {
             Customize = 
             {
@@ -51,7 +51,7 @@ class MyStack : Stack
                     { "type", "ManagedImage" },
                 },
             },
-            Identity = new AzureNextGen.Virtualmachineimages.Inputs.ImageTemplateIdentityArgs
+            Identity = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateIdentityArgs
             {
                 Type = "UserAssigned",
             },
@@ -68,11 +68,11 @@ class MyStack : Stack
                 { "imagetemplate_tag1", "IT_T1" },
                 { "imagetemplate_tag2", "IT_T2" },
             },
-            VmProfile = new AzureNextGen.Virtualmachineimages.Inputs.ImageTemplateVmProfileArgs
+            VmProfile = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateVmProfileArgs
             {
                 OsDiskSizeGB = 64,
                 VmSize = "Standard_D2s_v3",
-                VnetConfig = new AzureNextGen.Virtualmachineimages.Inputs.VirtualNetworkConfigArgs
+                VnetConfig = new AzureNextGen.VirtualMachineImages.Latest.Inputs.VirtualNetworkConfigArgs
                 {
                     SubnetId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
                 },
@@ -96,7 +96,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_image_template = azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate",
+virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate",
     customize=[{
         "name": "Shell Customizer Example",
         "scriptUri": "https://example.com/path/to/script.sh",
@@ -143,7 +143,7 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.VirtualMachi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
+const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
     customize: [{
         name: "Shell Customizer Example",
         scriptUri: "https://example.com/path/to/script.sh",
@@ -195,7 +195,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineImageTemplate = new AzureNextGen.Virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.Virtualmachineimages.VirtualMachineImageTemplateArgs
+        var virtualMachineImageTemplate = new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", new AzureNextGen.VirtualMachineImages.Latest.VirtualMachineImageTemplateArgs
         {
             Customize = 
             {
@@ -255,7 +255,7 @@ class MyStack : Stack
                     { "type", "ManagedImage" },
                 },
             },
-            Identity = new AzureNextGen.Virtualmachineimages.Inputs.ImageTemplateIdentityArgs
+            Identity = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateIdentityArgs
             {
                 Type = "UserAssigned",
             },
@@ -272,11 +272,11 @@ class MyStack : Stack
                 { "imagetemplate_tag1", "IT_T1" },
                 { "imagetemplate_tag2", "IT_T2" },
             },
-            VmProfile = new AzureNextGen.Virtualmachineimages.Inputs.ImageTemplateVmProfileArgs
+            VmProfile = new AzureNextGen.VirtualMachineImages.Latest.Inputs.ImageTemplateVmProfileArgs
             {
                 OsDiskSizeGB = 64,
                 VmSize = "Standard_D2s_v3",
-                VnetConfig = new AzureNextGen.Virtualmachineimages.Inputs.VirtualNetworkConfigArgs
+                VnetConfig = new AzureNextGen.VirtualMachineImages.Latest.Inputs.VirtualNetworkConfigArgs
                 {
                     SubnetId = "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name",
                 },
@@ -300,7 +300,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_image_template = azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate",
+virtual_machine_image_template = azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate",
     customize=[
         {
             "inline": [
@@ -376,7 +376,7 @@ virtual_machine_image_template = azure_nextgen.virtualmachineimages.VirtualMachi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
+const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.latest.VirtualMachineImageTemplate("virtualMachineImageTemplate", {
     customize: [
         {
             inline: [

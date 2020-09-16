@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobDefinition = new AzureNextGen.Hybriddata.JobDefinition("jobDefinition", new AzureNextGen.Hybriddata.JobDefinitionArgs
+        var jobDefinition = new AzureNextGen.HybridData.Latest.JobDefinition("jobDefinition", new AzureNextGen.HybridData.Latest.JobDefinitionArgs
         {
             DataManagerName = "TestAzureSDKOperations",
             DataServiceInput = 
@@ -73,7 +73,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_definition = azure_nextgen.hybriddata.JobDefinition("jobDefinition",
+job_definition = azure_nextgen.hybriddata.latest.JobDefinition("jobDefinition",
     data_manager_name="TestAzureSDKOperations",
     data_service_input={
         "AzureStorageType": "Blob",
@@ -104,7 +104,7 @@ job_definition = azure_nextgen.hybriddata.JobDefinition("jobDefinition",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const jobDefinition = new azure_nextgen.hybriddata.JobDefinition("jobDefinition", {
+const jobDefinition = new azure_nextgen.hybriddata.latest.JobDefinition("jobDefinition", {
     dataManagerName: "TestAzureSDKOperations",
     dataServiceInput: {
         AzureStorageType: "Blob",

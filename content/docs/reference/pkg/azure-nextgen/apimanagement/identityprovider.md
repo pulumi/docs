@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var identityProvider = new AzureNextGen.Apimanagement.IdentityProvider("identityProvider", new AzureNextGen.Apimanagement.IdentityProviderArgs
+        var identityProvider = new AzureNextGen.ApiManagement.Latest.IdentityProvider("identityProvider", new AzureNextGen.ApiManagement.Latest.IdentityProviderArgs
         {
             ClientId = "facebookid",
             ClientSecret = "facebookapplicationsecret",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-identity_provider = azure_nextgen.apimanagement.IdentityProvider("identityProvider",
+identity_provider = azure_nextgen.apimanagement.latest.IdentityProvider("identityProvider",
     client_id="facebookid",
     client_secret="facebookapplicationsecret",
     identity_provider_name="facebook",
@@ -69,7 +69,7 @@ identity_provider = azure_nextgen.apimanagement.IdentityProvider("identityProvid
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const identityProvider = new azure_nextgen.apimanagement.IdentityProvider("identityProvider", {
+const identityProvider = new azure_nextgen.apimanagement.latest.IdentityProvider("identityProvider", {
     clientId: "facebookid",
     clientSecret: "facebookapplicationsecret",
     identityProviderName: "facebook",

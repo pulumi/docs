@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var customerSubscription = new AzureNextGen.Azurestack.CustomerSubscription("customerSubscription", new AzureNextGen.Azurestack.CustomerSubscriptionArgs
+        var customerSubscription = new AzureNextGen.AzureStack.Latest.CustomerSubscription("customerSubscription", new AzureNextGen.AzureStack.Latest.CustomerSubscriptionArgs
         {
             CustomerSubscriptionName = "E09A4E93-29A7-4EBA-A6D4-76202383F07F",
             RegistrationName = "testregistration",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-customer_subscription = azure_nextgen.azurestack.CustomerSubscription("customerSubscription",
+customer_subscription = azure_nextgen.azurestack.latest.CustomerSubscription("customerSubscription",
     customer_subscription_name="E09A4E93-29A7-4EBA-A6D4-76202383F07F",
     registration_name="testregistration",
     resource_group="azurestack",
@@ -67,7 +67,7 @@ customer_subscription = azure_nextgen.azurestack.CustomerSubscription("customerS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const customerSubscription = new azure_nextgen.azurestack.CustomerSubscription("customerSubscription", {
+const customerSubscription = new azure_nextgen.azurestack.latest.CustomerSubscription("customerSubscription", {
     customerSubscriptionName: "E09A4E93-29A7-4EBA-A6D4-76202383F07F",
     registrationName: "testregistration",
     resourceGroup: "azurestack",

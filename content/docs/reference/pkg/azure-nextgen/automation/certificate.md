@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.Automation.Certificate("certificate", new AzureNextGen.Automation.CertificateArgs
+        var certificate = new AzureNextGen.Automation.Latest.Certificate("certificate", new AzureNextGen.Automation.Latest.CertificateArgs
         {
             AutomationAccountName = "myAutomationAccount18",
             Base64Value = "base 64 value of cert",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.automation.Certificate("certificate",
+certificate = azure_nextgen.automation.latest.Certificate("certificate",
     automation_account_name="myAutomationAccount18",
     base64_value="base 64 value of cert",
     certificate_name="testCert",
@@ -75,7 +75,7 @@ certificate = azure_nextgen.automation.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const certificate = new azure_nextgen.automation.Certificate("certificate", {
+const certificate = new azure_nextgen.automation.latest.Certificate("certificate", {
     automationAccountName: "myAutomationAccount18",
     base64Value: "base 64 value of cert",
     certificateName: "testCert",

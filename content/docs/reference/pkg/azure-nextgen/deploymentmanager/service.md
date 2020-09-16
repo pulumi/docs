@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Deploymentmanager.Service("service", new AzureNextGen.Deploymentmanager.ServiceArgs
+        var service = new AzureNextGen.DeploymentManager.V20191101Preview.Service("service", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceArgs
         {
             Location = "centralus",
             ResourceGroupName = "myResourceGroup",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.deploymentmanager.Service("service",
+service = azure_nextgen.deploymentmanager.v20191101preview.Service("service",
     location="centralus",
     resource_group_name="myResourceGroup",
     service_name="myService",
@@ -73,7 +73,7 @@ service = azure_nextgen.deploymentmanager.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.deploymentmanager.Service("service", {
+const service = new azure_nextgen.deploymentmanager.v20191101preview.Service("service", {
     location: "centralus",
     resourceGroupName: "myResourceGroup",
     serviceName: "myService",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlServer = new AzureNextGen.Azuredata.SqlServer("sqlServer", new AzureNextGen.Azuredata.SqlServerArgs
+        var sqlServer = new AzureNextGen.AzureData.V20190724Preview.SqlServer("sqlServer", new AzureNextGen.AzureData.V20190724Preview.SqlServerArgs
         {
             Cores = 8,
             Edition = "Latin",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_server = azure_nextgen.azuredata.SqlServer("sqlServer",
+sql_server = azure_nextgen.azuredata.v20190724preview.SqlServer("sqlServer",
     cores=8,
     edition="Latin",
     property_bag="",
@@ -75,7 +75,7 @@ sql_server = azure_nextgen.azuredata.SqlServer("sqlServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlServer = new azure_nextgen.azuredata.SqlServer("sqlServer", {
+const sqlServer = new azure_nextgen.azuredata.v20190724preview.SqlServer("sqlServer", {
     cores: 8,
     edition: "Latin",
     propertyBag: "",

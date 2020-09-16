@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountCassandraKeyspace = new AzureNextGen.Documentdb.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace", new AzureNextGen.Documentdb.DatabaseAccountCassandraKeyspaceArgs
+        var databaseAccountCassandraKeyspace = new AzureNextGen.DocumentDB.Latest.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace", new AzureNextGen.DocumentDB.Latest.DatabaseAccountCassandraKeyspaceArgs
         {
             AccountName = "ddb1",
             KeyspaceName = "keyspaceName",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.CassandraKeyspaceResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.CassandraKeyspaceResourceArgs
             {
                 Id = "keyspaceName",
             },
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_cassandra_keyspace = azure_nextgen.documentdb.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace",
+database_account_cassandra_keyspace = azure_nextgen.documentdb.latest.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace",
     account_name="ddb1",
     keyspace_name="keyspaceName",
     options={},
@@ -74,7 +74,7 @@ database_account_cassandra_keyspace = azure_nextgen.documentdb.DatabaseAccountCa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const databaseAccountCassandraKeyspace = new azure_nextgen.documentdb.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace", {
+const databaseAccountCassandraKeyspace = new azure_nextgen.documentdb.latest.DatabaseAccountCassandraKeyspace("databaseAccountCassandraKeyspace", {
     accountName: "ddb1",
     keyspaceName: "keyspaceName",
     options: {},

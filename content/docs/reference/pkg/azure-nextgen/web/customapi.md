@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var customApi = new AzureNextGen.Web.CustomApi("customApi", new AzureNextGen.Web.CustomApiArgs
+        var customApi = new AzureNextGen.Web.Latest.CustomApi("customApi", new AzureNextGen.Web.Latest.CustomApiArgs
         {
             ApiName = "testCustomApi",
             ResourceGroupName = "testResourceGroup",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-custom_api = azure_nextgen.web.CustomApi("customApi",
+custom_api = azure_nextgen.web.latest.CustomApi("customApi",
     api_name="testCustomApi",
     resource_group_name="testResourceGroup")
 
@@ -63,7 +63,7 @@ custom_api = azure_nextgen.web.CustomApi("customApi",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const customApi = new azure_nextgen.web.CustomApi("customApi", {
+const customApi = new azure_nextgen.web.latest.CustomApi("customApi", {
     apiName: "testCustomApi",
     resourceGroupName: "testResourceGroup",
 });

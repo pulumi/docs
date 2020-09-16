@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var spatialAnchorsAccount = new AzureNextGen.Mixedreality.SpatialAnchorsAccount("spatialAnchorsAccount", new AzureNextGen.Mixedreality.SpatialAnchorsAccountArgs
+        var spatialAnchorsAccount = new AzureNextGen.MixedReality.Latest.SpatialAnchorsAccount("spatialAnchorsAccount", new AzureNextGen.MixedReality.Latest.SpatialAnchorsAccountArgs
         {
             AccountName = "MyAccount",
             Location = "eastus2euap",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-spatial_anchors_account = azure_nextgen.mixedreality.SpatialAnchorsAccount("spatialAnchorsAccount",
+spatial_anchors_account = azure_nextgen.mixedreality.latest.SpatialAnchorsAccount("spatialAnchorsAccount",
     account_name="MyAccount",
     location="eastus2euap",
     resource_group_name="MyResourceGroup")
@@ -65,7 +65,7 @@ spatial_anchors_account = azure_nextgen.mixedreality.SpatialAnchorsAccount("spat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const spatialAnchorsAccount = new azure_nextgen.mixedreality.SpatialAnchorsAccount("spatialAnchorsAccount", {
+const spatialAnchorsAccount = new azure_nextgen.mixedreality.latest.SpatialAnchorsAccount("spatialAnchorsAccount", {
     accountName: "MyAccount",
     location: "eastus2euap",
     resourceGroupName: "MyResourceGroup",

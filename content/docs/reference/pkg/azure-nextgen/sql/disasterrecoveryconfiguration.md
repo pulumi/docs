@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disasterRecoveryConfiguration = new AzureNextGen.Sql.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", new AzureNextGen.Sql.DisasterRecoveryConfigurationArgs
+        var disasterRecoveryConfiguration = new AzureNextGen.Sql.Latest.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", new AzureNextGen.Sql.Latest.DisasterRecoveryConfigurationArgs
         {
             DisasterRecoveryConfigurationName = "Default",
             ResourceGroupName = "sqlcrudtest-4799",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disaster_recovery_configuration = azure_nextgen.sql.DisasterRecoveryConfiguration("disasterRecoveryConfiguration",
+disaster_recovery_configuration = azure_nextgen.sql.latest.DisasterRecoveryConfiguration("disasterRecoveryConfiguration",
     disaster_recovery_configuration_name="Default",
     resource_group_name="sqlcrudtest-4799",
     server_name="sqlcrudtest-5961")
@@ -65,7 +65,7 @@ disaster_recovery_configuration = azure_nextgen.sql.DisasterRecoveryConfiguratio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disasterRecoveryConfiguration = new azure_nextgen.sql.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", {
+const disasterRecoveryConfiguration = new azure_nextgen.sql.latest.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", {
     disasterRecoveryConfigurationName: "Default",
     resourceGroupName: "sqlcrudtest-4799",
     serverName: "sqlcrudtest-5961",

@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Datamigration.Service("service", new AzureNextGen.Datamigration.ServiceArgs
+        var service = new AzureNextGen.DataMigration.Latest.Service("service", new AzureNextGen.DataMigration.Latest.ServiceArgs
         {
             GroupName = "DmsSdkRg",
             Location = "southcentralus",
             ServiceName = "DmsSdkService",
-            Sku = new AzureNextGen.Datamigration.Inputs.ServiceSkuArgs
+            Sku = new AzureNextGen.DataMigration.Latest.Inputs.ServiceSkuArgs
             {
                 Name = "Basic_1vCore",
             },
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.datamigration.Service("service",
+service = azure_nextgen.datamigration.latest.Service("service",
     group_name="DmsSdkRg",
     location="southcentralus",
     service_name="DmsSdkService",
@@ -74,7 +74,7 @@ service = azure_nextgen.datamigration.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.datamigration.Service("service", {
+const service = new azure_nextgen.datamigration.latest.Service("service", {
     groupName: "DmsSdkRg",
     location: "southcentralus",
     serviceName: "DmsSdkService",

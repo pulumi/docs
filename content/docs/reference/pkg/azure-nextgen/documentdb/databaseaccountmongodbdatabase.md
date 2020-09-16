@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountMongoDBDatabase = new AzureNextGen.Documentdb.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", new AzureNextGen.Documentdb.DatabaseAccountMongoDBDatabaseArgs
+        var databaseAccountMongoDBDatabase = new AzureNextGen.DocumentDB.Latest.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", new AzureNextGen.DocumentDB.Latest.DatabaseAccountMongoDBDatabaseArgs
         {
             AccountName = "ddb1",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.MongoDBDatabaseResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.MongoDBDatabaseResourceArgs
             {
                 Id = "updatedDatabaseName",
             },
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_mongo_db_database = azure_nextgen.documentdb.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase",
+database_account_mongo_db_database = azure_nextgen.documentdb.latest.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase",
     account_name="ddb1",
     database_name="databaseName",
     options={},
@@ -74,7 +74,7 @@ database_account_mongo_db_database = azure_nextgen.documentdb.DatabaseAccountMon
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const databaseAccountMongoDBDatabase = new azure_nextgen.documentdb.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", {
+const databaseAccountMongoDBDatabase = new azure_nextgen.documentdb.latest.DatabaseAccountMongoDBDatabase("databaseAccountMongoDBDatabase", {
     accountName: "ddb1",
     databaseName: "databaseName",
     options: {},

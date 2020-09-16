@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var roleDefinition = new AzureNextGen.Authorization.RoleDefinition("roleDefinition", new AzureNextGen.Authorization.RoleDefinitionArgs
+        var roleDefinition = new AzureNextGen.Authorization.Latest.RoleDefinition("roleDefinition", new AzureNextGen.Authorization.Latest.RoleDefinitionArgs
         {
             RoleDefinitionId = "roleDefinitionId",
             Scope = "scope",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-role_definition = azure_nextgen.authorization.RoleDefinition("roleDefinition",
+role_definition = azure_nextgen.authorization.latest.RoleDefinition("roleDefinition",
     role_definition_id="roleDefinitionId",
     scope="scope")
 
@@ -63,7 +63,7 @@ role_definition = azure_nextgen.authorization.RoleDefinition("roleDefinition",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const roleDefinition = new azure_nextgen.authorization.RoleDefinition("roleDefinition", {
+const roleDefinition = new azure_nextgen.authorization.latest.RoleDefinition("roleDefinition", {
     roleDefinitionId: "roleDefinitionId",
     scope: "scope",
 });

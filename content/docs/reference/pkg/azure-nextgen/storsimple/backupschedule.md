@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backupSchedule = new AzureNextGen.Storsimple.BackupSchedule("backupSchedule", new AzureNextGen.Storsimple.BackupScheduleArgs
+        var backupSchedule = new AzureNextGen.StorSimple.Latest.BackupSchedule("backupSchedule", new AzureNextGen.StorSimple.Latest.BackupScheduleArgs
         {
             BackupPolicyName = "BkUpPolicy01ForSDKTest",
             BackupScheduleName = "schedule2",
@@ -36,7 +36,7 @@ class MyStack : Stack
             ManagerName = "ManagerForSDKTest1",
             ResourceGroupName = "ResourceGroupForSDKTest",
             RetentionCount = 1,
-            ScheduleRecurrence = new AzureNextGen.Storsimple.Inputs.ScheduleRecurrenceArgs
+            ScheduleRecurrence = new AzureNextGen.StorSimple.Latest.Inputs.ScheduleRecurrenceArgs
             {
                 RecurrenceType = "Weekly",
                 RecurrenceValue = 1,
@@ -68,7 +68,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backup_schedule = azure_nextgen.storsimple.BackupSchedule("backupSchedule",
+backup_schedule = azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule",
     backup_policy_name="BkUpPolicy01ForSDKTest",
     backup_schedule_name="schedule2",
     backup_type="CloudSnapshot",
@@ -99,7 +99,7 @@ backup_schedule = azure_nextgen.storsimple.BackupSchedule("backupSchedule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const backupSchedule = new azure_nextgen.storsimple.BackupSchedule("backupSchedule", {
+const backupSchedule = new azure_nextgen.storsimple.latest.BackupSchedule("backupSchedule", {
     backupPolicyName: "BkUpPolicy01ForSDKTest",
     backupScheduleName: "schedule2",
     backupType: "CloudSnapshot",

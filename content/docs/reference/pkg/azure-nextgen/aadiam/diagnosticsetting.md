@@ -26,17 +26,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diagnosticSetting = new AzureNextGen.Aadiam.DiagnosticSetting("diagnosticSetting", new AzureNextGen.Aadiam.DiagnosticSettingArgs
+        var diagnosticSetting = new AzureNextGen.Aadiam.Latest.DiagnosticSetting("diagnosticSetting", new AzureNextGen.Aadiam.Latest.DiagnosticSettingArgs
         {
             EventHubAuthorizationRuleId = "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
             EventHubName = "myeventhub",
             Logs = 
             {
-                new AzureNextGen.Aadiam.Inputs.LogSettingsArgs
+                new AzureNextGen.Aadiam.Latest.Inputs.LogSettingsArgs
                 {
                     Category = "AuditLogs",
                     Enabled = true,
-                    RetentionPolicy = new AzureNextGen.Aadiam.Inputs.RetentionPolicyArgs
+                    RetentionPolicy = new AzureNextGen.Aadiam.Latest.Inputs.RetentionPolicyArgs
                     {
                         Days = 0,
                         Enabled = false,
@@ -65,7 +65,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-diagnostic_setting = azure_nextgen.aadiam.DiagnosticSetting("diagnosticSetting",
+diagnostic_setting = azure_nextgen.aadiam.latest.DiagnosticSetting("diagnosticSetting",
     event_hub_authorization_rule_id="/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     event_hub_name="myeventhub",
     logs=[{
@@ -90,7 +90,7 @@ diagnostic_setting = azure_nextgen.aadiam.DiagnosticSetting("diagnosticSetting",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const diagnosticSetting = new azure_nextgen.aadiam.DiagnosticSetting("diagnosticSetting", {
+const diagnosticSetting = new azure_nextgen.aadiam.latest.DiagnosticSetting("diagnosticSetting", {
     eventHubAuthorizationRuleId: "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     eventHubName: "myeventhub",
     logs: [{

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiIssueAttachment = new AzureNextGen.Apimanagement.ApiIssueAttachment("apiIssueAttachment", new AzureNextGen.Apimanagement.ApiIssueAttachmentArgs
+        var apiIssueAttachment = new AzureNextGen.ApiManagement.Latest.ApiIssueAttachment("apiIssueAttachment", new AzureNextGen.ApiManagement.Latest.ApiIssueAttachmentArgs
         {
             ApiId = "57d1f7558aa04f15146d9d8a",
             AttachmentId = "57d2ef278aa04f0888cba3f3",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_issue_attachment = azure_nextgen.apimanagement.ApiIssueAttachment("apiIssueAttachment",
+api_issue_attachment = azure_nextgen.apimanagement.latest.ApiIssueAttachment("apiIssueAttachment",
     api_id="57d1f7558aa04f15146d9d8a",
     attachment_id="57d2ef278aa04f0888cba3f3",
     content="IEJhc2U2NA==",
@@ -75,7 +75,7 @@ api_issue_attachment = azure_nextgen.apimanagement.ApiIssueAttachment("apiIssueA
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiIssueAttachment = new azure_nextgen.apimanagement.ApiIssueAttachment("apiIssueAttachment", {
+const apiIssueAttachment = new azure_nextgen.apimanagement.latest.ApiIssueAttachment("apiIssueAttachment", {
     apiId: "57d1f7558aa04f15146d9d8a",
     attachmentId: "57d2ef278aa04f0888cba3f3",
     content: "IEJhc2U2NA==",

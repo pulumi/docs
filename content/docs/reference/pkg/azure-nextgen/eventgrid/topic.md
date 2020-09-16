@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var topic = new AzureNextGen.Eventgrid.Topic("topic", new AzureNextGen.Eventgrid.TopicArgs
+        var topic = new AzureNextGen.EventGrid.Latest.Topic("topic", new AzureNextGen.EventGrid.Latest.TopicArgs
         {
             InboundIpRules = 
             {
-                new AzureNextGen.Eventgrid.Inputs.InboundIpRuleArgs
+                new AzureNextGen.EventGrid.Latest.Inputs.InboundIpRuleArgs
                 {
                     Action = "Allow",
                     IpMask = "12.18.30.15",
                 },
-                new AzureNextGen.Eventgrid.Inputs.InboundIpRuleArgs
+                new AzureNextGen.EventGrid.Latest.Inputs.InboundIpRuleArgs
                 {
                     Action = "Allow",
                     IpMask = "12.18.176.1",
@@ -69,7 +69,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-topic = azure_nextgen.eventgrid.Topic("topic",
+topic = azure_nextgen.eventgrid.latest.Topic("topic",
     inbound_ip_rules=[
         {
             "action": "Allow",
@@ -99,7 +99,7 @@ topic = azure_nextgen.eventgrid.Topic("topic",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const topic = new azure_nextgen.eventgrid.Topic("topic", {
+const topic = new azure_nextgen.eventgrid.latest.Topic("topic", {
     inboundIpRules: [
         {
             action: "Allow",

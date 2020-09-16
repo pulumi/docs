@@ -26,15 +26,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var experiment = new AzureNextGen.Network.Experiment("experiment", new AzureNextGen.Network.ExperimentArgs
+        var experiment = new AzureNextGen.Network.Latest.Experiment("experiment", new AzureNextGen.Network.Latest.ExperimentArgs
         {
             Description = "this is my first experiment!",
             EnabledState = "Enabled",
-            EndpointA = new AzureNextGen.Network.Inputs.EndpointArgs
+            EndpointA = new AzureNextGen.Network.Latest.Inputs.EndpointArgs
             {
                 Name = "endpoint A",
             },
-            EndpointB = new AzureNextGen.Network.Inputs.EndpointArgs
+            EndpointB = new AzureNextGen.Network.Latest.Inputs.EndpointArgs
             {
                 Name = "endpoint B",
             },
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-experiment = azure_nextgen.network.Experiment("experiment",
+experiment = azure_nextgen.network.latest.Experiment("experiment",
     description="this is my first experiment!",
     enabled_state="Enabled",
     endpoint_a={
@@ -83,7 +83,7 @@ experiment = azure_nextgen.network.Experiment("experiment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const experiment = new azure_nextgen.network.Experiment("experiment", {
+const experiment = new azure_nextgen.network.latest.Experiment("experiment", {
     description: "this is my first experiment!",
     enabledState: "Enabled",
     endpointA: {

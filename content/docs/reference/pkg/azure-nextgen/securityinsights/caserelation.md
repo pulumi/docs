@@ -26,17 +26,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var caseRelation = new AzureNextGen.Securityinsights.CaseRelation("caseRelation", new AzureNextGen.Securityinsights.CaseRelationArgs
+        var caseRelation = new AzureNextGen.SecurityInsights.V20190101Preview.CaseRelation("caseRelation", new AzureNextGen.SecurityInsights.V20190101Preview.CaseRelationArgs
         {
             CaseId = "afbd324f-6c48-459c-8710-8d1e1cd03812",
             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             RelationName = "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
             ResourceGroupName = "myRg",
-            SourceRelationNode = new AzureNextGen.Securityinsights.Inputs.RelationNodeArgs
+            SourceRelationNode = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.RelationNodeArgs
             {
                 RelationNodeId = "afbd324f-6c48-459c-8710-8d1e1cd03812",
             },
-            TargetRelationNode = new AzureNextGen.Securityinsights.Inputs.RelationNodeArgs
+            TargetRelationNode = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.RelationNodeArgs
             {
                 RelationNodeId = "2216d0e1-91e3-4902-89fd-d2df8c535096",
             },
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-case_relation = azure_nextgen.securityinsights.CaseRelation("caseRelation",
+case_relation = azure_nextgen.securityinsights.v20190101preview.CaseRelation("caseRelation",
     case_id="afbd324f-6c48-459c-8710-8d1e1cd03812",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
     relation_name="4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
@@ -83,7 +83,7 @@ case_relation = azure_nextgen.securityinsights.CaseRelation("caseRelation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const caseRelation = new azure_nextgen.securityinsights.CaseRelation("caseRelation", {
+const caseRelation = new azure_nextgen.securityinsights.v20190101preview.CaseRelation("caseRelation", {
     caseId: "afbd324f-6c48-459c-8710-8d1e1cd03812",
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     relationName: "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",

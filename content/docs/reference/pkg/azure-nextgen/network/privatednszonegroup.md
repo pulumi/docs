@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateDnsZoneGroup = new AzureNextGen.Network.PrivateDnsZoneGroup("privateDnsZoneGroup", new AzureNextGen.Network.PrivateDnsZoneGroupArgs
+        var privateDnsZoneGroup = new AzureNextGen.Network.Latest.PrivateDnsZoneGroup("privateDnsZoneGroup", new AzureNextGen.Network.Latest.PrivateDnsZoneGroupArgs
         {
             PrivateDnsZoneConfigs = 
             {
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_dns_zone_group = azure_nextgen.network.PrivateDnsZoneGroup("privateDnsZoneGroup",
+private_dns_zone_group = azure_nextgen.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup",
     private_dns_zone_configs=[{}],
     private_dns_zone_group_name="testPdnsgroup",
     private_endpoint_name="testPe",
@@ -70,7 +70,7 @@ private_dns_zone_group = azure_nextgen.network.PrivateDnsZoneGroup("privateDnsZo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateDnsZoneGroup = new azure_nextgen.network.PrivateDnsZoneGroup("privateDnsZoneGroup", {
+const privateDnsZoneGroup = new azure_nextgen.network.latest.PrivateDnsZoneGroup("privateDnsZoneGroup", {
     privateDnsZoneConfigs: [{}],
     privateDnsZoneGroupName: "testPdnsgroup",
     privateEndpointName: "testPe",

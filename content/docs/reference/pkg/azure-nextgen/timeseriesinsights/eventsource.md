@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventSource = new AzureNextGen.Timeseriesinsights.EventSource("eventSource", new AzureNextGen.Timeseriesinsights.EventSourceArgs
+        var eventSource = new AzureNextGen.TimeSeriesInsights.Latest.EventSource("eventSource", new AzureNextGen.TimeSeriesInsights.Latest.EventSourceArgs
         {
             EnvironmentName = "env1",
             EventSourceName = "es1",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_source = azure_nextgen.timeseriesinsights.EventSource("eventSource",
+event_source = azure_nextgen.timeseriesinsights.latest.EventSource("eventSource",
     environment_name="env1",
     event_source_name="es1",
     kind="Microsoft.EventHub",
@@ -69,7 +69,7 @@ event_source = azure_nextgen.timeseriesinsights.EventSource("eventSource",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventSource = new azure_nextgen.timeseriesinsights.EventSource("eventSource", {
+const eventSource = new azure_nextgen.timeseriesinsights.latest.EventSource("eventSource", {
     environmentName: "env1",
     eventSourceName: "es1",
     kind: "Microsoft.EventHub",

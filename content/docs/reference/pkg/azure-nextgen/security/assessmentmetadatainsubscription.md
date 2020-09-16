@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assessmentMetadataInSubscription = new AzureNextGen.Security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", new AzureNextGen.Security.AssessmentMetadataInSubscriptionArgs
+        var assessmentMetadataInSubscription = new AzureNextGen.Security.Latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", new AzureNextGen.Security.Latest.AssessmentMetadataInSubscriptionArgs
         {
             AssessmentMetadataName = "ca039e75-a276-4175-aebc-bcd41e4b14b7",
             AssessmentType = "CustomerManaged",
@@ -65,7 +65,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assessment_metadata_in_subscription = azure_nextgen.security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription",
+assessment_metadata_in_subscription = azure_nextgen.security.latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription",
     assessment_metadata_name="ca039e75-a276-4175-aebc-bcd41e4b14b7",
     assessment_type="CustomerManaged",
     category=["Compute"],
@@ -91,7 +91,7 @@ assessment_metadata_in_subscription = azure_nextgen.security.AssessmentMetadataI
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const assessmentMetadataInSubscription = new azure_nextgen.security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", {
+const assessmentMetadataInSubscription = new azure_nextgen.security.latest.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", {
     assessmentMetadataName: "ca039e75-a276-4175-aebc-bcd41e4b14b7",
     assessmentType: "CustomerManaged",
     category: ["Compute"],

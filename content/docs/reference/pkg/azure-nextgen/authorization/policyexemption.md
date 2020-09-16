@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyExemption = new AzureNextGen.Authorization.PolicyExemption("policyExemption", new AzureNextGen.Authorization.PolicyExemptionArgs
+        var policyExemption = new AzureNextGen.Authorization.V20200701Preview.PolicyExemption("policyExemption", new AzureNextGen.Authorization.V20200701Preview.PolicyExemptionArgs
         {
             Description = "Exempt demo cluster from limit sku",
             DisplayName = "Exempt demo cluster",
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_exemption = azure_nextgen.authorization.PolicyExemption("policyExemption",
+policy_exemption = azure_nextgen.authorization.v20200701preview.PolicyExemption("policyExemption",
     description="Exempt demo cluster from limit sku",
     display_name="Exempt demo cluster",
     exemption_category="Waiver",
@@ -83,7 +83,7 @@ policy_exemption = azure_nextgen.authorization.PolicyExemption("policyExemption"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policyExemption = new azure_nextgen.authorization.PolicyExemption("policyExemption", {
+const policyExemption = new azure_nextgen.authorization.v20200701preview.PolicyExemption("policyExemption", {
     description: "Exempt demo cluster from limit sku",
     displayName: "Exempt demo cluster",
     exemptionCategory: "Waiver",

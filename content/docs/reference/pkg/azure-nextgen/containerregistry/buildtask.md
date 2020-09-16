@@ -26,23 +26,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var buildTask = new AzureNextGen.Containerregistry.BuildTask("buildTask", new AzureNextGen.Containerregistry.BuildTaskArgs
+        var buildTask = new AzureNextGen.ContainerRegistry.V20180201Preview.BuildTask("buildTask", new AzureNextGen.ContainerRegistry.V20180201Preview.BuildTaskArgs
         {
             Alias = "myalias",
             BuildTaskName = "myBuildTask",
             Location = "eastus",
-            Platform = new AzureNextGen.Containerregistry.Inputs.PlatformPropertiesArgs
+            Platform = new AzureNextGen.ContainerRegistry.V20180201Preview.Inputs.PlatformPropertiesArgs
             {
                 Cpu = 2,
                 OsType = "Linux",
             },
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            SourceRepository = new AzureNextGen.Containerregistry.Inputs.SourceRepositoryPropertiesArgs
+            SourceRepository = new AzureNextGen.ContainerRegistry.V20180201Preview.Inputs.SourceRepositoryPropertiesArgs
             {
                 IsCommitTriggerEnabled = true,
                 RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                SourceControlAuthProperties = new AzureNextGen.Containerregistry.Inputs.SourceControlAuthInfoArgs
+                SourceControlAuthProperties = new AzureNextGen.ContainerRegistry.V20180201Preview.Inputs.SourceControlAuthInfoArgs
                 {
                     Scope = "repo",
                     Token = "xxxxxx",
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-build_task = azure_nextgen.containerregistry.BuildTask("buildTask",
+build_task = azure_nextgen.containerregistry.v20180201preview.BuildTask("buildTask",
     alias="myalias",
     build_task_name="myBuildTask",
     location="eastus",
@@ -109,7 +109,7 @@ build_task = azure_nextgen.containerregistry.BuildTask("buildTask",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const buildTask = new azure_nextgen.containerregistry.BuildTask("buildTask", {
+const buildTask = new azure_nextgen.containerregistry.v20180201preview.BuildTask("buildTask", {
     alias: "myalias",
     buildTaskName: "myBuildTask",
     location: "eastus",

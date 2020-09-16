@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
         {
             AutoCompleteRestore = true,
             Collation = "SQL_Latin1_General_CP1_CI_AS",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
     auto_complete_restore=True,
     collation="SQL_Latin1_General_CP1_CI_AS",
     create_mode="RestoreExternalBackup",
@@ -79,7 +79,7 @@ managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedDatabase = new azure_nextgen.sql.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     autoCompleteRestore: true,
     collation: "SQL_Latin1_General_CP1_CI_AS",
     createMode: "RestoreExternalBackup",
@@ -106,7 +106,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
         {
             CreateMode = "Recovery",
             DatabaseName = "testdb_recovered",
@@ -133,7 +133,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
     create_mode="Recovery",
     database_name="testdb_recovered",
     location="southeastasia",
@@ -151,7 +151,7 @@ managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedDatabase = new azure_nextgen.sql.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     createMode: "Recovery",
     databaseName: "testdb_recovered",
     location: "southeastasia",
@@ -174,7 +174,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
         {
             Collation = "SQL_Latin1_General_CP1_CI_AS",
             CreateMode = "RestoreExternalBackup",
@@ -203,7 +203,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
     collation="SQL_Latin1_General_CP1_CI_AS",
     create_mode="RestoreExternalBackup",
     database_name="managedDatabase",
@@ -223,7 +223,7 @@ managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedDatabase = new azure_nextgen.sql.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     collation: "SQL_Latin1_General_CP1_CI_AS",
     createMode: "RestoreExternalBackup",
     databaseName: "managedDatabase",
@@ -248,7 +248,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
         {
             CreateMode = "PointInTimeRestore",
             DatabaseName = "managedDatabase",
@@ -276,7 +276,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
     create_mode="PointInTimeRestore",
     database_name="managedDatabase",
     location="southeastasia",
@@ -295,7 +295,7 @@ managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedDatabase = new azure_nextgen.sql.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     createMode: "PointInTimeRestore",
     databaseName: "managedDatabase",
     location: "southeastasia",
@@ -319,7 +319,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
         {
             DatabaseName = "managedDatabase",
             Location = "southeastasia",
@@ -348,7 +348,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
     database_name="managedDatabase",
     location="southeastasia",
     managed_instance_name="managedInstance",
@@ -367,7 +367,7 @@ managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedDatabase = new azure_nextgen.sql.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     databaseName: "managedDatabase",
     location: "southeastasia",
     managedInstanceName: "managedInstance",
@@ -391,7 +391,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabase = new AzureNextGen.Sql.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.ManagedDatabaseArgs
+        var managedDatabase = new AzureNextGen.Sql.V20200202Preview.ManagedDatabase("managedDatabase", new AzureNextGen.Sql.V20200202Preview.ManagedDatabaseArgs
         {
             DatabaseName = "managedDatabase",
             Location = "southeastasia",
@@ -416,7 +416,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
+managed_database = azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase",
     database_name="managedDatabase",
     location="southeastasia",
     managed_instance_name="managedInstance",
@@ -432,7 +432,7 @@ managed_database = azure_nextgen.sql.ManagedDatabase("managedDatabase",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedDatabase = new azure_nextgen.sql.ManagedDatabase("managedDatabase", {
+const managedDatabase = new azure_nextgen.sql.v20200202preview.ManagedDatabase("managedDatabase", {
     databaseName: "managedDatabase",
     location: "southeastasia",
     managedInstanceName: "managedInstance",

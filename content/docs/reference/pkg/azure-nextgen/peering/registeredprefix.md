@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registeredPrefix = new AzureNextGen.Peering.RegisteredPrefix("registeredPrefix", new AzureNextGen.Peering.RegisteredPrefixArgs
+        var registeredPrefix = new AzureNextGen.Peering.Latest.RegisteredPrefix("registeredPrefix", new AzureNextGen.Peering.Latest.RegisteredPrefixArgs
         {
             PeeringName = "peeringName",
             Prefix = "10.22.20.0/24",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registered_prefix = azure_nextgen.peering.RegisteredPrefix("registeredPrefix",
+registered_prefix = azure_nextgen.peering.latest.RegisteredPrefix("registeredPrefix",
     peering_name="peeringName",
     prefix="10.22.20.0/24",
     registered_prefix_name="registeredPrefixName",
@@ -67,7 +67,7 @@ registered_prefix = azure_nextgen.peering.RegisteredPrefix("registeredPrefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const registeredPrefix = new azure_nextgen.peering.RegisteredPrefix("registeredPrefix", {
+const registeredPrefix = new azure_nextgen.peering.latest.RegisteredPrefix("registeredPrefix", {
     peeringName: "peeringName",
     prefix: "10.22.20.0/24",
     registeredPrefixName: "registeredPrefixName",

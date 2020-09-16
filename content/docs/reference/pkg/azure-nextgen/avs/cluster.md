@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Avs.Cluster("cluster", new AzureNextGen.Avs.ClusterArgs
+        var cluster = new AzureNextGen.AVS.Latest.Cluster("cluster", new AzureNextGen.AVS.Latest.ClusterArgs
         {
             ClusterName = "cluster1",
             ClusterSize = 3,
             PrivateCloudName = "cloud1",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.Avs.Inputs.SkuArgs
+            Sku = new AzureNextGen.AVS.Latest.Inputs.SkuArgs
             {
                 Name = "AV20",
             },
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.avs.Cluster("cluster",
+cluster = azure_nextgen.avs.latest.Cluster("cluster",
     cluster_name="cluster1",
     cluster_size=3,
     private_cloud_name="cloud1",
@@ -74,7 +74,7 @@ cluster = azure_nextgen.avs.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.avs.Cluster("cluster", {
+const cluster = new azure_nextgen.avs.latest.Cluster("cluster", {
     clusterName: "cluster1",
     clusterSize: 3,
     privateCloudName: "cloud1",

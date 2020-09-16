@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedCloudNode = new AzureNextGen.Vmwarecloudsimple.DedicatedCloudNode("dedicatedCloudNode", new AzureNextGen.Vmwarecloudsimple.DedicatedCloudNodeArgs
+        var dedicatedCloudNode = new AzureNextGen.VMwareCloudSimple.Latest.DedicatedCloudNode("dedicatedCloudNode", new AzureNextGen.VMwareCloudSimple.Latest.DedicatedCloudNodeArgs
         {
             AvailabilityZoneId = "az1",
             DedicatedCloudNodeName = "myNode",
@@ -35,7 +35,7 @@ class MyStack : Stack
             PlacementGroupId = "n1",
             PurchaseId = "56acbd46-3d36-4bbf-9b08-57c30fdf6932",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Vmwarecloudsimple.Inputs.SkuArgs
+            Sku = new AzureNextGen.VMwareCloudSimple.Latest.Inputs.SkuArgs
             {
                 Name = "VMware_CloudSimple_CS28",
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_cloud_node = azure_nextgen.vmwarecloudsimple.DedicatedCloudNode("dedicatedCloudNode",
+dedicated_cloud_node = azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudNode("dedicatedCloudNode",
     availability_zone_id="az1",
     dedicated_cloud_node_name="myNode",
     location="westus",
@@ -80,7 +80,7 @@ dedicated_cloud_node = azure_nextgen.vmwarecloudsimple.DedicatedCloudNode("dedic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dedicatedCloudNode = new azure_nextgen.vmwarecloudsimple.DedicatedCloudNode("dedicatedCloudNode", {
+const dedicatedCloudNode = new azure_nextgen.vmwarecloudsimple.latest.DedicatedCloudNode("dedicatedCloudNode", {
     availabilityZoneId: "az1",
     dedicatedCloudNodeName: "myNode",
     location: "westus",

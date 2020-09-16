@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             CreateMode = "Copy",
             DatabaseName = "testdb",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     create_mode="Copy",
     database_name="testdb",
     location="Japan East",
@@ -71,7 +71,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "Copy",
     databaseName: "testdb",
     location: "Japan East",
@@ -94,7 +94,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             CreateMode = "Restore",
             DatabaseName = "testdb",
@@ -122,7 +122,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     create_mode="Restore",
     database_name="testdb",
     location="Japan East",
@@ -141,7 +141,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "Restore",
     databaseName: "testdb",
     location: "Japan East",
@@ -165,7 +165,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             CreateMode = "Restore",
             DatabaseName = "testdb",
@@ -193,7 +193,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     create_mode="Restore",
     database_name="testdb",
     location="Japan East",
@@ -212,7 +212,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "Restore",
     databaseName: "testdb",
     location: "Japan East",
@@ -236,7 +236,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             CreateMode = "Recovery",
             DatabaseName = "testdb",
@@ -263,7 +263,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     create_mode="Recovery",
     database_name="testdb",
     location="Japan East",
@@ -281,7 +281,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "Recovery",
     databaseName: "testdb",
     location: "Japan East",
@@ -304,7 +304,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             CreateMode = "NonReadableSecondary",
             DatabaseName = "testdb",
@@ -331,7 +331,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     create_mode="NonReadableSecondary",
     database_name="testdb",
     location="Japan East",
@@ -349,7 +349,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "NonReadableSecondary",
     databaseName: "testdb",
     location: "Japan East",
@@ -372,7 +372,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             CreateMode = "PointInTimeRestore",
             DatabaseName = "testdb",
@@ -400,7 +400,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     create_mode="PointInTimeRestore",
     database_name="testdb",
     location="Japan East",
@@ -419,7 +419,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "PointInTimeRestore",
     databaseName: "testdb",
     location: "Japan East",
@@ -443,7 +443,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             CreateMode = "OnlineSecondary",
             DatabaseName = "testdb",
@@ -470,7 +470,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     create_mode="OnlineSecondary",
     database_name="testdb",
     location="Japan East",
@@ -488,7 +488,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "OnlineSecondary",
     databaseName: "testdb",
     location: "Japan East",
@@ -511,7 +511,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             CreateMode = "RestoreLongTermRetentionBackup",
             DatabaseName = "testdb",
@@ -538,7 +538,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     create_mode="RestoreLongTermRetentionBackup",
     database_name="testdb",
     location="Japan East",
@@ -556,7 +556,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     createMode: "RestoreLongTermRetentionBackup",
     databaseName: "testdb",
     location: "Japan East",
@@ -579,7 +579,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             Collation = "SQL_Latin1_General_CP1_CI_AS",
             CreateMode = "Default",
@@ -612,7 +612,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     collation="SQL_Latin1_General_CP1_CI_AS",
     create_mode="Default",
     database_name="testdb",
@@ -636,7 +636,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     collation: "SQL_Latin1_General_CP1_CI_AS",
     createMode: "Default",
     databaseName: "testdb",
@@ -665,7 +665,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             DatabaseName = "testdb",
             Location = "Japan East",
@@ -690,7 +690,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     database_name="testdb",
     location="Japan East",
     resource_group_name="sqlcrudtest-4799",
@@ -706,7 +706,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     databaseName: "testdb",
     location: "Japan East",
     resourceGroupName: "sqlcrudtest-4799",
@@ -727,7 +727,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             Collation = "SQL_Latin1_General_CP1_CI_AS",
             CreateMode = "Default",
@@ -759,7 +759,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     collation="SQL_Latin1_General_CP1_CI_AS",
     create_mode="Default",
     database_name="testdb",
@@ -782,7 +782,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     collation: "SQL_Latin1_General_CP1_CI_AS",
     createMode: "Default",
     databaseName: "testdb",
@@ -810,7 +810,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Sql.Database("database", new AzureNextGen.Sql.DatabaseArgs
+        var database = new AzureNextGen.Sql.Latest.Database("database", new AzureNextGen.Sql.Latest.DatabaseArgs
         {
             DatabaseName = "testdb",
             ElasticPoolName = "7537",
@@ -836,7 +836,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.sql.Database("database",
+database = azure_nextgen.sql.latest.Database("database",
     database_name="testdb",
     elastic_pool_name="7537",
     location="Japan East",
@@ -853,7 +853,7 @@ database = azure_nextgen.sql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.sql.Database("database", {
+const database = new azure_nextgen.sql.latest.Database("database", {
     databaseName: "testdb",
     elasticPoolName: "7537",
     location: "Japan East",

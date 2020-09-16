@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Machinelearningservices.Workspace("workspace", new AzureNextGen.Machinelearningservices.WorkspaceArgs
+        var workspace = new AzureNextGen.MachineLearningServices.Latest.Workspace("workspace", new AzureNextGen.MachineLearningServices.Latest.WorkspaceArgs
         {
             ApplicationInsights = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
             ContainerRegistry = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
             Description = "test description",
-            Encryption = new AzureNextGen.Machinelearningservices.Inputs.EncryptionPropertyArgs
+            Encryption = new AzureNextGen.MachineLearningServices.Latest.Inputs.EncryptionPropertyArgs
             {
-                KeyVaultProperties = new AzureNextGen.Machinelearningservices.Inputs.KeyVaultPropertiesArgs
+                KeyVaultProperties = new AzureNextGen.MachineLearningServices.Latest.Inputs.KeyVaultPropertiesArgs
                 {
                     IdentityClientId = "",
                     KeyIdentifier = "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
@@ -48,12 +48,12 @@ class MyStack : Stack
             ResourceGroupName = "workspace-1234",
             SharedPrivateLinkResources = 
             {
-                new AzureNextGen.Machinelearningservices.Inputs.SharedPrivateLinkResourceArgs
+                new AzureNextGen.MachineLearningServices.Latest.Inputs.SharedPrivateLinkResourceArgs
                 {
                     Name = "testdbresource",
                 },
             },
-            Sku = new AzureNextGen.Machinelearningservices.Inputs.SkuArgs
+            Sku = new AzureNextGen.MachineLearningServices.Latest.Inputs.SkuArgs
             {
                 Name = "Basic",
                 Tier = "Basic",
@@ -79,7 +79,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.machinelearningservices.Workspace("workspace",
+workspace = azure_nextgen.machinelearningservices.latest.Workspace("workspace",
     application_insights="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
     container_registry="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
     description="test description",
@@ -116,7 +116,7 @@ workspace = azure_nextgen.machinelearningservices.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.machinelearningservices.Workspace("workspace", {
+const workspace = new azure_nextgen.machinelearningservices.latest.Workspace("workspace", {
     applicationInsights: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
     containerRegistry: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
     description: "test description",

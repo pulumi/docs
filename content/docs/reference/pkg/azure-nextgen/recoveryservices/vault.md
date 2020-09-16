@@ -26,15 +26,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vault = new AzureNextGen.Recoveryservices.Vault("vault", new AzureNextGen.Recoveryservices.VaultArgs
+        var vault = new AzureNextGen.RecoveryServices.Latest.Vault("vault", new AzureNextGen.RecoveryServices.Latest.VaultArgs
         {
-            Identity = new AzureNextGen.Recoveryservices.Inputs.IdentityDataArgs
+            Identity = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityDataArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "West US",
             ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
-            Sku = new AzureNextGen.Recoveryservices.Inputs.SkuArgs
+            Sku = new AzureNextGen.RecoveryServices.Latest.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vault = azure_nextgen.recoveryservices.Vault("vault",
+vault = azure_nextgen.recoveryservices.latest.Vault("vault",
     identity={
         "type": "SystemAssigned",
     },
@@ -79,7 +79,7 @@ vault = azure_nextgen.recoveryservices.Vault("vault",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vault = new azure_nextgen.recoveryservices.Vault("vault", {
+const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
     identity: {
         type: "SystemAssigned",
     },

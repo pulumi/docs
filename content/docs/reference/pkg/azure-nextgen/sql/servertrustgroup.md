@@ -26,15 +26,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverTrustGroup = new AzureNextGen.Sql.ServerTrustGroup("serverTrustGroup", new AzureNextGen.Sql.ServerTrustGroupArgs
+        var serverTrustGroup = new AzureNextGen.Sql.V20200202Preview.ServerTrustGroup("serverTrustGroup", new AzureNextGen.Sql.V20200202Preview.ServerTrustGroupArgs
         {
             GroupMembers = 
             {
-                new AzureNextGen.Sql.Inputs.ServerInfoArgs
+                new AzureNextGen.Sql.V20200202Preview.Inputs.ServerInfoArgs
                 {
                     ServerId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
                 },
-                new AzureNextGen.Sql.Inputs.ServerInfoArgs
+                new AzureNextGen.Sql.V20200202Preview.Inputs.ServerInfoArgs
                 {
                     ServerId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2",
                 },
@@ -65,7 +65,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_trust_group = azure_nextgen.sql.ServerTrustGroup("serverTrustGroup",
+server_trust_group = azure_nextgen.sql.v20200202preview.ServerTrustGroup("serverTrustGroup",
     group_members=[
         {
             "serverId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
@@ -89,7 +89,7 @@ server_trust_group = azure_nextgen.sql.ServerTrustGroup("serverTrustGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serverTrustGroup = new azure_nextgen.sql.ServerTrustGroup("serverTrustGroup", {
+const serverTrustGroup = new azure_nextgen.sql.v20200202preview.ServerTrustGroup("serverTrustGroup", {
     groupMembers: [
         {
             serverId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",

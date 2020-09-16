@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var module = new AzureNextGen.Automation.Module("module", new AzureNextGen.Automation.ModuleArgs
+        var module = new AzureNextGen.Automation.Latest.Module("module", new AzureNextGen.Automation.Latest.ModuleArgs
         {
             AutomationAccountName = "myAutomationAccount33",
-            ContentLink = new AzureNextGen.Automation.Inputs.ContentLinkArgs
+            ContentLink = new AzureNextGen.Automation.Latest.Inputs.ContentLinkArgs
             {
-                ContentHash = new AzureNextGen.Automation.Inputs.ContentHashArgs
+                ContentHash = new AzureNextGen.Automation.Latest.Inputs.ContentHashArgs
                 {
                     Algorithm = "sha265",
                     Value = "07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-module = azure_nextgen.automation.Module("module",
+module = azure_nextgen.automation.latest.Module("module",
     automation_account_name="myAutomationAccount33",
     content_link={
         "contentHash": {
@@ -83,7 +83,7 @@ module = azure_nextgen.automation.Module("module",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const module = new azure_nextgen.automation.Module("module", {
+const module = new azure_nextgen.automation.latest.Module("module", {
     automationAccountName: "myAutomationAccount33",
     contentLink: {
         contentHash: {

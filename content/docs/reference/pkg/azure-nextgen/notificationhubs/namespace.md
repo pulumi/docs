@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @namespace = new AzureNextGen.Notificationhubs.Namespace("namespace", new AzureNextGen.Notificationhubs.NamespaceArgs
+        var @namespace = new AzureNextGen.NotificationHubs.Latest.Namespace("namespace", new AzureNextGen.NotificationHubs.Latest.NamespaceArgs
         {
             Location = "South Central US",
             NamespaceName = "nh-sdk-ns",
             ResourceGroupName = "5ktrial",
-            Sku = new AzureNextGen.Notificationhubs.Inputs.SkuArgs
+            Sku = new AzureNextGen.NotificationHubs.Latest.Inputs.SkuArgs
             {
                 Name = "Standard",
                 Tier = "Standard",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace = azure_nextgen.notificationhubs.Namespace("namespace",
+namespace = azure_nextgen.notificationhubs.latest.Namespace("namespace",
     location="South Central US",
     namespace_name="nh-sdk-ns",
     resource_group_name="5ktrial",
@@ -83,7 +83,7 @@ namespace = azure_nextgen.notificationhubs.Namespace("namespace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const namespace = new azure_nextgen.notificationhubs.Namespace("namespace", {
+const namespace = new azure_nextgen.notificationhubs.latest.Namespace("namespace", {
     location: "South Central US",
     namespaceName: "nh-sdk-ns",
     resourceGroupName: "5ktrial",

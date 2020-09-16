@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScope = new AzureNextGen.Insights.PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights.PrivateLinkScopeArgs
+        var privateLinkScope = new AzureNextGen.Insights.V20191017Preview.PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopeArgs
         {
             Location = "Global",
             ResourceGroupName = "my-resource-group",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scope = azure_nextgen.insights.PrivateLinkScope("privateLinkScope",
+private_link_scope = azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope",
     location="Global",
     resource_group_name="my-resource-group",
     scope_name="my-privatelinkscope")
@@ -65,7 +65,7 @@ private_link_scope = azure_nextgen.insights.PrivateLinkScope("privateLinkScope",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateLinkScope = new azure_nextgen.insights.PrivateLinkScope("privateLinkScope", {
+const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope", {
     location: "Global",
     resourceGroupName: "my-resource-group",
     scopeName: "my-privatelinkscope",
@@ -85,7 +85,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScope = new AzureNextGen.Insights.PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights.PrivateLinkScopeArgs
+        var privateLinkScope = new AzureNextGen.Insights.V20191017Preview.PrivateLinkScope("privateLinkScope", new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopeArgs
         {
             Location = "Global",
             ResourceGroupName = "my-resource-group",
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scope = azure_nextgen.insights.PrivateLinkScope("privateLinkScope",
+private_link_scope = azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope",
     location="Global",
     resource_group_name="my-resource-group",
     scope_name="my-privatelinkscope",
@@ -131,7 +131,7 @@ private_link_scope = azure_nextgen.insights.PrivateLinkScope("privateLinkScope",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateLinkScope = new azure_nextgen.insights.PrivateLinkScope("privateLinkScope", {
+const privateLinkScope = new azure_nextgen.insights.v20191017preview.PrivateLinkScope("privateLinkScope", {
     location: "Global",
     resourceGroupName: "my-resource-group",
     scopeName: "my-privatelinkscope",

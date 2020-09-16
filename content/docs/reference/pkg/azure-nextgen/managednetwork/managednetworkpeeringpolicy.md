@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedNetworkPeeringPolicy = new AzureNextGen.Managednetwork.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", new AzureNextGen.Managednetwork.ManagedNetworkPeeringPolicyArgs
+        var managedNetworkPeeringPolicy = new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetworkPeeringPolicyArgs
         {
             ManagedNetworkName = "myManagedNetwork",
             ManagedNetworkPeeringPolicyName = "myHubAndSpoke",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_network_peering_policy = azure_nextgen.managednetwork.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy",
+managed_network_peering_policy = azure_nextgen.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy",
     managed_network_name="myManagedNetwork",
     managed_network_peering_policy_name="myHubAndSpoke",
     resource_group_name="myResourceGroup")
@@ -65,7 +65,7 @@ managed_network_peering_policy = azure_nextgen.managednetwork.ManagedNetworkPeer
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedNetworkPeeringPolicy = new azure_nextgen.managednetwork.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", {
+const managedNetworkPeeringPolicy = new azure_nextgen.managednetwork.v20190601preview.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", {
     managedNetworkName: "myManagedNetwork",
     managedNetworkPeeringPolicyName: "myHubAndSpoke",
     resourceGroupName: "myResourceGroup",

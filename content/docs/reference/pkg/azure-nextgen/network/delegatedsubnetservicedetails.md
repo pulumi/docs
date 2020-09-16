@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var delegatedSubnetServiceDetails = new AzureNextGen.Network.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", new AzureNextGen.Network.DelegatedSubnetServiceDetailsArgs
+        var delegatedSubnetServiceDetails = new AzureNextGen.Network.V20200808Preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", new AzureNextGen.Network.V20200808Preview.DelegatedSubnetServiceDetailsArgs
         {
             ControllerID = "a182cbcf-e8ea-4175-ac2b-ad36a73f9801",
             ResourceGroupName = "TestRG",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-delegated_subnet_service_details = azure_nextgen.network.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails",
+delegated_subnet_service_details = azure_nextgen.network.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails",
     controller_id="a182cbcf-e8ea-4175-ac2b-ad36a73f9801",
     resource_group_name="TestRG",
     resource_name="delegated1",
@@ -69,7 +69,7 @@ delegated_subnet_service_details = azure_nextgen.network.DelegatedSubnetServiceD
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const delegatedSubnetServiceDetails = new azure_nextgen.network.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", {
+const delegatedSubnetServiceDetails = new azure_nextgen.network.v20200808preview.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", {
     controllerID: "a182cbcf-e8ea-4175-ac2b-ad36a73f9801",
     resourceGroupName: "TestRG",
     resourceName: "delegated1",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queryPack = new AzureNextGen.Insights.QueryPack("queryPack", new AzureNextGen.Insights.QueryPackArgs
+        var queryPack = new AzureNextGen.Insights.V20190901Preview.QueryPack("queryPack", new AzureNextGen.Insights.V20190901Preview.QueryPackArgs
         {
             Location = "South Central US",
             QueryPackName = "my-querypack",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-query_pack = azure_nextgen.insights.QueryPack("queryPack",
+query_pack = azure_nextgen.insights.v20190901preview.QueryPack("queryPack",
     location="South Central US",
     query_pack_name="my-querypack",
     resource_group_name="my-resource-group")
@@ -65,7 +65,7 @@ query_pack = azure_nextgen.insights.QueryPack("queryPack",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const queryPack = new azure_nextgen.insights.QueryPack("queryPack", {
+const queryPack = new azure_nextgen.insights.v20190901preview.QueryPack("queryPack", {
     location: "South Central US",
     queryPackName: "my-querypack",
     resourceGroupName: "my-resource-group",
@@ -85,7 +85,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queryPack = new AzureNextGen.Insights.QueryPack("queryPack", new AzureNextGen.Insights.QueryPackArgs
+        var queryPack = new AzureNextGen.Insights.V20190901Preview.QueryPack("queryPack", new AzureNextGen.Insights.V20190901Preview.QueryPackArgs
         {
             Location = "South Central US",
             QueryPackName = "my-querypack",
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-query_pack = azure_nextgen.insights.QueryPack("queryPack",
+query_pack = azure_nextgen.insights.v20190901preview.QueryPack("queryPack",
     location="South Central US",
     query_pack_name="my-querypack",
     resource_group_name="my-resource-group",
@@ -131,7 +131,7 @@ query_pack = azure_nextgen.insights.QueryPack("queryPack",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const queryPack = new azure_nextgen.insights.QueryPack("queryPack", {
+const queryPack = new azure_nextgen.insights.v20190901preview.QueryPack("queryPack", {
     location: "South Central US",
     queryPackName: "my-querypack",
     resourceGroupName: "my-resource-group",

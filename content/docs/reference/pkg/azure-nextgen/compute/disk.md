@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
+        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.Disk("disk",
+disk = azure_nextgen.compute.latest.Disk("disk",
     creation_data={
         "createOption": "Empty",
     },
@@ -78,7 +78,7 @@ disk = azure_nextgen.compute.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disk = new azure_nextgen.compute.Disk("disk", {
+const disk = new azure_nextgen.compute.latest.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -104,15 +104,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
+        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
             DiskName = "myDisk",
             DiskSizeGB = 200,
-            Encryption = new AzureNextGen.Compute.Inputs.EncryptionArgs
+            Encryption = new AzureNextGen.Compute.Latest.Inputs.EncryptionArgs
             {
                 DiskEncryptionSetId = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
             },
@@ -137,7 +137,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.Disk("disk",
+disk = azure_nextgen.compute.latest.Disk("disk",
     creation_data={
         "createOption": "Empty",
     },
@@ -159,7 +159,7 @@ disk = azure_nextgen.compute.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disk = new azure_nextgen.compute.Disk("disk", {
+const disk = new azure_nextgen.compute.latest.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -186,9 +186,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
+        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Copy",
                 SourceResourceId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
@@ -215,7 +215,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.Disk("disk",
+disk = azure_nextgen.compute.latest.Disk("disk",
     creation_data={
         "createOption": "Copy",
         "sourceResourceId": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
@@ -234,7 +234,7 @@ disk = azure_nextgen.compute.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disk = new azure_nextgen.compute.Disk("disk", {
+const disk = new azure_nextgen.compute.latest.Disk("disk", {
     creationData: {
         createOption: "Copy",
         sourceResourceId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
@@ -258,9 +258,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
+        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Import",
                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -288,7 +288,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.Disk("disk",
+disk = azure_nextgen.compute.latest.Disk("disk",
     creation_data={
         "createOption": "Import",
         "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -308,7 +308,7 @@ disk = azure_nextgen.compute.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disk = new azure_nextgen.compute.Disk("disk", {
+const disk = new azure_nextgen.compute.latest.Disk("disk", {
     creationData: {
         createOption: "Import",
         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -333,9 +333,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
+        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Import",
                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -362,7 +362,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.Disk("disk",
+disk = azure_nextgen.compute.latest.Disk("disk",
     creation_data={
         "createOption": "Import",
         "sourceUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -381,7 +381,7 @@ disk = azure_nextgen.compute.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disk = new azure_nextgen.compute.Disk("disk", {
+const disk = new azure_nextgen.compute.latest.Disk("disk", {
     creationData: {
         createOption: "Import",
         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
@@ -405,12 +405,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
+        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "FromImage",
-                ImageReference = new AzureNextGen.Compute.Inputs.ImageDiskReferenceArgs
+                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageDiskReferenceArgs
                 {
                     Id = "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
                 },
@@ -438,7 +438,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.Disk("disk",
+disk = azure_nextgen.compute.latest.Disk("disk",
     creation_data={
         "createOption": "FromImage",
         "imageReference": {
@@ -460,7 +460,7 @@ disk = azure_nextgen.compute.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disk = new azure_nextgen.compute.Disk("disk", {
+const disk = new azure_nextgen.compute.latest.Disk("disk", {
     creationData: {
         createOption: "FromImage",
         imageReference: {
@@ -487,9 +487,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
+        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Copy",
                 SourceResourceId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
@@ -516,7 +516,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.Disk("disk",
+disk = azure_nextgen.compute.latest.Disk("disk",
     creation_data={
         "createOption": "Copy",
         "sourceResourceId": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
@@ -535,7 +535,7 @@ disk = azure_nextgen.compute.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disk = new azure_nextgen.compute.Disk("disk", {
+const disk = new azure_nextgen.compute.latest.Disk("disk", {
     creationData: {
         createOption: "Copy",
         sourceResourceId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
@@ -559,9 +559,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
+        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Upload",
                 UploadSizeBytes = 10737418752,
@@ -588,7 +588,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.Disk("disk",
+disk = azure_nextgen.compute.latest.Disk("disk",
     creation_data={
         "createOption": "Upload",
         "uploadSizeBytes": 10737418752,
@@ -607,7 +607,7 @@ disk = azure_nextgen.compute.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disk = new azure_nextgen.compute.Disk("disk", {
+const disk = new azure_nextgen.compute.latest.Disk("disk", {
     creationData: {
         createOption: "Upload",
         uploadSizeBytes: 10737418752,
@@ -631,9 +631,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
+        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
             },
@@ -660,7 +660,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.Disk("disk",
+disk = azure_nextgen.compute.latest.Disk("disk",
     creation_data={
         "createOption": "Empty",
     },
@@ -679,7 +679,7 @@ disk = azure_nextgen.compute.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disk = new azure_nextgen.compute.Disk("disk", {
+const disk = new azure_nextgen.compute.latest.Disk("disk", {
     creationData: {
         createOption: "Empty",
     },
@@ -703,9 +703,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disk = new AzureNextGen.Compute.Disk("disk", new AzureNextGen.Compute.DiskArgs
+        var disk = new AzureNextGen.Compute.Latest.Disk("disk", new AzureNextGen.Compute.Latest.DiskArgs
         {
-            CreationData = new AzureNextGen.Compute.Inputs.CreationDataArgs
+            CreationData = new AzureNextGen.Compute.Latest.Inputs.CreationDataArgs
             {
                 CreateOption = "Empty",
                 LogicalSectorSize = 512,
@@ -714,7 +714,7 @@ class MyStack : Stack
             DiskSizeGB = 200,
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.DiskSkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.DiskSkuArgs
             {
                 Name = "UltraSSD_LRS",
             },
@@ -737,7 +737,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk = azure_nextgen.compute.Disk("disk",
+disk = azure_nextgen.compute.latest.Disk("disk",
     creation_data={
         "createOption": "Empty",
         "logicalSectorSize": 512,
@@ -760,7 +760,7 @@ disk = azure_nextgen.compute.Disk("disk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disk = new azure_nextgen.compute.Disk("disk", {
+const disk = new azure_nextgen.compute.latest.Disk("disk", {
     creationData: {
         createOption: "Empty",
         logicalSectorSize: 512,

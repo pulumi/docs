@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managerExtendedInfo = new AzureNextGen.Storsimple.ManagerExtendedInfo("managerExtendedInfo", new AzureNextGen.Storsimple.ManagerExtendedInfoArgs
+        var managerExtendedInfo = new AzureNextGen.StorSimple.Latest.ManagerExtendedInfo("managerExtendedInfo", new AzureNextGen.StorSimple.Latest.ManagerExtendedInfoArgs
         {
             Algorithm = "None",
             IntegrityKey = "BIl+RHqO8PZ6DRvuXTTK7g==",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-manager_extended_info = azure_nextgen.storsimple.ManagerExtendedInfo("managerExtendedInfo",
+manager_extended_info = azure_nextgen.storsimple.latest.ManagerExtendedInfo("managerExtendedInfo",
     algorithm="None",
     integrity_key="BIl+RHqO8PZ6DRvuXTTK7g==",
     manager_name="ManagerForSDKTest2",
@@ -67,7 +67,7 @@ manager_extended_info = azure_nextgen.storsimple.ManagerExtendedInfo("managerExt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managerExtendedInfo = new azure_nextgen.storsimple.ManagerExtendedInfo("managerExtendedInfo", {
+const managerExtendedInfo = new azure_nextgen.storsimple.latest.ManagerExtendedInfo("managerExtendedInfo", {
     algorithm: "None",
     integrityKey: "BIl+RHqO8PZ6DRvuXTTK7g==",
     managerName: "ManagerForSDKTest2",

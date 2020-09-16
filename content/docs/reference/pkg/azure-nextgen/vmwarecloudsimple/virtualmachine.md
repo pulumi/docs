@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachine = new AzureNextGen.Vmwarecloudsimple.VirtualMachine("virtualMachine", new AzureNextGen.Vmwarecloudsimple.VirtualMachineArgs
+        var virtualMachine = new AzureNextGen.VMwareCloudSimple.Latest.VirtualMachine("virtualMachine", new AzureNextGen.VMwareCloudSimple.Latest.VirtualMachineArgs
         {
             AmountOfRam = 4096,
             Disks = 
             {
-                new AzureNextGen.Vmwarecloudsimple.Inputs.VirtualDiskArgs
+                new AzureNextGen.VMwareCloudSimple.Latest.Inputs.VirtualDiskArgs
                 {
                     ControllerId = "1000",
                     IndependenceMode = "persistent",
@@ -42,9 +42,9 @@ class MyStack : Stack
             Location = "westus2",
             Nics = 
             {
-                new AzureNextGen.Vmwarecloudsimple.Inputs.VirtualNicArgs
+                new AzureNextGen.VMwareCloudSimple.Latest.Inputs.VirtualNicArgs
                 {
-                    Network = new AzureNextGen.Vmwarecloudsimple.Inputs.VirtualNetworkArgs
+                    Network = new AzureNextGen.VMwareCloudSimple.Latest.Inputs.VirtualNetworkArgs
                     {
                         Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
                     },
@@ -56,7 +56,7 @@ class MyStack : Stack
             NumberOfCores = 2,
             PrivateCloudId = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
             ResourceGroupName = "myResourceGroup",
-            ResourcePool = new AzureNextGen.Vmwarecloudsimple.Inputs.ResourcePoolArgs
+            ResourcePool = new AzureNextGen.VMwareCloudSimple.Latest.Inputs.ResourcePoolArgs
             {
                 Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
             },
@@ -81,7 +81,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine = azure_nextgen.vmwarecloudsimple.VirtualMachine("virtualMachine",
+virtual_machine = azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtualMachine",
     amount_of_ram=4096,
     disks=[{
         "controllerId": "1000",
@@ -117,7 +117,7 @@ virtual_machine = azure_nextgen.vmwarecloudsimple.VirtualMachine("virtualMachine
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachine = new azure_nextgen.vmwarecloudsimple.VirtualMachine("virtualMachine", {
+const virtualMachine = new azure_nextgen.vmwarecloudsimple.latest.VirtualMachine("virtualMachine", {
     amountOfRam: 4096,
     disks: [{
         controllerId: "1000",

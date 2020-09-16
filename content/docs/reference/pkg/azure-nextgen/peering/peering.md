@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var peering = new AzureNextGen.Peering.Peering("peering", new AzureNextGen.Peering.PeeringArgs
+        var peering = new AzureNextGen.Peering.Latest.Peering("peering", new AzureNextGen.Peering.Latest.PeeringArgs
         {
-            Direct = new AzureNextGen.Peering.Inputs.PeeringPropertiesDirectArgs
+            Direct = new AzureNextGen.Peering.Latest.Inputs.PeeringPropertiesDirectArgs
             {
                 Connections = 
                 {
-                    new AzureNextGen.Peering.Inputs.DirectConnectionArgs
+                    new AzureNextGen.Peering.Latest.Inputs.DirectConnectionArgs
                     {
                         BandwidthInMbps = 10000,
-                        BgpSession = new AzureNextGen.Peering.Inputs.BgpSessionArgs
+                        BgpSession = new AzureNextGen.Peering.Latest.Inputs.BgpSessionArgs
                         {
                             MaxPrefixesAdvertisedV4 = 1000,
                             MaxPrefixesAdvertisedV6 = 100,
@@ -48,7 +48,7 @@ class MyStack : Stack
                         SessionAddressProvider = "Peer",
                         UseForPeeringService = false,
                     },
-                    new AzureNextGen.Peering.Inputs.DirectConnectionArgs
+                    new AzureNextGen.Peering.Latest.Inputs.DirectConnectionArgs
                     {
                         BandwidthInMbps = 10000,
                         ConnectionIdentifier = "8AB00818-D533-4504-A25A-03A17F61201C",
@@ -58,7 +58,7 @@ class MyStack : Stack
                     },
                 },
                 DirectPeeringType = "Edge",
-                PeerAsn = new AzureNextGen.Peering.Inputs.SubResourceArgs
+                PeerAsn = new AzureNextGen.Peering.Latest.Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
                 },
@@ -68,7 +68,7 @@ class MyStack : Stack
             PeeringLocation = "peeringLocation0",
             PeeringName = "peeringName",
             ResourceGroupName = "rgName",
-            Sku = new AzureNextGen.Peering.Inputs.PeeringSkuArgs
+            Sku = new AzureNextGen.Peering.Latest.Inputs.PeeringSkuArgs
             {
                 Name = "Basic_Direct_Free",
             },
@@ -91,7 +91,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-peering = azure_nextgen.peering.Peering("peering",
+peering = azure_nextgen.peering.latest.Peering("peering",
     direct={
         "connections": [
             {
@@ -140,7 +140,7 @@ peering = azure_nextgen.peering.Peering("peering",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const peering = new azure_nextgen.peering.Peering("peering", {
+const peering = new azure_nextgen.peering.latest.Peering("peering", {
     direct: {
         connections: [
             {
@@ -194,16 +194,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var peering = new AzureNextGen.Peering.Peering("peering", new AzureNextGen.Peering.PeeringArgs
+        var peering = new AzureNextGen.Peering.Latest.Peering("peering", new AzureNextGen.Peering.Latest.PeeringArgs
         {
-            Direct = new AzureNextGen.Peering.Inputs.PeeringPropertiesDirectArgs
+            Direct = new AzureNextGen.Peering.Latest.Inputs.PeeringPropertiesDirectArgs
             {
                 Connections = 
                 {
-                    new AzureNextGen.Peering.Inputs.DirectConnectionArgs
+                    new AzureNextGen.Peering.Latest.Inputs.DirectConnectionArgs
                     {
                         BandwidthInMbps = 10000,
-                        BgpSession = new AzureNextGen.Peering.Inputs.BgpSessionArgs
+                        BgpSession = new AzureNextGen.Peering.Latest.Inputs.BgpSessionArgs
                         {
                             MaxPrefixesAdvertisedV4 = 1000,
                             MaxPrefixesAdvertisedV6 = 100,
@@ -218,7 +218,7 @@ class MyStack : Stack
                     },
                 },
                 DirectPeeringType = "IxRs",
-                PeerAsn = new AzureNextGen.Peering.Inputs.SubResourceArgs
+                PeerAsn = new AzureNextGen.Peering.Latest.Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
                 },
@@ -228,7 +228,7 @@ class MyStack : Stack
             PeeringLocation = "peeringLocation0",
             PeeringName = "peeringName",
             ResourceGroupName = "rgName",
-            Sku = new AzureNextGen.Peering.Inputs.PeeringSkuArgs
+            Sku = new AzureNextGen.Peering.Latest.Inputs.PeeringSkuArgs
             {
                 Name = "Premium_Direct_Free",
             },
@@ -251,7 +251,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-peering = azure_nextgen.peering.Peering("peering",
+peering = azure_nextgen.peering.latest.Peering("peering",
     direct={
         "connections": [{
             "bandwidthInMbps": 10000,
@@ -291,7 +291,7 @@ peering = azure_nextgen.peering.Peering("peering",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const peering = new azure_nextgen.peering.Peering("peering", {
+const peering = new azure_nextgen.peering.latest.Peering("peering", {
     direct: {
         connections: [{
             bandwidthInMbps: 10000,
@@ -336,15 +336,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var peering = new AzureNextGen.Peering.Peering("peering", new AzureNextGen.Peering.PeeringArgs
+        var peering = new AzureNextGen.Peering.Latest.Peering("peering", new AzureNextGen.Peering.Latest.PeeringArgs
         {
-            Exchange = new AzureNextGen.Peering.Inputs.PeeringPropertiesExchangeArgs
+            Exchange = new AzureNextGen.Peering.Latest.Inputs.PeeringPropertiesExchangeArgs
             {
                 Connections = 
                 {
-                    new AzureNextGen.Peering.Inputs.ExchangeConnectionArgs
+                    new AzureNextGen.Peering.Latest.Inputs.ExchangeConnectionArgs
                     {
-                        BgpSession = new AzureNextGen.Peering.Inputs.BgpSessionArgs
+                        BgpSession = new AzureNextGen.Peering.Latest.Inputs.BgpSessionArgs
                         {
                             MaxPrefixesAdvertisedV4 = 1000,
                             MaxPrefixesAdvertisedV6 = 100,
@@ -355,9 +355,9 @@ class MyStack : Stack
                         ConnectionIdentifier = "CE495334-0E94-4E51-8164-8116D6CD284D",
                         PeeringDBFacilityId = 99999,
                     },
-                    new AzureNextGen.Peering.Inputs.ExchangeConnectionArgs
+                    new AzureNextGen.Peering.Latest.Inputs.ExchangeConnectionArgs
                     {
-                        BgpSession = new AzureNextGen.Peering.Inputs.BgpSessionArgs
+                        BgpSession = new AzureNextGen.Peering.Latest.Inputs.BgpSessionArgs
                         {
                             MaxPrefixesAdvertisedV4 = 1000,
                             MaxPrefixesAdvertisedV6 = 100,
@@ -369,7 +369,7 @@ class MyStack : Stack
                         PeeringDBFacilityId = 99999,
                     },
                 },
-                PeerAsn = new AzureNextGen.Peering.Inputs.SubResourceArgs
+                PeerAsn = new AzureNextGen.Peering.Latest.Inputs.SubResourceArgs
                 {
                     Id = "/subscriptions/subId/providers/Microsoft.Peering/peerAsns/myAsn1",
                 },
@@ -379,7 +379,7 @@ class MyStack : Stack
             PeeringLocation = "peeringLocation0",
             PeeringName = "peeringName",
             ResourceGroupName = "rgName",
-            Sku = new AzureNextGen.Peering.Inputs.PeeringSkuArgs
+            Sku = new AzureNextGen.Peering.Latest.Inputs.PeeringSkuArgs
             {
                 Name = "Basic_Exchange_Free",
             },
@@ -402,7 +402,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-peering = azure_nextgen.peering.Peering("peering",
+peering = azure_nextgen.peering.latest.Peering("peering",
     exchange={
         "connections": [
             {
@@ -451,7 +451,7 @@ peering = azure_nextgen.peering.Peering("peering",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const peering = new azure_nextgen.peering.Peering("peering", {
+const peering = new azure_nextgen.peering.latest.Peering("peering", {
     exchange: {
         connections: [
             {

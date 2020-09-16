@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Kusto.Database("database", new AzureNextGen.Kusto.DatabaseArgs
+        var database = new AzureNextGen.Kusto.Latest.Database("database", new AzureNextGen.Kusto.Latest.DatabaseArgs
         {
             ClusterName = "kustoclusterrptest4",
             DatabaseName = "KustoDatabase8",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.kusto.Database("database",
+database = azure_nextgen.kusto.latest.Database("database",
     cluster_name="kustoclusterrptest4",
     database_name="KustoDatabase8",
     kind="ReadWrite",
@@ -69,7 +69,7 @@ database = azure_nextgen.kusto.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.kusto.Database("database", {
+const database = new azure_nextgen.kusto.latest.Database("database", {
     clusterName: "kustoclusterrptest4",
     databaseName: "KustoDatabase8",
     kind: "ReadWrite",

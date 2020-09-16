@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gateway = new AzureNextGen.Apimanagement.Gateway("gateway", new AzureNextGen.Apimanagement.GatewayArgs
+        var gateway = new AzureNextGen.ApiManagement.Latest.Gateway("gateway", new AzureNextGen.ApiManagement.Latest.GatewayArgs
         {
             Description = "my gateway 1",
             GatewayId = "gw1",
-            LocationData = new AzureNextGen.Apimanagement.Inputs.ResourceLocationDataContractArgs
+            LocationData = new AzureNextGen.ApiManagement.Latest.Inputs.ResourceLocationDataContractArgs
             {
                 Name = "my location",
             },
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gateway = azure_nextgen.apimanagement.Gateway("gateway",
+gateway = azure_nextgen.apimanagement.latest.Gateway("gateway",
     description="my gateway 1",
     gateway_id="gw1",
     location_data={
@@ -74,7 +74,7 @@ gateway = azure_nextgen.apimanagement.Gateway("gateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const gateway = new azure_nextgen.apimanagement.Gateway("gateway", {
+const gateway = new azure_nextgen.apimanagement.latest.Gateway("gateway", {
     description: "my gateway 1",
     gatewayId: "gw1",
     locationData: {

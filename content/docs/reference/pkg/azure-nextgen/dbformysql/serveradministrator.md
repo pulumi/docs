@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverAdministrator = new AzureNextGen.Dbformysql.ServerAdministrator("serverAdministrator", new AzureNextGen.Dbformysql.ServerAdministratorArgs
+        var serverAdministrator = new AzureNextGen.DBforMySQL.Latest.ServerAdministrator("serverAdministrator", new AzureNextGen.DBforMySQL.Latest.ServerAdministratorArgs
         {
             AdministratorType = "ActiveDirectory",
             Login = "bob@contoso.com",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_administrator = azure_nextgen.dbformysql.ServerAdministrator("serverAdministrator",
+server_administrator = azure_nextgen.dbformysql.latest.ServerAdministrator("serverAdministrator",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
     resource_group_name="testrg",
@@ -71,7 +71,7 @@ server_administrator = azure_nextgen.dbformysql.ServerAdministrator("serverAdmin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serverAdministrator = new azure_nextgen.dbformysql.ServerAdministrator("serverAdministrator", {
+const serverAdministrator = new azure_nextgen.dbformysql.latest.ServerAdministrator("serverAdministrator", {
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",
     resourceGroupName: "testrg",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var savedSearch = new AzureNextGen.Operationalinsights.SavedSearch("savedSearch", new AzureNextGen.Operationalinsights.SavedSearchArgs
+        var savedSearch = new AzureNextGen.OperationalInsights.Latest.SavedSearch("savedSearch", new AzureNextGen.OperationalInsights.Latest.SavedSearchArgs
         {
             Category = "Saved Search Test Category",
             DisplayName = "Create or Update Saved Search Test",
@@ -37,7 +37,7 @@ class MyStack : Stack
             SavedSearchId = "00000000-0000-0000-0000-00000000000",
             Tags = 
             {
-                new AzureNextGen.Operationalinsights.Inputs.TagArgs
+                new AzureNextGen.OperationalInsights.Latest.Inputs.TagArgs
                 {
                     Name = "Group",
                     Value = "Computer",
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-saved_search = azure_nextgen.operationalinsights.SavedSearch("savedSearch",
+saved_search = azure_nextgen.operationalinsights.latest.SavedSearch("savedSearch",
     category="Saved Search Test Category",
     display_name="Create or Update Saved Search Test",
     function_alias="heartbeat_func",
@@ -89,7 +89,7 @@ saved_search = azure_nextgen.operationalinsights.SavedSearch("savedSearch",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const savedSearch = new azure_nextgen.operationalinsights.SavedSearch("savedSearch", {
+const savedSearch = new azure_nextgen.operationalinsights.latest.SavedSearch("savedSearch", {
     category: "Saved Search Test Category",
     displayName: "Create or Update Saved Search Test",
     functionAlias: "heartbeat_func",

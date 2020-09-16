@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var exportPipeline = new AzureNextGen.Containerregistry.ExportPipeline("exportPipeline", new AzureNextGen.Containerregistry.ExportPipelineArgs
+        var exportPipeline = new AzureNextGen.ContainerRegistry.V20191201Preview.ExportPipeline("exportPipeline", new AzureNextGen.ContainerRegistry.V20191201Preview.ExportPipelineArgs
         {
             ExportPipelineName = "myExportPipeline",
-            Identity = new AzureNextGen.Containerregistry.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.IdentityPropertiesArgs
             {
                 Type = "SystemAssigned",
             },
@@ -40,7 +40,7 @@ class MyStack : Stack
             },
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            Target = new AzureNextGen.Containerregistry.Inputs.ExportPipelineTargetPropertiesArgs
+            Target = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.ExportPipelineTargetPropertiesArgs
             {
                 KeyVaultUri = "https://myvault.vault.azure.net/secrets/acrexportsas",
                 Type = "AzureStorageBlobContainer",
@@ -65,7 +65,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-export_pipeline = azure_nextgen.containerregistry.ExportPipeline("exportPipeline",
+export_pipeline = azure_nextgen.containerregistry.v20191201preview.ExportPipeline("exportPipeline",
     export_pipeline_name="myExportPipeline",
     identity={
         "type": "SystemAssigned",
@@ -90,7 +90,7 @@ export_pipeline = azure_nextgen.containerregistry.ExportPipeline("exportPipeline
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const exportPipeline = new azure_nextgen.containerregistry.ExportPipeline("exportPipeline", {
+const exportPipeline = new azure_nextgen.containerregistry.v20191201preview.ExportPipeline("exportPipeline", {
     exportPipelineName: "myExportPipeline",
     identity: {
         type: "SystemAssigned",

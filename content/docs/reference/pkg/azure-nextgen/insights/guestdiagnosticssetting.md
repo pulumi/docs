@@ -26,22 +26,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var guestDiagnosticsSetting = new AzureNextGen.Insights.GuestDiagnosticsSetting("guestDiagnosticsSetting", new AzureNextGen.Insights.GuestDiagnosticsSettingArgs
+        var guestDiagnosticsSetting = new AzureNextGen.Insights.V20180601Preview.GuestDiagnosticsSetting("guestDiagnosticsSetting", new AzureNextGen.Insights.V20180601Preview.GuestDiagnosticsSettingArgs
         {
             DataSources = 
             {
-                new AzureNextGen.Insights.Inputs.DataSourceArgs
+                new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceArgs
                 {
-                    Configuration = new AzureNextGen.Insights.Inputs.DataSourceConfigurationArgs
+                    Configuration = new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
                     {
                         PerfCounters = 
                         {
-                            new AzureNextGen.Insights.Inputs.PerformanceCounterConfigurationArgs
+                            new AzureNextGen.Insights.V20180601Preview.Inputs.PerformanceCounterConfigurationArgs
                             {
                                 Name = "\\Process(_Total)\\%Processor Time",
                                 SamplingPeriod = "PT1M",
                             },
-                            new AzureNextGen.Insights.Inputs.PerformanceCounterConfigurationArgs
+                            new AzureNextGen.Insights.V20180601Preview.Inputs.PerformanceCounterConfigurationArgs
                             {
                                 Name = "\\Process(_Total)\\Working Set",
                                 SamplingPeriod = "PT1M",
@@ -51,23 +51,23 @@ class MyStack : Stack
                     Kind = "PerformanceCounter",
                     Sinks = 
                     {
-                        new AzureNextGen.Insights.Inputs.SinkConfigurationArgs
+                        new AzureNextGen.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
                         {
                             Kind = "LogAnalytics",
                         },
                     },
                 },
-                new AzureNextGen.Insights.Inputs.DataSourceArgs
+                new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceArgs
                 {
-                    Configuration = new AzureNextGen.Insights.Inputs.DataSourceConfigurationArgs
+                    Configuration = new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
                     {
                         Providers = 
                         {
-                            new AzureNextGen.Insights.Inputs.EtwProviderConfigurationArgs
+                            new AzureNextGen.Insights.V20180601Preview.Inputs.EtwProviderConfigurationArgs
                             {
                                 Id = "1",
                             },
-                            new AzureNextGen.Insights.Inputs.EtwProviderConfigurationArgs
+                            new AzureNextGen.Insights.V20180601Preview.Inputs.EtwProviderConfigurationArgs
                             {
                                 Id = "2",
                             },
@@ -76,24 +76,24 @@ class MyStack : Stack
                     Kind = "ETWProviders",
                     Sinks = 
                     {
-                        new AzureNextGen.Insights.Inputs.SinkConfigurationArgs
+                        new AzureNextGen.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
                         {
                             Kind = "LogAnalytics",
                         },
                     },
                 },
-                new AzureNextGen.Insights.Inputs.DataSourceArgs
+                new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceArgs
                 {
-                    Configuration = new AzureNextGen.Insights.Inputs.DataSourceConfigurationArgs
+                    Configuration = new AzureNextGen.Insights.V20180601Preview.Inputs.DataSourceConfigurationArgs
                     {
                         EventLogs = 
                         {
-                            new AzureNextGen.Insights.Inputs.EventLogConfigurationArgs
+                            new AzureNextGen.Insights.V20180601Preview.Inputs.EventLogConfigurationArgs
                             {
                                 Filter = "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"CatWoman\"",
                                 LogName = "Application",
                             },
-                            new AzureNextGen.Insights.Inputs.EventLogConfigurationArgs
+                            new AzureNextGen.Insights.V20180601Preview.Inputs.EventLogConfigurationArgs
                             {
                                 Filter = "SourceName == Xyz AND EventId = \"100\" AND  $Xpath/Column=\"DCName\" = \"BatMan\"",
                                 LogName = "Application",
@@ -103,7 +103,7 @@ class MyStack : Stack
                     Kind = "WindowsEventLogs",
                     Sinks = 
                     {
-                        new AzureNextGen.Insights.Inputs.SinkConfigurationArgs
+                        new AzureNextGen.Insights.V20180601Preview.Inputs.SinkConfigurationArgs
                         {
                             Kind = "LogAnalytics",
                         },
@@ -134,7 +134,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-guest_diagnostics_setting = azure_nextgen.insights.GuestDiagnosticsSetting("guestDiagnosticsSetting",
+guest_diagnostics_setting = azure_nextgen.insights.v20180601preview.GuestDiagnosticsSetting("guestDiagnosticsSetting",
     data_sources=[
         {
             "configuration": {
@@ -205,7 +205,7 @@ guest_diagnostics_setting = azure_nextgen.insights.GuestDiagnosticsSetting("gues
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const guestDiagnosticsSetting = new azure_nextgen.insights.GuestDiagnosticsSetting("guestDiagnosticsSetting", {
+const guestDiagnosticsSetting = new azure_nextgen.insights.v20180601preview.GuestDiagnosticsSetting("guestDiagnosticsSetting", {
     dataSources: [
         {
             configuration: {

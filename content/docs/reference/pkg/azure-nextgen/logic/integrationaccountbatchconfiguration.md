@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountBatchConfiguration = new AzureNextGen.Logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", new AzureNextGen.Logic.IntegrationAccountBatchConfigurationArgs
+        var integrationAccountBatchConfiguration = new AzureNextGen.Logic.Latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", new AzureNextGen.Logic.Latest.IntegrationAccountBatchConfigurationArgs
         {
             BatchConfigurationName = "testBatchConfiguration",
             IntegrationAccountName = "testIntegrationAccount",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_batch_configuration = azure_nextgen.logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration",
+integration_account_batch_configuration = azure_nextgen.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration",
     batch_configuration_name="testBatchConfiguration",
     integration_account_name="testIntegrationAccount",
     location="westus",
@@ -67,7 +67,7 @@ integration_account_batch_configuration = azure_nextgen.logic.IntegrationAccount
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationAccountBatchConfiguration = new azure_nextgen.logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", {
+const integrationAccountBatchConfiguration = new azure_nextgen.logic.latest.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", {
     batchConfigurationName: "testBatchConfiguration",
     integrationAccountName: "testIntegrationAccount",
     location: "westus",

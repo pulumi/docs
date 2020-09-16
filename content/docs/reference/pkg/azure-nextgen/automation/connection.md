@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connection = new AzureNextGen.Automation.Connection("connection", new AzureNextGen.Automation.ConnectionArgs
+        var connection = new AzureNextGen.Automation.Latest.Connection("connection", new AzureNextGen.Automation.Latest.ConnectionArgs
         {
             AutomationAccountName = "myAutomationAccount28",
             ConnectionName = "mysConnection",
-            ConnectionType = new AzureNextGen.Automation.Inputs.ConnectionTypeAssociationPropertyArgs
+            ConnectionType = new AzureNextGen.Automation.Latest.Inputs.ConnectionTypeAssociationPropertyArgs
             {
                 Name = "Azure",
             },
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection = azure_nextgen.automation.Connection("connection",
+connection = azure_nextgen.automation.latest.Connection("connection",
     automation_account_name="myAutomationAccount28",
     connection_name="mysConnection",
     connection_type={
@@ -85,7 +85,7 @@ connection = azure_nextgen.automation.Connection("connection",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connection = new azure_nextgen.automation.Connection("connection", {
+const connection = new azure_nextgen.automation.latest.Connection("connection", {
     automationAccountName: "myAutomationAccount28",
     connectionName: "mysConnection",
     connectionType: {

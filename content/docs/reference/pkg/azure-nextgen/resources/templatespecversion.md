@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var templateSpecVersion = new AzureNextGen.Resources.TemplateSpecVersion("templateSpecVersion", new AzureNextGen.Resources.TemplateSpecVersionArgs
+        var templateSpecVersion = new AzureNextGen.Resources.V20190601Preview.TemplateSpecVersion("templateSpecVersion", new AzureNextGen.Resources.V20190601Preview.TemplateSpecVersionArgs
         {
             Description = "This is version v1.0 of our template content",
             Location = "eastus",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-template_spec_version = azure_nextgen.resources.TemplateSpecVersion("templateSpecVersion",
+template_spec_version = azure_nextgen.resources.v20190601preview.TemplateSpecVersion("templateSpecVersion",
     description="This is version v1.0 of our template content",
     location="eastus",
     resource_group_name="templateSpecRG",
@@ -82,7 +82,7 @@ template_spec_version = azure_nextgen.resources.TemplateSpecVersion("templateSpe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const templateSpecVersion = new azure_nextgen.resources.TemplateSpecVersion("templateSpecVersion", {
+const templateSpecVersion = new azure_nextgen.resources.v20190601preview.TemplateSpecVersion("templateSpecVersion", {
     description: "This is version v1.0 of our template content",
     location: "eastus",
     resourceGroupName: "templateSpecRG",

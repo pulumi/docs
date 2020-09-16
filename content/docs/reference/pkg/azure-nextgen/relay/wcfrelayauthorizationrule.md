@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var wcfRelayAuthorizationRule = new AzureNextGen.Relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", new AzureNextGen.Relay.WCFRelayAuthorizationRuleArgs
+        var wcfRelayAuthorizationRule = new AzureNextGen.Relay.Latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", new AzureNextGen.Relay.Latest.WCFRelayAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-RelayAuthRules-01",
             NamespaceName = "sdk-RelayNamespace-01",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-wcf_relay_authorization_rule = azure_nextgen.relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule",
+wcf_relay_authorization_rule = azure_nextgen.relay.latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule",
     authorization_rule_name="sdk-RelayAuthRules-01",
     namespace_name="sdk-RelayNamespace-01",
     relay_name="sdk-Relay-wcf-01",
@@ -76,7 +76,7 @@ wcf_relay_authorization_rule = azure_nextgen.relay.WCFRelayAuthorizationRule("wc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const wcfRelayAuthorizationRule = new azure_nextgen.relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", {
+const wcfRelayAuthorizationRule = new azure_nextgen.relay.latest.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", {
     authorizationRuleName: "sdk-RelayAuthRules-01",
     namespaceName: "sdk-RelayNamespace-01",
     relayName: "sdk-Relay-wcf-01",

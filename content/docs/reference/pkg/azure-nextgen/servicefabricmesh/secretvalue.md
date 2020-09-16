@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var secretValue = new AzureNextGen.Servicefabricmesh.SecretValue("secretValue", new AzureNextGen.Servicefabricmesh.SecretValueArgs
+        var secretValue = new AzureNextGen.ServiceFabricMesh.V20180901Preview.SecretValue("secretValue", new AzureNextGen.ServiceFabricMesh.V20180901Preview.SecretValueArgs
         {
             ResourceGroupName = "sbz_demo",
             SecretResourceName = "dbConnectionString",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-secret_value = azure_nextgen.servicefabricmesh.SecretValue("secretValue",
+secret_value = azure_nextgen.servicefabricmesh.v20180901preview.SecretValue("secretValue",
     resource_group_name="sbz_demo",
     secret_resource_name="dbConnectionString",
     secret_value_resource_name="v1",
@@ -67,7 +67,7 @@ secret_value = azure_nextgen.servicefabricmesh.SecretValue("secretValue",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const secretValue = new azure_nextgen.servicefabricmesh.SecretValue("secretValue", {
+const secretValue = new azure_nextgen.servicefabricmesh.v20180901preview.SecretValue("secretValue", {
     resourceGroupName: "sbz_demo",
     secretResourceName: "dbConnectionString",
     secretValueResourceName: "v1",

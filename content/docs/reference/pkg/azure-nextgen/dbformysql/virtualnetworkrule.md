@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkRule = new AzureNextGen.Dbformysql.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.Dbformysql.VirtualNetworkRuleArgs
+        var virtualNetworkRule = new AzureNextGen.DBforMySQL.Latest.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.DBforMySQL.Latest.VirtualNetworkRuleArgs
         {
             IgnoreMissingVnetServiceEndpoint = false,
             ResourceGroupName = "TestGroup",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_rule = azure_nextgen.dbformysql.VirtualNetworkRule("virtualNetworkRule",
+virtual_network_rule = azure_nextgen.dbformysql.latest.VirtualNetworkRule("virtualNetworkRule",
     ignore_missing_vnet_service_endpoint=False,
     resource_group_name="TestGroup",
     server_name="vnet-test-svr",
@@ -69,7 +69,7 @@ virtual_network_rule = azure_nextgen.dbformysql.VirtualNetworkRule("virtualNetwo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualNetworkRule = new azure_nextgen.dbformysql.VirtualNetworkRule("virtualNetworkRule", {
+const virtualNetworkRule = new azure_nextgen.dbformysql.latest.VirtualNetworkRule("virtualNetworkRule", {
     ignoreMissingVnetServiceEndpoint: false,
     resourceGroupName: "TestGroup",
     serverName: "vnet-test-svr",

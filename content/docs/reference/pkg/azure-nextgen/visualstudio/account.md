@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Visualstudio.Account("account", new AzureNextGen.Visualstudio.AccountArgs
+        var account = new AzureNextGen.Visualstudio.V20171101Preview.Account("account", new AzureNextGen.Visualstudio.V20171101Preview.AccountArgs
         {
             AccountName = "Example",
             Location = "Central US",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.visualstudio.Account("account",
+account = azure_nextgen.visualstudio.v20171101preview.Account("account",
     account_name="Example",
     location="Central US",
     operation_type="create",
@@ -71,7 +71,7 @@ account = azure_nextgen.visualstudio.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.visualstudio.Account("account", {
+const account = new azure_nextgen.visualstudio.v20171101preview.Account("account", {
     accountName: "Example",
     location: "Central US",
     operationType: "create",

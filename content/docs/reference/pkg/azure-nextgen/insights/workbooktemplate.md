@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workbookTemplate = new AzureNextGen.Insights.WorkbookTemplate("workbookTemplate", new AzureNextGen.Insights.WorkbookTemplateArgs
+        var workbookTemplate = new AzureNextGen.Insights.V20191017Preview.WorkbookTemplate("workbookTemplate", new AzureNextGen.Insights.V20191017Preview.WorkbookTemplateArgs
         {
             Author = "Contoso",
             Galleries = 
             {
-                new AzureNextGen.Insights.Inputs.WorkbookTemplateGalleryArgs
+                new AzureNextGen.Insights.V20191017Preview.Inputs.WorkbookTemplateGalleryArgs
                 {
                     Category = "Failures",
                     Name = "Simple Template",
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workbook_template = azure_nextgen.insights.WorkbookTemplate("workbookTemplate",
+workbook_template = azure_nextgen.insights.v20191017preview.WorkbookTemplate("workbookTemplate",
     author="Contoso",
     galleries=[{
         "category": "Failures",
@@ -89,7 +89,7 @@ workbook_template = azure_nextgen.insights.WorkbookTemplate("workbookTemplate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workbookTemplate = new azure_nextgen.insights.WorkbookTemplate("workbookTemplate", {
+const workbookTemplate = new azure_nextgen.insights.v20191017preview.WorkbookTemplate("workbookTemplate", {
     author: "Contoso",
     galleries: [{
         category: "Failures",

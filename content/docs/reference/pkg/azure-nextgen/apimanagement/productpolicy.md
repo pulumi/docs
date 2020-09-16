@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var productPolicy = new AzureNextGen.Apimanagement.ProductPolicy("productPolicy", new AzureNextGen.Apimanagement.ProductPolicyArgs
+        var productPolicy = new AzureNextGen.ApiManagement.Latest.ProductPolicy("productPolicy", new AzureNextGen.ApiManagement.Latest.ProductPolicyArgs
         {
             Format = "xml",
             PolicyId = "policy",
@@ -68,7 +68,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-product_policy = azure_nextgen.apimanagement.ProductPolicy("productPolicy",
+product_policy = azure_nextgen.apimanagement.latest.ProductPolicy("productPolicy",
     format="xml",
     policy_id="policy",
     product_id="5702e97e5157a50f48dce801",
@@ -101,7 +101,7 @@ product_policy = azure_nextgen.apimanagement.ProductPolicy("productPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const productPolicy = new azure_nextgen.apimanagement.ProductPolicy("productPolicy", {
+const productPolicy = new azure_nextgen.apimanagement.latest.ProductPolicy("productPolicy", {
     format: "xml",
     policyId: "policy",
     productId: "5702e97e5157a50f48dce801",

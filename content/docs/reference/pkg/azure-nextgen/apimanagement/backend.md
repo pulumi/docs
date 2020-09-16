@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backend = new AzureNextGen.Apimanagement.Backend("backend", new AzureNextGen.Apimanagement.BackendArgs
+        var backend = new AzureNextGen.ApiManagement.Latest.Backend("backend", new AzureNextGen.ApiManagement.Latest.BackendArgs
         {
             BackendId = "proxybackend",
-            Credentials = new AzureNextGen.Apimanagement.Inputs.BackendCredentialsContractArgs
+            Credentials = new AzureNextGen.ApiManagement.Latest.Inputs.BackendCredentialsContractArgs
             {
-                Authorization = new AzureNextGen.Apimanagement.Inputs.BackendAuthorizationHeaderCredentialsArgs
+                Authorization = new AzureNextGen.ApiManagement.Latest.Inputs.BackendAuthorizationHeaderCredentialsArgs
                 {
                     Parameter = "opensesma",
                     Scheme = "Basic",
@@ -56,7 +56,7 @@ class MyStack : Stack
             },
             Description = "description5308",
             Protocol = "http",
-            Proxy = new AzureNextGen.Apimanagement.Inputs.BackendProxyContractArgs
+            Proxy = new AzureNextGen.ApiManagement.Latest.Inputs.BackendProxyContractArgs
             {
                 Password = "opensesame",
                 Url = "http://192.168.1.1:8080",
@@ -64,7 +64,7 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
-            Tls = new AzureNextGen.Apimanagement.Inputs.BackendTlsPropertiesArgs
+            Tls = new AzureNextGen.ApiManagement.Latest.Inputs.BackendTlsPropertiesArgs
             {
                 ValidateCertificateChain = true,
                 ValidateCertificateName = true,
@@ -89,7 +89,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backend = azure_nextgen.apimanagement.Backend("backend",
+backend = azure_nextgen.apimanagement.latest.Backend("backend",
     backend_id="proxybackend",
     credentials={
         "authorization": {
@@ -135,7 +135,7 @@ backend = azure_nextgen.apimanagement.Backend("backend",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const backend = new azure_nextgen.apimanagement.Backend("backend", {
+const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
     backendId: "proxybackend",
     credentials: {
         authorization: {
@@ -186,13 +186,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var backend = new AzureNextGen.Apimanagement.Backend("backend", new AzureNextGen.Apimanagement.BackendArgs
+        var backend = new AzureNextGen.ApiManagement.Latest.Backend("backend", new AzureNextGen.ApiManagement.Latest.BackendArgs
         {
             BackendId = "sfbackend",
             Description = "Service Fabric Test App 1",
-            Properties = new AzureNextGen.Apimanagement.Inputs.BackendPropertiesArgs
+            Properties = new AzureNextGen.ApiManagement.Latest.Inputs.BackendPropertiesArgs
             {
-                ServiceFabricCluster = new AzureNextGen.Apimanagement.Inputs.BackendServiceFabricClusterPropertiesArgs
+                ServiceFabricCluster = new AzureNextGen.ApiManagement.Latest.Inputs.BackendServiceFabricClusterPropertiesArgs
                 {
                     ClientCertificatethumbprint = "EBA029198AA3E76EF0D70482626E5BCF148594A6",
                     ManagementEndpoints = 
@@ -202,7 +202,7 @@ class MyStack : Stack
                     MaxPartitionResolutionRetries = 5,
                     ServerX509Names = 
                     {
-                        new AzureNextGen.Apimanagement.Inputs.X509CertificateNameArgs
+                        new AzureNextGen.ApiManagement.Latest.Inputs.X509CertificateNameArgs
                         {
                             IssuerCertificateThumbprint = "IssuerCertificateThumbprint1",
                             Name = "ServerCommonName1",
@@ -233,7 +233,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-backend = azure_nextgen.apimanagement.Backend("backend",
+backend = azure_nextgen.apimanagement.latest.Backend("backend",
     backend_id="sfbackend",
     description="Service Fabric Test App 1",
     properties={
@@ -262,7 +262,7 @@ backend = azure_nextgen.apimanagement.Backend("backend",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const backend = new azure_nextgen.apimanagement.Backend("backend", {
+const backend = new azure_nextgen.apimanagement.latest.Backend("backend", {
     backendId: "sfbackend",
     description: "Service Fabric Test App 1",
     properties: {

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotHubResourceEventHubConsumerGroup = new AzureNextGen.Devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", new AzureNextGen.Devices.IotHubResourceEventHubConsumerGroupArgs
+        var iotHubResourceEventHubConsumerGroup = new AzureNextGen.Devices.Latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", new AzureNextGen.Devices.Latest.IotHubResourceEventHubConsumerGroupArgs
         {
             EventHubEndpointName = "events",
             Name = "test",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
+iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
     event_hub_endpoint_name="events",
     name="test",
     resource_group_name="myResourceGroup",
@@ -67,7 +67,7 @@ iot_hub_resource_event_hub_consumer_group = azure_nextgen.devices.IotHubResource
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
+const iotHubResourceEventHubConsumerGroup = new azure_nextgen.devices.latest.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
     eventHubEndpointName: "events",
     name: "test",
     resourceGroupName: "myResourceGroup",

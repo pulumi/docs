@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var securityPartnerProvider = new AzureNextGen.Network.SecurityPartnerProvider("securityPartnerProvider", new AzureNextGen.Network.SecurityPartnerProviderArgs
+        var securityPartnerProvider = new AzureNextGen.Network.Latest.SecurityPartnerProvider("securityPartnerProvider", new AzureNextGen.Network.Latest.SecurityPartnerProviderArgs
         {
             Location = "West US",
             ResourceGroupName = "rg1",
@@ -36,7 +36,7 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            VirtualHub = new AzureNextGen.Network.Inputs.SubResourceArgs
+            VirtualHub = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
             },
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-security_partner_provider = azure_nextgen.network.SecurityPartnerProvider("securityPartnerProvider",
+security_partner_provider = azure_nextgen.network.latest.SecurityPartnerProvider("securityPartnerProvider",
     location="West US",
     resource_group_name="rg1",
     security_partner_provider_name="securityPartnerProvider",
@@ -81,7 +81,7 @@ security_partner_provider = azure_nextgen.network.SecurityPartnerProvider("secur
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const securityPartnerProvider = new azure_nextgen.network.SecurityPartnerProvider("securityPartnerProvider", {
+const securityPartnerProvider = new azure_nextgen.network.latest.SecurityPartnerProvider("securityPartnerProvider", {
     location: "West US",
     resourceGroupName: "rg1",
     securityPartnerProviderName: "securityPartnerProvider",

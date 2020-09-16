@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var synchronizationSetting = new AzureNextGen.Datashare.SynchronizationSetting("synchronizationSetting", new AzureNextGen.Datashare.SynchronizationSettingArgs
+        var synchronizationSetting = new AzureNextGen.DataShare.Latest.SynchronizationSetting("synchronizationSetting", new AzureNextGen.DataShare.Latest.SynchronizationSettingArgs
         {
             AccountName = "Account1",
             Kind = "ScheduleBased",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-synchronization_setting = azure_nextgen.datashare.SynchronizationSetting("synchronizationSetting",
+synchronization_setting = azure_nextgen.datashare.latest.SynchronizationSetting("synchronizationSetting",
     account_name="Account1",
     kind="ScheduleBased",
     resource_group_name="SampleResourceGroup",
@@ -69,7 +69,7 @@ synchronization_setting = azure_nextgen.datashare.SynchronizationSetting("synchr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const synchronizationSetting = new azure_nextgen.datashare.SynchronizationSetting("synchronizationSetting", {
+const synchronizationSetting = new azure_nextgen.datashare.latest.SynchronizationSetting("synchronizationSetting", {
     accountName: "Account1",
     kind: "ScheduleBased",
     resourceGroupName: "SampleResourceGroup",

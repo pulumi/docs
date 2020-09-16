@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceAuthorizationRule = new AzureNextGen.Relay.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.Relay.NamespaceAuthorizationRuleArgs
+        var namespaceAuthorizationRule = new AzureNextGen.Relay.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.Relay.Latest.NamespaceAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-RelayAuthRules-01",
             NamespaceName = "sdk-RelayNamespace-01",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_authorization_rule = azure_nextgen.relay.NamespaceAuthorizationRule("namespaceAuthorizationRule",
+namespace_authorization_rule = azure_nextgen.relay.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
     authorization_rule_name="sdk-RelayAuthRules-01",
     namespace_name="sdk-RelayNamespace-01",
     resource_group_name="RG-eg",
@@ -74,7 +74,7 @@ namespace_authorization_rule = azure_nextgen.relay.NamespaceAuthorizationRule("n
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const namespaceAuthorizationRule = new azure_nextgen.relay.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
+const namespaceAuthorizationRule = new azure_nextgen.relay.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
     authorizationRuleName: "sdk-RelayAuthRules-01",
     namespaceName: "sdk-RelayNamespace-01",
     resourceGroupName: "RG-eg",

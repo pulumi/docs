@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namedValue = new AzureNextGen.Apimanagement.NamedValue("namedValue", new AzureNextGen.Apimanagement.NamedValueArgs
+        var namedValue = new AzureNextGen.ApiManagement.Latest.NamedValue("namedValue", new AzureNextGen.ApiManagement.Latest.NamedValueArgs
         {
             DisplayName = "prop3name",
             NamedValueId = "testprop2",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-named_value = azure_nextgen.apimanagement.NamedValue("namedValue",
+named_value = azure_nextgen.apimanagement.latest.NamedValue("namedValue",
     display_name="prop3name",
     named_value_id="testprop2",
     resource_group_name="rg1",
@@ -80,7 +80,7 @@ named_value = azure_nextgen.apimanagement.NamedValue("namedValue",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const namedValue = new azure_nextgen.apimanagement.NamedValue("namedValue", {
+const namedValue = new azure_nextgen.apimanagement.latest.NamedValue("namedValue", {
     displayName: "prop3name",
     namedValueId: "testprop2",
     resourceGroupName: "rg1",

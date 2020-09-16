@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Machinelearningexperimentation.Account("account", new AzureNextGen.Machinelearningexperimentation.AccountArgs
+        var account = new AzureNextGen.MachineLearningExperimentation.V20170501Preview.Account("account", new AzureNextGen.MachineLearningExperimentation.V20170501Preview.AccountArgs
         {
             AccountName = "accountcrud5678",
             KeyVaultId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.KeyVault/vaults/testkv",
             Location = "East US",
             ResourceGroupName = "accountcrud-1234",
-            StorageAccount = new AzureNextGen.Machinelearningexperimentation.Inputs.StorageAccountPropertiesArgs
+            StorageAccount = new AzureNextGen.MachineLearningExperimentation.V20170501Preview.Inputs.StorageAccountPropertiesArgs
             {
                 AccessKey = "key",
                 StorageAccountId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.machinelearningexperimentation.Account("account",
+account = azure_nextgen.machinelearningexperimentation.v20170501preview.Account("account",
     account_name="accountcrud5678",
     key_vault_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.KeyVault/vaults/testkv",
     location="East US",
@@ -85,7 +85,7 @@ account = azure_nextgen.machinelearningexperimentation.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.machinelearningexperimentation.Account("account", {
+const account = new azure_nextgen.machinelearningexperimentation.v20170501preview.Account("account", {
     accountName: "accountcrud5678",
     keyVaultId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.KeyVault/vaults/testkv",
     location: "East US",

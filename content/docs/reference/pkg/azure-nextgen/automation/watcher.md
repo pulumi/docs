@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var watcher = new AzureNextGen.Automation.Watcher("watcher", new AzureNextGen.Automation.WatcherArgs
+        var watcher = new AzureNextGen.Automation.Latest.Watcher("watcher", new AzureNextGen.Automation.Latest.WatcherArgs
         {
             AutomationAccountName = "MyTestAutomationAccount",
             Description = "This is a test watcher.",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-watcher = azure_nextgen.automation.Watcher("watcher",
+watcher = azure_nextgen.automation.latest.Watcher("watcher",
     automation_account_name="MyTestAutomationAccount",
     description="This is a test watcher.",
     execution_frequency_in_seconds=60,
@@ -75,7 +75,7 @@ watcher = azure_nextgen.automation.Watcher("watcher",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const watcher = new azure_nextgen.automation.Watcher("watcher", {
+const watcher = new azure_nextgen.automation.latest.Watcher("watcher", {
     automationAccountName: "MyTestAutomationAccount",
     description: "This is a test watcher.",
     executionFrequencyInSeconds: 60,

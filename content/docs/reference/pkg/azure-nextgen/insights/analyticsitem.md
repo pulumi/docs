@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var analyticsItem = new AzureNextGen.Insights.AnalyticsItem("analyticsItem", new AzureNextGen.Insights.AnalyticsItemArgs
+        var analyticsItem = new AzureNextGen.Insights.Latest.AnalyticsItem("analyticsItem", new AzureNextGen.Insights.Latest.AnalyticsItemArgs
         {
             Content = @"let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
@@ -66,7 +66,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-analytics_item = azure_nextgen.insights.AnalyticsItem("analyticsItem",
+analytics_item = azure_nextgen.insights.latest.AnalyticsItem("analyticsItem",
     content="""let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
 exceptions
@@ -97,7 +97,7 @@ exceptions
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const analyticsItem = new azure_nextgen.insights.AnalyticsItem("analyticsItem", {
+const analyticsItem = new azure_nextgen.insights.latest.AnalyticsItem("analyticsItem", {
     content: `let newExceptionsTimeRange = 1d;
 let timeRangeToCheckBefore = 7d;
 exceptions

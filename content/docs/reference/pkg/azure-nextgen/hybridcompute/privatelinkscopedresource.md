@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScopedResource = new AzureNextGen.Hybridcompute.PrivateLinkScopedResource("privateLinkScopedResource", new AzureNextGen.Hybridcompute.PrivateLinkScopedResourceArgs
+        var privateLinkScopedResource = new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScopedResource("privateLinkScopedResource", new AzureNextGen.HybridCompute.V20200815Preview.PrivateLinkScopedResourceArgs
         {
             LinkedResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
             Name = "scoped-resource-name",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scoped_resource = azure_nextgen.hybridcompute.PrivateLinkScopedResource("privateLinkScopedResource",
+private_link_scoped_resource = azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScopedResource("privateLinkScopedResource",
     linked_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
     name="scoped-resource-name",
     resource_group_name="myResourceGroup",
@@ -67,7 +67,7 @@ private_link_scoped_resource = azure_nextgen.hybridcompute.PrivateLinkScopedReso
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateLinkScopedResource = new azure_nextgen.hybridcompute.PrivateLinkScopedResource("privateLinkScopedResource", {
+const privateLinkScopedResource = new azure_nextgen.hybridcompute.v20200815preview.PrivateLinkScopedResource("privateLinkScopedResource", {
     linkedResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
     name: "scoped-resource-name",
     resourceGroupName: "myResourceGroup",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSetMapping = new AzureNextGen.Datashare.DataSetMapping("dataSetMapping", new AzureNextGen.Datashare.DataSetMappingArgs
+        var dataSetMapping = new AzureNextGen.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureNextGen.DataShare.Latest.DataSetMappingArgs
         {
             AccountName = "Account1",
             DataSetMappingName = "DatasetMapping1",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
+data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping",
     account_name="Account1",
     data_set_mapping_name="DatasetMapping1",
     kind="Blob",
@@ -69,7 +69,7 @@ data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataSetMapping = new azure_nextgen.datashare.DataSetMapping("dataSetMapping", {
+const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
     dataSetMappingName: "DatasetMapping1",
     kind: "Blob",
@@ -91,7 +91,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSetMapping = new AzureNextGen.Datashare.DataSetMapping("dataSetMapping", new AzureNextGen.Datashare.DataSetMappingArgs
+        var dataSetMapping = new AzureNextGen.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureNextGen.DataShare.Latest.DataSetMappingArgs
         {
             AccountName = "Account1",
             DataSetMappingName = "DatasetMapping1",
@@ -117,7 +117,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
+data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping",
     account_name="Account1",
     data_set_mapping_name="DatasetMapping1",
     kind="SqlDBTable",
@@ -134,7 +134,7 @@ data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataSetMapping = new azure_nextgen.datashare.DataSetMapping("dataSetMapping", {
+const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
     dataSetMappingName: "DatasetMapping1",
     kind: "SqlDBTable",
@@ -156,7 +156,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSetMapping = new AzureNextGen.Datashare.DataSetMapping("dataSetMapping", new AzureNextGen.Datashare.DataSetMappingArgs
+        var dataSetMapping = new AzureNextGen.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureNextGen.DataShare.Latest.DataSetMappingArgs
         {
             AccountName = "Account1",
             DataSetMappingName = "DatasetMapping1",
@@ -182,7 +182,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
+data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping",
     account_name="Account1",
     data_set_mapping_name="DatasetMapping1",
     kind="AdlsGen2File",
@@ -199,7 +199,7 @@ data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataSetMapping = new azure_nextgen.datashare.DataSetMapping("dataSetMapping", {
+const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
     dataSetMappingName: "DatasetMapping1",
     kind: "AdlsGen2File",
@@ -221,7 +221,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSetMapping = new AzureNextGen.Datashare.DataSetMapping("dataSetMapping", new AzureNextGen.Datashare.DataSetMappingArgs
+        var dataSetMapping = new AzureNextGen.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureNextGen.DataShare.Latest.DataSetMappingArgs
         {
             AccountName = "Account1",
             DataSetMappingName = "DatasetMapping1",
@@ -247,7 +247,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
+data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping",
     account_name="Account1",
     data_set_mapping_name="DatasetMapping1",
     kind="SqlDWTable",
@@ -264,7 +264,7 @@ data_set_mapping = azure_nextgen.datashare.DataSetMapping("dataSetMapping",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataSetMapping = new azure_nextgen.datashare.DataSetMapping("dataSetMapping", {
+const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
     accountName: "Account1",
     dataSetMappingName: "DatasetMapping1",
     kind: "SqlDWTable",

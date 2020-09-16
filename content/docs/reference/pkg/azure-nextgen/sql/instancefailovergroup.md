@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instanceFailoverGroup = new AzureNextGen.Sql.InstanceFailoverGroup("instanceFailoverGroup", new AzureNextGen.Sql.InstanceFailoverGroupArgs
+        var instanceFailoverGroup = new AzureNextGen.Sql.V20171001Preview.InstanceFailoverGroup("instanceFailoverGroup", new AzureNextGen.Sql.V20171001Preview.InstanceFailoverGroupArgs
         {
             FailoverGroupName = "failover-group-test-3",
             LocationName = "Japan East",
             ManagedInstancePairs = 
             {
-                new AzureNextGen.Sql.Inputs.ManagedInstancePairInfoArgs
+                new AzureNextGen.Sql.V20171001Preview.Inputs.ManagedInstancePairInfoArgs
                 {
                     PartnerManagedInstanceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
                     PrimaryManagedInstanceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
@@ -40,16 +40,16 @@ class MyStack : Stack
             },
             PartnerRegions = 
             {
-                new AzureNextGen.Sql.Inputs.PartnerRegionInfoArgs
+                new AzureNextGen.Sql.V20171001Preview.Inputs.PartnerRegionInfoArgs
                 {
                     Location = "Japan West",
                 },
             },
-            ReadOnlyEndpoint = new AzureNextGen.Sql.Inputs.InstanceFailoverGroupReadOnlyEndpointArgs
+            ReadOnlyEndpoint = new AzureNextGen.Sql.V20171001Preview.Inputs.InstanceFailoverGroupReadOnlyEndpointArgs
             {
                 FailoverPolicy = "Disabled",
             },
-            ReadWriteEndpoint = new AzureNextGen.Sql.Inputs.InstanceFailoverGroupReadWriteEndpointArgs
+            ReadWriteEndpoint = new AzureNextGen.Sql.V20171001Preview.Inputs.InstanceFailoverGroupReadWriteEndpointArgs
             {
                 FailoverPolicy = "Automatic",
                 FailoverWithDataLossGracePeriodMinutes = 480,
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-instance_failover_group = azure_nextgen.sql.InstanceFailoverGroup("instanceFailoverGroup",
+instance_failover_group = azure_nextgen.sql.v20171001preview.InstanceFailoverGroup("instanceFailoverGroup",
     failover_group_name="failover-group-test-3",
     location_name="Japan East",
     managed_instance_pairs=[{
@@ -103,7 +103,7 @@ instance_failover_group = azure_nextgen.sql.InstanceFailoverGroup("instanceFailo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const instanceFailoverGroup = new azure_nextgen.sql.InstanceFailoverGroup("instanceFailoverGroup", {
+const instanceFailoverGroup = new azure_nextgen.sql.v20171001preview.InstanceFailoverGroup("instanceFailoverGroup", {
     failoverGroupName: "failover-group-test-3",
     locationName: "Japan East",
     managedInstancePairs: [{

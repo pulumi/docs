@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @namespace = new AzureNextGen.Relay.Namespace("namespace", new AzureNextGen.Relay.NamespaceArgs
+        var @namespace = new AzureNextGen.Relay.Latest.Namespace("namespace", new AzureNextGen.Relay.Latest.NamespaceArgs
         {
             Location = "West US",
             NamespaceName = "sdk-RelayNamespace-01",
             ResourceGroupName = "RG-eg",
-            Sku = new AzureNextGen.Relay.Inputs.SkuArgs
+            Sku = new AzureNextGen.Relay.Latest.Inputs.SkuArgs
             {
                 Name = "Standard",
                 Tier = "Standard",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace = azure_nextgen.relay.Namespace("namespace",
+namespace = azure_nextgen.relay.latest.Namespace("namespace",
     location="West US",
     namespace_name="sdk-RelayNamespace-01",
     resource_group_name="RG-eg",
@@ -83,7 +83,7 @@ namespace = azure_nextgen.relay.Namespace("namespace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const namespace = new azure_nextgen.relay.Namespace("namespace", {
+const namespace = new azure_nextgen.relay.latest.Namespace("namespace", {
     location: "West US",
     namespaceName: "sdk-RelayNamespace-01",
     resourceGroupName: "RG-eg",

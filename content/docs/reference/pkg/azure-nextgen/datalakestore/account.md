@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Datalakestore.Account("account", new AzureNextGen.Datalakestore.AccountArgs
+        var account = new AzureNextGen.DataLakeStore.Latest.Account("account", new AzureNextGen.DataLakeStore.Latest.AccountArgs
         {
             AccountName = "contosoadla",
             DefaultGroup = "test_default_group",
-            EncryptionConfig = new AzureNextGen.Datalakestore.Inputs.EncryptionConfigArgs
+            EncryptionConfig = new AzureNextGen.DataLakeStore.Latest.Inputs.EncryptionConfigArgs
             {
-                KeyVaultMetaInfo = new AzureNextGen.Datalakestore.Inputs.KeyVaultMetaInfoArgs
+                KeyVaultMetaInfo = new AzureNextGen.DataLakeStore.Latest.Inputs.KeyVaultMetaInfoArgs
                 {
                     EncryptionKeyName = "test_encryption_key_name",
                     EncryptionKeyVersion = "encryption_key_version",
@@ -44,13 +44,13 @@ class MyStack : Stack
             FirewallAllowAzureIps = "Enabled",
             FirewallRules = 
             {
-                new AzureNextGen.Datalakestore.Inputs.CreateFirewallRuleWithAccountParametersArgs
+                new AzureNextGen.DataLakeStore.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
                 {
                     Name = "test_rule",
                 },
             },
             FirewallState = "Enabled",
-            Identity = new AzureNextGen.Datalakestore.Inputs.EncryptionIdentityArgs
+            Identity = new AzureNextGen.DataLakeStore.Latest.Inputs.EncryptionIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -64,7 +64,7 @@ class MyStack : Stack
             TrustedIdProviderState = "Enabled",
             TrustedIdProviders = 
             {
-                new AzureNextGen.Datalakestore.Inputs.CreateTrustedIdProviderWithAccountParametersArgs
+                new AzureNextGen.DataLakeStore.Latest.Inputs.CreateTrustedIdProviderWithAccountParametersArgs
                 {
                     Name = "test_trusted_id_provider_name",
                 },
@@ -88,7 +88,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.datalakestore.Account("account",
+account = azure_nextgen.datalakestore.latest.Account("account",
     account_name="contosoadla",
     default_group="test_default_group",
     encryption_config={
@@ -129,7 +129,7 @@ account = azure_nextgen.datalakestore.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.datalakestore.Account("account", {
+const account = new azure_nextgen.datalakestore.latest.Account("account", {
     accountName: "contosoadla",
     defaultGroup: "test_default_group",
     encryptionConfig: {

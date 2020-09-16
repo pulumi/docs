@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rollout = new AzureNextGen.Deploymentmanager.Rollout("rollout", new AzureNextGen.Deploymentmanager.RolloutArgs
+        var rollout = new AzureNextGen.DeploymentManager.V20191101Preview.Rollout("rollout", new AzureNextGen.DeploymentManager.V20191101Preview.RolloutArgs
         {
             ArtifactSourceId = "/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",
             BuildVersion = "1.0.0.1",
-            Identity = new AzureNextGen.Deploymentmanager.Inputs.IdentityArgs
+            Identity = new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.IdentityArgs
             {
                 IdentityIds = 
                 {
@@ -43,30 +43,30 @@ class MyStack : Stack
             RolloutName = "myRollout",
             StepGroups = 
             {
-                new AzureNextGen.Deploymentmanager.Inputs.StepGroupArgs
+                new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.StepGroupArgs
                 {
                     DeploymentTargetId = "Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit1'",
                     Name = "FirstRegion",
                     PostDeploymentSteps = 
                     {
-                        new AzureNextGen.Deploymentmanager.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/postDeployStep1",
                         },
                     },
                     PreDeploymentSteps = 
                     {
-                        new AzureNextGen.Deploymentmanager.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/preDeployStep1",
                         },
-                        new AzureNextGen.Deploymentmanager.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/preDeployStep2",
                         },
                     },
                 },
-                new AzureNextGen.Deploymentmanager.Inputs.StepGroupArgs
+                new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.StepGroupArgs
                 {
                     DependsOnStepGroups = 
                     {
@@ -76,18 +76,18 @@ class MyStack : Stack
                     Name = "SecondRegion",
                     PostDeploymentSteps = 
                     {
-                        new AzureNextGen.Deploymentmanager.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/postDeployStep5",
                         },
                     },
                     PreDeploymentSteps = 
                     {
-                        new AzureNextGen.Deploymentmanager.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/preDeployStep3",
                         },
-                        new AzureNextGen.Deploymentmanager.Inputs.PrePostStepArgs
+                        new AzureNextGen.DeploymentManager.V20191101Preview.Inputs.PrePostStepArgs
                         {
                             StepId = "Microsoft.DeploymentManager/steps/preDeployStep4",
                         },
@@ -115,7 +115,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rollout = azure_nextgen.deploymentmanager.Rollout("rollout",
+rollout = azure_nextgen.deploymentmanager.v20191101preview.Rollout("rollout",
     artifact_source_id="/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",
     build_version="1.0.0.1",
     identity={
@@ -171,7 +171,7 @@ rollout = azure_nextgen.deploymentmanager.Rollout("rollout",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const rollout = new azure_nextgen.deploymentmanager.Rollout("rollout", {
+const rollout = new azure_nextgen.deploymentmanager.v20191101preview.Rollout("rollout", {
     artifactSourceId: "/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",
     buildVersion: "1.0.0.1",
     identity: {

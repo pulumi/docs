@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Desktopvirtualization.Workspace("workspace", new AzureNextGen.Desktopvirtualization.WorkspaceArgs
+        var workspace = new AzureNextGen.DesktopVirtualization.V20191210Preview.Workspace("workspace", new AzureNextGen.DesktopVirtualization.V20191210Preview.WorkspaceArgs
         {
             Description = "des1",
             FriendlyName = "friendly",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.desktopvirtualization.Workspace("workspace",
+workspace = azure_nextgen.desktopvirtualization.v20191210preview.Workspace("workspace",
     description="des1",
     friendly_name="friendly",
     location="centralus",
@@ -78,7 +78,7 @@ workspace = azure_nextgen.desktopvirtualization.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.desktopvirtualization.Workspace("workspace", {
+const workspace = new azure_nextgen.desktopvirtualization.v20191210preview.Workspace("workspace", {
     description: "des1",
     friendlyName: "friendly",
     location: "centralus",

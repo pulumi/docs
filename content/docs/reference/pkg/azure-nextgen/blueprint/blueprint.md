@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blueprint = new AzureNextGen.Blueprint.Blueprint("blueprint", new AzureNextGen.Blueprint.BlueprintArgs
+        var blueprint = new AzureNextGen.Blueprint.V20181101Preview.Blueprint("blueprint", new AzureNextGen.Blueprint.V20181101Preview.BlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             Description = "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
             Parameters = 
             {
-                { "costCenter", new AzureNextGen.Blueprint.Inputs.ParameterDefinitionArgs
+                { "costCenter", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -40,7 +40,7 @@ class MyStack : Stack
                     },
                     Type = "string",
                 } },
-                { "owners", new AzureNextGen.Blueprint.Inputs.ParameterDefinitionArgs
+                { "owners", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -48,7 +48,7 @@ class MyStack : Stack
                     },
                     Type = "array",
                 } },
-                { "storageAccountType", new AzureNextGen.Blueprint.Inputs.ParameterDefinitionArgs
+                { "storageAccountType", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -59,7 +59,7 @@ class MyStack : Stack
             },
             ResourceGroups = 
             {
-                { "storageRG", new AzureNextGen.Blueprint.Inputs.ResourceGroupDefinitionArgs
+                { "storageRG", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -89,7 +89,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blueprint = azure_nextgen.blueprint.Blueprint("blueprint",
+blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
     blueprint_name="simpleBlueprint",
     description="blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters={
@@ -133,7 +133,7 @@ blueprint = azure_nextgen.blueprint.Blueprint("blueprint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const blueprint = new azure_nextgen.blueprint.Blueprint("blueprint", {
+const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint", {
     blueprintName: "simpleBlueprint",
     description: "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters: {
@@ -182,13 +182,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blueprint = new AzureNextGen.Blueprint.Blueprint("blueprint", new AzureNextGen.Blueprint.BlueprintArgs
+        var blueprint = new AzureNextGen.Blueprint.V20181101Preview.Blueprint("blueprint", new AzureNextGen.Blueprint.V20181101Preview.BlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             Description = "An example blueprint containing an RG with two tags.",
             ResourceGroups = 
             {
-                { "myRGName", new AzureNextGen.Blueprint.Inputs.ResourceGroupDefinitionArgs
+                { "myRGName", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupDefinitionArgs
                 {
                     Location = "westus",
                     Metadata = 
@@ -224,7 +224,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blueprint = azure_nextgen.blueprint.Blueprint("blueprint",
+blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
     blueprint_name="simpleBlueprint",
     description="An example blueprint containing an RG with two tags.",
     resource_groups={
@@ -253,7 +253,7 @@ blueprint = azure_nextgen.blueprint.Blueprint("blueprint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const blueprint = new azure_nextgen.blueprint.Blueprint("blueprint", {
+const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint", {
     blueprintName: "simpleBlueprint",
     description: "An example blueprint containing an RG with two tags.",
     resourceGroups: {
@@ -287,13 +287,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blueprint = new AzureNextGen.Blueprint.Blueprint("blueprint", new AzureNextGen.Blueprint.BlueprintArgs
+        var blueprint = new AzureNextGen.Blueprint.V20181101Preview.Blueprint("blueprint", new AzureNextGen.Blueprint.V20181101Preview.BlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             Description = "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
             Parameters = 
             {
-                { "costCenter", new AzureNextGen.Blueprint.Inputs.ParameterDefinitionArgs
+                { "costCenter", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -301,7 +301,7 @@ class MyStack : Stack
                     },
                     Type = "string",
                 } },
-                { "owners", new AzureNextGen.Blueprint.Inputs.ParameterDefinitionArgs
+                { "owners", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -309,7 +309,7 @@ class MyStack : Stack
                     },
                     Type = "array",
                 } },
-                { "storageAccountType", new AzureNextGen.Blueprint.Inputs.ParameterDefinitionArgs
+                { "storageAccountType", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -320,7 +320,7 @@ class MyStack : Stack
             },
             ResourceGroups = 
             {
-                { "storageRG", new AzureNextGen.Blueprint.Inputs.ResourceGroupDefinitionArgs
+                { "storageRG", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupDefinitionArgs
                 {
                     Metadata = 
                     {
@@ -350,7 +350,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blueprint = azure_nextgen.blueprint.Blueprint("blueprint",
+blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
     blueprint_name="simpleBlueprint",
     description="blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters={
@@ -394,7 +394,7 @@ blueprint = azure_nextgen.blueprint.Blueprint("blueprint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const blueprint = new azure_nextgen.blueprint.Blueprint("blueprint", {
+const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint", {
     blueprintName: "simpleBlueprint",
     description: "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters: {

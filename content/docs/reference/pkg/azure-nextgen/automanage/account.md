@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Automanage.Account("account", new AzureNextGen.Automanage.AccountArgs
+        var account = new AzureNextGen.Automanage.V20200630Preview.Account("account", new AzureNextGen.Automanage.V20200630Preview.AccountArgs
         {
             AccountName = "account",
-            Identity = new AzureNextGen.Automanage.Inputs.AccountIdentityArgs
+            Identity = new AzureNextGen.Automanage.V20200630Preview.Inputs.AccountIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.automanage.Account("account",
+account = azure_nextgen.automanage.v20200630preview.Account("account",
     account_name="account",
     identity={
         "type": "SystemAssigned",
@@ -79,7 +79,7 @@ account = azure_nextgen.automanage.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.automanage.Account("account", {
+const account = new azure_nextgen.automanage.v20200630preview.Account("account", {
     accountName: "account",
     identity: {
         type: "SystemAssigned",

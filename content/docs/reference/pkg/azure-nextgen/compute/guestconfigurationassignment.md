@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var guestConfigurationAssignment = new AzureNextGen.Compute.GuestConfigurationAssignment("guestConfigurationAssignment", new AzureNextGen.Compute.GuestConfigurationAssignmentArgs
+        var guestConfigurationAssignment = new AzureNextGen.Compute.Latest.GuestConfigurationAssignment("guestConfigurationAssignment", new AzureNextGen.Compute.Latest.GuestConfigurationAssignmentArgs
         {
             GuestConfigurationAssignmentName = "WhitelistedApplication",
             Location = "westcentralus",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-guest_configuration_assignment = azure_nextgen.compute.GuestConfigurationAssignment("guestConfigurationAssignment",
+guest_configuration_assignment = azure_nextgen.compute.latest.GuestConfigurationAssignment("guestConfigurationAssignment",
     guest_configuration_assignment_name="WhitelistedApplication",
     location="westcentralus",
     name="WhitelistedApplication",
@@ -69,7 +69,7 @@ guest_configuration_assignment = azure_nextgen.compute.GuestConfigurationAssignm
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const guestConfigurationAssignment = new azure_nextgen.compute.GuestConfigurationAssignment("guestConfigurationAssignment", {
+const guestConfigurationAssignment = new azure_nextgen.compute.latest.GuestConfigurationAssignment("guestConfigurationAssignment", {
     guestConfigurationAssignmentName: "WhitelistedApplication",
     location: "westcentralus",
     name: "WhitelistedApplication",

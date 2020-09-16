@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var view = new AzureNextGen.Customerinsights.View("view", new AzureNextGen.Customerinsights.ViewArgs
+        var view = new AzureNextGen.CustomerInsights.Latest.View("view", new AzureNextGen.CustomerInsights.Latest.ViewArgs
         {
             Definition = "{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
             DisplayName = 
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-view = azure_nextgen.customerinsights.View("view",
+view = azure_nextgen.customerinsights.latest.View("view",
     definition="{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
     display_name={
         "en": "some name",
@@ -76,7 +76,7 @@ view = azure_nextgen.customerinsights.View("view",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const view = new azure_nextgen.customerinsights.View("view", {
+const view = new azure_nextgen.customerinsights.latest.View("view", {
     definition: "{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
     displayName: {
         en: "some name",

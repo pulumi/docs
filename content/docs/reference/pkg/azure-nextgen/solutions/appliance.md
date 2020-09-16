@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var appliance = new AzureNextGen.Solutions.Appliance("appliance", new AzureNextGen.Solutions.ApplianceArgs
+        var appliance = new AzureNextGen.Solutions.V20160901Preview.Appliance("appliance", new AzureNextGen.Solutions.V20160901Preview.ApplianceArgs
         {
             ApplianceDefinitionId = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applianceDefinitions/myAppDef",
             ApplianceName = "myAppliance",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-appliance = azure_nextgen.solutions.Appliance("appliance",
+appliance = azure_nextgen.solutions.v20160901preview.Appliance("appliance",
     appliance_definition_id="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applianceDefinitions/myAppDef",
     appliance_name="myAppliance",
     kind="ServiceCatalog",
@@ -71,7 +71,7 @@ appliance = azure_nextgen.solutions.Appliance("appliance",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const appliance = new azure_nextgen.solutions.Appliance("appliance", {
+const appliance = new azure_nextgen.solutions.v20160901preview.Appliance("appliance", {
     applianceDefinitionId: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applianceDefinitions/myAppDef",
     applianceName: "myAppliance",
     kind: "ServiceCatalog",

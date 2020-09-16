@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualApplianceSite = new AzureNextGen.Network.VirtualApplianceSite("virtualApplianceSite", new AzureNextGen.Network.VirtualApplianceSiteArgs
+        var virtualApplianceSite = new AzureNextGen.Network.Latest.VirtualApplianceSite("virtualApplianceSite", new AzureNextGen.Network.Latest.VirtualApplianceSiteArgs
         {
             AddressPrefix = "192.168.1.0/24",
             NetworkVirtualApplianceName = "nva",
-            O365Policy = new AzureNextGen.Network.Inputs.Office365PolicyPropertiesArgs
+            O365Policy = new AzureNextGen.Network.Latest.Inputs.Office365PolicyPropertiesArgs
             {
-                BreakOutCategories = new AzureNextGen.Network.Inputs.BreakOutCategoryPoliciesArgs
+                BreakOutCategories = new AzureNextGen.Network.Latest.Inputs.BreakOutCategoryPoliciesArgs
                 {
                     Allow = true,
                     Default = true,
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_appliance_site = azure_nextgen.network.VirtualApplianceSite("virtualApplianceSite",
+virtual_appliance_site = azure_nextgen.network.latest.VirtualApplianceSite("virtualApplianceSite",
     address_prefix="192.168.1.0/24",
     network_virtual_appliance_name="nva",
     o365_policy={
@@ -83,7 +83,7 @@ virtual_appliance_site = azure_nextgen.network.VirtualApplianceSite("virtualAppl
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualApplianceSite = new azure_nextgen.network.VirtualApplianceSite("virtualApplianceSite", {
+const virtualApplianceSite = new azure_nextgen.network.latest.VirtualApplianceSite("virtualApplianceSite", {
     addressPrefix: "192.168.1.0/24",
     networkVirtualApplianceName: "nva",
     o365Policy: {

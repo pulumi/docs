@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var prefix = new AzureNextGen.Peering.Prefix("prefix", new AzureNextGen.Peering.PrefixArgs
+        var prefix = new AzureNextGen.Peering.Latest.Prefix("prefix", new AzureNextGen.Peering.Latest.PrefixArgs
         {
             PeeringServiceName = "peeringServiceName",
             PeeringServicePrefixKey = "00000000-0000-0000-0000-000000000000",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-prefix = azure_nextgen.peering.Prefix("prefix",
+prefix = azure_nextgen.peering.latest.Prefix("prefix",
     peering_service_name="peeringServiceName",
     peering_service_prefix_key="00000000-0000-0000-0000-000000000000",
     prefix="192.168.1.0/24",
@@ -69,7 +69,7 @@ prefix = azure_nextgen.peering.Prefix("prefix",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const prefix = new azure_nextgen.peering.Prefix("prefix", {
+const prefix = new azure_nextgen.peering.latest.Prefix("prefix", {
     peeringServiceName: "peeringServiceName",
     peeringServicePrefixKey: "00000000-0000-0000-0000-000000000000",
     prefix: "192.168.1.0/24",

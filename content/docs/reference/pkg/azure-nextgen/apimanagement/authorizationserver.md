@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var authorizationServer = new AzureNextGen.Apimanagement.AuthorizationServer("authorizationServer", new AzureNextGen.Apimanagement.AuthorizationServerArgs
+        var authorizationServer = new AzureNextGen.ApiManagement.Latest.AuthorizationServer("authorizationServer", new AzureNextGen.ApiManagement.Latest.AuthorizationServerArgs
         {
             AuthorizationEndpoint = "https://www.contoso.com/oauth2/auth",
             AuthorizationMethods = 
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-authorization_server = azure_nextgen.apimanagement.AuthorizationServer("authorizationServer",
+authorization_server = azure_nextgen.apimanagement.latest.AuthorizationServer("authorizationServer",
     authorization_endpoint="https://www.contoso.com/oauth2/auth",
     authorization_methods=["GET"],
     authsid="newauthServer",
@@ -106,7 +106,7 @@ authorization_server = azure_nextgen.apimanagement.AuthorizationServer("authoriz
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const authorizationServer = new azure_nextgen.apimanagement.AuthorizationServer("authorizationServer", {
+const authorizationServer = new azure_nextgen.apimanagement.latest.AuthorizationServer("authorizationServer", {
     authorizationEndpoint: "https://www.contoso.com/oauth2/auth",
     authorizationMethods: ["GET"],
     authsid: "newauthServer",

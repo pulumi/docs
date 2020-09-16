@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var objectReplicationPolicy = new AzureNextGen.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.ObjectReplicationPolicyArgs
+        var objectReplicationPolicy = new AzureNextGen.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.Latest.ObjectReplicationPolicyArgs
         {
             AccountName = "dst112",
             DestinationAccount = "dst112",
@@ -34,10 +34,10 @@ class MyStack : Stack
             ResourceGroupName = "res7687",
             Rules = 
             {
-                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont139",
-                    Filters = new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyFilterArgs
+                    Filters = new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
                     {
                         PrefixMatch = 
                         {
@@ -68,7 +68,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy",
+object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
     account_name="dst112",
     destination_account="dst112",
     object_replication_policy_id="default",
@@ -95,7 +95,7 @@ object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objec
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const objectReplicationPolicy = new azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
+const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "dst112",
     destinationAccount: "dst112",
     objectReplicationPolicyId: "default",
@@ -127,7 +127,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var objectReplicationPolicy = new AzureNextGen.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.ObjectReplicationPolicyArgs
+        var objectReplicationPolicy = new AzureNextGen.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.Latest.ObjectReplicationPolicyArgs
         {
             AccountName = "src1122",
             DestinationAccount = "dst112",
@@ -135,10 +135,10 @@ class MyStack : Stack
             ResourceGroupName = "res7687",
             Rules = 
             {
-                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont139",
-                    Filters = new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyFilterArgs
+                    Filters = new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
                     {
                         MinCreationTime = "2020-02-19T16:05:00Z",
                         PrefixMatch = 
@@ -171,7 +171,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy",
+object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
     account_name="src1122",
     destination_account="dst112",
     object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
@@ -200,7 +200,7 @@ object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objec
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const objectReplicationPolicy = new azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
+const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "src1122",
     destinationAccount: "dst112",
     objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
@@ -234,7 +234,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var objectReplicationPolicy = new AzureNextGen.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.ObjectReplicationPolicyArgs
+        var objectReplicationPolicy = new AzureNextGen.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.Latest.ObjectReplicationPolicyArgs
         {
             AccountName = "dst112",
             DestinationAccount = "dst112",
@@ -242,10 +242,10 @@ class MyStack : Stack
             ResourceGroupName = "res7687",
             Rules = 
             {
-                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont139",
-                    Filters = new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyFilterArgs
+                    Filters = new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
                     {
                         PrefixMatch = 
                         {
@@ -256,7 +256,7 @@ class MyStack : Stack
                     RuleId = "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
                     SourceContainer = "scont139",
                 },
-                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont179",
                     SourceContainer = "scont179",
@@ -282,7 +282,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy",
+object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
     account_name="dst112",
     destination_account="dst112",
     object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
@@ -316,7 +316,7 @@ object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objec
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const objectReplicationPolicy = new azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
+const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "dst112",
     destinationAccount: "dst112",
     objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
@@ -355,7 +355,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var objectReplicationPolicy = new AzureNextGen.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.ObjectReplicationPolicyArgs
+        var objectReplicationPolicy = new AzureNextGen.Storage.Latest.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNextGen.Storage.Latest.ObjectReplicationPolicyArgs
         {
             AccountName = "src1122",
             DestinationAccount = "dst112",
@@ -363,10 +363,10 @@ class MyStack : Stack
             ResourceGroupName = "res7687",
             Rules = 
             {
-                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont139",
-                    Filters = new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyFilterArgs
+                    Filters = new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyFilterArgs
                     {
                         PrefixMatch = 
                         {
@@ -377,7 +377,7 @@ class MyStack : Stack
                     RuleId = "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
                     SourceContainer = "scont139",
                 },
-                new AzureNextGen.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                new AzureNextGen.Storage.Latest.Inputs.ObjectReplicationPolicyRuleArgs
                 {
                     DestinationContainer = "dcont179",
                     RuleId = "cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
@@ -404,7 +404,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy",
+object_replication_policy = azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy",
     account_name="src1122",
     destination_account="dst112",
     object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
@@ -439,7 +439,7 @@ object_replication_policy = azure_nextgen.storage.ObjectReplicationPolicy("objec
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const objectReplicationPolicy = new azure_nextgen.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
+const objectReplicationPolicy = new azure_nextgen.storage.latest.ObjectReplicationPolicy("objectReplicationPolicy", {
     accountName: "src1122",
     destinationAccount: "dst112",
     objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notebookWorkspace = new AzureNextGen.Documentdb.NotebookWorkspace("notebookWorkspace", new AzureNextGen.Documentdb.NotebookWorkspaceArgs
+        var notebookWorkspace = new AzureNextGen.DocumentDB.Latest.NotebookWorkspace("notebookWorkspace", new AzureNextGen.DocumentDB.Latest.NotebookWorkspaceArgs
         {
             AccountName = "ddb1",
             NotebookWorkspaceName = "default",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notebook_workspace = azure_nextgen.documentdb.NotebookWorkspace("notebookWorkspace",
+notebook_workspace = azure_nextgen.documentdb.latest.NotebookWorkspace("notebookWorkspace",
     account_name="ddb1",
     notebook_workspace_name="default",
     resource_group_name="rg1")
@@ -65,7 +65,7 @@ notebook_workspace = azure_nextgen.documentdb.NotebookWorkspace("notebookWorkspa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const notebookWorkspace = new azure_nextgen.documentdb.NotebookWorkspace("notebookWorkspace", {
+const notebookWorkspace = new azure_nextgen.documentdb.latest.NotebookWorkspace("notebookWorkspace", {
     accountName: "ddb1",
     notebookWorkspaceName: "default",
     resourceGroupName: "rg1",

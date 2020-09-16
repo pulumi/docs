@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteConnection = new AzureNextGen.Network.ExpressRouteConnection("expressRouteConnection", new AzureNextGen.Network.ExpressRouteConnectionArgs
+        var expressRouteConnection = new AzureNextGen.Network.Latest.ExpressRouteConnection("expressRouteConnection", new AzureNextGen.Network.Latest.ExpressRouteConnectionArgs
         {
             AuthorizationKey = "authorizationKey",
             ConnectionName = "connectionName",
-            ExpressRouteCircuitPeering = new AzureNextGen.Network.Inputs.ExpressRouteCircuitPeeringIdArgs
+            ExpressRouteCircuitPeering = new AzureNextGen.Network.Latest.Inputs.ExpressRouteCircuitPeeringIdArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering",
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_connection = azure_nextgen.network.ExpressRouteConnection("expressRouteConnection",
+express_route_connection = azure_nextgen.network.latest.ExpressRouteConnection("expressRouteConnection",
     authorization_key="authorizationKey",
     connection_name="connectionName",
     express_route_circuit_peering={
@@ -80,7 +80,7 @@ express_route_connection = azure_nextgen.network.ExpressRouteConnection("express
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const expressRouteConnection = new azure_nextgen.network.ExpressRouteConnection("expressRouteConnection", {
+const expressRouteConnection = new azure_nextgen.network.latest.ExpressRouteConnection("expressRouteConnection", {
     authorizationKey: "authorizationKey",
     connectionName: "connectionName",
     expressRouteCircuitPeering: {

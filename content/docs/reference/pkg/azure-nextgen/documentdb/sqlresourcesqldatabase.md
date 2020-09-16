@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlDatabase = new AzureNextGen.Documentdb.SqlResourceSqlDatabase("sqlResourceSqlDatabase", new AzureNextGen.Documentdb.SqlResourceSqlDatabaseArgs
+        var sqlResourceSqlDatabase = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlDatabase("sqlResourceSqlDatabase", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlDatabaseArgs
         {
             AccountName = "ddb1",
             DatabaseName = "databaseName",
             Location = "West US",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.SqlDatabaseResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlDatabaseResourceArgs
             {
                 Id = "databaseName",
             },
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_database = azure_nextgen.documentdb.SqlResourceSqlDatabase("sqlResourceSqlDatabase",
+sql_resource_sql_database = azure_nextgen.documentdb.latest.SqlResourceSqlDatabase("sqlResourceSqlDatabase",
     account_name="ddb1",
     database_name="databaseName",
     location="West US",
@@ -78,7 +78,7 @@ sql_resource_sql_database = azure_nextgen.documentdb.SqlResourceSqlDatabase("sql
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlResourceSqlDatabase = new azure_nextgen.documentdb.SqlResourceSqlDatabase("sqlResourceSqlDatabase", {
+const sqlResourceSqlDatabase = new azure_nextgen.documentdb.latest.SqlResourceSqlDatabase("sqlResourceSqlDatabase", {
     accountName: "ddb1",
     databaseName: "databaseName",
     location: "West US",

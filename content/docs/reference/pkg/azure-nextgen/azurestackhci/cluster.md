@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Azurestackhci.Cluster("cluster", new AzureNextGen.Azurestackhci.ClusterArgs
+        var cluster = new AzureNextGen.AzureStackHCI.V20200301Preview.Cluster("cluster", new AzureNextGen.AzureStackHCI.V20200301Preview.ClusterArgs
         {
             AadClientId = "24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
             AadTenantId = "7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.azurestackhci.Cluster("cluster",
+cluster = azure_nextgen.azurestackhci.v20200301preview.Cluster("cluster",
     aad_client_id="24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
     aad_tenant_id="7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
     cluster_name="myCluster",
@@ -69,7 +69,7 @@ cluster = azure_nextgen.azurestackhci.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.azurestackhci.Cluster("cluster", {
+const cluster = new azure_nextgen.azurestackhci.v20200301preview.Cluster("cluster", {
     aadClientId: "24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
     aadTenantId: "7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
     clusterName: "myCluster",

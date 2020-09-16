@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedServer = new AzureNextGen.Cache.LinkedServer("linkedServer", new AzureNextGen.Cache.LinkedServerArgs
+        var linkedServer = new AzureNextGen.Cache.Latest.LinkedServer("linkedServer", new AzureNextGen.Cache.Latest.LinkedServerArgs
         {
             LinkedRedisCacheId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
             LinkedRedisCacheLocation = "West US",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_server = azure_nextgen.cache.LinkedServer("linkedServer",
+linked_server = azure_nextgen.cache.latest.LinkedServer("linkedServer",
     linked_redis_cache_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
     linked_redis_cache_location="West US",
     linked_server_name="cache2",
@@ -71,7 +71,7 @@ linked_server = azure_nextgen.cache.LinkedServer("linkedServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const linkedServer = new azure_nextgen.cache.LinkedServer("linkedServer", {
+const linkedServer = new azure_nextgen.cache.latest.LinkedServer("linkedServer", {
     linkedRedisCacheId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
     linkedRedisCacheLocation: "West US",
     linkedServerName: "cache2",

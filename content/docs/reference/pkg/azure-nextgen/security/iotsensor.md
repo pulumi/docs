@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotSensor = new AzureNextGen.Security.IotSensor("iotSensor", new AzureNextGen.Security.IotSensorArgs
+        var iotSensor = new AzureNextGen.Security.V20200806Preview.IotSensor("iotSensor", new AzureNextGen.Security.V20200806Preview.IotSensorArgs
         {
             IotSensorName = "mySensor",
             Scope = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_sensor = azure_nextgen.security.IotSensor("iotSensor",
+iot_sensor = azure_nextgen.security.v20200806preview.IotSensor("iotSensor",
     iot_sensor_name="mySensor",
     scope="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub")
 
@@ -63,7 +63,7 @@ iot_sensor = azure_nextgen.security.IotSensor("iotSensor",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const iotSensor = new azure_nextgen.security.IotSensor("iotSensor", {
+const iotSensor = new azure_nextgen.security.v20200806preview.IotSensor("iotSensor", {
     iotSensorName: "mySensor",
     scope: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
 });

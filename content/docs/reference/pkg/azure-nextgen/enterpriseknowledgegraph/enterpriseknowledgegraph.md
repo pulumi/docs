@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var enterpriseKnowledgeGraph = new AzureNextGen.Enterpriseknowledgegraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", new AzureNextGen.Enterpriseknowledgegraph.EnterpriseKnowledgeGraphArgs
+        var enterpriseKnowledgeGraph = new AzureNextGen.EnterpriseKnowledgeGraph.Latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", new AzureNextGen.EnterpriseKnowledgeGraph.Latest.EnterpriseKnowledgeGraphArgs
         {
             Location = "West US",
             ResourceGroupName = "OneResourceGroupName",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-enterprise_knowledge_graph = azure_nextgen.enterpriseknowledgegraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph",
+enterprise_knowledge_graph = azure_nextgen.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph",
     location="West US",
     resource_group_name="OneResourceGroupName",
     resource_name="sampleekgname",
@@ -74,7 +74,7 @@ enterprise_knowledge_graph = azure_nextgen.enterpriseknowledgegraph.EnterpriseKn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", {
+const enterpriseKnowledgeGraph = new azure_nextgen.enterpriseknowledgegraph.latest.EnterpriseKnowledgeGraph("enterpriseKnowledgeGraph", {
     location: "West US",
     resourceGroupName: "OneResourceGroupName",
     resourceName: "sampleekgname",

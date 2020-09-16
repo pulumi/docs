@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotDpsResourcePrivateEndpointConnection = new AzureNextGen.Devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", new AzureNextGen.Devices.IotDpsResourcePrivateEndpointConnectionArgs
+        var iotDpsResourcePrivateEndpointConnection = new AzureNextGen.Devices.Latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", new AzureNextGen.Devices.Latest.IotDpsResourcePrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "myPrivateEndpointConnection",
             ResourceGroupName = "myResourceGroup",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection",
+iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection",
     private_endpoint_connection_name="myPrivateEndpointConnection",
     resource_group_name="myResourceGroup",
     resource_name="myFirstProvisioningService")
@@ -65,7 +65,7 @@ iot_dps_resource_private_endpoint_connection = azure_nextgen.devices.IotDpsResou
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", {
+const iotDpsResourcePrivateEndpointConnection = new azure_nextgen.devices.latest.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", {
     privateEndpointConnectionName: "myPrivateEndpointConnection",
     resourceGroupName: "myResourceGroup",
     resourceName: "myFirstProvisioningService",

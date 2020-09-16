@@ -25,12 +25,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Eventgrid.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Eventgrid.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.EventGrid.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.EventGrid.Latest.PrivateEndpointConnectionArgs
         {
             ParentName = "exampletopic1",
             ParentType = "topics",
             PrivateEndpointConnectionName = "BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Eventgrid.Inputs.ConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.EventGrid.Latest.Inputs.ConnectionStateArgs
             {
                 ActionsRequired = "None",
                 Description = "approving connection",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.eventgrid.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.eventgrid.latest.PrivateEndpointConnection("privateEndpointConnection",
     parent_name="exampletopic1",
     parent_type="topics",
     private_endpoint_connection_name="BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B",
@@ -77,7 +77,7 @@ private_endpoint_connection = azure_nextgen.eventgrid.PrivateEndpointConnection(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.eventgrid.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.eventgrid.latest.PrivateEndpointConnection("privateEndpointConnection", {
     parentName: "exampletopic1",
     parentType: "topics",
     privateEndpointConnectionName: "BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B",

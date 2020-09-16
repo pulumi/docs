@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var wcfRelay = new AzureNextGen.Relay.WCFRelay("wcfRelay", new AzureNextGen.Relay.WCFRelayArgs
+        var wcfRelay = new AzureNextGen.Relay.Latest.WCFRelay("wcfRelay", new AzureNextGen.Relay.Latest.WCFRelayArgs
         {
             NamespaceName = "sdk-RelayNamespace-9953",
             RelayName = "sdk-Relay-Wcf-1194",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-wcf_relay = azure_nextgen.relay.WCFRelay("wcfRelay",
+wcf_relay = azure_nextgen.relay.latest.WCFRelay("wcfRelay",
     namespace_name="sdk-RelayNamespace-9953",
     relay_name="sdk-Relay-Wcf-1194",
     relay_type="NetTcp",
@@ -71,7 +71,7 @@ wcf_relay = azure_nextgen.relay.WCFRelay("wcfRelay",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const wcfRelay = new azure_nextgen.relay.WCFRelay("wcfRelay", {
+const wcfRelay = new azure_nextgen.relay.latest.WCFRelay("wcfRelay", {
     namespaceName: "sdk-RelayNamespace-9953",
     relayName: "sdk-Relay-Wcf-1194",
     relayType: "NetTcp",

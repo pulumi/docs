@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverAzureADOnlyAuthentication = new AzureNextGen.Sql.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", new AzureNextGen.Sql.ServerAzureADOnlyAuthenticationArgs
+        var serverAzureADOnlyAuthentication = new AzureNextGen.Sql.V20200202Preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", new AzureNextGen.Sql.V20200202Preview.ServerAzureADOnlyAuthenticationArgs
         {
             AuthenticationName = "Default",
             AzureADOnlyAuthentication = false,
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_azure_ad_only_authentication = azure_nextgen.sql.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication",
+server_azure_ad_only_authentication = azure_nextgen.sql.v20200202preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication",
     authentication_name="Default",
     azure_ad_only_authentication=False,
     resource_group_name="sqlcrudtest-4799",
@@ -67,7 +67,7 @@ server_azure_ad_only_authentication = azure_nextgen.sql.ServerAzureADOnlyAuthent
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serverAzureADOnlyAuthentication = new azure_nextgen.sql.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", {
+const serverAzureADOnlyAuthentication = new azure_nextgen.sql.v20200202preview.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", {
     authenticationName: "Default",
     azureADOnlyAuthentication: false,
     resourceGroupName: "sqlcrudtest-4799",

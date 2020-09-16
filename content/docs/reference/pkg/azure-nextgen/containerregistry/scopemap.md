@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scopeMap = new AzureNextGen.Containerregistry.ScopeMap("scopeMap", new AzureNextGen.Containerregistry.ScopeMapArgs
+        var scopeMap = new AzureNextGen.ContainerRegistry.V20190501Preview.ScopeMap("scopeMap", new AzureNextGen.ContainerRegistry.V20190501Preview.ScopeMapArgs
         {
             Actions = 
             {
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scope_map = azure_nextgen.containerregistry.ScopeMap("scopeMap",
+scope_map = azure_nextgen.containerregistry.v20190501preview.ScopeMap("scopeMap",
     actions=[
         "repositories/myrepository/contentWrite",
         "repositories/myrepository/delete",
@@ -76,7 +76,7 @@ scope_map = azure_nextgen.containerregistry.ScopeMap("scopeMap",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const scopeMap = new azure_nextgen.containerregistry.ScopeMap("scopeMap", {
+const scopeMap = new azure_nextgen.containerregistry.v20190501preview.ScopeMap("scopeMap", {
     actions: [
         "repositories/myrepository/contentWrite",
         "repositories/myrepository/delete",

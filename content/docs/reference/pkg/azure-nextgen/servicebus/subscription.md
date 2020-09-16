@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var subscription = new AzureNextGen.Servicebus.Subscription("subscription", new AzureNextGen.Servicebus.SubscriptionArgs
+        var subscription = new AzureNextGen.ServiceBus.Latest.Subscription("subscription", new AzureNextGen.ServiceBus.Latest.SubscriptionArgs
         {
             EnableBatchedOperations = true,
             NamespaceName = "sdk-Namespace-1349",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-subscription = azure_nextgen.servicebus.Subscription("subscription",
+subscription = azure_nextgen.servicebus.latest.Subscription("subscription",
     enable_batched_operations=True,
     namespace_name="sdk-Namespace-1349",
     resource_group_name="ResourceGroup",
@@ -69,7 +69,7 @@ subscription = azure_nextgen.servicebus.Subscription("subscription",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const subscription = new azure_nextgen.servicebus.Subscription("subscription", {
+const subscription = new azure_nextgen.servicebus.latest.Subscription("subscription", {
     enableBatchedOperations: true,
     namespaceName: "sdk-Namespace-1349",
     resourceGroupName: "ResourceGroup",

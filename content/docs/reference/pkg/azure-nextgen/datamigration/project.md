@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var project = new AzureNextGen.Datamigration.Project("project", new AzureNextGen.Datamigration.ProjectArgs
+        var project = new AzureNextGen.DataMigration.Latest.Project("project", new AzureNextGen.DataMigration.Latest.ProjectArgs
         {
             GroupName = "DmsSdkRg",
             Location = "southcentralus",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-project = azure_nextgen.datamigration.Project("project",
+project = azure_nextgen.datamigration.latest.Project("project",
     group_name="DmsSdkRg",
     location="southcentralus",
     project_name="DmsSdkProject",
@@ -71,7 +71,7 @@ project = azure_nextgen.datamigration.Project("project",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const project = new azure_nextgen.datamigration.Project("project", {
+const project = new azure_nextgen.datamigration.latest.Project("project", {
     groupName: "DmsSdkRg",
     location: "southcentralus",
     projectName: "DmsSdkProject",

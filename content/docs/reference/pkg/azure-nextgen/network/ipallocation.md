@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ipAllocation = new AzureNextGen.Network.IpAllocation("ipAllocation", new AzureNextGen.Network.IpAllocationArgs
+        var ipAllocation = new AzureNextGen.Network.Latest.IpAllocation("ipAllocation", new AzureNextGen.Network.Latest.IpAllocationArgs
         {
             AllocationTags = 
             {
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ip_allocation = azure_nextgen.network.IpAllocation("ipAllocation",
+ip_allocation = azure_nextgen.network.latest.IpAllocation("ipAllocation",
     allocation_tags={
         "VNetID": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1",
     },
@@ -76,7 +76,7 @@ ip_allocation = azure_nextgen.network.IpAllocation("ipAllocation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const ipAllocation = new azure_nextgen.network.IpAllocation("ipAllocation", {
+const ipAllocation = new azure_nextgen.network.latest.IpAllocation("ipAllocation", {
     allocationTags: {
         VNetID: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/HypernetVnet1",
     },

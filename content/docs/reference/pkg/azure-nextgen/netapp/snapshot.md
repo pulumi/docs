@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var snapshot = new AzureNextGen.Netapp.Snapshot("snapshot", new AzureNextGen.Netapp.SnapshotArgs
+        var snapshot = new AzureNextGen.NetApp.Latest.Snapshot("snapshot", new AzureNextGen.NetApp.Latest.SnapshotArgs
         {
             AccountName = "account1",
             Location = "eastus",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-snapshot = azure_nextgen.netapp.Snapshot("snapshot",
+snapshot = azure_nextgen.netapp.latest.Snapshot("snapshot",
     account_name="account1",
     location="eastus",
     pool_name="pool1",
@@ -71,7 +71,7 @@ snapshot = azure_nextgen.netapp.Snapshot("snapshot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const snapshot = new azure_nextgen.netapp.Snapshot("snapshot", {
+const snapshot = new azure_nextgen.netapp.latest.Snapshot("snapshot", {
     accountName: "account1",
     location: "eastus",
     poolName: "pool1",

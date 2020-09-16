@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Sql.Server("server", new AzureNextGen.Sql.ServerArgs
+        var server = new AzureNextGen.Sql.Latest.Server("server", new AzureNextGen.Sql.Latest.ServerArgs
         {
             AdministratorLogin = "dummylogin",
             AdministratorLoginPassword = "Un53cuRE!",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.sql.Server("server",
+server = azure_nextgen.sql.latest.Server("server",
     administrator_login="dummylogin",
     administrator_login_password="Un53cuRE!",
     location="Japan East",
@@ -78,7 +78,7 @@ server = azure_nextgen.sql.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const server = new azure_nextgen.sql.Server("server", {
+const server = new azure_nextgen.sql.latest.Server("server", {
     administratorLogin: "dummylogin",
     administratorLoginPassword: "Un53cuRE!",
     location: "Japan East",
@@ -104,7 +104,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var server = new AzureNextGen.Sql.Server("server", new AzureNextGen.Sql.ServerArgs
+        var server = new AzureNextGen.Sql.Latest.Server("server", new AzureNextGen.Sql.Latest.ServerArgs
         {
             AdministratorLogin = "dummylogin",
             AdministratorLoginPassword = "Un53cuRE!",
@@ -130,7 +130,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server = azure_nextgen.sql.Server("server",
+server = azure_nextgen.sql.latest.Server("server",
     administrator_login="dummylogin",
     administrator_login_password="Un53cuRE!",
     location="Japan East",
@@ -147,7 +147,7 @@ server = azure_nextgen.sql.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const server = new azure_nextgen.sql.Server("server", {
+const server = new azure_nextgen.sql.latest.Server("server", {
     administratorLogin: "dummylogin",
     administratorLoginPassword: "Un53cuRE!",
     location: "Japan East",

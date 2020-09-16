@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var endpoint = new AzureNextGen.Network.Endpoint("endpoint", new AzureNextGen.Network.EndpointArgs
+        var endpoint = new AzureNextGen.Network.Latest.Endpoint("endpoint", new AzureNextGen.Network.Latest.EndpointArgs
         {
             CustomHeaders = 
             {
-                new AzureNextGen.Network.Inputs.EndpointPropertiesCustomHeadersArgs
+                new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesCustomHeadersArgs
                 {
                     Name = "header-1",
                     Value = "value-1",
                 },
-                new AzureNextGen.Network.Inputs.EndpointPropertiesCustomHeadersArgs
+                new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesCustomHeadersArgs
                 {
                     Name = "header-2",
                     Value = "value-2",
@@ -69,7 +69,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-endpoint = azure_nextgen.network.Endpoint("endpoint",
+endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
     custom_headers=[
         {
             "name": "header-1",
@@ -100,7 +100,7 @@ endpoint = azure_nextgen.network.Endpoint("endpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const endpoint = new azure_nextgen.network.Endpoint("endpoint", {
+const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
     customHeaders: [
         {
             name: "header-1",
@@ -136,7 +136,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var endpoint = new AzureNextGen.Network.Endpoint("endpoint", new AzureNextGen.Network.EndpointArgs
+        var endpoint = new AzureNextGen.Network.Latest.Endpoint("endpoint", new AzureNextGen.Network.Latest.EndpointArgs
         {
             EndpointName = "My%20external%20endpoint",
             EndpointStatus = "Enabled",
@@ -170,7 +170,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-endpoint = azure_nextgen.network.Endpoint("endpoint",
+endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
     endpoint_name="My%20external%20endpoint",
     endpoint_status="Enabled",
     endpoint_type="ExternalEndpoints",
@@ -194,7 +194,7 @@ endpoint = azure_nextgen.network.Endpoint("endpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const endpoint = new azure_nextgen.network.Endpoint("endpoint", {
+const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
     endpointName: `My%20external%20endpoint`,
     endpointStatus: "Enabled",
     endpointType: "ExternalEndpoints",
@@ -223,7 +223,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var endpoint = new AzureNextGen.Network.Endpoint("endpoint", new AzureNextGen.Network.EndpointArgs
+        var endpoint = new AzureNextGen.Network.Latest.Endpoint("endpoint", new AzureNextGen.Network.Latest.EndpointArgs
         {
             EndpointLocation = "North Europe",
             EndpointName = "azsmnet7187",
@@ -253,7 +253,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-endpoint = azure_nextgen.network.Endpoint("endpoint",
+endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
     endpoint_location="North Europe",
     endpoint_name="azsmnet7187",
     endpoint_status="Enabled",
@@ -274,7 +274,7 @@ endpoint = azure_nextgen.network.Endpoint("endpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const endpoint = new azure_nextgen.network.Endpoint("endpoint", {
+const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
     endpointLocation: "North Europe",
     endpointName: "azsmnet7187",
     endpointStatus: "Enabled",
@@ -300,7 +300,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var endpoint = new AzureNextGen.Network.Endpoint("endpoint", new AzureNextGen.Network.EndpointArgs
+        var endpoint = new AzureNextGen.Network.Latest.Endpoint("endpoint", new AzureNextGen.Network.Latest.EndpointArgs
         {
             EndpointName = "My%20external%20endpoint",
             EndpointStatus = "Enabled",
@@ -310,12 +310,12 @@ class MyStack : Stack
             ResourceGroupName = "azuresdkfornetautoresttrafficmanager2191",
             Subnets = 
             {
-                new AzureNextGen.Network.Inputs.EndpointPropertiesSubnetsArgs
+                new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesSubnetsArgs
                 {
                     First = "1.2.3.0",
                     Scope = 24,
                 },
-                new AzureNextGen.Network.Inputs.EndpointPropertiesSubnetsArgs
+                new AzureNextGen.Network.Latest.Inputs.EndpointPropertiesSubnetsArgs
                 {
                     First = "25.26.27.28",
                     Last = "29.30.31.32",
@@ -342,7 +342,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-endpoint = azure_nextgen.network.Endpoint("endpoint",
+endpoint = azure_nextgen.network.latest.Endpoint("endpoint",
     endpoint_name="My%20external%20endpoint",
     endpoint_status="Enabled",
     endpoint_type="ExternalEndpoints",
@@ -372,7 +372,7 @@ endpoint = azure_nextgen.network.Endpoint("endpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const endpoint = new azure_nextgen.network.Endpoint("endpoint", {
+const endpoint = new azure_nextgen.network.latest.Endpoint("endpoint", {
     endpointName: `My%20external%20endpoint`,
     endpointStatus: "Enabled",
     endpointType: "ExternalEndpoints",

@@ -26,19 +26,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diskEncryptionSet = new AzureNextGen.Compute.DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute.DiskEncryptionSetArgs
+        var diskEncryptionSet = new AzureNextGen.Compute.Latest.DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute.Latest.DiskEncryptionSetArgs
         {
-            ActiveKey = new AzureNextGen.Compute.Inputs.KeyVaultAndKeyReferenceArgs
+            ActiveKey = new AzureNextGen.Compute.Latest.Inputs.KeyVaultAndKeyReferenceArgs
             {
                 KeyUrl = "https://myvmvault.vault-int.azure-int.net/keys/{key}",
-                SourceVault = new AzureNextGen.Compute.Inputs.SourceVaultArgs
+                SourceVault = new AzureNextGen.Compute.Latest.Inputs.SourceVaultArgs
                 {
                     Id = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
                 },
             },
             DiskEncryptionSetName = "myDiskEncryptionSet",
             EncryptionType = "EncryptionAtRestWithCustomerKey",
-            Identity = new AzureNextGen.Compute.Inputs.EncryptionSetIdentityArgs
+            Identity = new AzureNextGen.Compute.Latest.Inputs.EncryptionSetIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk_encryption_set = azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet",
+disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet",
     active_key={
         "keyUrl": "https://myvmvault.vault-int.azure-int.net/keys/{key}",
         "sourceVault": {
@@ -88,7 +88,7 @@ disk_encryption_set = azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const diskEncryptionSet = new azure_nextgen.compute.DiskEncryptionSet("diskEncryptionSet", {
+const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet", {
     activeKey: {
         keyUrl: "https://myvmvault.vault-int.azure-int.net/keys/{key}",
         sourceVault: {

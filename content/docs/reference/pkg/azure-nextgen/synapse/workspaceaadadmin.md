@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspaceAadAdmin = new AzureNextGen.Synapse.WorkspaceAadAdmin("workspaceAadAdmin", new AzureNextGen.Synapse.WorkspaceAadAdminArgs
+        var workspaceAadAdmin = new AzureNextGen.Synapse.V20190601Preview.WorkspaceAadAdmin("workspaceAadAdmin", new AzureNextGen.Synapse.V20190601Preview.WorkspaceAadAdminArgs
         {
             AdministratorType = "ActiveDirectory",
             Login = "bob@contoso.com",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace_aad_admin = azure_nextgen.synapse.WorkspaceAadAdmin("workspaceAadAdmin",
+workspace_aad_admin = azure_nextgen.synapse.v20190601preview.WorkspaceAadAdmin("workspaceAadAdmin",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
     resource_group_name="resourceGroup1",
@@ -71,7 +71,7 @@ workspace_aad_admin = azure_nextgen.synapse.WorkspaceAadAdmin("workspaceAadAdmin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspaceAadAdmin = new azure_nextgen.synapse.WorkspaceAadAdmin("workspaceAadAdmin", {
+const workspaceAadAdmin = new azure_nextgen.synapse.v20190601preview.WorkspaceAadAdmin("workspaceAadAdmin", {
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",
     resourceGroupName: "resourceGroup1",

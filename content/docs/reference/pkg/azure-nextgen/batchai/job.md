@@ -26,27 +26,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.Batchai.Job("job", new AzureNextGen.Batchai.JobArgs
+        var job = new AzureNextGen.BatchAI.Latest.Job("job", new AzureNextGen.BatchAI.Latest.JobArgs
         {
-            Cluster = new AzureNextGen.Batchai.Inputs.ResourceIdArgs
+            Cluster = new AzureNextGen.BatchAI.Latest.Inputs.ResourceIdArgs
             {
                 Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
             },
-            ContainerSettings = new AzureNextGen.Batchai.Inputs.ContainerSettingsArgs
+            ContainerSettings = new AzureNextGen.BatchAI.Latest.Inputs.ContainerSettingsArgs
             {
-                ImageSourceRegistry = new AzureNextGen.Batchai.Inputs.ImageSourceRegistryArgs
+                ImageSourceRegistry = new AzureNextGen.BatchAI.Latest.Inputs.ImageSourceRegistryArgs
                 {
                     Image = "ubuntu",
                 },
             },
-            CustomToolkitSettings = new AzureNextGen.Batchai.Inputs.CustomToolkitSettingsArgs
+            CustomToolkitSettings = new AzureNextGen.BatchAI.Latest.Inputs.CustomToolkitSettingsArgs
             {
                 CommandLine = "echo hi | tee $AZ_BATCHAI_OUTPUT_OUTPUTS/hi.txt",
             },
             ExperimentName = "demo_experiment",
             InputDirectories = 
             {
-                new AzureNextGen.Batchai.Inputs.InputDirectoryArgs
+                new AzureNextGen.BatchAI.Latest.Inputs.InputDirectoryArgs
                 {
                     Id = "INPUT",
                     Path = "$AZ_BATCHAI_MOUNT_ROOT/azfiles/input",
@@ -56,7 +56,7 @@ class MyStack : Stack
             NodeCount = 1,
             OutputDirectories = 
             {
-                new AzureNextGen.Batchai.Inputs.OutputDirectoryArgs
+                new AzureNextGen.BatchAI.Latest.Inputs.OutputDirectoryArgs
                 {
                     Id = "OUTPUTS",
                     PathPrefix = "$AZ_BATCHAI_MOUNT_ROOT/azfiles/",
@@ -86,7 +86,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.batchai.Job("job",
+job = azure_nextgen.batchai.latest.Job("job",
     cluster={
         "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
     },
@@ -125,7 +125,7 @@ job = azure_nextgen.batchai.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const job = new azure_nextgen.batchai.Job("job", {
+const job = new azure_nextgen.batchai.latest.Job("job", {
     cluster: {
         id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspace/demo_workspace/clusters/demo_cluster",
     },

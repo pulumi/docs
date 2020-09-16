@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Documentdb.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Documentdb.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.DocumentDB.V20190801Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.DocumentDB.V20190801Preview.PrivateEndpointConnectionArgs
         {
             AccountName = "ddb1",
             PrivateEndpointConnectionName = "privateEndpointConnectionName",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Documentdb.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.DocumentDB.V20190801Preview.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
             {
                 Description = "Approved by johndoe@contoso.com",
                 Status = "Approved",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.documentdb.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.documentdb.v20190801preview.PrivateEndpointConnection("privateEndpointConnection",
     account_name="ddb1",
     private_endpoint_connection_name="privateEndpointConnectionName",
     private_link_service_connection_state={
@@ -74,7 +74,7 @@ private_endpoint_connection = azure_nextgen.documentdb.PrivateEndpointConnection
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.documentdb.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.documentdb.v20190801preview.PrivateEndpointConnection("privateEndpointConnection", {
     accountName: "ddb1",
     privateEndpointConnectionName: "privateEndpointConnectionName",
     privateLinkServiceConnectionState: {

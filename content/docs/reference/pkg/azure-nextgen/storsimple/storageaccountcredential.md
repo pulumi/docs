@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccountCredential = new AzureNextGen.Storsimple.StorageAccountCredential("storageAccountCredential", new AzureNextGen.Storsimple.StorageAccountCredentialArgs
+        var storageAccountCredential = new AzureNextGen.StorSimple.Latest.StorageAccountCredential("storageAccountCredential", new AzureNextGen.StorSimple.Latest.StorageAccountCredentialArgs
         {
-            AccessKey = new AzureNextGen.Storsimple.Inputs.AsymmetricEncryptedSecretArgs
+            AccessKey = new AzureNextGen.StorSimple.Latest.Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
                 EncryptionCertThumbprint = "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account_credential = azure_nextgen.storsimple.StorageAccountCredential("storageAccountCredential",
+storage_account_credential = azure_nextgen.storsimple.latest.StorageAccountCredential("storageAccountCredential",
     access_key={
         "encryptionAlgorithm": "RSAES_PKCS1_v_1_5",
         "encryptionCertThumbprint": "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
@@ -80,7 +80,7 @@ storage_account_credential = azure_nextgen.storsimple.StorageAccountCredential("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const storageAccountCredential = new azure_nextgen.storsimple.StorageAccountCredential("storageAccountCredential", {
+const storageAccountCredential = new azure_nextgen.storsimple.latest.StorageAccountCredential("storageAccountCredential", {
     accessKey: {
         encryptionAlgorithm: "RSAES_PKCS1_v_1_5",
         encryptionCertThumbprint: "A872A2DF196AC7682EE24791E7DE2E2A360F5926",

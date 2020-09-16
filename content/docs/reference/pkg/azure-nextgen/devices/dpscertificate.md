@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dpsCertificate = new AzureNextGen.Devices.DpsCertificate("dpsCertificate", new AzureNextGen.Devices.DpsCertificateArgs
+        var dpsCertificate = new AzureNextGen.Devices.Latest.DpsCertificate("dpsCertificate", new AzureNextGen.Devices.Latest.DpsCertificateArgs
         {
             Certificate = "############################################",
             CertificateName = "cert",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dps_certificate = azure_nextgen.devices.DpsCertificate("dpsCertificate",
+dps_certificate = azure_nextgen.devices.latest.DpsCertificate("dpsCertificate",
     certificate="############################################",
     certificate_name="cert",
     provisioning_service_name="myFirstProvisioningService",
@@ -67,7 +67,7 @@ dps_certificate = azure_nextgen.devices.DpsCertificate("dpsCertificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dpsCertificate = new azure_nextgen.devices.DpsCertificate("dpsCertificate", {
+const dpsCertificate = new azure_nextgen.devices.latest.DpsCertificate("dpsCertificate", {
     certificate: "############################################",
     certificateName: "cert",
     provisioningServiceName: "myFirstProvisioningService",

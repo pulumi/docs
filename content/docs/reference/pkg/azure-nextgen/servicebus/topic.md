@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var topic = new AzureNextGen.Servicebus.Topic("topic", new AzureNextGen.Servicebus.TopicArgs
+        var topic = new AzureNextGen.ServiceBus.Latest.Topic("topic", new AzureNextGen.ServiceBus.Latest.TopicArgs
         {
             EnableExpress = true,
             NamespaceName = "sdk-Namespace-1617",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-topic = azure_nextgen.servicebus.Topic("topic",
+topic = azure_nextgen.servicebus.latest.Topic("topic",
     enable_express=True,
     namespace_name="sdk-Namespace-1617",
     resource_group_name="ArunMonocle",
@@ -67,7 +67,7 @@ topic = azure_nextgen.servicebus.Topic("topic",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const topic = new azure_nextgen.servicebus.Topic("topic", {
+const topic = new azure_nextgen.servicebus.latest.Topic("topic", {
     enableExpress: true,
     namespaceName: "sdk-Namespace-1617",
     resourceGroupName: "ArunMonocle",

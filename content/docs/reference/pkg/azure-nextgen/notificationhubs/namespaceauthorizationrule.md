@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceAuthorizationRule = new AzureNextGen.Notificationhubs.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.Notificationhubs.NamespaceAuthorizationRuleArgs
+        var namespaceAuthorizationRule = new AzureNextGen.NotificationHubs.Latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNextGen.NotificationHubs.Latest.NamespaceAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-AuthRules-1788",
             NamespaceName = "nh-sdk-ns",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_authorization_rule = azure_nextgen.notificationhubs.NamespaceAuthorizationRule("namespaceAuthorizationRule",
+namespace_authorization_rule = azure_nextgen.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule",
     authorization_rule_name="sdk-AuthRules-1788",
     namespace_name="nh-sdk-ns",
     resource_group_name="5ktrial")
@@ -65,7 +65,7 @@ namespace_authorization_rule = azure_nextgen.notificationhubs.NamespaceAuthoriza
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const namespaceAuthorizationRule = new azure_nextgen.notificationhubs.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
+const namespaceAuthorizationRule = new azure_nextgen.notificationhubs.latest.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-1788",
     namespaceName: "nh-sdk-ns",
     resourceGroupName: "5ktrial",

@@ -26,15 +26,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountPartner = new AzureNextGen.Logic.IntegrationAccountPartner("integrationAccountPartner", new AzureNextGen.Logic.IntegrationAccountPartnerArgs
+        var integrationAccountPartner = new AzureNextGen.Logic.Latest.IntegrationAccountPartner("integrationAccountPartner", new AzureNextGen.Logic.Latest.IntegrationAccountPartnerArgs
         {
-            Content = new AzureNextGen.Logic.Inputs.PartnerContentArgs
+            Content = new AzureNextGen.Logic.Latest.Inputs.PartnerContentArgs
             {
-                B2b = new AzureNextGen.Logic.Inputs.B2BPartnerContentArgs
+                B2b = new AzureNextGen.Logic.Latest.Inputs.B2BPartnerContentArgs
                 {
                     BusinessIdentities = 
                     {
-                        new AzureNextGen.Logic.Inputs.BusinessIdentityArgs
+                        new AzureNextGen.Logic.Latest.Inputs.BusinessIdentityArgs
                         {
                             Qualifier = "AA",
                             Value = "ZZ",
@@ -68,7 +68,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_partner = azure_nextgen.logic.IntegrationAccountPartner("integrationAccountPartner",
+integration_account_partner = azure_nextgen.logic.latest.IntegrationAccountPartner("integrationAccountPartner",
     content={
         "b2b": {
             "businessIdentities": [{
@@ -95,7 +95,7 @@ integration_account_partner = azure_nextgen.logic.IntegrationAccountPartner("int
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationAccountPartner = new azure_nextgen.logic.IntegrationAccountPartner("integrationAccountPartner", {
+const integrationAccountPartner = new azure_nextgen.logic.latest.IntegrationAccountPartner("integrationAccountPartner", {
     content: {
         b2b: {
             businessIdentities: [{

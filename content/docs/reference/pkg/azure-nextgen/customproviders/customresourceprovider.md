@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var customResourceProvider = new AzureNextGen.Customproviders.CustomResourceProvider("customResourceProvider", new AzureNextGen.Customproviders.CustomResourceProviderArgs
+        var customResourceProvider = new AzureNextGen.CustomProviders.V20180901Preview.CustomResourceProvider("customResourceProvider", new AzureNextGen.CustomProviders.V20180901Preview.CustomResourceProviderArgs
         {
             Actions = 
             {
-                new AzureNextGen.Customproviders.Inputs.CustomRPActionRouteDefinitionArgs
+                new AzureNextGen.CustomProviders.V20180901Preview.Inputs.CustomRPActionRouteDefinitionArgs
                 {
                     Endpoint = "https://mytestendpoint/",
                     Name = "TestAction",
@@ -42,7 +42,7 @@ class MyStack : Stack
             ResourceProviderName = "newrp",
             ResourceTypes = 
             {
-                new AzureNextGen.Customproviders.Inputs.CustomRPResourceTypeRouteDefinitionArgs
+                new AzureNextGen.CustomProviders.V20180901Preview.Inputs.CustomRPResourceTypeRouteDefinitionArgs
                 {
                     Endpoint = "https://mytestendpoint2/",
                     Name = "TestResource",
@@ -68,7 +68,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-custom_resource_provider = azure_nextgen.customproviders.CustomResourceProvider("customResourceProvider",
+custom_resource_provider = azure_nextgen.customproviders.v20180901preview.CustomResourceProvider("customResourceProvider",
     actions=[{
         "endpoint": "https://mytestendpoint/",
         "name": "TestAction",
@@ -93,7 +93,7 @@ custom_resource_provider = azure_nextgen.customproviders.CustomResourceProvider(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const customResourceProvider = new azure_nextgen.customproviders.CustomResourceProvider("customResourceProvider", {
+const customResourceProvider = new azure_nextgen.customproviders.v20180901preview.CustomResourceProvider("customResourceProvider", {
     actions: [{
         endpoint: "https://mytestendpoint/",
         name: "TestAction",

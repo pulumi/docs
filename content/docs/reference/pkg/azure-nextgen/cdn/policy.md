@@ -26,19 +26,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policy = new AzureNextGen.Cdn.Policy("policy", new AzureNextGen.Cdn.PolicyArgs
+        var policy = new AzureNextGen.Cdn.Latest.Policy("policy", new AzureNextGen.Cdn.Latest.PolicyArgs
         {
-            CustomRules = new AzureNextGen.Cdn.Inputs.CustomRuleListArgs
+            CustomRules = new AzureNextGen.Cdn.Latest.Inputs.CustomRuleListArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Cdn.Inputs.CustomRuleArgs
+                    new AzureNextGen.Cdn.Latest.Inputs.CustomRuleArgs
                     {
                         Action = "Block",
                         EnabledState = "Enabled",
                         MatchConditions = 
                         {
-                            new AzureNextGen.Cdn.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -49,7 +49,7 @@ class MyStack : Stack
                                 Operator = "GeoMatch",
                                 Transforms = {},
                             },
-                            new AzureNextGen.Cdn.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -61,7 +61,7 @@ class MyStack : Stack
                                 Selector = "UserAgent",
                                 Transforms = {},
                             },
-                            new AzureNextGen.Cdn.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -85,26 +85,26 @@ class MyStack : Stack
                 },
             },
             Location = "WestUs",
-            ManagedRules = new AzureNextGen.Cdn.Inputs.ManagedRuleSetListArgs
+            ManagedRules = new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleSetListArgs
             {
                 ManagedRuleSets = 
                 {
-                    new AzureNextGen.Cdn.Inputs.ManagedRuleSetArgs
+                    new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleSetArgs
                     {
                         RuleGroupOverrides = 
                         {
-                            new AzureNextGen.Cdn.Inputs.ManagedRuleGroupOverrideArgs
+                            new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleGroupOverrideArgs
                             {
                                 RuleGroupName = "Group1",
                                 Rules = 
                                 {
-                                    new AzureNextGen.Cdn.Inputs.ManagedRuleOverrideArgs
+                                    new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleOverrideArgs
                                     {
                                         Action = "Redirect",
                                         EnabledState = "Enabled",
                                         RuleId = "GROUP1-0001",
                                     },
-                                    new AzureNextGen.Cdn.Inputs.ManagedRuleOverrideArgs
+                                    new AzureNextGen.Cdn.Latest.Inputs.ManagedRuleOverrideArgs
                                     {
                                         EnabledState = "Disabled",
                                         RuleId = "GROUP1-0002",
@@ -118,23 +118,23 @@ class MyStack : Stack
                 },
             },
             PolicyName = "MicrosoftCdnWafPolicy",
-            PolicySettings = new AzureNextGen.Cdn.Inputs.PolicySettingsArgs
+            PolicySettings = new AzureNextGen.Cdn.Latest.Inputs.PolicySettingsArgs
             {
                 DefaultCustomBlockResponseBody = "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
                 DefaultCustomBlockResponseStatusCode = 200,
                 DefaultRedirectUrl = "http://www.bing.com",
             },
-            RateLimitRules = new AzureNextGen.Cdn.Inputs.RateLimitRuleListArgs
+            RateLimitRules = new AzureNextGen.Cdn.Latest.Inputs.RateLimitRuleListArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Cdn.Inputs.RateLimitRuleArgs
+                    new AzureNextGen.Cdn.Latest.Inputs.RateLimitRuleArgs
                     {
                         Action = "Block",
                         EnabledState = "Enabled",
                         MatchConditions = 
                         {
-                            new AzureNextGen.Cdn.Inputs.MatchConditionArgs
+                            new AzureNextGen.Cdn.Latest.Inputs.MatchConditionArgs
                             {
                                 MatchValue = 
                                 {
@@ -155,7 +155,7 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "rg1",
-            Sku = new AzureNextGen.Cdn.Inputs.SkuArgs
+            Sku = new AzureNextGen.Cdn.Latest.Inputs.SkuArgs
             {
                 Name = "Standard_Microsoft",
             },
@@ -178,7 +178,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy = azure_nextgen.cdn.Policy("policy",
+policy = azure_nextgen.cdn.latest.Policy("policy",
     custom_rules={
         "rules": [{
             "action": "Block",
@@ -280,7 +280,7 @@ policy = azure_nextgen.cdn.Policy("policy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policy = new azure_nextgen.cdn.Policy("policy", {
+const policy = new azure_nextgen.cdn.latest.Policy("policy", {
     customRules: {
         rules: [{
             action: "Block",

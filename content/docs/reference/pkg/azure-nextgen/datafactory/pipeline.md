@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipeline = new AzureNextGen.Datafactory.Pipeline("pipeline", new AzureNextGen.Datafactory.PipelineArgs
+        var pipeline = new AzureNextGen.DataFactory.Latest.Pipeline("pipeline", new AzureNextGen.DataFactory.Latest.PipelineArgs
         {
             Activities = 
             {
@@ -98,11 +98,11 @@ class MyStack : Stack
             FactoryName = "exampleFactoryName",
             Parameters = 
             {
-                { "JobId", new AzureNextGen.Datafactory.Inputs.ParameterSpecificationArgs
+                { "JobId", new AzureNextGen.DataFactory.Latest.Inputs.ParameterSpecificationArgs
                 {
                     Type = "String",
                 } },
-                { "OutputBlobNameList", new AzureNextGen.Datafactory.Inputs.ParameterSpecificationArgs
+                { "OutputBlobNameList", new AzureNextGen.DataFactory.Latest.Inputs.ParameterSpecificationArgs
                 {
                     Type = "Array",
                 } },
@@ -119,7 +119,7 @@ class MyStack : Stack
             },
             Variables = 
             {
-                { "TestVariableArray", new AzureNextGen.Datafactory.Inputs.VariableSpecificationArgs
+                { "TestVariableArray", new AzureNextGen.DataFactory.Latest.Inputs.VariableSpecificationArgs
                 {
                     Type = "Array",
                 } },
@@ -143,7 +143,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline = azure_nextgen.datafactory.Pipeline("pipeline",
+pipeline = azure_nextgen.datafactory.latest.Pipeline("pipeline",
     activities=[{
         "name": "ExampleForeachActivity",
         "type": "ForEach",
@@ -220,7 +220,7 @@ pipeline = azure_nextgen.datafactory.Pipeline("pipeline",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const pipeline = new azure_nextgen.datafactory.Pipeline("pipeline", {
+const pipeline = new azure_nextgen.datafactory.latest.Pipeline("pipeline", {
     activities: [{
         name: "ExampleForeachActivity",
         type: "ForEach",
@@ -302,7 +302,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipeline = new AzureNextGen.Datafactory.Pipeline("pipeline", new AzureNextGen.Datafactory.PipelineArgs
+        var pipeline = new AzureNextGen.DataFactory.Latest.Pipeline("pipeline", new AzureNextGen.DataFactory.Latest.PipelineArgs
         {
             Activities = 
             {
@@ -375,7 +375,7 @@ class MyStack : Stack
             FactoryName = "exampleFactoryName",
             Parameters = 
             {
-                { "OutputBlobNameList", new AzureNextGen.Datafactory.Inputs.ParameterSpecificationArgs
+                { "OutputBlobNameList", new AzureNextGen.DataFactory.Latest.Inputs.ParameterSpecificationArgs
                 {
                     Type = "Array",
                 } },
@@ -401,7 +401,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline = azure_nextgen.datafactory.Pipeline("pipeline",
+pipeline = azure_nextgen.datafactory.latest.Pipeline("pipeline",
     activities=[{
         "name": "ExampleForeachActivity",
         "type": "ForEach",
@@ -465,7 +465,7 @@ pipeline = azure_nextgen.datafactory.Pipeline("pipeline",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const pipeline = new azure_nextgen.datafactory.Pipeline("pipeline", {
+const pipeline = new azure_nextgen.datafactory.latest.Pipeline("pipeline", {
     activities: [{
         name: "ExampleForeachActivity",
         type: "ForEach",

@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hybridUseBenefit = new AzureNextGen.Softwareplan.HybridUseBenefit("hybridUseBenefit", new AzureNextGen.Softwareplan.HybridUseBenefitArgs
+        var hybridUseBenefit = new AzureNextGen.SoftwarePlan.Latest.HybridUseBenefit("hybridUseBenefit", new AzureNextGen.SoftwarePlan.Latest.HybridUseBenefitArgs
         {
             PlanId = "94f46eda-45f8-493a-8425-251921463a89",
             Scope = "subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
-            Sku = new AzureNextGen.Softwareplan.Inputs.SkuArgs
+            Sku = new AzureNextGen.SoftwarePlan.Latest.Inputs.SkuArgs
             {
                 Name = "SQL_Server_Perpetual",
             },
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hybrid_use_benefit = azure_nextgen.softwareplan.HybridUseBenefit("hybridUseBenefit",
+hybrid_use_benefit = azure_nextgen.softwareplan.latest.HybridUseBenefit("hybridUseBenefit",
     plan_id="94f46eda-45f8-493a-8425-251921463a89",
     scope="subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
     sku={
@@ -70,7 +70,7 @@ hybrid_use_benefit = azure_nextgen.softwareplan.HybridUseBenefit("hybridUseBenef
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hybridUseBenefit = new azure_nextgen.softwareplan.HybridUseBenefit("hybridUseBenefit", {
+const hybridUseBenefit = new azure_nextgen.softwareplan.latest.HybridUseBenefit("hybridUseBenefit", {
     planId: "94f46eda-45f8-493a-8425-251921463a89",
     scope: "subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
     sku: {

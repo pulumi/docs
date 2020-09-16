@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databasePrincipalAssignment = new AzureNextGen.Kusto.DatabasePrincipalAssignment("databasePrincipalAssignment", new AzureNextGen.Kusto.DatabasePrincipalAssignmentArgs
+        var databasePrincipalAssignment = new AzureNextGen.Kusto.Latest.DatabasePrincipalAssignment("databasePrincipalAssignment", new AzureNextGen.Kusto.Latest.DatabasePrincipalAssignmentArgs
         {
             ClusterName = "kustoclusterrptest4",
             DatabaseName = "Kustodatabase8",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_principal_assignment = azure_nextgen.kusto.DatabasePrincipalAssignment("databasePrincipalAssignment",
+database_principal_assignment = azure_nextgen.kusto.latest.DatabasePrincipalAssignment("databasePrincipalAssignment",
     cluster_name="kustoclusterrptest4",
     database_name="Kustodatabase8",
     principal_assignment_name="kustoprincipal1",
@@ -75,7 +75,7 @@ database_principal_assignment = azure_nextgen.kusto.DatabasePrincipalAssignment(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const databasePrincipalAssignment = new azure_nextgen.kusto.DatabasePrincipalAssignment("databasePrincipalAssignment", {
+const databasePrincipalAssignment = new azure_nextgen.kusto.latest.DatabasePrincipalAssignment("databasePrincipalAssignment", {
     clusterName: "kustoclusterrptest4",
     databaseName: "Kustodatabase8",
     principalAssignmentName: "kustoprincipal1",

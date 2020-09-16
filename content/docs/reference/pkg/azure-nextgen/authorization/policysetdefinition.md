@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policySetDefinition = new AzureNextGen.Authorization.PolicySetDefinition("policySetDefinition", new AzureNextGen.Authorization.PolicySetDefinitionArgs
+        var policySetDefinition = new AzureNextGen.Authorization.Latest.PolicySetDefinition("policySetDefinition", new AzureNextGen.Authorization.Latest.PolicySetDefinitionArgs
         {
             Description = "Policies to enforce low cost storage SKUs",
             DisplayName = "Cost Management",
@@ -36,10 +36,10 @@ class MyStack : Stack
             },
             Parameters = 
             {
-                { "namePrefix", new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueArgs
+                { "namePrefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueArgs
                 {
                     DefaultValue = "myPrefix",
-                    Metadata = new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         DisplayName = "Prefix to enforce on resource names",
                     },
@@ -48,11 +48,11 @@ class MyStack : Stack
             },
             PolicyDefinitions = 
             {
-                new AzureNextGen.Authorization.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
                 {
                     Parameters = 
                     {
-                        { "listOfAllowedSKUs", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                        { "listOfAllowedSKUs", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = 
                             {
@@ -64,15 +64,15 @@ class MyStack : Stack
                     PolicyDefinitionId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
                     PolicyDefinitionReferenceId = "Limit_Skus",
                 },
-                new AzureNextGen.Authorization.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
                 {
                     Parameters = 
                     {
-                        { "prefix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                        { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = "[parameters('namePrefix')]",
                         } },
-                        { "suffix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                        { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = "-LC",
                         } },
@@ -101,7 +101,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_set_definition = azure_nextgen.authorization.PolicySetDefinition("policySetDefinition",
+policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("policySetDefinition",
     description="Policies to enforce low cost storage SKUs",
     display_name="Cost Management",
     metadata={
@@ -154,7 +154,7 @@ policy_set_definition = azure_nextgen.authorization.PolicySetDefinition("policyS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policySetDefinition = new azure_nextgen.authorization.PolicySetDefinition("policySetDefinition", {
+const policySetDefinition = new azure_nextgen.authorization.latest.PolicySetDefinition("policySetDefinition", {
     description: "Policies to enforce low cost storage SKUs",
     displayName: "Cost Management",
     metadata: {
@@ -212,7 +212,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policySetDefinition = new AzureNextGen.Authorization.PolicySetDefinition("policySetDefinition", new AzureNextGen.Authorization.PolicySetDefinitionArgs
+        var policySetDefinition = new AzureNextGen.Authorization.Latest.PolicySetDefinition("policySetDefinition", new AzureNextGen.Authorization.Latest.PolicySetDefinitionArgs
         {
             Description = "Policies to enforce low cost storage SKUs",
             DisplayName = "Cost Management",
@@ -222,13 +222,13 @@ class MyStack : Stack
             },
             PolicyDefinitionGroups = 
             {
-                new AzureNextGen.Authorization.Inputs.PolicyDefinitionGroupArgs
+                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionGroupArgs
                 {
                     Description = "Policies designed to control spend within a subscription.",
                     DisplayName = "Cost Management Policies",
                     Name = "CostSaving",
                 },
-                new AzureNextGen.Authorization.Inputs.PolicyDefinitionGroupArgs
+                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionGroupArgs
                 {
                     Description = "Policies that help enforce resource organization standards within a subscription.",
                     DisplayName = "Organizational Policies",
@@ -237,7 +237,7 @@ class MyStack : Stack
             },
             PolicyDefinitions = 
             {
-                new AzureNextGen.Authorization.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
                 {
                     GroupNames = 
                     {
@@ -245,7 +245,7 @@ class MyStack : Stack
                     },
                     Parameters = 
                     {
-                        { "listOfAllowedSKUs", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                        { "listOfAllowedSKUs", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = 
                             {
@@ -257,7 +257,7 @@ class MyStack : Stack
                     PolicyDefinitionId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1",
                     PolicyDefinitionReferenceId = "Limit_Skus",
                 },
-                new AzureNextGen.Authorization.Inputs.PolicyDefinitionReferenceArgs
+                new AzureNextGen.Authorization.Latest.Inputs.PolicyDefinitionReferenceArgs
                 {
                     GroupNames = 
                     {
@@ -265,11 +265,11 @@ class MyStack : Stack
                     },
                     Parameters = 
                     {
-                        { "prefix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                        { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = "DeptA",
                         } },
-                        { "suffix", new AzureNextGen.Authorization.Inputs.ParameterValuesValueArgs
+                        { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterValuesValueArgs
                         {
                             Value = "-LC",
                         } },
@@ -298,7 +298,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_set_definition = azure_nextgen.authorization.PolicySetDefinition("policySetDefinition",
+policy_set_definition = azure_nextgen.authorization.latest.PolicySetDefinition("policySetDefinition",
     description="Policies to enforce low cost storage SKUs",
     display_name="Cost Management",
     metadata={
@@ -356,7 +356,7 @@ policy_set_definition = azure_nextgen.authorization.PolicySetDefinition("policyS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policySetDefinition = new azure_nextgen.authorization.PolicySetDefinition("policySetDefinition", {
+const policySetDefinition = new azure_nextgen.authorization.latest.PolicySetDefinition("policySetDefinition", {
     description: "Policies to enforce low cost storage SKUs",
     displayName: "Cost Management",
     metadata: {

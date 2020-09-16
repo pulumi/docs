@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Machinelearning.Workspace("workspace", new AzureNextGen.Machinelearning.WorkspaceArgs
+        var workspace = new AzureNextGen.MachineLearning.Latest.Workspace("workspace", new AzureNextGen.MachineLearning.Latest.WorkspaceArgs
         {
             Location = "West Europe",
             OwnerEmail = "abc@microsoft.com",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Machinelearning.Inputs.SkuArgs
+            Sku = new AzureNextGen.MachineLearning.Latest.Inputs.SkuArgs
             {
                 Name = "Enterprise",
                 Tier = "Enterprise",
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.machinelearning.Workspace("workspace",
+workspace = azure_nextgen.machinelearning.latest.Workspace("workspace",
     location="West Europe",
     owner_email="abc@microsoft.com",
     resource_group_name="myResourceGroup",
@@ -85,7 +85,7 @@ workspace = azure_nextgen.machinelearning.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.machinelearning.Workspace("workspace", {
+const workspace = new azure_nextgen.machinelearning.latest.Workspace("workspace", {
     location: "West Europe",
     ownerEmail: "abc@microsoft.com",
     resourceGroupName: "myResourceGroup",

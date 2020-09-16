@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Datashare.Account("account", new AzureNextGen.Datashare.AccountArgs
+        var account = new AzureNextGen.DataShare.Latest.Account("account", new AzureNextGen.DataShare.Latest.AccountArgs
         {
             AccountName = "Account1",
-            Identity = new AzureNextGen.Datashare.Inputs.IdentityArgs
+            Identity = new AzureNextGen.DataShare.Latest.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.datashare.Account("account",
+account = azure_nextgen.datashare.latest.Account("account",
     account_name="Account1",
     identity={
         "type": "SystemAssigned",
@@ -81,7 +81,7 @@ account = azure_nextgen.datashare.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.datashare.Account("account", {
+const account = new azure_nextgen.datashare.latest.Account("account", {
     accountName: "Account1",
     identity: {
         type: "SystemAssigned",

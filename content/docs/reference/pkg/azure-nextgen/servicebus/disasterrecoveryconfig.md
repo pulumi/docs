@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disasterRecoveryConfig = new AzureNextGen.Servicebus.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureNextGen.Servicebus.DisasterRecoveryConfigArgs
+        var disasterRecoveryConfig = new AzureNextGen.ServiceBus.Latest.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureNextGen.ServiceBus.Latest.DisasterRecoveryConfigArgs
         {
             Alias = "sdk-Namespace-8860",
             AlternateName = "alternameforAlias-Namespace-8860",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disaster_recovery_config = azure_nextgen.servicebus.DisasterRecoveryConfig("disasterRecoveryConfig",
+disaster_recovery_config = azure_nextgen.servicebus.latest.DisasterRecoveryConfig("disasterRecoveryConfig",
     alias="sdk-Namespace-8860",
     alternate_name="alternameforAlias-Namespace-8860",
     namespace_name="sdk-Namespace-8860",
@@ -69,7 +69,7 @@ disaster_recovery_config = azure_nextgen.servicebus.DisasterRecoveryConfig("disa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disasterRecoveryConfig = new azure_nextgen.servicebus.DisasterRecoveryConfig("disasterRecoveryConfig", {
+const disasterRecoveryConfig = new azure_nextgen.servicebus.latest.DisasterRecoveryConfig("disasterRecoveryConfig", {
     alias: "sdk-Namespace-8860",
     alternateName: "alternameforAlias-Namespace-8860",
     namespaceName: "sdk-Namespace-8860",

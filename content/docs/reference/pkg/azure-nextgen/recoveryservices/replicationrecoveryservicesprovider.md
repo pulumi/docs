@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationRecoveryServicesProvider = new AzureNextGen.Recoveryservices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", new AzureNextGen.Recoveryservices.ReplicationRecoveryServicesProviderArgs
+        var replicationRecoveryServicesProvider = new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryServicesProviderArgs
         {
             FabricName = "vmwarefabric1",
             ProviderName = "vmwareprovider1",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_recovery_services_provider = azure_nextgen.recoveryservices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider",
+replication_recovery_services_provider = azure_nextgen.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider",
     fabric_name="vmwarefabric1",
     provider_name="vmwareprovider1",
     resource_group_name="resourcegroup1",
@@ -67,7 +67,7 @@ replication_recovery_services_provider = azure_nextgen.recoveryservices.Replicat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", {
+const replicationRecoveryServicesProvider = new azure_nextgen.recoveryservices.latest.ReplicationRecoveryServicesProvider("replicationRecoveryServicesProvider", {
     fabricName: "vmwarefabric1",
     providerName: "vmwareprovider1",
     resourceGroupName: "resourcegroup1",

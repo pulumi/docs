@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpoint = new AzureNextGen.Streamanalytics.PrivateEndpoint("privateEndpoint", new AzureNextGen.Streamanalytics.PrivateEndpointArgs
+        var privateEndpoint = new AzureNextGen.StreamAnalytics.V20200301Preview.PrivateEndpoint("privateEndpoint", new AzureNextGen.StreamAnalytics.V20200301Preview.PrivateEndpointArgs
         {
             ClusterName = "testcluster",
             PrivateEndpointName = "testpe",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint = azure_nextgen.streamanalytics.PrivateEndpoint("privateEndpoint",
+private_endpoint = azure_nextgen.streamanalytics.v20200301preview.PrivateEndpoint("privateEndpoint",
     cluster_name="testcluster",
     private_endpoint_name="testpe",
     resource_group_name="sjrg")
@@ -65,7 +65,7 @@ private_endpoint = azure_nextgen.streamanalytics.PrivateEndpoint("privateEndpoin
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpoint = new azure_nextgen.streamanalytics.PrivateEndpoint("privateEndpoint", {
+const privateEndpoint = new azure_nextgen.streamanalytics.v20200301preview.PrivateEndpoint("privateEndpoint", {
     clusterName: "testcluster",
     privateEndpointName: "testpe",
     resourceGroupName: "sjrg",

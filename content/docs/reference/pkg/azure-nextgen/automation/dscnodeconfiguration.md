@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dscNodeConfiguration = new AzureNextGen.Automation.DscNodeConfiguration("dscNodeConfiguration", new AzureNextGen.Automation.DscNodeConfigurationArgs
+        var dscNodeConfiguration = new AzureNextGen.Automation.Latest.DscNodeConfiguration("dscNodeConfiguration", new AzureNextGen.Automation.Latest.DscNodeConfigurationArgs
         {
             AutomationAccountName = "myAutomationAccount20",
-            Configuration = new AzureNextGen.Automation.Inputs.DscConfigurationAssociationPropertyArgs
+            Configuration = new AzureNextGen.Automation.Latest.Inputs.DscConfigurationAssociationPropertyArgs
             {
                 Name = "configName",
             },
@@ -37,9 +37,9 @@ class MyStack : Stack
             Name = "configName.nodeConfigName",
             NodeConfigurationName = "configName.nodeConfigName",
             ResourceGroupName = "rg",
-            Source = new AzureNextGen.Automation.Inputs.ContentSourceArgs
+            Source = new AzureNextGen.Automation.Latest.Inputs.ContentSourceArgs
             {
-                Hash = new AzureNextGen.Automation.Inputs.ContentHashArgs
+                Hash = new AzureNextGen.Automation.Latest.Inputs.ContentHashArgs
                 {
                     Algorithm = "sha256",
                     Value = "6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
@@ -97,7 +97,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dsc_node_configuration = azure_nextgen.automation.DscNodeConfiguration("dscNodeConfiguration",
+dsc_node_configuration = azure_nextgen.automation.latest.DscNodeConfiguration("dscNodeConfiguration",
     automation_account_name="myAutomationAccount20",
     configuration={
         "name": "configName",
@@ -156,7 +156,7 @@ instance of OMI_ConfigurationDocument
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dscNodeConfiguration = new azure_nextgen.automation.DscNodeConfiguration("dscNodeConfiguration", {
+const dscNodeConfiguration = new azure_nextgen.automation.latest.DscNodeConfiguration("dscNodeConfiguration", {
     automationAccountName: "myAutomationAccount20",
     configuration: {
         name: "configName",

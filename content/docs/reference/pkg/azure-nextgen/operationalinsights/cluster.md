@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Operationalinsights.Cluster("cluster", new AzureNextGen.Operationalinsights.ClusterArgs
+        var cluster = new AzureNextGen.OperationalInsights.Latest.Cluster("cluster", new AzureNextGen.OperationalInsights.Latest.ClusterArgs
         {
             ClusterName = "oiautorest6685",
             Location = "australiasoutheast",
             ResourceGroupName = "oiautorest6685",
-            Sku = new AzureNextGen.Operationalinsights.Inputs.ClusterSkuArgs
+            Sku = new AzureNextGen.OperationalInsights.Latest.Inputs.ClusterSkuArgs
             {
                 Capacity = 1000,
                 Name = "CapacityReservation",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.operationalinsights.Cluster("cluster",
+cluster = azure_nextgen.operationalinsights.latest.Cluster("cluster",
     cluster_name="oiautorest6685",
     location="australiasoutheast",
     resource_group_name="oiautorest6685",
@@ -81,7 +81,7 @@ cluster = azure_nextgen.operationalinsights.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.operationalinsights.Cluster("cluster", {
+const cluster = new azure_nextgen.operationalinsights.latest.Cluster("cluster", {
     clusterName: "oiautorest6685",
     location: "australiasoutheast",
     resourceGroupName: "oiautorest6685",

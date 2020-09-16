@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationStorageClassificationMapping = new AzureNextGen.Recoveryservices.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", new AzureNextGen.Recoveryservices.ReplicationStorageClassificationMappingArgs
+        var replicationStorageClassificationMapping = new AzureNextGen.RecoveryServices.Latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", new AzureNextGen.RecoveryServices.Latest.ReplicationStorageClassificationMappingArgs
         {
             FabricName = "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
             ResourceGroupName = "resourceGroupPS1",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_storage_classification_mapping = azure_nextgen.recoveryservices.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping",
+replication_storage_classification_mapping = azure_nextgen.recoveryservices.latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping",
     fabric_name="2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
     resource_group_name="resourceGroupPS1",
     resource_name="vault1",
@@ -69,7 +69,7 @@ replication_storage_classification_mapping = azure_nextgen.recoveryservices.Repl
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const replicationStorageClassificationMapping = new azure_nextgen.recoveryservices.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", {
+const replicationStorageClassificationMapping = new azure_nextgen.recoveryservices.latest.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", {
     fabricName: "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
     resourceGroupName: "resourceGroupPS1",
     resourceName: "vault1",

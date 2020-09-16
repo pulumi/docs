@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notificationHub = new AzureNextGen.Notificationhubs.NotificationHub("notificationHub", new AzureNextGen.Notificationhubs.NotificationHubArgs
+        var notificationHub = new AzureNextGen.NotificationHubs.Latest.NotificationHub("notificationHub", new AzureNextGen.NotificationHubs.Latest.NotificationHubArgs
         {
             Location = "eastus",
             NamespaceName = "nh-sdk-ns",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notification_hub = azure_nextgen.notificationhubs.NotificationHub("notificationHub",
+notification_hub = azure_nextgen.notificationhubs.latest.NotificationHub("notificationHub",
     location="eastus",
     namespace_name="nh-sdk-ns",
     notification_hub_name="nh-sdk-hub",
@@ -67,7 +67,7 @@ notification_hub = azure_nextgen.notificationhubs.NotificationHub("notificationH
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const notificationHub = new azure_nextgen.notificationhubs.NotificationHub("notificationHub", {
+const notificationHub = new azure_nextgen.notificationhubs.latest.NotificationHub("notificationHub", {
     location: "eastus",
     namespaceName: "nh-sdk-ns",
     notificationHubName: "nh-sdk-hub",

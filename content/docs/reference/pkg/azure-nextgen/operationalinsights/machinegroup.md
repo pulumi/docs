@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineGroup = new AzureNextGen.Operationalinsights.MachineGroup("machineGroup", new AzureNextGen.Operationalinsights.MachineGroupArgs
+        var machineGroup = new AzureNextGen.OperationalInsights.V20151101Preview.MachineGroup("machineGroup", new AzureNextGen.OperationalInsights.V20151101Preview.MachineGroupArgs
         {
             Count = 1,
             DisplayName = "Foo",
@@ -35,7 +35,7 @@ class MyStack : Stack
             MachineGroupName = "ccfbf4bf-dc08-4371-9e9b-00a8d875d45a",
             Machines = 
             {
-                new AzureNextGen.Operationalinsights.Inputs.MachineReferenceWithHintsArgs
+                new AzureNextGen.OperationalInsights.V20151101Preview.Inputs.MachineReferenceWithHintsArgs
                 {
                     Id = "/subscriptions/63BE4E24-FDF0-4E9C-9342-6A5D5A359722/resourceGroups/rg-sm/providers/Microsoft.OperationalInsights/workspaces/D6F79F14-E563-469B-84B5-9286D2803B2F/machines/m-0fe4b501-7ac9-41d7-a4e1-1591a0789519",
                     Kind = "ref:machinewithhints",
@@ -62,7 +62,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_group = azure_nextgen.operationalinsights.MachineGroup("machineGroup",
+machine_group = azure_nextgen.operationalinsights.v20151101preview.MachineGroup("machineGroup",
     count=1,
     display_name="Foo",
     etag="8cd3a8a1-4b1f-43fc-ae3c-b2c092561444",
@@ -85,7 +85,7 @@ machine_group = azure_nextgen.operationalinsights.MachineGroup("machineGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const machineGroup = new azure_nextgen.operationalinsights.MachineGroup("machineGroup", {
+const machineGroup = new azure_nextgen.operationalinsights.v20151101preview.MachineGroup("machineGroup", {
     count: 1,
     displayName: "Foo",
     etag: "8cd3a8a1-4b1f-43fc-ae3c-b2c092561444",

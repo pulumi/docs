@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.Engagementfabric.Channel("channel", new AzureNextGen.Engagementfabric.ChannelArgs
+        var channel = new AzureNextGen.EngagementFabric.V20180901Preview.Channel("channel", new AzureNextGen.EngagementFabric.V20180901Preview.ChannelArgs
         {
             AccountName = "ExampleAccount",
             ChannelFunctions = 
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.engagementfabric.Channel("channel",
+channel = azure_nextgen.engagementfabric.v20180901preview.Channel("channel",
     account_name="ExampleAccount",
     channel_functions=[
         "MockFunction1",
@@ -85,7 +85,7 @@ channel = azure_nextgen.engagementfabric.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const channel = new azure_nextgen.engagementfabric.Channel("channel", {
+const channel = new azure_nextgen.engagementfabric.v20180901preview.Channel("channel", {
     accountName: "ExampleAccount",
     channelFunctions: [
         "MockFunction1",

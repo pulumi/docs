@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedNetworkGroup = new AzureNextGen.Managednetwork.ManagedNetworkGroup("managedNetworkGroup", new AzureNextGen.Managednetwork.ManagedNetworkGroupArgs
+        var managedNetworkGroup = new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetworkGroup("managedNetworkGroup", new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetworkGroupArgs
         {
             ManagedNetworkGroupName = "myManagedNetworkGroup1",
             ManagedNetworkName = "myManagedNetwork",
@@ -34,7 +34,7 @@ class MyStack : Stack
             ResourceGroupName = "myResourceGroup",
             Subnets = 
             {
-                new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                 {
                     Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
                 },
@@ -42,11 +42,11 @@ class MyStack : Stack
             Subscriptions = {},
             VirtualNetworks = 
             {
-                new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                 {
                     Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
                 },
-                new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                 {
                     Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
                 },
@@ -70,7 +70,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_network_group = azure_nextgen.managednetwork.ManagedNetworkGroup("managedNetworkGroup",
+managed_network_group = azure_nextgen.managednetwork.v20190601preview.ManagedNetworkGroup("managedNetworkGroup",
     managed_network_group_name="myManagedNetworkGroup1",
     managed_network_name="myManagedNetwork",
     management_groups=[],
@@ -98,7 +98,7 @@ managed_network_group = azure_nextgen.managednetwork.ManagedNetworkGroup("manage
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedNetworkGroup = new azure_nextgen.managednetwork.ManagedNetworkGroup("managedNetworkGroup", {
+const managedNetworkGroup = new azure_nextgen.managednetwork.v20190601preview.ManagedNetworkGroup("managedNetworkGroup", {
     managedNetworkGroupName: "myManagedNetworkGroup1",
     managedNetworkName: "myManagedNetwork",
     managementGroups: [],

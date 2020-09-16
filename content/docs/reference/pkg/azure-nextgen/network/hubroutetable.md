@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hubRouteTable = new AzureNextGen.Network.HubRouteTable("hubRouteTable", new AzureNextGen.Network.HubRouteTableArgs
+        var hubRouteTable = new AzureNextGen.Network.Latest.HubRouteTable("hubRouteTable", new AzureNextGen.Network.Latest.HubRouteTableArgs
         {
             Labels = 
             {
@@ -37,7 +37,7 @@ class MyStack : Stack
             RouteTableName = "hubRouteTable1",
             Routes = 
             {
-                new AzureNextGen.Network.Inputs.HubRouteArgs
+                new AzureNextGen.Network.Latest.Inputs.HubRouteArgs
                 {
                     DestinationType = "CIDR",
                     Destinations = 
@@ -71,7 +71,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hub_route_table = azure_nextgen.network.HubRouteTable("hubRouteTable",
+hub_route_table = azure_nextgen.network.latest.HubRouteTable("hubRouteTable",
     labels=[
         "label1",
         "label2",
@@ -101,7 +101,7 @@ hub_route_table = azure_nextgen.network.HubRouteTable("hubRouteTable",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hubRouteTable = new azure_nextgen.network.HubRouteTable("hubRouteTable", {
+const hubRouteTable = new azure_nextgen.network.latest.HubRouteTable("hubRouteTable", {
     labels: [
         "label1",
         "label2",

@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var volumeContainer = new AzureNextGen.Storsimple.VolumeContainer("volumeContainer", new AzureNextGen.Storsimple.VolumeContainerArgs
+        var volumeContainer = new AzureNextGen.StorSimple.Latest.VolumeContainer("volumeContainer", new AzureNextGen.StorSimple.Latest.VolumeContainerArgs
         {
             BandwidthSettingId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1",
             DeviceName = "Device05ForSDKTest",
-            EncryptionKey = new AzureNextGen.Storsimple.Inputs.AsymmetricEncryptedSecretArgs
+            EncryptionKey = new AzureNextGen.StorSimple.Latest.Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
                 EncryptionCertThumbprint = "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-volume_container = azure_nextgen.storsimple.VolumeContainer("volumeContainer",
+volume_container = azure_nextgen.storsimple.latest.VolumeContainer("volumeContainer",
     bandwidth_setting_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1",
     device_name="Device05ForSDKTest",
     encryption_key={
@@ -82,7 +82,7 @@ volume_container = azure_nextgen.storsimple.VolumeContainer("volumeContainer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const volumeContainer = new azure_nextgen.storsimple.VolumeContainer("volumeContainer", {
+const volumeContainer = new azure_nextgen.storsimple.latest.VolumeContainer("volumeContainer", {
     bandwidthSettingId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1",
     deviceName: "Device05ForSDKTest",
     encryptionKey: {

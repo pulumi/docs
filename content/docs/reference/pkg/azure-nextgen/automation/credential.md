@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var credential = new AzureNextGen.Automation.Credential("credential", new AzureNextGen.Automation.CredentialArgs
+        var credential = new AzureNextGen.Automation.Latest.Credential("credential", new AzureNextGen.Automation.Latest.CredentialArgs
         {
             AutomationAccountName = "myAutomationAccount18",
             CredentialName = "myCredential",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-credential = azure_nextgen.automation.Credential("credential",
+credential = azure_nextgen.automation.latest.Credential("credential",
     automation_account_name="myAutomationAccount18",
     credential_name="myCredential",
     description="my description goes here",
@@ -73,7 +73,7 @@ credential = azure_nextgen.automation.Credential("credential",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const credential = new azure_nextgen.automation.Credential("credential", {
+const credential = new azure_nextgen.automation.latest.Credential("credential", {
     automationAccountName: "myAutomationAccount18",
     credentialName: "myCredential",
     description: "my description goes here",

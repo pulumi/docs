@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationServiceEnvironment = new AzureNextGen.Logic.IntegrationServiceEnvironment("integrationServiceEnvironment", new AzureNextGen.Logic.IntegrationServiceEnvironmentArgs
+        var integrationServiceEnvironment = new AzureNextGen.Logic.Latest.IntegrationServiceEnvironment("integrationServiceEnvironment", new AzureNextGen.Logic.Latest.IntegrationServiceEnvironmentArgs
         {
             IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
             Location = "brazilsouth",
             ResourceGroup = "testResourceGroup",
-            Sku = new AzureNextGen.Logic.Inputs.IntegrationServiceEnvironmentSkuArgs
+            Sku = new AzureNextGen.Logic.Latest.Inputs.IntegrationServiceEnvironmentSkuArgs
             {
                 Capacity = 2,
                 Name = "Premium",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_service_environment = azure_nextgen.logic.IntegrationServiceEnvironment("integrationServiceEnvironment",
+integration_service_environment = azure_nextgen.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment",
     integration_service_environment_name="testIntegrationServiceEnvironment",
     location="brazilsouth",
     resource_group="testResourceGroup",
@@ -74,7 +74,7 @@ integration_service_environment = azure_nextgen.logic.IntegrationServiceEnvironm
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationServiceEnvironment = new azure_nextgen.logic.IntegrationServiceEnvironment("integrationServiceEnvironment", {
+const integrationServiceEnvironment = new azure_nextgen.logic.latest.IntegrationServiceEnvironment("integrationServiceEnvironment", {
     integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
     location: "brazilsouth",
     resourceGroup: "testResourceGroup",

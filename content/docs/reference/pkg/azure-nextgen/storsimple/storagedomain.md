@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageDomain = new AzureNextGen.Storsimple.StorageDomain("storageDomain", new AzureNextGen.Storsimple.StorageDomainArgs
+        var storageDomain = new AzureNextGen.StorSimple.Latest.StorageDomain("storageDomain", new AzureNextGen.StorSimple.Latest.StorageDomainArgs
         {
             EncryptionStatus = "Disabled",
             ManagerName = "hAzureSDKOperations",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_domain = azure_nextgen.storsimple.StorageDomain("storageDomain",
+storage_domain = azure_nextgen.storsimple.latest.StorageDomain("storageDomain",
     encryption_status="Disabled",
     manager_name="hAzureSDKOperations",
     resource_group_name="ResourceGroupForSDKTest",
@@ -72,7 +72,7 @@ storage_domain = azure_nextgen.storsimple.StorageDomain("storageDomain",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const storageDomain = new azure_nextgen.storsimple.StorageDomain("storageDomain", {
+const storageDomain = new azure_nextgen.storsimple.latest.StorageDomain("storageDomain", {
     encryptionStatus: "Disabled",
     managerName: "hAzureSDKOperations",
     resourceGroupName: "ResourceGroupForSDKTest",

@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bastionHost = new AzureNextGen.Network.BastionHost("bastionHost", new AzureNextGen.Network.BastionHostArgs
+        var bastionHost = new AzureNextGen.Network.Latest.BastionHost("bastionHost", new AzureNextGen.Network.Latest.BastionHostArgs
         {
             BastionHostName = "bastionhosttenant'",
             IpConfigurations = 
             {
-                new AzureNextGen.Network.Inputs.BastionHostIPConfigurationArgs
+                new AzureNextGen.Network.Latest.Inputs.BastionHostIPConfigurationArgs
                 {
                     Name = "bastionHostIpConfiguration",
                 },
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bastion_host = azure_nextgen.network.BastionHost("bastionHost",
+bastion_host = azure_nextgen.network.latest.BastionHost("bastionHost",
     bastion_host_name="bastionhosttenant'",
     ip_configurations=[{
         "name": "bastionHostIpConfiguration",
@@ -73,7 +73,7 @@ bastion_host = azure_nextgen.network.BastionHost("bastionHost",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const bastionHost = new azure_nextgen.network.BastionHost("bastionHost", {
+const bastionHost = new azure_nextgen.network.latest.BastionHost("bastionHost", {
     bastionHostName: "bastionhosttenant'",
     ipConfigurations: [{
         name: "bastionHostIpConfiguration",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateAtlase = new AzureNextGen.Maps.PrivateAtlase("privateAtlase", new AzureNextGen.Maps.PrivateAtlaseArgs
+        var privateAtlase = new AzureNextGen.Maps.V20200201Preview.PrivateAtlase("privateAtlase", new AzureNextGen.Maps.V20200201Preview.PrivateAtlaseArgs
         {
             AccountName = "myMapsAccount",
             Location = "unitedstates",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_atlase = azure_nextgen.maps.PrivateAtlase("privateAtlase",
+private_atlase = azure_nextgen.maps.v20200201preview.PrivateAtlase("privateAtlase",
     account_name="myMapsAccount",
     location="unitedstates",
     private_atlas_name="myPrivateAtlas",
@@ -74,7 +74,7 @@ private_atlase = azure_nextgen.maps.PrivateAtlase("privateAtlase",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateAtlase = new azure_nextgen.maps.PrivateAtlase("privateAtlase", {
+const privateAtlase = new azure_nextgen.maps.v20200201preview.PrivateAtlase("privateAtlase", {
     accountName: "myMapsAccount",
     location: "unitedstates",
     privateAtlasName: "myPrivateAtlas",

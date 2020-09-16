@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Insights.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Insights.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Insights.V20191017Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Insights.V20191017Preview.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "private-endpoint-connection-name",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Insights.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Insights.V20191017Preview.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
             {
                 Description = "Approved by johndoe@contoso.com",
                 Status = "Approved",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.insights.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.insights.v20191017preview.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="private-endpoint-connection-name",
     private_link_service_connection_state={
         "description": "Approved by johndoe@contoso.com",
@@ -74,7 +74,7 @@ private_endpoint_connection = azure_nextgen.insights.PrivateEndpointConnection("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.insights.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.insights.v20191017preview.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "private-endpoint-connection-name",
     privateLinkServiceConnectionState: {
         description: "Approved by johndoe@contoso.com",

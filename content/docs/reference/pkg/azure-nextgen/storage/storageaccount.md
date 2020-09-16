@@ -26,22 +26,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccount = new AzureNextGen.Storage.StorageAccount("storageAccount", new AzureNextGen.Storage.StorageAccountArgs
+        var storageAccount = new AzureNextGen.Storage.Latest.StorageAccount("storageAccount", new AzureNextGen.Storage.Latest.StorageAccountArgs
         {
             AccountName = "sto4445",
             AllowBlobPublicAccess = false,
-            Encryption = new AzureNextGen.Storage.Inputs.EncryptionArgs
+            Encryption = new AzureNextGen.Storage.Latest.Inputs.EncryptionArgs
             {
                 KeySource = "Microsoft.Storage",
                 RequireInfrastructureEncryption = false,
-                Services = new AzureNextGen.Storage.Inputs.EncryptionServicesArgs
+                Services = new AzureNextGen.Storage.Latest.Inputs.EncryptionServicesArgs
                 {
-                    Blob = new AzureNextGen.Storage.Inputs.EncryptionServiceArgs
+                    Blob = new AzureNextGen.Storage.Latest.Inputs.EncryptionServiceArgs
                     {
                         Enabled = true,
                         KeyType = "Account",
                     },
-                    File = new AzureNextGen.Storage.Inputs.EncryptionServiceArgs
+                    File = new AzureNextGen.Storage.Latest.Inputs.EncryptionServiceArgs
                     {
                         Enabled = true,
                         KeyType = "Account",
@@ -53,13 +53,13 @@ class MyStack : Stack
             Location = "eastus",
             MinimumTlsVersion = "TLS1_2",
             ResourceGroupName = "res9101",
-            RoutingPreference = new AzureNextGen.Storage.Inputs.RoutingPreferenceArgs
+            RoutingPreference = new AzureNextGen.Storage.Latest.Inputs.RoutingPreferenceArgs
             {
                 PublishInternetEndpoints = true,
                 PublishMicrosoftEndpoints = true,
                 RoutingChoice = "MicrosoftRouting",
             },
-            Sku = new AzureNextGen.Storage.Inputs.SkuArgs
+            Sku = new AzureNextGen.Storage.Latest.Inputs.SkuArgs
             {
                 Name = "Standard_GRS",
             },
@@ -87,7 +87,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account = azure_nextgen.storage.StorageAccount("storageAccount",
+storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
     account_name="sto4445",
     allow_blob_public_access=False,
     encryption={
@@ -132,7 +132,7 @@ storage_account = azure_nextgen.storage.StorageAccount("storageAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const storageAccount = new azure_nextgen.storage.StorageAccount("storageAccount", {
+const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageAccount", {
     accountName: "sto4445",
     allowBlobPublicAccess: false,
     encryption: {

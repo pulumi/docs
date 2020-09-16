@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationProfile = new AzureNextGen.Changeanalysis.ConfigurationProfile("configurationProfile", new AzureNextGen.Changeanalysis.ConfigurationProfileArgs
+        var configurationProfile = new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfile("configurationProfile", new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfileArgs
         {
             ProfileName = "default",
         });
@@ -48,7 +48,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_profile = azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", profile_name="default")
+configuration_profile = azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", profile_name="default")
 
 ```
 
@@ -60,7 +60,7 @@ configuration_profile = azure_nextgen.changeanalysis.ConfigurationProfile("confi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const configurationProfile = new azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", {profileName: "default"});
+const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", {profileName: "default"});
 
 ```
 
@@ -76,7 +76,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationProfile = new AzureNextGen.Changeanalysis.ConfigurationProfile("configurationProfile", new AzureNextGen.Changeanalysis.ConfigurationProfileArgs
+        var configurationProfile = new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfile("configurationProfile", new AzureNextGen.ChangeAnalysis.V20200401Preview.ConfigurationProfileArgs
         {
             ProfileName = "default",
         });
@@ -98,7 +98,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_profile = azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", profile_name="default")
+configuration_profile = azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", profile_name="default")
 
 ```
 
@@ -110,7 +110,7 @@ configuration_profile = azure_nextgen.changeanalysis.ConfigurationProfile("confi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const configurationProfile = new azure_nextgen.changeanalysis.ConfigurationProfile("configurationProfile", {profileName: "default"});
+const configurationProfile = new azure_nextgen.changeanalysis.v20200401preview.ConfigurationProfile("configurationProfile", {profileName: "default"});
 
 ```
 

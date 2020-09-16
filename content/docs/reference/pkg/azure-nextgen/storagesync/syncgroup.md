@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncGroup = new AzureNextGen.Storagesync.SyncGroup("syncGroup", new AzureNextGen.Storagesync.SyncGroupArgs
+        var syncGroup = new AzureNextGen.StorageSync.Latest.SyncGroup("syncGroup", new AzureNextGen.StorageSync.Latest.SyncGroupArgs
         {
             ResourceGroupName = "SampleResourceGroup_1",
             StorageSyncServiceName = "SampleStorageSyncService_1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_group = azure_nextgen.storagesync.SyncGroup("syncGroup",
+sync_group = azure_nextgen.storagesync.latest.SyncGroup("syncGroup",
     resource_group_name="SampleResourceGroup_1",
     storage_sync_service_name="SampleStorageSyncService_1",
     sync_group_name="SampleSyncGroup_1")
@@ -65,7 +65,7 @@ sync_group = azure_nextgen.storagesync.SyncGroup("syncGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const syncGroup = new azure_nextgen.storagesync.SyncGroup("syncGroup", {
+const syncGroup = new azure_nextgen.storagesync.latest.SyncGroup("syncGroup", {
     resourceGroupName: "SampleResourceGroup_1",
     storageSyncServiceName: "SampleStorageSyncService_1",
     syncGroupName: "SampleSyncGroup_1",

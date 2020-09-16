@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementAssociation = new AzureNextGen.Operationsmanagement.ManagementAssociation("managementAssociation", new AzureNextGen.Operationsmanagement.ManagementAssociationArgs
+        var managementAssociation = new AzureNextGen.OperationsManagement.V20151101Preview.ManagementAssociation("managementAssociation", new AzureNextGen.OperationsManagement.V20151101Preview.ManagementAssociationArgs
         {
             Location = "East US",
             ManagementAssociationName = "managementAssociation1",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_association = azure_nextgen.operationsmanagement.ManagementAssociation("managementAssociation",
+management_association = azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation",
     location="East US",
     management_association_name="managementAssociation1",
     provider_name="providerName",
@@ -71,7 +71,7 @@ management_association = azure_nextgen.operationsmanagement.ManagementAssociatio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managementAssociation = new azure_nextgen.operationsmanagement.ManagementAssociation("managementAssociation", {
+const managementAssociation = new azure_nextgen.operationsmanagement.v20151101preview.ManagementAssociation("managementAssociation", {
     location: "East US",
     managementAssociationName: "managementAssociation1",
     providerName: "providerName",

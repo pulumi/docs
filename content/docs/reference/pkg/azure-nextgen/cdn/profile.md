@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Cdn.Profile("profile", new AzureNextGen.Cdn.ProfileArgs
+        var profile = new AzureNextGen.Cdn.Latest.Profile("profile", new AzureNextGen.Cdn.Latest.ProfileArgs
         {
             Location = "WestCentralUs",
             ProfileName = "profile1",
             ResourceGroupName = "RG",
-            Sku = new AzureNextGen.Cdn.Inputs.SkuArgs
+            Sku = new AzureNextGen.Cdn.Latest.Inputs.SkuArgs
             {
                 Name = "Standard_Verizon",
             },
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.cdn.Profile("profile",
+profile = azure_nextgen.cdn.latest.Profile("profile",
     location="WestCentralUs",
     profile_name="profile1",
     resource_group_name="RG",
@@ -72,7 +72,7 @@ profile = azure_nextgen.cdn.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const profile = new azure_nextgen.cdn.Profile("profile", {
+const profile = new azure_nextgen.cdn.latest.Profile("profile", {
     location: "WestCentralUs",
     profileName: "profile1",
     resourceGroupName: "RG",

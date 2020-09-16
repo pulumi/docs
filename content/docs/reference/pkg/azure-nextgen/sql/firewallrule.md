@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.Sql.FirewallRule("firewallRule", new AzureNextGen.Sql.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.Sql.Latest.FirewallRule("firewallRule", new AzureNextGen.Sql.Latest.FirewallRuleArgs
         {
             EndIpAddress = "0.0.0.3",
             FirewallRuleName = "firewallrulecrudtest-5370",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.sql.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.sql.latest.FirewallRule("firewallRule",
     end_ip_address="0.0.0.3",
     firewall_rule_name="firewallrulecrudtest-5370",
     resource_group_name="firewallrulecrudtest-12",
@@ -69,7 +69,7 @@ firewall_rule = azure_nextgen.sql.FirewallRule("firewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const firewallRule = new azure_nextgen.sql.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.sql.latest.FirewallRule("firewallRule", {
     endIpAddress: "0.0.0.3",
     firewallRuleName: "firewallrulecrudtest-5370",
     resourceGroupName: "firewallrulecrudtest-12",
@@ -91,7 +91,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.Sql.FirewallRule("firewallRule", new AzureNextGen.Sql.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.Sql.Latest.FirewallRule("firewallRule", new AzureNextGen.Sql.Latest.FirewallRuleArgs
         {
             EndIpAddress = "0.0.0.1",
             FirewallRuleName = "firewallrulecrudtest-3927",
@@ -117,7 +117,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.sql.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.sql.latest.FirewallRule("firewallRule",
     end_ip_address="0.0.0.1",
     firewall_rule_name="firewallrulecrudtest-3927",
     resource_group_name="firewallrulecrudtest-12",
@@ -134,7 +134,7 @@ firewall_rule = azure_nextgen.sql.FirewallRule("firewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const firewallRule = new azure_nextgen.sql.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.sql.latest.FirewallRule("firewallRule", {
     endIpAddress: "0.0.0.1",
     firewallRuleName: "firewallrulecrudtest-3927",
     resourceGroupName: "firewallrulecrudtest-12",

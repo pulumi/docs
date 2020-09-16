@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Relay.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Relay.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.Relay.V20180101Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Relay.V20180101Preview.PrivateEndpointConnectionArgs
         {
             Location = "South Central US",
             NamespaceName = "sdk-Namespace-5849",
-            PrivateEndpoint = new AzureNextGen.Relay.Inputs.PrivateEndpointArgs
+            PrivateEndpoint = new AzureNextGen.Relay.V20180101Preview.Inputs.PrivateEndpointArgs
             {
                 Id = "/subscriptions/{subid}/resourceGroups/prod-by3-533-rg/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
             },
             PrivateEndpointConnectionName = "{privateEndpointConnection name}",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Relay.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Relay.V20180101Preview.Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "You may pass",
                 Status = "Approved",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.relay.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.relay.v20180101preview.PrivateEndpointConnection("privateEndpointConnection",
     location="South Central US",
     namespace_name="sdk-Namespace-5849",
     private_endpoint={
@@ -83,7 +83,7 @@ private_endpoint_connection = azure_nextgen.relay.PrivateEndpointConnection("pri
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.relay.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.relay.v20180101preview.PrivateEndpointConnection("privateEndpointConnection", {
     location: "South Central US",
     namespaceName: "sdk-Namespace-5849",
     privateEndpoint: {

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vendorSkuPreview = new AzureNextGen.Hybridnetwork.VendorSkuPreview("vendorSkuPreview", new AzureNextGen.Hybridnetwork.VendorSkuPreviewArgs
+        var vendorSkuPreview = new AzureNextGen.HybridNetwork.V20200101Preview.VendorSkuPreview("vendorSkuPreview", new AzureNextGen.HybridNetwork.V20200101Preview.VendorSkuPreviewArgs
         {
             PreviewSubscription = "previewSub",
             SkuName = "TestSku",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vendor_sku_preview = azure_nextgen.hybridnetwork.VendorSkuPreview("vendorSkuPreview",
+vendor_sku_preview = azure_nextgen.hybridnetwork.v20200101preview.VendorSkuPreview("vendorSkuPreview",
     preview_subscription="previewSub",
     sku_name="TestSku",
     vendor_name="TestVendor")
@@ -65,7 +65,7 @@ vendor_sku_preview = azure_nextgen.hybridnetwork.VendorSkuPreview("vendorSkuPrev
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vendorSkuPreview = new azure_nextgen.hybridnetwork.VendorSkuPreview("vendorSkuPreview", {
+const vendorSkuPreview = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkuPreview("vendorSkuPreview", {
     previewSubscription: "previewSub",
     skuName: "TestSku",
     vendorName: "TestVendor",

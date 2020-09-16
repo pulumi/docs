@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var extension = new AzureNextGen.Visualstudio.Extension("extension", new AzureNextGen.Visualstudio.ExtensionArgs
+        var extension = new AzureNextGen.Visualstudio.V20171101Preview.Extension("extension", new AzureNextGen.Visualstudio.V20171101Preview.ExtensionArgs
         {
             AccountResourceName = "ExampleAccount",
             ExtensionResourceName = "ms.example",
             Location = "Central US",
-            Plan = new AzureNextGen.Visualstudio.Inputs.ExtensionResourcePlanArgs
+            Plan = new AzureNextGen.Visualstudio.V20171101Preview.Inputs.ExtensionResourcePlanArgs
             {
                 Name = "ExamplePlan",
                 Product = "ExampleExtensionName",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-extension = azure_nextgen.visualstudio.Extension("extension",
+extension = azure_nextgen.visualstudio.v20171101preview.Extension("extension",
     account_resource_name="ExampleAccount",
     extension_resource_name="ms.example",
     location="Central US",
@@ -84,7 +84,7 @@ extension = azure_nextgen.visualstudio.Extension("extension",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const extension = new azure_nextgen.visualstudio.Extension("extension", {
+const extension = new azure_nextgen.visualstudio.v20171101preview.Extension("extension", {
     accountResourceName: "ExampleAccount",
     extensionResourceName: "ms.example",
     location: "Central US",

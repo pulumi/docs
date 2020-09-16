@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.Containerservice.ManagedCluster("managedCluster", new AzureNextGen.Containerservice.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ContainerService.Latest.ManagedCluster("managedCluster", new AzureNextGen.ContainerService.Latest.ManagedClusterArgs
         {
             AddonProfiles = ,
             AgentPoolProfiles = 
             {
-                new AzureNextGen.Containerservice.Inputs.ManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
                 {
                     Count = 3,
                     EnableNodePublicIP = true,
@@ -43,7 +43,7 @@ class MyStack : Stack
                     VmSize = "Standard_DS2_v2",
                 },
             },
-            AutoScalerProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
             {
                 ScaleDownDelayAfterAdd = "15m",
                 ScanInterval = "20s",
@@ -53,14 +53,14 @@ class MyStack : Stack
             EnablePodSecurityPolicy = true,
             EnableRBAC = true,
             KubernetesVersion = "",
-            LinuxProfile = new AzureNextGen.Containerservice.Inputs.ContainerServiceLinuxProfileArgs
+            LinuxProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
             {
                 AdminUsername = "azureuser",
-                Ssh = new AzureNextGen.Containerservice.Inputs.ContainerServiceSshConfigurationArgs
+                Ssh = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
                 {
                     PublicKeys = 
                     {
-                        new AzureNextGen.Containerservice.Inputs.ContainerServiceSshPublicKeyArgs
+                        new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
                         {
                             KeyData = "keydata",
                         },
@@ -68,11 +68,11 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            NetworkProfile = new AzureNextGen.Containerservice.Inputs.ContainerServiceNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
             {
-                LoadBalancerProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterLoadBalancerProfileArgs
+                LoadBalancerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
                 {
-                    ManagedOutboundIPs = new AzureNextGen.Containerservice.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    ManagedOutboundIPs = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
                     {
                         Count = 2,
                     },
@@ -82,12 +82,12 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ResourceName = "clustername1",
-            ServicePrincipalProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
             {
                 ClientId = "clientid",
                 Secret = "secret",
             },
-            Sku = new AzureNextGen.Containerservice.Inputs.ManagedClusterSKUArgs
+            Sku = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
             {
                 Name = "Basic",
                 Tier = "Free",
@@ -97,7 +97,7 @@ class MyStack : Stack
                 { "archv2", "" },
                 { "tier", "production" },
             },
-            WindowsProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterWindowsProfileArgs
+            WindowsProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
             {
                 AdminPassword = "replacePassword1234$",
                 AdminUsername = "azureuser",
@@ -121,7 +121,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
     addon_profiles={},
     agent_pool_profiles=[{
         "count": 3,
@@ -189,7 +189,7 @@ managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedCluster = new azure_nextgen.containerservice.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
     addonProfiles: {},
     agentPoolProfiles: [{
         count: 3,
@@ -262,9 +262,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.Containerservice.ManagedCluster("managedCluster", new AzureNextGen.Containerservice.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ContainerService.Latest.ManagedCluster("managedCluster", new AzureNextGen.ContainerService.Latest.ManagedClusterArgs
         {
-            AadProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterAADProfileArgs
+            AadProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAADProfileArgs
             {
                 EnableAzureRBAC = true,
                 Managed = true,
@@ -272,7 +272,7 @@ class MyStack : Stack
             AddonProfiles = ,
             AgentPoolProfiles = 
             {
-                new AzureNextGen.Containerservice.Inputs.ManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
                 {
                     AvailabilityZones = 
                     {
@@ -289,7 +289,7 @@ class MyStack : Stack
                     VmSize = "Standard_DS1_v2",
                 },
             },
-            AutoScalerProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
             {
                 ScaleDownDelayAfterAdd = "15m",
                 ScanInterval = "20s",
@@ -299,14 +299,14 @@ class MyStack : Stack
             EnablePodSecurityPolicy = true,
             EnableRBAC = true,
             KubernetesVersion = "",
-            LinuxProfile = new AzureNextGen.Containerservice.Inputs.ContainerServiceLinuxProfileArgs
+            LinuxProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
             {
                 AdminUsername = "azureuser",
-                Ssh = new AzureNextGen.Containerservice.Inputs.ContainerServiceSshConfigurationArgs
+                Ssh = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
                 {
                     PublicKeys = 
                     {
-                        new AzureNextGen.Containerservice.Inputs.ContainerServiceSshPublicKeyArgs
+                        new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
                         {
                             KeyData = "keydata",
                         },
@@ -314,11 +314,11 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            NetworkProfile = new AzureNextGen.Containerservice.Inputs.ContainerServiceNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
             {
-                LoadBalancerProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterLoadBalancerProfileArgs
+                LoadBalancerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
                 {
-                    ManagedOutboundIPs = new AzureNextGen.Containerservice.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    ManagedOutboundIPs = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
                     {
                         Count = 2,
                     },
@@ -328,12 +328,12 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ResourceName = "clustername1",
-            ServicePrincipalProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
             {
                 ClientId = "clientid",
                 Secret = "secret",
             },
-            Sku = new AzureNextGen.Containerservice.Inputs.ManagedClusterSKUArgs
+            Sku = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
             {
                 Name = "Basic",
                 Tier = "Free",
@@ -343,7 +343,7 @@ class MyStack : Stack
                 { "archv2", "" },
                 { "tier", "production" },
             },
-            WindowsProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterWindowsProfileArgs
+            WindowsProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
             {
                 AdminPassword = "replacePassword1234$",
                 AdminUsername = "azureuser",
@@ -367,7 +367,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
     aad_profile={
         "enableAzureRBAC": True,
         "managed": True,
@@ -443,7 +443,7 @@ managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedCluster = new azure_nextgen.containerservice.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
     aadProfile: {
         enableAzureRBAC: true,
         managed: true,
@@ -524,12 +524,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.Containerservice.ManagedCluster("managedCluster", new AzureNextGen.Containerservice.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ContainerService.Latest.ManagedCluster("managedCluster", new AzureNextGen.ContainerService.Latest.ManagedClusterArgs
         {
             AddonProfiles = ,
             AgentPoolProfiles = 
             {
-                new AzureNextGen.Containerservice.Inputs.ManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
                 {
                     AvailabilityZones = 
                     {
@@ -546,7 +546,7 @@ class MyStack : Stack
                     VmSize = "Standard_DS1_v2",
                 },
             },
-            AutoScalerProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
             {
                 BalanceSimilarNodeGroups = "true",
                 Expander = "most-pods",
@@ -559,19 +559,19 @@ class MyStack : Stack
             DnsPrefix = "dnsprefix1",
             EnablePodSecurityPolicy = true,
             EnableRBAC = true,
-            Identity = new AzureNextGen.Containerservice.Inputs.ManagedClusterIdentityArgs
+            Identity = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterIdentityArgs
             {
                 Type = "UserAssigned",
             },
             KubernetesVersion = "",
-            LinuxProfile = new AzureNextGen.Containerservice.Inputs.ContainerServiceLinuxProfileArgs
+            LinuxProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
             {
                 AdminUsername = "azureuser",
-                Ssh = new AzureNextGen.Containerservice.Inputs.ContainerServiceSshConfigurationArgs
+                Ssh = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
                 {
                     PublicKeys = 
                     {
-                        new AzureNextGen.Containerservice.Inputs.ContainerServiceSshPublicKeyArgs
+                        new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
                         {
                             KeyData = "keydata",
                         },
@@ -579,11 +579,11 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            NetworkProfile = new AzureNextGen.Containerservice.Inputs.ContainerServiceNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
             {
-                LoadBalancerProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterLoadBalancerProfileArgs
+                LoadBalancerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
                 {
-                    ManagedOutboundIPs = new AzureNextGen.Containerservice.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    ManagedOutboundIPs = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
                     {
                         Count = 2,
                     },
@@ -593,12 +593,12 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ResourceName = "clustername1",
-            ServicePrincipalProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
             {
                 ClientId = "clientid",
                 Secret = "secret",
             },
-            Sku = new AzureNextGen.Containerservice.Inputs.ManagedClusterSKUArgs
+            Sku = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
             {
                 Name = "Basic",
                 Tier = "Free",
@@ -608,7 +608,7 @@ class MyStack : Stack
                 { "archv2", "" },
                 { "tier", "production" },
             },
-            WindowsProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterWindowsProfileArgs
+            WindowsProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
             {
                 AdminPassword = "replacePassword1234$",
                 AdminUsername = "azureuser",
@@ -632,7 +632,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
     addon_profiles={},
     agent_pool_profiles=[{
         "availabilityZones": [
@@ -711,7 +711,7 @@ managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedCluster = new azure_nextgen.containerservice.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
     addonProfiles: {},
     agentPoolProfiles: [{
         availabilityZones: [
@@ -795,12 +795,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedCluster = new AzureNextGen.Containerservice.ManagedCluster("managedCluster", new AzureNextGen.Containerservice.ManagedClusterArgs
+        var managedCluster = new AzureNextGen.ContainerService.Latest.ManagedCluster("managedCluster", new AzureNextGen.ContainerService.Latest.ManagedClusterArgs
         {
             AddonProfiles = ,
             AgentPoolProfiles = 
             {
-                new AzureNextGen.Containerservice.Inputs.ManagedClusterAgentPoolProfileArgs
+                new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
                 {
                     AvailabilityZones = 
                     {
@@ -817,7 +817,7 @@ class MyStack : Stack
                     VmSize = "Standard_DS1_v2",
                 },
             },
-            AutoScalerProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
             {
                 ScaleDownDelayAfterAdd = "15m",
                 ScanInterval = "20s",
@@ -826,19 +826,19 @@ class MyStack : Stack
             DnsPrefix = "dnsprefix1",
             EnablePodSecurityPolicy = true,
             EnableRBAC = true,
-            Identity = new AzureNextGen.Containerservice.Inputs.ManagedClusterIdentityArgs
+            Identity = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterIdentityArgs
             {
                 Type = "UserAssigned",
             },
             KubernetesVersion = "",
-            LinuxProfile = new AzureNextGen.Containerservice.Inputs.ContainerServiceLinuxProfileArgs
+            LinuxProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
             {
                 AdminUsername = "azureuser",
-                Ssh = new AzureNextGen.Containerservice.Inputs.ContainerServiceSshConfigurationArgs
+                Ssh = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
                 {
                     PublicKeys = 
                     {
-                        new AzureNextGen.Containerservice.Inputs.ContainerServiceSshPublicKeyArgs
+                        new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
                         {
                             KeyData = "keydata",
                         },
@@ -846,11 +846,11 @@ class MyStack : Stack
                 },
             },
             Location = "location1",
-            NetworkProfile = new AzureNextGen.Containerservice.Inputs.ContainerServiceNetworkProfileArgs
+            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
             {
-                LoadBalancerProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterLoadBalancerProfileArgs
+                LoadBalancerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
                 {
-                    ManagedOutboundIPs = new AzureNextGen.Containerservice.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    ManagedOutboundIPs = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
                     {
                         Count = 2,
                     },
@@ -860,12 +860,12 @@ class MyStack : Stack
             },
             ResourceGroupName = "rg1",
             ResourceName = "clustername1",
-            ServicePrincipalProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterServicePrincipalProfileArgs
+            ServicePrincipalProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
             {
                 ClientId = "clientid",
                 Secret = "secret",
             },
-            Sku = new AzureNextGen.Containerservice.Inputs.ManagedClusterSKUArgs
+            Sku = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
             {
                 Name = "Basic",
                 Tier = "Free",
@@ -875,7 +875,7 @@ class MyStack : Stack
                 { "archv2", "" },
                 { "tier", "production" },
             },
-            WindowsProfile = new AzureNextGen.Containerservice.Inputs.ManagedClusterWindowsProfileArgs
+            WindowsProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
             {
                 AdminPassword = "replacePassword1234$",
                 AdminUsername = "azureuser",
@@ -900,7 +900,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster",
+managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
     addon_profiles={},
     agent_pool_profiles=[{
         "availabilityZones": [
@@ -976,7 +976,7 @@ managed_cluster = azure_nextgen.containerservice.ManagedCluster("managedCluster"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedCluster = new azure_nextgen.containerservice.ManagedCluster("managedCluster", {
+const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
     addonProfiles: {},
     agentPoolProfiles: [{
         availabilityZones: [

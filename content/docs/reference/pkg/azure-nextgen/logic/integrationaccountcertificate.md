@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountCertificate = new AzureNextGen.Logic.IntegrationAccountCertificate("integrationAccountCertificate", new AzureNextGen.Logic.IntegrationAccountCertificateArgs
+        var integrationAccountCertificate = new AzureNextGen.Logic.Latest.IntegrationAccountCertificate("integrationAccountCertificate", new AzureNextGen.Logic.Latest.IntegrationAccountCertificateArgs
         {
             CertificateName = "testCertificate",
             IntegrationAccountName = "testIntegrationAccount",
-            Key = new AzureNextGen.Logic.Inputs.KeyVaultKeyReferenceArgs
+            Key = new AzureNextGen.Logic.Latest.Inputs.KeyVaultKeyReferenceArgs
             {
                 KeyName = "<keyName>",
-                KeyVault = new AzureNextGen.Logic.Inputs.KeyVaultKeyReferenceKeyVaultArgs
+                KeyVault = new AzureNextGen.Logic.Latest.Inputs.KeyVaultKeyReferenceKeyVaultArgs
                 {
                     Id = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>",
                 },
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_certificate = azure_nextgen.logic.IntegrationAccountCertificate("integrationAccountCertificate",
+integration_account_certificate = azure_nextgen.logic.latest.IntegrationAccountCertificate("integrationAccountCertificate",
     certificate_name="testCertificate",
     integration_account_name="testIntegrationAccount",
     key={
@@ -85,7 +85,7 @@ integration_account_certificate = azure_nextgen.logic.IntegrationAccountCertific
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationAccountCertificate = new azure_nextgen.logic.IntegrationAccountCertificate("integrationAccountCertificate", {
+const integrationAccountCertificate = new azure_nextgen.logic.latest.IntegrationAccountCertificate("integrationAccountCertificate", {
     certificateName: "testCertificate",
     integrationAccountName: "testIntegrationAccount",
     key: {

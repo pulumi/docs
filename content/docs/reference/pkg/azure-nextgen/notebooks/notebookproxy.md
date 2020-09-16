@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notebookProxy = new AzureNextGen.Notebooks.NotebookProxy("notebookProxy", new AzureNextGen.Notebooks.NotebookProxyArgs
+        var notebookProxy = new AzureNextGen.Notebooks.V20191011Preview.NotebookProxy("notebookProxy", new AzureNextGen.Notebooks.V20191011Preview.NotebookProxyArgs
         {
             Hostname = "Azure Notebooks",
             ResourceGroupName = "testRP",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notebook_proxy = azure_nextgen.notebooks.NotebookProxy("notebookProxy",
+notebook_proxy = azure_nextgen.notebooks.v20191011preview.NotebookProxy("notebookProxy",
     hostname="Azure Notebooks",
     resource_group_name="testRP",
     resource_name="testResource")
@@ -65,7 +65,7 @@ notebook_proxy = azure_nextgen.notebooks.NotebookProxy("notebookProxy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const notebookProxy = new azure_nextgen.notebooks.NotebookProxy("notebookProxy", {
+const notebookProxy = new azure_nextgen.notebooks.v20191011preview.NotebookProxy("notebookProxy", {
     hostname: "Azure Notebooks",
     resourceGroupName: "testRP",
     resourceName: "testResource",

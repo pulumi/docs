@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var automationAccount = new AzureNextGen.Automation.AutomationAccount("automationAccount", new AzureNextGen.Automation.AutomationAccountArgs
+        var automationAccount = new AzureNextGen.Automation.Latest.AutomationAccount("automationAccount", new AzureNextGen.Automation.Latest.AutomationAccountArgs
         {
             AutomationAccountName = "myAutomationAccount9",
             Location = "East US 2",
             Name = "myAutomationAccount9",
             ResourceGroupName = "rg",
-            Sku = new AzureNextGen.Automation.Inputs.SkuArgs
+            Sku = new AzureNextGen.Automation.Latest.Inputs.SkuArgs
             {
                 Name = "Free",
             },
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-automation_account = azure_nextgen.automation.AutomationAccount("automationAccount",
+automation_account = azure_nextgen.automation.latest.AutomationAccount("automationAccount",
     automation_account_name="myAutomationAccount9",
     location="East US 2",
     name="myAutomationAccount9",
@@ -74,7 +74,7 @@ automation_account = azure_nextgen.automation.AutomationAccount("automationAccou
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const automationAccount = new azure_nextgen.automation.AutomationAccount("automationAccount", {
+const automationAccount = new azure_nextgen.automation.latest.AutomationAccount("automationAccount", {
     automationAccountName: "myAutomationAccount9",
     location: "East US 2",
     name: "myAutomationAccount9",

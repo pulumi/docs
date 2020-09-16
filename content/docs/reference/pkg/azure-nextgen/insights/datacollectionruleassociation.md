@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataCollectionRuleAssociation = new AzureNextGen.Insights.DataCollectionRuleAssociation("dataCollectionRuleAssociation", new AzureNextGen.Insights.DataCollectionRuleAssociationArgs
+        var dataCollectionRuleAssociation = new AzureNextGen.Insights.V20191101Preview.DataCollectionRuleAssociation("dataCollectionRuleAssociation", new AzureNextGen.Insights.V20191101Preview.DataCollectionRuleAssociationArgs
         {
             AssociationName = "myAssociation",
             DataCollectionRuleId = "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_collection_rule_association = azure_nextgen.insights.DataCollectionRuleAssociation("dataCollectionRuleAssociation",
+data_collection_rule_association = azure_nextgen.insights.v20191101preview.DataCollectionRuleAssociation("dataCollectionRuleAssociation",
     association_name="myAssociation",
     data_collection_rule_id="/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule",
     resource_uri="subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVm")
@@ -65,7 +65,7 @@ data_collection_rule_association = azure_nextgen.insights.DataCollectionRuleAsso
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataCollectionRuleAssociation = new azure_nextgen.insights.DataCollectionRuleAssociation("dataCollectionRuleAssociation", {
+const dataCollectionRuleAssociation = new azure_nextgen.insights.v20191101preview.DataCollectionRuleAssociation("dataCollectionRuleAssociation", {
     associationName: "myAssociation",
     dataCollectionRuleId: "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule",
     resourceUri: "subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVm",

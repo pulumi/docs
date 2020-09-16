@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetwork = new AzureNextGen.Devtestlab.VirtualNetwork("virtualNetwork", new AzureNextGen.Devtestlab.VirtualNetworkArgs
+        var virtualNetwork = new AzureNextGen.DevTestLab.Latest.VirtualNetwork("virtualNetwork", new AzureNextGen.DevTestLab.Latest.VirtualNetworkArgs
         {
             LabName = "{devtestlab-name}",
             Location = "{azure-location}",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network = azure_nextgen.devtestlab.VirtualNetwork("virtualNetwork",
+virtual_network = azure_nextgen.devtestlab.latest.VirtualNetwork("virtualNetwork",
     lab_name="{devtestlab-name}",
     location="{azure-location}",
     name="{virtualnetwork-name}",
@@ -74,7 +74,7 @@ virtual_network = azure_nextgen.devtestlab.VirtualNetwork("virtualNetwork",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualNetwork = new azure_nextgen.devtestlab.VirtualNetwork("virtualNetwork", {
+const virtualNetwork = new azure_nextgen.devtestlab.latest.VirtualNetwork("virtualNetwork", {
     labName: "{devtestlab-name}",
     location: "{azure-location}",
     name: "{virtualnetwork-name}",

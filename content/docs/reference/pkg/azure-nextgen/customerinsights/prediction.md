@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var prediction = new AzureNextGen.Customerinsights.Prediction("prediction", new AzureNextGen.Customerinsights.PredictionArgs
+        var prediction = new AzureNextGen.CustomerInsights.Latest.Prediction("prediction", new AzureNextGen.CustomerInsights.Latest.PredictionArgs
         {
             AutoAnalyze = true,
             Description = 
@@ -42,7 +42,7 @@ class MyStack : Stack
             InvolvedInteractionTypes = {},
             InvolvedKpiTypes = {},
             InvolvedRelationships = {},
-            Mappings = new AzureNextGen.Customerinsights.Inputs.PredictionMappingsArgs
+            Mappings = new AzureNextGen.CustomerInsights.Latest.Inputs.PredictionMappingsArgs
             {
                 Grade = "sdktest_Grade",
                 Reason = "sdktest_Reason",
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-prediction = azure_nextgen.customerinsights.Prediction("prediction",
+prediction = azure_nextgen.customerinsights.latest.Prediction("prediction",
     auto_analyze=True,
     description={
         "en-us": "sdktest",
@@ -110,7 +110,7 @@ prediction = azure_nextgen.customerinsights.Prediction("prediction",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const prediction = new azure_nextgen.customerinsights.Prediction("prediction", {
+const prediction = new azure_nextgen.customerinsights.latest.Prediction("prediction", {
     autoAnalyze: true,
     description: {
         "en-us": "sdktest",

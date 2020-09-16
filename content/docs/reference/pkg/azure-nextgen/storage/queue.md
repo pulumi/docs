@@ -25,7 +25,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queue = new AzureNextGen.Storage.Queue("queue", new AzureNextGen.Storage.QueueArgs
+        var queue = new AzureNextGen.Storage.Latest.Queue("queue", new AzureNextGen.Storage.Latest.QueueArgs
         {
             AccountName = "sto328",
             QueueName = "queue6185",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-queue = azure_nextgen.storage.Queue("queue",
+queue = azure_nextgen.storage.latest.Queue("queue",
     account_name="sto328",
     queue_name="queue6185",
     resource_group_name="res3376")
@@ -64,7 +64,7 @@ queue = azure_nextgen.storage.Queue("queue",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const queue = new azure_nextgen.storage.Queue("queue", {
+const queue = new azure_nextgen.storage.latest.Queue("queue", {
     accountName: "sto328",
     queueName: "queue6185",
     resourceGroupName: "res3376",
@@ -84,7 +84,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var queue = new AzureNextGen.Storage.Queue("queue", new AzureNextGen.Storage.QueueArgs
+        var queue = new AzureNextGen.Storage.Latest.Queue("queue", new AzureNextGen.Storage.Latest.QueueArgs
         {
             AccountName = "sto328",
             Metadata = 
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-queue = azure_nextgen.storage.Queue("queue",
+queue = azure_nextgen.storage.latest.Queue("queue",
     account_name="sto328",
     metadata={
         "sample1": "meta1",
@@ -132,7 +132,7 @@ queue = azure_nextgen.storage.Queue("queue",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const queue = new azure_nextgen.storage.Queue("queue", {
+const queue = new azure_nextgen.storage.latest.Queue("queue", {
     accountName: "sto328",
     metadata: {
         sample1: "meta1",

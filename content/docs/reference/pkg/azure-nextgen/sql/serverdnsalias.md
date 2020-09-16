@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverDnsAlias = new AzureNextGen.Sql.ServerDnsAlias("serverDnsAlias", new AzureNextGen.Sql.ServerDnsAliasArgs
+        var serverDnsAlias = new AzureNextGen.Sql.V20170301Preview.ServerDnsAlias("serverDnsAlias", new AzureNextGen.Sql.V20170301Preview.ServerDnsAliasArgs
         {
             DnsAliasName = "dns-alias-name-1",
             ResourceGroupName = "Default",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_dns_alias = azure_nextgen.sql.ServerDnsAlias("serverDnsAlias",
+server_dns_alias = azure_nextgen.sql.v20170301preview.ServerDnsAlias("serverDnsAlias",
     dns_alias_name="dns-alias-name-1",
     resource_group_name="Default",
     server_name="dns-alias-server")
@@ -65,7 +65,7 @@ server_dns_alias = azure_nextgen.sql.ServerDnsAlias("serverDnsAlias",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serverDnsAlias = new azure_nextgen.sql.ServerDnsAlias("serverDnsAlias", {
+const serverDnsAlias = new azure_nextgen.sql.v20170301preview.ServerDnsAlias("serverDnsAlias", {
     dnsAliasName: "dns-alias-name-1",
     resourceGroupName: "Default",
     serverName: "dns-alias-server",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlServerRegistration = new AzureNextGen.Azuredata.SqlServerRegistration("sqlServerRegistration", new AzureNextGen.Azuredata.SqlServerRegistrationArgs
+        var sqlServerRegistration = new AzureNextGen.AzureData.V20190724Preview.SqlServerRegistration("sqlServerRegistration", new AzureNextGen.AzureData.V20190724Preview.SqlServerRegistrationArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_server_registration = azure_nextgen.azuredata.SqlServerRegistration("sqlServerRegistration",
+sql_server_registration = azure_nextgen.azuredata.v20190724preview.SqlServerRegistration("sqlServerRegistration",
     location="northeurope",
     resource_group_name="testrg",
     sql_server_registration_name="testsqlregistration",
@@ -72,7 +72,7 @@ sql_server_registration = azure_nextgen.azuredata.SqlServerRegistration("sqlServ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlServerRegistration = new azure_nextgen.azuredata.SqlServerRegistration("sqlServerRegistration", {
+const sqlServerRegistration = new azure_nextgen.azuredata.v20190724preview.SqlServerRegistration("sqlServerRegistration", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlServerRegistrationName: "testsqlregistration",

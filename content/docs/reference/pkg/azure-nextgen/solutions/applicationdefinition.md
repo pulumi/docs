@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationDefinition = new AzureNextGen.Solutions.ApplicationDefinition("applicationDefinition", new AzureNextGen.Solutions.ApplicationDefinitionArgs
+        var applicationDefinition = new AzureNextGen.Solutions.Latest.ApplicationDefinition("applicationDefinition", new AzureNextGen.Solutions.Latest.ApplicationDefinitionArgs
         {
             ApplicationDefinitionName = "myManagedApplicationDef",
             Authorizations = 
             {
-                new AzureNextGen.Solutions.Inputs.ApplicationAuthorizationArgs
+                new AzureNextGen.Solutions.Latest.Inputs.ApplicationAuthorizationArgs
                 {
                     PrincipalId = "validprincipalguid",
                     RoleDefinitionId = "validroleguid",
@@ -62,7 +62,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_definition = azure_nextgen.solutions.ApplicationDefinition("applicationDefinition",
+application_definition = azure_nextgen.solutions.latest.ApplicationDefinition("applicationDefinition",
     application_definition_name="myManagedApplicationDef",
     authorizations=[{
         "principalId": "validprincipalguid",
@@ -85,7 +85,7 @@ application_definition = azure_nextgen.solutions.ApplicationDefinition("applicat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const applicationDefinition = new azure_nextgen.solutions.ApplicationDefinition("applicationDefinition", {
+const applicationDefinition = new azure_nextgen.solutions.latest.ApplicationDefinition("applicationDefinition", {
     applicationDefinitionName: "myManagedApplicationDef",
     authorizations: [{
         principalId: "validprincipalguid",

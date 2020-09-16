@@ -26,20 +26,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vendorSkus = new AzureNextGen.Hybridnetwork.VendorSkus("vendorSkus", new AzureNextGen.Hybridnetwork.VendorSkusArgs
+        var vendorSkus = new AzureNextGen.HybridNetwork.V20200101Preview.VendorSkus("vendorSkus", new AzureNextGen.HybridNetwork.V20200101Preview.VendorSkusArgs
         {
             DeploymentMode = "PrivateEdgeZone",
             ManagedApplicationTemplate = ,
             Preview = true,
             SkuName = "TestSku",
             VendorName = "TestVendor",
-            VirtualNetworkFunctionTemplate = new AzureNextGen.Hybridnetwork.Inputs.VirtualNetworkFunctionTemplateArgs
+            VirtualNetworkFunctionTemplate = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.VirtualNetworkFunctionTemplateArgs
             {
                 VirutalNetworkFunctionRoleConfigurations = 
                 {
-                    new AzureNextGen.Hybridnetwork.Inputs.VirtualNetworkFunctionRoleConfigurationArgs
+                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.VirtualNetworkFunctionRoleConfigurationArgs
                     {
-                        ImageReference = new AzureNextGen.Hybridnetwork.Inputs.ImageReferenceArgs
+                        ImageReference = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.ImageReferenceArgs
                         {
                             OsType = "Linux",
                             SasUri = "https://<yourstorage>.blob.core.windows.net/<yourcontainer>/<yourfile>?sp=rl&st=st>Z&se=<se>Z&sv=<sv>&sr=b&sig=<signature>",
@@ -48,11 +48,11 @@ class MyStack : Stack
                         },
                         NetworkInterfaces = 
                         {
-                            new AzureNextGen.Hybridnetwork.Inputs.NetworkInterfaceArgs
+                            new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
                             {
                                 IpConfigurations = 
                                 {
-                                    new AzureNextGen.Hybridnetwork.Inputs.NetworkInterfaceIPConfigurationArgs
+                                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
                                     {
                                         Gateway = "",
                                         IpAddress = "",
@@ -65,11 +65,11 @@ class MyStack : Stack
                                 NetworkInterfaceName = "nic1",
                                 VmSwitchType = "Wan",
                             },
-                            new AzureNextGen.Hybridnetwork.Inputs.NetworkInterfaceArgs
+                            new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
                             {
                                 IpConfigurations = 
                                 {
-                                    new AzureNextGen.Hybridnetwork.Inputs.NetworkInterfaceIPConfigurationArgs
+                                    new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
                                     {
                                         Gateway = "",
                                         IpAddress = "",
@@ -83,7 +83,7 @@ class MyStack : Stack
                                 VmSwitchType = "Management",
                             },
                         },
-                        OsProfile = new AzureNextGen.Hybridnetwork.Inputs.OsProfileArgs
+                        OsProfile = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.OsProfileArgs
                         {
                             AdminPassword = "dummypassword",
                             AdminUsername = "dummyuser",
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vendor_skus = azure_nextgen.hybridnetwork.VendorSkus("vendorSkus",
+vendor_skus = azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSkus",
     deployment_mode="PrivateEdgeZone",
     managed_application_template={},
     preview=True,
@@ -173,7 +173,7 @@ vendor_skus = azure_nextgen.hybridnetwork.VendorSkus("vendorSkus",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vendorSkus = new azure_nextgen.hybridnetwork.VendorSkus("vendorSkus", {
+const vendorSkus = new azure_nextgen.hybridnetwork.v20200101preview.VendorSkus("vendorSkus", {
     deploymentMode: "PrivateEdgeZone",
     managedApplicationTemplate: {},
     preview: true,

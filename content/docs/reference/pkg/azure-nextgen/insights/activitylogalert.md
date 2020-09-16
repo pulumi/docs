@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var activityLogAlert = new AzureNextGen.Insights.ActivityLogAlert("activityLogAlert", new AzureNextGen.Insights.ActivityLogAlertArgs
+        var activityLogAlert = new AzureNextGen.Insights.Latest.ActivityLogAlert("activityLogAlert", new AzureNextGen.Insights.Latest.ActivityLogAlertArgs
         {
-            Actions = new AzureNextGen.Insights.Inputs.ActivityLogAlertActionListArgs
+            Actions = new AzureNextGen.Insights.Latest.Inputs.ActivityLogAlertActionListArgs
             {
                 ActionGroups = 
                 {
-                    new AzureNextGen.Insights.Inputs.ActivityLogAlertActionGroupArgs
+                    new AzureNextGen.Insights.Latest.Inputs.ActivityLogAlertActionGroupArgs
                     {
                         ActionGroupId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",
                         WebhookProperties = 
@@ -43,16 +43,16 @@ class MyStack : Stack
                 },
             },
             ActivityLogAlertName = "SampleActivityLogAlert",
-            Condition = new AzureNextGen.Insights.Inputs.ActivityLogAlertAllOfConditionArgs
+            Condition = new AzureNextGen.Insights.Latest.Inputs.ActivityLogAlertAllOfConditionArgs
             {
                 AllOf = 
                 {
-                    new AzureNextGen.Insights.Inputs.ActivityLogAlertLeafConditionArgs
+                    new AzureNextGen.Insights.Latest.Inputs.ActivityLogAlertLeafConditionArgs
                     {
                         Equals = "Administrative",
                         Field = "Category",
                     },
-                    new AzureNextGen.Insights.Inputs.ActivityLogAlertLeafConditionArgs
+                    new AzureNextGen.Insights.Latest.Inputs.ActivityLogAlertLeafConditionArgs
                     {
                         Equals = "Error",
                         Field = "Level",
@@ -87,7 +87,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-activity_log_alert = azure_nextgen.insights.ActivityLogAlert("activityLogAlert",
+activity_log_alert = azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert",
     actions={
         "actionGroups": [{
             "actionGroupId": "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",
@@ -126,7 +126,7 @@ activity_log_alert = azure_nextgen.insights.ActivityLogAlert("activityLogAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const activityLogAlert = new azure_nextgen.insights.ActivityLogAlert("activityLogAlert", {
+const activityLogAlert = new azure_nextgen.insights.latest.ActivityLogAlert("activityLogAlert", {
     actions: {
         actionGroups: [{
             actionGroupId: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActionGroups/providers/microsoft.insights/actionGroups/SampleActionGroup",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var domainTopic = new AzureNextGen.Eventgrid.DomainTopic("domainTopic", new AzureNextGen.Eventgrid.DomainTopicArgs
+        var domainTopic = new AzureNextGen.EventGrid.Latest.DomainTopic("domainTopic", new AzureNextGen.EventGrid.Latest.DomainTopicArgs
         {
             DomainName = "exampledomain1",
             DomainTopicName = "exampledomaintopic1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-domain_topic = azure_nextgen.eventgrid.DomainTopic("domainTopic",
+domain_topic = azure_nextgen.eventgrid.latest.DomainTopic("domainTopic",
     domain_name="exampledomain1",
     domain_topic_name="exampledomaintopic1",
     resource_group_name="examplerg")
@@ -65,7 +65,7 @@ domain_topic = azure_nextgen.eventgrid.DomainTopic("domainTopic",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const domainTopic = new azure_nextgen.eventgrid.DomainTopic("domainTopic", {
+const domainTopic = new azure_nextgen.eventgrid.latest.DomainTopic("domainTopic", {
     domainName: "exampledomain1",
     domainTopicName: "exampledomaintopic1",
     resourceGroupName: "examplerg",

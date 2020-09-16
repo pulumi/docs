@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
             SqlVirtualMachineGroupResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
             SqlVirtualMachineName = "testvm",
             VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
-            WsfcDomainCredentials = new AzureNextGen.Sqlvirtualmachine.Inputs.WsfcDomainCredentialsArgs
+            WsfcDomainCredentials = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.WsfcDomainCredentialsArgs
             {
                 ClusterBootstrapAccountPassword = "<Password>",
                 ClusterOperatorAccountPassword = "<Password>",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_group_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
@@ -80,7 +80,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineGroupResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
@@ -107,15 +107,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
             SqlVirtualMachineName = "testvm",
-            StorageConfigurationSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.StorageConfigurationSettingsArgs
+            StorageConfigurationSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.StorageConfigurationSettingsArgs
             {
                 DiskConfigurationType = "EXTEND",
-                SqlDataSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.SQLStorageSettingsArgs
+                SqlDataSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
                 {
                     Luns = 
                     {
@@ -143,7 +143,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
@@ -165,7 +165,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineName: "testvm",
@@ -192,15 +192,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
             SqlVirtualMachineName = "testvm",
-            StorageConfigurationSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.StorageConfigurationSettingsArgs
+            StorageConfigurationSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.StorageConfigurationSettingsArgs
             {
                 DiskConfigurationType = "NEW",
-                SqlDataSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.SQLStorageSettingsArgs
+                SqlDataSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
                 {
                     DefaultFilePath = "F:\\folderpath\\",
                     Luns = 
@@ -208,7 +208,7 @@ class MyStack : Stack
                         0,
                     },
                 },
-                SqlLogSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.SQLStorageSettingsArgs
+                SqlLogSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
                 {
                     DefaultFilePath = "G:\\folderpath\\",
                     Luns = 
@@ -216,7 +216,7 @@ class MyStack : Stack
                         1,
                     },
                 },
-                SqlTempDbSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.SQLStorageSettingsArgs
+                SqlTempDbSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SQLStorageSettingsArgs
                 {
                     DefaultFilePath = "D:\\TEMP",
                 },
@@ -242,7 +242,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
@@ -273,7 +273,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineName: "testvm",
@@ -309,9 +309,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
         {
-            AutoBackupSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.AutoBackupSettingsArgs
+            AutoBackupSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.AutoBackupSettingsArgs
             {
                 BackupScheduleType = "Manual",
                 BackupSystemDbs = true,
@@ -326,39 +326,39 @@ class MyStack : Stack
                 StorageAccessKey = "<primary storage access key>",
                 StorageAccountUrl = "https://teststorage.blob.core.windows.net/",
             },
-            AutoPatchingSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.AutoPatchingSettingsArgs
+            AutoPatchingSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.AutoPatchingSettingsArgs
             {
                 DayOfWeek = "Sunday",
                 Enable = true,
                 MaintenanceWindowDuration = 60,
                 MaintenanceWindowStartingHour = 2,
             },
-            KeyVaultCredentialSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.KeyVaultCredentialSettingsArgs
+            KeyVaultCredentialSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.KeyVaultCredentialSettingsArgs
             {
                 Enable = false,
             },
             Location = "northeurope",
             ResourceGroupName = "testrg",
-            ServerConfigurationsManagementSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.ServerConfigurationsManagementSettingsArgs
+            ServerConfigurationsManagementSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.ServerConfigurationsManagementSettingsArgs
             {
-                AdditionalFeaturesServerConfigurations = new AzureNextGen.Sqlvirtualmachine.Inputs.AdditionalFeaturesServerConfigurationsArgs
+                AdditionalFeaturesServerConfigurations = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.AdditionalFeaturesServerConfigurationsArgs
                 {
                     IsRServicesEnabled = false,
                 },
-                SqlConnectivityUpdateSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.SqlConnectivityUpdateSettingsArgs
+                SqlConnectivityUpdateSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SqlConnectivityUpdateSettingsArgs
                 {
                     ConnectivityType = "PRIVATE",
                     Port = 1433,
                     SqlAuthUpdatePassword = "<password>",
                     SqlAuthUpdateUserName = "sqllogin",
                 },
-                SqlStorageUpdateSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.SqlStorageUpdateSettingsArgs
+                SqlStorageUpdateSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SqlStorageUpdateSettingsArgs
                 {
                     DiskConfigurationType = "NEW",
                     DiskCount = 1,
                     StartingDeviceId = 2,
                 },
-                SqlWorkloadTypeUpdateSettings = new AzureNextGen.Sqlvirtualmachine.Inputs.SqlWorkloadTypeUpdateSettingsArgs
+                SqlWorkloadTypeUpdateSettings = new AzureNextGen.SqlVirtualMachine.V20170301Preview.Inputs.SqlWorkloadTypeUpdateSettingsArgs
                 {
                     SqlWorkloadType = "OLTP",
                 },
@@ -387,7 +387,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
     auto_backup_settings={
         "backupScheduleType": "Manual",
         "backupSystemDbs": True,
@@ -448,7 +448,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
     autoBackupSettings: {
         backupScheduleType: "Manual",
         backupSystemDbs: true,
@@ -514,7 +514,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlVirtualMachine = new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.Sqlvirtualmachine.SqlVirtualMachineArgs
+        var sqlVirtualMachine = new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachine("sqlVirtualMachine", new AzureNextGen.SqlVirtualMachine.V20170301Preview.SqlVirtualMachineArgs
         {
             Location = "northeurope",
             ResourceGroupName = "testrg",
@@ -539,7 +539,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+sql_virtual_machine = azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine",
     location="northeurope",
     resource_group_name="testrg",
     sql_virtual_machine_name="testvm",
@@ -555,7 +555,7 @@ sql_virtual_machine = azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
+const sqlVirtualMachine = new azure_nextgen.sqlvirtualmachine.v20170301preview.SqlVirtualMachine("sqlVirtualMachine", {
     location: "northeurope",
     resourceGroupName: "testrg",
     sqlVirtualMachineName: "testvm",

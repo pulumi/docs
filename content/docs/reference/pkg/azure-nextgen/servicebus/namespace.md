@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @namespace = new AzureNextGen.Servicebus.Namespace("namespace", new AzureNextGen.Servicebus.NamespaceArgs
+        var @namespace = new AzureNextGen.ServiceBus.Latest.Namespace("namespace", new AzureNextGen.ServiceBus.Latest.NamespaceArgs
         {
             Location = "South Central US",
             NamespaceName = "sdk-Namespace2924",
             ResourceGroupName = "ArunMonocle",
-            Sku = new AzureNextGen.Servicebus.Inputs.SBSkuArgs
+            Sku = new AzureNextGen.ServiceBus.Latest.Inputs.SBSkuArgs
             {
                 Name = "Standard",
                 Tier = "Standard",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace = azure_nextgen.servicebus.Namespace("namespace",
+namespace = azure_nextgen.servicebus.latest.Namespace("namespace",
     location="South Central US",
     namespace_name="sdk-Namespace2924",
     resource_group_name="ArunMonocle",
@@ -83,7 +83,7 @@ namespace = azure_nextgen.servicebus.Namespace("namespace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const namespace = new azure_nextgen.servicebus.Namespace("namespace", {
+const namespace = new azure_nextgen.servicebus.latest.Namespace("namespace", {
     location: "South Central US",
     namespaceName: "sdk-Namespace2924",
     resourceGroupName: "ArunMonocle",

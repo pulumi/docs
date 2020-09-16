@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var route = new AzureNextGen.Network.Route("route", new AzureNextGen.Network.RouteArgs
+        var route = new AzureNextGen.Network.Latest.Route("route", new AzureNextGen.Network.Latest.RouteArgs
         {
             AddressPrefix = "10.0.3.0/24",
             NextHopType = "VirtualNetworkGateway",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-route = azure_nextgen.network.Route("route",
+route = azure_nextgen.network.latest.Route("route",
     address_prefix="10.0.3.0/24",
     next_hop_type="VirtualNetworkGateway",
     resource_group_name="rg1",
@@ -69,7 +69,7 @@ route = azure_nextgen.network.Route("route",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const route = new azure_nextgen.network.Route("route", {
+const route = new azure_nextgen.network.latest.Route("route", {
     addressPrefix: "10.0.3.0/24",
     nextHopType: "VirtualNetworkGateway",
     resourceGroupName: "rg1",

@@ -25,7 +25,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hyperVCollector = new AzureNextGen.Migrate.HyperVCollector("hyperVCollector", new AzureNextGen.Migrate.HyperVCollectorArgs
+        var hyperVCollector = new AzureNextGen.Migrate.Latest.HyperVCollector("hyperVCollector", new AzureNextGen.Migrate.Latest.HyperVCollectorArgs
         {
             ETag = "\"00000981-0000-0300-0000-5d74cd5f0000\"",
             HyperVCollectorName = "migrateprojectce73collector",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hyper_v_collector = azure_nextgen.migrate.HyperVCollector("hyperVCollector",
+hyper_v_collector = azure_nextgen.migrate.latest.HyperVCollector("hyperVCollector",
     e_tag="\"00000981-0000-0300-0000-5d74cd5f0000\"",
     hyper_v_collector_name="migrateprojectce73collector",
     project_name="migrateprojectce73project",
@@ -66,7 +66,7 @@ hyper_v_collector = azure_nextgen.migrate.HyperVCollector("hyperVCollector",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hyperVCollector = new azure_nextgen.migrate.HyperVCollector("hyperVCollector", {
+const hyperVCollector = new azure_nextgen.migrate.latest.HyperVCollector("hyperVCollector", {
     eTag: "\"00000981-0000-0300-0000-5d74cd5f0000\"",
     hyperVCollectorName: "migrateprojectce73collector",
     projectName: "migrateprojectce73project",

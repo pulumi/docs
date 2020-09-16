@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var remediationAtResourceGroup = new AzureNextGen.Policyinsights.RemediationAtResourceGroup("remediationAtResourceGroup", new AzureNextGen.Policyinsights.RemediationAtResourceGroupArgs
+        var remediationAtResourceGroup = new AzureNextGen.PolicyInsights.Latest.RemediationAtResourceGroup("remediationAtResourceGroup", new AzureNextGen.PolicyInsights.Latest.RemediationAtResourceGroupArgs
         {
             PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
             RemediationName = "storageRemediation",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-remediation_at_resource_group = azure_nextgen.policyinsights.RemediationAtResourceGroup("remediationAtResourceGroup",
+remediation_at_resource_group = azure_nextgen.policyinsights.latest.RemediationAtResourceGroup("remediationAtResourceGroup",
     policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
     remediation_name="storageRemediation",
     resource_group_name="myResourceGroup")
@@ -65,7 +65,7 @@ remediation_at_resource_group = azure_nextgen.policyinsights.RemediationAtResour
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const remediationAtResourceGroup = new azure_nextgen.policyinsights.RemediationAtResourceGroup("remediationAtResourceGroup", {
+const remediationAtResourceGroup = new azure_nextgen.policyinsights.latest.RemediationAtResourceGroup("remediationAtResourceGroup", {
     policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/resourceGroups/myResourceGroup/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
     remediationName: "storageRemediation",
     resourceGroupName: "myResourceGroup",

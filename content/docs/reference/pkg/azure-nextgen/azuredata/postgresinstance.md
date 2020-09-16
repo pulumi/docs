@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var postgresInstance = new AzureNextGen.Azuredata.PostgresInstance("postgresInstance", new AzureNextGen.Azuredata.PostgresInstanceArgs
+        var postgresInstance = new AzureNextGen.AzureData.V20190724Preview.PostgresInstance("postgresInstance", new AzureNextGen.AzureData.V20190724Preview.PostgresInstanceArgs
         {
             PostgresInstanceName = "testpostgresInstance",
             ResourceGroupName = "testrg",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-postgres_instance = azure_nextgen.azuredata.PostgresInstance("postgresInstance",
+postgres_instance = azure_nextgen.azuredata.v20190724preview.PostgresInstance("postgresInstance",
     postgres_instance_name="testpostgresInstance",
     resource_group_name="testrg")
 
@@ -63,7 +63,7 @@ postgres_instance = azure_nextgen.azuredata.PostgresInstance("postgresInstance",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const postgresInstance = new azure_nextgen.azuredata.PostgresInstance("postgresInstance", {
+const postgresInstance = new azure_nextgen.azuredata.v20190724preview.PostgresInstance("postgresInstance", {
     postgresInstanceName: "testpostgresInstance",
     resourceGroupName: "testrg",
 });

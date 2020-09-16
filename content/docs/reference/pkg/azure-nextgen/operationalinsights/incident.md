@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var incident = new AzureNextGen.Operationalinsights.Incident("incident", new AzureNextGen.Operationalinsights.IncidentArgs
+        var incident = new AzureNextGen.OperationalInsights.Latest.Incident("incident", new AzureNextGen.OperationalInsights.Latest.IncidentArgs
         {
             Classification = "FalsePositive",
             ClassificationComment = "Not a malicious activity",
@@ -36,7 +36,7 @@ class MyStack : Stack
             FirstActivityTimeUtc = "2019-01-01T13:00:30Z",
             IncidentId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             LastActivityTimeUtc = "2019-01-01T13:05:30Z",
-            Owner = new AzureNextGen.Operationalinsights.Inputs.IncidentOwnerInfoArgs
+            Owner = new AzureNextGen.OperationalInsights.Latest.Inputs.IncidentOwnerInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-incident = azure_nextgen.operationalinsights.Incident("incident",
+incident = azure_nextgen.operationalinsights.latest.Incident("incident",
     classification="FalsePositive",
     classification_comment="Not a malicious activity",
     classification_reason="IncorrectAlertLogic",
@@ -92,7 +92,7 @@ incident = azure_nextgen.operationalinsights.Incident("incident",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const incident = new azure_nextgen.operationalinsights.Incident("incident", {
+const incident = new azure_nextgen.operationalinsights.latest.Incident("incident", {
     classification: "FalsePositive",
     classificationComment: "Not a malicious activity",
     classificationReason: "IncorrectAlertLogic",

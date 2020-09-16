@@ -26,17 +26,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateCloud = new AzureNextGen.Avs.PrivateCloud("privateCloud", new AzureNextGen.Avs.PrivateCloudArgs
+        var privateCloud = new AzureNextGen.AVS.Latest.PrivateCloud("privateCloud", new AzureNextGen.AVS.Latest.PrivateCloudArgs
         {
             Location = "eastus2",
-            ManagementCluster = new AzureNextGen.Avs.Inputs.ManagementClusterArgs
+            ManagementCluster = new AzureNextGen.AVS.Latest.Inputs.ManagementClusterArgs
             {
                 ClusterSize = 4,
             },
             NetworkBlock = "192.168.48.0/22",
             PrivateCloudName = "cloud1",
             ResourceGroupName = "group1",
-            Sku = new AzureNextGen.Avs.Inputs.SkuArgs
+            Sku = new AzureNextGen.AVS.Latest.Inputs.SkuArgs
             {
                 Name = "AV36",
             },
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_cloud = azure_nextgen.avs.PrivateCloud("privateCloud",
+private_cloud = azure_nextgen.avs.latest.PrivateCloud("privateCloud",
     location="eastus2",
     management_cluster={
         "clusterSize": 4,
@@ -83,7 +83,7 @@ private_cloud = azure_nextgen.avs.PrivateCloud("privateCloud",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateCloud = new azure_nextgen.avs.PrivateCloud("privateCloud", {
+const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
     location: "eastus2",
     managementCluster: {
         clusterSize: 4,

@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bigDataPool = new AzureNextGen.Synapse.BigDataPool("bigDataPool", new AzureNextGen.Synapse.BigDataPoolArgs
+        var bigDataPool = new AzureNextGen.Synapse.V20190601Preview.BigDataPool("bigDataPool", new AzureNextGen.Synapse.V20190601Preview.BigDataPoolArgs
         {
-            AutoPause = new AzureNextGen.Synapse.Inputs.AutoPausePropertiesArgs
+            AutoPause = new AzureNextGen.Synapse.V20190601Preview.Inputs.AutoPausePropertiesArgs
             {
                 DelayInMinutes = 15,
                 Enabled = true,
             },
-            AutoScale = new AzureNextGen.Synapse.Inputs.AutoScalePropertiesArgs
+            AutoScale = new AzureNextGen.Synapse.V20190601Preview.Inputs.AutoScalePropertiesArgs
             {
                 Enabled = true,
                 MaxNodeCount = 50,
@@ -41,7 +41,7 @@ class MyStack : Stack
             },
             BigDataPoolName = "ExamplePool",
             DefaultSparkLogFolder = "/logs",
-            LibraryRequirements = new AzureNextGen.Synapse.Inputs.LibraryRequirementsArgs
+            LibraryRequirements = new AzureNextGen.Synapse.V20190601Preview.Inputs.LibraryRequirementsArgs
             {
                 Content = "",
                 Filename = "requirements.txt",
@@ -77,7 +77,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-big_data_pool = azure_nextgen.synapse.BigDataPool("bigDataPool",
+big_data_pool = azure_nextgen.synapse.v20190601preview.BigDataPool("bigDataPool",
     auto_pause={
         "delayInMinutes": 15,
         "enabled": True,
@@ -115,7 +115,7 @@ big_data_pool = azure_nextgen.synapse.BigDataPool("bigDataPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const bigDataPool = new azure_nextgen.synapse.BigDataPool("bigDataPool", {
+const bigDataPool = new azure_nextgen.synapse.v20190601preview.BigDataPool("bigDataPool", {
     autoPause: {
         delayInMinutes: 15,
         enabled: true,

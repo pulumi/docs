@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tagAtScope = new AzureNextGen.Resources.TagAtScope("tagAtScope", new AzureNextGen.Resources.TagAtScopeArgs
+        var tagAtScope = new AzureNextGen.Resources.Latest.TagAtScope("tagAtScope", new AzureNextGen.Resources.Latest.TagAtScopeArgs
         {
             Scope = "subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm",
         });
@@ -48,7 +48,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_at_scope = azure_nextgen.resources.TagAtScope("tagAtScope", scope="subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm")
+tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope", scope="subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm")
 
 ```
 
@@ -60,7 +60,7 @@ tag_at_scope = azure_nextgen.resources.TagAtScope("tagAtScope", scope="subscript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const tagAtScope = new azure_nextgen.resources.TagAtScope("tagAtScope", {scope: "subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm"});
+const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {scope: "subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/my-resource-group/providers/myPRNameSpace/VM/myVm"});
 
 ```
 
@@ -76,7 +76,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tagAtScope = new AzureNextGen.Resources.TagAtScope("tagAtScope", new AzureNextGen.Resources.TagAtScopeArgs
+        var tagAtScope = new AzureNextGen.Resources.Latest.TagAtScope("tagAtScope", new AzureNextGen.Resources.Latest.TagAtScopeArgs
         {
             Scope = "subscriptions/00000000-0000-0000-0000-000000000000",
         });
@@ -98,7 +98,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_at_scope = azure_nextgen.resources.TagAtScope("tagAtScope", scope="subscriptions/00000000-0000-0000-0000-000000000000")
+tag_at_scope = azure_nextgen.resources.latest.TagAtScope("tagAtScope", scope="subscriptions/00000000-0000-0000-0000-000000000000")
 
 ```
 
@@ -110,7 +110,7 @@ tag_at_scope = azure_nextgen.resources.TagAtScope("tagAtScope", scope="subscript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const tagAtScope = new azure_nextgen.resources.TagAtScope("tagAtScope", {scope: "subscriptions/00000000-0000-0000-0000-000000000000"});
+const tagAtScope = new azure_nextgen.resources.latest.TagAtScope("tagAtScope", {scope: "subscriptions/00000000-0000-0000-0000-000000000000"});
 
 ```
 

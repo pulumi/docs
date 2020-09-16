@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var deployment = new AzureNextGen.Appplatform.Deployment("deployment", new AzureNextGen.Appplatform.DeploymentArgs
+        var deployment = new AzureNextGen.AppPlatform.Latest.Deployment("deployment", new AzureNextGen.AppPlatform.Latest.DeploymentArgs
         {
             AppName = "myapp",
             DeploymentName = "mydeployment",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-deployment = azure_nextgen.appplatform.Deployment("deployment",
+deployment = azure_nextgen.appplatform.latest.Deployment("deployment",
     app_name="myapp",
     deployment_name="mydeployment",
     resource_group_name="myResourceGroup",
@@ -67,7 +67,7 @@ deployment = azure_nextgen.appplatform.Deployment("deployment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const deployment = new azure_nextgen.appplatform.Deployment("deployment", {
+const deployment = new azure_nextgen.appplatform.latest.Deployment("deployment", {
     appName: "myapp",
     deploymentName: "mydeployment",
     resourceGroupName: "myResourceGroup",

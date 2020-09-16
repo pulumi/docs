@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var app = new AzureNextGen.Appplatform.App("app", new AzureNextGen.Appplatform.AppArgs
+        var app = new AzureNextGen.AppPlatform.Latest.App("app", new AzureNextGen.AppPlatform.Latest.AppArgs
         {
             AppName = "myapp",
             Location = "eastus",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-app = azure_nextgen.appplatform.App("app",
+app = azure_nextgen.appplatform.latest.App("app",
     app_name="myapp",
     location="eastus",
     resource_group_name="myResourceGroup",
@@ -67,7 +67,7 @@ app = azure_nextgen.appplatform.App("app",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const app = new azure_nextgen.appplatform.App("app", {
+const app = new azure_nextgen.appplatform.latest.App("app", {
     appName: "myapp",
     location: "eastus",
     resourceGroupName: "myResourceGroup",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pool = new AzureNextGen.Netapp.Pool("pool", new AzureNextGen.Netapp.PoolArgs
+        var pool = new AzureNextGen.NetApp.Latest.Pool("pool", new AzureNextGen.NetApp.Latest.PoolArgs
         {
             AccountName = "account1",
             Location = "eastus",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pool = azure_nextgen.netapp.Pool("pool",
+pool = azure_nextgen.netapp.latest.Pool("pool",
     account_name="account1",
     location="eastus",
     pool_name="pool1",
@@ -73,7 +73,7 @@ pool = azure_nextgen.netapp.Pool("pool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const pool = new azure_nextgen.netapp.Pool("pool", {
+const pool = new azure_nextgen.netapp.latest.Pool("pool", {
     accountName: "account1",
     location: "eastus",
     poolName: "pool1",

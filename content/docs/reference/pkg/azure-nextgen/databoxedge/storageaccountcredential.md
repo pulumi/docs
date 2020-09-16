@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageAccountCredential = new AzureNextGen.Databoxedge.StorageAccountCredential("storageAccountCredential", new AzureNextGen.Databoxedge.StorageAccountCredentialArgs
+        var storageAccountCredential = new AzureNextGen.DataBoxEdge.Latest.StorageAccountCredential("storageAccountCredential", new AzureNextGen.DataBoxEdge.Latest.StorageAccountCredentialArgs
         {
-            AccountKey = new AzureNextGen.Databoxedge.Inputs.AsymmetricEncryptedSecretArgs
+            AccountKey = new AzureNextGen.DataBoxEdge.Latest.Inputs.AsymmetricEncryptedSecretArgs
             {
                 EncryptionAlgorithm = "AES256",
                 EncryptionCertThumbprint = "2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_account_credential = azure_nextgen.databoxedge.StorageAccountCredential("storageAccountCredential",
+storage_account_credential = azure_nextgen.databoxedge.latest.StorageAccountCredential("storageAccountCredential",
     account_key={
         "encryptionAlgorithm": "AES256",
         "encryptionCertThumbprint": "2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
@@ -84,7 +84,7 @@ storage_account_credential = azure_nextgen.databoxedge.StorageAccountCredential(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const storageAccountCredential = new azure_nextgen.databoxedge.StorageAccountCredential("storageAccountCredential", {
+const storageAccountCredential = new azure_nextgen.databoxedge.latest.StorageAccountCredential("storageAccountCredential", {
     accountKey: {
         encryptionAlgorithm: "AES256",
         encryptionCertThumbprint: "2A9D8D6BE51574B5461230AEF02F162C5F01AD31",

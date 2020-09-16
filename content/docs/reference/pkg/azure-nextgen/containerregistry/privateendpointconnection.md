@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Containerregistry.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Containerregistry.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.ContainerRegistry.V20191201Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.ContainerRegistry.V20191201Preview.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "myConnection",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Containerregistry.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "Auto-Approved",
                 Status = "Approved",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.containerregistry.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.containerregistry.v20191201preview.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="myConnection",
     private_link_service_connection_state={
         "description": "Auto-Approved",
@@ -74,7 +74,7 @@ private_endpoint_connection = azure_nextgen.containerregistry.PrivateEndpointCon
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.containerregistry.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.containerregistry.v20191201preview.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "myConnection",
     privateLinkServiceConnectionState: {
         description: "Auto-Approved",

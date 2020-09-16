@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountSchema = new AzureNextGen.Logic.IntegrationAccountSchema("integrationAccountSchema", new AzureNextGen.Logic.IntegrationAccountSchemaArgs
+        var integrationAccountSchema = new AzureNextGen.Logic.Latest.IntegrationAccountSchema("integrationAccountSchema", new AzureNextGen.Logic.Latest.IntegrationAccountSchemaArgs
         {
             Content = @"<?xml version=""1.0"" encoding=""utf-16""?>
 <xs:schema xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns=""http://Inbound_EDI.OrderFile"" targetNamespace=""http://Inbound_EDI.OrderFile"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
@@ -215,7 +215,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_schema = azure_nextgen.logic.IntegrationAccountSchema("integrationAccountSchema",
+integration_account_schema = azure_nextgen.logic.latest.IntegrationAccountSchema("integrationAccountSchema",
     content="""<?xml version="1.0" encoding="utf-16"?>
 <xs:schema xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns="http://Inbound_EDI.OrderFile" targetNamespace="http://Inbound_EDI.OrderFile" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
@@ -394,7 +394,7 @@ integration_account_schema = azure_nextgen.logic.IntegrationAccountSchema("integ
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationAccountSchema = new azure_nextgen.logic.IntegrationAccountSchema("integrationAccountSchema", {
+const integrationAccountSchema = new azure_nextgen.logic.latest.IntegrationAccountSchema("integrationAccountSchema", {
     content: `<?xml version="1.0" encoding="utf-16"?>
 <xs:schema xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns="http://Inbound_EDI.OrderFile" targetNamespace="http://Inbound_EDI.OrderFile" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>

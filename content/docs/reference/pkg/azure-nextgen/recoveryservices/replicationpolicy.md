@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationPolicy = new AzureNextGen.Recoveryservices.ReplicationPolicy("replicationPolicy", new AzureNextGen.Recoveryservices.ReplicationPolicyArgs
+        var replicationPolicy = new AzureNextGen.RecoveryServices.Latest.ReplicationPolicy("replicationPolicy", new AzureNextGen.RecoveryServices.Latest.ReplicationPolicyArgs
         {
             PolicyName = "protectionprofile1",
             ResourceGroupName = "resourceGroupPS1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_policy = azure_nextgen.recoveryservices.ReplicationPolicy("replicationPolicy",
+replication_policy = azure_nextgen.recoveryservices.latest.ReplicationPolicy("replicationPolicy",
     policy_name="protectionprofile1",
     resource_group_name="resourceGroupPS1",
     resource_name="vault1")
@@ -65,7 +65,7 @@ replication_policy = azure_nextgen.recoveryservices.ReplicationPolicy("replicati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const replicationPolicy = new azure_nextgen.recoveryservices.ReplicationPolicy("replicationPolicy", {
+const replicationPolicy = new azure_nextgen.recoveryservices.latest.ReplicationPolicy("replicationPolicy", {
     policyName: "protectionprofile1",
     resourceGroupName: "resourceGroupPS1",
     resourceName: "vault1",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverCommunicationLink = new AzureNextGen.Sql.ServerCommunicationLink("serverCommunicationLink", new AzureNextGen.Sql.ServerCommunicationLinkArgs
+        var serverCommunicationLink = new AzureNextGen.Sql.Latest.ServerCommunicationLink("serverCommunicationLink", new AzureNextGen.Sql.Latest.ServerCommunicationLinkArgs
         {
             CommunicationLinkName = "link1",
             PartnerServer = "sqldcrudtest-test",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_communication_link = azure_nextgen.sql.ServerCommunicationLink("serverCommunicationLink",
+server_communication_link = azure_nextgen.sql.latest.ServerCommunicationLink("serverCommunicationLink",
     communication_link_name="link1",
     partner_server="sqldcrudtest-test",
     resource_group_name="sqlcrudtest-7398",
@@ -67,7 +67,7 @@ server_communication_link = azure_nextgen.sql.ServerCommunicationLink("serverCom
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serverCommunicationLink = new azure_nextgen.sql.ServerCommunicationLink("serverCommunicationLink", {
+const serverCommunicationLink = new azure_nextgen.sql.latest.ServerCommunicationLink("serverCommunicationLink", {
     communicationLinkName: "link1",
     partnerServer: "sqldcrudtest-test",
     resourceGroupName: "sqlcrudtest-7398",

@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var webAppPrivateEndpointConnection = new AzureNextGen.Web.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", new AzureNextGen.Web.WebAppPrivateEndpointConnectionArgs
+        var webAppPrivateEndpointConnection = new AzureNextGen.Web.Latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", new AzureNextGen.Web.Latest.WebAppPrivateEndpointConnectionArgs
         {
             Name = "testSite",
             PrivateEndpointConnectionName = "connection",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Web.Inputs.PrivateLinkConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.Web.Latest.Inputs.PrivateLinkConnectionStateArgs
             {
                 ActionsRequired = "",
                 Description = "Approved by admin.",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-web_app_private_endpoint_connection = azure_nextgen.web.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection",
+web_app_private_endpoint_connection = azure_nextgen.web.latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection",
     name="testSite",
     private_endpoint_connection_name="connection",
     private_link_service_connection_state={
@@ -76,7 +76,7 @@ web_app_private_endpoint_connection = azure_nextgen.web.WebAppPrivateEndpointCon
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const webAppPrivateEndpointConnection = new azure_nextgen.web.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", {
+const webAppPrivateEndpointConnection = new azure_nextgen.web.latest.WebAppPrivateEndpointConnection("webAppPrivateEndpointConnection", {
     name: "testSite",
     privateEndpointConnectionName: "connection",
     privateLinkServiceConnectionState: {

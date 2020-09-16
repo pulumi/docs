@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vpnGateway = new AzureNextGen.Network.VpnGateway("vpnGateway", new AzureNextGen.Network.VpnGatewayArgs
+        var vpnGateway = new AzureNextGen.Network.Latest.VpnGateway("vpnGateway", new AzureNextGen.Network.Latest.VpnGatewayArgs
         {
-            BgpSettings = new AzureNextGen.Network.Inputs.BgpSettingsArgs
+            BgpSettings = new AzureNextGen.Network.Latest.Inputs.BgpSettingsArgs
             {
                 Asn = 65515,
                 BgpPeeringAddresses = 
                 {
-                    new AzureNextGen.Network.Inputs.IPConfigurationBgpPeeringAddressArgs
+                    new AzureNextGen.Network.Latest.Inputs.IPConfigurationBgpPeeringAddressArgs
                     {
                         CustomBgpIpAddresses = 
                         {
@@ -41,7 +41,7 @@ class MyStack : Stack
                         },
                         IpconfigurationId = "Instance0",
                     },
-                    new AzureNextGen.Network.Inputs.IPConfigurationBgpPeeringAddressArgs
+                    new AzureNextGen.Network.Latest.Inputs.IPConfigurationBgpPeeringAddressArgs
                     {
                         CustomBgpIpAddresses = 
                         {
@@ -54,7 +54,7 @@ class MyStack : Stack
             },
             Connections = 
             {
-                new AzureNextGen.Network.Inputs.VpnConnectionArgs
+                new AzureNextGen.Network.Latest.Inputs.VpnConnectionArgs
                 {
                     Name = "vpnConnection1",
                 },
@@ -66,7 +66,7 @@ class MyStack : Stack
             {
                 { "key1", "value1" },
             },
-            VirtualHub = new AzureNextGen.Network.Inputs.SubResourceArgs
+            VirtualHub = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
             },
@@ -89,7 +89,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vpn_gateway = azure_nextgen.network.VpnGateway("vpnGateway",
+vpn_gateway = azure_nextgen.network.latest.VpnGateway("vpnGateway",
     bgp_settings={
         "asn": 65515,
         "bgpPeeringAddresses": [
@@ -127,7 +127,7 @@ vpn_gateway = azure_nextgen.network.VpnGateway("vpnGateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vpnGateway = new azure_nextgen.network.VpnGateway("vpnGateway", {
+const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
     bgpSettings: {
         asn: 65515,
         bgpPeeringAddresses: [

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventHubConnection = new AzureNextGen.Kusto.EventHubConnection("eventHubConnection", new AzureNextGen.Kusto.EventHubConnectionArgs
+        var eventHubConnection = new AzureNextGen.Kusto.V20180907Preview.EventHubConnection("eventHubConnection", new AzureNextGen.Kusto.V20180907Preview.EventHubConnectionArgs
         {
             ClusterName = "KustoClusterRPTest4",
             ConsumerGroup = "testConsumerGroup1",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_hub_connection = azure_nextgen.kusto.EventHubConnection("eventHubConnection",
+event_hub_connection = azure_nextgen.kusto.v20180907preview.EventHubConnection("eventHubConnection",
     cluster_name="KustoClusterRPTest4",
     consumer_group="testConsumerGroup1",
     database_name="KustoDatabase8",
@@ -73,7 +73,7 @@ event_hub_connection = azure_nextgen.kusto.EventHubConnection("eventHubConnectio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventHubConnection = new azure_nextgen.kusto.EventHubConnection("eventHubConnection", {
+const eventHubConnection = new azure_nextgen.kusto.v20180907preview.EventHubConnection("eventHubConnection", {
     clusterName: "KustoClusterRPTest4",
     consumerGroup: "testConsumerGroup1",
     databaseName: "KustoDatabase8",

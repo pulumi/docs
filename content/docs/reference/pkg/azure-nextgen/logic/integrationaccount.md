@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccount = new AzureNextGen.Logic.IntegrationAccount("integrationAccount", new AzureNextGen.Logic.IntegrationAccountArgs
+        var integrationAccount = new AzureNextGen.Logic.Latest.IntegrationAccount("integrationAccount", new AzureNextGen.Logic.Latest.IntegrationAccountArgs
         {
             IntegrationAccountName = "testIntegrationAccount",
             Location = "westus",
             ResourceGroupName = "testResourceGroup",
-            Sku = new AzureNextGen.Logic.Inputs.IntegrationAccountSkuArgs
+            Sku = new AzureNextGen.Logic.Latest.Inputs.IntegrationAccountSkuArgs
             {
                 Name = "Standard",
             },
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account = azure_nextgen.logic.IntegrationAccount("integrationAccount",
+integration_account = azure_nextgen.logic.latest.IntegrationAccount("integrationAccount",
     integration_account_name="testIntegrationAccount",
     location="westus",
     resource_group_name="testResourceGroup",
@@ -72,7 +72,7 @@ integration_account = azure_nextgen.logic.IntegrationAccount("integrationAccount
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationAccount = new azure_nextgen.logic.IntegrationAccount("integrationAccount", {
+const integrationAccount = new azure_nextgen.logic.latest.IntegrationAccount("integrationAccount", {
     integrationAccountName: "testIntegrationAccount",
     location: "westus",
     resourceGroupName: "testResourceGroup",

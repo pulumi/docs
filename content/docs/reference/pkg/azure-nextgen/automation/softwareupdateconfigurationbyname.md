@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var softwareUpdateConfigurationByName = new AzureNextGen.Automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", new AzureNextGen.Automation.SoftwareUpdateConfigurationByNameArgs
+        var softwareUpdateConfigurationByName = new AzureNextGen.Automation.V20170515Preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", new AzureNextGen.Automation.V20170515Preview.SoftwareUpdateConfigurationByNameArgs
         {
             AutomationAccountName = "myaccount",
             ResourceGroupName = "mygroup",
-            ScheduleInfo = new AzureNextGen.Automation.Inputs.SchedulePropertiesArgs
+            ScheduleInfo = new AzureNextGen.Automation.V20170515Preview.Inputs.SchedulePropertiesArgs
             {
-                AdvancedSchedule = new AzureNextGen.Automation.Inputs.AdvancedScheduleArgs
+                AdvancedSchedule = new AzureNextGen.Automation.V20170515Preview.Inputs.AdvancedScheduleArgs
                 {
                     WeekDays = 
                     {
@@ -47,13 +47,13 @@ class MyStack : Stack
                 TimeZone = "America/Los_Angeles",
             },
             SoftwareUpdateConfigurationName = "testpatch",
-            Tasks = new AzureNextGen.Automation.Inputs.SoftwareUpdateConfigurationTasksArgs
+            Tasks = new AzureNextGen.Automation.V20170515Preview.Inputs.SoftwareUpdateConfigurationTasksArgs
             {
-                PostTask = new AzureNextGen.Automation.Inputs.TaskPropertiesArgs
+                PostTask = new AzureNextGen.Automation.V20170515Preview.Inputs.TaskPropertiesArgs
                 {
                     Source = "GetCache",
                 },
-                PreTask = new AzureNextGen.Automation.Inputs.TaskPropertiesArgs
+                PreTask = new AzureNextGen.Automation.V20170515Preview.Inputs.TaskPropertiesArgs
                 {
                     Parameters = 
                     {
@@ -62,7 +62,7 @@ class MyStack : Stack
                     Source = "HelloWorld",
                 },
             },
-            UpdateConfiguration = new AzureNextGen.Automation.Inputs.UpdateConfigurationArgs
+            UpdateConfiguration = new AzureNextGen.Automation.V20170515Preview.Inputs.UpdateConfigurationArgs
             {
                 AzureVirtualMachines = 
                 {
@@ -77,11 +77,11 @@ class MyStack : Stack
                     "box2.contoso.com",
                 },
                 OperatingSystem = "Windows",
-                Targets = new AzureNextGen.Automation.Inputs.TargetPropertiesArgs
+                Targets = new AzureNextGen.Automation.V20170515Preview.Inputs.TargetPropertiesArgs
                 {
                     AzureQueries = 
                     {
-                        new AzureNextGen.Automation.Inputs.AzureQueryPropertiesArgs
+                        new AzureNextGen.Automation.V20170515Preview.Inputs.AzureQueryPropertiesArgs
                         {
                             Locations = 
                             {
@@ -93,7 +93,7 @@ class MyStack : Stack
                                 "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
                                 "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
                             },
-                            TagSettings = new AzureNextGen.Automation.Inputs.TagSettingsPropertiesArgs
+                            TagSettings = new AzureNextGen.Automation.V20170515Preview.Inputs.TagSettingsPropertiesArgs
                             {
                                 FilterOperator = "All",
                                 Tags = {},
@@ -102,19 +102,19 @@ class MyStack : Stack
                     },
                     NonAzureQueries = 
                     {
-                        new AzureNextGen.Automation.Inputs.NonAzureQueryPropertiesArgs
+                        new AzureNextGen.Automation.V20170515Preview.Inputs.NonAzureQueryPropertiesArgs
                         {
                             FunctionAlias = "SavedSearch1",
                             WorkspaceId = "WorkspaceId1",
                         },
-                        new AzureNextGen.Automation.Inputs.NonAzureQueryPropertiesArgs
+                        new AzureNextGen.Automation.V20170515Preview.Inputs.NonAzureQueryPropertiesArgs
                         {
                             FunctionAlias = "SavedSearch2",
                             WorkspaceId = "WorkspaceId2",
                         },
                     },
                 },
-                Windows = new AzureNextGen.Automation.Inputs.WindowsPropertiesArgs
+                Windows = new AzureNextGen.Automation.V20170515Preview.Inputs.WindowsPropertiesArgs
                 {
                     ExcludedKbNumbers = 
                     {
@@ -144,7 +144,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-software_update_configuration_by_name = azure_nextgen.automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
+software_update_configuration_by_name = azure_nextgen.automation.v20170515preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
     automation_account_name="myaccount",
     resource_group_name="mygroup",
     schedule_info={
@@ -230,7 +230,7 @@ software_update_configuration_by_name = azure_nextgen.automation.SoftwareUpdateC
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const softwareUpdateConfigurationByName = new azure_nextgen.automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
+const softwareUpdateConfigurationByName = new azure_nextgen.automation.v20170515preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
     automationAccountName: "myaccount",
     resourceGroupName: "mygroup",
     scheduleInfo: {

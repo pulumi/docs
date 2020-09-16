@@ -26,19 +26,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Datalakeanalytics.Account("account", new AzureNextGen.Datalakeanalytics.AccountArgs
+        var account = new AzureNextGen.DataLakeAnalytics.Latest.Account("account", new AzureNextGen.DataLakeAnalytics.Latest.AccountArgs
         {
             AccountName = "contosoadla",
             ComputePolicies = 
             {
-                new AzureNextGen.Datalakeanalytics.Inputs.CreateComputePolicyWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.CreateComputePolicyWithAccountParametersArgs
                 {
                     Name = "test_policy",
                 },
             },
             DataLakeStoreAccounts = 
             {
-                new AzureNextGen.Datalakeanalytics.Inputs.AddDataLakeStoreWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.AddDataLakeStoreWithAccountParametersArgs
                 {
                     Name = "test_adls",
                 },
@@ -47,7 +47,7 @@ class MyStack : Stack
             FirewallAllowAzureIps = "Enabled",
             FirewallRules = 
             {
-                new AzureNextGen.Datalakeanalytics.Inputs.CreateFirewallRuleWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.CreateFirewallRuleWithAccountParametersArgs
                 {
                     Name = "test_rule",
                 },
@@ -63,7 +63,7 @@ class MyStack : Stack
             ResourceGroupName = "contosorg",
             StorageAccounts = 
             {
-                new AzureNextGen.Datalakeanalytics.Inputs.AddStorageAccountWithAccountParametersArgs
+                new AzureNextGen.DataLakeAnalytics.Latest.Inputs.AddStorageAccountWithAccountParametersArgs
                 {
                     Name = "test_storage",
                 },
@@ -91,7 +91,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.datalakeanalytics.Account("account",
+account = azure_nextgen.datalakeanalytics.latest.Account("account",
     account_name="contosoadla",
     compute_policies=[{
         "name": "test_policy",
@@ -130,7 +130,7 @@ account = azure_nextgen.datalakeanalytics.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.datalakeanalytics.Account("account", {
+const account = new azure_nextgen.datalakeanalytics.latest.Account("account", {
     accountName: "contosoadla",
     computePolicies: [{
         name: "test_policy",

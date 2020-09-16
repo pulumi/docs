@@ -26,25 +26,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var peerAsn = new AzureNextGen.Peering.PeerAsn("peerAsn", new AzureNextGen.Peering.PeerAsnArgs
+        var peerAsn = new AzureNextGen.Peering.Latest.PeerAsn("peerAsn", new AzureNextGen.Peering.Latest.PeerAsnArgs
         {
             PeerAsn = 65000,
             PeerAsnName = "peerAsnName",
             PeerContactDetail = 
             {
-                new AzureNextGen.Peering.Inputs.ContactDetailArgs
+                new AzureNextGen.Peering.Latest.Inputs.ContactDetailArgs
                 {
                     Email = "noc@contoso.com",
                     Phone = "+1 (234) 567-8999",
                     Role = "Noc",
                 },
-                new AzureNextGen.Peering.Inputs.ContactDetailArgs
+                new AzureNextGen.Peering.Latest.Inputs.ContactDetailArgs
                 {
                     Email = "abc@contoso.com",
                     Phone = "+1 (234) 567-8900",
                     Role = "Policy",
                 },
-                new AzureNextGen.Peering.Inputs.ContactDetailArgs
+                new AzureNextGen.Peering.Latest.Inputs.ContactDetailArgs
                 {
                     Email = "xyz@contoso.com",
                     Phone = "+1 (234) 567-8900",
@@ -71,7 +71,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-peer_asn = azure_nextgen.peering.PeerAsn("peerAsn",
+peer_asn = azure_nextgen.peering.latest.PeerAsn("peerAsn",
     peer_asn=65000,
     peer_asn_name="peerAsnName",
     peer_contact_detail=[
@@ -103,7 +103,7 @@ peer_asn = azure_nextgen.peering.PeerAsn("peerAsn",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const peerAsn = new azure_nextgen.peering.PeerAsn("peerAsn", {
+const peerAsn = new azure_nextgen.peering.latest.PeerAsn("peerAsn", {
     peerAsn: 65000,
     peerAsnName: "peerAsnName",
     peerContactDetail: [

@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var webhook = new AzureNextGen.Automation.Webhook("webhook", new AzureNextGen.Automation.WebhookArgs
+        var webhook = new AzureNextGen.Automation.Latest.Webhook("webhook", new AzureNextGen.Automation.Latest.WebhookArgs
         {
             AutomationAccountName = "myAutomationAccount33",
             ExpiryTime = "2018-03-29T22:18:13.7002872Z",
             IsEnabled = true,
             Name = "TestWebhook",
             ResourceGroupName = "rg",
-            Runbook = new AzureNextGen.Automation.Inputs.RunbookAssociationPropertyArgs
+            Runbook = new AzureNextGen.Automation.Latest.Inputs.RunbookAssociationPropertyArgs
             {
                 Name = "TestRunbook",
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-webhook = azure_nextgen.automation.Webhook("webhook",
+webhook = azure_nextgen.automation.latest.Webhook("webhook",
     automation_account_name="myAutomationAccount33",
     expiry_time="2018-03-29T22:18:13.7002872Z",
     is_enabled=True,
@@ -80,7 +80,7 @@ webhook = azure_nextgen.automation.Webhook("webhook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const webhook = new azure_nextgen.automation.Webhook("webhook", {
+const webhook = new azure_nextgen.automation.latest.Webhook("webhook", {
     automationAccountName: "myAutomationAccount33",
     expiryTime: "2018-03-29T22:18:13.7002872Z",
     isEnabled: true,

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bandwidthSchedule = new AzureNextGen.Databoxedge.BandwidthSchedule("bandwidthSchedule", new AzureNextGen.Databoxedge.BandwidthScheduleArgs
+        var bandwidthSchedule = new AzureNextGen.DataBoxEdge.Latest.BandwidthSchedule("bandwidthSchedule", new AzureNextGen.DataBoxEdge.Latest.BandwidthScheduleArgs
         {
             Days = 
             {
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bandwidth_schedule = azure_nextgen.databoxedge.BandwidthSchedule("bandwidthSchedule",
+bandwidth_schedule = azure_nextgen.databoxedge.latest.BandwidthSchedule("bandwidthSchedule",
     days=[
         "Sunday",
         "Monday",
@@ -80,7 +80,7 @@ bandwidth_schedule = azure_nextgen.databoxedge.BandwidthSchedule("bandwidthSched
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const bandwidthSchedule = new azure_nextgen.databoxedge.BandwidthSchedule("bandwidthSchedule", {
+const bandwidthSchedule = new azure_nextgen.databoxedge.latest.BandwidthSchedule("bandwidthSchedule", {
     days: [
         "Sunday",
         "Monday",

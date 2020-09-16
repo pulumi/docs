@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var protectedItem = new AzureNextGen.Recoveryservices.ProtectedItem("protectedItem", new AzureNextGen.Recoveryservices.ProtectedItemArgs
+        var protectedItem = new AzureNextGen.RecoveryServices.Latest.ProtectedItem("protectedItem", new AzureNextGen.RecoveryServices.Latest.ProtectedItemArgs
         {
             ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             FabricName = "Azure",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-protected_item = azure_nextgen.recoveryservices.ProtectedItem("protectedItem",
+protected_item = azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem",
     container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabric_name="Azure",
     protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
@@ -69,7 +69,7 @@ protected_item = azure_nextgen.recoveryservices.ProtectedItem("protectedItem",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const protectedItem = new azure_nextgen.recoveryservices.ProtectedItem("protectedItem", {
+const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem", {
     containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabricName: "Azure",
     protectedItemName: "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
@@ -91,7 +91,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var protectedItem = new AzureNextGen.Recoveryservices.ProtectedItem("protectedItem", new AzureNextGen.Recoveryservices.ProtectedItemArgs
+        var protectedItem = new AzureNextGen.RecoveryServices.Latest.ProtectedItem("protectedItem", new AzureNextGen.RecoveryServices.Latest.ProtectedItemArgs
         {
             ContainerName = "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
             FabricName = "Azure",
@@ -117,7 +117,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-protected_item = azure_nextgen.recoveryservices.ProtectedItem("protectedItem",
+protected_item = azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem",
     container_name="IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabric_name="Azure",
     protected_item_name="VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
@@ -134,7 +134,7 @@ protected_item = azure_nextgen.recoveryservices.ProtectedItem("protectedItem",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const protectedItem = new azure_nextgen.recoveryservices.ProtectedItem("protectedItem", {
+const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("protectedItem", {
     containerName: "IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",
     fabricName: "Azure",
     protectedItemName: "VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1",

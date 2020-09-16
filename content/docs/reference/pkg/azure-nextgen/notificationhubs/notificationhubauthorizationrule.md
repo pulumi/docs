@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var notificationHubAuthorizationRule = new AzureNextGen.Notificationhubs.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", new AzureNextGen.Notificationhubs.NotificationHubAuthorizationRuleArgs
+        var notificationHubAuthorizationRule = new AzureNextGen.NotificationHubs.Latest.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", new AzureNextGen.NotificationHubs.Latest.NotificationHubAuthorizationRuleArgs
         {
             AuthorizationRuleName = "DefaultListenSharedAccessSignature",
             NamespaceName = "nh-sdk-ns",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-notification_hub_authorization_rule = azure_nextgen.notificationhubs.NotificationHubAuthorizationRule("notificationHubAuthorizationRule",
+notification_hub_authorization_rule = azure_nextgen.notificationhubs.latest.NotificationHubAuthorizationRule("notificationHubAuthorizationRule",
     authorization_rule_name="DefaultListenSharedAccessSignature",
     namespace_name="nh-sdk-ns",
     notification_hub_name="nh-sdk-hub",
@@ -67,7 +67,7 @@ notification_hub_authorization_rule = azure_nextgen.notificationhubs.Notificatio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const notificationHubAuthorizationRule = new azure_nextgen.notificationhubs.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", {
+const notificationHubAuthorizationRule = new azure_nextgen.notificationhubs.latest.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", {
     authorizationRuleName: "DefaultListenSharedAccessSignature",
     namespaceName: "nh-sdk-ns",
     notificationHubName: "nh-sdk-hub",

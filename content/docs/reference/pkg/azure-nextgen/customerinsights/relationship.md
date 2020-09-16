@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var relationship = new AzureNextGen.Customerinsights.Relationship("relationship", new AzureNextGen.Customerinsights.RelationshipArgs
+        var relationship = new AzureNextGen.CustomerInsights.Latest.Relationship("relationship", new AzureNextGen.CustomerInsights.Latest.RelationshipArgs
         {
             Cardinality = "OneToOne",
             Description = 
@@ -62,7 +62,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-relationship = azure_nextgen.customerinsights.Relationship("relationship",
+relationship = azure_nextgen.customerinsights.latest.Relationship("relationship",
     cardinality="OneToOne",
     description={
         "en-us": "Relationship Description",
@@ -87,7 +87,7 @@ relationship = azure_nextgen.customerinsights.Relationship("relationship",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const relationship = new azure_nextgen.customerinsights.Relationship("relationship", {
+const relationship = new azure_nextgen.customerinsights.latest.Relationship("relationship", {
     cardinality: "OneToOne",
     description: {
         "en-us": "Relationship Description",

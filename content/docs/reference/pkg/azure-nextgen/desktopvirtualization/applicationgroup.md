@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationGroup = new AzureNextGen.Desktopvirtualization.ApplicationGroup("applicationGroup", new AzureNextGen.Desktopvirtualization.ApplicationGroupArgs
+        var applicationGroup = new AzureNextGen.DesktopVirtualization.V20191210Preview.ApplicationGroup("applicationGroup", new AzureNextGen.DesktopVirtualization.V20191210Preview.ApplicationGroupArgs
         {
             ApplicationGroupName = "applicationGroup1",
             ApplicationGroupType = "RemoteApp",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_group = azure_nextgen.desktopvirtualization.ApplicationGroup("applicationGroup",
+application_group = azure_nextgen.desktopvirtualization.v20191210preview.ApplicationGroup("applicationGroup",
     application_group_name="applicationGroup1",
     application_group_type="RemoteApp",
     description="des1",
@@ -82,7 +82,7 @@ application_group = azure_nextgen.desktopvirtualization.ApplicationGroup("applic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const applicationGroup = new azure_nextgen.desktopvirtualization.ApplicationGroup("applicationGroup", {
+const applicationGroup = new azure_nextgen.desktopvirtualization.v20191210preview.ApplicationGroup("applicationGroup", {
     applicationGroupName: "applicationGroup1",
     applicationGroupType: "RemoteApp",
     description: "des1",

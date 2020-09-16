@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverEndpoint = new AzureNextGen.Storagesync.ServerEndpoint("serverEndpoint", new AzureNextGen.Storagesync.ServerEndpointArgs
+        var serverEndpoint = new AzureNextGen.StorageSync.Latest.ServerEndpoint("serverEndpoint", new AzureNextGen.StorageSync.Latest.ServerEndpointArgs
         {
             CloudTiering = "off",
             InitialDownloadPolicy = "NamespaceThenModifiedFiles",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_endpoint = azure_nextgen.storagesync.ServerEndpoint("serverEndpoint",
+server_endpoint = azure_nextgen.storagesync.latest.ServerEndpoint("serverEndpoint",
     cloud_tiering="off",
     initial_download_policy="NamespaceThenModifiedFiles",
     local_cache_mode="UpdateLocallyCachedFiles",
@@ -85,7 +85,7 @@ server_endpoint = azure_nextgen.storagesync.ServerEndpoint("serverEndpoint",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serverEndpoint = new azure_nextgen.storagesync.ServerEndpoint("serverEndpoint", {
+const serverEndpoint = new azure_nextgen.storagesync.latest.ServerEndpoint("serverEndpoint", {
     cloudTiering: "off",
     initialDownloadPolicy: "NamespaceThenModifiedFiles",
     localCacheMode: "UpdateLocallyCachedFiles",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateStoreOffer = new AzureNextGen.Marketplace.PrivateStoreOffer("privateStoreOffer", new AzureNextGen.Marketplace.PrivateStoreOfferArgs
+        var privateStoreOffer = new AzureNextGen.Marketplace.Latest.PrivateStoreOffer("privateStoreOffer", new AzureNextGen.Marketplace.Latest.PrivateStoreOfferArgs
         {
             OfferId = "marketplacetestthirdparty.md-test-third-party-2",
             PrivateStoreId = "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_store_offer = azure_nextgen.marketplace.PrivateStoreOffer("privateStoreOffer",
+private_store_offer = azure_nextgen.marketplace.latest.PrivateStoreOffer("privateStoreOffer",
     offer_id="marketplacetestthirdparty.md-test-third-party-2",
     private_store_id="a0e28e55-90c4-41d8-8e34-bb7ef7775406")
 
@@ -63,7 +63,7 @@ private_store_offer = azure_nextgen.marketplace.PrivateStoreOffer("privateStoreO
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateStoreOffer = new azure_nextgen.marketplace.PrivateStoreOffer("privateStoreOffer", {
+const privateStoreOffer = new azure_nextgen.marketplace.latest.PrivateStoreOffer("privateStoreOffer", {
     offerId: "marketplacetestthirdparty.md-test-third-party-2",
     privateStoreId: "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
 });

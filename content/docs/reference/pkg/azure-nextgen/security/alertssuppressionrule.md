@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertsSuppressionRule = new AzureNextGen.Security.AlertsSuppressionRule("alertsSuppressionRule", new AzureNextGen.Security.AlertsSuppressionRuleArgs
+        var alertsSuppressionRule = new AzureNextGen.Security.V20190101Preview.AlertsSuppressionRule("alertsSuppressionRule", new AzureNextGen.Security.V20190101Preview.AlertsSuppressionRuleArgs
         {
             AlertType = "IpAnomaly",
             AlertsSuppressionRuleName = "dismissIpAnomalyAlerts",
@@ -34,15 +34,15 @@ class MyStack : Stack
             ExpirationDateUtc = "2019-12-01T19:50:47.083633Z",
             Reason = "FalsePositive",
             State = "Enabled",
-            SuppressionAlertsScope = new AzureNextGen.Security.Inputs.SuppressionAlertsScopeArgs
+            SuppressionAlertsScope = new AzureNextGen.Security.V20190101Preview.Inputs.SuppressionAlertsScopeArgs
             {
                 AllOf = 
                 {
-                    new AzureNextGen.Security.Inputs.ScopeElementArgs
+                    new AzureNextGen.Security.V20190101Preview.Inputs.ScopeElementArgs
                     {
                         Field = "entities.ip.address",
                     },
-                    new AzureNextGen.Security.Inputs.ScopeElementArgs
+                    new AzureNextGen.Security.V20190101Preview.Inputs.ScopeElementArgs
                     {
                         Field = "entities.process.commandline",
                     },
@@ -67,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alerts_suppression_rule = azure_nextgen.security.AlertsSuppressionRule("alertsSuppressionRule",
+alerts_suppression_rule = azure_nextgen.security.v20190101preview.AlertsSuppressionRule("alertsSuppressionRule",
     alert_type="IpAnomaly",
     alerts_suppression_rule_name="dismissIpAnomalyAlerts",
     comment="Test VM",
@@ -95,7 +95,7 @@ alerts_suppression_rule = azure_nextgen.security.AlertsSuppressionRule("alertsSu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const alertsSuppressionRule = new azure_nextgen.security.AlertsSuppressionRule("alertsSuppressionRule", {
+const alertsSuppressionRule = new azure_nextgen.security.v20190101preview.AlertsSuppressionRule("alertsSuppressionRule", {
     alertType: "IpAnomaly",
     alertsSuppressionRuleName: "dismissIpAnomalyAlerts",
     comment: "Test VM",

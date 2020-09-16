@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var automation = new AzureNextGen.Security.Automation("automation", new AzureNextGen.Security.AutomationArgs
+        var automation = new AzureNextGen.Security.V20190101Preview.Automation("automation", new AzureNextGen.Security.V20190101Preview.AutomationArgs
         {
             Actions = 
             {
@@ -45,7 +45,7 @@ class MyStack : Stack
             ResourceGroupName = "exampleResourceGroup",
             Scopes = 
             {
-                new AzureNextGen.Security.Inputs.AutomationScopeArgs
+                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationScopeArgs
                 {
                     Description = "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
                     ScopePath = "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
@@ -53,7 +53,7 @@ class MyStack : Stack
             },
             Sources = 
             {
-                new AzureNextGen.Security.Inputs.AutomationSourceArgs
+                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationSourceArgs
                 {
                     EventSource = "Assessments",
                 },
@@ -78,7 +78,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-automation = azure_nextgen.security.Automation("automation",
+automation = azure_nextgen.security.v20190101preview.Automation("automation",
     actions=[{
         "actionType": "LogicApp",
         "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -109,7 +109,7 @@ automation = azure_nextgen.security.Automation("automation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const automation = new azure_nextgen.security.Automation("automation", {
+const automation = new azure_nextgen.security.v20190101preview.Automation("automation", {
     actions: [{
         actionType: "LogicApp",
         logicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -145,7 +145,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var automation = new AzureNextGen.Security.Automation("automation", new AzureNextGen.Security.AutomationArgs
+        var automation = new AzureNextGen.Security.V20190101Preview.Automation("automation", new AzureNextGen.Security.V20190101Preview.AutomationArgs
         {
             Actions = 
             {
@@ -164,7 +164,7 @@ class MyStack : Stack
             ResourceGroupName = "exampleResourceGroup",
             Scopes = 
             {
-                new AzureNextGen.Security.Inputs.AutomationScopeArgs
+                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationScopeArgs
                 {
                     Description = "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
                     ScopePath = "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
@@ -172,16 +172,16 @@ class MyStack : Stack
             },
             Sources = 
             {
-                new AzureNextGen.Security.Inputs.AutomationSourceArgs
+                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationSourceArgs
                 {
                     EventSource = "Assessments",
                     RuleSets = 
                     {
-                        new AzureNextGen.Security.Inputs.AutomationRuleSetArgs
+                        new AzureNextGen.Security.V20190101Preview.Inputs.AutomationRuleSetArgs
                         {
                             Rules = 
                             {
-                                new AzureNextGen.Security.Inputs.AutomationTriggeringRuleArgs
+                                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationTriggeringRuleArgs
                                 {
                                     ExpectedValue = "High",
                                     Operator = "Equals",
@@ -213,7 +213,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-automation = azure_nextgen.security.Automation("automation",
+automation = azure_nextgen.security.v20190101preview.Automation("automation",
     actions=[{
         "actionType": "LogicApp",
         "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -252,7 +252,7 @@ automation = azure_nextgen.security.Automation("automation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const automation = new azure_nextgen.security.Automation("automation", {
+const automation = new azure_nextgen.security.v20190101preview.Automation("automation", {
     actions: [{
         actionType: "LogicApp",
         logicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -296,7 +296,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var automation = new AzureNextGen.Security.Automation("automation", new AzureNextGen.Security.AutomationArgs
+        var automation = new AzureNextGen.Security.V20190101Preview.Automation("automation", new AzureNextGen.Security.V20190101Preview.AutomationArgs
         {
             Actions = 
             {
@@ -315,7 +315,7 @@ class MyStack : Stack
             ResourceGroupName = "exampleResourceGroup",
             Scopes = 
             {
-                new AzureNextGen.Security.Inputs.AutomationScopeArgs
+                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationScopeArgs
                 {
                     Description = "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
                     ScopePath = "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
@@ -323,16 +323,16 @@ class MyStack : Stack
             },
             Sources = 
             {
-                new AzureNextGen.Security.Inputs.AutomationSourceArgs
+                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationSourceArgs
                 {
                     EventSource = "Assessments",
                     RuleSets = 
                     {
-                        new AzureNextGen.Security.Inputs.AutomationRuleSetArgs
+                        new AzureNextGen.Security.V20190101Preview.Inputs.AutomationRuleSetArgs
                         {
                             Rules = 
                             {
-                                new AzureNextGen.Security.Inputs.AutomationTriggeringRuleArgs
+                                new AzureNextGen.Security.V20190101Preview.Inputs.AutomationTriggeringRuleArgs
                                 {
                                     ExpectedValue = "customAssessment",
                                     Operator = "Equals",
@@ -364,7 +364,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-automation = azure_nextgen.security.Automation("automation",
+automation = azure_nextgen.security.v20190101preview.Automation("automation",
     actions=[{
         "actionType": "LogicApp",
         "logicAppResourceId": "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
@@ -403,7 +403,7 @@ automation = azure_nextgen.security.Automation("automation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const automation = new azure_nextgen.security.Automation("automation", {
+const automation = new azure_nextgen.security.v20190101preview.Automation("automation", {
     actions: [{
         actionType: "LogicApp",
         logicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",

@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotDpsResource = new AzureNextGen.Devices.IotDpsResource("iotDpsResource", new AzureNextGen.Devices.IotDpsResourceArgs
+        var iotDpsResource = new AzureNextGen.Devices.Latest.IotDpsResource("iotDpsResource", new AzureNextGen.Devices.Latest.IotDpsResourceArgs
         {
             Location = "East US",
             ProvisioningServiceName = "myFirstProvisioningService",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Devices.Inputs.IotDpsSkuInfoArgs
+            Sku = new AzureNextGen.Devices.Latest.Inputs.IotDpsSkuInfoArgs
             {
                 Capacity = 1,
                 Name = "S1",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_dps_resource = azure_nextgen.devices.IotDpsResource("iotDpsResource",
+iot_dps_resource = azure_nextgen.devices.latest.IotDpsResource("iotDpsResource",
     location="East US",
     provisioning_service_name="myFirstProvisioningService",
     resource_group_name="myResourceGroup",
@@ -76,7 +76,7 @@ iot_dps_resource = azure_nextgen.devices.IotDpsResource("iotDpsResource",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const iotDpsResource = new azure_nextgen.devices.IotDpsResource("iotDpsResource", {
+const iotDpsResource = new azure_nextgen.devices.latest.IotDpsResource("iotDpsResource", {
     location: "East US",
     provisioningServiceName: "myFirstProvisioningService",
     resourceGroupName: "myResourceGroup",

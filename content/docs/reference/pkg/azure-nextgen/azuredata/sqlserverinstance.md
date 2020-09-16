@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlServerInstance = new AzureNextGen.Azuredata.SqlServerInstance("sqlServerInstance", new AzureNextGen.Azuredata.SqlServerInstanceArgs
+        var sqlServerInstance = new AzureNextGen.AzureData.V20190724Preview.SqlServerInstance("sqlServerInstance", new AzureNextGen.AzureData.V20190724Preview.SqlServerInstanceArgs
         {
             ContainerResourceId = "Arc Machine Name",
             Edition = "Developer",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_server_instance = azure_nextgen.azuredata.SqlServerInstance("sqlServerInstance",
+sql_server_instance = azure_nextgen.azuredata.v20190724preview.SqlServerInstance("sqlServerInstance",
     container_resource_id="Arc Machine Name",
     edition="Developer",
     location="northeurope",
@@ -82,7 +82,7 @@ sql_server_instance = azure_nextgen.azuredata.SqlServerInstance("sqlServerInstan
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlServerInstance = new azure_nextgen.azuredata.SqlServerInstance("sqlServerInstance", {
+const sqlServerInstance = new azure_nextgen.azuredata.v20190724preview.SqlServerInstance("sqlServerInstance", {
     containerResourceId: "Arc Machine Name",
     edition: "Developer",
     location: "northeurope",

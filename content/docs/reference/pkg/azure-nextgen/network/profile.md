@@ -26,15 +26,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Network.Profile("profile", new AzureNextGen.Network.ProfileArgs
+        var profile = new AzureNextGen.Network.Latest.Profile("profile", new AzureNextGen.Network.Latest.ProfileArgs
         {
-            DnsConfig = new AzureNextGen.Network.Inputs.DnsConfigArgs
+            DnsConfig = new AzureNextGen.Network.Latest.Inputs.DnsConfigArgs
             {
                 RelativeName = "azsmnet6386",
                 Ttl = 35,
             },
             Location = "global",
-            MonitorConfig = new AzureNextGen.Network.Inputs.MonitorConfigArgs
+            MonitorConfig = new AzureNextGen.Network.Latest.Inputs.MonitorConfigArgs
             {
                 Path = "/testpath.aspx",
                 Port = 80,
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.network.Profile("profile",
+profile = azure_nextgen.network.latest.Profile("profile",
     dns_config={
         "relativeName": "azsmnet6386",
         "ttl": 35,
@@ -89,7 +89,7 @@ profile = azure_nextgen.network.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const profile = new azure_nextgen.network.Profile("profile", {
+const profile = new azure_nextgen.network.latest.Profile("profile", {
     dnsConfig: {
         relativeName: "azsmnet6386",
         ttl: 35,
@@ -120,32 +120,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Network.Profile("profile", new AzureNextGen.Network.ProfileArgs
+        var profile = new AzureNextGen.Network.Latest.Profile("profile", new AzureNextGen.Network.Latest.ProfileArgs
         {
-            DnsConfig = new AzureNextGen.Network.Inputs.DnsConfigArgs
+            DnsConfig = new AzureNextGen.Network.Latest.Inputs.DnsConfigArgs
             {
                 RelativeName = "azuresdkfornetautoresttrafficmanager6192",
                 Ttl = 35,
             },
             Endpoints = 
             {
-                new AzureNextGen.Network.Inputs.EndpointArgs
+                new AzureNextGen.Network.Latest.Inputs.EndpointArgs
                 {
                     Name = "My external endpoint",
                     Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
                 },
             },
             Location = "global",
-            MonitorConfig = new AzureNextGen.Network.Inputs.MonitorConfigArgs
+            MonitorConfig = new AzureNextGen.Network.Latest.Inputs.MonitorConfigArgs
             {
                 CustomHeaders = 
                 {
-                    new AzureNextGen.Network.Inputs.MonitorConfigCustomHeadersArgs
+                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigCustomHeadersArgs
                     {
                         Name = "header-1",
                         Value = "value-1",
                     },
-                    new AzureNextGen.Network.Inputs.MonitorConfigCustomHeadersArgs
+                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigCustomHeadersArgs
                     {
                         Name = "header-2",
                         Value = "value-2",
@@ -153,12 +153,12 @@ class MyStack : Stack
                 },
                 ExpectedStatusCodeRanges = 
                 {
-                    new AzureNextGen.Network.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
+                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
                     {
                         Max = 205,
                         Min = 200,
                     },
-                    new AzureNextGen.Network.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
+                    new AzureNextGen.Network.Latest.Inputs.MonitorConfigExpectedStatusCodeRangesArgs
                     {
                         Max = 410,
                         Min = 400,
@@ -195,7 +195,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.network.Profile("profile",
+profile = azure_nextgen.network.latest.Profile("profile",
     dns_config={
         "relativeName": "azuresdkfornetautoresttrafficmanager6192",
         "ttl": 35,
@@ -249,7 +249,7 @@ profile = azure_nextgen.network.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const profile = new azure_nextgen.network.Profile("profile", {
+const profile = new azure_nextgen.network.latest.Profile("profile", {
     dnsConfig: {
         relativeName: "azuresdkfornetautoresttrafficmanager6192",
         ttl: 35,
@@ -308,23 +308,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var profile = new AzureNextGen.Network.Profile("profile", new AzureNextGen.Network.ProfileArgs
+        var profile = new AzureNextGen.Network.Latest.Profile("profile", new AzureNextGen.Network.Latest.ProfileArgs
         {
-            DnsConfig = new AzureNextGen.Network.Inputs.DnsConfigArgs
+            DnsConfig = new AzureNextGen.Network.Latest.Inputs.DnsConfigArgs
             {
                 RelativeName = "azuresdkfornetautoresttrafficmanager6192",
                 Ttl = 35,
             },
             Endpoints = 
             {
-                new AzureNextGen.Network.Inputs.EndpointArgs
+                new AzureNextGen.Network.Latest.Inputs.EndpointArgs
                 {
                     Name = "My external endpoint",
                     Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
                 },
             },
             Location = "global",
-            MonitorConfig = new AzureNextGen.Network.Inputs.MonitorConfigArgs
+            MonitorConfig = new AzureNextGen.Network.Latest.Inputs.MonitorConfigArgs
             {
                 IntervalInSeconds = 10,
                 Path = "/testpath.aspx",
@@ -356,7 +356,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-profile = azure_nextgen.network.Profile("profile",
+profile = azure_nextgen.network.latest.Profile("profile",
     dns_config={
         "relativeName": "azuresdkfornetautoresttrafficmanager6192",
         "ttl": 35,
@@ -389,7 +389,7 @@ profile = azure_nextgen.network.Profile("profile",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const profile = new azure_nextgen.network.Profile("profile", {
+const profile = new azure_nextgen.network.latest.Profile("profile", {
     dnsConfig: {
         relativeName: "azuresdkfornetautoresttrafficmanager6192",
         ttl: 35,

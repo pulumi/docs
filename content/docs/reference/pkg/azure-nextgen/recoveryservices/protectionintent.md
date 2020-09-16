@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var protectionIntent = new AzureNextGen.Recoveryservices.ProtectionIntent("protectionIntent", new AzureNextGen.Recoveryservices.ProtectionIntentArgs
+        var protectionIntent = new AzureNextGen.RecoveryServices.Latest.ProtectionIntent("protectionIntent", new AzureNextGen.RecoveryServices.Latest.ProtectionIntentArgs
         {
             FabricName = "Azure",
             IntentObjectName = "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-protection_intent = azure_nextgen.recoveryservices.ProtectionIntent("protectionIntent",
+protection_intent = azure_nextgen.recoveryservices.latest.ProtectionIntent("protectionIntent",
     fabric_name="Azure",
     intent_object_name="vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
     resource_group_name="myRG",
@@ -67,7 +67,7 @@ protection_intent = azure_nextgen.recoveryservices.ProtectionIntent("protectionI
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const protectionIntent = new azure_nextgen.recoveryservices.ProtectionIntent("protectionIntent", {
+const protectionIntent = new azure_nextgen.recoveryservices.latest.ProtectionIntent("protectionIntent", {
     fabricName: "Azure",
     intentObjectName: "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
     resourceGroupName: "myRG",

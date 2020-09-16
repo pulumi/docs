@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiRelease = new AzureNextGen.Apimanagement.ApiRelease("apiRelease", new AzureNextGen.Apimanagement.ApiReleaseArgs
+        var apiRelease = new AzureNextGen.ApiManagement.Latest.ApiRelease("apiRelease", new AzureNextGen.ApiManagement.Latest.ApiReleaseArgs
         {
             ApiId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
             Notes = "yahooagain",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_release = azure_nextgen.apimanagement.ApiRelease("apiRelease",
+api_release = azure_nextgen.apimanagement.latest.ApiRelease("apiRelease",
     api_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
     notes="yahooagain",
     release_id="testrev",
@@ -69,7 +69,7 @@ api_release = azure_nextgen.apimanagement.ApiRelease("apiRelease",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiRelease = new azure_nextgen.apimanagement.ApiRelease("apiRelease", {
+const apiRelease = new azure_nextgen.apimanagement.latest.ApiRelease("apiRelease", {
     apiId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1",
     notes: "yahooagain",
     releaseId: "testrev",

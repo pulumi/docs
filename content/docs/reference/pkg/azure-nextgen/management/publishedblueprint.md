@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var publishedBlueprint = new AzureNextGen.Management.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Management.PublishedBlueprintArgs
+        var publishedBlueprint = new AzureNextGen.Management.V20171111Preview.PublishedBlueprint("publishedBlueprint", new AzureNextGen.Management.V20171111Preview.PublishedBlueprintArgs
         {
             BlueprintName = "simpleBlueprint",
             ManagementGroupName = "ContosoOnlineGroup",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-published_blueprint = azure_nextgen.management.PublishedBlueprint("publishedBlueprint",
+published_blueprint = azure_nextgen.management.v20171111preview.PublishedBlueprint("publishedBlueprint",
     blueprint_name="simpleBlueprint",
     management_group_name="ContosoOnlineGroup",
     version_id="v2")
@@ -65,7 +65,7 @@ published_blueprint = azure_nextgen.management.PublishedBlueprint("publishedBlue
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const publishedBlueprint = new azure_nextgen.management.PublishedBlueprint("publishedBlueprint", {
+const publishedBlueprint = new azure_nextgen.management.v20171111preview.PublishedBlueprint("publishedBlueprint", {
     blueprintName: "simpleBlueprint",
     managementGroupName: "ContosoOnlineGroup",
     versionId: "v2",

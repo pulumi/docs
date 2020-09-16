@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationProfilePreference = new AzureNextGen.Automanage.ConfigurationProfilePreference("configurationProfilePreference", new AzureNextGen.Automanage.ConfigurationProfilePreferenceArgs
+        var configurationProfilePreference = new AzureNextGen.Automanage.V20200630Preview.ConfigurationProfilePreference("configurationProfilePreference", new AzureNextGen.Automanage.V20200630Preview.ConfigurationProfilePreferenceArgs
         {
             ConfigurationProfilePreferenceName = "defaultProfilePreference",
             Location = "East US",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_profile_preference = azure_nextgen.automanage.ConfigurationProfilePreference("configurationProfilePreference",
+configuration_profile_preference = azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference",
     configuration_profile_preference_name="defaultProfilePreference",
     location="East US",
     resource_group_name="myResourceGroupName",
@@ -72,7 +72,7 @@ configuration_profile_preference = azure_nextgen.automanage.ConfigurationProfile
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const configurationProfilePreference = new azure_nextgen.automanage.ConfigurationProfilePreference("configurationProfilePreference", {
+const configurationProfilePreference = new azure_nextgen.automanage.v20200630preview.ConfigurationProfilePreference("configurationProfilePreference", {
     configurationProfilePreferenceName: "defaultProfilePreference",
     location: "East US",
     resourceGroupName: "myResourceGroupName",

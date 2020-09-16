@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var transactionNode = new AzureNextGen.Blockchain.TransactionNode("transactionNode", new AzureNextGen.Blockchain.TransactionNodeArgs
+        var transactionNode = new AzureNextGen.Blockchain.V20180601Preview.TransactionNode("transactionNode", new AzureNextGen.Blockchain.V20180601Preview.TransactionNodeArgs
         {
             BlockchainMemberName = "contosemember1",
             Location = "southeastasia",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-transaction_node = azure_nextgen.blockchain.TransactionNode("transactionNode",
+transaction_node = azure_nextgen.blockchain.v20180601preview.TransactionNode("transactionNode",
     blockchain_member_name="contosemember1",
     location="southeastasia",
     password="1234abcdEFG1",
@@ -69,7 +69,7 @@ transaction_node = azure_nextgen.blockchain.TransactionNode("transactionNode",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const transactionNode = new azure_nextgen.blockchain.TransactionNode("transactionNode", {
+const transactionNode = new azure_nextgen.blockchain.v20180601preview.TransactionNode("transactionNode", {
     blockchainMemberName: "contosemember1",
     location: "southeastasia",
     password: "1234abcdEFG1",

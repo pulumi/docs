@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var threatIntelligenceIndicator = new AzureNextGen.Securityinsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator", new AzureNextGen.Securityinsights.ThreatIntelligenceIndicatorArgs
+        var threatIntelligenceIndicator = new AzureNextGen.SecurityInsights.V20190101Preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator", new AzureNextGen.SecurityInsights.V20190101Preview.ThreatIntelligenceIndicatorArgs
         {
             Confidence = 78,
             CreatedByRef = "contoso@contoso.com",
@@ -75,7 +75,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-threat_intelligence_indicator = azure_nextgen.securityinsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator",
+threat_intelligence_indicator = azure_nextgen.securityinsights.v20190101preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator",
     confidence=78,
     created_by_ref="contoso@contoso.com",
     description="debugging indicators",
@@ -109,7 +109,7 @@ threat_intelligence_indicator = azure_nextgen.securityinsights.ThreatIntelligenc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const threatIntelligenceIndicator = new azure_nextgen.securityinsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator", {
+const threatIntelligenceIndicator = new azure_nextgen.securityinsights.v20190101preview.ThreatIntelligenceIndicator("threatIntelligenceIndicator", {
     confidence: 78,
     createdByRef: "contoso@contoso.com",
     description: "debugging indicators",

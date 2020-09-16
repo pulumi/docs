@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @alias = new AzureNextGen.Subscription.Alias("alias", new AzureNextGen.Subscription.AliasArgs
+        var @alias = new AzureNextGen.Subscription.Latest.Alias("alias", new AzureNextGen.Subscription.Latest.AliasArgs
         {
             AliasName = "aliasForNewSub",
         });
@@ -48,7 +48,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alias = azure_nextgen.subscription.Alias("alias", alias_name="aliasForNewSub")
+alias = azure_nextgen.subscription.latest.Alias("alias", alias_name="aliasForNewSub")
 
 ```
 
@@ -60,7 +60,7 @@ alias = azure_nextgen.subscription.Alias("alias", alias_name="aliasForNewSub")
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const alias = new azure_nextgen.subscription.Alias("alias", {aliasName: "aliasForNewSub"});
+const alias = new azure_nextgen.subscription.latest.Alias("alias", {aliasName: "aliasForNewSub"});
 
 ```
 

@@ -26,25 +26,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectionType = new AzureNextGen.Automation.ConnectionType("connectionType", new AzureNextGen.Automation.ConnectionTypeArgs
+        var connectionType = new AzureNextGen.Automation.Latest.ConnectionType("connectionType", new AzureNextGen.Automation.Latest.ConnectionTypeArgs
         {
             AutomationAccountName = "myAutomationAccount22",
             ConnectionTypeName = "myCT",
             FieldDefinitions = 
             {
-                { "myBoolField", new AzureNextGen.Automation.Inputs.FieldDefinitionArgs
+                { "myBoolField", new AzureNextGen.Automation.Latest.Inputs.FieldDefinitionArgs
                 {
                     IsEncrypted = false,
                     IsOptional = false,
                     Type = "bool",
                 } },
-                { "myStringField", new AzureNextGen.Automation.Inputs.FieldDefinitionArgs
+                { "myStringField", new AzureNextGen.Automation.Latest.Inputs.FieldDefinitionArgs
                 {
                     IsEncrypted = false,
                     IsOptional = false,
                     Type = "string",
                 } },
-                { "myStringFieldEncrypted", new AzureNextGen.Automation.Inputs.FieldDefinitionArgs
+                { "myStringFieldEncrypted", new AzureNextGen.Automation.Latest.Inputs.FieldDefinitionArgs
                 {
                     IsEncrypted = true,
                     IsOptional = false,
@@ -73,7 +73,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection_type = azure_nextgen.automation.ConnectionType("connectionType",
+connection_type = azure_nextgen.automation.latest.ConnectionType("connectionType",
     automation_account_name="myAutomationAccount22",
     connection_type_name="myCT",
     field_definitions={
@@ -107,7 +107,7 @@ connection_type = azure_nextgen.automation.ConnectionType("connectionType",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connectionType = new azure_nextgen.automation.ConnectionType("connectionType", {
+const connectionType = new azure_nextgen.automation.latest.ConnectionType("connectionType", {
     automationAccountName: "myAutomationAccount22",
     connectionTypeName: "myCT",
     fieldDefinitions: {

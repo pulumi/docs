@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSource = new AzureNextGen.Operationalinsights.DataSource("dataSource", new AzureNextGen.Operationalinsights.DataSourceArgs
+        var dataSource = new AzureNextGen.OperationalInsights.Latest.DataSource("dataSource", new AzureNextGen.OperationalInsights.Latest.DataSourceArgs
         {
             DataSourceName = "AzTestDS774",
             Kind = "AzureActivityLog",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_source = azure_nextgen.operationalinsights.DataSource("dataSource",
+data_source = azure_nextgen.operationalinsights.latest.DataSource("dataSource",
     data_source_name="AzTestDS774",
     kind="AzureActivityLog",
     resource_group_name="OIAutoRest5123",
@@ -67,7 +67,7 @@ data_source = azure_nextgen.operationalinsights.DataSource("dataSource",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataSource = new azure_nextgen.operationalinsights.DataSource("dataSource", {
+const dataSource = new azure_nextgen.operationalinsights.latest.DataSource("dataSource", {
     dataSourceName: "AzTestDS774",
     kind: "AzureActivityLog",
     resourceGroupName: "OIAutoRest5123",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var property = new AzureNextGen.Apimanagement.Property("property", new AzureNextGen.Apimanagement.PropertyArgs
+        var property = new AzureNextGen.ApiManagement.Latest.Property("property", new AzureNextGen.ApiManagement.Latest.PropertyArgs
         {
             DisplayName = "prop3name",
             PropId = "testprop2",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-property = azure_nextgen.apimanagement.Property("property",
+property = azure_nextgen.apimanagement.latest.Property("property",
     display_name="prop3name",
     prop_id="testprop2",
     resource_group_name="rg1",
@@ -80,7 +80,7 @@ property = azure_nextgen.apimanagement.Property("property",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const property = new azure_nextgen.apimanagement.Property("property", {
+const property = new azure_nextgen.apimanagement.latest.Property("property", {
     displayName: "prop3name",
     propId: "testprop2",
     resourceGroupName: "rg1",

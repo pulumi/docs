@@ -26,15 +26,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var operationalizationCluster = new AzureNextGen.Machinelearningcompute.OperationalizationCluster("operationalizationCluster", new AzureNextGen.Machinelearningcompute.OperationalizationClusterArgs
+        var operationalizationCluster = new AzureNextGen.MachineLearningCompute.V20170801Preview.OperationalizationCluster("operationalizationCluster", new AzureNextGen.MachineLearningCompute.V20170801Preview.OperationalizationClusterArgs
         {
             ClusterName = "myCluster",
             ClusterType = "ACS",
-            ContainerService = new AzureNextGen.Machinelearningcompute.Inputs.AcsClusterPropertiesArgs
+            ContainerService = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.AcsClusterPropertiesArgs
             {
-                OrchestratorProperties = new AzureNextGen.Machinelearningcompute.Inputs.KubernetesClusterPropertiesArgs
+                OrchestratorProperties = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.KubernetesClusterPropertiesArgs
                 {
-                    ServicePrincipal = new AzureNextGen.Machinelearningcompute.Inputs.ServicePrincipalPropertiesArgs
+                    ServicePrincipal = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.ServicePrincipalPropertiesArgs
                     {
                         ClientId = "abcdefghijklmnopqrt",
                         Secret = "uiuiwueiwuewiue",
@@ -43,9 +43,9 @@ class MyStack : Stack
                 OrchestratorType = "Kubernetes",
             },
             Description = "My Operationalization Cluster",
-            GlobalServiceConfiguration = new AzureNextGen.Machinelearningcompute.Inputs.GlobalServiceConfigurationArgs
+            GlobalServiceConfiguration = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.GlobalServiceConfigurationArgs
             {
-                Ssl = new AzureNextGen.Machinelearningcompute.Inputs.SslConfigurationArgs
+                Ssl = new AzureNextGen.MachineLearningCompute.V20170801Preview.Inputs.SslConfigurationArgs
                 {
                     Cert = "afjdklq2131casfakld=",
                     Cname = "foo.bar.com",
@@ -79,7 +79,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-operationalization_cluster = azure_nextgen.machinelearningcompute.OperationalizationCluster("operationalizationCluster",
+operationalization_cluster = azure_nextgen.machinelearningcompute.v20170801preview.OperationalizationCluster("operationalizationCluster",
     cluster_name="myCluster",
     cluster_type="ACS",
     container_service={
@@ -117,7 +117,7 @@ operationalization_cluster = azure_nextgen.machinelearningcompute.Operationaliza
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const operationalizationCluster = new azure_nextgen.machinelearningcompute.OperationalizationCluster("operationalizationCluster", {
+const operationalizationCluster = new azure_nextgen.machinelearningcompute.v20170801preview.OperationalizationCluster("operationalizationCluster", {
     clusterName: "myCluster",
     clusterType: "ACS",
     containerService: {

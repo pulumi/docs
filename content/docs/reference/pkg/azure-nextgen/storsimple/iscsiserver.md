@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iscsiServer = new AzureNextGen.Storsimple.IscsiServer("iscsiServer", new AzureNextGen.Storsimple.IscsiServerArgs
+        var iscsiServer = new AzureNextGen.StorSimple.Latest.IscsiServer("iscsiServer", new AzureNextGen.StorSimple.Latest.IscsiServerArgs
         {
             BackupScheduleGroupId = "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-WSJQERQW3F/backupScheduleGroups/Default-HSDK-WSJQERQW3F-BackupScheduleGroup",
             ChapId = "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-WSJQERQW3F/chapSettings/ChapSettingForSDK",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iscsi_server = azure_nextgen.storsimple.IscsiServer("iscsiServer",
+iscsi_server = azure_nextgen.storsimple.latest.IscsiServer("iscsiServer",
     backup_schedule_group_id="/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-WSJQERQW3F/backupScheduleGroups/Default-HSDK-WSJQERQW3F-BackupScheduleGroup",
     chap_id="/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-WSJQERQW3F/chapSettings/ChapSettingForSDK",
     device_name="HSDK-WSJQERQW3F",
@@ -75,7 +75,7 @@ iscsi_server = azure_nextgen.storsimple.IscsiServer("iscsiServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const iscsiServer = new azure_nextgen.storsimple.IscsiServer("iscsiServer", {
+const iscsiServer = new azure_nextgen.storsimple.latest.IscsiServer("iscsiServer", {
     backupScheduleGroupId: "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-WSJQERQW3F/backupScheduleGroups/Default-HSDK-WSJQERQW3F-BackupScheduleGroup",
     chapId: "/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-WSJQERQW3F/chapSettings/ChapSettingForSDK",
     deviceName: "HSDK-WSJQERQW3F",

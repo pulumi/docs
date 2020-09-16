@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var computePolicy = new AzureNextGen.Datalakeanalytics.ComputePolicy("computePolicy", new AzureNextGen.Datalakeanalytics.ComputePolicyArgs
+        var computePolicy = new AzureNextGen.DataLakeAnalytics.Latest.ComputePolicy("computePolicy", new AzureNextGen.DataLakeAnalytics.Latest.ComputePolicyArgs
         {
             AccountName = "contosoadla",
             ComputePolicyName = "test_policy",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-compute_policy = azure_nextgen.datalakeanalytics.ComputePolicy("computePolicy",
+compute_policy = azure_nextgen.datalakeanalytics.latest.ComputePolicy("computePolicy",
     account_name="contosoadla",
     compute_policy_name="test_policy",
     max_degree_of_parallelism_per_job=10,
@@ -73,7 +73,7 @@ compute_policy = azure_nextgen.datalakeanalytics.ComputePolicy("computePolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const computePolicy = new azure_nextgen.datalakeanalytics.ComputePolicy("computePolicy", {
+const computePolicy = new azure_nextgen.datalakeanalytics.latest.ComputePolicy("computePolicy", {
     accountName: "contosoadla",
     computePolicyName: "test_policy",
     maxDegreeOfParallelismPerJob: 10,

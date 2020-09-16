@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var enterpriseChannel = new AzureNextGen.Botservice.EnterpriseChannel("enterpriseChannel", new AzureNextGen.Botservice.EnterpriseChannelArgs
+        var enterpriseChannel = new AzureNextGen.BotService.Latest.EnterpriseChannel("enterpriseChannel", new AzureNextGen.BotService.Latest.EnterpriseChannelArgs
         {
             Etag = "etag1",
             Location = "West US",
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "contoso-dl",
-            Sku = new AzureNextGen.Botservice.Inputs.SkuArgs
+            Sku = new AzureNextGen.BotService.Latest.Inputs.SkuArgs
             {
                 Name = "S1",
             },
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-enterprise_channel = azure_nextgen.botservice.EnterpriseChannel("enterpriseChannel",
+enterprise_channel = azure_nextgen.botservice.latest.EnterpriseChannel("enterpriseChannel",
     etag="etag1",
     location="West US",
     resource_group_name="OneResourceGroupName",
@@ -83,7 +83,7 @@ enterprise_channel = azure_nextgen.botservice.EnterpriseChannel("enterpriseChann
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const enterpriseChannel = new azure_nextgen.botservice.EnterpriseChannel("enterpriseChannel", {
+const enterpriseChannel = new azure_nextgen.botservice.latest.EnterpriseChannel("enterpriseChannel", {
     etag: "etag1",
     location: "West US",
     resourceGroupName: "OneResourceGroupName",

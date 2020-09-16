@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var consoleWithLocation = new AzureNextGen.Portal.ConsoleWithLocation("consoleWithLocation", new AzureNextGen.Portal.ConsoleWithLocationArgs
+        var consoleWithLocation = new AzureNextGen.Portal.Latest.ConsoleWithLocation("consoleWithLocation", new AzureNextGen.Portal.Latest.ConsoleWithLocationArgs
         {
             ConsoleName = "default",
             Location = "eastus",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-console_with_location = azure_nextgen.portal.ConsoleWithLocation("consoleWithLocation",
+console_with_location = azure_nextgen.portal.latest.ConsoleWithLocation("consoleWithLocation",
     console_name="default",
     location="eastus")
 
@@ -63,7 +63,7 @@ console_with_location = azure_nextgen.portal.ConsoleWithLocation("consoleWithLoc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const consoleWithLocation = new azure_nextgen.portal.ConsoleWithLocation("consoleWithLocation", {
+const consoleWithLocation = new azure_nextgen.portal.latest.ConsoleWithLocation("consoleWithLocation", {
     consoleName: "default",
     location: "eastus",
 });

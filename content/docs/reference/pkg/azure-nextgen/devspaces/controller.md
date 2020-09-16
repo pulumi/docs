@@ -25,12 +25,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var controller = new AzureNextGen.Devspaces.Controller("controller", new AzureNextGen.Devspaces.ControllerArgs
+        var controller = new AzureNextGen.DevSpaces.Latest.Controller("controller", new AzureNextGen.DevSpaces.Latest.ControllerArgs
         {
             Location = "eastus",
             Name = "myControllerResource",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Devspaces.Inputs.SkuArgs
+            Sku = new AzureNextGen.DevSpaces.Latest.Inputs.SkuArgs
             {
                 Name = "S1",
                 Tier = "Standard",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-controller = azure_nextgen.devspaces.Controller("controller",
+controller = azure_nextgen.devspaces.latest.Controller("controller",
     location="eastus",
     name="myControllerResource",
     resource_group_name="myResourceGroup",
@@ -79,7 +79,7 @@ controller = azure_nextgen.devspaces.Controller("controller",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const controller = new azure_nextgen.devspaces.Controller("controller", {
+const controller = new azure_nextgen.devspaces.latest.Controller("controller", {
     location: "eastus",
     name: "myControllerResource",
     resourceGroupName: "myResourceGroup",

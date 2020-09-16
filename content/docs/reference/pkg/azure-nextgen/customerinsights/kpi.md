@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var kpi = new AzureNextGen.Customerinsights.Kpi("kpi", new AzureNextGen.Customerinsights.KpiArgs
+        var kpi = new AzureNextGen.CustomerInsights.Latest.Kpi("kpi", new AzureNextGen.CustomerInsights.Latest.KpiArgs
         {
             Aliases = 
             {
-                new AzureNextGen.Customerinsights.Inputs.KpiAliasArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.KpiAliasArgs
                 {
                     AliasName = "alias",
                     Expression = "Id+4",
@@ -56,7 +56,7 @@ class MyStack : Stack
             HubName = "sdkTestHub",
             KpiName = "kpiTest45453647",
             ResourceGroupName = "TestHubRG",
-            ThresHolds = new AzureNextGen.Customerinsights.Inputs.KpiThresholdsArgs
+            ThresHolds = new AzureNextGen.CustomerInsights.Latest.Inputs.KpiThresholdsArgs
             {
                 IncreasingKpi = true,
                 LowerLimit = 5,
@@ -82,7 +82,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-kpi = azure_nextgen.customerinsights.Kpi("kpi",
+kpi = azure_nextgen.customerinsights.latest.Kpi("kpi",
     aliases=[{
         "aliasName": "alias",
         "expression": "Id+4",
@@ -119,7 +119,7 @@ kpi = azure_nextgen.customerinsights.Kpi("kpi",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const kpi = new azure_nextgen.customerinsights.Kpi("kpi", {
+const kpi = new azure_nextgen.customerinsights.latest.Kpi("kpi", {
     aliases: [{
         aliasName: "alias",
         expression: "Id+4",

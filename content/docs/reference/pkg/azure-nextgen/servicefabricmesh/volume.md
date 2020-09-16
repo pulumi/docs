@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var volume = new AzureNextGen.Servicefabricmesh.Volume("volume", new AzureNextGen.Servicefabricmesh.VolumeArgs
+        var volume = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Volume("volume", new AzureNextGen.ServiceFabricMesh.V20180901Preview.VolumeArgs
         {
-            AzureFileParameters = new AzureNextGen.Servicefabricmesh.Inputs.VolumeProviderParametersAzureFileArgs
+            AzureFileParameters = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.VolumeProviderParametersAzureFileArgs
             {
                 AccountKey = "provide-account-key-here",
                 AccountName = "sbzdemoaccount",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-volume = azure_nextgen.servicefabricmesh.Volume("volume",
+volume = azure_nextgen.servicefabricmesh.v20180901preview.Volume("volume",
     azure_file_parameters={
         "accountKey": "provide-account-key-here",
         "accountName": "sbzdemoaccount",
@@ -82,7 +82,7 @@ volume = azure_nextgen.servicefabricmesh.Volume("volume",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const volume = new azure_nextgen.servicefabricmesh.Volume("volume", {
+const volume = new azure_nextgen.servicefabricmesh.v20180901preview.Volume("volume", {
     azureFileParameters: {
         accountKey: "provide-account-key-here",
         accountName: "sbzdemoaccount",

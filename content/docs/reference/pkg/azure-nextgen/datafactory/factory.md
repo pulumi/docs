@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var factory = new AzureNextGen.Datafactory.Factory("factory", new AzureNextGen.Datafactory.FactoryArgs
+        var factory = new AzureNextGen.DataFactory.Latest.Factory("factory", new AzureNextGen.DataFactory.Latest.FactoryArgs
         {
             FactoryName = "exampleFactoryName",
             Location = "East US",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-factory = azure_nextgen.datafactory.Factory("factory",
+factory = azure_nextgen.datafactory.latest.Factory("factory",
     factory_name="exampleFactoryName",
     location="East US",
     resource_group_name="exampleResourceGroup")
@@ -65,7 +65,7 @@ factory = azure_nextgen.datafactory.Factory("factory",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const factory = new azure_nextgen.datafactory.Factory("factory", {
+const factory = new azure_nextgen.datafactory.latest.Factory("factory", {
     factoryName: "exampleFactoryName",
     location: "East US",
     resourceGroupName: "exampleResourceGroup",

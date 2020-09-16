@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationType = new AzureNextGen.Servicefabric.ApplicationType("applicationType", new AzureNextGen.Servicefabric.ApplicationTypeArgs
+        var applicationType = new AzureNextGen.ServiceFabric.Latest.ApplicationType("applicationType", new AzureNextGen.ServiceFabric.Latest.ApplicationTypeArgs
         {
             ApplicationTypeName = "myAppType",
             ClusterName = "myCluster",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_type = azure_nextgen.servicefabric.ApplicationType("applicationType",
+application_type = azure_nextgen.servicefabric.latest.ApplicationType("applicationType",
     application_type_name="myAppType",
     cluster_name="myCluster",
     resource_group_name="resRg")
@@ -65,7 +65,7 @@ application_type = azure_nextgen.servicefabric.ApplicationType("applicationType"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const applicationType = new azure_nextgen.servicefabric.ApplicationType("applicationType", {
+const applicationType = new azure_nextgen.servicefabric.latest.ApplicationType("applicationType", {
     applicationTypeName: "myAppType",
     clusterName: "myCluster",
     resourceGroupName: "resRg",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trustedIdProvider = new AzureNextGen.Datalakestore.TrustedIdProvider("trustedIdProvider", new AzureNextGen.Datalakestore.TrustedIdProviderArgs
+        var trustedIdProvider = new AzureNextGen.DataLakeStore.Latest.TrustedIdProvider("trustedIdProvider", new AzureNextGen.DataLakeStore.Latest.TrustedIdProviderArgs
         {
             AccountName = "contosoadla",
             IdProvider = "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trusted_id_provider = azure_nextgen.datalakestore.TrustedIdProvider("trustedIdProvider",
+trusted_id_provider = azure_nextgen.datalakestore.latest.TrustedIdProvider("trustedIdProvider",
     account_name="contosoadla",
     id_provider="https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
     resource_group_name="contosorg",
@@ -67,7 +67,7 @@ trusted_id_provider = azure_nextgen.datalakestore.TrustedIdProvider("trustedIdPr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const trustedIdProvider = new azure_nextgen.datalakestore.TrustedIdProvider("trustedIdProvider", {
+const trustedIdProvider = new azure_nextgen.datalakestore.latest.TrustedIdProvider("trustedIdProvider", {
     accountName: "contosoadla",
     idProvider: "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
     resourceGroupName: "contosorg",

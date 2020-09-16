@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.FirewallPolicyRuleCollectionGroupArgs
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 110,
@@ -34,9 +34,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -87,7 +87,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
     priority=110,
     resource_group_name="rg1",
@@ -118,7 +118,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRule
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 110,
     resourceGroupName: "rg1",
@@ -154,7 +154,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.FirewallPolicyRuleCollectionGroupArgs
+        var firewallPolicyRuleCollectionGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleCollectionGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 110,
@@ -162,9 +162,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -215,7 +215,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
     firewall_policy_name="firewallPolicy",
     priority=110,
     resource_group_name="rg1",
@@ -246,7 +246,7 @@ firewall_policy_rule_collection_group = azure_nextgen.network.FirewallPolicyRule
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 110,
     resourceGroupName: "rg1",

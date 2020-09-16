@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.Machinelearningservices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.Machinelearningservices.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
     resource_group_name="testrg123",
@@ -67,7 +67,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearning
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     resourceGroupName: "testrg123",
@@ -88,10 +88,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.Machinelearningservices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.Machinelearningservices.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
-            Identity = new AzureNextGen.Machinelearningservices.Inputs.IdentityArgs
+            Identity = new AzureNextGen.MachineLearningServices.Latest.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned,UserAssigned",
             },
@@ -129,7 +129,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     identity={
         "type": "SystemAssigned,UserAssigned",
@@ -158,7 +158,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearning
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     identity: {
         type: "SystemAssigned,UserAssigned",
@@ -192,7 +192,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.Machinelearningservices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.Machinelearningservices.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
@@ -227,7 +227,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
     properties={
@@ -251,7 +251,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearning
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -280,7 +280,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.Machinelearningservices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.Machinelearningservices.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
@@ -309,7 +309,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
     properties={
@@ -328,7 +328,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearning
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -352,7 +352,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.Machinelearningservices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.Machinelearningservices.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
@@ -377,7 +377,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
     resource_group_name="testrg123",
@@ -393,7 +393,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearning
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     resourceGroupName: "testrg123",
@@ -414,7 +414,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.Machinelearningservices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.Machinelearningservices.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
             Location = "eastus",
@@ -443,7 +443,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     location="eastus",
     properties={
@@ -462,7 +462,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearning
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     location: "eastus",
     properties: {
@@ -486,10 +486,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningCompute = new AzureNextGen.Machinelearningservices.MachineLearningCompute("machineLearningCompute", new AzureNextGen.Machinelearningservices.MachineLearningComputeArgs
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
-            Identity = new AzureNextGen.Machinelearningservices.Inputs.IdentityArgs
+            Identity = new AzureNextGen.MachineLearningServices.Latest.Inputs.IdentityArgs
             {
                 Type = "SystemAssigned,UserAssigned",
             },
@@ -524,7 +524,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute",
+machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
     identity={
         "type": "SystemAssigned,UserAssigned",
@@ -550,7 +550,7 @@ machine_learning_compute = azure_nextgen.machinelearningservices.MachineLearning
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const machineLearningCompute = new azure_nextgen.machinelearningservices.MachineLearningCompute("machineLearningCompute", {
+const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
     identity: {
         type: "SystemAssigned,UserAssigned",

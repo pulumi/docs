@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var app = new AzureNextGen.Iotcentral.App("app", new AzureNextGen.Iotcentral.AppArgs
+        var app = new AzureNextGen.IoTCentral.Latest.App("app", new AzureNextGen.IoTCentral.Latest.AppArgs
         {
             DisplayName = "My IoT Central App",
             Location = "westus",
             ResourceGroupName = "resRg",
             ResourceName = "myIoTCentralApp",
-            Sku = new AzureNextGen.Iotcentral.Inputs.AppSkuInfoArgs
+            Sku = new AzureNextGen.IoTCentral.Latest.Inputs.AppSkuInfoArgs
             {
                 Name = "F1",
             },
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-app = azure_nextgen.iotcentral.App("app",
+app = azure_nextgen.iotcentral.latest.App("app",
     display_name="My IoT Central App",
     location="westus",
     resource_group_name="resRg",
@@ -78,7 +78,7 @@ app = azure_nextgen.iotcentral.App("app",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const app = new azure_nextgen.iotcentral.App("app", {
+const app = new azure_nextgen.iotcentral.latest.App("app", {
     displayName: "My IoT Central App",
     location: "westus",
     resourceGroupName: "resRg",

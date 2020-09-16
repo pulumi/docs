@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.Appplatform.Certificate("certificate", new AzureNextGen.Appplatform.CertificateArgs
+        var certificate = new AzureNextGen.AppPlatform.Latest.Certificate("certificate", new AzureNextGen.AppPlatform.Latest.CertificateArgs
         {
             CertificateName = "mycertificate",
             ResourceGroupName = "myResourceGroup",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.appplatform.Certificate("certificate",
+certificate = azure_nextgen.appplatform.latest.Certificate("certificate",
     certificate_name="mycertificate",
     resource_group_name="myResourceGroup",
     service_name="myservice")
@@ -65,7 +65,7 @@ certificate = azure_nextgen.appplatform.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const certificate = new azure_nextgen.appplatform.Certificate("certificate", {
+const certificate = new azure_nextgen.appplatform.latest.Certificate("certificate", {
     certificateName: "mycertificate",
     resourceGroupName: "myResourceGroup",
     serviceName: "myservice",

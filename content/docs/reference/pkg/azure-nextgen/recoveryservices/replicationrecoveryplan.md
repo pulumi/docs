@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationRecoveryPlan = new AzureNextGen.Recoveryservices.ReplicationRecoveryPlan("replicationRecoveryPlan", new AzureNextGen.Recoveryservices.ReplicationRecoveryPlanArgs
+        var replicationRecoveryPlan = new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryPlan("replicationRecoveryPlan", new AzureNextGen.RecoveryServices.Latest.ReplicationRecoveryPlanArgs
         {
             RecoveryPlanName = "RPtest1",
             ResourceGroupName = "resourceGroupPS1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replication_recovery_plan = azure_nextgen.recoveryservices.ReplicationRecoveryPlan("replicationRecoveryPlan",
+replication_recovery_plan = azure_nextgen.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan",
     recovery_plan_name="RPtest1",
     resource_group_name="resourceGroupPS1",
     resource_name="vault1")
@@ -65,7 +65,7 @@ replication_recovery_plan = azure_nextgen.recoveryservices.ReplicationRecoveryPl
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const replicationRecoveryPlan = new azure_nextgen.recoveryservices.ReplicationRecoveryPlan("replicationRecoveryPlan", {
+const replicationRecoveryPlan = new azure_nextgen.recoveryservices.latest.ReplicationRecoveryPlan("replicationRecoveryPlan", {
     recoveryPlanName: "RPtest1",
     resourceGroupName: "resourceGroupPS1",
     resourceName: "vault1",

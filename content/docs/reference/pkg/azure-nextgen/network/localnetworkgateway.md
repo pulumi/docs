@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var localNetworkGateway = new AzureNextGen.Network.LocalNetworkGateway("localNetworkGateway", new AzureNextGen.Network.LocalNetworkGatewayArgs
+        var localNetworkGateway = new AzureNextGen.Network.Latest.LocalNetworkGateway("localNetworkGateway", new AzureNextGen.Network.Latest.LocalNetworkGatewayArgs
         {
             Fqdn = "site1.contoso.com",
             GatewayIpAddress = "11.12.13.14",
-            LocalNetworkAddressSpace = new AzureNextGen.Network.Inputs.AddressSpaceArgs
+            LocalNetworkAddressSpace = new AzureNextGen.Network.Latest.Inputs.AddressSpaceArgs
             {
                 AddressPrefixes = 
                 {
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-local_network_gateway = azure_nextgen.network.LocalNetworkGateway("localNetworkGateway",
+local_network_gateway = azure_nextgen.network.latest.LocalNetworkGateway("localNetworkGateway",
     fqdn="site1.contoso.com",
     gateway_ip_address="11.12.13.14",
     local_network_address_space={
@@ -79,7 +79,7 @@ local_network_gateway = azure_nextgen.network.LocalNetworkGateway("localNetworkG
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const localNetworkGateway = new azure_nextgen.network.LocalNetworkGateway("localNetworkGateway", {
+const localNetworkGateway = new azure_nextgen.network.latest.LocalNetworkGateway("localNetworkGateway", {
     fqdn: "site1.contoso.com",
     gatewayIpAddress: "11.12.13.14",
     localNetworkAddressSpace: {

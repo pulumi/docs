@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkForAzureAd = new AzureNextGen.Aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureNextGen.Aadiam.PrivateLinkForAzureAdArgs
+        var privateLinkForAzureAd = new AzureNextGen.Aadiam.V20200301Preview.PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureNextGen.Aadiam.V20200301Preview.PrivateLinkForAzureAdArgs
         {
             AllTenants = false,
             Name = "myOrgPrivateLinkPolicy",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_for_azure_ad = azure_nextgen.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd",
+private_link_for_azure_ad = azure_nextgen.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd",
     all_tenants=False,
     name="myOrgPrivateLinkPolicy",
     owner_tenant_id="950f8bca-bf4d-4a41-ad10-034e792a243d",
@@ -84,7 +84,7 @@ private_link_for_azure_ad = azure_nextgen.aadiam.PrivateLinkForAzureAd("privateL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateLinkForAzureAd = new azure_nextgen.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd", {
+const privateLinkForAzureAd = new azure_nextgen.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd", {
     allTenants: false,
     name: "myOrgPrivateLinkPolicy",
     ownerTenantId: "950f8bca-bf4d-4a41-ad10-034e792a243d",
@@ -113,7 +113,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkForAzureAd = new AzureNextGen.Aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureNextGen.Aadiam.PrivateLinkForAzureAdArgs
+        var privateLinkForAzureAd = new AzureNextGen.Aadiam.V20200301Preview.PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureNextGen.Aadiam.V20200301Preview.PrivateLinkForAzureAdArgs
         {
             AllTenants = false,
             Name = "myOrgPrivateLinkPolicy",
@@ -147,7 +147,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_for_azure_ad = azure_nextgen.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd",
+private_link_for_azure_ad = azure_nextgen.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd",
     all_tenants=False,
     name="myOrgPrivateLinkPolicy",
     owner_tenant_id="950f8bca-bf4d-4a41-ad10-034e792a243d",
@@ -171,7 +171,7 @@ private_link_for_azure_ad = azure_nextgen.aadiam.PrivateLinkForAzureAd("privateL
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateLinkForAzureAd = new azure_nextgen.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd", {
+const privateLinkForAzureAd = new azure_nextgen.aadiam.v20200301preview.PrivateLinkForAzureAd("privateLinkForAzureAd", {
     allTenants: false,
     name: "myOrgPrivateLinkPolicy",
     ownerTenantId: "950f8bca-bf4d-4a41-ad10-034e792a243d",

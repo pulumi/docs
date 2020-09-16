@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobContainerImmutabilityPolicy = new AzureNextGen.Storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", new AzureNextGen.Storage.BlobContainerImmutabilityPolicyArgs
+        var blobContainerImmutabilityPolicy = new AzureNextGen.Storage.Latest.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", new AzureNextGen.Storage.Latest.BlobContainerImmutabilityPolicyArgs
         {
             AccountName = "sto7069",
             AllowProtectedAppendWrites = true,
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_container_immutability_policy = azure_nextgen.storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy",
+blob_container_immutability_policy = azure_nextgen.storage.latest.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy",
     account_name="sto7069",
     allow_protected_append_writes=True,
     container_name="container6397",
@@ -71,7 +71,7 @@ blob_container_immutability_policy = azure_nextgen.storage.BlobContainerImmutabi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const blobContainerImmutabilityPolicy = new azure_nextgen.storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", {
+const blobContainerImmutabilityPolicy = new azure_nextgen.storage.latest.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", {
     accountName: "sto7069",
     allowProtectedAppendWrites: true,
     containerName: "container6397",

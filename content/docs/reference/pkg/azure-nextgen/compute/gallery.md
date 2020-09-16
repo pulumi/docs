@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gallery = new AzureNextGen.Compute.Gallery("gallery", new AzureNextGen.Compute.GalleryArgs
+        var gallery = new AzureNextGen.Compute.Latest.Gallery("gallery", new AzureNextGen.Compute.Latest.GalleryArgs
         {
             Description = "This is the gallery description.",
             GalleryName = "myGalleryName",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            SharingProfile = new AzureNextGen.Compute.Inputs.SharingProfileArgs
+            SharingProfile = new AzureNextGen.Compute.Latest.Inputs.SharingProfileArgs
             {
                 Permissions = "Groups",
             },
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery = azure_nextgen.compute.Gallery("gallery",
+gallery = azure_nextgen.compute.latest.Gallery("gallery",
     description="This is the gallery description.",
     gallery_name="myGalleryName",
     location="West US",
@@ -74,7 +74,7 @@ gallery = azure_nextgen.compute.Gallery("gallery",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const gallery = new azure_nextgen.compute.Gallery("gallery", {
+const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
     description: "This is the gallery description.",
     galleryName: "myGalleryName",
     location: "West US",
@@ -98,7 +98,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gallery = new AzureNextGen.Compute.Gallery("gallery", new AzureNextGen.Compute.GalleryArgs
+        var gallery = new AzureNextGen.Compute.Latest.Gallery("gallery", new AzureNextGen.Compute.Latest.GalleryArgs
         {
             Description = "This is the gallery description.",
             GalleryName = "myGalleryName",
@@ -123,7 +123,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery = azure_nextgen.compute.Gallery("gallery",
+gallery = azure_nextgen.compute.latest.Gallery("gallery",
     description="This is the gallery description.",
     gallery_name="myGalleryName",
     location="West US",
@@ -139,7 +139,7 @@ gallery = azure_nextgen.compute.Gallery("gallery",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const gallery = new azure_nextgen.compute.Gallery("gallery", {
+const gallery = new azure_nextgen.compute.latest.Gallery("gallery", {
     description: "This is the gallery description.",
     galleryName: "myGalleryName",
     location: "West US",

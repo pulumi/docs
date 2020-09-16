@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tagByOperation = new AzureNextGen.Apimanagement.TagByOperation("tagByOperation", new AzureNextGen.Apimanagement.TagByOperationArgs
+        var tagByOperation = new AzureNextGen.ApiManagement.Latest.TagByOperation("tagByOperation", new AzureNextGen.ApiManagement.Latest.TagByOperationArgs
         {
             ApiId = "5931a75ae4bbd512a88c680b",
             OperationId = "5931a75ae4bbd512a88c680a",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_by_operation = azure_nextgen.apimanagement.TagByOperation("tagByOperation",
+tag_by_operation = azure_nextgen.apimanagement.latest.TagByOperation("tagByOperation",
     api_id="5931a75ae4bbd512a88c680b",
     operation_id="5931a75ae4bbd512a88c680a",
     resource_group_name="rg1",
@@ -69,7 +69,7 @@ tag_by_operation = azure_nextgen.apimanagement.TagByOperation("tagByOperation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const tagByOperation = new azure_nextgen.apimanagement.TagByOperation("tagByOperation", {
+const tagByOperation = new azure_nextgen.apimanagement.latest.TagByOperation("tagByOperation", {
     apiId: "5931a75ae4bbd512a88c680b",
     operationId: "5931a75ae4bbd512a88c680a",
     resourceGroupName: "rg1",

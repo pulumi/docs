@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diskAccess = new AzureNextGen.Compute.DiskAccess("diskAccess", new AzureNextGen.Compute.DiskAccessArgs
+        var diskAccess = new AzureNextGen.Compute.Latest.DiskAccess("diskAccess", new AzureNextGen.Compute.Latest.DiskAccessArgs
         {
             DiskAccessName = "myDiskAccess",
             Location = "West US",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disk_access = azure_nextgen.compute.DiskAccess("diskAccess",
+disk_access = azure_nextgen.compute.latest.DiskAccess("diskAccess",
     disk_access_name="myDiskAccess",
     location="West US",
     resource_group_name="myResourceGroup")
@@ -65,7 +65,7 @@ disk_access = azure_nextgen.compute.DiskAccess("diskAccess",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const diskAccess = new azure_nextgen.compute.DiskAccess("diskAccess", {
+const diskAccess = new azure_nextgen.compute.latest.DiskAccess("diskAccess", {
     diskAccessName: "myDiskAccess",
     location: "West US",
     resourceGroupName: "myResourceGroup",

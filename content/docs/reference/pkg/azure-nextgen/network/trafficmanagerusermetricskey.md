@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trafficManagerUserMetricsKey = new AzureNextGen.Network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", new AzureNextGen.Network.TrafficManagerUserMetricsKeyArgs
+        var trafficManagerUserMetricsKey = new AzureNextGen.Network.Latest.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", new AzureNextGen.Network.Latest.TrafficManagerUserMetricsKeyArgs
         {
         });
     }
@@ -47,7 +47,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-traffic_manager_user_metrics_key = azure_nextgen.network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey")
+traffic_manager_user_metrics_key = azure_nextgen.network.latest.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey")
 
 ```
 
@@ -59,7 +59,7 @@ traffic_manager_user_metrics_key = azure_nextgen.network.TrafficManagerUserMetri
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const trafficManagerUserMetricsKey = new azure_nextgen.network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", {});
+const trafficManagerUserMetricsKey = new azure_nextgen.network.latest.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", {});
 
 ```
 

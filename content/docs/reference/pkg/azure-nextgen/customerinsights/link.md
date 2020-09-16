@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var link = new AzureNextGen.Customerinsights.Link("link", new AzureNextGen.Customerinsights.LinkArgs
+        var link = new AzureNextGen.CustomerInsights.Latest.Link("link", new AzureNextGen.CustomerInsights.Latest.LinkArgs
         {
             Description = 
             {
@@ -40,7 +40,7 @@ class MyStack : Stack
             LinkName = "linkTest4806",
             Mappings = 
             {
-                new AzureNextGen.Customerinsights.Inputs.TypePropertiesMappingArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.TypePropertiesMappingArgs
                 {
                     LinkType = "UpdateAlways",
                     SourcePropertyName = "testInteraction1949",
@@ -49,7 +49,7 @@ class MyStack : Stack
             },
             ParticipantPropertyReferences = 
             {
-                new AzureNextGen.Customerinsights.Inputs.ParticipantPropertyReferenceArgs
+                new AzureNextGen.CustomerInsights.Latest.Inputs.ParticipantPropertyReferenceArgs
                 {
                     SourcePropertyName = "testInteraction1949",
                     TargetPropertyName = "ProfileId",
@@ -79,7 +79,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-link = azure_nextgen.customerinsights.Link("link",
+link = azure_nextgen.customerinsights.latest.Link("link",
     description={
         "en-us": "Link Description",
     },
@@ -113,7 +113,7 @@ link = azure_nextgen.customerinsights.Link("link",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const link = new azure_nextgen.customerinsights.Link("link", {
+const link = new azure_nextgen.customerinsights.latest.Link("link", {
     description: {
         "en-us": "Link Description",
     },

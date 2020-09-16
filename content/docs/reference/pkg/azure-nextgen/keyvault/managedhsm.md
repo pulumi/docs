@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedHsm = new AzureNextGen.Keyvault.ManagedHsm("managedHsm", new AzureNextGen.Keyvault.ManagedHsmArgs
+        var managedHsm = new AzureNextGen.KeyVault.V20200401Preview.ManagedHsm("managedHsm", new AzureNextGen.KeyVault.V20200401Preview.ManagedHsmArgs
         {
             Location = "westus",
             Name = "hsm1",
             ResourceGroupName = "hsm-group",
-            Sku = new AzureNextGen.Keyvault.Inputs.ManagedHsmSkuArgs
+            Sku = new AzureNextGen.KeyVault.V20200401Preview.Inputs.ManagedHsmSkuArgs
             {
                 Family = "B",
                 Name = "Standard_B1",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_hsm = azure_nextgen.keyvault.ManagedHsm("managedHsm",
+managed_hsm = azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm",
     location="westus",
     name="hsm1",
     resource_group_name="hsm-group",
@@ -83,7 +83,7 @@ managed_hsm = azure_nextgen.keyvault.ManagedHsm("managedHsm",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedHsm = new azure_nextgen.keyvault.ManagedHsm("managedHsm", {
+const managedHsm = new azure_nextgen.keyvault.v20200401preview.ManagedHsm("managedHsm", {
     location: "westus",
     name: "hsm1",
     resourceGroupName: "hsm-group",

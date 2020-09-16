@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.Devices.Certificate("certificate", new AzureNextGen.Devices.CertificateArgs
+        var certificate = new AzureNextGen.Devices.Latest.Certificate("certificate", new AzureNextGen.Devices.Latest.CertificateArgs
         {
             CertificateName = "cert",
             ResourceGroupName = "myResourceGroup",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.devices.Certificate("certificate",
+certificate = azure_nextgen.devices.latest.Certificate("certificate",
     certificate_name="cert",
     resource_group_name="myResourceGroup",
     resource_name="iothub")
@@ -65,7 +65,7 @@ certificate = azure_nextgen.devices.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const certificate = new azure_nextgen.devices.Certificate("certificate", {
+const certificate = new azure_nextgen.devices.latest.Certificate("certificate", {
     certificateName: "cert",
     resourceGroupName: "myResourceGroup",
     resourceName: "iothub",

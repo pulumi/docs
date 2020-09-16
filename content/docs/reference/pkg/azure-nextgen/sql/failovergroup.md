@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var failoverGroup = new AzureNextGen.Sql.FailoverGroup("failoverGroup", new AzureNextGen.Sql.FailoverGroupArgs
+        var failoverGroup = new AzureNextGen.Sql.V20150501Preview.FailoverGroup("failoverGroup", new AzureNextGen.Sql.V20150501Preview.FailoverGroupArgs
         {
             Databases = 
             {
@@ -36,16 +36,16 @@ class MyStack : Stack
             FailoverGroupName = "failover-group-test-3",
             PartnerServers = 
             {
-                new AzureNextGen.Sql.Inputs.PartnerInfoArgs
+                new AzureNextGen.Sql.V20150501Preview.Inputs.PartnerInfoArgs
                 {
                     Id = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-secondary-server",
                 },
             },
-            ReadOnlyEndpoint = new AzureNextGen.Sql.Inputs.FailoverGroupReadOnlyEndpointArgs
+            ReadOnlyEndpoint = new AzureNextGen.Sql.V20150501Preview.Inputs.FailoverGroupReadOnlyEndpointArgs
             {
                 FailoverPolicy = "Disabled",
             },
-            ReadWriteEndpoint = new AzureNextGen.Sql.Inputs.FailoverGroupReadWriteEndpointArgs
+            ReadWriteEndpoint = new AzureNextGen.Sql.V20150501Preview.Inputs.FailoverGroupReadWriteEndpointArgs
             {
                 FailoverPolicy = "Automatic",
                 FailoverWithDataLossGracePeriodMinutes = 480,
@@ -71,7 +71,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-failover_group = azure_nextgen.sql.FailoverGroup("failoverGroup",
+failover_group = azure_nextgen.sql.v20150501preview.FailoverGroup("failoverGroup",
     databases=[
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",
@@ -100,7 +100,7 @@ failover_group = azure_nextgen.sql.FailoverGroup("failoverGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const failoverGroup = new azure_nextgen.sql.FailoverGroup("failoverGroup", {
+const failoverGroup = new azure_nextgen.sql.v20150501preview.FailoverGroup("failoverGroup", {
     databases: [
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-1",
         "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/servers/failover-group-primary-server/databases/testdb-2",

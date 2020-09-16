@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trigger = new AzureNextGen.Datashare.Trigger("trigger", new AzureNextGen.Datashare.TriggerArgs
+        var trigger = new AzureNextGen.DataShare.Latest.Trigger("trigger", new AzureNextGen.DataShare.Latest.TriggerArgs
         {
             AccountName = "Account1",
             Kind = "ScheduleBased",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trigger = azure_nextgen.datashare.Trigger("trigger",
+trigger = azure_nextgen.datashare.latest.Trigger("trigger",
     account_name="Account1",
     kind="ScheduleBased",
     resource_group_name="SampleResourceGroup",
@@ -69,7 +69,7 @@ trigger = azure_nextgen.datashare.Trigger("trigger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const trigger = new azure_nextgen.datashare.Trigger("trigger", {
+const trigger = new azure_nextgen.datashare.latest.Trigger("trigger", {
     accountName: "Account1",
     kind: "ScheduleBased",
     resourceGroupName: "SampleResourceGroup",

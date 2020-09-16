@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var accessPolicy = new AzureNextGen.Timeseriesinsights.AccessPolicy("accessPolicy", new AzureNextGen.Timeseriesinsights.AccessPolicyArgs
+        var accessPolicy = new AzureNextGen.TimeSeriesInsights.Latest.AccessPolicy("accessPolicy", new AzureNextGen.TimeSeriesInsights.Latest.AccessPolicyArgs
         {
             AccessPolicyName = "ap1",
             Description = "some description",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-access_policy = azure_nextgen.timeseriesinsights.AccessPolicy("accessPolicy",
+access_policy = azure_nextgen.timeseriesinsights.latest.AccessPolicy("accessPolicy",
     access_policy_name="ap1",
     description="some description",
     environment_name="env1",
@@ -74,7 +74,7 @@ access_policy = azure_nextgen.timeseriesinsights.AccessPolicy("accessPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const accessPolicy = new azure_nextgen.timeseriesinsights.AccessPolicy("accessPolicy", {
+const accessPolicy = new azure_nextgen.timeseriesinsights.latest.AccessPolicy("accessPolicy", {
     accessPolicyName: "ap1",
     description: "some description",
     environmentName: "env1",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Dbforpostgresql.Database("database", new AzureNextGen.Dbforpostgresql.DatabaseArgs
+        var database = new AzureNextGen.DBforPostgreSQL.Latest.Database("database", new AzureNextGen.DBforPostgreSQL.Latest.DatabaseArgs
         {
             Charset = "UTF8",
             Collation = "English_United States.1252",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.dbforpostgresql.Database("database",
+database = azure_nextgen.dbforpostgresql.latest.Database("database",
     charset="UTF8",
     collation="English_United States.1252",
     database_name="db1",
@@ -69,7 +69,7 @@ database = azure_nextgen.dbforpostgresql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.dbforpostgresql.Database("database", {
+const database = new azure_nextgen.dbforpostgresql.latest.Database("database", {
     charset: "UTF8",
     collation: "English_United States.1252",
     databaseName: "db1",

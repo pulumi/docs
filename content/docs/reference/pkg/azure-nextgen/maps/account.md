@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.Maps.Account("account", new AzureNextGen.Maps.AccountArgs
+        var account = new AzureNextGen.Maps.Latest.Account("account", new AzureNextGen.Maps.Latest.AccountArgs
         {
             AccountName = "myMapsAccount",
             Location = "global",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Maps.Inputs.SkuArgs
+            Sku = new AzureNextGen.Maps.Latest.Inputs.SkuArgs
             {
                 Name = "S0",
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.maps.Account("account",
+account = azure_nextgen.maps.latest.Account("account",
     account_name="myMapsAccount",
     location="global",
     resource_group_name="myResourceGroup",
@@ -79,7 +79,7 @@ account = azure_nextgen.maps.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const account = new azure_nextgen.maps.Account("account", {
+const account = new azure_nextgen.maps.latest.Account("account", {
     accountName: "myMapsAccount",
     location: "global",
     resourceGroupName: "myResourceGroup",

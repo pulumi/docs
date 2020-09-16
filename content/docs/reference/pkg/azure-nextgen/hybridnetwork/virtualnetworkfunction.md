@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkFunction = new AzureNextGen.Hybridnetwork.VirtualNetworkFunction("virtualNetworkFunction", new AzureNextGen.Hybridnetwork.VirtualNetworkFunctionArgs
+        var virtualNetworkFunction = new AzureNextGen.HybridNetwork.V20200101Preview.VirtualNetworkFunction("virtualNetworkFunction", new AzureNextGen.HybridNetwork.V20200101Preview.VirtualNetworkFunctionArgs
         {
-            Device = new AzureNextGen.Hybridnetwork.Inputs.SubResourceArgs
+            Device = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
             },
@@ -40,15 +40,15 @@ class MyStack : Stack
             VirtualNetworkFunctionName = "testVnf",
             VirtualNetworkFunctionUserConfigurations = 
             {
-                new AzureNextGen.Hybridnetwork.Inputs.VirtualNetworkFunctionUserConfigurationArgs
+                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.VirtualNetworkFunctionUserConfigurationArgs
                 {
                     NetworkInterfaces = 
                     {
-                        new AzureNextGen.Hybridnetwork.Inputs.NetworkInterfaceArgs
+                        new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
                         {
                             IpConfigurations = 
                             {
-                                new AzureNextGen.Hybridnetwork.Inputs.NetworkInterfaceIPConfigurationArgs
+                                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
                                 {
                                     Gateway = "",
                                     IpAddress = "",
@@ -61,11 +61,11 @@ class MyStack : Stack
                             NetworkInterfaceName = "nic1",
                             VmSwitchType = "Management",
                         },
-                        new AzureNextGen.Hybridnetwork.Inputs.NetworkInterfaceArgs
+                        new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceArgs
                         {
                             IpConfigurations = 
                             {
-                                new AzureNextGen.Hybridnetwork.Inputs.NetworkInterfaceIPConfigurationArgs
+                                new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.NetworkInterfaceIPConfigurationArgs
                                 {
                                     Gateway = "",
                                     IpAddress = "",
@@ -102,7 +102,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_function = azure_nextgen.hybridnetwork.VirtualNetworkFunction("virtualNetworkFunction",
+virtual_network_function = azure_nextgen.hybridnetwork.v20200101preview.VirtualNetworkFunction("virtualNetworkFunction",
     device={
         "id": "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
     },
@@ -153,7 +153,7 @@ virtual_network_function = azure_nextgen.hybridnetwork.VirtualNetworkFunction("v
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualNetworkFunction = new azure_nextgen.hybridnetwork.VirtualNetworkFunction("virtualNetworkFunction", {
+const virtualNetworkFunction = new azure_nextgen.hybridnetwork.v20200101preview.VirtualNetworkFunction("virtualNetworkFunction", {
     device: {
         id: "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
     },

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var container = new AzureNextGen.Databoxedge.Container("container", new AzureNextGen.Databoxedge.ContainerArgs
+        var container = new AzureNextGen.DataBoxEdge.Latest.Container("container", new AzureNextGen.DataBoxEdge.Latest.ContainerArgs
         {
             ContainerName = "blobcontainer1",
             DataFormat = "BlockBlob",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-container = azure_nextgen.databoxedge.Container("container",
+container = azure_nextgen.databoxedge.latest.Container("container",
     container_name="blobcontainer1",
     data_format="BlockBlob",
     device_name="testedgedevice",
@@ -69,7 +69,7 @@ container = azure_nextgen.databoxedge.Container("container",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const container = new azure_nextgen.databoxedge.Container("container", {
+const container = new azure_nextgen.databoxedge.latest.Container("container", {
     containerName: "blobcontainer1",
     dataFormat: "BlockBlob",
     deviceName: "testedgedevice",

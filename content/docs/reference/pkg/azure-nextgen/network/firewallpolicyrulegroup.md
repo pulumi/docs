@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleGroup = new AzureNextGen.Network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", new AzureNextGen.Network.FirewallPolicyRuleGroupArgs
+        var firewallPolicyRuleGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 110,
@@ -36,9 +36,9 @@ class MyStack : Stack
             {
                 
                 {
-                    { "action", 
+                    { "action", new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleActionArgs
                     {
-                        { "type", "Deny" },
+                        Type = "Deny",
                     } },
                     { "name", "Example-Filter-Rule" },
                     { "ruleConditions", 
@@ -87,7 +87,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_group = azure_nextgen.network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup",
+firewall_policy_rule_group = azure_nextgen.network.latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup",
     firewall_policy_name="firewallPolicy",
     priority=110,
     resource_group_name="rg1",
@@ -118,7 +118,7 @@ firewall_policy_rule_group = azure_nextgen.network.FirewallPolicyRuleGroup("fire
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const firewallPolicyRuleGroup = new azure_nextgen.network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", {
+const firewallPolicyRuleGroup = new azure_nextgen.network.latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 110,
     resourceGroupName: "rg1",
@@ -154,7 +154,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallPolicyRuleGroup = new AzureNextGen.Network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", new AzureNextGen.Network.FirewallPolicyRuleGroupArgs
+        var firewallPolicyRuleGroup = new AzureNextGen.Network.Latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", new AzureNextGen.Network.Latest.FirewallPolicyRuleGroupArgs
         {
             FirewallPolicyName = "firewallPolicy",
             Priority = 110,
@@ -164,9 +164,9 @@ class MyStack : Stack
             {
                 
                 {
-                    { "action", new AzureNextGen.Network.Inputs.FirewallPolicyNatRuleActionArgs
+                    { "action", 
                     {
-                        Type = "Deny",
+                        { "type", "Deny" },
                     } },
                     { "name", "Example-Filter-Rule" },
                     { "ruleConditions", 
@@ -215,7 +215,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_policy_rule_group = azure_nextgen.network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup",
+firewall_policy_rule_group = azure_nextgen.network.latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup",
     firewall_policy_name="firewallPolicy",
     priority=110,
     resource_group_name="rg1",
@@ -246,7 +246,7 @@ firewall_policy_rule_group = azure_nextgen.network.FirewallPolicyRuleGroup("fire
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const firewallPolicyRuleGroup = new azure_nextgen.network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", {
+const firewallPolicyRuleGroup = new azure_nextgen.network.latest.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", {
     firewallPolicyName: "firewallPolicy",
     priority: 110,
     resourceGroupName: "rg1",

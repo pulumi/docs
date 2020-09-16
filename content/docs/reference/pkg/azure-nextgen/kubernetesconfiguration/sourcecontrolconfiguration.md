@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sourceControlConfiguration = new AzureNextGen.Kubernetesconfiguration.SourceControlConfiguration("sourceControlConfiguration", new AzureNextGen.Kubernetesconfiguration.SourceControlConfigurationArgs
+        var sourceControlConfiguration = new AzureNextGen.KubernetesConfiguration.V20191101Preview.SourceControlConfiguration("sourceControlConfiguration", new AzureNextGen.KubernetesConfiguration.V20191101Preview.SourceControlConfigurationArgs
         {
             ClusterName = "clusterName1",
             ClusterResourceName = "connectedClusters",
             ClusterRp = "Microsoft.Kubernetes",
             EnableHelmOperator = "true",
-            HelmOperatorProperties = new AzureNextGen.Kubernetesconfiguration.Inputs.HelmOperatorPropertiesArgs
+            HelmOperatorProperties = new AzureNextGen.KubernetesConfiguration.V20191101Preview.Inputs.HelmOperatorPropertiesArgs
             {
                 ChartValues = "--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
                 ChartVersion = "0.3.0",
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-source_control_configuration = azure_nextgen.kubernetesconfiguration.SourceControlConfiguration("sourceControlConfiguration",
+source_control_configuration = azure_nextgen.kubernetesconfiguration.v20191101preview.SourceControlConfiguration("sourceControlConfiguration",
     cluster_name="clusterName1",
     cluster_resource_name="connectedClusters",
     cluster_rp="Microsoft.Kubernetes",
@@ -92,7 +92,7 @@ source_control_configuration = azure_nextgen.kubernetesconfiguration.SourceContr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.SourceControlConfiguration("sourceControlConfiguration", {
+const sourceControlConfiguration = new azure_nextgen.kubernetesconfiguration.v20191101preview.SourceControlConfiguration("sourceControlConfiguration", {
     clusterName: "clusterName1",
     clusterResourceName: "connectedClusters",
     clusterRp: "Microsoft.Kubernetes",

@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var solution = new AzureNextGen.Operationsmanagement.Solution("solution", new AzureNextGen.Operationsmanagement.SolutionArgs
+        var solution = new AzureNextGen.OperationsManagement.V20151101Preview.Solution("solution", new AzureNextGen.OperationsManagement.V20151101Preview.SolutionArgs
         {
             Location = "East US",
-            Plan = new AzureNextGen.Operationsmanagement.Inputs.SolutionPlanArgs
+            Plan = new AzureNextGen.OperationsManagement.V20151101Preview.Inputs.SolutionPlanArgs
             {
                 Name = "name1",
                 Product = "product1",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-solution = azure_nextgen.operationsmanagement.Solution("solution",
+solution = azure_nextgen.operationsmanagement.v20151101preview.Solution("solution",
     location="East US",
     plan={
         "name": "name1",
@@ -78,7 +78,7 @@ solution = azure_nextgen.operationsmanagement.Solution("solution",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const solution = new azure_nextgen.operationsmanagement.Solution("solution", {
+const solution = new azure_nextgen.operationsmanagement.v20151101preview.Solution("solution", {
     location: "East US",
     plan: {
         name: "name1",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jobSchedule = new AzureNextGen.Automation.JobSchedule("jobSchedule", new AzureNextGen.Automation.JobScheduleArgs
+        var jobSchedule = new AzureNextGen.Automation.Latest.JobSchedule("jobSchedule", new AzureNextGen.Automation.Latest.JobScheduleArgs
         {
             AutomationAccountName = "ContoseAutomationAccount",
             JobScheduleId = "0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
@@ -36,11 +36,11 @@ class MyStack : Stack
                 { "jobscheduletag02", "jobschedulevalue02" },
             },
             ResourceGroupName = "rg",
-            Runbook = new AzureNextGen.Automation.Inputs.RunbookAssociationPropertyArgs
+            Runbook = new AzureNextGen.Automation.Latest.Inputs.RunbookAssociationPropertyArgs
             {
                 Name = "TestRunbook",
             },
-            Schedule = new AzureNextGen.Automation.Inputs.ScheduleAssociationPropertyArgs
+            Schedule = new AzureNextGen.Automation.Latest.Inputs.ScheduleAssociationPropertyArgs
             {
                 Name = "ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2",
             },
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job_schedule = azure_nextgen.automation.JobSchedule("jobSchedule",
+job_schedule = azure_nextgen.automation.latest.JobSchedule("jobSchedule",
     automation_account_name="ContoseAutomationAccount",
     job_schedule_id="0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
     parameters={
@@ -88,7 +88,7 @@ job_schedule = azure_nextgen.automation.JobSchedule("jobSchedule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const jobSchedule = new azure_nextgen.automation.JobSchedule("jobSchedule", {
+const jobSchedule = new azure_nextgen.automation.latest.JobSchedule("jobSchedule", {
     automationAccountName: "ContoseAutomationAccount",
     jobScheduleId: "0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
     parameters: {

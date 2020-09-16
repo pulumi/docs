@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountSession = new AzureNextGen.Logic.IntegrationAccountSession("integrationAccountSession", new AzureNextGen.Logic.IntegrationAccountSessionArgs
+        var integrationAccountSession = new AzureNextGen.Logic.Latest.IntegrationAccountSession("integrationAccountSession", new AzureNextGen.Logic.Latest.IntegrationAccountSessionArgs
         {
             Content = 
             {
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_session = azure_nextgen.logic.IntegrationAccountSession("integrationAccountSession",
+integration_account_session = azure_nextgen.logic.latest.IntegrationAccountSession("integrationAccountSession",
     content={
         "controlNumber": "1234",
         "controlNumberChangedTime": "2017-02-21T22:30:11.9923759Z",
@@ -74,7 +74,7 @@ integration_account_session = azure_nextgen.logic.IntegrationAccountSession("int
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationAccountSession = new azure_nextgen.logic.IntegrationAccountSession("integrationAccountSession", {
+const integrationAccountSession = new azure_nextgen.logic.latest.IntegrationAccountSession("integrationAccountSession", {
     content: {
         controlNumber: "1234",
         controlNumberChangedTime: "2017-02-21T22:30:11.9923759Z",

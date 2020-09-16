@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var billingRoleAssignmentByEnrollmentAccount = new AzureNextGen.Billing.BillingRoleAssignmentByEnrollmentAccount("billingRoleAssignmentByEnrollmentAccount", new AzureNextGen.Billing.BillingRoleAssignmentByEnrollmentAccountArgs
+        var billingRoleAssignmentByEnrollmentAccount = new AzureNextGen.Billing.V20191001Preview.BillingRoleAssignmentByEnrollmentAccount("billingRoleAssignmentByEnrollmentAccount", new AzureNextGen.Billing.V20191001Preview.BillingRoleAssignmentByEnrollmentAccountArgs
         {
             BillingAccountName = "{billingAccountName}",
             BillingRoleAssignmentName = "{billingRoleAssignmentName}",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-billing_role_assignment_by_enrollment_account = azure_nextgen.billing.BillingRoleAssignmentByEnrollmentAccount("billingRoleAssignmentByEnrollmentAccount",
+billing_role_assignment_by_enrollment_account = azure_nextgen.billing.v20191001preview.BillingRoleAssignmentByEnrollmentAccount("billingRoleAssignmentByEnrollmentAccount",
     billing_account_name="{billingAccountName}",
     billing_role_assignment_name="{billingRoleAssignmentName}",
     enrollment_account_name="{enrollmentAccountName}",
@@ -71,7 +71,7 @@ billing_role_assignment_by_enrollment_account = azure_nextgen.billing.BillingRol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const billingRoleAssignmentByEnrollmentAccount = new azure_nextgen.billing.BillingRoleAssignmentByEnrollmentAccount("billingRoleAssignmentByEnrollmentAccount", {
+const billingRoleAssignmentByEnrollmentAccount = new azure_nextgen.billing.v20191001preview.BillingRoleAssignmentByEnrollmentAccount("billingRoleAssignmentByEnrollmentAccount", {
     billingAccountName: "{billingAccountName}",
     billingRoleAssignmentName: "{billingRoleAssignmentName}",
     enrollmentAccountName: "{enrollmentAccountName}",

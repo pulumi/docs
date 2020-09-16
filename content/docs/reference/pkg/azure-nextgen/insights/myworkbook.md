@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var myWorkbook = new AzureNextGen.Insights.MyWorkbook("myWorkbook", new AzureNextGen.Insights.MyWorkbookArgs
+        var myWorkbook = new AzureNextGen.Insights.Latest.MyWorkbook("myWorkbook", new AzureNextGen.Insights.Latest.MyWorkbookArgs
         {
             Category = "workbook",
             DisplayName = "Blah Blah Blah",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-my_workbook = azure_nextgen.insights.MyWorkbook("myWorkbook",
+my_workbook = azure_nextgen.insights.latest.MyWorkbook("myWorkbook",
     category="workbook",
     display_name="Blah Blah Blah",
     id="c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
@@ -81,7 +81,7 @@ my_workbook = azure_nextgen.insights.MyWorkbook("myWorkbook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const myWorkbook = new azure_nextgen.insights.MyWorkbook("myWorkbook", {
+const myWorkbook = new azure_nextgen.insights.latest.MyWorkbook("myWorkbook", {
     category: "workbook",
     displayName: "Blah Blah Blah",
     id: "c0deea5e-3344-40f2-96f8-6f8e1c3b5722",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentItem = new AzureNextGen.Apimanagement.ContentItem("contentItem", new AzureNextGen.Apimanagement.ContentItemArgs
+        var contentItem = new AzureNextGen.ApiManagement.Latest.ContentItem("contentItem", new AzureNextGen.ApiManagement.Latest.ContentItemArgs
         {
             ContentItemId = "4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
             ContentTypeId = "page",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_item = azure_nextgen.apimanagement.ContentItem("contentItem",
+content_item = azure_nextgen.apimanagement.latest.ContentItem("contentItem",
     content_item_id="4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
     content_type_id="page",
     resource_group_name="rg1",
@@ -67,7 +67,7 @@ content_item = azure_nextgen.apimanagement.ContentItem("contentItem",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const contentItem = new azure_nextgen.apimanagement.ContentItem("contentItem", {
+const contentItem = new azure_nextgen.apimanagement.latest.ContentItem("contentItem", {
     contentItemId: "4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
     contentTypeId: "page",
     resourceGroupName: "rg1",

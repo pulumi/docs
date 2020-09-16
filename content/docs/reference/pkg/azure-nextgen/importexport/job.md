@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.Importexport.Job("job", new AzureNextGen.Importexport.JobArgs
+        var job = new AzureNextGen.ImportExport.Latest.Job("job", new AzureNextGen.ImportExport.Latest.JobArgs
         {
             JobName = "myExportJob",
             Location = "West US",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.importexport.Job("job",
+job = azure_nextgen.importexport.latest.Job("job",
     job_name="myExportJob",
     location="West US",
     resource_group_name="myResourceGroup")
@@ -65,7 +65,7 @@ job = azure_nextgen.importexport.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const job = new azure_nextgen.importexport.Job("job", {
+const job = new azure_nextgen.importexport.latest.Job("job", {
     jobName: "myExportJob",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -85,7 +85,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var job = new AzureNextGen.Importexport.Job("job", new AzureNextGen.Importexport.JobArgs
+        var job = new AzureNextGen.ImportExport.Latest.Job("job", new AzureNextGen.ImportExport.Latest.JobArgs
         {
             JobName = "myJob",
             Location = "West US",
@@ -109,7 +109,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-job = azure_nextgen.importexport.Job("job",
+job = azure_nextgen.importexport.latest.Job("job",
     job_name="myJob",
     location="West US",
     resource_group_name="myResourceGroup")
@@ -124,7 +124,7 @@ job = azure_nextgen.importexport.Job("job",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const job = new azure_nextgen.importexport.Job("job", {
+const job = new azure_nextgen.importexport.latest.Job("job", {
     jobName: "myJob",
     location: "West US",
     resourceGroupName: "myResourceGroup",

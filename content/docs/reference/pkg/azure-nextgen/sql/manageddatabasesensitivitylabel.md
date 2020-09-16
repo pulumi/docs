@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedDatabaseSensitivityLabel = new AzureNextGen.Sql.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", new AzureNextGen.Sql.ManagedDatabaseSensitivityLabelArgs
+        var managedDatabaseSensitivityLabel = new AzureNextGen.Sql.V20180601Preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", new AzureNextGen.Sql.V20180601Preview.ManagedDatabaseSensitivityLabelArgs
         {
             ColumnName = "myColumn",
             DatabaseName = "myDatabase",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_database_sensitivity_label = azure_nextgen.sql.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel",
+managed_database_sensitivity_label = azure_nextgen.sql.v20180601preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel",
     column_name="myColumn",
     database_name="myDatabase",
     information_type="PhoneNumber",
@@ -81,7 +81,7 @@ managed_database_sensitivity_label = azure_nextgen.sql.ManagedDatabaseSensitivit
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedDatabaseSensitivityLabel = new azure_nextgen.sql.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", {
+const managedDatabaseSensitivityLabel = new azure_nextgen.sql.v20180601preview.ManagedDatabaseSensitivityLabel("managedDatabaseSensitivityLabel", {
     columnName: "myColumn",
     databaseName: "myDatabase",
     informationType: "PhoneNumber",

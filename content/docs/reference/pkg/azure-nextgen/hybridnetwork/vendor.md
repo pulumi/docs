@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vendor = new AzureNextGen.Hybridnetwork.Vendor("vendor", new AzureNextGen.Hybridnetwork.VendorArgs
+        var vendor = new AzureNextGen.HybridNetwork.V20200101Preview.Vendor("vendor", new AzureNextGen.HybridNetwork.V20200101Preview.VendorArgs
         {
             VendorName = "TestVendor",
         });
@@ -48,7 +48,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-vendor = azure_nextgen.hybridnetwork.Vendor("vendor", vendor_name="TestVendor")
+vendor = azure_nextgen.hybridnetwork.v20200101preview.Vendor("vendor", vendor_name="TestVendor")
 
 ```
 
@@ -60,7 +60,7 @@ vendor = azure_nextgen.hybridnetwork.Vendor("vendor", vendor_name="TestVendor")
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vendor = new azure_nextgen.hybridnetwork.Vendor("vendor", {vendorName: "TestVendor"});
+const vendor = new azure_nextgen.hybridnetwork.v20200101preview.Vendor("vendor", {vendorName: "TestVendor"});
 
 ```
 

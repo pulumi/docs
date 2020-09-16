@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var variable = new AzureNextGen.Automation.Variable("variable", new AzureNextGen.Automation.VariableArgs
+        var variable = new AzureNextGen.Automation.Latest.Variable("variable", new AzureNextGen.Automation.Latest.VariableArgs
         {
             AutomationAccountName = "sampleAccount9",
             Description = "my description",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-variable = azure_nextgen.automation.Variable("variable",
+variable = azure_nextgen.automation.latest.Variable("variable",
     automation_account_name="sampleAccount9",
     description="my description",
     is_encrypted=False,
@@ -73,7 +73,7 @@ variable = azure_nextgen.automation.Variable("variable",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const variable = new azure_nextgen.automation.Variable("variable", {
+const variable = new azure_nextgen.automation.latest.Variable("variable", {
     automationAccountName: "sampleAccount9",
     description: "my description",
     isEncrypted: false,

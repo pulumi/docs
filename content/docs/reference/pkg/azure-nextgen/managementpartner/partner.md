@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var partner = new AzureNextGen.Managementpartner.Partner("partner", new AzureNextGen.Managementpartner.PartnerArgs
+        var partner = new AzureNextGen.ManagementPartner.Latest.Partner("partner", new AzureNextGen.ManagementPartner.Latest.PartnerArgs
         {
             PartnerId = "123456",
         });
@@ -48,7 +48,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-partner = azure_nextgen.managementpartner.Partner("partner", partner_id="123456")
+partner = azure_nextgen.managementpartner.latest.Partner("partner", partner_id="123456")
 
 ```
 
@@ -60,7 +60,7 @@ partner = azure_nextgen.managementpartner.Partner("partner", partner_id="123456"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const partner = new azure_nextgen.managementpartner.Partner("partner", {partnerId: "123456"});
+const partner = new azure_nextgen.managementpartner.latest.Partner("partner", {partnerId: "123456"});
 
 ```
 

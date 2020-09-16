@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Synapse.Workspace("workspace", new AzureNextGen.Synapse.WorkspaceArgs
+        var workspace = new AzureNextGen.Synapse.V20190601Preview.Workspace("workspace", new AzureNextGen.Synapse.V20190601Preview.WorkspaceArgs
         {
-            DefaultDataLakeStorage = new AzureNextGen.Synapse.Inputs.DataLakeStorageAccountDetailsArgs
+            DefaultDataLakeStorage = new AzureNextGen.Synapse.V20190601Preview.Inputs.DataLakeStorageAccountDetailsArgs
             {
                 AccountUrl = "https://accountname.dfs.core.windows.net",
                 Filesystem = "default",
             },
-            Identity = new AzureNextGen.Synapse.Inputs.ManagedIdentityArgs
+            Identity = new AzureNextGen.Synapse.V20190601Preview.Inputs.ManagedIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -67,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.synapse.Workspace("workspace",
+workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
     default_data_lake_storage={
         "accountUrl": "https://accountname.dfs.core.windows.net",
         "filesystem": "default",
@@ -96,7 +96,7 @@ workspace = azure_nextgen.synapse.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspace = new azure_nextgen.synapse.Workspace("workspace", {
+const workspace = new azure_nextgen.synapse.v20190601preview.Workspace("workspace", {
     defaultDataLakeStorage: {
         accountUrl: "https://accountname.dfs.core.windows.net",
         filesystem: "default",

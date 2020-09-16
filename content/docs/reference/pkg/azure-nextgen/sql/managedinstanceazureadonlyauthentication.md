@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceAzureADOnlyAuthentication = new AzureNextGen.Sql.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication", new AzureNextGen.Sql.ManagedInstanceAzureADOnlyAuthenticationArgs
+        var managedInstanceAzureADOnlyAuthentication = new AzureNextGen.Sql.V20200202Preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication", new AzureNextGen.Sql.V20200202Preview.ManagedInstanceAzureADOnlyAuthenticationArgs
         {
             AuthenticationName = "Default",
             AzureADOnlyAuthentication = false,
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_azure_ad_only_authentication = azure_nextgen.sql.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication",
+managed_instance_azure_ad_only_authentication = azure_nextgen.sql.v20200202preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication",
     authentication_name="Default",
     azure_ad_only_authentication=False,
     managed_instance_name="managedInstance",
@@ -67,7 +67,7 @@ managed_instance_azure_ad_only_authentication = azure_nextgen.sql.ManagedInstanc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedInstanceAzureADOnlyAuthentication = new azure_nextgen.sql.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication", {
+const managedInstanceAzureADOnlyAuthentication = new azure_nextgen.sql.v20200202preview.ManagedInstanceAzureADOnlyAuthentication("managedInstanceAzureADOnlyAuthentication", {
     authenticationName: "Default",
     azureADOnlyAuthentication: false,
     managedInstanceName: "managedInstance",

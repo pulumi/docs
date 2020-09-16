@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var healthAlert = new AzureNextGen.Alertsmanagement.HealthAlert("healthAlert", new AzureNextGen.Alertsmanagement.HealthAlertArgs
+        var healthAlert = new AzureNextGen.AlertsManagement.V20200804Preview.HealthAlert("healthAlert", new AzureNextGen.AlertsManagement.V20200804Preview.HealthAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Alertsmanagement.Inputs.HealthAlertActionArgs
+                new AzureNextGen.AlertsManagement.V20200804Preview.Inputs.HealthAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
                     WebHookProperties = 
@@ -40,11 +40,11 @@ class MyStack : Stack
                     },
                 },
             },
-            Criteria = new AzureNextGen.Alertsmanagement.Inputs.HealthAlertCriteriaArgs
+            Criteria = new AzureNextGen.AlertsManagement.V20200804Preview.Inputs.HealthAlertCriteriaArgs
             {
                 AllOf = 
                 {
-                    new AzureNextGen.Alertsmanagement.Inputs.VmGuestHealthAlertCriterionArgs
+                    new AzureNextGen.AlertsManagement.V20200804Preview.Inputs.VmGuestHealthAlertCriterionArgs
                     {
                         HealthMonitorName = "root",
                         Namespace = "VmGuestHealth",
@@ -79,7 +79,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-health_alert = azure_nextgen.alertsmanagement.HealthAlert("healthAlert",
+health_alert = azure_nextgen.alertsmanagement.v20200804preview.HealthAlert("healthAlert",
     actions=[{
         "actionGroupId": "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         "webHookProperties": {
@@ -110,7 +110,7 @@ health_alert = azure_nextgen.alertsmanagement.HealthAlert("healthAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const healthAlert = new azure_nextgen.alertsmanagement.HealthAlert("healthAlert", {
+const healthAlert = new azure_nextgen.alertsmanagement.v20200804preview.HealthAlert("healthAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         webHookProperties: {

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.Storage.FileShare("fileShare", new AzureNextGen.Storage.FileShareArgs
+        var fileShare = new AzureNextGen.Storage.Latest.FileShare("fileShare", new AzureNextGen.Storage.Latest.FileShareArgs
         {
             AccountName = "sto666",
             EnabledProtocols = "NFS",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storage.FileShare("fileShare",
+file_share = azure_nextgen.storage.latest.FileShare("fileShare",
     account_name="sto666",
     enabled_protocols="NFS",
     resource_group_name="res346",
@@ -67,7 +67,7 @@ file_share = azure_nextgen.storage.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const fileShare = new azure_nextgen.storage.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
     accountName: "sto666",
     enabledProtocols: "NFS",
     resourceGroupName: "res346",
@@ -88,7 +88,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.Storage.FileShare("fileShare", new AzureNextGen.Storage.FileShareArgs
+        var fileShare = new AzureNextGen.Storage.Latest.FileShare("fileShare", new AzureNextGen.Storage.Latest.FileShareArgs
         {
             AccountName = "sto328",
             ResourceGroupName = "res3376",
@@ -112,7 +112,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storage.FileShare("fileShare",
+file_share = azure_nextgen.storage.latest.FileShare("fileShare",
     account_name="sto328",
     resource_group_name="res3376",
     share_name="share6185")
@@ -127,7 +127,7 @@ file_share = azure_nextgen.storage.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const fileShare = new azure_nextgen.storage.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
     accountName: "sto328",
     resourceGroupName: "res3376",
     shareName: "share6185",
@@ -147,7 +147,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var fileShare = new AzureNextGen.Storage.FileShare("fileShare", new AzureNextGen.Storage.FileShareArgs
+        var fileShare = new AzureNextGen.Storage.Latest.FileShare("fileShare", new AzureNextGen.Storage.Latest.FileShareArgs
         {
             AccessTier = "Hot",
             AccountName = "sto666",
@@ -172,7 +172,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file_share = azure_nextgen.storage.FileShare("fileShare",
+file_share = azure_nextgen.storage.latest.FileShare("fileShare",
     access_tier="Hot",
     account_name="sto666",
     resource_group_name="res346",
@@ -188,7 +188,7 @@ file_share = azure_nextgen.storage.FileShare("fileShare",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const fileShare = new azure_nextgen.storage.FileShare("fileShare", {
+const fileShare = new azure_nextgen.storage.latest.FileShare("fileShare", {
     accessTier: "Hot",
     accountName: "sto666",
     resourceGroupName: "res346",

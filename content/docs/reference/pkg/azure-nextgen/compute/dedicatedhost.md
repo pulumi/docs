@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dedicatedHost = new AzureNextGen.Compute.DedicatedHost("dedicatedHost", new AzureNextGen.Compute.DedicatedHostArgs
+        var dedicatedHost = new AzureNextGen.Compute.Latest.DedicatedHost("dedicatedHost", new AzureNextGen.Compute.Latest.DedicatedHostArgs
         {
             HostGroupName = "myDedicatedHostGroup",
             HostName = "myDedicatedHost",
             Location = "westus",
             PlatformFaultDomain = 1,
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Compute.Inputs.SkuArgs
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
             {
                 Name = "DSv3-Type1",
             },
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-dedicated_host = azure_nextgen.compute.DedicatedHost("dedicatedHost",
+dedicated_host = azure_nextgen.compute.latest.DedicatedHost("dedicatedHost",
     host_group_name="myDedicatedHostGroup",
     host_name="myDedicatedHost",
     location="westus",
@@ -83,7 +83,7 @@ dedicated_host = azure_nextgen.compute.DedicatedHost("dedicatedHost",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dedicatedHost = new azure_nextgen.compute.DedicatedHost("dedicatedHost", {
+const dedicatedHost = new azure_nextgen.compute.latest.DedicatedHost("dedicatedHost", {
     hostGroupName: "myDedicatedHostGroup",
     hostName: "myDedicatedHost",
     location: "westus",

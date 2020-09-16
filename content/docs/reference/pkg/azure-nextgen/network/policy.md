@@ -26,18 +26,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policy = new AzureNextGen.Network.Policy("policy", new AzureNextGen.Network.PolicyArgs
+        var policy = new AzureNextGen.Network.Latest.Policy("policy", new AzureNextGen.Network.Latest.PolicyArgs
         {
-            CustomRules = new AzureNextGen.Network.Inputs.CustomRuleListArgs
+            CustomRules = new AzureNextGen.Network.Latest.Inputs.CustomRuleListArgs
             {
                 Rules = 
                 {
-                    new AzureNextGen.Network.Inputs.CustomRuleArgs
+                    new AzureNextGen.Network.Latest.Inputs.CustomRuleArgs
                     {
                         Action = "Block",
                         MatchConditions = 
                         {
-                            new AzureNextGen.Network.Inputs.MatchConditionArgs
+                            new AzureNextGen.Network.Latest.Inputs.MatchConditionArgs
                             {
                                 Operator = "IPMatch",
                             },
@@ -47,16 +47,16 @@ class MyStack : Stack
                         RateLimitThreshold = 1000,
                         RuleType = "RateLimitRule",
                     },
-                    new AzureNextGen.Network.Inputs.CustomRuleArgs
+                    new AzureNextGen.Network.Latest.Inputs.CustomRuleArgs
                     {
                         Action = "Block",
                         MatchConditions = 
                         {
-                            new AzureNextGen.Network.Inputs.MatchConditionArgs
+                            new AzureNextGen.Network.Latest.Inputs.MatchConditionArgs
                             {
                                 Operator = "GeoMatch",
                             },
-                            new AzureNextGen.Network.Inputs.MatchConditionArgs
+                            new AzureNextGen.Network.Latest.Inputs.MatchConditionArgs
                             {
                                 Operator = "Contains",
                                 Transforms = 
@@ -71,24 +71,24 @@ class MyStack : Stack
                     },
                 },
             },
-            ManagedRules = new AzureNextGen.Network.Inputs.ManagedRuleSetListArgs
+            ManagedRules = new AzureNextGen.Network.Latest.Inputs.ManagedRuleSetListArgs
             {
                 ManagedRuleSets = 
                 {
-                    new AzureNextGen.Network.Inputs.ManagedRuleSetArgs
+                    new AzureNextGen.Network.Latest.Inputs.ManagedRuleSetArgs
                     {
                         RuleGroupOverrides = 
                         {
-                            new AzureNextGen.Network.Inputs.ManagedRuleGroupOverrideArgs
+                            new AzureNextGen.Network.Latest.Inputs.ManagedRuleGroupOverrideArgs
                             {
                                 RuleGroupName = "SQLI",
                                 Rules = 
                                 {
-                                    new AzureNextGen.Network.Inputs.ManagedRuleOverrideArgs
+                                    new AzureNextGen.Network.Latest.Inputs.ManagedRuleOverrideArgs
                                     {
                                         RuleId = "942100",
                                     },
-                                    new AzureNextGen.Network.Inputs.ManagedRuleOverrideArgs
+                                    new AzureNextGen.Network.Latest.Inputs.ManagedRuleOverrideArgs
                                     {
                                         RuleId = "942110",
                                     },
@@ -122,7 +122,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy = azure_nextgen.network.Policy("policy",
+policy = azure_nextgen.network.latest.Policy("policy",
     custom_rules={
         "rules": [
             {
@@ -183,7 +183,7 @@ policy = azure_nextgen.network.Policy("policy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policy = new azure_nextgen.network.Policy("policy", {
+const policy = new azure_nextgen.network.latest.Policy("policy", {
     customRules: {
         rules: [
             {

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var linkedStorageAccount = new AzureNextGen.Operationalinsights.LinkedStorageAccount("linkedStorageAccount", new AzureNextGen.Operationalinsights.LinkedStorageAccountArgs
+        var linkedStorageAccount = new AzureNextGen.OperationalInsights.Latest.LinkedStorageAccount("linkedStorageAccount", new AzureNextGen.OperationalInsights.Latest.LinkedStorageAccountArgs
         {
             DataSourceType = "CustomLogs",
             ResourceGroupName = "mms-eus",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-linked_storage_account = azure_nextgen.operationalinsights.LinkedStorageAccount("linkedStorageAccount",
+linked_storage_account = azure_nextgen.operationalinsights.latest.LinkedStorageAccount("linkedStorageAccount",
     data_source_type="CustomLogs",
     resource_group_name="mms-eus",
     storage_account_ids=[
@@ -74,7 +74,7 @@ linked_storage_account = azure_nextgen.operationalinsights.LinkedStorageAccount(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const linkedStorageAccount = new azure_nextgen.operationalinsights.LinkedStorageAccount("linkedStorageAccount", {
+const linkedStorageAccount = new azure_nextgen.operationalinsights.latest.LinkedStorageAccount("linkedStorageAccount", {
     dataSourceType: "CustomLogs",
     resourceGroupName: "mms-eus",
     storageAccountIds: [

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var guestUsage = new AzureNextGen.Azureactivedirectory.GuestUsage("guestUsage", new AzureNextGen.Azureactivedirectory.GuestUsageArgs
+        var guestUsage = new AzureNextGen.AzureActiveDirectory.V20200501Preview.GuestUsage("guestUsage", new AzureNextGen.AzureActiveDirectory.V20200501Preview.GuestUsageArgs
         {
             ResourceGroupName = "contosoResourceGroup",
             ResourceName = "contoso.onmicrosoft.com",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-guest_usage = azure_nextgen.azureactivedirectory.GuestUsage("guestUsage",
+guest_usage = azure_nextgen.azureactivedirectory.v20200501preview.GuestUsage("guestUsage",
     resource_group_name="contosoResourceGroup",
     resource_name="contoso.onmicrosoft.com")
 
@@ -63,7 +63,7 @@ guest_usage = azure_nextgen.azureactivedirectory.GuestUsage("guestUsage",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const guestUsage = new azure_nextgen.azureactivedirectory.GuestUsage("guestUsage", {
+const guestUsage = new azure_nextgen.azureactivedirectory.v20200501preview.GuestUsage("guestUsage", {
     resourceGroupName: "contosoResourceGroup",
     resourceName: "contoso.onmicrosoft.com",
 });

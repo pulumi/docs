@@ -26,21 +26,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hanaInstance = new AzureNextGen.Hanaonazure.HanaInstance("hanaInstance", new AzureNextGen.Hanaonazure.HanaInstanceArgs
+        var hanaInstance = new AzureNextGen.HanaOnAzure.V20171103Preview.HanaInstance("hanaInstance", new AzureNextGen.HanaOnAzure.V20171103Preview.HanaInstanceArgs
         {
             HanaInstanceName = "myHanaInstance",
             Location = "westus",
-            NetworkProfile = new AzureNextGen.Hanaonazure.Inputs.NetworkProfileArgs
+            NetworkProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.NetworkProfileArgs
             {
                 NetworkInterfaces = 
                 {
-                    new AzureNextGen.Hanaonazure.Inputs.IpAddressArgs
+                    new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.IpAddressArgs
                     {
                         IpAddress = "100.100.100.100",
                     },
                 },
             },
-            OsProfile = new AzureNextGen.Hanaonazure.Inputs.OSProfileArgs
+            OsProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.OSProfileArgs
             {
                 ComputerName = "myComputerName",
                 SshPublicKey = "AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
@@ -67,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hana_instance = azure_nextgen.hanaonazure.HanaInstance("hanaInstance",
+hana_instance = azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaInstance",
     hana_instance_name="myHanaInstance",
     location="westus",
     network_profile={
@@ -93,7 +93,7 @@ hana_instance = azure_nextgen.hanaonazure.HanaInstance("hanaInstance",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hanaInstance = new azure_nextgen.hanaonazure.HanaInstance("hanaInstance", {
+const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaInstance", {
     hanaInstanceName: "myHanaInstance",
     location: "westus",
     networkProfile: {

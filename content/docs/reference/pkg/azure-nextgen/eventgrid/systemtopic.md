@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var systemTopic = new AzureNextGen.Eventgrid.SystemTopic("systemTopic", new AzureNextGen.Eventgrid.SystemTopicArgs
+        var systemTopic = new AzureNextGen.EventGrid.V20200401Preview.SystemTopic("systemTopic", new AzureNextGen.EventGrid.V20200401Preview.SystemTopicArgs
         {
             Location = "westus2",
             ResourceGroupName = "examplerg",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-system_topic = azure_nextgen.eventgrid.SystemTopic("systemTopic",
+system_topic = azure_nextgen.eventgrid.v20200401preview.SystemTopic("systemTopic",
     location="westus2",
     resource_group_name="examplerg",
     system_topic_name="exampleSystemTopic1",
@@ -74,7 +74,7 @@ system_topic = azure_nextgen.eventgrid.SystemTopic("systemTopic",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const systemTopic = new azure_nextgen.eventgrid.SystemTopic("systemTopic", {
+const systemTopic = new azure_nextgen.eventgrid.v20200401preview.SystemTopic("systemTopic", {
     location: "westus2",
     resourceGroupName: "examplerg",
     systemTopicName: "exampleSystemTopic1",

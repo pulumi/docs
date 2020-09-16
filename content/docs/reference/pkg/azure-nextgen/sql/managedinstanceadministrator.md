@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceAdministrator = new AzureNextGen.Sql.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql.ManagedInstanceAdministratorArgs
+        var managedInstanceAdministrator = new AzureNextGen.Sql.V20170301Preview.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql.V20170301Preview.ManagedInstanceAdministratorArgs
         {
             AdministratorName = "ActiveDirectory",
             AdministratorType = "ActiveDirectory",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_administrator = azure_nextgen.sql.ManagedInstanceAdministrator("managedInstanceAdministrator",
+managed_instance_administrator = azure_nextgen.sql.v20170301preview.ManagedInstanceAdministrator("managedInstanceAdministrator",
     administrator_name="ActiveDirectory",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
@@ -73,7 +73,7 @@ managed_instance_administrator = azure_nextgen.sql.ManagedInstanceAdministrator(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedInstanceAdministrator = new azure_nextgen.sql.ManagedInstanceAdministrator("managedInstanceAdministrator", {
+const managedInstanceAdministrator = new azure_nextgen.sql.v20170301preview.ManagedInstanceAdministrator("managedInstanceAdministrator", {
     administratorName: "ActiveDirectory",
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",
@@ -97,7 +97,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstanceAdministrator = new AzureNextGen.Sql.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql.ManagedInstanceAdministratorArgs
+        var managedInstanceAdministrator = new AzureNextGen.Sql.V20170301Preview.ManagedInstanceAdministrator("managedInstanceAdministrator", new AzureNextGen.Sql.V20170301Preview.ManagedInstanceAdministratorArgs
         {
             AdministratorName = "ActiveDirectory",
             AdministratorType = "ActiveDirectory",
@@ -125,7 +125,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance_administrator = azure_nextgen.sql.ManagedInstanceAdministrator("managedInstanceAdministrator",
+managed_instance_administrator = azure_nextgen.sql.v20170301preview.ManagedInstanceAdministrator("managedInstanceAdministrator",
     administrator_name="ActiveDirectory",
     administrator_type="ActiveDirectory",
     login="bob@contoso.com",
@@ -144,7 +144,7 @@ managed_instance_administrator = azure_nextgen.sql.ManagedInstanceAdministrator(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedInstanceAdministrator = new azure_nextgen.sql.ManagedInstanceAdministrator("managedInstanceAdministrator", {
+const managedInstanceAdministrator = new azure_nextgen.sql.v20170301preview.ManagedInstanceAdministrator("managedInstanceAdministrator", {
     administratorName: "ActiveDirectory",
     administratorType: "ActiveDirectory",
     login: "bob@contoso.com",

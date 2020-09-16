@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.Web.Certificate("certificate", new AzureNextGen.Web.CertificateArgs
+        var certificate = new AzureNextGen.Web.Latest.Certificate("certificate", new AzureNextGen.Web.Latest.CertificateArgs
         {
             HostNames = 
             {
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.web.Certificate("certificate",
+certificate = azure_nextgen.web.latest.Certificate("certificate",
     host_names=["ServerCert"],
     location="East US",
     name="testc6282",
@@ -72,7 +72,7 @@ certificate = azure_nextgen.web.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const certificate = new azure_nextgen.web.Certificate("certificate", {
+const certificate = new azure_nextgen.web.latest.Certificate("certificate", {
     hostNames: ["ServerCert"],
     location: "East US",
     name: "testc6282",

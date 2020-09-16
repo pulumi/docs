@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managementConfiguration = new AzureNextGen.Operationsmanagement.ManagementConfiguration("managementConfiguration", new AzureNextGen.Operationsmanagement.ManagementConfigurationArgs
+        var managementConfiguration = new AzureNextGen.OperationsManagement.V20151101Preview.ManagementConfiguration("managementConfiguration", new AzureNextGen.OperationsManagement.V20151101Preview.ManagementConfigurationArgs
         {
             Location = "East US",
             ManagementConfigurationName = "managementConfiguration1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-management_configuration = azure_nextgen.operationsmanagement.ManagementConfiguration("managementConfiguration",
+management_configuration = azure_nextgen.operationsmanagement.v20151101preview.ManagementConfiguration("managementConfiguration",
     location="East US",
     management_configuration_name="managementConfiguration1",
     resource_group_name="rg1")
@@ -65,7 +65,7 @@ management_configuration = azure_nextgen.operationsmanagement.ManagementConfigur
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managementConfiguration = new azure_nextgen.operationsmanagement.ManagementConfiguration("managementConfiguration", {
+const managementConfiguration = new azure_nextgen.operationsmanagement.v20151101preview.ManagementConfiguration("managementConfiguration", {
     location: "East US",
     managementConfigurationName: "managementConfiguration1",
     resourceGroupName: "rg1",

@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var machineLearningService = new AzureNextGen.Machinelearningservices.MachineLearningService("machineLearningService", new AzureNextGen.Machinelearningservices.MachineLearningServiceArgs
+        var machineLearningService = new AzureNextGen.MachineLearningServices.V20200901Preview.MachineLearningService("machineLearningService", new AzureNextGen.MachineLearningServices.V20200901Preview.MachineLearningServiceArgs
         {
             ComputeType = "ACI",
-            EnvironmentImageRequest = new AzureNextGen.Machinelearningservices.Inputs.CreateServiceRequestEnvironmentImageRequestArgs
+            EnvironmentImageRequest = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.CreateServiceRequestEnvironmentImageRequestArgs
             {
                 Assets = 
                 {
-                    new AzureNextGen.Machinelearningservices.Inputs.ImageAssetArgs
+                    new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.ImageAssetArgs
                     {
                         MimeType = "application/x-python",
                         Unpack = false,
@@ -41,9 +41,9 @@ class MyStack : Stack
                     },
                 },
                 DriverProgram = "score.py",
-                Environment = new AzureNextGen.Machinelearningservices.Inputs.EnvironmentImageRequestEnvironmentArgs
+                Environment = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.EnvironmentImageRequestEnvironmentArgs
                 {
-                    Docker = new AzureNextGen.Machinelearningservices.Inputs.ModelEnvironmentDefinitionDockerArgs
+                    Docker = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.ModelEnvironmentDefinitionDockerArgs
                     {
                         BaseImage = "mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04",
                         BaseImageRegistry = ,
@@ -53,7 +53,7 @@ class MyStack : Stack
                         { "EXAMPLE_ENV_VAR", "EXAMPLE_VALUE" },
                     },
                     Name = "AzureML-Scikit-learn-0.20.3",
-                    Python = new AzureNextGen.Machinelearningservices.Inputs.ModelEnvironmentDefinitionPythonArgs
+                    Python = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.ModelEnvironmentDefinitionPythonArgs
                     {
                         CondaDependencies = 
                         {
@@ -85,7 +85,7 @@ class MyStack : Stack
                         InterpreterPath = "python",
                         UserManagedDependencies = false,
                     },
-                    Spark = new AzureNextGen.Machinelearningservices.Inputs.ModelEnvironmentDefinitionSparkArgs
+                    Spark = new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.ModelEnvironmentDefinitionSparkArgs
                     {
                         Packages = {},
                         PrecachePackages = true,
@@ -95,7 +95,7 @@ class MyStack : Stack
                 },
                 Models = 
                 {
-                    new AzureNextGen.Machinelearningservices.Inputs.ModelArgs
+                    new AzureNextGen.MachineLearningServices.V20200901Preview.Inputs.ModelArgs
                     {
                         MimeType = "application/x-python",
                         Name = "sklearn_regression_model.pkl",
@@ -126,7 +126,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-machine_learning_service = azure_nextgen.machinelearningservices.MachineLearningService("machineLearningService",
+machine_learning_service = azure_nextgen.machinelearningservices.v20200901preview.MachineLearningService("machineLearningService",
     compute_type="ACI",
     environment_image_request={
         "assets": [{
@@ -196,7 +196,7 @@ machine_learning_service = azure_nextgen.machinelearningservices.MachineLearning
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const machineLearningService = new azure_nextgen.machinelearningservices.MachineLearningService("machineLearningService", {
+const machineLearningService = new azure_nextgen.machinelearningservices.v20200901preview.MachineLearningService("machineLearningService", {
     computeType: "ACI",
     environmentImageRequest: {
         assets: [{

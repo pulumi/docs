@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var emailTemplate = new AzureNextGen.Apimanagement.EmailTemplate("emailTemplate", new AzureNextGen.Apimanagement.EmailTemplateArgs
+        var emailTemplate = new AzureNextGen.ApiManagement.Latest.EmailTemplate("emailTemplate", new AzureNextGen.ApiManagement.Latest.EmailTemplateArgs
         {
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-email_template = azure_nextgen.apimanagement.EmailTemplate("emailTemplate",
+email_template = azure_nextgen.apimanagement.latest.EmailTemplate("emailTemplate",
     resource_group_name="rg1",
     service_name="apimService1",
     subject="Your request for $IssueName was successfully received.",
@@ -67,7 +67,7 @@ email_template = azure_nextgen.apimanagement.EmailTemplate("emailTemplate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const emailTemplate = new azure_nextgen.apimanagement.EmailTemplate("emailTemplate", {
+const emailTemplate = new azure_nextgen.apimanagement.latest.EmailTemplate("emailTemplate", {
     resourceGroupName: "rg1",
     serviceName: "apimService1",
     subject: `Your request for $IssueName was successfully received.`,

@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var batchAccount = new AzureNextGen.Batch.BatchAccount("batchAccount", new AzureNextGen.Batch.BatchAccountArgs
+        var batchAccount = new AzureNextGen.Batch.Latest.BatchAccount("batchAccount", new AzureNextGen.Batch.Latest.BatchAccountArgs
         {
             AccountName = "sampleacct",
-            AutoStorage = new AzureNextGen.Batch.Inputs.AutoStorageBasePropertiesArgs
+            AutoStorage = new AzureNextGen.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
             {
                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
             },
-            KeyVaultReference = new AzureNextGen.Batch.Inputs.KeyVaultReferenceArgs
+            KeyVaultReference = new AzureNextGen.Batch.Latest.Inputs.KeyVaultReferenceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
                 Url = "http://sample.vault.azure.net/",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
+batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
     account_name="sampleacct",
     auto_storage={
         "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -83,7 +83,7 @@ batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const batchAccount = new azure_nextgen.batch.BatchAccount("batchAccount", {
+const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount", {
     accountName: "sampleacct",
     autoStorage: {
         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -111,10 +111,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var batchAccount = new AzureNextGen.Batch.BatchAccount("batchAccount", new AzureNextGen.Batch.BatchAccountArgs
+        var batchAccount = new AzureNextGen.Batch.Latest.BatchAccount("batchAccount", new AzureNextGen.Batch.Latest.BatchAccountArgs
         {
             AccountName = "sampleacct",
-            AutoStorage = new AzureNextGen.Batch.Inputs.AutoStorageBasePropertiesArgs
+            AutoStorage = new AzureNextGen.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
             {
                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
             },
@@ -139,7 +139,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
+batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
     account_name="sampleacct",
     auto_storage={
         "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -157,7 +157,7 @@ batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const batchAccount = new azure_nextgen.batch.BatchAccount("batchAccount", {
+const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount", {
     accountName: "sampleacct",
     autoStorage: {
         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -180,14 +180,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var batchAccount = new AzureNextGen.Batch.BatchAccount("batchAccount", new AzureNextGen.Batch.BatchAccountArgs
+        var batchAccount = new AzureNextGen.Batch.Latest.BatchAccount("batchAccount", new AzureNextGen.Batch.Latest.BatchAccountArgs
         {
             AccountName = "sampleacct",
-            AutoStorage = new AzureNextGen.Batch.Inputs.AutoStorageBasePropertiesArgs
+            AutoStorage = new AzureNextGen.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
             {
                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
             },
-            Identity = new AzureNextGen.Batch.Inputs.BatchAccountIdentityArgs
+            Identity = new AzureNextGen.Batch.Latest.Inputs.BatchAccountIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -212,7 +212,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
+batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
     account_name="sampleacct",
     auto_storage={
         "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -233,7 +233,7 @@ batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const batchAccount = new azure_nextgen.batch.BatchAccount("batchAccount", {
+const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount", {
     accountName: "sampleacct",
     autoStorage: {
         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -259,14 +259,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var batchAccount = new AzureNextGen.Batch.BatchAccount("batchAccount", new AzureNextGen.Batch.BatchAccountArgs
+        var batchAccount = new AzureNextGen.Batch.Latest.BatchAccount("batchAccount", new AzureNextGen.Batch.Latest.BatchAccountArgs
         {
             AccountName = "sampleacct",
-            AutoStorage = new AzureNextGen.Batch.Inputs.AutoStorageBasePropertiesArgs
+            AutoStorage = new AzureNextGen.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
             {
                 StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
             },
-            KeyVaultReference = new AzureNextGen.Batch.Inputs.KeyVaultReferenceArgs
+            KeyVaultReference = new AzureNextGen.Batch.Latest.Inputs.KeyVaultReferenceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample",
                 Url = "http://sample.vault.azure.net/",
@@ -293,7 +293,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
+batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
     account_name="sampleacct",
     auto_storage={
         "storageAccountId": "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
@@ -316,7 +316,7 @@ batch_account = azure_nextgen.batch.BatchAccount("batchAccount",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const batchAccount = new azure_nextgen.batch.BatchAccount("batchAccount", {
+const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount", {
     accountName: "sampleacct",
     autoStorage: {
         storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",

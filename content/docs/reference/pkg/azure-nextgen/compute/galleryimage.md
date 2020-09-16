@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var galleryImage = new AzureNextGen.Compute.GalleryImage("galleryImage", new AzureNextGen.Compute.GalleryImageArgs
+        var galleryImage = new AzureNextGen.Compute.Latest.GalleryImage("galleryImage", new AzureNextGen.Compute.Latest.GalleryImageArgs
         {
             GalleryImageName = "myGalleryImageName",
             GalleryName = "myGalleryName",
             HyperVGeneration = "V1",
-            Identifier = new AzureNextGen.Compute.Inputs.GalleryImageIdentifierArgs
+            Identifier = new AzureNextGen.Compute.Latest.Inputs.GalleryImageIdentifierArgs
             {
                 Offer = "myOfferName",
                 Publisher = "myPublisherName",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gallery_image = azure_nextgen.compute.GalleryImage("galleryImage",
+gallery_image = azure_nextgen.compute.latest.GalleryImage("galleryImage",
     gallery_image_name="myGalleryImageName",
     gallery_name="myGalleryName",
     hyper_v_generation="V1",
@@ -84,7 +84,7 @@ gallery_image = azure_nextgen.compute.GalleryImage("galleryImage",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const galleryImage = new azure_nextgen.compute.GalleryImage("galleryImage", {
+const galleryImage = new azure_nextgen.compute.latest.GalleryImage("galleryImage", {
     galleryImageName: "myGalleryImageName",
     galleryName: "myGalleryName",
     hyperVGeneration: "V1",

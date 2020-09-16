@@ -26,20 +26,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var cluster = new AzureNextGen.Batchai.Cluster("cluster", new AzureNextGen.Batchai.ClusterArgs
+        var cluster = new AzureNextGen.BatchAI.Latest.Cluster("cluster", new AzureNextGen.BatchAI.Latest.ClusterArgs
         {
             ClusterName = "demo_cluster",
-            NodeSetup = new AzureNextGen.Batchai.Inputs.NodeSetupArgs
+            NodeSetup = new AzureNextGen.BatchAI.Latest.Inputs.NodeSetupArgs
             {
-                MountVolumes = new AzureNextGen.Batchai.Inputs.MountVolumesArgs
+                MountVolumes = new AzureNextGen.BatchAI.Latest.Inputs.MountVolumesArgs
                 {
                     AzureFileShares = 
                     {
-                        new AzureNextGen.Batchai.Inputs.AzureFileShareReferenceArgs
+                        new AzureNextGen.BatchAI.Latest.Inputs.AzureFileShareReferenceArgs
                         {
                             AccountName = "storage_account_name",
                             AzureFileUrl = "https://storage_account_name.file.core.windows.net/azure_file_share_name",
-                            Credentials = new AzureNextGen.Batchai.Inputs.AzureStorageCredentialsInfoArgs
+                            Credentials = new AzureNextGen.BatchAI.Latest.Inputs.AzureStorageCredentialsInfoArgs
                             {
                                 AccountKey = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
                             },
@@ -50,9 +50,9 @@ class MyStack : Stack
                     },
                     FileServers = 
                     {
-                        new AzureNextGen.Batchai.Inputs.FileServerReferenceArgs
+                        new AzureNextGen.BatchAI.Latest.Inputs.FileServerReferenceArgs
                         {
-                            FileServer = new AzureNextGen.Batchai.Inputs.ResourceIdArgs
+                            FileServer = new AzureNextGen.BatchAI.Latest.Inputs.ResourceIdArgs
                             {
                                 Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspaces/fileservers/fileservercedd134b",
                             },
@@ -63,15 +63,15 @@ class MyStack : Stack
                 },
             },
             ResourceGroupName = "demo_resource_group",
-            ScaleSettings = new AzureNextGen.Batchai.Inputs.ScaleSettingsArgs
+            ScaleSettings = new AzureNextGen.BatchAI.Latest.Inputs.ScaleSettingsArgs
             {
-                Manual = new AzureNextGen.Batchai.Inputs.ManualScaleSettingsArgs
+                Manual = new AzureNextGen.BatchAI.Latest.Inputs.ManualScaleSettingsArgs
                 {
                     NodeDeallocationOption = "requeue",
                     TargetNodeCount = 1,
                 },
             },
-            UserAccountSettings = new AzureNextGen.Batchai.Inputs.UserAccountSettingsArgs
+            UserAccountSettings = new AzureNextGen.BatchAI.Latest.Inputs.UserAccountSettingsArgs
             {
                 AdminUserName = "admin_user_name",
                 AdminUserPassword = "admin_user_password",
@@ -99,7 +99,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-cluster = azure_nextgen.batchai.Cluster("cluster",
+cluster = azure_nextgen.batchai.latest.Cluster("cluster",
     cluster_name="demo_cluster",
     node_setup={
         "mountVolumes": {
@@ -148,7 +148,7 @@ cluster = azure_nextgen.batchai.Cluster("cluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const cluster = new azure_nextgen.batchai.Cluster("cluster", {
+const cluster = new azure_nextgen.batchai.latest.Cluster("cluster", {
     clusterName: "demo_cluster",
     nodeSetup: {
         mountVolumes: {

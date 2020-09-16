@@ -26,18 +26,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var diagnosticSetting = new AzureNextGen.Insights.DiagnosticSetting("diagnosticSetting", new AzureNextGen.Insights.DiagnosticSettingArgs
+        var diagnosticSetting = new AzureNextGen.Insights.V20170501Preview.DiagnosticSetting("diagnosticSetting", new AzureNextGen.Insights.V20170501Preview.DiagnosticSettingArgs
         {
             EventHubAuthorizationRuleId = "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
             EventHubName = "myeventhub",
             LogAnalyticsDestinationType = "Dedicated",
             Logs = 
             {
-                new AzureNextGen.Insights.Inputs.LogSettingsArgs
+                new AzureNextGen.Insights.V20170501Preview.Inputs.LogSettingsArgs
                 {
                     Category = "WorkflowRuntime",
                     Enabled = true,
-                    RetentionPolicy = new AzureNextGen.Insights.Inputs.RetentionPolicyArgs
+                    RetentionPolicy = new AzureNextGen.Insights.V20170501Preview.Inputs.RetentionPolicyArgs
                     {
                         Days = 0,
                         Enabled = false,
@@ -46,11 +46,11 @@ class MyStack : Stack
             },
             Metrics = 
             {
-                new AzureNextGen.Insights.Inputs.MetricSettingsArgs
+                new AzureNextGen.Insights.V20170501Preview.Inputs.MetricSettingsArgs
                 {
                     Category = "WorkflowMetrics",
                     Enabled = true,
-                    RetentionPolicy = new AzureNextGen.Insights.Inputs.RetentionPolicyArgs
+                    RetentionPolicy = new AzureNextGen.Insights.V20170501Preview.Inputs.RetentionPolicyArgs
                     {
                         Days = 0,
                         Enabled = false,
@@ -80,7 +80,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-diagnostic_setting = azure_nextgen.insights.DiagnosticSetting("diagnosticSetting",
+diagnostic_setting = azure_nextgen.insights.v20170501preview.DiagnosticSetting("diagnosticSetting",
     event_hub_authorization_rule_id="/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     event_hub_name="myeventhub",
     log_analytics_destination_type="Dedicated",
@@ -115,7 +115,7 @@ diagnostic_setting = azure_nextgen.insights.DiagnosticSetting("diagnosticSetting
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const diagnosticSetting = new azure_nextgen.insights.DiagnosticSetting("diagnosticSetting", {
+const diagnosticSetting = new azure_nextgen.insights.v20170501preview.DiagnosticSetting("diagnosticSetting", {
     eventHubAuthorizationRuleId: "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
     eventHubName: "myeventhub",
     logAnalyticsDestinationType: "Dedicated",

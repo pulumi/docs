@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scheduledQueryRule = new AzureNextGen.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.ScheduledQueryRuleArgs
+        var scheduledQueryRule = new AzureNextGen.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.Latest.ScheduledQueryRuleArgs
         {
             Action = 
             {
-                { "aznsAction", new AzureNextGen.Insights.Inputs.AzNsActionGroupArgs
+                { "aznsAction", new AzureNextGen.Insights.Latest.Inputs.AzNsActionGroupArgs
                 {
                     ActionGroup = {},
                     CustomWebhookPayload = "{}",
@@ -38,9 +38,9 @@ class MyStack : Stack
                 } },
                 { "odata.type", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
                 { "severity", "1" },
-                { "trigger", new AzureNextGen.Insights.Inputs.TriggerConditionArgs
+                { "trigger", new AzureNextGen.Insights.Latest.Inputs.TriggerConditionArgs
                 {
-                    MetricTrigger = new AzureNextGen.Insights.Inputs.LogMetricTriggerArgs
+                    MetricTrigger = new AzureNextGen.Insights.Latest.Inputs.LogMetricTriggerArgs
                     {
                         MetricColumn = "Computer",
                         MetricTriggerType = "Consecutive",
@@ -56,12 +56,12 @@ class MyStack : Stack
             Location = "eastus",
             ResourceGroupName = "Rac46PostSwapRG",
             RuleName = "logalertfoo",
-            Schedule = new AzureNextGen.Insights.Inputs.ScheduleArgs
+            Schedule = new AzureNextGen.Insights.Latest.Inputs.ScheduleArgs
             {
                 FrequencyInMinutes = 15,
                 TimeWindowInMinutes = 15,
             },
-            Source = new AzureNextGen.Insights.Inputs.SourceArgs
+            Source = new AzureNextGen.Insights.Latest.Inputs.SourceArgs
             {
                 DataSourceId = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
                 Query = "Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
@@ -87,7 +87,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule",
+scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
     action={
         "aznsAction": {
             "actionGroup": [],
@@ -133,7 +133,7 @@ scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQuery
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const scheduledQueryRule = new azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule", {
+const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
     action: {
         aznsAction: {
             actionGroup: [],
@@ -184,11 +184,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scheduledQueryRule = new AzureNextGen.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.ScheduledQueryRuleArgs
+        var scheduledQueryRule = new AzureNextGen.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.Latest.ScheduledQueryRuleArgs
         {
             Action = 
             {
-                { "aznsAction", new AzureNextGen.Insights.Inputs.AzNsActionGroupArgs
+                { "aznsAction", new AzureNextGen.Insights.Latest.Inputs.AzNsActionGroupArgs
                 {
                     ActionGroup = 
                     {
@@ -198,7 +198,7 @@ class MyStack : Stack
                 } },
                 { "odata.type", "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction" },
                 { "severity", "3" },
-                { "trigger", new AzureNextGen.Insights.Inputs.TriggerConditionArgs
+                { "trigger", new AzureNextGen.Insights.Latest.Inputs.TriggerConditionArgs
                 {
                     Threshold = 5000,
                     ThresholdOperator = "GreaterThan",
@@ -209,12 +209,12 @@ class MyStack : Stack
             Location = "eastus",
             ResourceGroupName = "Rac46PostSwapRG",
             RuleName = "SampleCrossResourceAlert",
-            Schedule = new AzureNextGen.Insights.Inputs.ScheduleArgs
+            Schedule = new AzureNextGen.Insights.Latest.Inputs.ScheduleArgs
             {
                 FrequencyInMinutes = 60,
                 TimeWindowInMinutes = 60,
             },
-            Source = new AzureNextGen.Insights.Inputs.SourceArgs
+            Source = new AzureNextGen.Insights.Latest.Inputs.SourceArgs
             {
                 AuthorizedResources = 
                 {
@@ -245,7 +245,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule",
+scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
     action={
         "aznsAction": {
             "actionGroup": ["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
@@ -288,7 +288,7 @@ scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQuery
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const scheduledQueryRule = new azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule", {
+const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
     action: {
         aznsAction: {
             actionGroup: ["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
@@ -336,13 +336,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var scheduledQueryRule = new AzureNextGen.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.ScheduledQueryRuleArgs
+        var scheduledQueryRule = new AzureNextGen.Insights.Latest.ScheduledQueryRule("scheduledQueryRule", new AzureNextGen.Insights.Latest.ScheduledQueryRuleArgs
         {
             Action = 
             {
                 { "criteria", 
                 {
-                    new AzureNextGen.Insights.Inputs.CriteriaArgs
+                    new AzureNextGen.Insights.Latest.Inputs.CriteriaArgs
                     {
                         Dimensions = {},
                         MetricName = "Average_% Idle Time",
@@ -355,7 +355,7 @@ class MyStack : Stack
             Location = "West Europe",
             ResourceGroupName = "alertsweu",
             RuleName = "logtometricfoo",
-            Source = new AzureNextGen.Insights.Inputs.SourceArgs
+            Source = new AzureNextGen.Insights.Latest.Inputs.SourceArgs
             {
                 DataSourceId = "/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
             },
@@ -379,7 +379,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule",
+scheduled_query_rule = azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule",
     action={
         "criteria": [{
             "dimensions": [],
@@ -407,7 +407,7 @@ scheduled_query_rule = azure_nextgen.insights.ScheduledQueryRule("scheduledQuery
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const scheduledQueryRule = new azure_nextgen.insights.ScheduledQueryRule("scheduledQueryRule", {
+const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule("scheduledQueryRule", {
     action: {
         criteria: [{
             dimensions: [],

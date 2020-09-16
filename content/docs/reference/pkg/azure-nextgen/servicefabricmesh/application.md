@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.Servicefabricmesh.Application("application", new AzureNextGen.Servicefabricmesh.ApplicationArgs
+        var application = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Application("application", new AzureNextGen.ServiceFabricMesh.V20180901Preview.ApplicationArgs
         {
             ApplicationResourceName = "sampleApplication",
             Description = "Service Fabric Mesh sample application.",
@@ -34,7 +34,7 @@ class MyStack : Stack
             ResourceGroupName = "sbz_demo",
             Services = 
             {
-                new AzureNextGen.Servicefabricmesh.Inputs.ServiceResourceDescriptionArgs
+                new AzureNextGen.ServiceFabricMesh.V20180901Preview.Inputs.ServiceResourceDescriptionArgs
                 {
                     Name = "helloWorldService",
                 },
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.servicefabricmesh.Application("application",
+application = azure_nextgen.servicefabricmesh.v20180901preview.Application("application",
     application_resource_name="sampleApplication",
     description="Service Fabric Mesh sample application.",
     location="EastUS",
@@ -79,7 +79,7 @@ application = azure_nextgen.servicefabricmesh.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const application = new azure_nextgen.servicefabricmesh.Application("application", {
+const application = new azure_nextgen.servicefabricmesh.v20180901preview.Application("application", {
     applicationResourceName: "sampleApplication",
     description: "Service Fabric Mesh sample application.",
     location: "EastUS",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var trigger = new AzureNextGen.Databoxedge.Trigger("trigger", new AzureNextGen.Databoxedge.TriggerArgs
+        var trigger = new AzureNextGen.DataBoxEdge.Latest.Trigger("trigger", new AzureNextGen.DataBoxEdge.Latest.TriggerArgs
         {
             DeviceName = "testedgedevice",
             Kind = "FileEvent",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-trigger = azure_nextgen.databoxedge.Trigger("trigger",
+trigger = azure_nextgen.databoxedge.latest.Trigger("trigger",
     device_name="testedgedevice",
     kind="FileEvent",
     name="trigger1",
@@ -67,7 +67,7 @@ trigger = azure_nextgen.databoxedge.Trigger("trigger",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const trigger = new azure_nextgen.databoxedge.Trigger("trigger", {
+const trigger = new azure_nextgen.databoxedge.latest.Trigger("trigger", {
     deviceName: "testedgedevice",
     kind: "FileEvent",
     name: "trigger1",

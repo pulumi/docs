@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiVersionSet = new AzureNextGen.Apimanagement.ApiVersionSet("apiVersionSet", new AzureNextGen.Apimanagement.ApiVersionSetArgs
+        var apiVersionSet = new AzureNextGen.ApiManagement.Latest.ApiVersionSet("apiVersionSet", new AzureNextGen.ApiManagement.Latest.ApiVersionSetArgs
         {
             Description = "Version configuration",
             DisplayName = "api set 1",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_version_set = azure_nextgen.apimanagement.ApiVersionSet("apiVersionSet",
+api_version_set = azure_nextgen.apimanagement.latest.ApiVersionSet("apiVersionSet",
     description="Version configuration",
     display_name="api set 1",
     resource_group_name="rg1",
@@ -71,7 +71,7 @@ api_version_set = azure_nextgen.apimanagement.ApiVersionSet("apiVersionSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiVersionSet = new azure_nextgen.apimanagement.ApiVersionSet("apiVersionSet", {
+const apiVersionSet = new azure_nextgen.apimanagement.latest.ApiVersionSet("apiVersionSet", {
     description: "Version configuration",
     displayName: "api set 1",
     resourceGroupName: "rg1",

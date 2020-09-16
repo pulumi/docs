@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var manager = new AzureNextGen.Storsimple.Manager("manager", new AzureNextGen.Storsimple.ManagerArgs
+        var manager = new AzureNextGen.StorSimple.Latest.Manager("manager", new AzureNextGen.StorSimple.Latest.ManagerArgs
         {
-            CisIntrinsicSettings = new AzureNextGen.Storsimple.Inputs.ManagerIntrinsicSettingsArgs
+            CisIntrinsicSettings = new AzureNextGen.StorSimple.Latest.Inputs.ManagerIntrinsicSettingsArgs
             {
                 Type = "GardaV1",
             },
             Location = "westus",
             ManagerName = "ManagerForSDKTest2",
             ResourceGroupName = "ResourceGroupForSDKTest",
-            Sku = new AzureNextGen.Storsimple.Inputs.ManagerSkuArgs
+            Sku = new AzureNextGen.StorSimple.Latest.Inputs.ManagerSkuArgs
             {
                 Name = "Standard",
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-manager = azure_nextgen.storsimple.Manager("manager",
+manager = azure_nextgen.storsimple.latest.Manager("manager",
     cis_intrinsic_settings={
         "type": "GardaV1",
     },
@@ -79,7 +79,7 @@ manager = azure_nextgen.storsimple.Manager("manager",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const manager = new azure_nextgen.storsimple.Manager("manager", {
+const manager = new azure_nextgen.storsimple.latest.Manager("manager", {
     cisIntrinsicSettings: {
         type: "GardaV1",
     },

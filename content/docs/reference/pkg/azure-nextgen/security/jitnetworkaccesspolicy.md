@@ -25,25 +25,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var jitNetworkAccessPolicy = new AzureNextGen.Security.JitNetworkAccessPolicy("jitNetworkAccessPolicy", new AzureNextGen.Security.JitNetworkAccessPolicyArgs
+        var jitNetworkAccessPolicy = new AzureNextGen.Security.Latest.JitNetworkAccessPolicy("jitNetworkAccessPolicy", new AzureNextGen.Security.Latest.JitNetworkAccessPolicyArgs
         {
             AscLocation = "westeurope",
             JitNetworkAccessPolicyName = "default",
             Kind = "Basic",
             Requests = 
             {
-                new AzureNextGen.Security.Inputs.JitNetworkAccessRequestArgs
+                new AzureNextGen.Security.Latest.Inputs.JitNetworkAccessRequestArgs
                 {
                     Requestor = "barbara@contoso.com",
                     StartTimeUtc = "2018-05-17T08:06:45.5691611Z",
                     VirtualMachines = 
                     {
-                        new AzureNextGen.Security.Inputs.JitNetworkAccessRequestVirtualMachineArgs
+                        new AzureNextGen.Security.Latest.Inputs.JitNetworkAccessRequestVirtualMachineArgs
                         {
                             Id = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
                             Ports = 
                             {
-                                new AzureNextGen.Security.Inputs.JitNetworkAccessRequestPortArgs
+                                new AzureNextGen.Security.Latest.Inputs.JitNetworkAccessRequestPortArgs
                                 {
                                     AllowedSourceAddressPrefix = "192.127.0.2",
                                     EndTimeUtc = "2018-05-17T09:06:45.5691611Z",
@@ -59,19 +59,19 @@ class MyStack : Stack
             ResourceGroupName = "myRg1",
             VirtualMachines = 
             {
-                new AzureNextGen.Security.Inputs.JitNetworkAccessPolicyVirtualMachineArgs
+                new AzureNextGen.Security.Latest.Inputs.JitNetworkAccessPolicyVirtualMachineArgs
                 {
                     Id = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
                     Ports = 
                     {
-                        new AzureNextGen.Security.Inputs.JitNetworkAccessPortRuleArgs
+                        new AzureNextGen.Security.Latest.Inputs.JitNetworkAccessPortRuleArgs
                         {
                             AllowedSourceAddressPrefix = "*",
                             MaxRequestAccessDuration = "PT3H",
                             Number = 22,
                             Protocol = "*",
                         },
-                        new AzureNextGen.Security.Inputs.JitNetworkAccessPortRuleArgs
+                        new AzureNextGen.Security.Latest.Inputs.JitNetworkAccessPortRuleArgs
                         {
                             AllowedSourceAddressPrefix = "*",
                             MaxRequestAccessDuration = "PT3H",
@@ -100,7 +100,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-jit_network_access_policy = azure_nextgen.security.JitNetworkAccessPolicy("jitNetworkAccessPolicy",
+jit_network_access_policy = azure_nextgen.security.latest.JitNetworkAccessPolicy("jitNetworkAccessPolicy",
     asc_location="westeurope",
     jit_network_access_policy_name="default",
     kind="Basic",
@@ -147,7 +147,7 @@ jit_network_access_policy = azure_nextgen.security.JitNetworkAccessPolicy("jitNe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const jitNetworkAccessPolicy = new azure_nextgen.security.JitNetworkAccessPolicy("jitNetworkAccessPolicy", {
+const jitNetworkAccessPolicy = new azure_nextgen.security.latest.JitNetworkAccessPolicy("jitNetworkAccessPolicy", {
     ascLocation: "westeurope",
     jitNetworkAccessPolicyName: "default",
     kind: "Basic",

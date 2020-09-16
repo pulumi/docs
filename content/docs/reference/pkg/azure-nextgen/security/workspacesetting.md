@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspaceSetting = new AzureNextGen.Security.WorkspaceSetting("workspaceSetting", new AzureNextGen.Security.WorkspaceSettingArgs
+        var workspaceSetting = new AzureNextGen.Security.V20170801Preview.WorkspaceSetting("workspaceSetting", new AzureNextGen.Security.V20170801Preview.WorkspaceSettingArgs
         {
             Scope = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
             WorkspaceId = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace_setting = azure_nextgen.security.WorkspaceSetting("workspaceSetting",
+workspace_setting = azure_nextgen.security.v20170801preview.WorkspaceSetting("workspaceSetting",
     scope="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
     workspace_id="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
     workspace_setting_name="default")
@@ -65,7 +65,7 @@ workspace_setting = azure_nextgen.security.WorkspaceSetting("workspaceSetting",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workspaceSetting = new azure_nextgen.security.WorkspaceSetting("workspaceSetting", {
+const workspaceSetting = new azure_nextgen.security.v20170801preview.WorkspaceSetting("workspaceSetting", {
     scope: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23",
     workspaceId: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace",
     workspaceSettingName: "default",

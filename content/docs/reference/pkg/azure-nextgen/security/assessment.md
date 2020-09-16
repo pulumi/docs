@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assessment = new AzureNextGen.Security.Assessment("assessment", new AzureNextGen.Security.AssessmentArgs
+        var assessment = new AzureNextGen.Security.Latest.Assessment("assessment", new AzureNextGen.Security.Latest.AssessmentArgs
         {
             AssessmentName = "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
             ResourceDetails = 
@@ -34,7 +34,7 @@ class MyStack : Stack
                 { "source", "Azure" },
             },
             ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
-            Status = new AzureNextGen.Security.Inputs.AssessmentStatusArgs
+            Status = new AzureNextGen.Security.Latest.Inputs.AssessmentStatusArgs
             {
                 Code = "Healthy",
             },
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assessment = azure_nextgen.security.Assessment("assessment",
+assessment = azure_nextgen.security.latest.Assessment("assessment",
     assessment_name="8bb8be0a-6010-4789-812f-e4d661c4ed0e",
     resource_details={
         "source": "Azure",
@@ -77,7 +77,7 @@ assessment = azure_nextgen.security.Assessment("assessment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const assessment = new azure_nextgen.security.Assessment("assessment", {
+const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
     assessmentName: "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
     resourceDetails: {
         source: "Azure",

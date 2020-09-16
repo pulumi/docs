@@ -27,18 +27,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var task = new AzureNextGen.Containerregistry.Task("task", new AzureNextGen.Containerregistry.TaskArgs
+        var task = new AzureNextGen.ContainerRegistry.Latest.Task("task", new AzureNextGen.ContainerRegistry.Latest.TaskArgs
         {
-            AgentConfiguration = new AzureNextGen.Containerregistry.Inputs.AgentPropertiesArgs
+            AgentConfiguration = new AzureNextGen.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
             {
                 Cpu = 2,
             },
-            Identity = new AzureNextGen.Containerregistry.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "eastus",
-            Platform = new AzureNextGen.Containerregistry.Inputs.PlatformPropertiesArgs
+            Platform = new AzureNextGen.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
             {
                 Architecture = "amd64",
                 Os = "Linux",
@@ -46,7 +46,7 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNextGen.Containerregistry.Inputs.TaskStepPropertiesArgs
+            Step = new AzureNextGen.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
             {
                 ContextPath = "src",
             },
@@ -55,23 +55,23 @@ class MyStack : Stack
                 { "testkey", "value" },
             },
             TaskName = "mytTask",
-            Trigger = new AzureNextGen.Containerregistry.Inputs.TriggerPropertiesArgs
+            Trigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
             {
-                BaseImageTrigger = new AzureNextGen.Containerregistry.Inputs.BaseImageTriggerArgs
+                BaseImageTrigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
                 },
                 SourceTriggers = 
                 {
-                    new AzureNextGen.Containerregistry.Inputs.SourceTriggerArgs
+                    new AzureNextGen.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
                     {
                         Name = "mySourceTrigger",
-                        SourceRepository = new AzureNextGen.Containerregistry.Inputs.SourcePropertiesArgs
+                        SourceRepository = new AzureNextGen.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
                         {
                             Branch = "master",
                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureNextGen.Containerregistry.Inputs.AuthInfoArgs
+                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry.Latest.Inputs.AuthInfoArgs
                             {
                                 Token = "xxxxx",
                                 TokenType = "PAT",
@@ -86,7 +86,7 @@ class MyStack : Stack
                 },
                 TimerTriggers = 
                 {
-                    new AzureNextGen.Containerregistry.Inputs.TimerTriggerArgs
+                    new AzureNextGen.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
                     {
                         Name = "myTimerTrigger",
                         Schedule = "30 9 * * 1-5",
@@ -112,7 +112,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-task = azure_nextgen.containerregistry.Task("task",
+task = azure_nextgen.containerregistry.latest.Task("task",
     agent_configuration={
         "cpu": 2,
     },
@@ -168,7 +168,7 @@ task = azure_nextgen.containerregistry.Task("task",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const task = new azure_nextgen.containerregistry.Task("task", {
+const task = new azure_nextgen.containerregistry.latest.Task("task", {
     agentConfiguration: {
         cpu: 2,
     },
@@ -229,13 +229,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var task = new AzureNextGen.Containerregistry.Task("task", new AzureNextGen.Containerregistry.TaskArgs
+        var task = new AzureNextGen.ContainerRegistry.Latest.Task("task", new AzureNextGen.ContainerRegistry.Latest.TaskArgs
         {
-            AgentConfiguration = new AzureNextGen.Containerregistry.Inputs.AgentPropertiesArgs
+            AgentConfiguration = new AzureNextGen.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
             {
                 Cpu = 2,
             },
-            Identity = new AzureNextGen.Containerregistry.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
             {
                 Type = "SystemAssigned, UserAssigned",
                 UserAssignedIdentities = 
@@ -244,7 +244,7 @@ class MyStack : Stack
                 },
             },
             Location = "eastus",
-            Platform = new AzureNextGen.Containerregistry.Inputs.PlatformPropertiesArgs
+            Platform = new AzureNextGen.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
             {
                 Architecture = "amd64",
                 Os = "Linux",
@@ -252,7 +252,7 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNextGen.Containerregistry.Inputs.TaskStepPropertiesArgs
+            Step = new AzureNextGen.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
             {
                 ContextPath = "src",
             },
@@ -261,23 +261,23 @@ class MyStack : Stack
                 { "testkey", "value" },
             },
             TaskName = "mytTask",
-            Trigger = new AzureNextGen.Containerregistry.Inputs.TriggerPropertiesArgs
+            Trigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
             {
-                BaseImageTrigger = new AzureNextGen.Containerregistry.Inputs.BaseImageTriggerArgs
+                BaseImageTrigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
                 },
                 SourceTriggers = 
                 {
-                    new AzureNextGen.Containerregistry.Inputs.SourceTriggerArgs
+                    new AzureNextGen.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
                     {
                         Name = "mySourceTrigger",
-                        SourceRepository = new AzureNextGen.Containerregistry.Inputs.SourcePropertiesArgs
+                        SourceRepository = new AzureNextGen.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
                         {
                             Branch = "master",
                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureNextGen.Containerregistry.Inputs.AuthInfoArgs
+                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry.Latest.Inputs.AuthInfoArgs
                             {
                                 Token = "xxxxx",
                                 TokenType = "PAT",
@@ -292,7 +292,7 @@ class MyStack : Stack
                 },
                 TimerTriggers = 
                 {
-                    new AzureNextGen.Containerregistry.Inputs.TimerTriggerArgs
+                    new AzureNextGen.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
                     {
                         Name = "myTimerTrigger",
                         Schedule = "30 9 * * 1-5",
@@ -318,7 +318,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-task = azure_nextgen.containerregistry.Task("task",
+task = azure_nextgen.containerregistry.latest.Task("task",
     agent_configuration={
         "cpu": 2,
     },
@@ -377,7 +377,7 @@ task = azure_nextgen.containerregistry.Task("task",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const task = new azure_nextgen.containerregistry.Task("task", {
+const task = new azure_nextgen.containerregistry.latest.Task("task", {
     agentConfiguration: {
         cpu: 2,
     },
@@ -441,13 +441,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var task = new AzureNextGen.Containerregistry.Task("task", new AzureNextGen.Containerregistry.TaskArgs
+        var task = new AzureNextGen.ContainerRegistry.Latest.Task("task", new AzureNextGen.ContainerRegistry.Latest.TaskArgs
         {
-            AgentConfiguration = new AzureNextGen.Containerregistry.Inputs.AgentPropertiesArgs
+            AgentConfiguration = new AzureNextGen.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
             {
                 Cpu = 2,
             },
-            Identity = new AzureNextGen.Containerregistry.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
             {
                 Type = "UserAssigned",
                 UserAssignedIdentities = 
@@ -457,7 +457,7 @@ class MyStack : Stack
                 },
             },
             Location = "eastus",
-            Platform = new AzureNextGen.Containerregistry.Inputs.PlatformPropertiesArgs
+            Platform = new AzureNextGen.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
             {
                 Architecture = "amd64",
                 Os = "Linux",
@@ -465,7 +465,7 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNextGen.Containerregistry.Inputs.TaskStepPropertiesArgs
+            Step = new AzureNextGen.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
             {
                 ContextPath = "src",
             },
@@ -474,23 +474,23 @@ class MyStack : Stack
                 { "testkey", "value" },
             },
             TaskName = "mytTask",
-            Trigger = new AzureNextGen.Containerregistry.Inputs.TriggerPropertiesArgs
+            Trigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
             {
-                BaseImageTrigger = new AzureNextGen.Containerregistry.Inputs.BaseImageTriggerArgs
+                BaseImageTrigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
                 },
                 SourceTriggers = 
                 {
-                    new AzureNextGen.Containerregistry.Inputs.SourceTriggerArgs
+                    new AzureNextGen.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
                     {
                         Name = "mySourceTrigger",
-                        SourceRepository = new AzureNextGen.Containerregistry.Inputs.SourcePropertiesArgs
+                        SourceRepository = new AzureNextGen.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
                         {
                             Branch = "master",
                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureNextGen.Containerregistry.Inputs.AuthInfoArgs
+                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry.Latest.Inputs.AuthInfoArgs
                             {
                                 Token = "xxxxx",
                                 TokenType = "PAT",
@@ -505,7 +505,7 @@ class MyStack : Stack
                 },
                 TimerTriggers = 
                 {
-                    new AzureNextGen.Containerregistry.Inputs.TimerTriggerArgs
+                    new AzureNextGen.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
                     {
                         Name = "myTimerTrigger",
                         Schedule = "30 9 * * 1-5",
@@ -531,7 +531,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-task = azure_nextgen.containerregistry.Task("task",
+task = azure_nextgen.containerregistry.latest.Task("task",
     agent_configuration={
         "cpu": 2,
     },
@@ -591,7 +591,7 @@ task = azure_nextgen.containerregistry.Task("task",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const task = new azure_nextgen.containerregistry.Task("task", {
+const task = new azure_nextgen.containerregistry.latest.Task("task", {
     agentConfiguration: {
         cpu: 2,
     },
@@ -656,18 +656,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var task = new AzureNextGen.Containerregistry.Task("task", new AzureNextGen.Containerregistry.TaskArgs
+        var task = new AzureNextGen.ContainerRegistry.Latest.Task("task", new AzureNextGen.ContainerRegistry.Latest.TaskArgs
         {
-            AgentConfiguration = new AzureNextGen.Containerregistry.Inputs.AgentPropertiesArgs
+            AgentConfiguration = new AzureNextGen.ContainerRegistry.Latest.Inputs.AgentPropertiesArgs
             {
                 Cpu = 2,
             },
-            Identity = new AzureNextGen.Containerregistry.Inputs.IdentityPropertiesArgs
+            Identity = new AzureNextGen.ContainerRegistry.Latest.Inputs.IdentityPropertiesArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "eastus",
-            Platform = new AzureNextGen.Containerregistry.Inputs.PlatformPropertiesArgs
+            Platform = new AzureNextGen.ContainerRegistry.Latest.Inputs.PlatformPropertiesArgs
             {
                 Architecture = "amd64",
                 Os = "Linux",
@@ -675,7 +675,7 @@ class MyStack : Stack
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
             Status = "Enabled",
-            Step = new AzureNextGen.Containerregistry.Inputs.TaskStepPropertiesArgs
+            Step = new AzureNextGen.ContainerRegistry.Latest.Inputs.TaskStepPropertiesArgs
             {
                 ContextPath = "src",
             },
@@ -684,23 +684,23 @@ class MyStack : Stack
                 { "testkey", "value" },
             },
             TaskName = "mytTask",
-            Trigger = new AzureNextGen.Containerregistry.Inputs.TriggerPropertiesArgs
+            Trigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.TriggerPropertiesArgs
             {
-                BaseImageTrigger = new AzureNextGen.Containerregistry.Inputs.BaseImageTriggerArgs
+                BaseImageTrigger = new AzureNextGen.ContainerRegistry.Latest.Inputs.BaseImageTriggerArgs
                 {
                     BaseImageTriggerType = "Runtime",
                     Name = "myBaseImageTrigger",
                 },
                 SourceTriggers = 
                 {
-                    new AzureNextGen.Containerregistry.Inputs.SourceTriggerArgs
+                    new AzureNextGen.ContainerRegistry.Latest.Inputs.SourceTriggerArgs
                     {
                         Name = "mySourceTrigger",
-                        SourceRepository = new AzureNextGen.Containerregistry.Inputs.SourcePropertiesArgs
+                        SourceRepository = new AzureNextGen.ContainerRegistry.Latest.Inputs.SourcePropertiesArgs
                         {
                             Branch = "master",
                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
-                            SourceControlAuthProperties = new AzureNextGen.Containerregistry.Inputs.AuthInfoArgs
+                            SourceControlAuthProperties = new AzureNextGen.ContainerRegistry.Latest.Inputs.AuthInfoArgs
                             {
                                 Token = "xxxxx",
                                 TokenType = "PAT",
@@ -715,7 +715,7 @@ class MyStack : Stack
                 },
                 TimerTriggers = 
                 {
-                    new AzureNextGen.Containerregistry.Inputs.TimerTriggerArgs
+                    new AzureNextGen.ContainerRegistry.Latest.Inputs.TimerTriggerArgs
                     {
                         Name = "myTimerTrigger",
                         Schedule = "30 9 * * 1-5",
@@ -741,7 +741,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-task = azure_nextgen.containerregistry.Task("task",
+task = azure_nextgen.containerregistry.latest.Task("task",
     agent_configuration={
         "cpu": 2,
     },
@@ -797,7 +797,7 @@ task = azure_nextgen.containerregistry.Task("task",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const task = new azure_nextgen.containerregistry.Task("task", {
+const task = new azure_nextgen.containerregistry.latest.Task("task", {
     agentConfiguration: {
         cpu: 2,
     },

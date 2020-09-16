@@ -26,16 +26,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assetFilter = new AzureNextGen.Media.AssetFilter("assetFilter", new AzureNextGen.Media.AssetFilterArgs
+        var assetFilter = new AzureNextGen.Media.Latest.AssetFilter("assetFilter", new AzureNextGen.Media.Latest.AssetFilterArgs
         {
             AccountName = "contosomedia",
             AssetName = "ClimbingMountRainer",
             FilterName = "newAssetFilter",
-            FirstQuality = new AzureNextGen.Media.Inputs.FirstQualityArgs
+            FirstQuality = new AzureNextGen.Media.Latest.Inputs.FirstQualityArgs
             {
                 Bitrate = 128000,
             },
-            PresentationTimeRange = new AzureNextGen.Media.Inputs.PresentationTimeRangeArgs
+            PresentationTimeRange = new AzureNextGen.Media.Latest.Inputs.PresentationTimeRangeArgs
             {
                 EndTimestamp = 170000000,
                 ForceEndTimestamp = false,
@@ -47,23 +47,23 @@ class MyStack : Stack
             ResourceGroupName = "contoso",
             Tracks = 
             {
-                new AzureNextGen.Media.Inputs.FilterTrackSelectionArgs
+                new AzureNextGen.Media.Latest.Inputs.FilterTrackSelectionArgs
                 {
                     TrackSelections = 
                     {
-                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "Equal",
                             Property = "Type",
                             Value = "Audio",
                         },
-                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "NotEqual",
                             Property = "Language",
                             Value = "en",
                         },
-                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "NotEqual",
                             Property = "FourCC",
@@ -71,17 +71,17 @@ class MyStack : Stack
                         },
                     },
                 },
-                new AzureNextGen.Media.Inputs.FilterTrackSelectionArgs
+                new AzureNextGen.Media.Latest.Inputs.FilterTrackSelectionArgs
                 {
                     TrackSelections = 
                     {
-                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "Equal",
                             Property = "Type",
                             Value = "Video",
                         },
-                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "Equal",
                             Property = "Bitrate",
@@ -109,7 +109,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-asset_filter = azure_nextgen.media.AssetFilter("assetFilter",
+asset_filter = azure_nextgen.media.latest.AssetFilter("assetFilter",
     account_name="contosomedia",
     asset_name="ClimbingMountRainer",
     filter_name="newAssetFilter",
@@ -171,7 +171,7 @@ asset_filter = azure_nextgen.media.AssetFilter("assetFilter",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const assetFilter = new azure_nextgen.media.AssetFilter("assetFilter", {
+const assetFilter = new azure_nextgen.media.latest.AssetFilter("assetFilter", {
     accountName: "contosomedia",
     assetName: "ClimbingMountRainer",
     filterName: "newAssetFilter",

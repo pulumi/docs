@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bot = new AzureNextGen.Botservice.Bot("bot", new AzureNextGen.Botservice.BotArgs
+        var bot = new AzureNextGen.BotService.Latest.Bot("bot", new AzureNextGen.BotService.Latest.BotArgs
         {
             Etag = "etag1",
             Kind = "sdk",
             Location = "West US",
             ResourceGroupName = "OneResourceGroupName",
             ResourceName = "samplebotname",
-            Sku = new AzureNextGen.Botservice.Inputs.SkuArgs
+            Sku = new AzureNextGen.BotService.Latest.Inputs.SkuArgs
             {
                 Name = "S1",
             },
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bot = azure_nextgen.botservice.Bot("bot",
+bot = azure_nextgen.botservice.latest.Bot("bot",
     etag="etag1",
     kind="sdk",
     location="West US",
@@ -85,7 +85,7 @@ bot = azure_nextgen.botservice.Bot("bot",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const bot = new azure_nextgen.botservice.Bot("bot", {
+const bot = new azure_nextgen.botservice.latest.Bot("bot", {
     etag: "etag1",
     kind: "sdk",
     location: "West US",

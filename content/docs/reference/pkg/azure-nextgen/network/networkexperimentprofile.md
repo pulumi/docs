@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkExperimentProfile = new AzureNextGen.Network.NetworkExperimentProfile("networkExperimentProfile", new AzureNextGen.Network.NetworkExperimentProfileArgs
+        var networkExperimentProfile = new AzureNextGen.Network.Latest.NetworkExperimentProfile("networkExperimentProfile", new AzureNextGen.Network.Latest.NetworkExperimentProfileArgs
         {
             EnabledState = "Enabled",
             Location = "WestUs",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_experiment_profile = azure_nextgen.network.NetworkExperimentProfile("networkExperimentProfile",
+network_experiment_profile = azure_nextgen.network.latest.NetworkExperimentProfile("networkExperimentProfile",
     enabled_state="Enabled",
     location="WestUs",
     profile_name="MyProfile",
@@ -67,7 +67,7 @@ network_experiment_profile = azure_nextgen.network.NetworkExperimentProfile("net
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const networkExperimentProfile = new azure_nextgen.network.NetworkExperimentProfile("networkExperimentProfile", {
+const networkExperimentProfile = new azure_nextgen.network.latest.NetworkExperimentProfile("networkExperimentProfile", {
     enabledState: "Enabled",
     location: "WestUs",
     profileName: "MyProfile",

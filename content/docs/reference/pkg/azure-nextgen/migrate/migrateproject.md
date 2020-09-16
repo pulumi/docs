@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var migrateProject = new AzureNextGen.Migrate.MigrateProject("migrateProject", new AzureNextGen.Migrate.MigrateProjectArgs
+        var migrateProject = new AzureNextGen.Migrate.V20180901Preview.MigrateProject("migrateProject", new AzureNextGen.Migrate.V20180901Preview.MigrateProjectArgs
         {
             ETag = "\"b701c73a-0000-0000-0000-59c12ff00000\"",
             Location = "Southeast Asia",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-migrate_project = azure_nextgen.migrate.MigrateProject("migrateProject",
+migrate_project = azure_nextgen.migrate.v20180901preview.MigrateProject("migrateProject",
     e_tag="\"b701c73a-0000-0000-0000-59c12ff00000\"",
     location="Southeast Asia",
     migrate_project_name="project01",
@@ -69,7 +69,7 @@ migrate_project = azure_nextgen.migrate.MigrateProject("migrateProject",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const migrateProject = new azure_nextgen.migrate.MigrateProject("migrateProject", {
+const migrateProject = new azure_nextgen.migrate.v20180901preview.MigrateProject("migrateProject", {
     eTag: "\"b701c73a-0000-0000-0000-59c12ff00000\"",
     location: "Southeast Asia",
     migrateProjectName: "project01",

@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
                     WebHookProperties = 
@@ -50,7 +50,7 @@ class MyStack : Stack
                         { "alertSensitivity", "Medium" },
                         { "criterionType", "DynamicThresholdCriterion" },
                         { "dimensions", {} },
-                        { "failingPeriods", new AzureNextGen.Insights.Inputs.DynamicThresholdFailingPeriodsArgs
+                        { "failingPeriods", new AzureNextGen.Insights.Latest.Inputs.DynamicThresholdFailingPeriodsArgs
                         {
                             MinFailingPeriodsToAlert = 4,
                             NumberOfEvaluationPeriods = 4,
@@ -99,7 +99,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[{
         "actionGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         "webHookProperties": {
@@ -151,7 +151,7 @@ metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         webHookProperties: {
@@ -208,11 +208,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
                     WebHookProperties = 
@@ -232,7 +232,7 @@ class MyStack : Stack
                         { "alertSensitivity", "Medium" },
                         { "criterionType", "DynamicThresholdCriterion" },
                         { "dimensions", {} },
-                        { "failingPeriods", new AzureNextGen.Insights.Inputs.DynamicThresholdFailingPeriodsArgs
+                        { "failingPeriods", new AzureNextGen.Insights.Latest.Inputs.DynamicThresholdFailingPeriodsArgs
                         {
                             MinFailingPeriodsToAlert = 4,
                             NumberOfEvaluationPeriods = 4,
@@ -281,7 +281,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[{
         "actionGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         "webHookProperties": {
@@ -331,7 +331,7 @@ metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         webHookProperties: {
@@ -386,7 +386,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
         {
             Actions = {},
             Criteria = 
@@ -433,7 +433,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[],
     criteria={
         "componentId": "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
@@ -468,7 +468,7 @@ metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [],
     criteria: {
         componentId: "/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example",
@@ -508,11 +508,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
                     WebHookProperties = 
@@ -576,7 +576,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[{
         "actionGroupId": "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         "webHookProperties": {
@@ -624,7 +624,7 @@ metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         webHookProperties: {
@@ -677,11 +677,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
                     WebHookProperties = 
@@ -741,7 +741,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[{
         "actionGroupId": "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         "webHookProperties": {
@@ -783,7 +783,7 @@ metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         webHookProperties: {
@@ -830,11 +830,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
                     WebHookProperties = 
@@ -898,7 +898,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[{
         "actionGroupId": "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         "webHookProperties": {
@@ -946,7 +946,7 @@ metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         webHookProperties: {
@@ -999,11 +999,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var metricAlert = new AzureNextGen.Insights.MetricAlert("metricAlert", new AzureNextGen.Insights.MetricAlertArgs
+        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
         {
             Actions = 
             {
-                new AzureNextGen.Insights.Inputs.MetricAlertActionArgs
+                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
                     WebHookProperties = 
@@ -1066,7 +1066,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
+metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[{
         "actionGroupId": "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         "webHookProperties": {
@@ -1111,7 +1111,7 @@ metric_alert = azure_nextgen.insights.MetricAlert("metricAlert",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const metricAlert = new azure_nextgen.insights.MetricAlert("metricAlert", {
+const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
         webHookProperties: {

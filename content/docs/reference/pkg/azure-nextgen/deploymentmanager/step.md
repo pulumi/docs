@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var step = new AzureNextGen.Deploymentmanager.Step("step", new AzureNextGen.Deploymentmanager.StepArgs
+        var step = new AzureNextGen.DeploymentManager.V20191101Preview.Step("step", new AzureNextGen.DeploymentManager.V20191101Preview.StepArgs
         {
             Location = "centralus",
             ResourceGroupName = "myResourceGroup",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-step = azure_nextgen.deploymentmanager.Step("step",
+step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
     location="centralus",
     resource_group_name="myResourceGroup",
     step_name="healthCheckStep",
@@ -67,7 +67,7 @@ step = azure_nextgen.deploymentmanager.Step("step",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const step = new azure_nextgen.deploymentmanager.Step("step", {
+const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
     location: "centralus",
     resourceGroupName: "myResourceGroup",
     stepName: "healthCheckStep",
@@ -88,7 +88,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var step = new AzureNextGen.Deploymentmanager.Step("step", new AzureNextGen.Deploymentmanager.StepArgs
+        var step = new AzureNextGen.DeploymentManager.V20191101Preview.Step("step", new AzureNextGen.DeploymentManager.V20191101Preview.StepArgs
         {
             Location = "centralus",
             ResourceGroupName = "myResourceGroup",
@@ -113,7 +113,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-step = azure_nextgen.deploymentmanager.Step("step",
+step = azure_nextgen.deploymentmanager.v20191101preview.Step("step",
     location="centralus",
     resource_group_name="myResourceGroup",
     step_name="waitStep",
@@ -129,7 +129,7 @@ step = azure_nextgen.deploymentmanager.Step("step",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const step = new azure_nextgen.deploymentmanager.Step("step", {
+const step = new azure_nextgen.deploymentmanager.v20191101preview.Step("step", {
     location: "centralus",
     resourceGroupName: "myResourceGroup",
     stepName: "waitStep",

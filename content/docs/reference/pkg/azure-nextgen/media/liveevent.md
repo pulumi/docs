@@ -26,26 +26,26 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var liveEvent = new AzureNextGen.Media.LiveEvent("liveEvent", new AzureNextGen.Media.LiveEventArgs
+        var liveEvent = new AzureNextGen.Media.Latest.LiveEvent("liveEvent", new AzureNextGen.Media.Latest.LiveEventArgs
         {
             AccountName = "slitestmedia10",
             Description = "test event 1",
-            Input = new AzureNextGen.Media.Inputs.LiveEventInputArgs
+            Input = new AzureNextGen.Media.Latest.Inputs.LiveEventInputArgs
             {
                 KeyFrameIntervalDuration = "PT6S",
                 StreamingProtocol = "RTMP",
             },
             LiveEventName = "myLiveEvent1",
             Location = "West US",
-            Preview = new AzureNextGen.Media.Inputs.LiveEventPreviewArgs
+            Preview = new AzureNextGen.Media.Latest.Inputs.LiveEventPreviewArgs
             {
-                AccessControl = new AzureNextGen.Media.Inputs.LiveEventPreviewAccessControlArgs
+                AccessControl = new AzureNextGen.Media.Latest.Inputs.LiveEventPreviewAccessControlArgs
                 {
-                    Ip = new AzureNextGen.Media.Inputs.IPAccessControlArgs
+                    Ip = new AzureNextGen.Media.Latest.Inputs.IPAccessControlArgs
                     {
                         Allow = 
                         {
-                            new AzureNextGen.Media.Inputs.IPRangeArgs
+                            new AzureNextGen.Media.Latest.Inputs.IPRangeArgs
                             {
                                 Address = "0.0.0.0",
                                 Name = "AllowAll",
@@ -80,7 +80,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-live_event = azure_nextgen.media.LiveEvent("liveEvent",
+live_event = azure_nextgen.media.latest.LiveEvent("liveEvent",
     account_name="slitestmedia10",
     description="test event 1",
     input={
@@ -116,7 +116,7 @@ live_event = azure_nextgen.media.LiveEvent("liveEvent",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const liveEvent = new azure_nextgen.media.LiveEvent("liveEvent", {
+const liveEvent = new azure_nextgen.media.latest.LiveEvent("liveEvent", {
     accountName: "slitestmedia10",
     description: "test event 1",
     input: {

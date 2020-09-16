@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedPrivateEndpoint = new AzureNextGen.Datafactory.ManagedPrivateEndpoint("managedPrivateEndpoint", new AzureNextGen.Datafactory.ManagedPrivateEndpointArgs
+        var managedPrivateEndpoint = new AzureNextGen.DataFactory.Latest.ManagedPrivateEndpoint("managedPrivateEndpoint", new AzureNextGen.DataFactory.Latest.ManagedPrivateEndpointArgs
         {
             FactoryName = "exampleFactoryName",
             ManagedPrivateEndpointName = "exampleManagedPrivateEndpointName",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_private_endpoint = azure_nextgen.datafactory.ManagedPrivateEndpoint("managedPrivateEndpoint",
+managed_private_endpoint = azure_nextgen.datafactory.latest.ManagedPrivateEndpoint("managedPrivateEndpoint",
     factory_name="exampleFactoryName",
     managed_private_endpoint_name="exampleManagedPrivateEndpointName",
     managed_virtual_network_name="exampleManagedVirtualNetworkName",
@@ -67,7 +67,7 @@ managed_private_endpoint = azure_nextgen.datafactory.ManagedPrivateEndpoint("man
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedPrivateEndpoint = new azure_nextgen.datafactory.ManagedPrivateEndpoint("managedPrivateEndpoint", {
+const managedPrivateEndpoint = new azure_nextgen.datafactory.latest.ManagedPrivateEndpoint("managedPrivateEndpoint", {
     factoryName: "exampleFactoryName",
     managedPrivateEndpointName: "exampleManagedPrivateEndpointName",
     managedVirtualNetworkName: "exampleManagedVirtualNetworkName",

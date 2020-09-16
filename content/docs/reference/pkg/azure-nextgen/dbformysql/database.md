@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var database = new AzureNextGen.Dbformysql.Database("database", new AzureNextGen.Dbformysql.DatabaseArgs
+        var database = new AzureNextGen.DBforMySQL.Latest.Database("database", new AzureNextGen.DBforMySQL.Latest.DatabaseArgs
         {
             Charset = "utf8",
             Collation = "utf8_general_ci",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database = azure_nextgen.dbformysql.Database("database",
+database = azure_nextgen.dbformysql.latest.Database("database",
     charset="utf8",
     collation="utf8_general_ci",
     database_name="db1",
@@ -69,7 +69,7 @@ database = azure_nextgen.dbformysql.Database("database",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const database = new azure_nextgen.dbformysql.Database("database", {
+const database = new azure_nextgen.dbformysql.latest.Database("database", {
     charset: "utf8",
     collation: "utf8_general_ci",
     databaseName: "db1",

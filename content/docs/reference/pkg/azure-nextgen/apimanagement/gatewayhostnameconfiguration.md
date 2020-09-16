@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var gatewayHostnameConfiguration = new AzureNextGen.Apimanagement.GatewayHostnameConfiguration("gatewayHostnameConfiguration", new AzureNextGen.Apimanagement.GatewayHostnameConfigurationArgs
+        var gatewayHostnameConfiguration = new AzureNextGen.ApiManagement.Latest.GatewayHostnameConfiguration("gatewayHostnameConfiguration", new AzureNextGen.ApiManagement.Latest.GatewayHostnameConfigurationArgs
         {
             CertificateId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1",
             GatewayId = "gw1",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-gateway_hostname_configuration = azure_nextgen.apimanagement.GatewayHostnameConfiguration("gatewayHostnameConfiguration",
+gateway_hostname_configuration = azure_nextgen.apimanagement.latest.GatewayHostnameConfiguration("gatewayHostnameConfiguration",
     certificate_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1",
     gateway_id="gw1",
     hc_id="default",
@@ -73,7 +73,7 @@ gateway_hostname_configuration = azure_nextgen.apimanagement.GatewayHostnameConf
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const gatewayHostnameConfiguration = new azure_nextgen.apimanagement.GatewayHostnameConfiguration("gatewayHostnameConfiguration", {
+const gatewayHostnameConfiguration = new azure_nextgen.apimanagement.latest.GatewayHostnameConfiguration("gatewayHostnameConfiguration", {
     certificateId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1",
     gatewayId: "gw1",
     hcId: "default",

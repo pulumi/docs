@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.Solutions.Application("application", new AzureNextGen.Solutions.ApplicationArgs
+        var application = new AzureNextGen.Solutions.Latest.Application("application", new AzureNextGen.Solutions.Latest.ApplicationArgs
         {
             ApplicationDefinitionId = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
             ApplicationName = "myManagedApplication",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.solutions.Application("application",
+application = azure_nextgen.solutions.latest.Application("application",
     application_definition_id="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
     application_name="myManagedApplication",
     kind="ServiceCatalog",
@@ -71,7 +71,7 @@ application = azure_nextgen.solutions.Application("application",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const application = new azure_nextgen.solutions.Application("application", {
+const application = new azure_nextgen.solutions.latest.Application("application", {
     applicationDefinitionId: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef",
     applicationName: "myManagedApplication",
     kind: "ServiceCatalog",

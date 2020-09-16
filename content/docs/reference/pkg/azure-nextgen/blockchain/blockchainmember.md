@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blockchainMember = new AzureNextGen.Blockchain.BlockchainMember("blockchainMember", new AzureNextGen.Blockchain.BlockchainMemberArgs
+        var blockchainMember = new AzureNextGen.Blockchain.V20180601Preview.BlockchainMember("blockchainMember", new AzureNextGen.Blockchain.V20180601Preview.BlockchainMemberArgs
         {
             BlockchainMemberName = "contosemember1",
             Consortium = "ContoseConsortium",
@@ -35,7 +35,7 @@ class MyStack : Stack
             Password = "1234abcdEFG1",
             Protocol = "Quorum",
             ResourceGroupName = "mygroup",
-            ValidatorNodesSku = new AzureNextGen.Blockchain.Inputs.BlockchainMemberNodesSkuArgs
+            ValidatorNodesSku = new AzureNextGen.Blockchain.V20180601Preview.Inputs.BlockchainMemberNodesSkuArgs
             {
                 Capacity = 2,
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blockchain_member = azure_nextgen.blockchain.BlockchainMember("blockchainMember",
+blockchain_member = azure_nextgen.blockchain.v20180601preview.BlockchainMember("blockchainMember",
     blockchain_member_name="contosemember1",
     consortium="ContoseConsortium",
     consortium_management_account_password="1234abcdEFG1",
@@ -80,7 +80,7 @@ blockchain_member = azure_nextgen.blockchain.BlockchainMember("blockchainMember"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const blockchainMember = new azure_nextgen.blockchain.BlockchainMember("blockchainMember", {
+const blockchainMember = new azure_nextgen.blockchain.v20180601preview.BlockchainMember("blockchainMember", {
     blockchainMemberName: "contosemember1",
     consortium: "ContoseConsortium",
     consortiumManagementAccountPassword: "1234abcdEFG1",

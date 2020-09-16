@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiIssueComment = new AzureNextGen.Apimanagement.ApiIssueComment("apiIssueComment", new AzureNextGen.Apimanagement.ApiIssueCommentArgs
+        var apiIssueComment = new AzureNextGen.ApiManagement.Latest.ApiIssueComment("apiIssueComment", new AzureNextGen.ApiManagement.Latest.ApiIssueCommentArgs
         {
             ApiId = "57d1f7558aa04f15146d9d8a",
             CommentId = "599e29ab193c3c0bd0b3e2fb",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_issue_comment = azure_nextgen.apimanagement.ApiIssueComment("apiIssueComment",
+api_issue_comment = azure_nextgen.apimanagement.latest.ApiIssueComment("apiIssueComment",
     api_id="57d1f7558aa04f15146d9d8a",
     comment_id="599e29ab193c3c0bd0b3e2fb",
     created_date="2018-02-01T22:21:20.467Z",
@@ -75,7 +75,7 @@ api_issue_comment = azure_nextgen.apimanagement.ApiIssueComment("apiIssueComment
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiIssueComment = new azure_nextgen.apimanagement.ApiIssueComment("apiIssueComment", {
+const apiIssueComment = new azure_nextgen.apimanagement.latest.ApiIssueComment("apiIssueComment", {
     apiId: "57d1f7558aa04f15146d9d8a",
     commentId: "599e29ab193c3c0bd0b3e2fb",
     createdDate: "2018-02-01T22:21:20.467Z",

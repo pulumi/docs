@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectionMonitor = new AzureNextGen.Network.ConnectionMonitor("connectionMonitor", new AzureNextGen.Network.ConnectionMonitorArgs
+        var connectionMonitor = new AzureNextGen.Network.Latest.ConnectionMonitor("connectionMonitor", new AzureNextGen.Network.Latest.ConnectionMonitorArgs
         {
             ConnectionMonitorName = "cm1",
-            Destination = new AzureNextGen.Network.Inputs.ConnectionMonitorDestinationArgs
+            Destination = new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorDestinationArgs
             {
                 Address = "bing.com",
                 Port = 80,
@@ -37,7 +37,7 @@ class MyStack : Stack
             MonitoringIntervalInSeconds = 60,
             NetworkWatcherName = "nw1",
             ResourceGroupName = "rg1",
-            Source = new AzureNextGen.Network.Inputs.ConnectionMonitorSourceArgs
+            Source = new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorSourceArgs
             {
                 ResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1",
             },
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection_monitor = azure_nextgen.network.ConnectionMonitor("connectionMonitor",
+connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor",
     connection_monitor_name="cm1",
     destination={
         "address": "bing.com",
@@ -83,7 +83,7 @@ connection_monitor = azure_nextgen.network.ConnectionMonitor("connectionMonitor"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connectionMonitor = new azure_nextgen.network.ConnectionMonitor("connectionMonitor", {
+const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor", {
     connectionMonitorName: "cm1",
     destination: {
         address: "bing.com",
@@ -111,23 +111,23 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectionMonitor = new AzureNextGen.Network.ConnectionMonitor("connectionMonitor", new AzureNextGen.Network.ConnectionMonitorArgs
+        var connectionMonitor = new AzureNextGen.Network.Latest.ConnectionMonitor("connectionMonitor", new AzureNextGen.Network.Latest.ConnectionMonitorArgs
         {
             ConnectionMonitorName = "cm1",
             Endpoints = 
             {
-                new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointArgs
+                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
                 {
                     Name = "vm1",
                     ResourceId = "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1",
                 },
-                new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointArgs
+                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
                 {
-                    Filter = new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointFilterArgs
+                    Filter = new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointFilterArgs
                     {
                         Items = 
                         {
-                            new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointFilterItemArgs
+                            new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointFilterItemArgs
                             {
                                 Address = "npmuser",
                                 Type = "AgentAddress",
@@ -138,12 +138,12 @@ class MyStack : Stack
                     Name = "CanaryWorkspaceVamshi",
                     ResourceId = "/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/vasamudrRG/providers/Microsoft.OperationalInsights/workspaces/vasamudrWorkspace",
                 },
-                new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointArgs
+                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
                 {
                     Address = "bing.com",
                     Name = "bing",
                 },
-                new AzureNextGen.Network.Inputs.ConnectionMonitorEndpointArgs
+                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorEndpointArgs
                 {
                     Address = "google.com",
                     Name = "google",
@@ -154,11 +154,11 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             TestConfigurations = 
             {
-                new AzureNextGen.Network.Inputs.ConnectionMonitorTestConfigurationArgs
+                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTestConfigurationArgs
                 {
                     Name = "testConfig1",
                     Protocol = "Tcp",
-                    TcpConfiguration = new AzureNextGen.Network.Inputs.ConnectionMonitorTcpConfigurationArgs
+                    TcpConfiguration = new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTcpConfigurationArgs
                     {
                         DisableTraceRoute = false,
                         Port = 80,
@@ -168,7 +168,7 @@ class MyStack : Stack
             },
             TestGroups = 
             {
-                new AzureNextGen.Network.Inputs.ConnectionMonitorTestGroupArgs
+                new AzureNextGen.Network.Latest.Inputs.ConnectionMonitorTestGroupArgs
                 {
                     Destinations = 
                     {
@@ -207,7 +207,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection_monitor = azure_nextgen.network.ConnectionMonitor("connectionMonitor",
+connection_monitor = azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor",
     connection_monitor_name="cm1",
     endpoints=[
         {
@@ -270,7 +270,7 @@ connection_monitor = azure_nextgen.network.ConnectionMonitor("connectionMonitor"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connectionMonitor = new azure_nextgen.network.ConnectionMonitor("connectionMonitor", {
+const connectionMonitor = new azure_nextgen.network.latest.ConnectionMonitor("connectionMonitor", {
     connectionMonitorName: "cm1",
     endpoints: [
         {

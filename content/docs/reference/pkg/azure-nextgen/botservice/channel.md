@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.Botservice.Channel("channel", new AzureNextGen.Botservice.ChannelArgs
+        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
         {
             ChannelName = "AlexaChannel",
             Location = "global",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.Channel("channel",
+channel = azure_nextgen.botservice.latest.Channel("channel",
     channel_name="AlexaChannel",
     location="global",
     properties={
@@ -76,7 +76,7 @@ channel = azure_nextgen.botservice.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const channel = new azure_nextgen.botservice.Channel("channel", {
+const channel = new azure_nextgen.botservice.latest.Channel("channel", {
     channelName: "AlexaChannel",
     location: "global",
     properties: {
@@ -101,7 +101,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.Botservice.Channel("channel", new AzureNextGen.Botservice.ChannelArgs
+        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
         {
             ChannelName = "EmailChannel",
             Location = "global",
@@ -132,7 +132,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.Channel("channel",
+channel = azure_nextgen.botservice.latest.Channel("channel",
     channel_name="EmailChannel",
     location="global",
     properties={
@@ -153,7 +153,7 @@ channel = azure_nextgen.botservice.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const channel = new azure_nextgen.botservice.Channel("channel", {
+const channel = new azure_nextgen.botservice.latest.Channel("channel", {
     channelName: "EmailChannel",
     location: "global",
     properties: {
@@ -179,7 +179,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.Botservice.Channel("channel", new AzureNextGen.Botservice.ChannelArgs
+        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
         {
             ChannelName = "DirectLineSpeechChannel",
             Location = "global",
@@ -209,7 +209,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.Channel("channel",
+channel = azure_nextgen.botservice.latest.Channel("channel",
     channel_name="DirectLineSpeechChannel",
     location="global",
     properties={
@@ -229,7 +229,7 @@ channel = azure_nextgen.botservice.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const channel = new azure_nextgen.botservice.Channel("channel", {
+const channel = new azure_nextgen.botservice.latest.Channel("channel", {
     channelName: "DirectLineSpeechChannel",
     location: "global",
     properties: {
@@ -254,7 +254,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var channel = new AzureNextGen.Botservice.Channel("channel", new AzureNextGen.Botservice.ChannelArgs
+        var channel = new AzureNextGen.BotService.Latest.Channel("channel", new AzureNextGen.BotService.Latest.ChannelArgs
         {
             ChannelName = "LineChannel",
             Location = "global",
@@ -290,7 +290,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-channel = azure_nextgen.botservice.Channel("channel",
+channel = azure_nextgen.botservice.latest.Channel("channel",
     channel_name="LineChannel",
     location="global",
     properties={
@@ -312,7 +312,7 @@ channel = azure_nextgen.botservice.Channel("channel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const channel = new azure_nextgen.botservice.Channel("channel", {
+const channel = new azure_nextgen.botservice.latest.Channel("channel", {
     channelName: "LineChannel",
     location: "global",
     properties: {

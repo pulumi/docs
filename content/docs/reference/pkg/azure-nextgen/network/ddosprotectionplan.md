@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ddosProtectionPlan = new AzureNextGen.Network.DdosProtectionPlan("ddosProtectionPlan", new AzureNextGen.Network.DdosProtectionPlanArgs
+        var ddosProtectionPlan = new AzureNextGen.Network.Latest.DdosProtectionPlan("ddosProtectionPlan", new AzureNextGen.Network.Latest.DdosProtectionPlanArgs
         {
             DdosProtectionPlanName = "test-plan",
             Location = "westus",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ddos_protection_plan = azure_nextgen.network.DdosProtectionPlan("ddosProtectionPlan",
+ddos_protection_plan = azure_nextgen.network.latest.DdosProtectionPlan("ddosProtectionPlan",
     ddos_protection_plan_name="test-plan",
     location="westus",
     resource_group_name="rg1")
@@ -65,7 +65,7 @@ ddos_protection_plan = azure_nextgen.network.DdosProtectionPlan("ddosProtectionP
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const ddosProtectionPlan = new azure_nextgen.network.DdosProtectionPlan("ddosProtectionPlan", {
+const ddosProtectionPlan = new azure_nextgen.network.latest.DdosProtectionPlan("ddosProtectionPlan", {
     ddosProtectionPlanName: "test-plan",
     location: "westus",
     resourceGroupName: "rg1",

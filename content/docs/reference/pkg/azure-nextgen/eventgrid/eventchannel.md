@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventChannel = new AzureNextGen.Eventgrid.EventChannel("eventChannel", new AzureNextGen.Eventgrid.EventChannelArgs
+        var eventChannel = new AzureNextGen.EventGrid.V20200401Preview.EventChannel("eventChannel", new AzureNextGen.EventGrid.V20200401Preview.EventChannelArgs
         {
-            Destination = new AzureNextGen.Eventgrid.Inputs.EventChannelDestinationArgs
+            Destination = new AzureNextGen.EventGrid.V20200401Preview.Inputs.EventChannelDestinationArgs
             {
                 AzureSubscriptionId = "5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
                 PartnerTopicName = "examplePartnerTopic1",
@@ -37,7 +37,7 @@ class MyStack : Stack
             EventChannelName = "exampleEventChannelName1",
             PartnerNamespaceName = "examplePartnerNamespaceName1",
             ResourceGroupName = "examplerg",
-            Source = new AzureNextGen.Eventgrid.Inputs.EventChannelSourceArgs
+            Source = new AzureNextGen.EventGrid.V20200401Preview.Inputs.EventChannelSourceArgs
             {
                 Source = "ContosoCorp.Accounts.User1",
             },
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_channel = azure_nextgen.eventgrid.EventChannel("eventChannel",
+event_channel = azure_nextgen.eventgrid.v20200401preview.EventChannel("eventChannel",
     destination={
         "azureSubscriptionId": "5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
         "partnerTopicName": "examplePartnerTopic1",
@@ -83,7 +83,7 @@ event_channel = azure_nextgen.eventgrid.EventChannel("eventChannel",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventChannel = new azure_nextgen.eventgrid.EventChannel("eventChannel", {
+const eventChannel = new azure_nextgen.eventgrid.v20200401preview.EventChannel("eventChannel", {
     destination: {
         azureSubscriptionId: "5b4b650e-28b9-4790-b3ab-ddbd88d727c4",
         partnerTopicName: "examplePartnerTopic1",

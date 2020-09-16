@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var authorization = new AzureNextGen.Avs.Authorization("authorization", new AzureNextGen.Avs.AuthorizationArgs
+        var authorization = new AzureNextGen.AVS.Latest.Authorization("authorization", new AzureNextGen.AVS.Latest.AuthorizationArgs
         {
             AuthorizationName = "authorization1",
             PrivateCloudName = "cloud1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-authorization = azure_nextgen.avs.Authorization("authorization",
+authorization = azure_nextgen.avs.latest.Authorization("authorization",
     authorization_name="authorization1",
     private_cloud_name="cloud1",
     resource_group_name="group1")
@@ -65,7 +65,7 @@ authorization = azure_nextgen.avs.Authorization("authorization",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const authorization = new azure_nextgen.avs.Authorization("authorization", {
+const authorization = new azure_nextgen.avs.latest.Authorization("authorization", {
     authorizationName: "authorization1",
     privateCloudName: "cloud1",
     resourceGroupName: "group1",

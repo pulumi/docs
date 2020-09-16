@@ -26,53 +26,53 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedNetwork = new AzureNextGen.Managednetwork.ManagedNetwork("managedNetwork", new AzureNextGen.Managednetwork.ManagedNetworkArgs
+        var managedNetwork = new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetwork("managedNetwork", new AzureNextGen.ManagedNetwork.V20190601Preview.ManagedNetworkArgs
         {
             Location = "eastus",
             ManagedNetworkName = "myManagedNetwork",
             ResourceGroupName = "myResourceGroup",
-            Scope = new AzureNextGen.Managednetwork.Inputs.ScopeArgs
+            Scope = new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ScopeArgs
             {
                 ManagementGroups = 
                 {
-                    new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                     {
                         Id = "/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000",
                     },
-                    new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                     {
                         Id = "/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000",
                     },
                 },
                 Subnets = 
                 {
-                    new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                     {
                         Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA",
                     },
-                    new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                     {
                         Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB",
                     },
                 },
                 Subscriptions = 
                 {
-                    new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                     {
                         Id = "subscriptionA",
                     },
-                    new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                     {
                         Id = "subscriptionB",
                     },
                 },
                 VirtualNetworks = 
                 {
-                    new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                     {
                         Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
                     },
-                    new AzureNextGen.Managednetwork.Inputs.ResourceIdArgs
+                    new AzureNextGen.ManagedNetwork.V20190601Preview.Inputs.ResourceIdArgs
                     {
                         Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
                     },
@@ -98,7 +98,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_network = azure_nextgen.managednetwork.ManagedNetwork("managedNetwork",
+managed_network = azure_nextgen.managednetwork.v20190601preview.ManagedNetwork("managedNetwork",
     location="eastus",
     managed_network_name="myManagedNetwork",
     resource_group_name="myResourceGroup",
@@ -148,7 +148,7 @@ managed_network = azure_nextgen.managednetwork.ManagedNetwork("managedNetwork",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedNetwork = new azure_nextgen.managednetwork.ManagedNetwork("managedNetwork", {
+const managedNetwork = new azure_nextgen.managednetwork.v20190601preview.ManagedNetwork("managedNetwork", {
     location: "eastus",
     managedNetworkName: "myManagedNetwork",
     resourceGroupName: "myResourceGroup",

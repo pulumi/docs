@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipelineRun = new AzureNextGen.Containerregistry.PipelineRun("pipelineRun", new AzureNextGen.Containerregistry.PipelineRunArgs
+        var pipelineRun = new AzureNextGen.ContainerRegistry.V20191201Preview.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.V20191201Preview.PipelineRunArgs
         {
             PipelineRunName = "myPipelineRun",
             RegistryName = "myRegistry",
-            Request = new AzureNextGen.Containerregistry.Inputs.PipelineRunRequestArgs
+            Request = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.PipelineRunRequestArgs
             {
                 Artifacts = 
                 {
@@ -38,7 +38,7 @@ class MyStack : Stack
                     "sourceRepository2@sha256:00000000000000000000000000000000000",
                 },
                 PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-                Target = new AzureNextGen.Containerregistry.Inputs.PipelineRunTargetPropertiesArgs
+                Target = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.PipelineRunTargetPropertiesArgs
                 {
                     Name = "myblob.tar.gz",
                     Type = "AzureStorageBlob",
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline_run = azure_nextgen.containerregistry.PipelineRun("pipelineRun",
+pipeline_run = azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun",
     pipeline_run_name="myPipelineRun",
     registry_name="myRegistry",
     request={
@@ -90,7 +90,7 @@ pipeline_run = azure_nextgen.containerregistry.PipelineRun("pipelineRun",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const pipelineRun = new azure_nextgen.containerregistry.PipelineRun("pipelineRun", {
+const pipelineRun = new azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun", {
     pipelineRunName: "myPipelineRun",
     registryName: "myRegistry",
     request: {
@@ -121,16 +121,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipelineRun = new AzureNextGen.Containerregistry.PipelineRun("pipelineRun", new AzureNextGen.Containerregistry.PipelineRunArgs
+        var pipelineRun = new AzureNextGen.ContainerRegistry.V20191201Preview.PipelineRun("pipelineRun", new AzureNextGen.ContainerRegistry.V20191201Preview.PipelineRunArgs
         {
             ForceUpdateTag = "2020-03-04T17:23:21.9261521+00:00",
             PipelineRunName = "myPipelineRun",
             RegistryName = "myRegistry",
-            Request = new AzureNextGen.Containerregistry.Inputs.PipelineRunRequestArgs
+            Request = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.PipelineRunRequestArgs
             {
                 CatalogDigest = "sha256@",
                 PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-                Source = new AzureNextGen.Containerregistry.Inputs.PipelineRunSourcePropertiesArgs
+                Source = new AzureNextGen.ContainerRegistry.V20191201Preview.Inputs.PipelineRunSourcePropertiesArgs
                 {
                     Name = "myblob.tar.gz",
                     Type = "AzureStorageBlob",
@@ -156,7 +156,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline_run = azure_nextgen.containerregistry.PipelineRun("pipelineRun",
+pipeline_run = azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun",
     force_update_tag="2020-03-04T17:23:21.9261521+00:00",
     pipeline_run_name="myPipelineRun",
     registry_name="myRegistry",
@@ -180,7 +180,7 @@ pipeline_run = azure_nextgen.containerregistry.PipelineRun("pipelineRun",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const pipelineRun = new azure_nextgen.containerregistry.PipelineRun("pipelineRun", {
+const pipelineRun = new azure_nextgen.containerregistry.v20191201preview.PipelineRun("pipelineRun", {
     forceUpdateTag: "2020-03-04T17:23:21.9261521+00:00",
     pipelineRunName: "myPipelineRun",
     registryName: "myRegistry",

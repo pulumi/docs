@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationSecurityGroup = new AzureNextGen.Network.ApplicationSecurityGroup("applicationSecurityGroup", new AzureNextGen.Network.ApplicationSecurityGroupArgs
+        var applicationSecurityGroup = new AzureNextGen.Network.Latest.ApplicationSecurityGroup("applicationSecurityGroup", new AzureNextGen.Network.Latest.ApplicationSecurityGroupArgs
         {
             ApplicationSecurityGroupName = "test-asg",
             Location = "westus",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_security_group = azure_nextgen.network.ApplicationSecurityGroup("applicationSecurityGroup",
+application_security_group = azure_nextgen.network.latest.ApplicationSecurityGroup("applicationSecurityGroup",
     application_security_group_name="test-asg",
     location="westus",
     resource_group_name="rg1")
@@ -65,7 +65,7 @@ application_security_group = azure_nextgen.network.ApplicationSecurityGroup("app
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const applicationSecurityGroup = new azure_nextgen.network.ApplicationSecurityGroup("applicationSecurityGroup", {
+const applicationSecurityGroup = new azure_nextgen.network.latest.ApplicationSecurityGroup("applicationSecurityGroup", {
     applicationSecurityGroupName: "test-asg",
     location: "westus",
     resourceGroupName: "rg1",

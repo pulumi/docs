@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlResourceSqlTrigger = new AzureNextGen.Documentdb.SqlResourceSqlTrigger("sqlResourceSqlTrigger", new AzureNextGen.Documentdb.SqlResourceSqlTriggerArgs
+        var sqlResourceSqlTrigger = new AzureNextGen.DocumentDB.Latest.SqlResourceSqlTrigger("sqlResourceSqlTrigger", new AzureNextGen.DocumentDB.Latest.SqlResourceSqlTriggerArgs
         {
             AccountName = "ddb1",
             ContainerName = "containerName",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.SqlTriggerResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlTriggerResourceArgs
             {
                 Body = "body",
                 Id = "triggerName",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_resource_sql_trigger = azure_nextgen.documentdb.SqlResourceSqlTrigger("sqlResourceSqlTrigger",
+sql_resource_sql_trigger = azure_nextgen.documentdb.latest.SqlResourceSqlTrigger("sqlResourceSqlTrigger",
     account_name="ddb1",
     container_name="containerName",
     database_name="databaseName",
@@ -84,7 +84,7 @@ sql_resource_sql_trigger = azure_nextgen.documentdb.SqlResourceSqlTrigger("sqlRe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const sqlResourceSqlTrigger = new azure_nextgen.documentdb.SqlResourceSqlTrigger("sqlResourceSqlTrigger", {
+const sqlResourceSqlTrigger = new azure_nextgen.documentdb.latest.SqlResourceSqlTrigger("sqlResourceSqlTrigger", {
     accountName: "ddb1",
     containerName: "containerName",
     databaseName: "databaseName",

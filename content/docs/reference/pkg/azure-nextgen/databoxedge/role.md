@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var role = new AzureNextGen.Databoxedge.Role("role", new AzureNextGen.Databoxedge.RoleArgs
+        var role = new AzureNextGen.DataBoxEdge.Latest.Role("role", new AzureNextGen.DataBoxEdge.Latest.RoleArgs
         {
             DeviceName = "testedgedevice",
             Kind = "IOT",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-role = azure_nextgen.databoxedge.Role("role",
+role = azure_nextgen.databoxedge.latest.Role("role",
     device_name="testedgedevice",
     kind="IOT",
     name="IoTRole1",
@@ -67,7 +67,7 @@ role = azure_nextgen.databoxedge.Role("role",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const role = new azure_nextgen.databoxedge.Role("role", {
+const role = new azure_nextgen.databoxedge.latest.Role("role", {
     deviceName: "testedgedevice",
     kind: "IOT",
     name: "IoTRole1",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiPolicy = new AzureNextGen.Apimanagement.ApiPolicy("apiPolicy", new AzureNextGen.Apimanagement.ApiPolicyArgs
+        var apiPolicy = new AzureNextGen.ApiManagement.Latest.ApiPolicy("apiPolicy", new AzureNextGen.ApiManagement.Latest.ApiPolicyArgs
         {
             ApiId = "5600b57e7e8880006a040001",
             Format = "xml",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_policy = azure_nextgen.apimanagement.ApiPolicy("apiPolicy",
+api_policy = azure_nextgen.apimanagement.latest.ApiPolicy("apiPolicy",
     api_id="5600b57e7e8880006a040001",
     format="xml",
     policy_id="policy",
@@ -71,7 +71,7 @@ api_policy = azure_nextgen.apimanagement.ApiPolicy("apiPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiPolicy = new azure_nextgen.apimanagement.ApiPolicy("apiPolicy", {
+const apiPolicy = new azure_nextgen.apimanagement.latest.ApiPolicy("apiPolicy", {
     apiId: "5600b57e7e8880006a040001",
     format: "xml",
     policyId: "policy",
@@ -94,7 +94,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiPolicy = new AzureNextGen.Apimanagement.ApiPolicy("apiPolicy", new AzureNextGen.Apimanagement.ApiPolicyArgs
+        var apiPolicy = new AzureNextGen.ApiManagement.Latest.ApiPolicy("apiPolicy", new AzureNextGen.ApiManagement.Latest.ApiPolicyArgs
         {
             ApiId = "5600b57e7e8880006a040001",
             Format = "rawxml",
@@ -128,7 +128,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_policy = azure_nextgen.apimanagement.ApiPolicy("apiPolicy",
+api_policy = azure_nextgen.apimanagement.latest.ApiPolicy("apiPolicy",
     api_id="5600b57e7e8880006a040001",
     format="rawxml",
     policy_id="policy",
@@ -153,7 +153,7 @@ api_policy = azure_nextgen.apimanagement.ApiPolicy("apiPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiPolicy = new azure_nextgen.apimanagement.ApiPolicy("apiPolicy", {
+const apiPolicy = new azure_nextgen.apimanagement.latest.ApiPolicy("apiPolicy", {
     apiId: "5600b57e7e8880006a040001",
     format: "rawxml",
     policyId: "policy",

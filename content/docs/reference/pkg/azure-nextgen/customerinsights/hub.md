@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hub = new AzureNextGen.Customerinsights.Hub("hub", new AzureNextGen.Customerinsights.HubArgs
+        var hub = new AzureNextGen.CustomerInsights.Latest.Hub("hub", new AzureNextGen.CustomerInsights.Latest.HubArgs
         {
-            HubBillingInfo = new AzureNextGen.Customerinsights.Inputs.HubBillingInfoFormatArgs
+            HubBillingInfo = new AzureNextGen.CustomerInsights.Latest.Inputs.HubBillingInfoFormatArgs
             {
                 MaxUnits = 5,
                 MinUnits = 1,
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hub = azure_nextgen.customerinsights.Hub("hub",
+hub = azure_nextgen.customerinsights.latest.Hub("hub",
     hub_billing_info={
         "maxUnits": 5,
         "minUnits": 1,
@@ -76,7 +76,7 @@ hub = azure_nextgen.customerinsights.Hub("hub",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const hub = new azure_nextgen.customerinsights.Hub("hub", {
+const hub = new azure_nextgen.customerinsights.latest.Hub("hub", {
     hubBillingInfo: {
         maxUnits: 5,
         minUnits: 1,

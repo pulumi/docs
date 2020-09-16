@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualNetworkRule = new AzureNextGen.Datalakestore.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.Datalakestore.VirtualNetworkRuleArgs
+        var virtualNetworkRule = new AzureNextGen.DataLakeStore.Latest.VirtualNetworkRule("virtualNetworkRule", new AzureNextGen.DataLakeStore.Latest.VirtualNetworkRuleArgs
         {
             AccountName = "contosoadla",
             ResourceGroupName = "contosorg",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_network_rule = azure_nextgen.datalakestore.VirtualNetworkRule("virtualNetworkRule",
+virtual_network_rule = azure_nextgen.datalakestore.latest.VirtualNetworkRule("virtualNetworkRule",
     account_name="contosoadla",
     resource_group_name="contosorg",
     subnet_id="test_subnetId",
@@ -67,7 +67,7 @@ virtual_network_rule = azure_nextgen.datalakestore.VirtualNetworkRule("virtualNe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualNetworkRule = new azure_nextgen.datalakestore.VirtualNetworkRule("virtualNetworkRule", {
+const virtualNetworkRule = new azure_nextgen.datalakestore.latest.VirtualNetworkRule("virtualNetworkRule", {
     accountName: "contosoadla",
     resourceGroupName: "contosorg",
     subnetId: "test_subnetId",

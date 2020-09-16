@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var expressRouteGateway = new AzureNextGen.Network.ExpressRouteGateway("expressRouteGateway", new AzureNextGen.Network.ExpressRouteGatewayArgs
+        var expressRouteGateway = new AzureNextGen.Network.Latest.ExpressRouteGateway("expressRouteGateway", new AzureNextGen.Network.Latest.ExpressRouteGatewayArgs
         {
-            AutoScaleConfiguration = new AzureNextGen.Network.Inputs.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs
+            AutoScaleConfiguration = new AzureNextGen.Network.Latest.Inputs.ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs
             {
-                Bounds = new AzureNextGen.Network.Inputs.ExpressRouteGatewayPropertiesBoundsArgs
+                Bounds = new AzureNextGen.Network.Latest.Inputs.ExpressRouteGatewayPropertiesBoundsArgs
                 {
                     Min = 3,
                 },
@@ -38,7 +38,7 @@ class MyStack : Stack
             ExpressRouteGatewayName = "gateway-2",
             Location = "westus",
             ResourceGroupName = "resourceGroupName",
-            VirtualHub = new AzureNextGen.Network.Inputs.VirtualHubIdArgs
+            VirtualHub = new AzureNextGen.Network.Latest.Inputs.VirtualHubIdArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/resourceGroupId/providers/Microsoft.Network/virtualHubs/virtualHubName",
             },
@@ -61,7 +61,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-express_route_gateway = azure_nextgen.network.ExpressRouteGateway("expressRouteGateway",
+express_route_gateway = azure_nextgen.network.latest.ExpressRouteGateway("expressRouteGateway",
     auto_scale_configuration={
         "bounds": {
             "min": 3,
@@ -84,7 +84,7 @@ express_route_gateway = azure_nextgen.network.ExpressRouteGateway("expressRouteG
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const expressRouteGateway = new azure_nextgen.network.ExpressRouteGateway("expressRouteGateway", {
+const expressRouteGateway = new azure_nextgen.network.latest.ExpressRouteGateway("expressRouteGateway", {
     autoScaleConfiguration: {
         bounds: {
             min: 3,

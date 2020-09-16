@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var registry = new AzureNextGen.Containerregistry.Registry("registry", new AzureNextGen.Containerregistry.RegistryArgs
+        var registry = new AzureNextGen.ContainerRegistry.Latest.Registry("registry", new AzureNextGen.ContainerRegistry.Latest.RegistryArgs
         {
             AdminUserEnabled = true,
             Location = "westus",
             RegistryName = "myRegistry",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.Containerregistry.Inputs.SkuArgs
+            Sku = new AzureNextGen.ContainerRegistry.Latest.Inputs.SkuArgs
             {
                 Name = "Standard",
             },
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-registry = azure_nextgen.containerregistry.Registry("registry",
+registry = azure_nextgen.containerregistry.latest.Registry("registry",
     admin_user_enabled=True,
     location="westus",
     registry_name="myRegistry",
@@ -81,7 +81,7 @@ registry = azure_nextgen.containerregistry.Registry("registry",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const registry = new azure_nextgen.containerregistry.Registry("registry", {
+const registry = new azure_nextgen.containerregistry.latest.Registry("registry", {
     adminUserEnabled: true,
     location: "westus",
     registryName: "myRegistry",

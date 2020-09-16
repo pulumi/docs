@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectorMapping = new AzureNextGen.Customerinsights.ConnectorMapping("connectorMapping", new AzureNextGen.Customerinsights.ConnectorMappingArgs
+        var connectorMapping = new AzureNextGen.CustomerInsights.Latest.ConnectorMapping("connectorMapping", new AzureNextGen.CustomerInsights.Latest.ConnectorMappingArgs
         {
             ConnectorName = "testConnector8858",
             Description = "Test mapping",
@@ -35,26 +35,26 @@ class MyStack : Stack
             EntityTypeName = "TestInteractionType2967",
             HubName = "sdkTestHub",
             MappingName = "testMapping12491",
-            MappingProperties = new AzureNextGen.Customerinsights.Inputs.ConnectorMappingPropertiesArgs
+            MappingProperties = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingPropertiesArgs
             {
-                Availability = new AzureNextGen.Customerinsights.Inputs.ConnectorMappingAvailabilityArgs
+                Availability = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingAvailabilityArgs
                 {
                     Frequency = "Hour",
                     Interval = 5,
                 },
-                CompleteOperation = new AzureNextGen.Customerinsights.Inputs.ConnectorMappingCompleteOperationArgs
+                CompleteOperation = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingCompleteOperationArgs
                 {
                     CompletionOperationType = "DeleteFile",
                     DestinationFolder = "fakePath",
                 },
-                ErrorManagement = new AzureNextGen.Customerinsights.Inputs.ConnectorMappingErrorManagementArgs
+                ErrorManagement = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingErrorManagementArgs
                 {
                     ErrorLimit = 10,
                     ErrorManagementType = "StopImport",
                 },
                 FileFilter = "unknown",
                 FolderPath = "http://sample.dne/file",
-                Format = new AzureNextGen.Customerinsights.Inputs.ConnectorMappingFormatArgs
+                Format = new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingFormatArgs
                 {
                     ColumnDelimiter = "|",
                     FormatType = "TextFormat",
@@ -62,13 +62,13 @@ class MyStack : Stack
                 HasHeader = false,
                 Structure = 
                 {
-                    new AzureNextGen.Customerinsights.Inputs.ConnectorMappingStructureArgs
+                    new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingStructureArgs
                     {
                         ColumnName = "unknown1",
                         IsEncrypted = false,
                         PropertyName = "unknwon1",
                     },
-                    new AzureNextGen.Customerinsights.Inputs.ConnectorMappingStructureArgs
+                    new AzureNextGen.CustomerInsights.Latest.Inputs.ConnectorMappingStructureArgs
                     {
                         ColumnName = "unknown2",
                         IsEncrypted = true,
@@ -96,7 +96,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connector_mapping = azure_nextgen.customerinsights.ConnectorMapping("connectorMapping",
+connector_mapping = azure_nextgen.customerinsights.latest.ConnectorMapping("connectorMapping",
     connector_name="testConnector8858",
     description="Test mapping",
     display_name="testMapping12491",
@@ -149,7 +149,7 @@ connector_mapping = azure_nextgen.customerinsights.ConnectorMapping("connectorMa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connectorMapping = new azure_nextgen.customerinsights.ConnectorMapping("connectorMapping", {
+const connectorMapping = new azure_nextgen.customerinsights.latest.ConnectorMapping("connectorMapping", {
     connectorName: "testConnector8858",
     description: "Test mapping",
     displayName: "testMapping12491",

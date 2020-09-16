@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var pipeline = new AzureNextGen.Devops.Pipeline("pipeline", new AzureNextGen.Devops.PipelineArgs
+        var pipeline = new AzureNextGen.DevOps.V20190701Preview.Pipeline("pipeline", new AzureNextGen.DevOps.V20190701Preview.PipelineArgs
         {
-            BootstrapConfiguration = new AzureNextGen.Devops.Inputs.BootstrapConfigurationArgs
+            BootstrapConfiguration = new AzureNextGen.DevOps.V20190701Preview.Inputs.BootstrapConfigurationArgs
             {
-                Template = new AzureNextGen.Devops.Inputs.PipelineTemplateArgs
+                Template = new AzureNextGen.DevOps.V20190701Preview.Inputs.PipelineTemplateArgs
                 {
                     Id = "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
                     Parameters = 
@@ -46,12 +46,12 @@ class MyStack : Stack
                 },
             },
             Location = "South India",
-            Organization = new AzureNextGen.Devops.Inputs.OrganizationReferenceArgs
+            Organization = new AzureNextGen.DevOps.V20190701Preview.Inputs.OrganizationReferenceArgs
             {
                 Name = "myAspNetWebAppPipeline-org",
             },
             PipelineName = "myAspNetWebAppPipeline",
-            Project = new AzureNextGen.Devops.Inputs.ProjectReferenceArgs
+            Project = new AzureNextGen.DevOps.V20190701Preview.Inputs.ProjectReferenceArgs
             {
                 Name = "myAspNetWebAppPipeline-project",
             },
@@ -76,7 +76,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-pipeline = azure_nextgen.devops.Pipeline("pipeline",
+pipeline = azure_nextgen.devops.v20190701preview.Pipeline("pipeline",
     bootstrap_configuration={
         "template": {
             "id": "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
@@ -112,7 +112,7 @@ pipeline = azure_nextgen.devops.Pipeline("pipeline",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const pipeline = new azure_nextgen.devops.Pipeline("pipeline", {
+const pipeline = new azure_nextgen.devops.v20190701preview.Pipeline("pipeline", {
     bootstrapConfiguration: {
         template: {
             id: "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var replicationvCenter = new AzureNextGen.Recoveryservices.ReplicationvCenter("replicationvCenter", new AzureNextGen.Recoveryservices.ReplicationvCenterArgs
+        var replicationvCenter = new AzureNextGen.RecoveryServices.Latest.ReplicationvCenter("replicationvCenter", new AzureNextGen.RecoveryServices.Latest.ReplicationvCenterArgs
         {
             FabricName = "MadhaviFabric",
             ResourceGroupName = "MadhaviVRG",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-replicationv_center = azure_nextgen.recoveryservices.ReplicationvCenter("replicationvCenter",
+replicationv_center = azure_nextgen.recoveryservices.latest.ReplicationvCenter("replicationvCenter",
     fabric_name="MadhaviFabric",
     resource_group_name="MadhaviVRG",
     resource_name="MadhaviVault",
@@ -67,7 +67,7 @@ replicationv_center = azure_nextgen.recoveryservices.ReplicationvCenter("replica
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const replicationvCenter = new azure_nextgen.recoveryservices.ReplicationvCenter("replicationvCenter", {
+const replicationvCenter = new azure_nextgen.recoveryservices.latest.ReplicationvCenter("replicationvCenter", {
     fabricName: "MadhaviFabric",
     resourceGroupName: "MadhaviVRG",
     resourceName: "MadhaviVault",

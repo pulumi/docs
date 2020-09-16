@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRuleAction = new AzureNextGen.Operationalinsights.AlertRuleAction("alertRuleAction", new AzureNextGen.Operationalinsights.AlertRuleActionArgs
+        var alertRuleAction = new AzureNextGen.OperationalInsights.Latest.AlertRuleAction("alertRuleAction", new AzureNextGen.OperationalInsights.Latest.AlertRuleActionArgs
         {
             ActionId = "912bec42-cb66-4c03-ac63-1761b6898c3e",
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule_action = azure_nextgen.operationalinsights.AlertRuleAction("alertRuleAction",
+alert_rule_action = azure_nextgen.operationalinsights.latest.AlertRuleAction("alertRuleAction",
     action_id="912bec42-cb66-4c03-ac63-1761b6898c3e",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
     logic_app_resource_id="/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",
@@ -73,7 +73,7 @@ alert_rule_action = azure_nextgen.operationalinsights.AlertRuleAction("alertRule
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const alertRuleAction = new azure_nextgen.operationalinsights.AlertRuleAction("alertRuleAction", {
+const alertRuleAction = new azure_nextgen.operationalinsights.latest.AlertRuleAction("alertRuleAction", {
     actionId: "912bec42-cb66-4c03-ac63-1761b6898c3e",
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
     logicAppResourceId: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",

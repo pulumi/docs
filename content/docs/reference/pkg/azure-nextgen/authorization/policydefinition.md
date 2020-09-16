@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyDefinition = new AzureNextGen.Authorization.PolicyDefinition("policyDefinition", new AzureNextGen.Authorization.PolicyDefinitionArgs
+        var policyDefinition = new AzureNextGen.Authorization.Latest.PolicyDefinition("policyDefinition", new AzureNextGen.Authorization.Latest.PolicyDefinitionArgs
         {
             Description = "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
             DisplayName = "Enforce resource naming convention",
@@ -37,18 +37,18 @@ class MyStack : Stack
             Mode = "All",
             Parameters = 
             {
-                { "prefix", new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueArgs
+                { "prefix", new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueArgs
                 {
-                    Metadata = new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         Description = "Resource name prefix",
                         DisplayName = "Prefix",
                     },
                     Type = "String",
                 } },
-                { "suffix", new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueArgs
+                { "suffix", new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueArgs
                 {
-                    Metadata = new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         Description = "Resource name suffix",
                         DisplayName = "Suffix",
@@ -91,7 +91,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_definition = azure_nextgen.authorization.PolicyDefinition("policyDefinition",
+policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyDefinition",
     description="Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
     display_name="Enforce resource naming convention",
     metadata={
@@ -137,7 +137,7 @@ policy_definition = azure_nextgen.authorization.PolicyDefinition("policyDefiniti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policyDefinition = new azure_nextgen.authorization.PolicyDefinition("policyDefinition", {
+const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition("policyDefinition", {
     description: "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
     displayName: "Enforce resource naming convention",
     metadata: {
@@ -188,7 +188,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var policyDefinition = new AzureNextGen.Authorization.PolicyDefinition("policyDefinition", new AzureNextGen.Authorization.PolicyDefinitionArgs
+        var policyDefinition = new AzureNextGen.Authorization.Latest.PolicyDefinition("policyDefinition", new AzureNextGen.Authorization.Latest.PolicyDefinitionArgs
         {
             Description = "Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised",
             DisplayName = "Event Hubs should have diagnostic logging enabled",
@@ -199,7 +199,7 @@ class MyStack : Stack
             Mode = "Indexed",
             Parameters = 
             {
-                { "requiredRetentionDays", new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueArgs
+                { "requiredRetentionDays", new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueArgs
                 {
                     AllowedValues = 
                     {
@@ -210,7 +210,7 @@ class MyStack : Stack
                         365,
                     },
                     DefaultValue = 365,
-                    Metadata = new AzureNextGen.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
+                    Metadata = new AzureNextGen.Authorization.Latest.Inputs.ParameterDefinitionsValueMetadataArgs
                     {
                         Description = "The required diagnostic logs retention in days",
                         DisplayName = "Required retention (days)",
@@ -270,7 +270,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-policy_definition = azure_nextgen.authorization.PolicyDefinition("policyDefinition",
+policy_definition = azure_nextgen.authorization.latest.PolicyDefinition("policyDefinition",
     description="Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised",
     display_name="Event Hubs should have diagnostic logging enabled",
     metadata={
@@ -330,7 +330,7 @@ policy_definition = azure_nextgen.authorization.PolicyDefinition("policyDefiniti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const policyDefinition = new azure_nextgen.authorization.PolicyDefinition("policyDefinition", {
+const policyDefinition = new azure_nextgen.authorization.latest.PolicyDefinition("policyDefinition", {
     description: "Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised",
     displayName: "Event Hubs should have diagnostic logging enabled",
     metadata: {

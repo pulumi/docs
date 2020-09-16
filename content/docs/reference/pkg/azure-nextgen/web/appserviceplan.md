@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var appServicePlan = new AzureNextGen.Web.AppServicePlan("appServicePlan", new AzureNextGen.Web.AppServicePlanArgs
+        var appServicePlan = new AzureNextGen.Web.Latest.AppServicePlan("appServicePlan", new AzureNextGen.Web.Latest.AppServicePlanArgs
         {
             Kind = "app",
             Location = "East US",
             Name = "testsf6141",
             ResourceGroupName = "testrg123",
-            Sku = new AzureNextGen.Web.Inputs.SkuDescriptionArgs
+            Sku = new AzureNextGen.Web.Latest.Inputs.SkuDescriptionArgs
             {
                 Capacity = 1,
                 Family = "P",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-app_service_plan = azure_nextgen.web.AppServicePlan("appServicePlan",
+app_service_plan = azure_nextgen.web.latest.AppServicePlan("appServicePlan",
     kind="app",
     location="East US",
     name="testsf6141",
@@ -82,7 +82,7 @@ app_service_plan = azure_nextgen.web.AppServicePlan("appServicePlan",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const appServicePlan = new azure_nextgen.web.AppServicePlan("appServicePlan", {
+const appServicePlan = new azure_nextgen.web.latest.AppServicePlan("appServicePlan", {
     kind: "app",
     location: "East US",
     name: "testsf6141",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var share = new AzureNextGen.Datashare.Share("share", new AzureNextGen.Datashare.ShareArgs
+        var share = new AzureNextGen.DataShare.Latest.Share("share", new AzureNextGen.DataShare.Latest.ShareArgs
         {
             AccountName = "Account1",
             Description = "share description",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-share = azure_nextgen.datashare.Share("share",
+share = azure_nextgen.datashare.latest.Share("share",
     account_name="Account1",
     description="share description",
     resource_group_name="SampleResourceGroup",
@@ -71,7 +71,7 @@ share = azure_nextgen.datashare.Share("share",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const share = new azure_nextgen.datashare.Share("share", {
+const share = new azure_nextgen.datashare.latest.Share("share", {
     accountName: "Account1",
     description: "share description",
     resourceGroupName: "SampleResourceGroup",

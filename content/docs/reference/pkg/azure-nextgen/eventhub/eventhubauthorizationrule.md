@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventHubAuthorizationRule = new AzureNextGen.Eventhub.EventHubAuthorizationRule("eventHubAuthorizationRule", new AzureNextGen.Eventhub.EventHubAuthorizationRuleArgs
+        var eventHubAuthorizationRule = new AzureNextGen.EventHub.Latest.EventHubAuthorizationRule("eventHubAuthorizationRule", new AzureNextGen.EventHub.Latest.EventHubAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-Authrules-2513",
             EventHubName = "sdk-EventHub-532",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_hub_authorization_rule = azure_nextgen.eventhub.EventHubAuthorizationRule("eventHubAuthorizationRule",
+event_hub_authorization_rule = azure_nextgen.eventhub.latest.EventHubAuthorizationRule("eventHubAuthorizationRule",
     authorization_rule_name="sdk-Authrules-2513",
     event_hub_name="sdk-EventHub-532",
     namespace_name="sdk-Namespace-960",
@@ -76,7 +76,7 @@ event_hub_authorization_rule = azure_nextgen.eventhub.EventHubAuthorizationRule(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventHubAuthorizationRule = new azure_nextgen.eventhub.EventHubAuthorizationRule("eventHubAuthorizationRule", {
+const eventHubAuthorizationRule = new azure_nextgen.eventhub.latest.EventHubAuthorizationRule("eventHubAuthorizationRule", {
     authorizationRuleName: "sdk-Authrules-2513",
     eventHubName: "sdk-EventHub-532",
     namespaceName: "sdk-Namespace-960",

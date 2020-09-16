@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var connectionGateway = new AzureNextGen.Web.ConnectionGateway("connectionGateway", new AzureNextGen.Web.ConnectionGatewayArgs
+        var connectionGateway = new AzureNextGen.Web.Latest.ConnectionGateway("connectionGateway", new AzureNextGen.Web.Latest.ConnectionGatewayArgs
         {
             ConnectionGatewayName = "test123",
             ResourceGroupName = "testResourceGroup",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-connection_gateway = azure_nextgen.web.ConnectionGateway("connectionGateway",
+connection_gateway = azure_nextgen.web.latest.ConnectionGateway("connectionGateway",
     connection_gateway_name="test123",
     resource_group_name="testResourceGroup")
 
@@ -63,7 +63,7 @@ connection_gateway = azure_nextgen.web.ConnectionGateway("connectionGateway",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const connectionGateway = new azure_nextgen.web.ConnectionGateway("connectionGateway", {
+const connectionGateway = new azure_nextgen.web.latest.ConnectionGateway("connectionGateway", {
     connectionGatewayName: "test123",
     resourceGroupName: "testResourceGroup",
 });

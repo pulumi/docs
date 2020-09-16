@@ -26,15 +26,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var accountFilter = new AzureNextGen.Media.AccountFilter("accountFilter", new AzureNextGen.Media.AccountFilterArgs
+        var accountFilter = new AzureNextGen.Media.Latest.AccountFilter("accountFilter", new AzureNextGen.Media.Latest.AccountFilterArgs
         {
             AccountName = "contosomedia",
             FilterName = "newAccountFilter",
-            FirstQuality = new AzureNextGen.Media.Inputs.FirstQualityArgs
+            FirstQuality = new AzureNextGen.Media.Latest.Inputs.FirstQualityArgs
             {
                 Bitrate = 128000,
             },
-            PresentationTimeRange = new AzureNextGen.Media.Inputs.PresentationTimeRangeArgs
+            PresentationTimeRange = new AzureNextGen.Media.Latest.Inputs.PresentationTimeRangeArgs
             {
                 EndTimestamp = 170000000,
                 ForceEndTimestamp = false,
@@ -46,23 +46,23 @@ class MyStack : Stack
             ResourceGroupName = "contoso",
             Tracks = 
             {
-                new AzureNextGen.Media.Inputs.FilterTrackSelectionArgs
+                new AzureNextGen.Media.Latest.Inputs.FilterTrackSelectionArgs
                 {
                     TrackSelections = 
                     {
-                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "Equal",
                             Property = "Type",
                             Value = "Audio",
                         },
-                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "NotEqual",
                             Property = "Language",
                             Value = "en",
                         },
-                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "NotEqual",
                             Property = "FourCC",
@@ -70,17 +70,17 @@ class MyStack : Stack
                         },
                     },
                 },
-                new AzureNextGen.Media.Inputs.FilterTrackSelectionArgs
+                new AzureNextGen.Media.Latest.Inputs.FilterTrackSelectionArgs
                 {
                     TrackSelections = 
                     {
-                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "Equal",
                             Property = "Type",
                             Value = "Video",
                         },
-                        new AzureNextGen.Media.Inputs.FilterTrackPropertyConditionArgs
+                        new AzureNextGen.Media.Latest.Inputs.FilterTrackPropertyConditionArgs
                         {
                             Operation = "Equal",
                             Property = "Bitrate",
@@ -108,7 +108,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account_filter = azure_nextgen.media.AccountFilter("accountFilter",
+account_filter = azure_nextgen.media.latest.AccountFilter("accountFilter",
     account_name="contosomedia",
     filter_name="newAccountFilter",
     first_quality={
@@ -169,7 +169,7 @@ account_filter = azure_nextgen.media.AccountFilter("accountFilter",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const accountFilter = new azure_nextgen.media.AccountFilter("accountFilter", {
+const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilter", {
     accountName: "contosomedia",
     filterName: "newAccountFilter",
     firstQuality: {

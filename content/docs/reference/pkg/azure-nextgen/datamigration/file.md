@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var file = new AzureNextGen.Datamigration.File("file", new AzureNextGen.Datamigration.FileArgs
+        var file = new AzureNextGen.DataMigration.V20180715Preview.File("file", new AzureNextGen.DataMigration.V20180715Preview.FileArgs
         {
             FileName = "x114d023d8",
             GroupName = "DmsSdkRg",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-file = azure_nextgen.datamigration.File("file",
+file = azure_nextgen.datamigration.v20180715preview.File("file",
     file_name="x114d023d8",
     group_name="DmsSdkRg",
     project_name="DmsSdkProject",
@@ -67,7 +67,7 @@ file = azure_nextgen.datamigration.File("file",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const file = new azure_nextgen.datamigration.File("file", {
+const file = new azure_nextgen.datamigration.v20180715preview.File("file", {
     fileName: "x114d023d8",
     groupName: "DmsSdkRg",
     projectName: "DmsSdkProject",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ouContainer = new AzureNextGen.Aad.OuContainer("ouContainer", new AzureNextGen.Aad.OuContainerArgs
+        var ouContainer = new AzureNextGen.Aad.Latest.OuContainer("ouContainer", new AzureNextGen.Aad.Latest.OuContainerArgs
         {
             AccountName = "AccountName1",
             DomainServiceName = "OuContainer.com",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-ou_container = azure_nextgen.aad.OuContainer("ouContainer",
+ou_container = azure_nextgen.aad.latest.OuContainer("ouContainer",
     account_name="AccountName1",
     domain_service_name="OuContainer.com",
     ou_container_name="OuContainer1",
@@ -71,7 +71,7 @@ ou_container = azure_nextgen.aad.OuContainer("ouContainer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const ouContainer = new azure_nextgen.aad.OuContainer("ouContainer", {
+const ouContainer = new azure_nextgen.aad.latest.OuContainer("ouContainer", {
     accountName: "AccountName1",
     domainServiceName: "OuContainer.com",
     ouContainerName: "OuContainer1",

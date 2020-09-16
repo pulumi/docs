@@ -27,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var agentPool = new AzureNextGen.Containerregistry.AgentPool("agentPool", new AzureNextGen.Containerregistry.AgentPoolArgs
+        var agentPool = new AzureNextGen.ContainerRegistry.V20190601Preview.AgentPool("agentPool", new AzureNextGen.ContainerRegistry.V20190601Preview.AgentPoolArgs
         {
             AgentPoolName = "myAgentPool",
             Count = 1,
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-agent_pool = azure_nextgen.containerregistry.AgentPool("agentPool",
+agent_pool = azure_nextgen.containerregistry.v20190601preview.AgentPool("agentPool",
     agent_pool_name="myAgentPool",
     count=1,
     location="WESTUS",
@@ -81,7 +81,7 @@ agent_pool = azure_nextgen.containerregistry.AgentPool("agentPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const agentPool = new azure_nextgen.containerregistry.AgentPool("agentPool", {
+const agentPool = new azure_nextgen.containerregistry.v20190601preview.AgentPool("agentPool", {
     agentPoolName: "myAgentPool",
     count: 1,
     location: "WESTUS",

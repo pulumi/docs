@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bookmark = new AzureNextGen.Operationalinsights.Bookmark("bookmark", new AzureNextGen.Operationalinsights.BookmarkArgs
+        var bookmark = new AzureNextGen.OperationalInsights.Latest.Bookmark("bookmark", new AzureNextGen.OperationalInsights.Latest.BookmarkArgs
         {
             BookmarkId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
             Created = "2019-01-01T13:15:30Z",
-            CreatedBy = new AzureNextGen.Operationalinsights.Inputs.UserInfoArgs
+            CreatedBy = new AzureNextGen.OperationalInsights.Latest.Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -46,7 +46,7 @@ class MyStack : Stack
             QueryResult = "Security Event query result",
             ResourceGroupName = "myRg",
             Updated = "2019-01-01T13:15:30Z",
-            UpdatedBy = new AzureNextGen.Operationalinsights.Inputs.UserInfoArgs
+            UpdatedBy = new AzureNextGen.OperationalInsights.Latest.Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -70,7 +70,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-bookmark = azure_nextgen.operationalinsights.Bookmark("bookmark",
+bookmark = azure_nextgen.operationalinsights.latest.Bookmark("bookmark",
     bookmark_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     created="2019-01-01T13:15:30Z",
     created_by={
@@ -102,7 +102,7 @@ bookmark = azure_nextgen.operationalinsights.Bookmark("bookmark",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const bookmark = new azure_nextgen.operationalinsights.Bookmark("bookmark", {
+const bookmark = new azure_nextgen.operationalinsights.latest.Bookmark("bookmark", {
     bookmarkId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
     created: "2019-01-01T13:15:30Z",
     createdBy: {

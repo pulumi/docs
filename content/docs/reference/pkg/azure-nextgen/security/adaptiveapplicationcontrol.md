@@ -25,21 +25,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var adaptiveApplicationControl = new AzureNextGen.Security.AdaptiveApplicationControl("adaptiveApplicationControl", new AzureNextGen.Security.AdaptiveApplicationControlArgs
+        var adaptiveApplicationControl = new AzureNextGen.Security.Latest.AdaptiveApplicationControl("adaptiveApplicationControl", new AzureNextGen.Security.Latest.AdaptiveApplicationControlArgs
         {
             AscLocation = "centralus",
             EnforcementMode = "Audit",
             GroupName = "ERELGROUP1",
             PathRecommendations = 
             {
-                new AzureNextGen.Security.Inputs.PathRecommendationArgs
+                new AzureNextGen.Security.Latest.Inputs.PathRecommendationArgs
                 {
                     Action = "Recommended",
                     Common = true,
                     ConfigurationStatus = "Configured",
                     FileType = "Exe",
                     Path = "[Exe] O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\\*\\*\\0.0.0.0",
-                    PublisherInfo = new AzureNextGen.Security.Inputs.PublisherInfoArgs
+                    PublisherInfo = new AzureNextGen.Security.Latest.Inputs.PublisherInfoArgs
                     {
                         BinaryName = "*",
                         ProductName = "*",
@@ -53,21 +53,21 @@ class MyStack : Stack
                     },
                     Usernames = 
                     {
-                        new AzureNextGen.Security.Inputs.UserRecommendationArgs
+                        new AzureNextGen.Security.Latest.Inputs.UserRecommendationArgs
                         {
                             RecommendationAction = "Recommended",
                             Username = "Everyone",
                         },
                     },
                 },
-                new AzureNextGen.Security.Inputs.PathRecommendationArgs
+                new AzureNextGen.Security.Latest.Inputs.PathRecommendationArgs
                 {
                     Action = "Recommended",
                     Common = true,
                     ConfigurationStatus = "Configured",
                     FileType = "Exe",
                     Path = "%OSDRIVE%\\WINDOWSAZURE\\SECAGENT\\WASECAGENTPROV.EXE",
-                    PublisherInfo = new AzureNextGen.Security.Inputs.PublisherInfoArgs
+                    PublisherInfo = new AzureNextGen.Security.Latest.Inputs.PublisherInfoArgs
                     {
                         BinaryName = "*",
                         ProductName = "MICROSOFT® COREXT",
@@ -81,21 +81,21 @@ class MyStack : Stack
                     },
                     Usernames = 
                     {
-                        new AzureNextGen.Security.Inputs.UserRecommendationArgs
+                        new AzureNextGen.Security.Latest.Inputs.UserRecommendationArgs
                         {
                             RecommendationAction = "Recommended",
                             Username = "NT AUTHORITY\\SYSTEM",
                         },
                     },
                 },
-                new AzureNextGen.Security.Inputs.PathRecommendationArgs
+                new AzureNextGen.Security.Latest.Inputs.PathRecommendationArgs
                 {
                     Action = "Recommended",
                     Common = true,
                     ConfigurationStatus = "Configured",
                     FileType = "Exe",
                     Path = "%OSDRIVE%\\WINDOWSAZURE\\PACKAGES_201973_7415\\COLLECTGUESTLOGS.EXE",
-                    PublisherInfo = new AzureNextGen.Security.Inputs.PublisherInfoArgs
+                    PublisherInfo = new AzureNextGen.Security.Latest.Inputs.PublisherInfoArgs
                     {
                         BinaryName = "*",
                         ProductName = "*",
@@ -109,14 +109,14 @@ class MyStack : Stack
                     },
                     Usernames = 
                     {
-                        new AzureNextGen.Security.Inputs.UserRecommendationArgs
+                        new AzureNextGen.Security.Latest.Inputs.UserRecommendationArgs
                         {
                             RecommendationAction = "Recommended",
                             Username = "NT AUTHORITY\\SYSTEM",
                         },
                     },
                 },
-                new AzureNextGen.Security.Inputs.PathRecommendationArgs
+                new AzureNextGen.Security.Latest.Inputs.PathRecommendationArgs
                 {
                     Action = "Add",
                     Common = true,
@@ -124,7 +124,7 @@ class MyStack : Stack
                     Type = "File",
                 },
             },
-            ProtectionMode = new AzureNextGen.Security.Inputs.ProtectionModeArgs
+            ProtectionMode = new AzureNextGen.Security.Latest.Inputs.ProtectionModeArgs
             {
                 Exe = "Audit",
                 Msi = "None",
@@ -132,14 +132,14 @@ class MyStack : Stack
             },
             VmRecommendations = 
             {
-                new AzureNextGen.Security.Inputs.VmRecommendationArgs
+                new AzureNextGen.Security.Latest.Inputs.VmRecommendationArgs
                 {
                     ConfigurationStatus = "Configured",
                     EnforcementSupport = "Supported",
                     RecommendationAction = "Recommended",
                     ResourceId = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/erelh-stable/providers/microsoft.compute/virtualmachines/erelh-16090",
                 },
-                new AzureNextGen.Security.Inputs.VmRecommendationArgs
+                new AzureNextGen.Security.Latest.Inputs.VmRecommendationArgs
                 {
                     ConfigurationStatus = "Configured",
                     EnforcementSupport = "Supported",
@@ -166,7 +166,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-adaptive_application_control = azure_nextgen.security.AdaptiveApplicationControl("adaptiveApplicationControl",
+adaptive_application_control = azure_nextgen.security.latest.AdaptiveApplicationControl("adaptiveApplicationControl",
     asc_location="centralus",
     enforcement_mode="Audit",
     group_name="ERELGROUP1",
@@ -265,7 +265,7 @@ adaptive_application_control = azure_nextgen.security.AdaptiveApplicationControl
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const adaptiveApplicationControl = new azure_nextgen.security.AdaptiveApplicationControl("adaptiveApplicationControl", {
+const adaptiveApplicationControl = new azure_nextgen.security.latest.AdaptiveApplicationControl("adaptiveApplicationControl", {
     ascLocation: "centralus",
     enforcementMode: "Audit",
     groupName: "ERELGROUP1",

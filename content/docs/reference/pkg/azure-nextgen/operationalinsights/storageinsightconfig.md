@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageInsightConfig = new AzureNextGen.Operationalinsights.StorageInsightConfig("storageInsightConfig", new AzureNextGen.Operationalinsights.StorageInsightConfigArgs
+        var storageInsightConfig = new AzureNextGen.OperationalInsights.Latest.StorageInsightConfig("storageInsightConfig", new AzureNextGen.OperationalInsights.Latest.StorageInsightConfigArgs
         {
             Containers = 
             {
                 "wad-iis-logfiles",
             },
             ResourceGroupName = "OIAutoRest5123",
-            StorageAccount = new AzureNextGen.Operationalinsights.Inputs.StorageAccountArgs
+            StorageAccount = new AzureNextGen.OperationalInsights.Latest.Inputs.StorageAccountArgs
             {
                 Id = "/subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/OIAutoRest6987/providers/microsoft.storage/storageaccounts/AzTestFakeSA9945",
                 Key = "1234",
@@ -64,7 +64,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_insight_config = azure_nextgen.operationalinsights.StorageInsightConfig("storageInsightConfig",
+storage_insight_config = azure_nextgen.operationalinsights.latest.StorageInsightConfig("storageInsightConfig",
     containers=["wad-iis-logfiles"],
     resource_group_name="OIAutoRest5123",
     storage_account={
@@ -88,7 +88,7 @@ storage_insight_config = azure_nextgen.operationalinsights.StorageInsightConfig(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const storageInsightConfig = new azure_nextgen.operationalinsights.StorageInsightConfig("storageInsightConfig", {
+const storageInsightConfig = new azure_nextgen.operationalinsights.latest.StorageInsightConfig("storageInsightConfig", {
     containers: ["wad-iis-logfiles"],
     resourceGroupName: "OIAutoRest5123",
     storageAccount: {

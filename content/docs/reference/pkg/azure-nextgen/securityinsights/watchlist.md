@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var watchlist = new AzureNextGen.Securityinsights.Watchlist("watchlist", new AzureNextGen.Securityinsights.WatchlistArgs
+        var watchlist = new AzureNextGen.SecurityInsights.V20190101Preview.Watchlist("watchlist", new AzureNextGen.SecurityInsights.V20190101Preview.WatchlistArgs
         {
-            CreatedBy = new AzureNextGen.Securityinsights.Inputs.UserInfoArgs
+            CreatedBy = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -48,7 +48,7 @@ class MyStack : Stack
             Provider = "Azure Sentinel",
             ResourceGroupName = "myRg",
             Source = "Local file",
-            UpdatedBy = new AzureNextGen.Securityinsights.Inputs.UserInfoArgs
+            UpdatedBy = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
             {
                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
             },
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-watchlist = azure_nextgen.securityinsights.Watchlist("watchlist",
+watchlist = azure_nextgen.securityinsights.v20190101preview.Watchlist("watchlist",
     created_by={
         "objectId": "2046feea-040d-4a46-9e2b-91c2941bfa70",
     },
@@ -110,7 +110,7 @@ watchlist = azure_nextgen.securityinsights.Watchlist("watchlist",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const watchlist = new azure_nextgen.securityinsights.Watchlist("watchlist", {
+const watchlist = new azure_nextgen.securityinsights.v20190101preview.Watchlist("watchlist", {
     createdBy: {
         objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
     },

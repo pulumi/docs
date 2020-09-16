@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiTagDescription = new AzureNextGen.Apimanagement.ApiTagDescription("apiTagDescription", new AzureNextGen.Apimanagement.ApiTagDescriptionArgs
+        var apiTagDescription = new AzureNextGen.ApiManagement.Latest.ApiTagDescription("apiTagDescription", new AzureNextGen.ApiManagement.Latest.ApiTagDescriptionArgs
         {
             ApiId = "5931a75ae4bbd512a88c680b",
             Description = "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_tag_description = azure_nextgen.apimanagement.ApiTagDescription("apiTagDescription",
+api_tag_description = azure_nextgen.apimanagement.latest.ApiTagDescription("apiTagDescription",
     api_id="5931a75ae4bbd512a88c680b",
     description="Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
     external_docs_description="Description of the external docs resource",
@@ -73,7 +73,7 @@ api_tag_description = azure_nextgen.apimanagement.ApiTagDescription("apiTagDescr
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiTagDescription = new azure_nextgen.apimanagement.ApiTagDescription("apiTagDescription", {
+const apiTagDescription = new azure_nextgen.apimanagement.latest.ApiTagDescription("apiTagDescription", {
     apiId: "5931a75ae4bbd512a88c680b",
     description: "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
     externalDocsDescription: "Description of the external docs resource",

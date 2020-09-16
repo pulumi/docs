@@ -26,17 +26,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataStore = new AzureNextGen.Hybriddata.DataStore("dataStore", new AzureNextGen.Hybriddata.DataStoreArgs
+        var dataStore = new AzureNextGen.HybridData.Latest.DataStore("dataStore", new AzureNextGen.HybridData.Latest.DataStoreArgs
         {
             CustomerSecrets = 
             {
-                new AzureNextGen.Hybriddata.Inputs.CustomerSecretArgs
+                new AzureNextGen.HybridData.Latest.Inputs.CustomerSecretArgs
                 {
                     Algorithm = "RSA1_5",
                     KeyIdentifier = "StorageAccountAccessKey",
                     KeyValue = "Of4H9eF03G8QuxvkZQEbFWv3YdN3U//WugzuqReQekbXXQyg+QSicVKrwSOOKVi1zWMYGbKg7d5/ES2gdz+O5ZEw89bvE4mJD/wQmkIsqhPnbN0gyVK6nZePXVUU1A+UzjLfvhSA6KyUQfzNAZ5/TLt6fo1JyQrKTtkvnkLFyfv1AqBZ+dw8JK3RZi/rEN8HD3R3qsBwUYfyEuGLGiujy2CGrr/1uPiUVMR6QuFWRsjm39eMSHa4maLg4tQ0IY/jIy8rMlx3KjF3CcCbPzAqEq5vXy37wkjZbus771te1gLSrzcpVKIMg4DrmgaoJ02jAu+izBjNgLXAFPSUneQ8yw==:ezMkh4PMhCnjJtYkpTaP0SdblP5VAeRe4glW2PgIzICHw3T8ZyGDoaTrCv4/m5wtcEhWdtxhta+j1MQWlK5MIA+hvf8QjIDIjQv696ov5y+pcFe/upd2ekGOei7FCwB2u7I8WnkAtIKTUkf6eDQBZXm26DjfG1Dlc+Mjjq+AerukEa6WpOyqrD7Qub26Pgmj4AsuBx19X1EAmTZacubkoiNagXM8V+IDanHOhLMvfgQ7rw8oZhWfofxi4m+eJqjOXXaqSyorNK8UEcqP6P9pDP8AN8ulXEx6rZy2B5Oi0vSV+wlRLbUuQslga4ItOGxctW/ZX8uWozt+5A3k4URt6A==",
                 },
-                new AzureNextGen.Hybriddata.Inputs.CustomerSecretArgs
+                new AzureNextGen.HybridData.Latest.Inputs.CustomerSecretArgs
                 {
                     Algorithm = "RSA1_5",
                     KeyIdentifier = "StorageAccountAccessKeyForQueue",
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_store = azure_nextgen.hybriddata.DataStore("dataStore",
+data_store = azure_nextgen.hybriddata.latest.DataStore("dataStore",
     customer_secrets=[
         {
             "algorithm": "RSA1_5",
@@ -109,7 +109,7 @@ data_store = azure_nextgen.hybriddata.DataStore("dataStore",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataStore = new azure_nextgen.hybriddata.DataStore("dataStore", {
+const dataStore = new azure_nextgen.hybriddata.latest.DataStore("dataStore", {
     customerSecrets: [
         {
             algorithm: "RSA1_5",
@@ -149,11 +149,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataStore = new AzureNextGen.Hybriddata.DataStore("dataStore", new AzureNextGen.Hybriddata.DataStoreArgs
+        var dataStore = new AzureNextGen.HybridData.Latest.DataStore("dataStore", new AzureNextGen.HybridData.Latest.DataStoreArgs
         {
             CustomerSecrets = 
             {
-                new AzureNextGen.Hybriddata.Inputs.CustomerSecretArgs
+                new AzureNextGen.HybridData.Latest.Inputs.CustomerSecretArgs
                 {
                     Algorithm = "RSA1_5",
                     KeyIdentifier = "ServiceEncryptionKey",
@@ -190,7 +190,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_store = azure_nextgen.hybriddata.DataStore("dataStore",
+data_store = azure_nextgen.hybriddata.latest.DataStore("dataStore",
     customer_secrets=[{
         "algorithm": "RSA1_5",
         "keyIdentifier": "ServiceEncryptionKey",
@@ -217,7 +217,7 @@ data_store = azure_nextgen.hybriddata.DataStore("dataStore",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataStore = new azure_nextgen.hybriddata.DataStore("dataStore", {
+const dataStore = new azure_nextgen.hybriddata.latest.DataStore("dataStore", {
     customerSecrets: [{
         algorithm: "RSA1_5",
         keyIdentifier: "ServiceEncryptionKey",

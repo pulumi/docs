@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyWithClearKeyOptionAndSwtTokenRestriction",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
                 {
                     Configuration = 
                     {
@@ -74,7 +74,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyWithClearKeyOptionAndSwtTokenRestriction",
     description="ArmPolicyDescription",
@@ -106,7 +106,7 @@ content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyWithClearKeyOptionAndSwtTokenRestriction",
     description: "ArmPolicyDescription",
@@ -143,21 +143,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyWithPlayReadyOptionAndOpenRestriction",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
                 {
                     Configuration = 
                     {
                         { "@odata.type", "#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration" },
                         { "licenses", 
                         {
-                            new AzureNextGen.Media.Inputs.ContentKeyPolicyPlayReadyLicenseArgs
+                            new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyPlayReadyLicenseArgs
                             {
                                 AllowTestDevices = true,
                                 BeginDate = "2017-10-16T18:22:53.46Z",
@@ -167,7 +167,7 @@ class MyStack : Stack
                                 },
                                 ContentType = "UltraVioletDownload",
                                 LicenseType = "Persistent",
-                                PlayRight = new AzureNextGen.Media.Inputs.ContentKeyPolicyPlayReadyPlayRightArgs
+                                PlayRight = new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyPlayReadyPlayRightArgs
                                 {
                                     AllowPassingVideoContentToUnknownOutput = "NotAllowed",
                                     DigitalVideoOnlyContentRestriction = false,
@@ -205,7 +205,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyWithPlayReadyOptionAndOpenRestriction",
     description="ArmPolicyDescription",
@@ -246,7 +246,7 @@ content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyWithPlayReadyOptionAndOpenRestriction",
     description: "ArmPolicyDescription",
@@ -292,14 +292,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyWithWidevineOptionAndJwtTokenRestriction",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
                 {
                     Configuration = 
                     {
@@ -350,7 +350,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyWithWidevineOptionAndJwtTokenRestriction",
     description="ArmPolicyDescription",
@@ -388,7 +388,7 @@ content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyWithWidevineOptionAndJwtTokenRestriction",
     description: "ArmPolicyDescription",
@@ -431,14 +431,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentKeyPolicy = new AzureNextGen.Media.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.ContentKeyPolicyArgs
+        var contentKeyPolicy = new AzureNextGen.Media.Latest.ContentKeyPolicy("contentKeyPolicy", new AzureNextGen.Media.Latest.ContentKeyPolicyArgs
         {
             AccountName = "contosomedia",
             ContentKeyPolicyName = "PolicyCreatedWithMultipleOptions",
             Description = "ArmPolicyDescription",
             Options = 
             {
-                new AzureNextGen.Media.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
                 {
                     Configuration = 
                     {
@@ -458,7 +458,7 @@ class MyStack : Stack
                         { "restrictionTokenType", "Swt" },
                     },
                 },
-                new AzureNextGen.Media.Inputs.ContentKeyPolicyOptionArgs
+                new AzureNextGen.Media.Latest.Inputs.ContentKeyPolicyOptionArgs
                 {
                     Configuration = 
                     {
@@ -492,7 +492,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
+content_key_policy = azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy",
     account_name="contosomedia",
     content_key_policy_name="PolicyCreatedWithMultipleOptions",
     description="ArmPolicyDescription",
@@ -536,7 +536,7 @@ content_key_policy = azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const contentKeyPolicy = new azure_nextgen.media.ContentKeyPolicy("contentKeyPolicy", {
+const contentKeyPolicy = new azure_nextgen.media.latest.ContentKeyPolicy("contentKeyPolicy", {
     accountName: "contosomedia",
     contentKeyPolicyName: "PolicyCreatedWithMultipleOptions",
     description: "ArmPolicyDescription",

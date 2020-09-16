@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var remoteRenderingAccount = new AzureNextGen.Mixedreality.RemoteRenderingAccount("remoteRenderingAccount", new AzureNextGen.Mixedreality.RemoteRenderingAccountArgs
+        var remoteRenderingAccount = new AzureNextGen.MixedReality.V20200406Preview.RemoteRenderingAccount("remoteRenderingAccount", new AzureNextGen.MixedReality.V20200406Preview.RemoteRenderingAccountArgs
         {
             AccountName = "MyAccount",
-            Identity = new AzureNextGen.Mixedreality.Inputs.RemoteRenderingAccountIdentityArgs
+            Identity = new AzureNextGen.MixedReality.V20200406Preview.Inputs.RemoteRenderingAccountIdentityArgs
             {
                 Type = "SystemAssigned",
             },
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-remote_rendering_account = azure_nextgen.mixedreality.RemoteRenderingAccount("remoteRenderingAccount",
+remote_rendering_account = azure_nextgen.mixedreality.v20200406preview.RemoteRenderingAccount("remoteRenderingAccount",
     account_name="MyAccount",
     identity={
         "type": "SystemAssigned",
@@ -72,7 +72,7 @@ remote_rendering_account = azure_nextgen.mixedreality.RemoteRenderingAccount("re
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const remoteRenderingAccount = new azure_nextgen.mixedreality.RemoteRenderingAccount("remoteRenderingAccount", {
+const remoteRenderingAccount = new azure_nextgen.mixedreality.v20200406preview.RemoteRenderingAccount("remoteRenderingAccount", {
     accountName: "MyAccount",
     identity: {
         type: "SystemAssigned",

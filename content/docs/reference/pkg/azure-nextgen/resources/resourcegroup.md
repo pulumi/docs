@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var resourceGroup = new AzureNextGen.Resources.ResourceGroup("resourceGroup", new AzureNextGen.Resources.ResourceGroupArgs
+        var resourceGroup = new AzureNextGen.Resources.Latest.ResourceGroup("resourceGroup", new AzureNextGen.Resources.Latest.ResourceGroupArgs
         {
             Location = "eastus",
             ResourceGroupName = "my-resource-group",
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-resource_group = azure_nextgen.resources.ResourceGroup("resourceGroup",
+resource_group = azure_nextgen.resources.latest.ResourceGroup("resourceGroup",
     location="eastus",
     resource_group_name="my-resource-group")
 
@@ -63,7 +63,7 @@ resource_group = azure_nextgen.resources.ResourceGroup("resourceGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const resourceGroup = new azure_nextgen.resources.ResourceGroup("resourceGroup", {
+const resourceGroup = new azure_nextgen.resources.latest.ResourceGroup("resourceGroup", {
     location: "eastus",
     resourceGroupName: "my-resource-group",
 });

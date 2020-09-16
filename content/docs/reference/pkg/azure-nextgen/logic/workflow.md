@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workflow = new AzureNextGen.Logic.Workflow("workflow", new AzureNextGen.Logic.WorkflowArgs
+        var workflow = new AzureNextGen.Logic.Latest.Workflow("workflow", new AzureNextGen.Logic.Latest.WorkflowArgs
         {
             Definition = 
             {
@@ -74,14 +74,14 @@ class MyStack : Stack
                     } },
                 } },
             },
-            IntegrationAccount = new AzureNextGen.Logic.Inputs.ResourceReferenceArgs
+            IntegrationAccount = new AzureNextGen.Logic.Latest.Inputs.ResourceReferenceArgs
             {
                 Id = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Logic/integrationAccounts/test-integration-account",
             },
             Location = "brazilsouth",
             Parameters = 
             {
-                { "$connections", new AzureNextGen.Logic.Inputs.WorkflowParameterArgs
+                { "$connections", new AzureNextGen.Logic.Latest.Inputs.WorkflowParameterArgs
                 {
                     Value = 
                     {
@@ -116,7 +116,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workflow = azure_nextgen.logic.Workflow("workflow",
+workflow = azure_nextgen.logic.latest.Workflow("workflow",
     definition={
         "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
         "actions": {
@@ -181,7 +181,7 @@ workflow = azure_nextgen.logic.Workflow("workflow",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const workflow = new azure_nextgen.logic.Workflow("workflow", {
+const workflow = new azure_nextgen.logic.latest.Workflow("workflow", {
     definition: {
         `$schema`: "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
         actions: {

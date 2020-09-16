@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var function = new AzureNextGen.Streamanalytics.Function("function", new AzureNextGen.Streamanalytics.FunctionArgs
+        var function = new AzureNextGen.StreamAnalytics.Latest.Function("function", new AzureNextGen.StreamAnalytics.Latest.FunctionArgs
         {
             FunctionName = "function8197",
             JobName = "sj8653",
-            Properties = new AzureNextGen.Streamanalytics.Inputs.ScalarFunctionPropertiesArgs
+            Properties = new AzureNextGen.StreamAnalytics.Latest.Inputs.ScalarFunctionPropertiesArgs
             {
                 Binding = 
                 {
@@ -42,12 +42,12 @@ class MyStack : Stack
                 },
                 Inputs = 
                 {
-                    new AzureNextGen.Streamanalytics.Inputs.FunctionInputArgs
+                    new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionInputArgs
                     {
                         DataType = "Any",
                     },
                 },
-                Output = new AzureNextGen.Streamanalytics.Inputs.FunctionOutputArgs
+                Output = new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionOutputArgs
                 {
                     DataType = "Any",
                 },
@@ -72,7 +72,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-function = azure_nextgen.streamanalytics.Function("function",
+function = azure_nextgen.streamanalytics.latest.Function("function",
     function_name="function8197",
     job_name="sj8653",
     properties={
@@ -101,7 +101,7 @@ function = azure_nextgen.streamanalytics.Function("function",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const _function = new azure_nextgen.streamanalytics.Function("function", {
+const _function = new azure_nextgen.streamanalytics.latest.Function("function", {
     functionName: "function8197",
     jobName: "sj8653",
     properties: {
@@ -135,11 +135,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var function = new AzureNextGen.Streamanalytics.Function("function", new AzureNextGen.Streamanalytics.FunctionArgs
+        var function = new AzureNextGen.StreamAnalytics.Latest.Function("function", new AzureNextGen.StreamAnalytics.Latest.FunctionArgs
         {
             FunctionName = "function588",
             JobName = "sj9093",
-            Properties = new AzureNextGen.Streamanalytics.Inputs.ScalarFunctionPropertiesArgs
+            Properties = new AzureNextGen.StreamAnalytics.Latest.Inputs.ScalarFunctionPropertiesArgs
             {
                 Binding = 
                 {
@@ -174,12 +174,12 @@ class MyStack : Stack
                 },
                 Inputs = 
                 {
-                    new AzureNextGen.Streamanalytics.Inputs.FunctionInputArgs
+                    new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionInputArgs
                     {
                         DataType = "nvarchar(max)",
                     },
                 },
-                Output = new AzureNextGen.Streamanalytics.Inputs.FunctionOutputArgs
+                Output = new AzureNextGen.StreamAnalytics.Latest.Inputs.FunctionOutputArgs
                 {
                     DataType = "nvarchar(max)",
                 },
@@ -204,7 +204,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-function = azure_nextgen.streamanalytics.Function("function",
+function = azure_nextgen.streamanalytics.latest.Function("function",
     function_name="function588",
     job_name="sj9093",
     properties={
@@ -247,7 +247,7 @@ function = azure_nextgen.streamanalytics.Function("function",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const _function = new azure_nextgen.streamanalytics.Function("function", {
+const _function = new azure_nextgen.streamanalytics.latest.Function("function", {
     functionName: "function588",
     jobName: "sj9093",
     properties: {

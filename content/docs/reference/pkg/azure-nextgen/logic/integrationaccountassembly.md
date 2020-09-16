@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationAccountAssembly = new AzureNextGen.Logic.IntegrationAccountAssembly("integrationAccountAssembly", new AzureNextGen.Logic.IntegrationAccountAssemblyArgs
+        var integrationAccountAssembly = new AzureNextGen.Logic.Latest.IntegrationAccountAssembly("integrationAccountAssembly", new AzureNextGen.Logic.Latest.IntegrationAccountAssemblyArgs
         {
             AssemblyArtifactName = "testAssembly",
             IntegrationAccountName = "testIntegrationAccount",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_account_assembly = azure_nextgen.logic.IntegrationAccountAssembly("integrationAccountAssembly",
+integration_account_assembly = azure_nextgen.logic.latest.IntegrationAccountAssembly("integrationAccountAssembly",
     assembly_artifact_name="testAssembly",
     integration_account_name="testIntegrationAccount",
     location="westus",
@@ -67,7 +67,7 @@ integration_account_assembly = azure_nextgen.logic.IntegrationAccountAssembly("i
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationAccountAssembly = new azure_nextgen.logic.IntegrationAccountAssembly("integrationAccountAssembly", {
+const integrationAccountAssembly = new azure_nextgen.logic.latest.IntegrationAccountAssembly("integrationAccountAssembly", {
     assemblyArtifactName: "testAssembly",
     integrationAccountName: "testIntegrationAccount",
     location: "westus",

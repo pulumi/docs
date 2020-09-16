@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var firewallRule = new AzureNextGen.Dbforpostgresql.FirewallRule("firewallRule", new AzureNextGen.Dbforpostgresql.FirewallRuleArgs
+        var firewallRule = new AzureNextGen.DBforPostgreSQL.Latest.FirewallRule("firewallRule", new AzureNextGen.DBforPostgreSQL.Latest.FirewallRuleArgs
         {
             EndIpAddress = "255.255.255.255",
             FirewallRuleName = "rule1",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-firewall_rule = azure_nextgen.dbforpostgresql.FirewallRule("firewallRule",
+firewall_rule = azure_nextgen.dbforpostgresql.latest.FirewallRule("firewallRule",
     end_ip_address="255.255.255.255",
     firewall_rule_name="rule1",
     resource_group_name="TestGroup",
@@ -69,7 +69,7 @@ firewall_rule = azure_nextgen.dbforpostgresql.FirewallRule("firewallRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const firewallRule = new azure_nextgen.dbforpostgresql.FirewallRule("firewallRule", {
+const firewallRule = new azure_nextgen.dbforpostgresql.latest.FirewallRule("firewallRule", {
     endIpAddress: "255.255.255.255",
     firewallRuleName: "rule1",
     resourceGroupName: "TestGroup",

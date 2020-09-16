@@ -26,17 +26,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var domain = new AzureNextGen.Eventgrid.Domain("domain", new AzureNextGen.Eventgrid.DomainArgs
+        var domain = new AzureNextGen.EventGrid.Latest.Domain("domain", new AzureNextGen.EventGrid.Latest.DomainArgs
         {
             DomainName = "exampledomain1",
             InboundIpRules = 
             {
-                new AzureNextGen.Eventgrid.Inputs.InboundIpRuleArgs
+                new AzureNextGen.EventGrid.Latest.Inputs.InboundIpRuleArgs
                 {
                     Action = "Allow",
                     IpMask = "12.18.30.15",
                 },
-                new AzureNextGen.Eventgrid.Inputs.InboundIpRuleArgs
+                new AzureNextGen.EventGrid.Latest.Inputs.InboundIpRuleArgs
                 {
                     Action = "Allow",
                     IpMask = "12.18.176.1",
@@ -69,7 +69,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-domain = azure_nextgen.eventgrid.Domain("domain",
+domain = azure_nextgen.eventgrid.latest.Domain("domain",
     domain_name="exampledomain1",
     inbound_ip_rules=[
         {
@@ -99,7 +99,7 @@ domain = azure_nextgen.eventgrid.Domain("domain",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const domain = new azure_nextgen.eventgrid.Domain("domain", {
+const domain = new azure_nextgen.eventgrid.latest.Domain("domain", {
     domainName: "exampledomain1",
     inboundIpRules: [
         {

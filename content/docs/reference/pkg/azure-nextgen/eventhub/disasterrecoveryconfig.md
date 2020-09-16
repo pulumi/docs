@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var disasterRecoveryConfig = new AzureNextGen.Eventhub.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureNextGen.Eventhub.DisasterRecoveryConfigArgs
+        var disasterRecoveryConfig = new AzureNextGen.EventHub.Latest.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureNextGen.EventHub.Latest.DisasterRecoveryConfigArgs
         {
             Alias = "sdk-DisasterRecovery-3814",
             NamespaceName = "sdk-Namespace-8859",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-disaster_recovery_config = azure_nextgen.eventhub.DisasterRecoveryConfig("disasterRecoveryConfig",
+disaster_recovery_config = azure_nextgen.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig",
     alias="sdk-DisasterRecovery-3814",
     namespace_name="sdk-Namespace-8859",
     partner_namespace="sdk-Namespace-37",
@@ -67,7 +67,7 @@ disaster_recovery_config = azure_nextgen.eventhub.DisasterRecoveryConfig("disast
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const disasterRecoveryConfig = new azure_nextgen.eventhub.DisasterRecoveryConfig("disasterRecoveryConfig", {
+const disasterRecoveryConfig = new azure_nextgen.eventhub.latest.DisasterRecoveryConfig("disasterRecoveryConfig", {
     alias: "sdk-DisasterRecovery-3814",
     namespaceName: "sdk-Namespace-8859",
     partnerNamespace: "sdk-Namespace-37",

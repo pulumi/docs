@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var flowLog = new AzureNextGen.Network.FlowLog("flowLog", new AzureNextGen.Network.FlowLogArgs
+        var flowLog = new AzureNextGen.Network.Latest.FlowLog("flowLog", new AzureNextGen.Network.Latest.FlowLogArgs
         {
             Enabled = true,
             FlowLogName = "fl",
-            Format = new AzureNextGen.Network.Inputs.FlowLogFormatParametersArgs
+            Format = new AzureNextGen.Network.Latest.Inputs.FlowLogFormatParametersArgs
             {
                 Type = "JSON",
                 Version = 1,
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-flow_log = azure_nextgen.network.FlowLog("flowLog",
+flow_log = azure_nextgen.network.latest.FlowLog("flowLog",
     enabled=True,
     flow_log_name="fl",
     format={
@@ -82,7 +82,7 @@ flow_log = azure_nextgen.network.FlowLog("flowLog",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const flowLog = new azure_nextgen.network.FlowLog("flowLog", {
+const flowLog = new azure_nextgen.network.latest.FlowLog("flowLog", {
     enabled: true,
     flowLogName: "fl",
     format: {

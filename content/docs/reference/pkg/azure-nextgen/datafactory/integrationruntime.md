@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationRuntime = new AzureNextGen.Datafactory.IntegrationRuntime("integrationRuntime", new AzureNextGen.Datafactory.IntegrationRuntimeArgs
+        var integrationRuntime = new AzureNextGen.DataFactory.Latest.IntegrationRuntime("integrationRuntime", new AzureNextGen.DataFactory.Latest.IntegrationRuntimeArgs
         {
             FactoryName = "exampleFactoryName",
             IntegrationRuntimeName = "exampleIntegrationRuntime",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_runtime = azure_nextgen.datafactory.IntegrationRuntime("integrationRuntime",
+integration_runtime = azure_nextgen.datafactory.latest.IntegrationRuntime("integrationRuntime",
     factory_name="exampleFactoryName",
     integration_runtime_name="exampleIntegrationRuntime",
     resource_group_name="exampleResourceGroup")
@@ -65,7 +65,7 @@ integration_runtime = azure_nextgen.datafactory.IntegrationRuntime("integrationR
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const integrationRuntime = new azure_nextgen.datafactory.IntegrationRuntime("integrationRuntime", {
+const integrationRuntime = new azure_nextgen.datafactory.latest.IntegrationRuntime("integrationRuntime", {
     factoryName: "exampleFactoryName",
     integrationRuntimeName: "exampleIntegrationRuntime",
     resourceGroupName: "exampleResourceGroup",

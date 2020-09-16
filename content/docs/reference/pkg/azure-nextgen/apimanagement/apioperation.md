@@ -26,21 +26,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var apiOperation = new AzureNextGen.Apimanagement.ApiOperation("apiOperation", new AzureNextGen.Apimanagement.ApiOperationArgs
+        var apiOperation = new AzureNextGen.ApiManagement.Latest.ApiOperation("apiOperation", new AzureNextGen.ApiManagement.Latest.ApiOperationArgs
         {
             ApiId = "PetStoreTemplate2",
             Description = "This can only be done by the logged in user.",
             DisplayName = "createUser2",
             Method = "POST",
             OperationId = "newoperations",
-            Request = new AzureNextGen.Apimanagement.Inputs.RequestContractArgs
+            Request = new AzureNextGen.ApiManagement.Latest.Inputs.RequestContractArgs
             {
                 Description = "Created user object",
                 Headers = {},
                 QueryParameters = {},
                 Representations = 
                 {
-                    new AzureNextGen.Apimanagement.Inputs.RepresentationContractArgs
+                    new AzureNextGen.ApiManagement.Latest.Inputs.RepresentationContractArgs
                     {
                         ContentType = "application/json",
                         SchemaId = "592f6c1d0af5840ca8897f0c",
@@ -51,17 +51,17 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             Responses = 
             {
-                new AzureNextGen.Apimanagement.Inputs.ResponseContractArgs
+                new AzureNextGen.ApiManagement.Latest.Inputs.ResponseContractArgs
                 {
                     Description = "successful operation",
                     Headers = {},
                     Representations = 
                     {
-                        new AzureNextGen.Apimanagement.Inputs.RepresentationContractArgs
+                        new AzureNextGen.ApiManagement.Latest.Inputs.RepresentationContractArgs
                         {
                             ContentType = "application/xml",
                         },
-                        new AzureNextGen.Apimanagement.Inputs.RepresentationContractArgs
+                        new AzureNextGen.ApiManagement.Latest.Inputs.RepresentationContractArgs
                         {
                             ContentType = "application/json",
                         },
@@ -91,7 +91,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api_operation = azure_nextgen.apimanagement.ApiOperation("apiOperation",
+api_operation = azure_nextgen.apimanagement.latest.ApiOperation("apiOperation",
     api_id="PetStoreTemplate2",
     description="This can only be done by the logged in user.",
     display_name="createUser2",
@@ -135,7 +135,7 @@ api_operation = azure_nextgen.apimanagement.ApiOperation("apiOperation",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const apiOperation = new azure_nextgen.apimanagement.ApiOperation("apiOperation", {
+const apiOperation = new azure_nextgen.apimanagement.latest.ApiOperation("apiOperation", {
     apiId: "PetStoreTemplate2",
     description: "This can only be done by the logged in user.",
     displayName: "createUser2",

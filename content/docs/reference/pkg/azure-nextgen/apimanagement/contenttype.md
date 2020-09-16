@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var contentType = new AzureNextGen.Apimanagement.ContentType("contentType", new AzureNextGen.Apimanagement.ContentTypeArgs
+        var contentType = new AzureNextGen.ApiManagement.Latest.ContentType("contentType", new AzureNextGen.ApiManagement.Latest.ContentTypeArgs
         {
             ContentTypeId = "page",
             ResourceGroupName = "rg1",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-content_type = azure_nextgen.apimanagement.ContentType("contentType",
+content_type = azure_nextgen.apimanagement.latest.ContentType("contentType",
     content_type_id="page",
     resource_group_name="rg1",
     service_name="apimService1")
@@ -65,7 +65,7 @@ content_type = azure_nextgen.apimanagement.ContentType("contentType",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const contentType = new azure_nextgen.apimanagement.ContentType("contentType", {
+const contentType = new azure_nextgen.apimanagement.latest.ContentType("contentType", {
     contentTypeId: "page",
     resourceGroupName: "rg1",
     serviceName: "apimService1",

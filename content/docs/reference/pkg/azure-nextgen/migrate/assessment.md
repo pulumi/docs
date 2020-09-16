@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var assessment = new AzureNextGen.Migrate.Assessment("assessment", new AzureNextGen.Migrate.AssessmentArgs
+        var assessment = new AzureNextGen.Migrate.Latest.Assessment("assessment", new AzureNextGen.Migrate.Latest.AssessmentArgs
         {
             AssessmentName = "assessment_5_14_2019_16_48_47",
             ETag = "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-assessment = azure_nextgen.migrate.Assessment("assessment",
+assessment = azure_nextgen.migrate.latest.Assessment("assessment",
     assessment_name="assessment_5_14_2019_16_48_47",
     e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     group_name="Group2",
@@ -69,7 +69,7 @@ assessment = azure_nextgen.migrate.Assessment("assessment",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const assessment = new azure_nextgen.migrate.Assessment("assessment", {
+const assessment = new azure_nextgen.migrate.latest.Assessment("assessment", {
     assessmentName: "assessment_5_14_2019_16_48_47",
     eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
     groupName: "Group2",

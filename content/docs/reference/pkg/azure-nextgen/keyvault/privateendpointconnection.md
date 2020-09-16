@@ -26,10 +26,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Keyvault.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Keyvault.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.KeyVault.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.KeyVault.Latest.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "sample-pec",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Keyvault.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.KeyVault.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 Description = "My name is Joe and I'm approving this.",
                 Status = "Approved",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.keyvault.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.keyvault.latest.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="sample-pec",
     private_link_service_connection_state={
         "description": "My name is Joe and I'm approving this.",
@@ -74,7 +74,7 @@ private_endpoint_connection = azure_nextgen.keyvault.PrivateEndpointConnection("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.keyvault.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.keyvault.latest.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "sample-pec",
     privateLinkServiceConnectionState: {
         description: "My name is Joe and I'm approving this.",

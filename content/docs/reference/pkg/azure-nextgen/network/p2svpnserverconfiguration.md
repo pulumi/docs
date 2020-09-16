@@ -26,32 +26,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var p2sVpnServerConfiguration = new AzureNextGen.Network.P2sVpnServerConfiguration("p2sVpnServerConfiguration", new AzureNextGen.Network.P2sVpnServerConfigurationArgs
+        var p2sVpnServerConfiguration = new AzureNextGen.Network.Latest.P2sVpnServerConfiguration("p2sVpnServerConfiguration", new AzureNextGen.Network.Latest.P2sVpnServerConfigurationArgs
         {
             P2SVpnServerConfigRadiusClientRootCertificates = 
             {
-                new AzureNextGen.Network.Inputs.P2SVpnServerConfigRadiusClientRootCertificateArgs
+                new AzureNextGen.Network.Latest.Inputs.P2SVpnServerConfigRadiusClientRootCertificateArgs
                 {
                     Name = "p2sVpnServerConfigRadiusClientRootCert1",
                 },
             },
             P2SVpnServerConfigRadiusServerRootCertificates = 
             {
-                new AzureNextGen.Network.Inputs.P2SVpnServerConfigRadiusServerRootCertificateArgs
+                new AzureNextGen.Network.Latest.Inputs.P2SVpnServerConfigRadiusServerRootCertificateArgs
                 {
                     Name = "p2sVpnServerConfigRadiusServerRootCert1",
                 },
             },
             P2SVpnServerConfigVpnClientRevokedCertificates = 
             {
-                new AzureNextGen.Network.Inputs.P2SVpnServerConfigVpnClientRevokedCertificateArgs
+                new AzureNextGen.Network.Latest.Inputs.P2SVpnServerConfigVpnClientRevokedCertificateArgs
                 {
                     Name = "p2sVpnServerConfigVpnClientRevokedCert1",
                 },
             },
             P2SVpnServerConfigVpnClientRootCertificates = 
             {
-                new AzureNextGen.Network.Inputs.P2SVpnServerConfigVpnClientRootCertificateArgs
+                new AzureNextGen.Network.Latest.Inputs.P2SVpnServerConfigVpnClientRootCertificateArgs
                 {
                     Name = "p2sVpnServerConfigVpnClientRootCert1",
                 },
@@ -63,7 +63,7 @@ class MyStack : Stack
             VirtualWanName = "virtualWan1",
             VpnClientIpsecPolicies = 
             {
-                new AzureNextGen.Network.Inputs.IpsecPolicyArgs
+                new AzureNextGen.Network.Latest.Inputs.IpsecPolicyArgs
                 {
                     DhGroup = "DHGroup14",
                     IkeEncryption = "AES256",
@@ -98,7 +98,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-p2s_vpn_server_configuration = azure_nextgen.network.P2sVpnServerConfiguration("p2sVpnServerConfiguration",
+p2s_vpn_server_configuration = azure_nextgen.network.latest.P2sVpnServerConfiguration("p2sVpnServerConfiguration",
     p2_s_vpn_server_config_radius_client_root_certificates=[{
         "name": "p2sVpnServerConfigRadiusClientRootCert1",
     }],
@@ -138,7 +138,7 @@ p2s_vpn_server_configuration = azure_nextgen.network.P2sVpnServerConfiguration("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const p2sVpnServerConfiguration = new azure_nextgen.network.P2sVpnServerConfiguration("p2sVpnServerConfiguration", {
+const p2sVpnServerConfiguration = new azure_nextgen.network.latest.P2sVpnServerConfiguration("p2sVpnServerConfiguration", {
     p2SVpnServerConfigRadiusClientRootCertificates: [{
         name: "p2sVpnServerConfigRadiusClientRootCert1",
     }],

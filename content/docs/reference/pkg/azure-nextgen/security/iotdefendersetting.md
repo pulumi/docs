@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotDefenderSetting = new AzureNextGen.Security.IotDefenderSetting("iotDefenderSetting", new AzureNextGen.Security.IotDefenderSettingArgs
+        var iotDefenderSetting = new AzureNextGen.Security.V20200806Preview.IotDefenderSetting("iotDefenderSetting", new AzureNextGen.Security.V20200806Preview.IotDefenderSettingArgs
         {
         });
     }
@@ -47,7 +47,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_defender_setting = azure_nextgen.security.IotDefenderSetting("iotDefenderSetting")
+iot_defender_setting = azure_nextgen.security.v20200806preview.IotDefenderSetting("iotDefenderSetting")
 
 ```
 
@@ -59,7 +59,7 @@ iot_defender_setting = azure_nextgen.security.IotDefenderSetting("iotDefenderSet
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const iotDefenderSetting = new azure_nextgen.security.IotDefenderSetting("iotDefenderSetting", {});
+const iotDefenderSetting = new azure_nextgen.security.v20200806preview.IotDefenderSetting("iotDefenderSetting", {});
 
 ```
 

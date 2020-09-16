@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var peeringService = new AzureNextGen.Peering.PeeringService("peeringService", new AzureNextGen.Peering.PeeringServiceArgs
+        var peeringService = new AzureNextGen.Peering.Latest.PeeringService("peeringService", new AzureNextGen.Peering.Latest.PeeringServiceArgs
         {
             Location = "eastus",
             PeeringServiceLocation = "state1",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-peering_service = azure_nextgen.peering.PeeringService("peeringService",
+peering_service = azure_nextgen.peering.latest.PeeringService("peeringService",
     location="eastus",
     peering_service_location="state1",
     peering_service_name="peeringServiceName",
@@ -69,7 +69,7 @@ peering_service = azure_nextgen.peering.PeeringService("peeringService",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const peeringService = new azure_nextgen.peering.PeeringService("peeringService", {
+const peeringService = new azure_nextgen.peering.latest.PeeringService("peeringService", {
     location: "eastus",
     peeringServiceLocation: "state1",
     peeringServiceName: "peeringServiceName",

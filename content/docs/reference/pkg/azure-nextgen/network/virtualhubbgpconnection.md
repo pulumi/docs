@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualHubBgpConnection = new AzureNextGen.Network.VirtualHubBgpConnection("virtualHubBgpConnection", new AzureNextGen.Network.VirtualHubBgpConnectionArgs
+        var virtualHubBgpConnection = new AzureNextGen.Network.Latest.VirtualHubBgpConnection("virtualHubBgpConnection", new AzureNextGen.Network.Latest.VirtualHubBgpConnectionArgs
         {
             ConnectionName = "conn1",
             PeerAsn = 20000,
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_hub_bgp_connection = azure_nextgen.network.VirtualHubBgpConnection("virtualHubBgpConnection",
+virtual_hub_bgp_connection = azure_nextgen.network.latest.VirtualHubBgpConnection("virtualHubBgpConnection",
     connection_name="conn1",
     peer_asn=20000,
     peer_ip="192.168.1.5",
@@ -69,7 +69,7 @@ virtual_hub_bgp_connection = azure_nextgen.network.VirtualHubBgpConnection("virt
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualHubBgpConnection = new azure_nextgen.network.VirtualHubBgpConnection("virtualHubBgpConnection", {
+const virtualHubBgpConnection = new azure_nextgen.network.latest.VirtualHubBgpConnection("virtualHubBgpConnection", {
     connectionName: "conn1",
     peerAsn: 20000,
     peerIp: "192.168.1.5",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var topicAuthorizationRule = new AzureNextGen.Servicebus.TopicAuthorizationRule("topicAuthorizationRule", new AzureNextGen.Servicebus.TopicAuthorizationRuleArgs
+        var topicAuthorizationRule = new AzureNextGen.ServiceBus.Latest.TopicAuthorizationRule("topicAuthorizationRule", new AzureNextGen.ServiceBus.Latest.TopicAuthorizationRuleArgs
         {
             AuthorizationRuleName = "sdk-AuthRules-4310",
             NamespaceName = "sdk-Namespace-6261",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-topic_authorization_rule = azure_nextgen.servicebus.TopicAuthorizationRule("topicAuthorizationRule",
+topic_authorization_rule = azure_nextgen.servicebus.latest.TopicAuthorizationRule("topicAuthorizationRule",
     authorization_rule_name="sdk-AuthRules-4310",
     namespace_name="sdk-Namespace-6261",
     resource_group_name="ArunMonocle",
@@ -76,7 +76,7 @@ topic_authorization_rule = azure_nextgen.servicebus.TopicAuthorizationRule("topi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const topicAuthorizationRule = new azure_nextgen.servicebus.TopicAuthorizationRule("topicAuthorizationRule", {
+const topicAuthorizationRule = new azure_nextgen.servicebus.latest.TopicAuthorizationRule("topicAuthorizationRule", {
     authorizationRuleName: "sdk-AuthRules-4310",
     namespaceName: "sdk-Namespace-6261",
     resourceGroupName: "ArunMonocle",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var subscription = new AzureNextGen.Apimanagement.Subscription("subscription", new AzureNextGen.Apimanagement.SubscriptionArgs
+        var subscription = new AzureNextGen.ApiManagement.Latest.Subscription("subscription", new AzureNextGen.ApiManagement.Latest.SubscriptionArgs
         {
             DisplayName = "testsub",
             OwnerId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-subscription = azure_nextgen.apimanagement.Subscription("subscription",
+subscription = azure_nextgen.apimanagement.latest.Subscription("subscription",
     display_name="testsub",
     owner_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
     resource_group_name="rg1",
@@ -71,7 +71,7 @@ subscription = azure_nextgen.apimanagement.Subscription("subscription",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const subscription = new azure_nextgen.apimanagement.Subscription("subscription", {
+const subscription = new azure_nextgen.apimanagement.latest.Subscription("subscription", {
     displayName: "testsub",
     ownerId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
     resourceGroupName: "rg1",

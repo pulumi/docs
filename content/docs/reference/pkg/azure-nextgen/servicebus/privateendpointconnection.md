@@ -26,15 +26,15 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Servicebus.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Servicebus.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.ServiceBus.V20180101Preview.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.ServiceBus.V20180101Preview.PrivateEndpointConnectionArgs
         {
             NamespaceName = "sdk-Namespace-2924",
-            PrivateEndpoint = new AzureNextGen.Servicebus.Inputs.PrivateEndpointArgs
+            PrivateEndpoint = new AzureNextGen.ServiceBus.V20180101Preview.Inputs.PrivateEndpointArgs
             {
                 Id = "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
             },
             PrivateEndpointConnectionName = "privateEndpointConnectionName",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Servicebus.Inputs.ConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.ServiceBus.V20180101Preview.Inputs.ConnectionStateArgs
             {
                 Description = "testing",
                 Status = "Rejected",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.servicebus.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.servicebus.v20180101preview.PrivateEndpointConnection("privateEndpointConnection",
     namespace_name="sdk-Namespace-2924",
     private_endpoint={
         "id": "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
@@ -83,7 +83,7 @@ private_endpoint_connection = azure_nextgen.servicebus.PrivateEndpointConnection
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.servicebus.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.servicebus.v20180101preview.PrivateEndpointConnection("privateEndpointConnection", {
     namespaceName: "sdk-Namespace-2924",
     privateEndpoint: {
         id: "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationPackage = new AzureNextGen.Batch.ApplicationPackage("applicationPackage", new AzureNextGen.Batch.ApplicationPackageArgs
+        var applicationPackage = new AzureNextGen.Batch.Latest.ApplicationPackage("applicationPackage", new AzureNextGen.Batch.Latest.ApplicationPackageArgs
         {
             AccountName = "sampleacct",
             ApplicationName = "app1",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_package = azure_nextgen.batch.ApplicationPackage("applicationPackage",
+application_package = azure_nextgen.batch.latest.ApplicationPackage("applicationPackage",
     account_name="sampleacct",
     application_name="app1",
     resource_group_name="default-azurebatch-japaneast",
@@ -67,7 +67,7 @@ application_package = azure_nextgen.batch.ApplicationPackage("applicationPackage
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const applicationPackage = new azure_nextgen.batch.ApplicationPackage("applicationPackage", {
+const applicationPackage = new azure_nextgen.batch.latest.ApplicationPackage("applicationPackage", {
     accountName: "sampleacct",
     applicationName: "app1",
     resourceGroupName: "default-azurebatch-japaneast",

@@ -26,13 +26,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var vNetPeering = new AzureNextGen.Databricks.VNetPeering("vNetPeering", new AzureNextGen.Databricks.VNetPeeringArgs
+        var vNetPeering = new AzureNextGen.Databricks.Latest.VNetPeering("vNetPeering", new AzureNextGen.Databricks.Latest.VNetPeeringArgs
         {
             AllowForwardedTraffic = false,
             AllowGatewayTransit = false,
             AllowVirtualNetworkAccess = true,
             PeeringName = "vNetPeeringTest",
-            RemoteVirtualNetwork = new AzureNextGen.Databricks.Inputs.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs
+            RemoteVirtualNetwork = new AzureNextGen.Databricks.Latest.Inputs.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs
             {
                 Id = "/subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Network/virtualNetworks/subramanvnet",
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-v_net_peering = azure_nextgen.databricks.VNetPeering("vNetPeering",
+v_net_peering = azure_nextgen.databricks.latest.VNetPeering("vNetPeering",
     allow_forwarded_traffic=False,
     allow_gateway_transit=False,
     allow_virtual_network_access=True,
@@ -80,7 +80,7 @@ v_net_peering = azure_nextgen.databricks.VNetPeering("vNetPeering",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const vNetPeering = new azure_nextgen.databricks.VNetPeering("vNetPeering", {
+const vNetPeering = new azure_nextgen.databricks.latest.VNetPeering("vNetPeering", {
     allowForwardedTraffic: false,
     allowGatewayTransit: false,
     allowVirtualNetworkAccess: true,

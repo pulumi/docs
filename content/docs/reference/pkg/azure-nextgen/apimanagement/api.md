@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "tempgroup",
-            AuthenticationSettings = new AzureNextGen.Apimanagement.Inputs.AuthenticationSettingsContractArgs
+            AuthenticationSettings = new AzureNextGen.ApiManagement.Latest.Inputs.AuthenticationSettingsContractArgs
             {
-                OAuth2 = new AzureNextGen.Apimanagement.Inputs.OAuth2AuthenticationSettingsContractArgs
+                OAuth2 = new AzureNextGen.ApiManagement.Latest.Inputs.OAuth2AuthenticationSettingsContractArgs
                 {
                     AuthorizationServerId = "authorizationServerId2283",
                     Scope = "oauth2scope2580",
@@ -48,7 +48,7 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
             ServiceUrl = "http://newechoapi.cloudapp.net/api",
-            SubscriptionKeyParameterNames = new AzureNextGen.Apimanagement.Inputs.SubscriptionKeyParameterNamesContractArgs
+            SubscriptionKeyParameterNames = new AzureNextGen.ApiManagement.Latest.Inputs.SubscriptionKeyParameterNamesContractArgs
             {
                 Header = "header4520",
                 Query = "query3037",
@@ -72,7 +72,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="tempgroup",
     authentication_settings={
         "oAuth2": {
@@ -105,7 +105,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "tempgroup",
     authenticationSettings: {
         oAuth2: {
@@ -143,7 +143,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "echo-api2",
             Description = "Copy of Existing Echo Api including Operations.",
@@ -179,7 +179,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="echo-api2",
     description="Copy of Existing Echo Api including Operations.",
     display_name="Echo API2",
@@ -205,7 +205,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "echo-api2",
     description: "Copy of Existing Echo Api including Operations.",
     displayName: "Echo API2",
@@ -236,7 +236,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "echoapiv3",
             ApiVersion = "v4",
@@ -274,7 +274,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="echoapiv3",
     api_version="v4",
     api_version_set_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458",
@@ -302,7 +302,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "echoapiv3",
     apiVersion: "v4",
     apiVersionSetId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/aa9c59e6-c0cd-4258-9356-9ca7d2f0b458",
@@ -335,7 +335,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "echo-api;rev=3",
             ApiRevisionDescription = "Creating a Revision of an existing API",
@@ -363,7 +363,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="echo-api;rev=3",
     api_revision_description="Creating a Revision of an existing API",
     path="echo",
@@ -382,7 +382,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "echo-api;rev=3",
     apiRevisionDescription: "Creating a Revision of an existing API",
     path: "echo",
@@ -406,7 +406,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "apidocs",
             Format = "swagger-link",
@@ -434,7 +434,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="apidocs",
     format="swagger-link",
     path="petstoreapi123",
@@ -453,7 +453,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "apidocs",
     format: "swagger-link",
     path: "petstoreapi123",
@@ -477,7 +477,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "petstore",
             Format = "openapi-link",
@@ -504,7 +504,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="petstore",
     format="openapi-link",
     path="petstore",
@@ -522,7 +522,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "petstore",
     format: "openapi-link",
     path: "petstore",
@@ -545,7 +545,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "petstore",
             Format = "swagger-link-json",
@@ -572,7 +572,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="petstore",
     format="swagger-link-json",
     path="petstore",
@@ -590,7 +590,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "petstore",
     format: "swagger-link-json",
     path: "petstore",
@@ -613,7 +613,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "petstore",
             Format = "wadl-link-json",
@@ -640,7 +640,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="petstore",
     format="wadl-link-json",
     path="collector",
@@ -658,7 +658,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "petstore",
     format: "wadl-link-json",
     path: "collector",
@@ -681,12 +681,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "tempgroup",
-            AuthenticationSettings = new AzureNextGen.Apimanagement.Inputs.AuthenticationSettingsContractArgs
+            AuthenticationSettings = new AzureNextGen.ApiManagement.Latest.Inputs.AuthenticationSettingsContractArgs
             {
-                Openid = new AzureNextGen.Apimanagement.Inputs.OpenIdAuthenticationSettingsContractArgs
+                Openid = new AzureNextGen.ApiManagement.Latest.Inputs.OpenIdAuthenticationSettingsContractArgs
                 {
                     BearerTokenSendingMethods = 
                     {
@@ -705,7 +705,7 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
             ServiceUrl = "http://petstore.swagger.io/v2",
-            SubscriptionKeyParameterNames = new AzureNextGen.Apimanagement.Inputs.SubscriptionKeyParameterNamesContractArgs
+            SubscriptionKeyParameterNames = new AzureNextGen.ApiManagement.Latest.Inputs.SubscriptionKeyParameterNamesContractArgs
             {
                 Header = "Ocp-Apim-Subscription-Key",
                 Query = "subscription-key",
@@ -729,7 +729,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="tempgroup",
     authentication_settings={
         "openid": {
@@ -759,7 +759,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "tempgroup",
     authenticationSettings: {
         openid: {
@@ -794,7 +794,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "soapApi",
             Format = "wsdl-link",
@@ -803,7 +803,7 @@ class MyStack : Stack
             ServiceName = "apimService1",
             SoapApiType = "soap",
             Value = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
-            WsdlSelector = new AzureNextGen.Apimanagement.Inputs.ApiCreateOrUpdatePropertiesWsdlSelectorArgs
+            WsdlSelector = new AzureNextGen.ApiManagement.Latest.Inputs.ApiCreateOrUpdatePropertiesWsdlSelectorArgs
             {
                 WsdlEndpointName = "CurrencyConvertorSoap",
                 WsdlServiceName = "CurrencyConvertor",
@@ -827,7 +827,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="soapApi",
     format="wsdl-link",
     path="currency",
@@ -850,7 +850,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "soapApi",
     format: "wsdl-link",
     path: "currency",
@@ -878,7 +878,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var api = new AzureNextGen.Apimanagement.Api("api", new AzureNextGen.Apimanagement.ApiArgs
+        var api = new AzureNextGen.ApiManagement.Latest.Api("api", new AzureNextGen.ApiManagement.Latest.ApiArgs
         {
             ApiId = "soapApi",
             Format = "wsdl-link",
@@ -886,7 +886,7 @@ class MyStack : Stack
             ResourceGroupName = "rg1",
             ServiceName = "apimService1",
             Value = "http://www.webservicex.net/CurrencyConvertor.asmx?WSDL",
-            WsdlSelector = new AzureNextGen.Apimanagement.Inputs.ApiCreateOrUpdatePropertiesWsdlSelectorArgs
+            WsdlSelector = new AzureNextGen.ApiManagement.Latest.Inputs.ApiCreateOrUpdatePropertiesWsdlSelectorArgs
             {
                 WsdlEndpointName = "CurrencyConvertorSoap",
                 WsdlServiceName = "CurrencyConvertor",
@@ -910,7 +910,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-api = azure_nextgen.apimanagement.Api("api",
+api = azure_nextgen.apimanagement.latest.Api("api",
     api_id="soapApi",
     format="wsdl-link",
     path="currency",
@@ -932,7 +932,7 @@ api = azure_nextgen.apimanagement.Api("api",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const api = new azure_nextgen.apimanagement.Api("api", {
+const api = new azure_nextgen.apimanagement.latest.Api("api", {
     apiId: "soapApi",
     format: "wsdl-link",
     path: "currency",

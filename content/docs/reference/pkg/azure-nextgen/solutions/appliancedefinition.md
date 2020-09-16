@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applianceDefinition = new AzureNextGen.Solutions.ApplianceDefinition("applianceDefinition", new AzureNextGen.Solutions.ApplianceDefinitionArgs
+        var applianceDefinition = new AzureNextGen.Solutions.V20160901Preview.ApplianceDefinition("applianceDefinition", new AzureNextGen.Solutions.V20160901Preview.ApplianceDefinitionArgs
         {
             ApplianceDefinitionName = "myApplianceDef",
             Authorizations = 
             {
-                new AzureNextGen.Solutions.Inputs.ApplianceProviderAuthorizationArgs
+                new AzureNextGen.Solutions.V20160901Preview.Inputs.ApplianceProviderAuthorizationArgs
                 {
                     PrincipalId = "validprincipalguid",
                     RoleDefinitionId = "validroleguid",
@@ -62,7 +62,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-appliance_definition = azure_nextgen.solutions.ApplianceDefinition("applianceDefinition",
+appliance_definition = azure_nextgen.solutions.v20160901preview.ApplianceDefinition("applianceDefinition",
     appliance_definition_name="myApplianceDef",
     authorizations=[{
         "principalId": "validprincipalguid",
@@ -85,7 +85,7 @@ appliance_definition = azure_nextgen.solutions.ApplianceDefinition("applianceDef
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const applianceDefinition = new azure_nextgen.solutions.ApplianceDefinition("applianceDefinition", {
+const applianceDefinition = new azure_nextgen.solutions.v20160901preview.ApplianceDefinition("applianceDefinition", {
     applianceDefinitionName: "myApplianceDef",
     authorizations: [{
         principalId: "validprincipalguid",

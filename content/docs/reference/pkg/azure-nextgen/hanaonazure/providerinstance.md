@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var providerInstance = new AzureNextGen.Hanaonazure.ProviderInstance("providerInstance", new AzureNextGen.Hanaonazure.ProviderInstanceArgs
+        var providerInstance = new AzureNextGen.HanaOnAzure.V20200207Preview.ProviderInstance("providerInstance", new AzureNextGen.HanaOnAzure.V20200207Preview.ProviderInstanceArgs
         {
             Metadata = "{\"key\":\"value\"}",
             Properties = "{\"hostname\":\"10.0.0.10\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30015,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-provider_instance = azure_nextgen.hanaonazure.ProviderInstance("providerInstance",
+provider_instance = azure_nextgen.hanaonazure.v20200207preview.ProviderInstance("providerInstance",
     metadata="{\"key\":\"value\"}",
     properties="{\"hostname\":\"10.0.0.10\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30015,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
     provider_instance_name="myProviderInstance",
@@ -71,7 +71,7 @@ provider_instance = azure_nextgen.hanaonazure.ProviderInstance("providerInstance
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const providerInstance = new azure_nextgen.hanaonazure.ProviderInstance("providerInstance", {
+const providerInstance = new azure_nextgen.hanaonazure.v20200207preview.ProviderInstance("providerInstance", {
     metadata: "{\"key\":\"value\"}",
     properties: "{\"hostname\":\"10.0.0.10\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30015,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
     providerInstanceName: "myProviderInstance",

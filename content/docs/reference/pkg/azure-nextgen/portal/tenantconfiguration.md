@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tenantConfiguration = new AzureNextGen.Portal.TenantConfiguration("tenantConfiguration", new AzureNextGen.Portal.TenantConfigurationArgs
+        var tenantConfiguration = new AzureNextGen.Portal.V20200901Preview.TenantConfiguration("tenantConfiguration", new AzureNextGen.Portal.V20200901Preview.TenantConfigurationArgs
         {
             ConfigurationName = "default",
             EnforcePrivateMarkdownStorage = true,
@@ -49,7 +49,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tenant_configuration = azure_nextgen.portal.TenantConfiguration("tenantConfiguration",
+tenant_configuration = azure_nextgen.portal.v20200901preview.TenantConfiguration("tenantConfiguration",
     configuration_name="default",
     enforce_private_markdown_storage=True)
 
@@ -63,7 +63,7 @@ tenant_configuration = azure_nextgen.portal.TenantConfiguration("tenantConfigura
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const tenantConfiguration = new azure_nextgen.portal.TenantConfiguration("tenantConfiguration", {
+const tenantConfiguration = new azure_nextgen.portal.v20200901preview.TenantConfiguration("tenantConfiguration", {
     configurationName: "default",
     enforcePrivateMarkdownStorage: true,
 });

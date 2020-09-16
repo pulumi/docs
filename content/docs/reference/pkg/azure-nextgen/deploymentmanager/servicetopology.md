@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceTopology = new AzureNextGen.Deploymentmanager.ServiceTopology("serviceTopology", new AzureNextGen.Deploymentmanager.ServiceTopologyArgs
+        var serviceTopology = new AzureNextGen.DeploymentManager.V20191101Preview.ServiceTopology("serviceTopology", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceTopologyArgs
         {
             ArtifactSourceId = "Microsoft.DeploymentManager/artifactSources/myArtifactSource",
             Location = "centralus",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_topology = azure_nextgen.deploymentmanager.ServiceTopology("serviceTopology",
+service_topology = azure_nextgen.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology",
     artifact_source_id="Microsoft.DeploymentManager/artifactSources/myArtifactSource",
     location="centralus",
     resource_group_name="myResourceGroup",
@@ -69,7 +69,7 @@ service_topology = azure_nextgen.deploymentmanager.ServiceTopology("serviceTopol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serviceTopology = new azure_nextgen.deploymentmanager.ServiceTopology("serviceTopology", {
+const serviceTopology = new azure_nextgen.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology", {
     artifactSourceId: "Microsoft.DeploymentManager/artifactSources/myArtifactSource",
     location: "centralus",
     resourceGroupName: "myResourceGroup",
@@ -91,7 +91,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serviceTopology = new AzureNextGen.Deploymentmanager.ServiceTopology("serviceTopology", new AzureNextGen.Deploymentmanager.ServiceTopologyArgs
+        var serviceTopology = new AzureNextGen.DeploymentManager.V20191101Preview.ServiceTopology("serviceTopology", new AzureNextGen.DeploymentManager.V20191101Preview.ServiceTopologyArgs
         {
             Location = "centralus",
             ResourceGroupName = "myResourceGroup",
@@ -116,7 +116,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service_topology = azure_nextgen.deploymentmanager.ServiceTopology("serviceTopology",
+service_topology = azure_nextgen.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology",
     location="centralus",
     resource_group_name="myResourceGroup",
     service_topology_name="myTopology",
@@ -132,7 +132,7 @@ service_topology = azure_nextgen.deploymentmanager.ServiceTopology("serviceTopol
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serviceTopology = new azure_nextgen.deploymentmanager.ServiceTopology("serviceTopology", {
+const serviceTopology = new azure_nextgen.deploymentmanager.v20191101preview.ServiceTopology("serviceTopology", {
     location: "centralus",
     resourceGroupName: "myResourceGroup",
     serviceTopologyName: "myTopology",

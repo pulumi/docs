@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var device = new AzureNextGen.Hybridnetwork.Device("device", new AzureNextGen.Hybridnetwork.DeviceArgs
+        var device = new AzureNextGen.HybridNetwork.V20200101Preview.Device("device", new AzureNextGen.HybridNetwork.V20200101Preview.DeviceArgs
         {
-            AzureStackEdge = new AzureNextGen.Hybridnetwork.Inputs.SubResourceArgs
+            AzureStackEdge = new AzureNextGen.HybridNetwork.V20200101Preview.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
             },
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-device = azure_nextgen.hybridnetwork.Device("device",
+device = azure_nextgen.hybridnetwork.v20200101preview.Device("device",
     azure_stack_edge={
         "id": "/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
     },
@@ -74,7 +74,7 @@ device = azure_nextgen.hybridnetwork.Device("device",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const device = new azure_nextgen.hybridnetwork.Device("device", {
+const device = new azure_nextgen.hybridnetwork.v20200101preview.Device("device", {
     azureStackEdge: {
         id: "/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName",
     },

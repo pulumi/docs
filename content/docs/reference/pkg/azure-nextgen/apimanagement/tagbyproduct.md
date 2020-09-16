@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tagByProduct = new AzureNextGen.Apimanagement.TagByProduct("tagByProduct", new AzureNextGen.Apimanagement.TagByProductArgs
+        var tagByProduct = new AzureNextGen.ApiManagement.Latest.TagByProduct("tagByProduct", new AzureNextGen.ApiManagement.Latest.TagByProductArgs
         {
             ProductId = "5931a75ae4bbd512a88c680b",
             ResourceGroupName = "rg1",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-tag_by_product = azure_nextgen.apimanagement.TagByProduct("tagByProduct",
+tag_by_product = azure_nextgen.apimanagement.latest.TagByProduct("tagByProduct",
     product_id="5931a75ae4bbd512a88c680b",
     resource_group_name="rg1",
     service_name="apimService1",
@@ -67,7 +67,7 @@ tag_by_product = azure_nextgen.apimanagement.TagByProduct("tagByProduct",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const tagByProduct = new azure_nextgen.apimanagement.TagByProduct("tagByProduct", {
+const tagByProduct = new azure_nextgen.apimanagement.latest.TagByProduct("tagByProduct", {
     productId: "5931a75ae4bbd512a88c680b",
     resourceGroupName: "rg1",
     serviceName: "apimService1",

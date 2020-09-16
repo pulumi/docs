@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var configurationProfileAssignment = new AzureNextGen.Compute.ConfigurationProfileAssignment("configurationProfileAssignment", new AzureNextGen.Compute.ConfigurationProfileAssignmentArgs
+        var configurationProfileAssignment = new AzureNextGen.Compute.V20200630Preview.ConfigurationProfileAssignment("configurationProfileAssignment", new AzureNextGen.Compute.V20200630Preview.ConfigurationProfileAssignmentArgs
         {
             ConfigurationProfileAssignmentName = "default",
             ResourceGroupName = "myResourceGroupName",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-configuration_profile_assignment = azure_nextgen.compute.ConfigurationProfileAssignment("configurationProfileAssignment",
+configuration_profile_assignment = azure_nextgen.compute.v20200630preview.ConfigurationProfileAssignment("configurationProfileAssignment",
     configuration_profile_assignment_name="default",
     resource_group_name="myResourceGroupName",
     vm_name="myVMName")
@@ -65,7 +65,7 @@ configuration_profile_assignment = azure_nextgen.compute.ConfigurationProfileAss
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const configurationProfileAssignment = new azure_nextgen.compute.ConfigurationProfileAssignment("configurationProfileAssignment", {
+const configurationProfileAssignment = new azure_nextgen.compute.v20200630preview.ConfigurationProfileAssignment("configurationProfileAssignment", {
     configurationProfileAssignmentName: "default",
     resourceGroupName: "myResourceGroupName",
     vmName: "myVMName",

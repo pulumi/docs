@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.Datashare.DataSet("dataSet", new AzureNextGen.Datashare.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.DataSet("dataSet",
+data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="Blob",
@@ -69,7 +69,7 @@ data_set = azure_nextgen.datashare.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "Blob",
@@ -91,7 +91,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.Datashare.DataSet("dataSet", new AzureNextGen.Datashare.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -117,7 +117,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.DataSet("dataSet",
+data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="KustoCluster",
@@ -134,7 +134,7 @@ data_set = azure_nextgen.datashare.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "KustoCluster",
@@ -156,7 +156,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.Datashare.DataSet("dataSet", new AzureNextGen.Datashare.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -182,7 +182,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.DataSet("dataSet",
+data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="KustoDatabase",
@@ -199,7 +199,7 @@ data_set = azure_nextgen.datashare.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "KustoDatabase",
@@ -221,7 +221,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.Datashare.DataSet("dataSet", new AzureNextGen.Datashare.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -247,7 +247,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.DataSet("dataSet",
+data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="SqlDBTable",
@@ -264,7 +264,7 @@ data_set = azure_nextgen.datashare.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "SqlDBTable",
@@ -286,7 +286,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var dataSet = new AzureNextGen.Datashare.DataSet("dataSet", new AzureNextGen.Datashare.DataSetArgs
+        var dataSet = new AzureNextGen.DataShare.Latest.DataSet("dataSet", new AzureNextGen.DataShare.Latest.DataSetArgs
         {
             AccountName = "Account1",
             DataSetName = "Dataset1",
@@ -312,7 +312,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-data_set = azure_nextgen.datashare.DataSet("dataSet",
+data_set = azure_nextgen.datashare.latest.DataSet("dataSet",
     account_name="Account1",
     data_set_name="Dataset1",
     kind="SqlDWTable",
@@ -329,7 +329,7 @@ data_set = azure_nextgen.datashare.DataSet("dataSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const dataSet = new azure_nextgen.datashare.DataSet("dataSet", {
+const dataSet = new azure_nextgen.datashare.latest.DataSet("dataSet", {
     accountName: "Account1",
     dataSetName: "Dataset1",
     kind: "SqlDWTable",

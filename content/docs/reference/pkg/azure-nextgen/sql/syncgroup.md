@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncGroup = new AzureNextGen.Sql.SyncGroup("syncGroup", new AzureNextGen.Sql.SyncGroupArgs
+        var syncGroup = new AzureNextGen.Sql.V20190601Preview.SyncGroup("syncGroup", new AzureNextGen.Sql.V20190601Preview.SyncGroupArgs
         {
             ConflictResolutionPolicy = "HubWin",
             DatabaseName = "syncgroupcrud-4328",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_group = azure_nextgen.sql.SyncGroup("syncGroup",
+sync_group = azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup",
     conflict_resolution_policy="HubWin",
     database_name="syncgroupcrud-4328",
     hub_database_user_name="hubUser",
@@ -77,7 +77,7 @@ sync_group = azure_nextgen.sql.SyncGroup("syncGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const syncGroup = new azure_nextgen.sql.SyncGroup("syncGroup", {
+const syncGroup = new azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup", {
     conflictResolutionPolicy: "HubWin",
     databaseName: "syncgroupcrud-4328",
     hubDatabaseUserName: "hubUser",
@@ -103,7 +103,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var syncGroup = new AzureNextGen.Sql.SyncGroup("syncGroup", new AzureNextGen.Sql.SyncGroupArgs
+        var syncGroup = new AzureNextGen.Sql.V20190601Preview.SyncGroup("syncGroup", new AzureNextGen.Sql.V20190601Preview.SyncGroupArgs
         {
             ConflictResolutionPolicy = "HubWin",
             DatabaseName = "syncgroupcrud-4328",
@@ -133,7 +133,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sync_group = azure_nextgen.sql.SyncGroup("syncGroup",
+sync_group = azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup",
     conflict_resolution_policy="HubWin",
     database_name="syncgroupcrud-4328",
     hub_database_user_name="hubUser",
@@ -154,7 +154,7 @@ sync_group = azure_nextgen.sql.SyncGroup("syncGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const syncGroup = new azure_nextgen.sql.SyncGroup("syncGroup", {
+const syncGroup = new azure_nextgen.sql.v20190601preview.SyncGroup("syncGroup", {
     conflictResolutionPolicy: "HubWin",
     databaseName: "syncgroupcrud-4328",
     hubDatabaseUserName: "hubUser",

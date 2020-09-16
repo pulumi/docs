@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var actionRuleByName = new AzureNextGen.Alertsmanagement.ActionRuleByName("actionRuleByName", new AzureNextGen.Alertsmanagement.ActionRuleByNameArgs
+        var actionRuleByName = new AzureNextGen.AlertsManagement.V20190505Preview.ActionRuleByName("actionRuleByName", new AzureNextGen.AlertsManagement.V20190505Preview.ActionRuleByNameArgs
         {
             ActionRuleName = "DailySuppression",
             Location = "Global",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-action_rule_by_name = azure_nextgen.alertsmanagement.ActionRuleByName("actionRuleByName",
+action_rule_by_name = azure_nextgen.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName",
     action_rule_name="DailySuppression",
     location="Global",
     resource_group_name="alertscorrelationrg",
@@ -67,7 +67,7 @@ action_rule_by_name = azure_nextgen.alertsmanagement.ActionRuleByName("actionRul
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const actionRuleByName = new azure_nextgen.alertsmanagement.ActionRuleByName("actionRuleByName", {
+const actionRuleByName = new azure_nextgen.alertsmanagement.v20190505preview.ActionRuleByName("actionRuleByName", {
     actionRuleName: "DailySuppression",
     location: "Global",
     resourceGroupName: "alertscorrelationrg",

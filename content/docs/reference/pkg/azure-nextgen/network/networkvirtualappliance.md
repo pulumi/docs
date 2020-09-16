@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var networkVirtualAppliance = new AzureNextGen.Network.NetworkVirtualAppliance("networkVirtualAppliance", new AzureNextGen.Network.NetworkVirtualApplianceArgs
+        var networkVirtualAppliance = new AzureNextGen.Network.Latest.NetworkVirtualAppliance("networkVirtualAppliance", new AzureNextGen.Network.Latest.NetworkVirtualApplianceArgs
         {
             BootStrapConfigurationBlobs = 
             {
@@ -36,13 +36,13 @@ class MyStack : Stack
             {
                 "https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig",
             },
-            Identity = new AzureNextGen.Network.Inputs.ManagedServiceIdentityArgs
+            Identity = new AzureNextGen.Network.Latest.Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
             },
             Location = "West US",
             NetworkVirtualApplianceName = "nva",
-            NvaSku = new AzureNextGen.Network.Inputs.VirtualApplianceSkuPropertiesArgs
+            NvaSku = new AzureNextGen.Network.Latest.Inputs.VirtualApplianceSkuPropertiesArgs
             {
                 BundledScaleUnit = "1",
                 MarketPlaceVersion = "12.1",
@@ -54,7 +54,7 @@ class MyStack : Stack
                 { "key1", "value1" },
             },
             VirtualApplianceAsn = 10000,
-            VirtualHub = new AzureNextGen.Network.Inputs.SubResourceArgs
+            VirtualHub = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
             },
@@ -77,7 +77,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network_virtual_appliance = azure_nextgen.network.NetworkVirtualAppliance("networkVirtualAppliance",
+network_virtual_appliance = azure_nextgen.network.latest.NetworkVirtualAppliance("networkVirtualAppliance",
     boot_strap_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
     cloud_init_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
     identity={
@@ -109,7 +109,7 @@ network_virtual_appliance = azure_nextgen.network.NetworkVirtualAppliance("netwo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const networkVirtualAppliance = new azure_nextgen.network.NetworkVirtualAppliance("networkVirtualAppliance", {
+const networkVirtualAppliance = new azure_nextgen.network.latest.NetworkVirtualAppliance("networkVirtualAppliance", {
     bootStrapConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig"],
     cloudInitConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
     identity: {

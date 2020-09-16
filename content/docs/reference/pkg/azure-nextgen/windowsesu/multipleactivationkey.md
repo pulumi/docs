@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var multipleActivationKey = new AzureNextGen.Windowsesu.MultipleActivationKey("multipleActivationKey", new AzureNextGen.Windowsesu.MultipleActivationKeyArgs
+        var multipleActivationKey = new AzureNextGen.WindowsESU.V20190916Preview.MultipleActivationKey("multipleActivationKey", new AzureNextGen.WindowsESU.V20190916Preview.MultipleActivationKeyArgs
         {
             AgreementNumber = "1a2b45ag",
             InstalledServerNumber = 100,
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-multiple_activation_key = azure_nextgen.windowsesu.MultipleActivationKey("multipleActivationKey",
+multiple_activation_key = azure_nextgen.windowsesu.v20190916preview.MultipleActivationKey("multipleActivationKey",
     agreement_number="1a2b45ag",
     installed_server_number=100,
     is_eligible=True,
@@ -75,7 +75,7 @@ multiple_activation_key = azure_nextgen.windowsesu.MultipleActivationKey("multip
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const multipleActivationKey = new azure_nextgen.windowsesu.MultipleActivationKey("multipleActivationKey", {
+const multipleActivationKey = new azure_nextgen.windowsesu.v20190916preview.MultipleActivationKey("multipleActivationKey", {
     agreementNumber: "1a2b45ag",
     installedServerNumber: 100,
     isEligible: true,

@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var databaseAccountSqlDatabase = new AzureNextGen.Documentdb.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase", new AzureNextGen.Documentdb.DatabaseAccountSqlDatabaseArgs
+        var databaseAccountSqlDatabase = new AzureNextGen.DocumentDB.Latest.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase", new AzureNextGen.DocumentDB.Latest.DatabaseAccountSqlDatabaseArgs
         {
             AccountName = "ddb1",
             DatabaseName = "databaseName",
             Options = ,
-            Resource = new AzureNextGen.Documentdb.Inputs.SqlDatabaseResourceArgs
+            Resource = new AzureNextGen.DocumentDB.Latest.Inputs.SqlDatabaseResourceArgs
             {
                 Id = "databaseName",
             },
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-database_account_sql_database = azure_nextgen.documentdb.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase",
+database_account_sql_database = azure_nextgen.documentdb.latest.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase",
     account_name="ddb1",
     database_name="databaseName",
     options={},
@@ -74,7 +74,7 @@ database_account_sql_database = azure_nextgen.documentdb.DatabaseAccountSqlDatab
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const databaseAccountSqlDatabase = new azure_nextgen.documentdb.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase", {
+const databaseAccountSqlDatabase = new azure_nextgen.documentdb.latest.DatabaseAccountSqlDatabase("databaseAccountSqlDatabase", {
     accountName: "ddb1",
     databaseName: "databaseName",
     options: {},

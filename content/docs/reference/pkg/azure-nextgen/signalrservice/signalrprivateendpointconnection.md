@@ -26,14 +26,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var signalRPrivateEndpointConnection = new AzureNextGen.Signalrservice.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", new AzureNextGen.Signalrservice.SignalRPrivateEndpointConnectionArgs
+        var signalRPrivateEndpointConnection = new AzureNextGen.SignalRService.Latest.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", new AzureNextGen.SignalRService.Latest.SignalRPrivateEndpointConnectionArgs
         {
-            PrivateEndpoint = new AzureNextGen.Signalrservice.Inputs.PrivateEndpointArgs
+            PrivateEndpoint = new AzureNextGen.SignalRService.Latest.Inputs.PrivateEndpointArgs
             {
                 Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
             },
             PrivateEndpointConnectionName = "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-            PrivateLinkServiceConnectionState = new AzureNextGen.Signalrservice.Inputs.PrivateLinkServiceConnectionStateArgs
+            PrivateLinkServiceConnectionState = new AzureNextGen.SignalRService.Latest.Inputs.PrivateLinkServiceConnectionStateArgs
             {
                 ActionsRequired = "None",
                 Status = "Approved",
@@ -59,7 +59,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-signal_r_private_endpoint_connection = azure_nextgen.signalrservice.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection",
+signal_r_private_endpoint_connection = azure_nextgen.signalrservice.latest.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection",
     private_endpoint={
         "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
     },
@@ -81,7 +81,7 @@ signal_r_private_endpoint_connection = azure_nextgen.signalrservice.SignalRPriva
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const signalRPrivateEndpointConnection = new azure_nextgen.signalrservice.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", {
+const signalRPrivateEndpointConnection = new azure_nextgen.signalrservice.latest.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", {
     privateEndpoint: {
         id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
     },

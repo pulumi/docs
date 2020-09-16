@@ -26,17 +26,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Image("image", new AzureNextGen.Compute.ImageArgs
+        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
                 {
                     BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
-                    DiskEncryptionSet = new AzureNextGen.Compute.Inputs.DiskEncryptionSetParametersArgs
+                    DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                     },
@@ -63,7 +63,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.Image("image",
+image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
@@ -88,7 +88,7 @@ image = azure_nextgen.compute.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const image = new azure_nextgen.compute.Image("image", {
+const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -118,14 +118,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Image("image", new AzureNextGen.Compute.ImageArgs
+        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
                 {
                     BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
                     OsState = "Generalized",
@@ -152,7 +152,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.Image("image",
+image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
@@ -175,7 +175,7 @@ image = azure_nextgen.compute.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const image = new azure_nextgen.compute.Image("image", {
+const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -203,20 +203,20 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Image("image", new AzureNextGen.Compute.ImageArgs
+        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
                 {
-                    DiskEncryptionSet = new AzureNextGen.Compute.Inputs.DiskEncryptionSetParametersArgs
+                    DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                     },
-                    ManagedDisk = new AzureNextGen.Compute.Inputs.SubResourceArgs
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
                     },
@@ -243,7 +243,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.Image("image",
+image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
@@ -270,7 +270,7 @@ image = azure_nextgen.compute.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const image = new azure_nextgen.compute.Image("image", {
+const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -302,16 +302,16 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Image("image", new AzureNextGen.Compute.ImageArgs
+        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
                 {
-                    ManagedDisk = new AzureNextGen.Compute.Inputs.SubResourceArgs
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
                     },
@@ -339,7 +339,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.Image("image",
+image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
@@ -364,7 +364,7 @@ image = azure_nextgen.compute.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const image = new azure_nextgen.compute.Image("image", {
+const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -394,22 +394,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Image("image", new AzureNextGen.Compute.ImageArgs
+        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
                 {
-                    DiskEncryptionSet = new AzureNextGen.Compute.Inputs.DiskEncryptionSetParametersArgs
+                    DiskEncryptionSet = new AzureNextGen.Compute.Latest.Inputs.DiskEncryptionSetParametersArgs
                     {
                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
                     },
                     OsState = "Generalized",
                     OsType = "Linux",
-                    Snapshot = new AzureNextGen.Compute.Inputs.SubResourceArgs
+                    Snapshot = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
                     },
@@ -434,7 +434,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.Image("image",
+image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
@@ -461,7 +461,7 @@ image = azure_nextgen.compute.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const image = new azure_nextgen.compute.Image("image", {
+const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -493,18 +493,18 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Image("image", new AzureNextGen.Compute.ImageArgs
+        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
             {
-                OsDisk = new AzureNextGen.Compute.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
                 {
                     OsState = "Generalized",
                     OsType = "Linux",
-                    Snapshot = new AzureNextGen.Compute.Inputs.SubResourceArgs
+                    Snapshot = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
                     },
@@ -530,7 +530,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.Image("image",
+image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
@@ -555,7 +555,7 @@ image = azure_nextgen.compute.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const image = new azure_nextgen.compute.Image("image", {
+const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -585,12 +585,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Image("image", new AzureNextGen.Compute.ImageArgs
+        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            SourceVirtualMachine = new AzureNextGen.Compute.Inputs.SubResourceArgs
+            SourceVirtualMachine = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
             },
@@ -613,7 +613,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.Image("image",
+image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
@@ -631,7 +631,7 @@ image = azure_nextgen.compute.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const image = new azure_nextgen.compute.Image("image", {
+const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -654,22 +654,22 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Image("image", new AzureNextGen.Compute.ImageArgs
+        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
             {
                 DataDisks = 
                 {
-                    new AzureNextGen.Compute.Inputs.ImageDataDiskArgs
+                    new AzureNextGen.Compute.Latest.Inputs.ImageDataDiskArgs
                     {
                         BlobUri = "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
                         Lun = 1,
                     },
                 },
-                OsDisk = new AzureNextGen.Compute.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
                 {
                     BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
                     OsState = "Generalized",
@@ -696,7 +696,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.Image("image",
+image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
@@ -723,7 +723,7 @@ image = azure_nextgen.compute.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const image = new azure_nextgen.compute.Image("image", {
+const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -755,27 +755,27 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Image("image", new AzureNextGen.Compute.ImageArgs
+        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
             {
                 DataDisks = 
                 {
-                    new AzureNextGen.Compute.Inputs.ImageDataDiskArgs
+                    new AzureNextGen.Compute.Latest.Inputs.ImageDataDiskArgs
                     {
                         Lun = 1,
-                        ManagedDisk = new AzureNextGen.Compute.Inputs.SubResourceArgs
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
                         {
                             Id = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
                         },
                     },
                 },
-                OsDisk = new AzureNextGen.Compute.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
                 {
-                    ManagedDisk = new AzureNextGen.Compute.Inputs.SubResourceArgs
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
                     },
@@ -803,7 +803,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.Image("image",
+image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
@@ -834,7 +834,7 @@ image = azure_nextgen.compute.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const image = new azure_nextgen.compute.Image("image", {
+const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",
@@ -870,29 +870,29 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var image = new AzureNextGen.Compute.Image("image", new AzureNextGen.Compute.ImageArgs
+        var image = new AzureNextGen.Compute.Latest.Image("image", new AzureNextGen.Compute.Latest.ImageArgs
         {
             ImageName = "myImage",
             Location = "West US",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Inputs.ImageStorageProfileArgs
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.ImageStorageProfileArgs
             {
                 DataDisks = 
                 {
-                    new AzureNextGen.Compute.Inputs.ImageDataDiskArgs
+                    new AzureNextGen.Compute.Latest.Inputs.ImageDataDiskArgs
                     {
                         Lun = 1,
-                        Snapshot = new AzureNextGen.Compute.Inputs.SubResourceArgs
+                        Snapshot = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
                         {
                             Id = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
                         },
                     },
                 },
-                OsDisk = new AzureNextGen.Compute.Inputs.ImageOSDiskArgs
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.ImageOSDiskArgs
                 {
                     OsState = "Generalized",
                     OsType = "Linux",
-                    Snapshot = new AzureNextGen.Compute.Inputs.SubResourceArgs
+                    Snapshot = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
                     {
                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
                     },
@@ -918,7 +918,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-image = azure_nextgen.compute.Image("image",
+image = azure_nextgen.compute.latest.Image("image",
     image_name="myImage",
     location="West US",
     resource_group_name="myResourceGroup",
@@ -949,7 +949,7 @@ image = azure_nextgen.compute.Image("image",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const image = new azure_nextgen.compute.Image("image", {
+const image = new azure_nextgen.compute.latest.Image("image", {
     imageName: "myImage",
     location: "West US",
     resourceGroupName: "myResourceGroup",

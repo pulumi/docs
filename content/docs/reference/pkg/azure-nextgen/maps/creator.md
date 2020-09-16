@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var creator = new AzureNextGen.Maps.Creator("creator", new AzureNextGen.Maps.CreatorArgs
+        var creator = new AzureNextGen.Maps.V20200201Preview.Creator("creator", new AzureNextGen.Maps.V20200201Preview.CreatorArgs
         {
             AccountName = "myMapsAccount",
             CreatorName = "myCreator",
@@ -55,7 +55,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-creator = azure_nextgen.maps.Creator("creator",
+creator = azure_nextgen.maps.v20200201preview.Creator("creator",
     account_name="myMapsAccount",
     creator_name="myCreator",
     location="unitedstates",
@@ -74,7 +74,7 @@ creator = azure_nextgen.maps.Creator("creator",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const creator = new azure_nextgen.maps.Creator("creator", {
+const creator = new azure_nextgen.maps.v20200201preview.Creator("creator", {
     accountName: "myMapsAccount",
     creatorName: "myCreator",
     location: "unitedstates",

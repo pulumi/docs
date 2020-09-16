@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var device = new AzureNextGen.Databoxedge.Device("device", new AzureNextGen.Databoxedge.DeviceArgs
+        var device = new AzureNextGen.DataBoxEdge.Latest.Device("device", new AzureNextGen.DataBoxEdge.Latest.DeviceArgs
         {
             DeviceName = "testedgedevice",
             Location = "eastus",
             ResourceGroupName = "GroupForEdgeAutomation",
-            Sku = new AzureNextGen.Databoxedge.Inputs.SkuArgs
+            Sku = new AzureNextGen.DataBoxEdge.Latest.Inputs.SkuArgs
             {
                 Name = "Edge",
                 Tier = "Standard",
@@ -56,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-device = azure_nextgen.databoxedge.Device("device",
+device = azure_nextgen.databoxedge.latest.Device("device",
     device_name="testedgedevice",
     location="eastus",
     resource_group_name="GroupForEdgeAutomation",
@@ -76,7 +76,7 @@ device = azure_nextgen.databoxedge.Device("device",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const device = new azure_nextgen.databoxedge.Device("device", {
+const device = new azure_nextgen.databoxedge.latest.Device("device", {
     deviceName: "testedgedevice",
     location: "eastus",
     resourceGroupName: "GroupForEdgeAutomation",

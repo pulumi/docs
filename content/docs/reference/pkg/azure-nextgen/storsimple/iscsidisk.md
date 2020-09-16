@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iscsiDisk = new AzureNextGen.Storsimple.IscsiDisk("iscsiDisk", new AzureNextGen.Storsimple.IscsiDiskArgs
+        var iscsiDisk = new AzureNextGen.StorSimple.Latest.IscsiDisk("iscsiDisk", new AzureNextGen.StorSimple.Latest.IscsiDiskArgs
         {
             AccessControlRecords = {},
             DataPolicy = "Tiered",
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iscsi_disk = azure_nextgen.storsimple.IscsiDisk("iscsiDisk",
+iscsi_disk = azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk",
     access_control_records=[],
     data_policy="Tiered",
     description="Demo IscsiDisk for SDK Test Tiered",
@@ -81,7 +81,7 @@ iscsi_disk = azure_nextgen.storsimple.IscsiDisk("iscsiDisk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const iscsiDisk = new azure_nextgen.storsimple.IscsiDisk("iscsiDisk", {
+const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
     accessControlRecords: [],
     dataPolicy: "Tiered",
     description: "Demo IscsiDisk for SDK Test Tiered",

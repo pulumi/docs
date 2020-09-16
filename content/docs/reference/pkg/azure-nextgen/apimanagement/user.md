@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var user = new AzureNextGen.Apimanagement.User("user", new AzureNextGen.Apimanagement.UserArgs
+        var user = new AzureNextGen.ApiManagement.Latest.User("user", new AzureNextGen.ApiManagement.Latest.UserArgs
         {
             Confirmation = "signup",
             Email = "foobar@outlook.com",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-user = azure_nextgen.apimanagement.User("user",
+user = azure_nextgen.apimanagement.latest.User("user",
     confirmation="signup",
     email="foobar@outlook.com",
     first_name="foo",
@@ -73,7 +73,7 @@ user = azure_nextgen.apimanagement.User("user",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const user = new azure_nextgen.apimanagement.User("user", {
+const user = new azure_nextgen.apimanagement.latest.User("user", {
     confirmation: "signup",
     email: "foobar@outlook.com",
     firstName: "foo",

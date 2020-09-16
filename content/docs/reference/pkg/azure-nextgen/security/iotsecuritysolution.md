@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotSecuritySolution = new AzureNextGen.Security.IotSecuritySolution("iotSecuritySolution", new AzureNextGen.Security.IotSecuritySolutionArgs
+        var iotSecuritySolution = new AzureNextGen.Security.Latest.IotSecuritySolution("iotSecuritySolution", new AzureNextGen.Security.Latest.IotSecuritySolutionArgs
         {
             DisabledDataSources = {},
             DisplayName = "Solution Default",
@@ -38,12 +38,12 @@ class MyStack : Stack
             Location = "East Us",
             RecommendationsConfiguration = 
             {
-                new AzureNextGen.Security.Inputs.RecommendationConfigurationPropertiesArgs
+                new AzureNextGen.Security.Latest.Inputs.RecommendationConfigurationPropertiesArgs
                 {
                     RecommendationType = "IoT_OpenPorts",
                     Status = "Disabled",
                 },
-                new AzureNextGen.Security.Inputs.RecommendationConfigurationPropertiesArgs
+                new AzureNextGen.Security.Latest.Inputs.RecommendationConfigurationPropertiesArgs
                 {
                     RecommendationType = "IoT_SharedCredentials",
                     Status = "Disabled",
@@ -54,7 +54,7 @@ class MyStack : Stack
             Status = "Enabled",
             Tags = ,
             UnmaskedIpLoggingStatus = "Enabled",
-            UserDefinedResources = new AzureNextGen.Security.Inputs.UserDefinedResourcesPropertiesArgs
+            UserDefinedResources = new AzureNextGen.Security.Latest.Inputs.UserDefinedResourcesPropertiesArgs
             {
                 Query = "where type != \"microsoft.devices/iothubs\" | where name contains \"iot\"",
                 QuerySubscriptions = 
@@ -82,7 +82,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-iot_security_solution = azure_nextgen.security.IotSecuritySolution("iotSecuritySolution",
+iot_security_solution = azure_nextgen.security.latest.IotSecuritySolution("iotSecuritySolution",
     disabled_data_sources=[],
     display_name="Solution Default",
     export=[],
@@ -119,7 +119,7 @@ iot_security_solution = azure_nextgen.security.IotSecuritySolution("iotSecurityS
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const iotSecuritySolution = new azure_nextgen.security.IotSecuritySolution("iotSecuritySolution", {
+const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolution("iotSecuritySolution", {
     disabledDataSources: [],
     displayName: "Solution Default",
     "export": [],

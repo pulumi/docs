@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventSubscription = new AzureNextGen.Eventgrid.EventSubscription("eventSubscription", new AzureNextGen.Eventgrid.EventSubscriptionArgs
+        var eventSubscription = new AzureNextGen.EventGrid.Latest.EventSubscription("eventSubscription", new AzureNextGen.EventGrid.Latest.EventSubscriptionArgs
         {
-            DeadLetterDestination = new AzureNextGen.Eventgrid.Inputs.StorageBlobDeadLetterDestinationArgs
+            DeadLetterDestination = new AzureNextGen.EventGrid.Latest.Inputs.StorageBlobDeadLetterDestinationArgs
             {
                 EndpointType = "StorageBlob",
             },
@@ -41,7 +41,7 @@ class MyStack : Stack
                 } },
             },
             EventSubscriptionName = "examplesubscription1",
-            Filter = new AzureNextGen.Eventgrid.Inputs.EventSubscriptionFilterArgs
+            Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
             {
                 IsSubjectCaseSensitive = false,
                 SubjectBeginsWith = "ExamplePrefix",
@@ -67,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscription",
+event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     dead_letter_destination={
         "endpointType": "StorageBlob",
     },
@@ -95,7 +95,7 @@ event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventSubscription = new azure_nextgen.eventgrid.EventSubscription("eventSubscription", {
+const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     deadLetterDestination: {
         endpointType: "StorageBlob",
     },
@@ -128,9 +128,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventSubscription = new AzureNextGen.Eventgrid.EventSubscription("eventSubscription", new AzureNextGen.Eventgrid.EventSubscriptionArgs
+        var eventSubscription = new AzureNextGen.EventGrid.Latest.EventSubscription("eventSubscription", new AzureNextGen.EventGrid.Latest.EventSubscriptionArgs
         {
-            DeadLetterDestination = new AzureNextGen.Eventgrid.Inputs.StorageBlobDeadLetterDestinationArgs
+            DeadLetterDestination = new AzureNextGen.EventGrid.Latest.Inputs.StorageBlobDeadLetterDestinationArgs
             {
                 EndpointType = "StorageBlob",
             },
@@ -143,7 +143,7 @@ class MyStack : Stack
                 } },
             },
             EventSubscriptionName = "examplesubscription1",
-            Filter = new AzureNextGen.Eventgrid.Inputs.EventSubscriptionFilterArgs
+            Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
             {
                 IsSubjectCaseSensitive = false,
                 SubjectBeginsWith = "ExamplePrefix",
@@ -169,7 +169,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscription",
+event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     dead_letter_destination={
         "endpointType": "StorageBlob",
     },
@@ -197,7 +197,7 @@ event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventSubscription = new azure_nextgen.eventgrid.EventSubscription("eventSubscription", {
+const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     deadLetterDestination: {
         endpointType: "StorageBlob",
     },
@@ -230,9 +230,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventSubscription = new AzureNextGen.Eventgrid.EventSubscription("eventSubscription", new AzureNextGen.Eventgrid.EventSubscriptionArgs
+        var eventSubscription = new AzureNextGen.EventGrid.Latest.EventSubscription("eventSubscription", new AzureNextGen.EventGrid.Latest.EventSubscriptionArgs
         {
-            DeadLetterDestination = new AzureNextGen.Eventgrid.Inputs.StorageBlobDeadLetterDestinationArgs
+            DeadLetterDestination = new AzureNextGen.EventGrid.Latest.Inputs.StorageBlobDeadLetterDestinationArgs
             {
                 EndpointType = "StorageBlob",
             },
@@ -246,7 +246,7 @@ class MyStack : Stack
                 } },
             },
             EventSubscriptionName = "examplesubscription1",
-            Filter = new AzureNextGen.Eventgrid.Inputs.EventSubscriptionFilterArgs
+            Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
             {
                 IsSubjectCaseSensitive = false,
                 SubjectBeginsWith = "ExamplePrefix",
@@ -272,7 +272,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscription",
+event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     dead_letter_destination={
         "endpointType": "StorageBlob",
     },
@@ -301,7 +301,7 @@ event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventSubscription = new azure_nextgen.eventgrid.EventSubscription("eventSubscription", {
+const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     deadLetterDestination: {
         endpointType: "StorageBlob",
     },
@@ -335,7 +335,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventSubscription = new AzureNextGen.Eventgrid.EventSubscription("eventSubscription", new AzureNextGen.Eventgrid.EventSubscriptionArgs
+        var eventSubscription = new AzureNextGen.EventGrid.Latest.EventSubscription("eventSubscription", new AzureNextGen.EventGrid.Latest.EventSubscriptionArgs
         {
             Destination = 
             {
@@ -346,7 +346,7 @@ class MyStack : Stack
                 } },
             },
             EventSubscriptionName = "examplesubscription1",
-            Filter = new AzureNextGen.Eventgrid.Inputs.EventSubscriptionFilterArgs
+            Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
             {
                 IsSubjectCaseSensitive = false,
                 SubjectBeginsWith = "ExamplePrefix",
@@ -372,7 +372,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscription",
+event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     destination={
         "endpointType": "EventHub",
         "properties": {
@@ -397,7 +397,7 @@ event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventSubscription = new azure_nextgen.eventgrid.EventSubscription("eventSubscription", {
+const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
         endpointType: "EventHub",
         properties: {
@@ -427,7 +427,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventSubscription = new AzureNextGen.Eventgrid.EventSubscription("eventSubscription", new AzureNextGen.Eventgrid.EventSubscriptionArgs
+        var eventSubscription = new AzureNextGen.EventGrid.Latest.EventSubscription("eventSubscription", new AzureNextGen.EventGrid.Latest.EventSubscriptionArgs
         {
             Destination = 
             {
@@ -438,7 +438,7 @@ class MyStack : Stack
                 } },
             },
             EventSubscriptionName = "examplesubscription10",
-            Filter = new AzureNextGen.Eventgrid.Inputs.EventSubscriptionFilterArgs
+            Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
             {
                 IsSubjectCaseSensitive = false,
                 SubjectBeginsWith = "ExamplePrefix",
@@ -464,7 +464,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscription",
+event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     destination={
         "endpointType": "WebHook",
         "properties": {
@@ -489,7 +489,7 @@ event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventSubscription = new azure_nextgen.eventgrid.EventSubscription("eventSubscription", {
+const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
         endpointType: "WebHook",
         properties: {
@@ -519,7 +519,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventSubscription = new AzureNextGen.Eventgrid.EventSubscription("eventSubscription", new AzureNextGen.Eventgrid.EventSubscriptionArgs
+        var eventSubscription = new AzureNextGen.EventGrid.Latest.EventSubscription("eventSubscription", new AzureNextGen.EventGrid.Latest.EventSubscriptionArgs
         {
             Destination = 
             {
@@ -530,7 +530,7 @@ class MyStack : Stack
                 } },
             },
             EventSubscriptionName = "examplesubscription2",
-            Filter = new AzureNextGen.Eventgrid.Inputs.EventSubscriptionFilterArgs
+            Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
             {
                 IsSubjectCaseSensitive = false,
                 SubjectBeginsWith = "ExamplePrefix",
@@ -556,7 +556,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscription",
+event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     destination={
         "endpointType": "WebHook",
         "properties": {
@@ -581,7 +581,7 @@ event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventSubscription = new azure_nextgen.eventgrid.EventSubscription("eventSubscription", {
+const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
         endpointType: "WebHook",
         properties: {
@@ -611,7 +611,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var eventSubscription = new AzureNextGen.Eventgrid.EventSubscription("eventSubscription", new AzureNextGen.Eventgrid.EventSubscriptionArgs
+        var eventSubscription = new AzureNextGen.EventGrid.Latest.EventSubscription("eventSubscription", new AzureNextGen.EventGrid.Latest.EventSubscriptionArgs
         {
             Destination = 
             {
@@ -622,7 +622,7 @@ class MyStack : Stack
                 } },
             },
             EventSubscriptionName = "examplesubscription3",
-            Filter = new AzureNextGen.Eventgrid.Inputs.EventSubscriptionFilterArgs
+            Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
             {
                 IsSubjectCaseSensitive = false,
             },
@@ -646,7 +646,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscription",
+event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     destination={
         "endpointType": "WebHook",
         "properties": {
@@ -669,7 +669,7 @@ event_subscription = azure_nextgen.eventgrid.EventSubscription("eventSubscriptio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const eventSubscription = new azure_nextgen.eventgrid.EventSubscription("eventSubscription", {
+const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
         endpointType: "WebHook",
         properties: {

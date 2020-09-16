@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var serverKey = new AzureNextGen.Dbformysql.ServerKey("serverKey", new AzureNextGen.Dbformysql.ServerKeyArgs
+        var serverKey = new AzureNextGen.DBforMySQL.Latest.ServerKey("serverKey", new AzureNextGen.DBforMySQL.Latest.ServerKeyArgs
         {
             KeyName = "someVault_someKey_01234567890123456789012345678901",
             ResourceGroupName = "testrg",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-server_key = azure_nextgen.dbformysql.ServerKey("serverKey",
+server_key = azure_nextgen.dbformysql.latest.ServerKey("serverKey",
     key_name="someVault_someKey_01234567890123456789012345678901",
     resource_group_name="testrg",
     server_key_type="AzureKeyVault",
@@ -69,7 +69,7 @@ server_key = azure_nextgen.dbformysql.ServerKey("serverKey",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const serverKey = new azure_nextgen.dbformysql.ServerKey("serverKey", {
+const serverKey = new azure_nextgen.dbformysql.latest.ServerKey("serverKey", {
     keyName: "someVault_someKey_01234567890123456789012345678901",
     resourceGroupName: "testrg",
     serverKeyType: "AzureKeyVault",

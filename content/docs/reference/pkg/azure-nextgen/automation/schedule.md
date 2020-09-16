@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var schedule = new AzureNextGen.Automation.Schedule("schedule", new AzureNextGen.Automation.ScheduleArgs
+        var schedule = new AzureNextGen.Automation.Latest.Schedule("schedule", new AzureNextGen.Automation.Latest.ScheduleArgs
         {
             AdvancedSchedule = ,
             AutomationAccountName = "myAutomationAccount33",
@@ -57,7 +57,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-schedule = azure_nextgen.automation.Schedule("schedule",
+schedule = azure_nextgen.automation.latest.Schedule("schedule",
     advanced_schedule={},
     automation_account_name="myAutomationAccount33",
     description="my description of schedule goes here",
@@ -79,7 +79,7 @@ schedule = azure_nextgen.automation.Schedule("schedule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const schedule = new azure_nextgen.automation.Schedule("schedule", {
+const schedule = new azure_nextgen.automation.latest.Schedule("schedule", {
     advancedSchedule: {},
     automationAccountName: "myAutomationAccount33",
     description: "my description of schedule goes here",

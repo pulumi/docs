@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkScopedResource = new AzureNextGen.Insights.PrivateLinkScopedResource("privateLinkScopedResource", new AzureNextGen.Insights.PrivateLinkScopedResourceArgs
+        var privateLinkScopedResource = new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopedResource("privateLinkScopedResource", new AzureNextGen.Insights.V20191017Preview.PrivateLinkScopedResourceArgs
         {
             LinkedResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
             Name = "scoped-resource-name",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_scoped_resource = azure_nextgen.insights.PrivateLinkScopedResource("privateLinkScopedResource",
+private_link_scoped_resource = azure_nextgen.insights.v20191017preview.PrivateLinkScopedResource("privateLinkScopedResource",
     linked_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
     name="scoped-resource-name",
     resource_group_name="MyResourceGroup",
@@ -67,7 +67,7 @@ private_link_scoped_resource = azure_nextgen.insights.PrivateLinkScopedResource(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateLinkScopedResource = new azure_nextgen.insights.PrivateLinkScopedResource("privateLinkScopedResource", {
+const privateLinkScopedResource = new azure_nextgen.insights.v20191017preview.PrivateLinkScopedResource("privateLinkScopedResource", {
     linkedResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
     name: "scoped-resource-name",
     resourceGroupName: "MyResourceGroup",

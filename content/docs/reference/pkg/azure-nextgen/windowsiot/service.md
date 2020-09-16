@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var service = new AzureNextGen.Windowsiot.Service("service", new AzureNextGen.Windowsiot.ServiceArgs
+        var service = new AzureNextGen.WindowsIoT.Latest.Service("service", new AzureNextGen.WindowsIoT.Latest.ServiceArgs
         {
             AdminDomainName = "d.e.f",
             BillingDomainName = "a.b.c",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-service = azure_nextgen.windowsiot.Service("service",
+service = azure_nextgen.windowsiot.latest.Service("service",
     admin_domain_name="d.e.f",
     billing_domain_name="a.b.c",
     device_name="service4445",
@@ -71,7 +71,7 @@ service = azure_nextgen.windowsiot.Service("service",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const service = new azure_nextgen.windowsiot.Service("service", {
+const service = new azure_nextgen.windowsiot.latest.Service("service", {
     adminDomainName: "d.e.f",
     billingDomainName: "a.b.c",
     deviceName: "service4445",

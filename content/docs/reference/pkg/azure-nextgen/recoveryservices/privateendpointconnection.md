@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Recoveryservices.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Recoveryservices.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.RecoveryServices.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.RecoveryServices.Latest.PrivateEndpointConnectionArgs
         {
             PrivateEndpointConnectionName = "gaallatestpe2.5704c932-249a-490b-a142-1396838cd3b",
             ResourceGroupName = "gaallaRG",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.recoveryservices.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.recoveryservices.latest.PrivateEndpointConnection("privateEndpointConnection",
     private_endpoint_connection_name="gaallatestpe2.5704c932-249a-490b-a142-1396838cd3b",
     resource_group_name="gaallaRG",
     vault_name="gaallavaultbvtd2msi")
@@ -65,7 +65,7 @@ private_endpoint_connection = azure_nextgen.recoveryservices.PrivateEndpointConn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.recoveryservices.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.recoveryservices.latest.PrivateEndpointConnection("privateEndpointConnection", {
     privateEndpointConnectionName: "gaallatestpe2.5704c932-249a-490b-a142-1396838cd3b",
     resourceGroupName: "gaallaRG",
     vaultName: "gaallavaultbvtd2msi",

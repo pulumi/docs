@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstance = new AzureNextGen.Sql.ManagedInstance("managedInstance", new AzureNextGen.Sql.ManagedInstanceArgs
+        var managedInstance = new AzureNextGen.Sql.V20200202Preview.ManagedInstance("managedInstance", new AzureNextGen.Sql.V20200202Preview.ManagedInstanceArgs
         {
             AdministratorLogin = "dummylogin",
             AdministratorLoginPassword = "Un53cuRE!",
@@ -40,7 +40,7 @@ class MyStack : Stack
             ProxyOverride = "Redirect",
             PublicDataEndpointEnabled = false,
             ResourceGroupName = "testrg",
-            Sku = new AzureNextGen.Sql.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql.V20200202Preview.Inputs.SkuArgs
             {
                 Name = "GP_Gen5",
                 Tier = "GeneralPurpose",
@@ -73,7 +73,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance = azure_nextgen.sql.ManagedInstance("managedInstance",
+managed_instance = azure_nextgen.sql.v20200202preview.ManagedInstance("managedInstance",
     administrator_login="dummylogin",
     administrator_login_password="Un53cuRE!",
     collation="SQL_Latin1_General_CP1_CI_AS",
@@ -109,7 +109,7 @@ managed_instance = azure_nextgen.sql.ManagedInstance("managedInstance",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedInstance = new azure_nextgen.sql.ManagedInstance("managedInstance", {
+const managedInstance = new azure_nextgen.sql.v20200202preview.ManagedInstance("managedInstance", {
     administratorLogin: "dummylogin",
     administratorLoginPassword: "Un53cuRE!",
     collation: "SQL_Latin1_General_CP1_CI_AS",
@@ -150,7 +150,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var managedInstance = new AzureNextGen.Sql.ManagedInstance("managedInstance", new AzureNextGen.Sql.ManagedInstanceArgs
+        var managedInstance = new AzureNextGen.Sql.V20200202Preview.ManagedInstance("managedInstance", new AzureNextGen.Sql.V20200202Preview.ManagedInstanceArgs
         {
             AdministratorLogin = "dummylogin",
             AdministratorLoginPassword = "Un53cuRE!",
@@ -158,7 +158,7 @@ class MyStack : Stack
             Location = "Japan East",
             ManagedInstanceName = "testinstance",
             ResourceGroupName = "testrg",
-            Sku = new AzureNextGen.Sql.Inputs.SkuArgs
+            Sku = new AzureNextGen.Sql.V20200202Preview.Inputs.SkuArgs
             {
                 Name = "GP_Gen4",
                 Tier = "GeneralPurpose",
@@ -185,7 +185,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-managed_instance = azure_nextgen.sql.ManagedInstance("managedInstance",
+managed_instance = azure_nextgen.sql.v20200202preview.ManagedInstance("managedInstance",
     administrator_login="dummylogin",
     administrator_login_password="Un53cuRE!",
     license_type="LicenseIncluded",
@@ -210,7 +210,7 @@ managed_instance = azure_nextgen.sql.ManagedInstance("managedInstance",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const managedInstance = new azure_nextgen.sql.ManagedInstance("managedInstance", {
+const managedInstance = new azure_nextgen.sql.v20200202preview.ManagedInstance("managedInstance", {
     administratorLogin: "dummylogin",
     administratorLoginPassword: "Un53cuRE!",
     licenseType: "LicenseIncluded",

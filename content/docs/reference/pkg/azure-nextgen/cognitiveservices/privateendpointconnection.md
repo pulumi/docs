@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateEndpointConnection = new AzureNextGen.Cognitiveservices.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.Cognitiveservices.PrivateEndpointConnectionArgs
+        var privateEndpointConnection = new AzureNextGen.CognitiveServices.Latest.PrivateEndpointConnection("privateEndpointConnection", new AzureNextGen.CognitiveServices.Latest.PrivateEndpointConnectionArgs
         {
             AccountName = "sto9699",
             PrivateEndpointConnectionName = "{privateEndpointConnectionName}",
@@ -50,7 +50,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_endpoint_connection = azure_nextgen.cognitiveservices.PrivateEndpointConnection("privateEndpointConnection",
+private_endpoint_connection = azure_nextgen.cognitiveservices.latest.PrivateEndpointConnection("privateEndpointConnection",
     account_name="sto9699",
     private_endpoint_connection_name="{privateEndpointConnectionName}",
     resource_group_name="res7687")
@@ -65,7 +65,7 @@ private_endpoint_connection = azure_nextgen.cognitiveservices.PrivateEndpointCon
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateEndpointConnection = new azure_nextgen.cognitiveservices.PrivateEndpointConnection("privateEndpointConnection", {
+const privateEndpointConnection = new azure_nextgen.cognitiveservices.latest.PrivateEndpointConnection("privateEndpointConnection", {
     accountName: "sto9699",
     privateEndpointConnectionName: "{privateEndpointConnectionName}",
     resourceGroupName: "res7687",

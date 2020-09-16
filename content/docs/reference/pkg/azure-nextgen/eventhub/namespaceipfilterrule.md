@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var namespaceIpFilterRule = new AzureNextGen.Eventhub.NamespaceIpFilterRule("namespaceIpFilterRule", new AzureNextGen.Eventhub.NamespaceIpFilterRuleArgs
+        var namespaceIpFilterRule = new AzureNextGen.EventHub.V20180101Preview.NamespaceIpFilterRule("namespaceIpFilterRule", new AzureNextGen.EventHub.V20180101Preview.NamespaceIpFilterRuleArgs
         {
             Action = "Accept",
             FilterName = "sdk-IPFilterRules-7337",
@@ -53,7 +53,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-namespace_ip_filter_rule = azure_nextgen.eventhub.NamespaceIpFilterRule("namespaceIpFilterRule",
+namespace_ip_filter_rule = azure_nextgen.eventhub.v20180101preview.NamespaceIpFilterRule("namespaceIpFilterRule",
     action="Accept",
     filter_name="sdk-IPFilterRules-7337",
     ip_filter_rule_name="sdk-IPFilterRules-7337",
@@ -71,7 +71,7 @@ namespace_ip_filter_rule = azure_nextgen.eventhub.NamespaceIpFilterRule("namespa
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const namespaceIpFilterRule = new azure_nextgen.eventhub.NamespaceIpFilterRule("namespaceIpFilterRule", {
+const namespaceIpFilterRule = new azure_nextgen.eventhub.v20180101preview.NamespaceIpFilterRule("namespaceIpFilterRule", {
     action: "Accept",
     filterName: "sdk-IPFilterRules-7337",
     ipFilterRuleName: "sdk-IPFilterRules-7337",

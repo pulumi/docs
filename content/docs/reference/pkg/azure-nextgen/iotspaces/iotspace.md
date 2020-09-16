@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ioTSpace = new AzureNextGen.Iotspaces.IoTSpace("ioTSpace", new AzureNextGen.Iotspaces.IoTSpaceArgs
+        var ioTSpace = new AzureNextGen.IoTSpaces.V20171001Preview.IoTSpace("ioTSpace", new AzureNextGen.IoTSpaces.V20171001Preview.IoTSpaceArgs
         {
             Location = "string",
             ResourceGroupName = "resRg",
             ResourceName = "myIoTSpacesService",
-            Sku = new AzureNextGen.Iotspaces.Inputs.IoTSpacesSkuInfoArgs
+            Sku = new AzureNextGen.IoTSpaces.V20171001Preview.Inputs.IoTSpacesSkuInfoArgs
             {
                 Name = "F1",
             },
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-io_t_space = azure_nextgen.iotspaces.IoTSpace("ioTSpace",
+io_t_space = azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace",
     location="string",
     resource_group_name="resRg",
     resource_name="myIoTSpacesService",
@@ -72,7 +72,7 @@ io_t_space = azure_nextgen.iotspaces.IoTSpace("ioTSpace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const ioTSpace = new azure_nextgen.iotspaces.IoTSpace("ioTSpace", {
+const ioTSpace = new azure_nextgen.iotspaces.v20171001preview.IoTSpace("ioTSpace", {
     location: "string",
     resourceGroupName: "resRg",
     resourceName: "myIoTSpacesService",

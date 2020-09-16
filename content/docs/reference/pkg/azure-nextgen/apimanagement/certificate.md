@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var certificate = new AzureNextGen.Apimanagement.Certificate("certificate", new AzureNextGen.Apimanagement.CertificateArgs
+        var certificate = new AzureNextGen.ApiManagement.Latest.Certificate("certificate", new AzureNextGen.ApiManagement.Latest.CertificateArgs
         {
             CertificateId = "tempcert",
             Data = "****************Base 64 Encoded Certificate *******************************",
@@ -52,7 +52,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-certificate = azure_nextgen.apimanagement.Certificate("certificate",
+certificate = azure_nextgen.apimanagement.latest.Certificate("certificate",
     certificate_id="tempcert",
     data="****************Base 64 Encoded Certificate *******************************",
     password="****Certificate Password******",
@@ -69,7 +69,7 @@ certificate = azure_nextgen.apimanagement.Certificate("certificate",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const certificate = new azure_nextgen.apimanagement.Certificate("certificate", {
+const certificate = new azure_nextgen.apimanagement.latest.Certificate("certificate", {
     certificateId: "tempcert",
     data: "****************Base 64 Encoded Certificate *******************************",
     password: "****Certificate Password******",

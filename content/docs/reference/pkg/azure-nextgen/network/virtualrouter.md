@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualRouter = new AzureNextGen.Network.VirtualRouter("virtualRouter", new AzureNextGen.Network.VirtualRouterArgs
+        var virtualRouter = new AzureNextGen.Network.Latest.VirtualRouter("virtualRouter", new AzureNextGen.Network.Latest.VirtualRouterArgs
         {
-            HostedGateway = new AzureNextGen.Network.Inputs.SubResourceArgs
+            HostedGateway = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
             },
@@ -58,7 +58,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_router = azure_nextgen.network.VirtualRouter("virtualRouter",
+virtual_router = azure_nextgen.network.latest.VirtualRouter("virtualRouter",
     hosted_gateway={
         "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
     },
@@ -79,7 +79,7 @@ virtual_router = azure_nextgen.network.VirtualRouter("virtualRouter",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualRouter = new azure_nextgen.network.VirtualRouter("virtualRouter", {
+const virtualRouter = new azure_nextgen.network.latest.VirtualRouter("virtualRouter", {
     hostedGateway: {
         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
     },

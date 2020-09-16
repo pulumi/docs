@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualMachineScaleSetVMExtension = new AzureNextGen.Compute.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension", new AzureNextGen.Compute.VirtualMachineScaleSetVMExtensionArgs
+        var virtualMachineScaleSetVMExtension = new AzureNextGen.Compute.Latest.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetVMExtensionArgs
         {
             AutoUpgradeMinorVersion = true,
             InstanceId = "0",
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_machine_scale_set_vm_extension = azure_nextgen.compute.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension",
+virtual_machine_scale_set_vm_extension = azure_nextgen.compute.latest.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension",
     auto_upgrade_minor_version=True,
     instance_id="0",
     location="westus",
@@ -84,7 +84,7 @@ virtual_machine_scale_set_vm_extension = azure_nextgen.compute.VirtualMachineSca
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualMachineScaleSetVMExtension = new azure_nextgen.compute.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension", {
+const virtualMachineScaleSetVMExtension = new azure_nextgen.compute.latest.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension", {
     autoUpgradeMinorVersion: true,
     instanceId: "0",
     location: "westus",

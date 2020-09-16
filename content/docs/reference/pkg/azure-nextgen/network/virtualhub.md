@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualHub = new AzureNextGen.Network.VirtualHub("virtualHub", new AzureNextGen.Network.VirtualHubArgs
+        var virtualHub = new AzureNextGen.Network.Latest.VirtualHub("virtualHub", new AzureNextGen.Network.Latest.VirtualHubArgs
         {
             AddressPrefix = "10.168.0.0/24",
             Location = "West US",
@@ -37,7 +37,7 @@ class MyStack : Stack
                 { "key1", "value1" },
             },
             VirtualHubName = "virtualHub2",
-            VirtualWan = new AzureNextGen.Network.Inputs.SubResourceArgs
+            VirtualWan = new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
             {
                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1",
             },
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_hub = azure_nextgen.network.VirtualHub("virtualHub",
+virtual_hub = azure_nextgen.network.latest.VirtualHub("virtualHub",
     address_prefix="10.168.0.0/24",
     location="West US",
     resource_group_name="rg1",
@@ -83,7 +83,7 @@ virtual_hub = azure_nextgen.network.VirtualHub("virtualHub",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualHub = new azure_nextgen.network.VirtualHub("virtualHub", {
+const virtualHub = new azure_nextgen.network.latest.VirtualHub("virtualHub", {
     addressPrefix: "10.168.0.0/24",
     location: "West US",
     resourceGroupName: "rg1",

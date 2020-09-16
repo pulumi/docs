@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var virtualHubRouteTableV2 = new AzureNextGen.Network.VirtualHubRouteTableV2("virtualHubRouteTableV2", new AzureNextGen.Network.VirtualHubRouteTableV2Args
+        var virtualHubRouteTableV2 = new AzureNextGen.Network.Latest.VirtualHubRouteTableV2("virtualHubRouteTableV2", new AzureNextGen.Network.Latest.VirtualHubRouteTableV2Args
         {
             AttachedConnections = 
             {
@@ -36,7 +36,7 @@ class MyStack : Stack
             RouteTableName = "virtualHubRouteTable1a",
             Routes = 
             {
-                new AzureNextGen.Network.Inputs.VirtualHubRouteV2Args
+                new AzureNextGen.Network.Latest.Inputs.VirtualHubRouteV2Args
                 {
                     DestinationType = "CIDR",
                     Destinations = 
@@ -50,7 +50,7 @@ class MyStack : Stack
                         "10.0.0.68",
                     },
                 },
-                new AzureNextGen.Network.Inputs.VirtualHubRouteV2Args
+                new AzureNextGen.Network.Latest.Inputs.VirtualHubRouteV2Args
                 {
                     DestinationType = "CIDR",
                     Destinations = 
@@ -84,7 +84,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-virtual_hub_route_table_v2 = azure_nextgen.network.VirtualHubRouteTableV2("virtualHubRouteTableV2",
+virtual_hub_route_table_v2 = azure_nextgen.network.latest.VirtualHubRouteTableV2("virtualHubRouteTableV2",
     attached_connections=["All_Vnets"],
     resource_group_name="rg1",
     route_table_name="virtualHubRouteTable1a",
@@ -117,7 +117,7 @@ virtual_hub_route_table_v2 = azure_nextgen.network.VirtualHubRouteTableV2("virtu
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const virtualHubRouteTableV2 = new azure_nextgen.network.VirtualHubRouteTableV2("virtualHubRouteTableV2", {
+const virtualHubRouteTableV2 = new azure_nextgen.network.latest.VirtualHubRouteTableV2("virtualHubRouteTableV2", {
     attachedConnections: ["All_Vnets"],
     resourceGroupName: "rg1",
     routeTableName: "virtualHubRouteTable1a",

@@ -26,25 +26,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var storageTarget = new AzureNextGen.Storagecache.StorageTarget("storageTarget", new AzureNextGen.Storagecache.StorageTargetArgs
+        var storageTarget = new AzureNextGen.StorageCache.Latest.StorageTarget("storageTarget", new AzureNextGen.StorageCache.Latest.StorageTargetArgs
         {
             CacheName = "sc1",
             Junctions = 
             {
-                new AzureNextGen.Storagecache.Inputs.NamespaceJunctionArgs
+                new AzureNextGen.StorageCache.Latest.Inputs.NamespaceJunctionArgs
                 {
                     NamespacePath = "/path/on/cache",
                     NfsExport = "exp1",
                     TargetPath = "/path/on/exp1",
                 },
-                new AzureNextGen.Storagecache.Inputs.NamespaceJunctionArgs
+                new AzureNextGen.StorageCache.Latest.Inputs.NamespaceJunctionArgs
                 {
                     NamespacePath = "/path2/on/cache",
                     NfsExport = "exp2",
                     TargetPath = "/path2/on/exp2",
                 },
             },
-            Nfs3 = new AzureNextGen.Storagecache.Inputs.Nfs3TargetArgs
+            Nfs3 = new AzureNextGen.StorageCache.Latest.Inputs.Nfs3TargetArgs
             {
                 Target = "10.0.44.44",
                 UsageModel = "READ_HEAVY_INFREQ",
@@ -71,7 +71,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-storage_target = azure_nextgen.storagecache.StorageTarget("storageTarget",
+storage_target = azure_nextgen.storagecache.latest.StorageTarget("storageTarget",
     cache_name="sc1",
     junctions=[
         {
@@ -103,7 +103,7 @@ storage_target = azure_nextgen.storagecache.StorageTarget("storageTarget",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const storageTarget = new azure_nextgen.storagecache.StorageTarget("storageTarget", {
+const storageTarget = new azure_nextgen.storagecache.latest.StorageTarget("storageTarget", {
     cacheName: "sc1",
     junctions: [
         {

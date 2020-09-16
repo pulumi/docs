@@ -26,9 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rule = new AzureNextGen.Servicebus.Rule("rule", new AzureNextGen.Servicebus.RuleArgs
+        var rule = new AzureNextGen.ServiceBus.Latest.Rule("rule", new AzureNextGen.ServiceBus.Latest.RuleArgs
         {
-            CorrelationFilter = new AzureNextGen.Servicebus.Inputs.CorrelationFilterArgs
+            CorrelationFilter = new AzureNextGen.ServiceBus.Latest.Inputs.CorrelationFilterArgs
             {
                 Properties = 
                 {
@@ -60,7 +60,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rule = azure_nextgen.servicebus.Rule("rule",
+rule = azure_nextgen.servicebus.latest.Rule("rule",
     correlation_filter={
         "properties": {
             "topicHint": "Crop",
@@ -83,7 +83,7 @@ rule = azure_nextgen.servicebus.Rule("rule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const rule = new azure_nextgen.servicebus.Rule("rule", {
+const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
     correlationFilter: {
         properties: {
             topicHint: "Crop",
@@ -111,7 +111,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rule = new AzureNextGen.Servicebus.Rule("rule", new AzureNextGen.Servicebus.RuleArgs
+        var rule = new AzureNextGen.ServiceBus.Latest.Rule("rule", new AzureNextGen.ServiceBus.Latest.RuleArgs
         {
             NamespaceName = "sdk-Namespace-1319",
             ResourceGroupName = "resourceGroupName",
@@ -137,7 +137,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rule = azure_nextgen.servicebus.Rule("rule",
+rule = azure_nextgen.servicebus.latest.Rule("rule",
     namespace_name="sdk-Namespace-1319",
     resource_group_name="resourceGroupName",
     rule_name="sdk-Rules-6571",
@@ -154,7 +154,7 @@ rule = azure_nextgen.servicebus.Rule("rule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const rule = new azure_nextgen.servicebus.Rule("rule", {
+const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
     namespaceName: "sdk-Namespace-1319",
     resourceGroupName: "resourceGroupName",
     ruleName: "sdk-Rules-6571",
@@ -176,13 +176,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rule = new AzureNextGen.Servicebus.Rule("rule", new AzureNextGen.Servicebus.RuleArgs
+        var rule = new AzureNextGen.ServiceBus.Latest.Rule("rule", new AzureNextGen.ServiceBus.Latest.RuleArgs
         {
             FilterType = "SqlFilter",
             NamespaceName = "sdk-Namespace-1319",
             ResourceGroupName = "resourceGroupName",
             RuleName = "sdk-Rules-6571",
-            SqlFilter = new AzureNextGen.Servicebus.Inputs.SqlFilterArgs
+            SqlFilter = new AzureNextGen.ServiceBus.Latest.Inputs.SqlFilterArgs
             {
                 SqlExpression = "myproperty=test",
             },
@@ -207,7 +207,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-rule = azure_nextgen.servicebus.Rule("rule",
+rule = azure_nextgen.servicebus.latest.Rule("rule",
     filter_type="SqlFilter",
     namespace_name="sdk-Namespace-1319",
     resource_group_name="resourceGroupName",
@@ -228,7 +228,7 @@ rule = azure_nextgen.servicebus.Rule("rule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const rule = new azure_nextgen.servicebus.Rule("rule", {
+const rule = new azure_nextgen.servicebus.latest.Rule("rule", {
     filterType: "SqlFilter",
     namespaceName: "sdk-Namespace-1319",
     resourceGroupName: "resourceGroupName",

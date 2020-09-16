@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var webhook = new AzureNextGen.Containerregistry.Webhook("webhook", new AzureNextGen.Containerregistry.WebhookArgs
+        var webhook = new AzureNextGen.ContainerRegistry.Latest.Webhook("webhook", new AzureNextGen.ContainerRegistry.Latest.WebhookArgs
         {
             Actions = 
             {
@@ -66,7 +66,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-webhook = azure_nextgen.containerregistry.Webhook("webhook",
+webhook = azure_nextgen.containerregistry.latest.Webhook("webhook",
     actions=["push"],
     custom_headers={
         "Authorization": "Basic 000000000000000000000000000000000000000000000000000",
@@ -92,7 +92,7 @@ webhook = azure_nextgen.containerregistry.Webhook("webhook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const webhook = new azure_nextgen.containerregistry.Webhook("webhook", {
+const webhook = new azure_nextgen.containerregistry.latest.Webhook("webhook", {
     actions: ["push"],
     customHeaders: {
         Authorization: "Basic 000000000000000000000000000000000000000000000000000",

@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkHub = new AzureNextGen.Synapse.PrivateLinkHub("privateLinkHub", new AzureNextGen.Synapse.PrivateLinkHubArgs
+        var privateLinkHub = new AzureNextGen.Synapse.V20190601Preview.PrivateLinkHub("privateLinkHub", new AzureNextGen.Synapse.V20190601Preview.PrivateLinkHubArgs
         {
             Location = "East US",
             PrivateLinkHubName = "privateLinkHub1",
@@ -54,7 +54,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_hub = azure_nextgen.synapse.PrivateLinkHub("privateLinkHub",
+private_link_hub = azure_nextgen.synapse.v20190601preview.PrivateLinkHub("privateLinkHub",
     location="East US",
     private_link_hub_name="privateLinkHub1",
     resource_group_name="resourceGroup1",
@@ -72,7 +72,7 @@ private_link_hub = azure_nextgen.synapse.PrivateLinkHub("privateLinkHub",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const privateLinkHub = new azure_nextgen.synapse.PrivateLinkHub("privateLinkHub", {
+const privateLinkHub = new azure_nextgen.synapse.v20190601preview.PrivateLinkHub("privateLinkHub", {
     location: "East US",
     privateLinkHubName: "privateLinkHub1",
     resourceGroupName: "resourceGroup1",

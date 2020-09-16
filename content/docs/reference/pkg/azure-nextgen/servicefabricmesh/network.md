@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var network = new AzureNextGen.Servicefabricmesh.Network("network", new AzureNextGen.Servicefabricmesh.NetworkArgs
+        var network = new AzureNextGen.ServiceFabricMesh.V20180901Preview.Network("network", new AzureNextGen.ServiceFabricMesh.V20180901Preview.NetworkArgs
         {
             Location = "EastUS",
             NetworkResourceName = "sampleNetwork",
@@ -51,7 +51,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-network = azure_nextgen.servicefabricmesh.Network("network",
+network = azure_nextgen.servicefabricmesh.v20180901preview.Network("network",
     location="EastUS",
     network_resource_name="sampleNetwork",
     resource_group_name="sbz_demo",
@@ -67,7 +67,7 @@ network = azure_nextgen.servicefabricmesh.Network("network",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const network = new azure_nextgen.servicefabricmesh.Network("network", {
+const network = new azure_nextgen.servicefabricmesh.v20180901preview.Network("network", {
     location: "EastUS",
     networkResourceName: "sampleNetwork",
     resourceGroupName: "sbz_demo",

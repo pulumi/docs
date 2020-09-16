@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var alertRule = new AzureNextGen.Insights.AlertRule("alertRule", new AzureNextGen.Insights.AlertRuleArgs
+        var alertRule = new AzureNextGen.Insights.Latest.AlertRule("alertRule", new AzureNextGen.Insights.Latest.AlertRuleArgs
         {
             Actions = {},
             Condition = 
@@ -69,7 +69,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-alert_rule = azure_nextgen.insights.AlertRule("alertRule",
+alert_rule = azure_nextgen.insights.latest.AlertRule("alertRule",
     actions=[],
     condition={
         "dataSource": {
@@ -101,7 +101,7 @@ alert_rule = azure_nextgen.insights.AlertRule("alertRule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure_nextgen";
 
-const alertRule = new azure_nextgen.insights.AlertRule("alertRule", {
+const alertRule = new azure_nextgen.insights.latest.AlertRule("alertRule", {
     actions: [],
     condition: {
         dataSource: {
