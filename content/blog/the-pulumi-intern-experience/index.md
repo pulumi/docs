@@ -33,7 +33,7 @@ I worked on the Platform team for the last 3 months, and they focused their work
 
 ### kube2pulumi Tooling
 
-I built a CLI tool, and an open-source library to convert Kubernetes YAML manifests to Pulumi in a user-defined language [check out kube2pulumi!]({{< relref "/blog/introducing-kube2pulumi/" >}}). This was done so that Kubernetes users could easily migrate to Pulumi, and use familiar programming languages to tame YAML's complexity. I truly learned a lot from this experience as it was my first time designing and implementing a project end to end in a set time frame. Utilizing existing open-source libraries, code generation techniques, and compilers theory were just some of the many things I got to delve into.
+I built a CLI tool, and an open-source library to convert Kubernetes YAML manifests to Pulumi in a user-defined language [check out kube2pulumi!]({{< relref "/blog/introducing-kube2pulumi" >}}). This was done so that Kubernetes users could easily migrate to Pulumi, and use familiar programming languages to tame YAML's complexity. I truly learned a lot from this experience as it was my first time designing and implementing a project end to end in a set time frame. Utilizing existing open-source libraries, code generation techniques, and compilers theory were just some of the many things I got to delve into.
 
 ### UI Interface
 
