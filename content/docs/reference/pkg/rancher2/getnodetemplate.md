@@ -828,7 +828,7 @@ The following output properties are available:
 <a href="#engine_insecure_registries_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>insecure_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Insecure registry for the node template (list)
 {{% /md %}}</dd>
@@ -872,7 +872,7 @@ The following output properties are available:
 <a href="#engine_registry_mirrors_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>registry_<wbr>mirrors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
@@ -949,6 +949,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

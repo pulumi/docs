@@ -331,7 +331,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteralterruleeventrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}(Computed) The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -501,7 +501,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteralterruleeventrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}(Computed) The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -671,7 +671,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteralterruleeventrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}(Computed) The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -841,7 +841,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusteralterruleeventrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}(Computed) The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}(Computed) The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -861,7 +861,7 @@ The following output properties are available:
 <a href="#group_interval_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -872,7 +872,7 @@ The following output properties are available:
 <a href="#group_wait_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -937,7 +937,7 @@ The following output properties are available:
 <a href="#repeat_interval_seconds_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The cluster alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -1565,7 +1565,7 @@ The following output properties are available:
 <a href="#cpu_threshold_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1575,7 +1575,7 @@ The following output properties are available:
 <a href="#mem_threshold_python" style="color: inherit; text-decoration: inherit;">mem_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1703,6 +1703,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

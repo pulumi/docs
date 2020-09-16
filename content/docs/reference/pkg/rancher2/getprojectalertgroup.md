@@ -631,7 +631,7 @@ The following output properties are available:
 <a href="#group_interval_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -642,7 +642,7 @@ The following output properties are available:
 <a href="#group_wait_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -695,7 +695,7 @@ The following output properties are available:
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectalertgrouprecipient">List[Get<wbr>Project<wbr>Alert<wbr>Group<wbr>Recipient]</a></span>
+        <span class="property-type"><a href="#getprojectalertgrouprecipient">Sequence[Get<wbr>Project<wbr>Alert<wbr>Group<wbr>Recipient]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert group recipients (list)
 {{% /md %}}</dd>
@@ -706,7 +706,7 @@ The following output properties are available:
 <a href="#repeat_interval_seconds_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The project alert group wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -941,6 +941,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

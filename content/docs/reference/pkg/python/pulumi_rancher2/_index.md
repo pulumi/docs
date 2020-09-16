@@ -339,7 +339,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_rancher2.App">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">App</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">answers</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">catalog_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_upgrade</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revision_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_namespace</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_version</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">values_yaml</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.App" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">App</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">answers</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">catalog_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_upgrade</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revision_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_namespace</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_version</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">values_yaml</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.App" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a App resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -359,16 +359,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the app (string)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id where the app will be installed (string)</p></li>
 <li><p><strong>revision_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current revision id for the app. If modified, If this argument is provided or modified, app will be rollbacked to <code class="docutils literal notranslate"><span class="pre">revision_id</span></code> (string)</p></li>
-<li><p><strong>target_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace name where the app will be installed (string)</p></li>
+<li><p><strong>target_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace id where the app will be installed (string)</p></li>
 <li><p><strong>template_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Template name of the app. If modified, app will be upgraded (string)</p></li>
 <li><p><strong>template_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Template version of the app. If modified, app will be upgraded. Default: <code class="docutils literal notranslate"><span class="pre">latest</span></code> (string)</p></li>
 <li><p><strong>values_yaml</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – values.yaml base64 encoded file content for the app template. If modified, app will be upgraded (string)</p></li>
+<li><p><strong>wait</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Wait until app is deployed and active. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="pulumi_rancher2.App.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">answers</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">catalog_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_upgrade</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revision_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_namespace</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_version</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">values_yaml</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.app.App<a class="headerlink" href="#pulumi_rancher2.App.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">answers</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">catalog_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_upgrade</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revision_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_namespace</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_version</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">values_yaml</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.app.App<a class="headerlink" href="#pulumi_rancher2.App.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing App resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -397,10 +398,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the app (string)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id where the app will be installed (string)</p></li>
 <li><p><strong>revision_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current revision id for the app. If modified, If this argument is provided or modified, app will be rollbacked to <code class="docutils literal notranslate"><span class="pre">revision_id</span></code> (string)</p></li>
-<li><p><strong>target_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace name where the app will be installed (string)</p></li>
+<li><p><strong>target_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace id where the app will be installed (string)</p></li>
 <li><p><strong>template_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Template name of the app. If modified, app will be upgraded (string)</p></li>
 <li><p><strong>template_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Template version of the app. If modified, app will be upgraded. Default: <code class="docutils literal notranslate"><span class="pre">latest</span></code> (string)</p></li>
 <li><p><strong>values_yaml</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – values.yaml base64 encoded file content for the app template. If modified, app will be upgraded (string)</p></li>
+<li><p><strong>wait</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Wait until app is deployed and active. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 </ul>
 </dd>
 </dl>
@@ -473,7 +475,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.App.target_namespace">
 <em class="property">property </em><code class="sig-name descname">target_namespace</code><a class="headerlink" href="#pulumi_rancher2.App.target_namespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>The namespace name where the app will be installed (string)</p>
+<dd><p>The namespace id where the app will be installed (string)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -492,6 +494,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_rancher2.App.values_yaml">
 <em class="property">property </em><code class="sig-name descname">values_yaml</code><a class="headerlink" href="#pulumi_rancher2.App.values_yaml" title="Permalink to this definition">¶</a></dt>
 <dd><p>values.yaml base64 encoded file content for the app template. If modified, app will be upgraded (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.App.wait">
+<em class="property">property </em><code class="sig-name descname">wait</code><a class="headerlink" href="#pulumi_rancher2.App.wait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until app is deployed and active. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3101,7 +3109,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_rancher2.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aks_config</span><span class="p">:</span> <span class="n">Union[ClusterAksConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterAksConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_auth_endpoint</span><span class="p">:</span> <span class="n">Union[ClusterClusterAuthEndpointArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterAuthEndpointArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_monitoring_input</span><span class="p">:</span> <span class="n">Union[ClusterClusterMonitoringInputArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterMonitoringInputArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_answers</span><span class="p">:</span> <span class="n">Union[ClusterClusterTemplateAnswersArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateAnswersArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_questions</span><span class="p">:</span> <span class="n">Union[List[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_revision_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_agent_image</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_auth_image</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">docker_root_dir</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eks_config</span><span class="p">:</span> <span class="n">Union[ClusterEksConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterEksConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_alerting</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_istio</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_monitoring</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_network_policy</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gke_config</span><span class="p">:</span> <span class="n">Union[ClusterGkeConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterGkeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">k3s_config</span><span class="p">:</span> <span class="n">Union[ClusterK3sConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterK3sConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rke_config</span><span class="p">:</span> <span class="n">Union[ClusterRkeConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterRkeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_cluster_scan</span><span class="p">:</span> <span class="n">Union[ClusterScheduledClusterScanArgs, Mapping[str, Any], Awaitable[Union[ClusterScheduledClusterScanArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_prefered_cluster</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aks_config</span><span class="p">:</span> <span class="n">Union[ClusterAksConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterAksConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_auth_endpoint</span><span class="p">:</span> <span class="n">Union[ClusterClusterAuthEndpointArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterAuthEndpointArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_monitoring_input</span><span class="p">:</span> <span class="n">Union[ClusterClusterMonitoringInputArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterMonitoringInputArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_answers</span><span class="p">:</span> <span class="n">Union[ClusterClusterTemplateAnswersArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateAnswersArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_questions</span><span class="p">:</span> <span class="n">Union[List[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_revision_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_agent_image</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_auth_image</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">docker_root_dir</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eks_config</span><span class="p">:</span> <span class="n">Union[ClusterEksConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterEksConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_alerting</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_monitoring</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_network_policy</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gke_config</span><span class="p">:</span> <span class="n">Union[ClusterGkeConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterGkeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">k3s_config</span><span class="p">:</span> <span class="n">Union[ClusterK3sConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterK3sConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rke_config</span><span class="p">:</span> <span class="n">Union[ClusterRkeConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterRkeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_cluster_scan</span><span class="p">:</span> <span class="n">Union[ClusterScheduledClusterScanArgs, Mapping[str, Any], Awaitable[Union[ClusterScheduledClusterScanArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_prefered_cluster</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster resource. This can be used to create Clusters for Rancher v2 environments and retrieve their information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3124,7 +3132,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>driver</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The driver used for the Cluster. <code class="docutils literal notranslate"><span class="pre">imported</span></code>, <code class="docutils literal notranslate"><span class="pre">azurekubernetesservice</span></code>, <code class="docutils literal notranslate"><span class="pre">amazonelasticcontainerservice</span></code>, <code class="docutils literal notranslate"><span class="pre">googlekubernetesengine</span></code> and <code class="docutils literal notranslate"><span class="pre">rancherKubernetesEngine</span></code> are supported (string)</p></li>
 <li><p><strong>eks_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterEksConfigArgs'</em><em>]</em><em>]</em>) – The Amazon EKS configuration for <code class="docutils literal notranslate"><span class="pre">eks</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">gke_config</span></code>, <code class="docutils literal notranslate"><span class="pre">k3s_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>enable_cluster_alerting</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable built-in cluster alerting (bool)</p></li>
-<li><p><strong>enable_cluster_istio</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)</p></li>
 <li><p><strong>enable_cluster_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable built-in cluster monitoring (bool)</p></li>
 <li><p><strong>enable_network_policy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable project network isolation (bool)</p></li>
 <li><p><strong>gke_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterGkeConfigArgs'</em><em>]</em><em>]</em>) – The Google GKE configuration for <code class="docutils literal notranslate"><span class="pre">gke</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">eks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">k3s_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p></li>
@@ -3139,7 +3146,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <dl class="py method">
 <dt id="pulumi_rancher2.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aks_config</span><span class="p">:</span> <span class="n">Union[ClusterAksConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterAksConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_auth_endpoint</span><span class="p">:</span> <span class="n">Union[ClusterClusterAuthEndpointArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterAuthEndpointArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_monitoring_input</span><span class="p">:</span> <span class="n">Union[ClusterClusterMonitoringInputArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterMonitoringInputArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_registration_token</span><span class="p">:</span> <span class="n">Union[ClusterClusterRegistrationTokenArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterRegistrationTokenArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_answers</span><span class="p">:</span> <span class="n">Union[ClusterClusterTemplateAnswersArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateAnswersArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_questions</span><span class="p">:</span> <span class="n">Union[List[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_revision_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_agent_image</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_auth_image</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">docker_root_dir</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eks_config</span><span class="p">:</span> <span class="n">Union[ClusterEksConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterEksConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_alerting</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_istio</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_monitoring</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_network_policy</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gke_config</span><span class="p">:</span> <span class="n">Union[ClusterGkeConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterGkeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">k3s_config</span><span class="p">:</span> <span class="n">Union[ClusterK3sConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterK3sConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_config</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rke_config</span><span class="p">:</span> <span class="n">Union[ClusterRkeConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterRkeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_cluster_scan</span><span class="p">:</span> <span class="n">Union[ClusterScheduledClusterScanArgs, Mapping[str, Any], Awaitable[Union[ClusterScheduledClusterScanArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_prefered_cluster</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.cluster.Cluster<a class="headerlink" href="#pulumi_rancher2.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aks_config</span><span class="p">:</span> <span class="n">Union[ClusterAksConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterAksConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_auth_endpoint</span><span class="p">:</span> <span class="n">Union[ClusterClusterAuthEndpointArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterAuthEndpointArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_monitoring_input</span><span class="p">:</span> <span class="n">Union[ClusterClusterMonitoringInputArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterMonitoringInputArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_registration_token</span><span class="p">:</span> <span class="n">Union[ClusterClusterRegistrationTokenArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterRegistrationTokenArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_answers</span><span class="p">:</span> <span class="n">Union[ClusterClusterTemplateAnswersArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateAnswersArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_questions</span><span class="p">:</span> <span class="n">Union[List[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any], Awaitable[Union[ClusterClusterTemplateQuestionArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_template_revision_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_pod_security_policy_template_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_agent_image</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_auth_image</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">docker_root_dir</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eks_config</span><span class="p">:</span> <span class="n">Union[ClusterEksConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterEksConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_alerting</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_istio</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_cluster_monitoring</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_network_policy</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gke_config</span><span class="p">:</span> <span class="n">Union[ClusterGkeConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterGkeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">istio_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">k3s_config</span><span class="p">:</span> <span class="n">Union[ClusterK3sConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterK3sConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_config</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rke_config</span><span class="p">:</span> <span class="n">Union[ClusterRkeConfigArgs, Mapping[str, Any], Awaitable[Union[ClusterRkeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_cluster_scan</span><span class="p">:</span> <span class="n">Union[ClusterScheduledClusterScanArgs, Mapping[str, Any], Awaitable[Union[ClusterScheduledClusterScanArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_prefered_cluster</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.cluster.Cluster<a class="headerlink" href="#pulumi_rancher2.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3169,10 +3176,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>driver</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The driver used for the Cluster. <code class="docutils literal notranslate"><span class="pre">imported</span></code>, <code class="docutils literal notranslate"><span class="pre">azurekubernetesservice</span></code>, <code class="docutils literal notranslate"><span class="pre">amazonelasticcontainerservice</span></code>, <code class="docutils literal notranslate"><span class="pre">googlekubernetesengine</span></code> and <code class="docutils literal notranslate"><span class="pre">rancherKubernetesEngine</span></code> are supported (string)</p></li>
 <li><p><strong>eks_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterEksConfigArgs'</em><em>]</em><em>]</em>) – The Amazon EKS configuration for <code class="docutils literal notranslate"><span class="pre">eks</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">gke_config</span></code>, <code class="docutils literal notranslate"><span class="pre">k3s_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>enable_cluster_alerting</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable built-in cluster alerting (bool)</p></li>
-<li><p><strong>enable_cluster_istio</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)</p></li>
+<li><p><strong>enable_cluster_istio</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Deploy istio on <code class="docutils literal notranslate"><span class="pre">system</span></code> project and <code class="docutils literal notranslate"><span class="pre">istio-system</span></code> namespace, using App resource instead. See above example.</p></li>
 <li><p><strong>enable_cluster_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable built-in cluster monitoring (bool)</p></li>
 <li><p><strong>enable_network_policy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable project network isolation (bool)</p></li>
 <li><p><strong>gke_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterGkeConfigArgs'</em><em>]</em><em>]</em>) – The Google GKE configuration for <code class="docutils literal notranslate"><span class="pre">gke</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">eks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">k3s_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p></li>
+<li><p><strong>istio_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (Computed) Is istio enabled at cluster? Just for Rancher v2.3.x and above (bool)</p></li>
 <li><p><strong>k3s_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterK3sConfigArgs'</em><em>]</em><em>]</em>) – The K3S configuration for <code class="docutils literal notranslate"><span class="pre">k3s</span></code> imported Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">eks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">gke_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p></li>
 <li><p><strong>kube_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed/Sensitive) Kube Config generated for the cluster (string)</p></li>
 <li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels for cluster registration token object (map)</p></li>
@@ -3297,7 +3305,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.Cluster.enable_cluster_istio">
 <em class="property">property </em><code class="sig-name descname">enable_cluster_istio</code><a class="headerlink" href="#pulumi_rancher2.Cluster.enable_cluster_istio" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable built-in cluster istio. Just for Rancher v2.3.x and above (bool)</p>
+<dd><p>Deploy istio on <code class="docutils literal notranslate"><span class="pre">system</span></code> project and <code class="docutils literal notranslate"><span class="pre">istio-system</span></code> namespace, using App resource instead. See above example.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3316,6 +3324,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_rancher2.Cluster.gke_config">
 <em class="property">property </em><code class="sig-name descname">gke_config</code><a class="headerlink" href="#pulumi_rancher2.Cluster.gke_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Google GKE configuration for <code class="docutils literal notranslate"><span class="pre">gke</span></code> Clusters. Conflicts with <code class="docutils literal notranslate"><span class="pre">aks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">eks_config</span></code>, <code class="docutils literal notranslate"><span class="pre">k3s_config</span></code> and <code class="docutils literal notranslate"><span class="pre">rke_config</span></code> (list maxitems:1)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.Cluster.istio_enabled">
+<em class="property">property </em><code class="sig-name descname">istio_enabled</code><a class="headerlink" href="#pulumi_rancher2.Cluster.istio_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Is istio enabled at cluster? Just for Rancher v2.3.x and above (bool)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3592,7 +3606,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>node_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlertRuleNodeRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule node rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p></li>
 <li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
 <li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule severity. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;critical&quot;</span> <span class="pre">|</span> <span class="pre">&quot;info&quot;</span> <span class="pre">|</span> <span class="pre">&quot;warning&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">critical</span></code> (string)</p></li>
-<li><p><strong>system_service_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlertRuleSystemServiceRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule system service rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “node_rule”`</cite> (list Maxitems:1)</p></li>
+<li><p><strong>system_service_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlertRuleSystemServiceRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule system service rule. ConflictsWith: <code class="docutils literal notranslate"><span class="pre">&quot;event_rule&quot;,</span> <span class="pre">&quot;metric_rule&quot;,</span> <span class="pre">&quot;node_rule&quot;</span></code> (list Maxitems:1)</p></li>
 </ul>
 </dd>
 </dl>
@@ -3620,7 +3634,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>node_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlertRuleNodeRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule node rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p></li>
 <li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
 <li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule severity. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;critical&quot;</span> <span class="pre">|</span> <span class="pre">&quot;info&quot;</span> <span class="pre">|</span> <span class="pre">&quot;warning&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">critical</span></code> (string)</p></li>
-<li><p><strong>system_service_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlertRuleSystemServiceRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule system service rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “node_rule”`</cite> (list Maxitems:1)</p></li>
+<li><p><strong>system_service_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlertRuleSystemServiceRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule system service rule. ConflictsWith: <code class="docutils literal notranslate"><span class="pre">&quot;event_rule&quot;,</span> <span class="pre">&quot;metric_rule&quot;,</span> <span class="pre">&quot;node_rule&quot;</span></code> (list Maxitems:1)</p></li>
 </ul>
 </dd>
 </dl>
@@ -3707,7 +3721,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlertRule.system_service_rule">
 <em class="property">property </em><code class="sig-name descname">system_service_rule</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlertRule.system_service_rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule system service rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “node_rule”`</cite> (list Maxitems:1)</p>
+<dd><p>The cluster alert rule system service rule. ConflictsWith: <code class="docutils literal notranslate"><span class="pre">&quot;event_rule&quot;,</span> <span class="pre">&quot;metric_rule&quot;,</span> <span class="pre">&quot;node_rule&quot;</span></code> (list Maxitems:1)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3751,35 +3765,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.ClusterAlterGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterAlterGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_interval_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_wait_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recipients</span><span class="p">:</span> <span class="n">Union[List[Union[ClusterAlterGroupRecipientArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterGroupRecipientArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[ClusterAlterGroupRecipientArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterGroupRecipientArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repeat_interval_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Cluster Alert Group resource. This can be used to create Cluster Alert Group for Rancher v2 environments and retrieve their information.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
-
-<span class="c1"># Create a new Rancher2 Cluster Alert Group</span>
-<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">ClusterAlertGroup</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
-    <span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_id&gt;&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Terraform cluster alert group&quot;</span><span class="p">,</span>
-    <span class="n">group_interval_seconds</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
-    <span class="n">repeat_interval_seconds</span><span class="o">=</span><span class="mi">3600</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The cluster alert group annotations (map)</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create cluster alert group (string)</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert group description (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert group interval seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The cluster alert group labels (map)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert group name (string)</p></li>
-<li><p><strong>recipients</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterGroupRecipientArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The cluster alert group recipients (list)</p></li>
-<li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClusterAlterGroup resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[Mapping[str, Any]] annotations: Annotations of the resource
+:param pulumi.Input[str] cluster_id: Alert group Cluster ID
+:param pulumi.Input[str] description: Alert group description
+:param pulumi.Input[float] group_interval_seconds: Alert group interval seconds
+:param pulumi.Input[float] group_wait_seconds: Alert group wait seconds
+:param pulumi.Input[Mapping[str, Any]] labels: Labels of the resource
+:param pulumi.Input[str] name: Alert group name
+:param pulumi.Input[List[pulumi.Input[pulumi.InputType[‘ClusterAlterGroupRecipientArgs’]]]] recipients: Alert group recipients
+:param pulumi.Input[float] repeat_interval_seconds: Alert group repeat interval seconds</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_interval_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_wait_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recipients</span><span class="p">:</span> <span class="n">Union[List[Union[ClusterAlterGroupRecipientArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterGroupRecipientArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[ClusterAlterGroupRecipientArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterGroupRecipientArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repeat_interval_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.cluster_alter_group.ClusterAlterGroup<a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.get" title="Permalink to this definition">¶</a></dt>
@@ -3791,15 +3788,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The cluster alert group annotations (map)</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create cluster alert group (string)</p></li>
-<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert group description (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert group interval seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The cluster alert group labels (map)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert group name (string)</p></li>
-<li><p><strong>recipients</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterGroupRecipientArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The cluster alert group recipients (list)</p></li>
-<li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Annotations of the resource</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert group Cluster ID</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert group description</p></li>
+<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Alert group interval seconds</p></li>
+<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Alert group wait seconds</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels of the resource</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert group name</p></li>
+<li><p><strong>recipients</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterGroupRecipientArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Alert group recipients</p></li>
+<li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Alert group repeat interval seconds</p></li>
 </ul>
 </dd>
 </dl>
@@ -3808,55 +3805,55 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterGroup.annotations">
 <em class="property">property </em><code class="sig-name descname">annotations</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.annotations" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert group annotations (map)</p>
+<dd><p>Annotations of the resource</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterGroup.cluster_id">
 <em class="property">property </em><code class="sig-name descname">cluster_id</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.cluster_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster id where create cluster alert group (string)</p>
+<dd><p>Alert group Cluster ID</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterGroup.description">
 <em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert group description (string)</p>
+<dd><p>Alert group description</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterGroup.group_interval_seconds">
 <em class="property">property </em><code class="sig-name descname">group_interval_seconds</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.group_interval_seconds" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert group interval seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p>
+<dd><p>Alert group interval seconds</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterGroup.group_wait_seconds">
 <em class="property">property </em><code class="sig-name descname">group_wait_seconds</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.group_wait_seconds" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p>
+<dd><p>Alert group wait seconds</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterGroup.labels">
 <em class="property">property </em><code class="sig-name descname">labels</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert group labels (map)</p>
+<dd><p>Labels of the resource</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterGroup.name">
 <em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert group name (string)</p>
+<dd><p>Alert group name</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterGroup.recipients">
 <em class="property">property </em><code class="sig-name descname">recipients</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.recipients" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert group recipients (list)</p>
+<dd><p>Alert group recipients</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterGroup.repeat_interval_seconds">
 <em class="property">property </em><code class="sig-name descname">repeat_interval_seconds</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup.repeat_interval_seconds" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p>
+<dd><p>Alert group repeat interval seconds</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3900,46 +3897,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_rancher2.ClusterAlterRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterAlterRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_rule</span><span class="p">:</span> <span class="n">Union[ClusterAlterRuleEventRuleArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterRuleEventRuleArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_interval_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_wait_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inherited</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_rule</span><span class="p">:</span> <span class="n">Union[ClusterAlterRuleMetricRuleArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterRuleMetricRuleArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_rule</span><span class="p">:</span> <span class="n">Union[ClusterAlterRuleNodeRuleArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterRuleNodeRuleArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repeat_interval_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">severity</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_service_rule</span><span class="p">:</span> <span class="n">Union[ClusterAlterRuleSystemServiceRuleArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterRuleSystemServiceRuleArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Rancher v2 Cluster Alert Rule resource. This can be used to create Cluster Alert Rule for Rancher v2 environments and retrieve their information.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
-
-<span class="c1"># Create a new Rancher2 Cluster Alert Group</span>
-<span class="n">foo_cluster_alert_group</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">ClusterAlertGroup</span><span class="p">(</span><span class="s2">&quot;fooClusterAlertGroup&quot;</span><span class="p">,</span>
-    <span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_id&gt;&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Terraform cluster alert group&quot;</span><span class="p">,</span>
-    <span class="n">group_interval_seconds</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
-    <span class="n">repeat_interval_seconds</span><span class="o">=</span><span class="mi">3600</span><span class="p">)</span>
-<span class="c1"># Create a new Rancher2 Cluster Alert Rule</span>
-<span class="n">foo_cluster_alert_rule</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">ClusterAlertRule</span><span class="p">(</span><span class="s2">&quot;fooClusterAlertRule&quot;</span><span class="p">,</span>
-    <span class="n">cluster_id</span><span class="o">=</span><span class="n">foo_cluster_alert_group</span><span class="o">.</span><span class="n">cluster_id</span><span class="p">,</span>
-    <span class="n">group_id</span><span class="o">=</span><span class="n">foo_cluster_alert_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">group_interval_seconds</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
-    <span class="n">repeat_interval_seconds</span><span class="o">=</span><span class="mi">6000</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The cluster alert rule annotations (map)</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create cluster alert rule (string)</p></li>
-<li><p><strong>event_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleEventRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule event rule. ConflictsWith: :raw-html-m2r:<a href="#id39"><span class="problematic" id="id40">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”metric_rule”, “node_rule”, “system_service_rule”`` (list Maxitems:1)</p></li>
-<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule alert group ID (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group interval seconds. Default:&lt;/span&gt;&lt;/code&gt;`180<a href="#id41"><span class="problematic" id="id42">``</span></a>(int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group wait seconds. Default:<a href="#id43"><span class="problematic" id="id44">``</span></a>180<a href="#id45"><span class="problematic" id="id46">``</span></a>(int)</p></li>
-<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The cluster alert rule inherited. Default:<a href="#id47"><span class="problematic" id="id48">``</span></a>true<a href="#id49"><span class="problematic" id="id50">``</span></a>(bool)</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The cluster alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleMetricRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule metric rule. ConflictsWith:<a href="#id51"><span class="problematic" id="id52">``</span></a>”event_rule”, “node_rule”, “system_service_rule”<a href="#id53"><span class="problematic" id="id54">``</span></a>(list Maxitems:1)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule name (string)</p></li>
-<li><p><strong>node_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleNodeRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule node rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p></li>
-<li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
-<li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule severity. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;critical&quot;</span> <span class="pre">|</span> <span class="pre">&quot;info&quot;</span> <span class="pre">|</span> <span class="pre">&quot;warning&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">critical</span></code> (string)</p></li>
-<li><p><strong>system_service_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleSystemServiceRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule system service rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “node_rule”`</cite> (list Maxitems:1)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Create a ClusterAlterRule resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[Mapping[str, Any]] annotations: Annotations of the resource
+:param pulumi.Input[str] cluster_id: Alert rule cluster ID
+:param pulumi.Input[pulumi.InputType[‘ClusterAlterRuleEventRuleArgs’]] event_rule: Alert event rule
+:param pulumi.Input[str] group_id: Alert rule group ID
+:param pulumi.Input[float] group_interval_seconds: Alert rule interval seconds
+:param pulumi.Input[float] group_wait_seconds: Alert rule wait seconds
+:param pulumi.Input[bool] inherited: Alert rule inherited
+:param pulumi.Input[Mapping[str, Any]] labels: Labels of the resource
+:param pulumi.Input[pulumi.InputType[‘ClusterAlterRuleMetricRuleArgs’]] metric_rule: Alert metric rule
+:param pulumi.Input[str] name: Alert rule name
+:param pulumi.Input[pulumi.InputType[‘ClusterAlterRuleNodeRuleArgs’]] node_rule: Alert node rule
+:param pulumi.Input[float] repeat_interval_seconds: Alert rule repeat interval seconds
+:param pulumi.Input[str] severity: Alert rule severity
+:param pulumi.Input[pulumi.InputType[‘ClusterAlterRuleSystemServiceRuleArgs’]] system_service_rule: Alert system service rule</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_rule</span><span class="p">:</span> <span class="n">Union[ClusterAlterRuleEventRuleArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterRuleEventRuleArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_interval_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_wait_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inherited</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_rule</span><span class="p">:</span> <span class="n">Union[ClusterAlterRuleMetricRuleArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterRuleMetricRuleArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_rule</span><span class="p">:</span> <span class="n">Union[ClusterAlterRuleNodeRuleArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterRuleNodeRuleArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repeat_interval_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">severity</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_service_rule</span><span class="p">:</span> <span class="n">Union[ClusterAlterRuleSystemServiceRuleArgs, Mapping[str, Any], Awaitable[Union[ClusterAlterRuleSystemServiceRuleArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.cluster_alter_rule.ClusterAlterRule<a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.get" title="Permalink to this definition">¶</a></dt>
@@ -3951,20 +3925,20 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The cluster alert rule annotations (map)</p></li>
-<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster id where create cluster alert rule (string)</p></li>
-<li><p><strong>event_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleEventRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule event rule. ConflictsWith: :raw-html-m2r:<a href="#id55"><span class="problematic" id="id56">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”metric_rule”, “node_rule”, “system_service_rule”`` (list Maxitems:1)</p></li>
-<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule alert group ID (string)</p></li>
-<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group interval seconds. Default:&lt;/span&gt;&lt;/code&gt;`180<a href="#id57"><span class="problematic" id="id58">``</span></a>(int)</p></li>
-<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule group wait seconds. Default:<a href="#id59"><span class="problematic" id="id60">``</span></a>180<a href="#id61"><span class="problematic" id="id62">``</span></a>(int)</p></li>
-<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The cluster alert rule inherited. Default:<a href="#id63"><span class="problematic" id="id64">``</span></a>true<a href="#id65"><span class="problematic" id="id66">``</span></a>(bool)</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The cluster alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleMetricRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule metric rule. ConflictsWith:<a href="#id67"><span class="problematic" id="id68">``</span></a>”event_rule”, “node_rule”, “system_service_rule”<a href="#id69"><span class="problematic" id="id70">``</span></a>(list Maxitems:1)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule name (string)</p></li>
-<li><p><strong>node_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleNodeRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule node rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p></li>
-<li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The cluster alert rule wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p></li>
-<li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster alert rule severity. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;critical&quot;</span> <span class="pre">|</span> <span class="pre">&quot;info&quot;</span> <span class="pre">|</span> <span class="pre">&quot;warning&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">critical</span></code> (string)</p></li>
-<li><p><strong>system_service_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleSystemServiceRuleArgs'</em><em>]</em><em>]</em>) – The cluster alert rule system service rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “node_rule”`</cite> (list Maxitems:1)</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Annotations of the resource</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert rule cluster ID</p></li>
+<li><p><strong>event_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleEventRuleArgs'</em><em>]</em><em>]</em>) – Alert event rule</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert rule group ID</p></li>
+<li><p><strong>group_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Alert rule interval seconds</p></li>
+<li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Alert rule wait seconds</p></li>
+<li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Alert rule inherited</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels of the resource</p></li>
+<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleMetricRuleArgs'</em><em>]</em><em>]</em>) – Alert metric rule</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert rule name</p></li>
+<li><p><strong>node_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleNodeRuleArgs'</em><em>]</em><em>]</em>) – Alert node rule</p></li>
+<li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Alert rule repeat interval seconds</p></li>
+<li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alert rule severity</p></li>
+<li><p><strong>system_service_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ClusterAlterRuleSystemServiceRuleArgs'</em><em>]</em><em>]</em>) – Alert system service rule</p></li>
 </ul>
 </dd>
 </dl>
@@ -3973,85 +3947,85 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.annotations">
 <em class="property">property </em><code class="sig-name descname">annotations</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.annotations" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule annotations (map)</p>
+<dd><p>Annotations of the resource</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.cluster_id">
 <em class="property">property </em><code class="sig-name descname">cluster_id</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.cluster_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster id where create cluster alert rule (string)</p>
+<dd><p>Alert rule cluster ID</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.event_rule">
 <em class="property">property </em><code class="sig-name descname">event_rule</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.event_rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule event rule. ConflictsWith: <cite>“metric_rule”, “node_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p>
+<dd><p>Alert event rule</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.group_id">
 <em class="property">property </em><code class="sig-name descname">group_id</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.group_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule alert group ID (string)</p>
+<dd><p>Alert rule group ID</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.group_interval_seconds">
 <em class="property">property </em><code class="sig-name descname">group_interval_seconds</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.group_interval_seconds" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule group interval seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p>
+<dd><p>Alert rule interval seconds</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.group_wait_seconds">
 <em class="property">property </em><code class="sig-name descname">group_wait_seconds</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.group_wait_seconds" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p>
+<dd><p>Alert rule wait seconds</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.inherited">
 <em class="property">property </em><code class="sig-name descname">inherited</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.inherited" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule inherited. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p>
+<dd><p>Alert rule inherited</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.labels">
 <em class="property">property </em><code class="sig-name descname">labels</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule labels (map)</p>
+<dd><p>Labels of the resource</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.metric_rule">
 <em class="property">property </em><code class="sig-name descname">metric_rule</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.metric_rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule metric rule. ConflictsWith: <cite>“event_rule”, “node_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p>
+<dd><p>Alert metric rule</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.name">
 <em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule name (string)</p>
+<dd><p>Alert rule name</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.node_rule">
 <em class="property">property </em><code class="sig-name descname">node_rule</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.node_rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule node rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p>
+<dd><p>Alert node rule</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.repeat_interval_seconds">
 <em class="property">property </em><code class="sig-name descname">repeat_interval_seconds</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.repeat_interval_seconds" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (int)</p>
+<dd><p>Alert rule repeat interval seconds</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.severity">
 <em class="property">property </em><code class="sig-name descname">severity</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.severity" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule severity. Supported values : <code class="docutils literal notranslate"><span class="pre">&quot;critical&quot;</span> <span class="pre">|</span> <span class="pre">&quot;info&quot;</span> <span class="pre">|</span> <span class="pre">&quot;warning&quot;</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">critical</span></code> (string)</p>
+<dd><p>Alert rule severity</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterAlterRule.system_service_rule">
 <em class="property">property </em><code class="sig-name descname">system_service_rule</code><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule.system_service_rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster alert rule system service rule. ConflictsWith: <cite>“event_rule”, “metric_rule”, “node_rule”`</cite> (list Maxitems:1)</p>
+<dd><p>Alert system service rule</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4589,16 +4563,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_rancher2.ClusterSync">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterSync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pool_ids</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">synced</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_monitoring</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterSync" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterSync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pool_ids</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_confirm</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">synced</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_monitoring</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterSync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ClusterSync resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
 :param pulumi.Input[str] cluster_id: The cluster ID that is syncing (string)
 :param pulumi.Input[List[pulumi.Input[str]]] node_pool_ids: The node pool IDs used by the cluster id (list)
+:param pulumi.Input[float] state_confirm: Wait until active status is confirmed a number of times (wait interval of 5s). Default: <code class="docutils literal notranslate"><span class="pre">1</span></code> means no confirmation (int)
 :param pulumi.Input[bool] wait_monitoring: Wait until monitoring is up and running. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.ClusterSync.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_config</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pool_ids</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">synced</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_monitoring</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.cluster_sync.ClusterSync<a class="headerlink" href="#pulumi_rancher2.ClusterSync.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_config</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pool_ids</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_confirm</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">synced</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">system_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_monitoring</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.cluster_sync.ClusterSync<a class="headerlink" href="#pulumi_rancher2.ClusterSync.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterSync resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4611,6 +4586,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>default_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) Default project ID for the cluster sync (string)</p></li>
 <li><p><strong>kube_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed/Sensitive) Kube Config generated for the cluster sync (string)</p></li>
 <li><p><strong>node_pool_ids</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The node pool IDs used by the cluster id (list)</p></li>
+<li><p><strong>state_confirm</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Wait until active status is confirmed a number of times (wait interval of 5s). Default: <code class="docutils literal notranslate"><span class="pre">1</span></code> means no confirmation (int)</p></li>
 <li><p><strong>system_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) System project ID for the cluster sync (string)</p></li>
 <li><p><strong>wait_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Wait until monitoring is up and running. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code> (bool)</p></li>
 </ul>
@@ -4640,6 +4616,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_rancher2.ClusterSync.node_pool_ids">
 <em class="property">property </em><code class="sig-name descname">node_pool_ids</code><a class="headerlink" href="#pulumi_rancher2.ClusterSync.node_pool_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The node pool IDs used by the cluster id (list)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.ClusterSync.state_confirm">
+<em class="property">property </em><code class="sig-name descname">state_confirm</code><a class="headerlink" href="#pulumi_rancher2.ClusterSync.state_confirm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until active status is confirmed a number of times (wait interval of 5s). Default: <code class="docutils literal notranslate"><span class="pre">1</span></code> means no confirmation (int)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5321,7 +5303,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py method">
 <dt id="pulumi_rancher2.GetClusterAlterRuleResult.event_rule">
 <em class="property">property </em><code class="sig-name descname">event_rule</code><a class="headerlink" href="#pulumi_rancher2.GetClusterAlterRuleResult.event_rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) The cluster alert rule event rule. ConflictsWith: <cite>“metric_rule”, “node_rule”, “system_service_rule”`</cite> (list Maxitems:1)</p>
+<dd><p>(Computed) The cluster alert rule event rule. ConflictsWith: <code class="docutils literal notranslate"><span class="pre">&quot;metric_rule&quot;,</span> <span class="pre">&quot;node_rule&quot;,</span> <span class="pre">&quot;system_service_rule&quot;</span></code> (list Maxitems:1)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5733,9 +5715,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetClusterScanResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">run_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scan_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scan_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterScan.</p>
 <dl class="py method">
+<dt id="pulumi_rancher2.GetClusterScanResult.annotations">
+<em class="property">property </em><code class="sig-name descname">annotations</code><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult.annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Annotations of the resource (map)</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_rancher2.GetClusterScanResult.id">
 <em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GetClusterScanResult.labels">
+<em class="property">property </em><code class="sig-name descname">labels</code><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Labels of the resource (map)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GetClusterScanResult.run_type">
+<em class="property">property </em><code class="sig-name descname">run_type</code><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult.run_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Cluster Scan run type (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GetClusterScanResult.scan_config">
+<em class="property">property </em><code class="sig-name descname">scan_config</code><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult.scan_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Cluster Scan config (bool)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GetClusterScanResult.scan_type">
+<em class="property">property </em><code class="sig-name descname">scan_type</code><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult.scan_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Cluster Scan type (string)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_rancher2.GetClusterScanResult.status">
+<em class="property">property </em><code class="sig-name descname">status</code><a class="headerlink" href="#pulumi_rancher2.GetClusterScanResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Cluster Scan status (string)</p>
 </dd></dl>
 
 </dd></dl>
@@ -6657,75 +6675,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GetRoleTempalteResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">administrative</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">annotations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">builtin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hidden</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locked</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_template_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRoleTempalte.</p>
 <dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.administrative">
-<em class="property">property </em><code class="sig-name descname">administrative</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.administrative" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Administrative role template (bool)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.annotations">
-<em class="property">property </em><code class="sig-name descname">annotations</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.annotations" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Annotations for role template object (map)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.builtin">
-<em class="property">property </em><code class="sig-name descname">builtin</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.builtin" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Builtin role template (string)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.default_role">
-<em class="property">property </em><code class="sig-name descname">default_role</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.default_role" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Default role template for new created cluster or project (bool)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.description">
-<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Role template description (string)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.external">
-<em class="property">property </em><code class="sig-name descname">external</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.external" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) External role template (bool)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.hidden">
-<em class="property">property </em><code class="sig-name descname">hidden</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.hidden" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Hidden role template (bool)</p>
-</dd></dl>
-
-<dl class="py method">
 <dt id="pulumi_rancher2.GetRoleTempalteResult.id">
 <em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.labels">
-<em class="property">property </em><code class="sig-name descname">labels</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Labels for role template object (map)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.locked">
-<em class="property">property </em><code class="sig-name descname">locked</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.locked" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Locked role template (bool)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.role_template_ids">
-<em class="property">property </em><code class="sig-name descname">role_template_ids</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.role_template_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Inherit role template IDs (list)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_rancher2.GetRoleTempalteResult.rules">
-<em class="property">property </em><code class="sig-name descname">rules</code><a class="headerlink" href="#pulumi_rancher2.GetRoleTempalteResult.rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) Role template policy rules (list)</p>
 </dd></dl>
 
 </dd></dl>
@@ -7249,20 +7201,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">))</span>
 <span class="c1"># Create a new rancher2 Namespace assigned to default cluster project</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">Namespace</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
-    <span class="n">container_resource_limit</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">NamespaceContainerResourceLimitArgs</span><span class="p">(</span>
-        <span class="n">limits_cpu</span><span class="o">=</span><span class="s2">&quot;20m&quot;</span><span class="p">,</span>
-        <span class="n">limits_memory</span><span class="o">=</span><span class="s2">&quot;20Mi&quot;</span><span class="p">,</span>
-        <span class="n">requests_cpu</span><span class="o">=</span><span class="s2">&quot;1m&quot;</span><span class="p">,</span>
-        <span class="n">requests_memory</span><span class="o">=</span><span class="s2">&quot;1Mi&quot;</span><span class="p">,</span>
-    <span class="p">),</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo namespace&quot;</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="n">foo_custom</span><span class="o">.</span><span class="n">default_project_id</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo namespace&quot;</span><span class="p">,</span>
     <span class="n">resource_quota</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">NamespaceResourceQuotaArgs</span><span class="p">(</span>
         <span class="n">limit</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">NamespaceResourceQuotaLimitArgs</span><span class="p">(</span>
             <span class="n">limits_cpu</span><span class="o">=</span><span class="s2">&quot;100m&quot;</span><span class="p">,</span>
             <span class="n">limits_memory</span><span class="o">=</span><span class="s2">&quot;100Mi&quot;</span><span class="p">,</span>
             <span class="n">requests_storage</span><span class="o">=</span><span class="s2">&quot;1Gi&quot;</span><span class="p">,</span>
         <span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">container_resource_limit</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">NamespaceContainerResourceLimitArgs</span><span class="p">(</span>
+        <span class="n">limits_cpu</span><span class="o">=</span><span class="s2">&quot;20m&quot;</span><span class="p">,</span>
+        <span class="n">limits_memory</span><span class="o">=</span><span class="s2">&quot;20Mi&quot;</span><span class="p">,</span>
+        <span class="n">requests_cpu</span><span class="o">=</span><span class="s2">&quot;1m&quot;</span><span class="p">,</span>
+        <span class="n">requests_memory</span><span class="o">=</span><span class="s2">&quot;1Mi&quot;</span><span class="p">,</span>
     <span class="p">))</span>
 </pre></div>
 </div>
@@ -7752,12 +7704,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="c1"># Create a new rancher2 Node Template from Rancher 2.2.x</span>
 <span class="n">foo_cloud_credential</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">CloudCredential</span><span class="p">(</span><span class="s2">&quot;fooCloudCredential&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo test&quot;</span><span class="p">,</span>
     <span class="n">amazonec2_credential_config</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">CloudCredentialAmazonec2CredentialConfigArgs</span><span class="p">(</span>
         <span class="n">access_key</span><span class="o">=</span><span class="s2">&quot;&lt;AWS_ACCESS_KEY&gt;&quot;</span><span class="p">,</span>
         <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;&lt;AWS_SECRET_KEY&gt;&quot;</span><span class="p">,</span>
-    <span class="p">),</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo test&quot;</span><span class="p">)</span>
+    <span class="p">))</span>
 <span class="n">foo_node_template</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">NodeTemplate</span><span class="p">(</span><span class="s2">&quot;fooNodeTemplate&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo test&quot;</span><span class="p">,</span>
+    <span class="n">cloud_credential_id</span><span class="o">=</span><span class="n">foo_cloud_credential</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">amazonec2_config</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">NodeTemplateAmazonec2ConfigArgs</span><span class="p">(</span>
         <span class="n">ami</span><span class="o">=</span><span class="s2">&quot;&lt;AMI_ID&gt;&quot;</span><span class="p">,</span>
         <span class="n">region</span><span class="o">=</span><span class="s2">&quot;&lt;REGION&gt;&quot;</span><span class="p">,</span>
@@ -7765,9 +7719,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="n">subnet_id</span><span class="o">=</span><span class="s2">&quot;&lt;SUBNET_ID&gt;&quot;</span><span class="p">,</span>
         <span class="n">vpc_id</span><span class="o">=</span><span class="s2">&quot;&lt;VPC_ID&gt;&quot;</span><span class="p">,</span>
         <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;&lt;ZONE&gt;&quot;</span><span class="p">,</span>
-    <span class="p">),</span>
-    <span class="n">cloud_credential_id</span><span class="o">=</span><span class="n">foo_cloud_credential</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;foo test&quot;</span><span class="p">)</span>
+    <span class="p">))</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -8974,36 +8926,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="c1"># Create a new Rancher2 Project</span>
 <span class="n">foo_project</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;fooProject&quot;</span><span class="p">,</span>
     <span class="n">cluster_id</span><span class="o">=</span><span class="s2">&quot;&lt;cluster_id&gt;&quot;</span><span class="p">,</span>
-    <span class="n">container_resource_limit</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">ProjectContainerResourceLimitArgs</span><span class="p">(</span>
-        <span class="n">limits_cpu</span><span class="o">=</span><span class="s2">&quot;20m&quot;</span><span class="p">,</span>
-        <span class="n">limits_memory</span><span class="o">=</span><span class="s2">&quot;20Mi&quot;</span><span class="p">,</span>
-        <span class="n">requests_cpu</span><span class="o">=</span><span class="s2">&quot;1m&quot;</span><span class="p">,</span>
-        <span class="n">requests_memory</span><span class="o">=</span><span class="s2">&quot;1Mi&quot;</span><span class="p">,</span>
-    <span class="p">),</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Terraform project &quot;</span><span class="p">,</span>
     <span class="n">resource_quota</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">ProjectResourceQuotaArgs</span><span class="p">(</span>
-        <span class="n">namespace_default_limit</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">ProjectResourceQuotaNamespaceDefaultLimitArgs</span><span class="p">(</span>
-            <span class="n">limits_cpu</span><span class="o">=</span><span class="s2">&quot;500m&quot;</span><span class="p">,</span>
-            <span class="n">limits_memory</span><span class="o">=</span><span class="s2">&quot;500Mi&quot;</span><span class="p">,</span>
-            <span class="n">requests_storage</span><span class="o">=</span><span class="s2">&quot;1Gi&quot;</span><span class="p">,</span>
-        <span class="p">),</span>
         <span class="n">project_limit</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">ProjectResourceQuotaProjectLimitArgs</span><span class="p">(</span>
             <span class="n">limits_cpu</span><span class="o">=</span><span class="s2">&quot;2000m&quot;</span><span class="p">,</span>
             <span class="n">limits_memory</span><span class="o">=</span><span class="s2">&quot;2000Mi&quot;</span><span class="p">,</span>
             <span class="n">requests_storage</span><span class="o">=</span><span class="s2">&quot;2Gi&quot;</span><span class="p">,</span>
         <span class="p">),</span>
+        <span class="n">namespace_default_limit</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">ProjectResourceQuotaNamespaceDefaultLimitArgs</span><span class="p">(</span>
+            <span class="n">limits_cpu</span><span class="o">=</span><span class="s2">&quot;500m&quot;</span><span class="p">,</span>
+            <span class="n">limits_memory</span><span class="o">=</span><span class="s2">&quot;500Mi&quot;</span><span class="p">,</span>
+            <span class="n">requests_storage</span><span class="o">=</span><span class="s2">&quot;1Gi&quot;</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">container_resource_limit</span><span class="o">=</span><span class="n">rancher2</span><span class="o">.</span><span class="n">ProjectContainerResourceLimitArgs</span><span class="p">(</span>
+        <span class="n">limits_cpu</span><span class="o">=</span><span class="s2">&quot;20m&quot;</span><span class="p">,</span>
+        <span class="n">limits_memory</span><span class="o">=</span><span class="s2">&quot;20Mi&quot;</span><span class="p">,</span>
+        <span class="n">requests_cpu</span><span class="o">=</span><span class="s2">&quot;1m&quot;</span><span class="p">,</span>
+        <span class="n">requests_memory</span><span class="o">=</span><span class="s2">&quot;1Mi&quot;</span><span class="p">,</span>
     <span class="p">))</span>
 <span class="c1"># Create a new Rancher2 Project Alert Group</span>
 <span class="n">foo_project_alert_group</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">ProjectAlertGroup</span><span class="p">(</span><span class="s2">&quot;fooProjectAlertGroup&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Terraform project alert group&quot;</span><span class="p">,</span>
-    <span class="n">group_interval_seconds</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="n">foo_project</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">group_interval_seconds</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
     <span class="n">repeat_interval_seconds</span><span class="o">=</span><span class="mi">3600</span><span class="p">)</span>
 <span class="c1"># Create a new Rancher2 Project Alert Rule</span>
 <span class="n">foo_project_alert_rule</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">ProjectAlertRule</span><span class="p">(</span><span class="s2">&quot;fooProjectAlertRule&quot;</span><span class="p">,</span>
+    <span class="n">project_id</span><span class="o">=</span><span class="n">foo_project_alert_group</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
     <span class="n">group_id</span><span class="o">=</span><span class="n">foo_project_alert_group</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">group_interval_seconds</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
-    <span class="n">project_id</span><span class="o">=</span><span class="n">foo_project_alert_group</span><span class="o">.</span><span class="n">project_id</span><span class="p">,</span>
     <span class="n">repeat_interval_seconds</span><span class="o">=</span><span class="mi">6000</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -9018,9 +8970,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
 <li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The project alert rule inherited. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The project alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectAlertRuleMetricRuleArgs'</em><em>]</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id76"><span class="problematic" id="id77">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
+<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectAlertRuleMetricRuleArgs'</em><em>]</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id44"><span class="problematic" id="id45">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule name (string)</p></li>
-<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectAlertRulePodRuleArgs'</em><em>]</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id78"><span class="problematic" id="id79">``</span></a>(list Maxitems:1)</p></li>
+<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectAlertRulePodRuleArgs'</em><em>]</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id46"><span class="problematic" id="id47">``</span></a>(list Maxitems:1)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id where create project alert rule (string)</p></li>
 <li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule wait seconds. Default: <cite>3600</cite> (int)</p></li>
 <li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule severity. Supported values : <cite>“critical” | “info” | “warning”</cite>. Default: <cite>critical</cite> (string)</p></li>
@@ -9045,9 +8997,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>group_wait_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule group wait seconds. Default: <code class="docutils literal notranslate"><span class="pre">180</span></code> (int)</p></li>
 <li><p><strong>inherited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The project alert rule inherited. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> (bool)</p></li>
 <li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The project alert rule labels (map)</p></li>
-<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectAlertRuleMetricRuleArgs'</em><em>]</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id80"><span class="problematic" id="id81">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
+<li><p><strong>metric_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectAlertRuleMetricRuleArgs'</em><em>]</em><em>]</em>) – The project alert rule metric rule. ConflictsWith: :raw-html-m2r:<a href="#id48"><span class="problematic" id="id49">`</span></a>&lt;code class=”docutils literal”&gt;&lt;span class=”pre”&gt;”pod_rule”, “workload_rule”`` (list Maxitems:1)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule name (string)</p></li>
-<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectAlertRulePodRuleArgs'</em><em>]</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id82"><span class="problematic" id="id83">``</span></a>(list Maxitems:1)</p></li>
+<li><p><strong>pod_rule</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectAlertRulePodRuleArgs'</em><em>]</em><em>]</em>) – The project alert rule pod rule. ConflictsWith:&lt;/span&gt;&lt;/code&gt;`”metric_rule”, “workload_rule”<a href="#id50"><span class="problematic" id="id51">``</span></a>(list Maxitems:1)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id where create project alert rule (string)</p></li>
 <li><p><strong>repeat_interval_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The project alert rule wait seconds. Default: <cite>3600</cite> (int)</p></li>
 <li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project alert rule severity. Supported values : <cite>“critical” | “info” | “warning”</cite>. Default: <cite>critical</cite> (string)</p></li>
@@ -10198,10 +10150,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Annotations of the token (map)</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – (Computed) Annotations of the token (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cluster ID for scoped token (string)</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Token description (string)</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels of the token (map)</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – (Computed) Labels of the token (map)</p></li>
 <li><p><strong>renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Renew expired or disabled token</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Token time to live in seconds. Default <code class="docutils literal notranslate"><span class="pre">0</span></code> (int)</p></li>
 </ul>
@@ -10219,12 +10171,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) Token access key part (string)</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Annotations of the token (map)</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – (Computed) Annotations of the token (map)</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cluster ID for scoped token (string)</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Token description (string)</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (Computed) Token is enabled (bool)</p></li>
 <li><p><strong>expired</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (Computed) Token is expired (bool)</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Labels of the token (map)</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – (Computed) Labels of the token (map)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) Token name (string)</p></li>
 <li><p><strong>renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Renew expired or disabled token</p></li>
 <li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed/Sensitive) Token secret key part (string)</p></li>
@@ -10245,7 +10197,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.Token.annotations">
 <em class="property">property </em><code class="sig-name descname">annotations</code><a class="headerlink" href="#pulumi_rancher2.Token.annotations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Annotations of the token (map)</p>
+<dd><p>(Computed) Annotations of the token (map)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10275,7 +10227,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_rancher2.Token.labels">
 <em class="property">property </em><code class="sig-name descname">labels</code><a class="headerlink" href="#pulumi_rancher2.Token.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Labels of the token (map)</p>
+<dd><p>(Computed) Labels of the token (map)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10362,9 +10314,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="c1"># Create a new rancher2 User</span>
 <span class="n">foo_user</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;fooUser&quot;</span><span class="p">,</span>
-    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
     <span class="n">password</span><span class="o">=</span><span class="s2">&quot;changeme&quot;</span><span class="p">,</span>
-    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1"># Create a new rancher2 global_role_binding for User</span>
 <span class="n">foo_global_role_binding</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">GlobalRoleBinding</span><span class="p">(</span><span class="s2">&quot;fooGlobalRoleBinding&quot;</span><span class="p">,</span>
     <span class="n">global_role_id</span><span class="o">=</span><span class="s2">&quot;user-base&quot;</span><span class="p">,</span>
@@ -10698,7 +10650,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_rancher2.get_cluster_scan">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_scan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.get_cluster_scan.AwaitableGetClusterScanResult<a class="headerlink" href="#pulumi_rancher2.get_cluster_scan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Use this data source to retrieve information about a Rancher v2 Cluster CIS Scan resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_id</strong> (<em>str</em>) – Cluster ID for CIS Scan (string)</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the cluster Scan (string)</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -11065,21 +11025,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_rancher2.get_role_tempalte">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_role_tempalte</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_rancher2.get_role_tempalte.AwaitableGetRoleTempalteResult<a class="headerlink" href="#pulumi_rancher2.get_role_tempalte" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to retrieve information about a Rancher v2 role template resource.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_rancher2</span> <span class="k">as</span> <span class="nn">rancher2</span>
-
-<span class="n">foo</span> <span class="o">=</span> <span class="n">rancher2</span><span class="o">.</span><span class="n">get_role_template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>context</strong> (<em>str</em>) – Role template context. <code class="docutils literal notranslate"><span class="pre">cluster</span></code> and <code class="docutils literal notranslate"><span class="pre">project</span></code> values are supported (string)</p></li>
-<li><p><strong>name</strong> (<em>str</em>) – The name of the Node Template (string)</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 <dl class="py function">
