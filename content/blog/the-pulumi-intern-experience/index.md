@@ -24,7 +24,7 @@ Let’s be real, onboarding with a new team in a remote situation was tough; the
 
 ### Remote Lifestyle
 
-I’m definitely not a fan of the [remote environment](https://www.pulumi.com/blog/coronavirus-plan/), however, I’m the kind of person that is more productive at night, so it allowed me to shift my work to times when I knew I would get things done. That said, face to face interaction was something I missed a lot, as it’s understandably harder to get to know people over a computer. However, since Pulumi already has many remote engineers, it was a very smooth process to get set up and start working right away.
+I’m definitely not a fan of the [remote environment]({{< relref "/blog/coronavirus-plan" >}}), however, I’m the kind of person that is more productive at night, so it allowed me to shift my work to times when I knew I would get things done. That said, face to face interaction was something I missed a lot, as it’s understandably harder to get to know people over a computer. However, since Pulumi already has many remote engineers, it was a very smooth process to get set up and start working right away.
 
 ## The Project Experience
 
