@@ -562,7 +562,7 @@ function waitForElementToExists(selector, callback) {
 }
 
 $(function() {
-    waitForElementToExists("pulumi-chooser[type='language'] > ul > li > a", function() {
+    waitForElementToExist("pulumi-chooser[type='language'] > ul > li > a", function() {
         var validPages = [ "/kube2pulumi/", "/tf2pulumi/" ];
         var currentPath = window.location.pathname;
 
@@ -587,7 +587,6 @@ $(function() {
                 loadCannedExample();
             }
             setCurrentInputKind("code");
-            console.log(getCurrentLanguage());
             convertCode(getCurrentLanguage() || "typescript", "code");
         }
 
