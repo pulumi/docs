@@ -50,7 +50,7 @@ What is the cloud? Three months later, I can say that the cloud, to me, is a vas
 
 Thank you [Albert]({{< relref "/blog/author/albert-zhong" >}}), [Zephyr]({{< relref "/blog/author/zephyr-zhou" >}}), and [Vova]({{< relref "/blog/author/vova-ivanov" >}}) for being incredible, kind, and helpful intern buddies!
 
-Thank you [Evan]({{< relref "/blog/author/evan-boyle" >}}) for being an amazing mentor by being so approachable, and always being there everyday. You were always so patient with me and answered virtually any question I threw at you :)
+Thank you [Evan]({{< relref "/docs/content/blog/author/evan-boyle" >}}) for being an amazing mentor by being so approachable, and always being there everyday. You were always so patient with me and answered virtually any question I threw at you :)
 
 Thank you [Lee]({{< relref "/blog/author/lee-zen" >}}) and and [Luke]({{< relref "/blog/author/luke-hoban" >}}) for being such organized, motivating, and empathetic managers!
 
