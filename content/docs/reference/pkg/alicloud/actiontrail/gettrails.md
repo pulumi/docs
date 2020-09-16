@@ -107,7 +107,7 @@ export const trailName = _default.then(_default => _default.trails[0].id);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_trails(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">include_shadow_trails</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTrailsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_trails(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">include_shadow_trails</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTrailsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -321,7 +321,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of ActionTrail Trail IDs. It is the same as trail name.
 {{% /md %}}</dd>
@@ -704,7 +704,7 @@ The following output properties are available:
 <a href="#actiontrails_python" style="color: inherit; text-decoration: inherit;">actiontrails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettrailsactiontrail">List[Get<wbr>Trails<wbr>Actiontrail]</a></span>
+        <span class="property-type"><a href="#gettrailsactiontrail">Sequence[Get<wbr>Trails<wbr>Actiontrail]</a></span>
     </dt>
     <dd>{{% md %}}Field `actiontrails` has been deprecated from version 1.95.0. Use `trails` instead."
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;actiontrails&#39; has been deprecated from version 1.95.0. Use &#39;trails&#39; instead.{{% /md %}}</p></dd>
@@ -726,7 +726,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of ActionTrail Trail ids. It is the same as trail name.
 {{% /md %}}</dd>
@@ -737,7 +737,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of trail names.
 {{% /md %}}</dd>
@@ -748,7 +748,7 @@ The following output properties are available:
 <a href="#trails_python" style="color: inherit; text-decoration: inherit;">trails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettrailstrail">List[Get<wbr>Trails<wbr>Trail]</a></span>
+        <span class="property-type"><a href="#gettrailstrail">Sequence[Get<wbr>Trails<wbr>Trail]</a></span>
     </dt>
     <dd>{{% md %}}A list of ActionTrail Trails. Each element contains the following attributes:
 {{% /md %}}</dd>

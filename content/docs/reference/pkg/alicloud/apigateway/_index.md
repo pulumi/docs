@@ -23,6 +23,7 @@ Explore the resources and functions of the apigateway module in the AliCloud pac
     <li><a href="getapis" title="GetApis"><span class="symbol function"></span>GetApis</a></li>
     <li><a href="getapps" title="GetApps"><span class="symbol function"></span>GetApps</a></li>
     <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,7 +35,7 @@ Explore the resources and functions of the apigateway module in the AliCloud pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.16.0</dd>
+	<dd>2.17.0</dd>
 </dl>
 
 

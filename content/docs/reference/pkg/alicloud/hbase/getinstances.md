@@ -107,7 +107,7 @@ const hbase = pulumi.output(alicloud.hbase.getInstances({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -332,7 +332,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The ids list of HBase instances
 {{% /md %}}</dd>
@@ -682,7 +682,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The ids list of HBase instances
 {{% /md %}}</dd>
@@ -693,7 +693,7 @@ The following output properties are available:
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancesinstance">List[Get<wbr>Instances<wbr>Instance]</a></span>
+        <span class="property-type"><a href="#getinstancesinstance">Sequence[Get<wbr>Instances<wbr>Instance]</a></span>
     </dt>
     <dd>{{% md %}}A list of HBase instances. Its every element contains the following attributes:
 {{% /md %}}</dd>
@@ -704,7 +704,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The names list of HBase instances
 {{% /md %}}</dd>
@@ -1542,7 +1542,7 @@ The following output properties are available:
 <a href="#core_disk_size_python" style="color: inherit; text-decoration: inherit;">core_<wbr>disk_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}core node disk size, unit:GB.
 {{% /md %}}</dd>
@@ -1575,7 +1575,7 @@ The following output properties are available:
 <a href="#core_node_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}same with "core_instance_quantity"
 {{% /md %}}</dd>
@@ -1662,7 +1662,7 @@ The following output properties are available:
 <a href="#master_node_count_python" style="color: inherit; text-decoration: inherit;">master_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the node count of master
 {{% /md %}}</dd>

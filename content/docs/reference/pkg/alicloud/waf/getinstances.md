@@ -128,7 +128,7 @@ export const theFirstWafInstanceId = _default.then(_default => _default.instance
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -342,7 +342,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of WAF instance IDs.
 {{% /md %}}</dd>
@@ -670,7 +670,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A list of WAF instance IDs.
 {{% /md %}}</dd>
@@ -681,7 +681,7 @@ The following output properties are available:
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancesinstance">List[Get<wbr>Instances<wbr>Instance]</a></span>
+        <span class="property-type"><a href="#getinstancesinstance">Sequence[Get<wbr>Instances<wbr>Instance]</a></span>
     </dt>
     <dd>{{% md %}}A list of WAF instances. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1046,7 +1046,7 @@ The following output properties are available:
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The timestamp (in seconds) indicating when the WAF instance expires.
 {{% /md %}}</dd>
@@ -1068,7 +1068,7 @@ The following output properties are available:
 <a href="#in_debt_python" style="color: inherit; text-decoration: inherit;">in_<wbr>debt</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the WAF instance has overdue payments.
 {{% /md %}}</dd>
@@ -1090,7 +1090,7 @@ The following output properties are available:
 <a href="#remain_day_python" style="color: inherit; text-decoration: inherit;">remain_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days before the trial period of the WAF instance expires.
 {{% /md %}}</dd>
@@ -1101,7 +1101,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The status of WAF instance to filter results. Optional value: `0`: The instance has expired, `1` : The instance has not expired and is working properly.
 {{% /md %}}</dd>
@@ -1122,7 +1122,7 @@ The following output properties are available:
 <a href="#trial_python" style="color: inherit; text-decoration: inherit;">trial</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a trial instance.
 {{% /md %}}</dd>

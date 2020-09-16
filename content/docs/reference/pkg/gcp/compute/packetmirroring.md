@@ -31,7 +31,7 @@ To get more information about PacketMirroring, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.PacketMirroring">PacketMirroring</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringCollectorIlbArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringFilterArgs]</span> = None<span class="p">, </span><span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringMirroredResourcesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringNetworkArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.PacketMirroring">PacketMirroring</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringCollectorIlbArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringFilterArgs]</span> = None<span class="p">, </span><span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringMirroredResourcesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringNetworkArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -641,7 +641,7 @@ Structure is documented below.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
@@ -771,7 +771,7 @@ Get an existing PacketMirroring resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringCollectorIlbArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringFilterArgs]</span> = None<span class="p">, </span><span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringMirroredResourcesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringNetworkArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PacketMirroring</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringCollectorIlbArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringFilterArgs]</span> = None<span class="p">, </span><span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringMirroredResourcesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringNetworkArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PacketMirroring</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1323,7 +1323,7 @@ Structure is documented below.
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
@@ -1576,7 +1576,7 @@ Each value may be one of `tcp`, `udp`, and `icmp`.
 <a href="#cidr_ranges_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
@@ -1588,7 +1588,7 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
 Each value may be one of `tcp`, `udp`, and `icmp`.
@@ -1751,7 +1751,7 @@ Structure is documented below.
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">List[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">Sequence[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
 Structure is documented below.
@@ -1763,7 +1763,7 @@ Structure is documented below.
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">List[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">Sequence[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
 Structure is documented below.
@@ -1775,7 +1775,7 @@ Structure is documented below.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}All instances with these tags will be mirrored.
 {{% /md %}}</dd>

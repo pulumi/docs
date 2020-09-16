@@ -31,7 +31,7 @@ To get more information about Tag, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datacatalog/#pulumi_gcp.datacatalog.Tag">Tag</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[List[TagFieldArgs]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datacatalog/#pulumi_gcp.datacatalog.Tag">Tag</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[TagFieldArgs]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,7 +386,7 @@ all entries in that group.
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfield">List[Tag<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tagfield">Sequence[Tag<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
@@ -631,7 +631,7 @@ Get an existing Tag resource's state with the given name, ID, and optional extra
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[List[TagFieldArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_displayname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Tag</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[TagFieldArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_displayname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Tag</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1017,7 +1017,7 @@ For attaching a tag to a nested column, use `.` to separate the column names. Ex
 <a href="#state_fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfield">List[Tag<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tagfield">Sequence[Tag<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
@@ -1470,7 +1470,7 @@ Structure is documented below.
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}-
 The order of this field with respect to other fields in this tag. For example, a higher value can indicate

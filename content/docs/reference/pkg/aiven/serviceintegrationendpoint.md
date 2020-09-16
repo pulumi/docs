@@ -2,7 +2,7 @@
 ---
 title: "ServiceIntegrationEndpoint"
 title_tag: "Resource ServiceIntegrationEndpoint | Package Aiven"
-meta_desc: "Explore the ServiceIntegrationEndpoint resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the ServiceIntegrationEndpoint resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,101 +11,6 @@ meta_desc: "Explore the ServiceIntegrationEndpoint resource of the Aiven package
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myendpoint = new Aiven.ServiceIntegrationEndpoint("myendpoint", new Aiven.ServiceIntegrationEndpointArgs
-        {
-            DatadogUserConfig = new Aiven.Inputs.ServiceIntegrationEndpointDatadogUserConfigArgs
-            {
-                DatadogApiKey = "<DATADOG_API_KEY>",
-            },
-            EndpointName = "<ENDPOINT_NAME>",
-            EndpointType = "datadog",
-            Project = aiven_project.Myproject.Project,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.NewServiceIntegrationEndpoint(ctx, "myendpoint", &aiven.ServiceIntegrationEndpointArgs{
-			DatadogUserConfig: &aiven.ServiceIntegrationEndpointDatadogUserConfigArgs{
-				DatadogApiKey: pulumi.String("<DATADOG_API_KEY>"),
-			},
-			EndpointName: pulumi.String("<ENDPOINT_NAME>"),
-			EndpointType: pulumi.String("datadog"),
-			Project:      pulumi.Any(aiven_project.Myproject.Project),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-myendpoint = aiven.ServiceIntegrationEndpoint("myendpoint",
-    datadog_user_config=aiven.ServiceIntegrationEndpointDatadogUserConfigArgs(
-        datadog_api_key="<DATADOG_API_KEY>",
-    ),
-    endpoint_name="<ENDPOINT_NAME>",
-    endpoint_type="datadog",
-    project=aiven_project["myproject"]["project"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
-    datadogUserConfig: {
-        datadogApiKey: "<DATADOG_API_KEY>",
-    },
-    endpointName: "<ENDPOINT_NAME>",
-    endpointType: "datadog",
-    project: aiven_project_myproject.project,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ServiceIntegrationEndpoint Resource {#create}

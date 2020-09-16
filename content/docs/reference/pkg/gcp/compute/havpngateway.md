@@ -635,7 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_interfaces_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">List[Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">Sequence[Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
 {{% /md %}}</dd>
@@ -660,7 +660,7 @@ Get an existing HaVpnGateway resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[HaVpnGatewayVpnInterfaceArgs]]</span> = None<span class="p">) -&gt;</span> HaVpnGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[HaVpnGatewayVpnInterfaceArgs]]</span> = None<span class="p">) -&gt;</span> HaVpnGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1126,7 +1126,7 @@ If it is not provided, the provider project is used.
 <a href="#state_vpn_interfaces_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#havpngatewayvpninterface">List[Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#havpngatewayvpninterface">Sequence[Ha<wbr>Vpn<wbr>Gateway<wbr>Vpn<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this VPN gateway.
 {{% /md %}}</dd>
@@ -1254,7 +1254,7 @@ If it is not provided, the provider project is used.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}an identifier for the resource with format `projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}`
 {{% /md %}}</dd>

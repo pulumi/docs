@@ -117,7 +117,7 @@ export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_resolution_lines(</span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lang</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">line_codes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">line_display_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">line_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_client_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetResolutionLinesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_resolution_lines(</span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lang</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">line_codes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">line_display_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">line_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_client_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetResolutionLinesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -416,7 +416,7 @@ The following arguments are supported:
 <a href="#line_codes_python" style="color: inherit; text-decoration: inherit;">line_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of lines codes.
 {{% /md %}}</dd>
@@ -427,7 +427,7 @@ The following arguments are supported:
 <a href="#line_display_names_python" style="color: inherit; text-decoration: inherit;">line_<wbr>display_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of line display names.
 {{% /md %}}</dd>
@@ -438,7 +438,7 @@ The following arguments are supported:
 <a href="#line_names_python" style="color: inherit; text-decoration: inherit;">line_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -803,7 +803,7 @@ The following output properties are available:
 <a href="#line_codes_python" style="color: inherit; text-decoration: inherit;">line_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Line code.
 {{% /md %}}</dd>
@@ -814,7 +814,7 @@ The following output properties are available:
 <a href="#line_display_names_python" style="color: inherit; text-decoration: inherit;">line_<wbr>display_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of line display names.
 {{% /md %}}</dd>
@@ -825,7 +825,7 @@ The following output properties are available:
 <a href="#lines_python" style="color: inherit; text-decoration: inherit;">lines</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresolutionlinesline">List[Get<wbr>Resolution<wbr>Lines<wbr>Line]</a></span>
+        <span class="property-type"><a href="#getresolutionlinesline">Sequence[Get<wbr>Resolution<wbr>Lines<wbr>Line]</a></span>
     </dt>
     <dd>{{% md %}}A list of cloud resolution line. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -856,7 +856,7 @@ The following output properties are available:
 <a href="#line_names_python" style="color: inherit; text-decoration: inherit;">line_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

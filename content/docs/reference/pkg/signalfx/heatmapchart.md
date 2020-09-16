@@ -75,7 +75,57 @@ data(""cpu.total.idle"", filter=myfilters).publish()
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := signalfx.NewHeatmapChart(ctx, "myheatmapchart0", &signalfx.HeatmapChartArgs{
+			ColorRange: &signalfx.HeatmapChartColorRangeArgs{
+				Color:    pulumi.String("#ff0000"),
+				MaxValue: pulumi.Float64(100),
+				MinValue: pulumi.Float64(0),
+			},
+			ColorScales: signalfx.HeatmapChartColorScaleArray{
+				&signalfx.HeatmapChartColorScaleArgs{
+					Color: pulumi.String("green"),
+					Gte:   pulumi.Float64(99),
+				},
+				&signalfx.HeatmapChartColorScaleArgs{
+					Color: pulumi.String("yellow"),
+					Gte:   pulumi.Float64(95),
+					Lt:    pulumi.Float64(99),
+				},
+				&signalfx.HeatmapChartColorScaleArgs{
+					Color: pulumi.String("red"),
+					Lt:    pulumi.Float64(95),
+				},
+			},
+			Description:     pulumi.String("Very cool Heatmap"),
+			DisableSampling: pulumi.Bool(true),
+			GroupBies: pulumi.StringArray{
+				pulumi.String("hostname"),
+				pulumi.String("host"),
+			},
+			HideTimestamp: pulumi.Bool(true),
+			ProgramText:   pulumi.String(fmt.Sprintf("%v%v%v", "myfilters = filter(\"cluster_name\", \"prod\") and filter(\"role\", \"search\")\n", "data(\"cpu.total.idle\", filter=myfilters).publish()\n", "\n")),
+			SortBy:        pulumi.String("+host"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,25 +134,25 @@ import pulumi
 import pulumi_signalfx as signalfx
 
 myheatmapchart0 = signalfx.HeatmapChart("myheatmapchart0",
-    color_range={
-        "color": "#ff0000",
-        "maxValue": 100,
-        "minValue": 0,
-    },
+    color_range=signalfx.HeatmapChartColorRangeArgs(
+        color="#ff0000",
+        max_value=100,
+        min_value=0,
+    ),
     color_scales=[
-        {
-            "color": "green",
-            "gte": 99,
-        },
-        {
-            "color": "yellow",
-            "gte": 95,
-            "lt": 99,
-        },
-        {
-            "color": "red",
-            "lt": 95,
-        },
+        signalfx.HeatmapChartColorScaleArgs(
+            color="green",
+            gte=99,
+        ),
+        signalfx.HeatmapChartColorScaleArgs(
+            color="yellow",
+            gte=95,
+            lt=99,
+        ),
+        signalfx.HeatmapChartColorScaleArgs(
+            color="red",
+            lt=95,
+        ),
     ],
     description="Very cool Heatmap",
     disable_sampling=True,
@@ -141,7 +191,7 @@ const myheatmapchart0 = new signalfx.HeatmapChart("myheatmapchart0", {
         {
             color: "yellow",
             gte: 95,
-            lt: 99, // This ensures we cover the range 95-99
+            lt: 99, // This ensures terraform recognizes that we cover the range 95-99
         },
         {
             color: "red",
@@ -176,11 +226,11 @@ data("cpu.total.idle", filter=myfilters).publish()
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.HeatmapChart">HeatmapChart</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>color_range=None<span class="p">, </span>color_scales=None<span class="p">, </span>description=None<span class="p">, </span>disable_sampling=None<span class="p">, </span>group_bies=None<span class="p">, </span>hide_timestamp=None<span class="p">, </span>max_delay=None<span class="p">, </span>minimum_resolution=None<span class="p">, </span>name=None<span class="p">, </span>program_text=None<span class="p">, </span>refresh_interval=None<span class="p">, </span>sort_by=None<span class="p">, </span>unit_prefix=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.HeatmapChart">HeatmapChart</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">color_range</span><span class="p">:</span> <span class="nx">Optional[HeatmapChartColorRangeArgs]</span> = None<span class="p">, </span><span class="nx">color_scales</span><span class="p">:</span> <span class="nx">Optional[Sequence[HeatmapChartColorScaleArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_bies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_timestamp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sort_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#HeatmapChart">NewHeatmapChart</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#HeatmapChartArgs">HeatmapChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#HeatmapChart">HeatmapChart</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChart">NewHeatmapChart</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartArgs">HeatmapChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChart">HeatmapChart</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -254,7 +304,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -274,7 +324,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#HeatmapChartArgs">HeatmapChartArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartArgs">HeatmapChartArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -284,7 +334,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -815,7 +865,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#color_range_python" style="color: inherit; text-decoration: inherit;">color_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Dict[Heatmap<wbr>Chart<wbr>Color<wbr>Range]</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -826,7 +876,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#color_scales_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scales</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">List[Heatmap<wbr>Chart<wbr>Color<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorscale">Sequence[Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -859,7 +909,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
@@ -881,7 +931,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
@@ -892,7 +942,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
@@ -914,7 +964,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#refresh_interval_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
@@ -977,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1005,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1033,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1061,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1083,15 +1133,16 @@ Get an existing HeatmapChart resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>color_range=None<span class="p">, </span>color_scales=None<span class="p">, </span>description=None<span class="p">, </span>disable_sampling=None<span class="p">, </span>group_bies=None<span class="p">, </span>hide_timestamp=None<span class="p">, </span>max_delay=None<span class="p">, </span>minimum_resolution=None<span class="p">, </span>name=None<span class="p">, </span>program_text=None<span class="p">, </span>refresh_interval=None<span class="p">, </span>sort_by=None<span class="p">, </span>unit_prefix=None<span class="p">, </span>url=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">color_range</span><span class="p">:</span> <span class="nx">Optional[HeatmapChartColorRangeArgs]</span> = None<span class="p">, </span><span class="nx">color_scales</span><span class="p">:</span> <span class="nx">Optional[Sequence[HeatmapChartColorScaleArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_bies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_timestamp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sort_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HeatmapChart</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHeatmapChart<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#HeatmapChartState">HeatmapChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#HeatmapChart">HeatmapChart</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHeatmapChart<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartState">HeatmapChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChart">HeatmapChart</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.HeatmapChart.html">HeatmapChart</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..HeatmapChartState.html">HeatmapChartState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.HeatmapChart.html">HeatmapChart</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..HeatmapChartState.html">HeatmapChartState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1348,7 +1399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1509,7 +1560,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1670,7 +1721,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1686,7 +1737,7 @@ The following state arguments are supported:
 <a href="#state_color_range_python" style="color: inherit; text-decoration: inherit;">color_<wbr>range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Dict[Heatmap<wbr>Chart<wbr>Color<wbr>Range]</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -1697,7 +1748,7 @@ The following state arguments are supported:
 <a href="#state_color_scales_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scales</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">List[Heatmap<wbr>Chart<wbr>Color<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorscale">Sequence[Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
@@ -1730,7 +1781,7 @@ The following state arguments are supported:
 <a href="#state_group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
@@ -1752,7 +1803,7 @@ The following state arguments are supported:
 <a href="#state_max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
@@ -1763,7 +1814,7 @@ The following state arguments are supported:
 <a href="#state_minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
@@ -1796,7 +1847,7 @@ The following state arguments are supported:
 <a href="#state_refresh_interval_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
@@ -1831,7 +1882,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL of the chart
+    <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
 
 </dl>
@@ -1855,7 +1906,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#HeatmapChartColorRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#HeatmapChartColorRangeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartColorRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartColorRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.HeatmapChartColorRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.HeatmapChartColorRange.html">output</a> API doc for this type.
@@ -1875,7 +1926,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be either gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, lime_green.
+    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1915,7 +1966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be either gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, lime_green.
+    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1955,7 +2006,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be either gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, lime_green.
+    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1995,13 +2046,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be either gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, lime_green.
+    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxvalue_python">
-<a href="#maxvalue_python" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
+        <span id="max_value_python">
+<a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2011,8 +2062,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minvalue_python">
-<a href="#minvalue_python" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
+        <span id="min_value_python">
+<a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2033,7 +2084,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#HeatmapChartColorScaleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#HeatmapChartColorScaleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartColorScaleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartColorScaleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.HeatmapChartColorScaleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.HeatmapChartColorScale.html">output</a> API doc for this type.
@@ -2053,7 +2104,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be either gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, lime_green.
+    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2115,7 +2166,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be either gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, lime_green.
+    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2177,7 +2228,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be either gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, lime_green.
+    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2239,7 +2290,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be either gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, lime_green.
+    <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2304,6 +2355,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
+	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 </dl>
 

@@ -170,7 +170,7 @@ const example = new alicloud.ddos.SchedulerRule("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ddos/#pulumi_alicloud.ddos.SchedulerRule">SchedulerRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">param</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_type</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SchedulerRuleRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ddos/#pulumi_alicloud.ddos.SchedulerRule">SchedulerRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">param</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_type</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchedulerRuleRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -584,7 +584,7 @@ The SchedulerRule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rule_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The rule type. Valid values:
 `2`: tiered protection.
@@ -598,7 +598,7 @@ The SchedulerRule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerrulerule">List[Scheduler<wbr>Rule<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedulerrulerule">Sequence[Scheduler<wbr>Rule<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The details of the common filter interaction rule, expressed as a JSON string. The structure is as follows:
 `Type`: String type, required, the address format of the linkage resource. Valid values:
@@ -778,7 +778,7 @@ Get an existing SchedulerRule resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">param</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_type</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[SchedulerRuleRuleArgs]]</span> = None<span class="p">) -&gt;</span> SchedulerRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">param</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_type</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchedulerRuleRuleArgs]]</span> = None<span class="p">) -&gt;</span> SchedulerRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1199,7 +1199,7 @@ The following state arguments are supported:
 <a href="#state_rule_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The rule type. Valid values:
 `2`: tiered protection.
@@ -1213,7 +1213,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerrulerule">List[Scheduler<wbr>Rule<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedulerrulerule">Sequence[Scheduler<wbr>Rule<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The details of the common filter interaction rule, expressed as a JSON string. The structure is as follows:
 `Type`: String type, required, the address format of the linkage resource. Valid values:
@@ -1469,7 +1469,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1489,7 +1489,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1519,7 +1519,7 @@ The following state arguments are supported:
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

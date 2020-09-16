@@ -3,7 +3,7 @@ title: "Module opsgenie"
 title_tag: "Module opsgenie | Package @pulumi/signalfx | Node.js SDK"
 linktitle: "opsgenie"
 meta_desc: "Explore members of the opsgenie module in the @pulumi/signalfx package."
-git_sha: "259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab"
+git_sha: "5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Integration" data-link-title="Integration">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L25">
         Resource <strong>Integration</strong>
     </a>
 </h3>
@@ -43,13 +43,11 @@ SignalFx Opsgenie integration.
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as signalfx from "@pulumi/signalfx";
 
-const opgenieMyteam = new signalfx.opsgenie.Integration("opgenieMyteam", {
+const opgenieMyteam = new signalfx.opsgenie.Integration("opgenie_myteam", {
     apiKey: "farts",
     apiUrl: "https://api.opsgenie.com",
     enabled: true,
@@ -57,7 +55,7 @@ const opgenieMyteam = new signalfx.opsgenie.Integration("opgenieMyteam", {
 ```
 
 <h4 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -71,7 +69,7 @@ Create a Integration resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -82,14 +80,14 @@ Get an existing Integration resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -100,7 +98,7 @@ Returns true if the given object is an instance of Integration.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Integration-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L58">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L56">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -108,7 +106,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API key
 
 <h4 class="pdoc-member-header" id="Integration-apiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L62">property <b>apiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L60">property <b>apiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -116,7 +114,7 @@ The API key
 Opsgenie API URL. Will default to `https://api.opsgenie.com`. You might also want `https://api.eu.opsgenie.com`.
 
 <h4 class="pdoc-member-header" id="Integration-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L66">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L64">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -124,7 +122,7 @@ Opsgenie API URL. Will default to `https://api.opsgenie.com`. You might also wan
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -133,7 +131,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Integration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +139,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -153,7 +151,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="IntegrationArgs" data-link-title="IntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L135">
         interface <strong>IntegrationArgs</strong>
     </a>
 </h3>
@@ -163,7 +161,7 @@ deployments.
 The set of arguments for constructing a Integration resource.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L141">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L139">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -171,7 +169,7 @@ The set of arguments for constructing a Integration resource.
 The API key
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-apiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L145">property <b>apiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L143">property <b>apiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -179,7 +177,7 @@ The API key
 Opsgenie API URL. Will default to `https://api.opsgenie.com`. You might also want `https://api.eu.opsgenie.com`.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L149">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L147">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -187,7 +185,7 @@ Opsgenie API URL. Will default to `https://api.opsgenie.com`. You might also wan
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L151">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -195,7 +193,7 @@ Whether the integration is enabled.
 Name of the integration.
 
 <h3 class="pdoc-module-header" id="IntegrationState" data-link-title="IntegrationState">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L113">
         interface <strong>IntegrationState</strong>
     </a>
 </h3>
@@ -205,7 +203,7 @@ Name of the integration.
 Input properties used for looking up and filtering Integration resources.
 
 <h4 class="pdoc-member-header" id="IntegrationState-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L119">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L117">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +211,7 @@ Input properties used for looking up and filtering Integration resources.
 The API key
 
 <h4 class="pdoc-member-header" id="IntegrationState-apiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L123">property <b>apiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L121">property <b>apiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +219,7 @@ The API key
 Opsgenie API URL. Will default to `https://api.opsgenie.com`. You might also want `https://api.eu.opsgenie.com`.
 
 <h4 class="pdoc-member-header" id="IntegrationState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L127">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L125">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -229,7 +227,7 @@ Opsgenie API URL. Will default to `https://api.opsgenie.com`. You might also wan
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/259fb9aba5c29d4cf535ca6c12ce9c3129fd56ab/sdk/nodejs/opsgenie/integration.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/5b213a19efe8324e5016e2bbaa68b2ca0ad9b2e3/sdk/nodejs/opsgenie/integration.ts#L129">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

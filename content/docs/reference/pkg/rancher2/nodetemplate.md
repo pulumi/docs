@@ -150,7 +150,7 @@ const foo = new rancher2.NodeTemplate("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.NodeTemplate">NodeTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.NodeTemplate">NodeTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1218,7 +1218,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_insecure_registries_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>insecure_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
 {{% /md %}}</dd>
@@ -1262,7 +1262,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_registry_mirrors_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>registry_<wbr>mirrors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
@@ -1498,7 +1498,7 @@ Get an existing NodeTemplate resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">) -&gt;</span> NodeTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">) -&gt;</span> NodeTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2552,7 +2552,7 @@ The following state arguments are supported:
 <a href="#state_engine_insecure_registries_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>insecure_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
 {{% /md %}}</dd>
@@ -2596,7 +2596,7 @@ The following state arguments are supported:
 <a href="#state_engine_registry_mirrors_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>registry_<wbr>mirrors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
@@ -2885,6 +2885,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskey_csharp">
+<a href="#kmskey_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Custom KMS key ID using the AWS Managed CMK (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3248,6 +3259,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="kmskey_go">
+<a href="#kmskey_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Custom KMS key ID using the AWS Managed CMK (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="monitoring_go">
 <a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
 </span> 
@@ -3607,6 +3629,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="kmskey_nodejs">
+<a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Custom KMS key ID using the AWS Managed CMK (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="monitoring_nodejs">
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span> 
@@ -3827,7 +3860,7 @@ The following state arguments are supported:
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}AWS VPC security group. (list)
 {{% /md %}}</dd>
@@ -3966,6 +3999,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="kms_key_python">
+<a href="#kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Custom KMS key ID using the AWS Managed CMK (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="monitoring_python">
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span> 
@@ -3981,7 +4025,7 @@ The following state arguments are supported:
 <a href="#open_ports_python" style="color: inherit; text-decoration: inherit;">open_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
 {{% /md %}}</dd>
@@ -4262,7 +4306,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Azure environment (e.g. AzurePublicCloud, AzureChinaCloud). Default `AzurePublicCloud` (string)
-`fault_domain_count` - (Optional) Fault domain count to use for availability set. Default `3` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4273,7 +4316,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fault domain count to use for availability set. Default `3` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4317,6 +4361,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Do not create a public IP address for the machine. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nsg_csharp">
+<a href="#nsg_csharp" style="color: inherit; text-decoration: inherit;">Nsg</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Network Security Group to assign this node to (accepts either a name or resource ID, default is to create a new NSG for each machine). Default `docker-machine-nsg` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4555,7 +4610,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Azure environment (e.g. AzurePublicCloud, AzureChinaCloud). Default `AzurePublicCloud` (string)
-`fault_domain_count` - (Optional) Fault domain count to use for availability set. Default `3` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4566,7 +4620,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fault domain count to use for availability set. Default `3` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4610,6 +4665,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Do not create a public IP address for the machine. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nsg_go">
+<a href="#nsg_go" style="color: inherit; text-decoration: inherit;">Nsg</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Network Security Group to assign this node to (accepts either a name or resource ID, default is to create a new NSG for each machine). Default `docker-machine-nsg` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4848,7 +4914,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Azure environment (e.g. AzurePublicCloud, AzureChinaCloud). Default `AzurePublicCloud` (string)
-`fault_domain_count` - (Optional) Fault domain count to use for availability set. Default `3` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4859,7 +4924,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fault domain count to use for availability set. Default `3` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4903,6 +4969,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Do not create a public IP address for the machine. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nsg_nodejs">
+<a href="#nsg_nodejs" style="color: inherit; text-decoration: inherit;">nsg</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Network Security Group to assign this node to (accepts either a name or resource ID, default is to create a new NSG for each machine). Default `docker-machine-nsg` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5141,7 +5218,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Azure environment (e.g. AzurePublicCloud, AzureChinaCloud). Default `AzurePublicCloud` (string)
-`fault_domain_count` - (Optional) Fault domain count to use for availability set. Default `3` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5152,7 +5228,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fault domain count to use for availability set. Default `3` (string)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5200,11 +5277,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="nsg_python">
+<a href="#nsg_python" style="color: inherit; text-decoration: inherit;">nsg</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Network Security Group to assign this node to (accepts either a name or resource ID, default is to create a new NSG for each machine). Default `docker-machine-nsg` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="open_ports_python">
 <a href="#open_ports_python" style="color: inherit; text-decoration: inherit;">open_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
 {{% /md %}}</dd>
@@ -9012,7 +9100,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}If you choose creation type clone a name of what you want to clone is required. From Rancher v2.3.3 (string)
+    <dd>{{% md %}}If you choose creation type vm (clone vm) a name of what vm you want to clone is required. From Rancher v2.3.3 (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9360,7 +9448,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}If you choose creation type clone a name of what you want to clone is required. From Rancher v2.3.3 (string)
+    <dd>{{% md %}}If you choose creation type vm (clone vm) a name of what vm you want to clone is required. From Rancher v2.3.3 (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9708,7 +9796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}If you choose creation type clone a name of what you want to clone is required. From Rancher v2.3.3 (string)
+    <dd>{{% md %}}If you choose creation type vm (clone vm) a name of what vm you want to clone is required. From Rancher v2.3.3 (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10043,7 +10131,7 @@ The following state arguments are supported:
 <a href="#cfgparams_python" style="color: inherit; text-decoration: inherit;">cfgparams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}vSphere vm configuration parameters (used for guestinfo) (list)
 {{% /md %}}</dd>
@@ -10056,7 +10144,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}If you choose creation type clone a name of what you want to clone is required. From Rancher v2.3.3 (string)
+    <dd>{{% md %}}If you choose creation type vm (clone vm) a name of what vm you want to clone is required. From Rancher v2.3.3 (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10120,7 +10208,7 @@ The following state arguments are supported:
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}vSphere custom attributes, format key/value e.g. `200=my custom value`. From Rancher v2.3.3 (List)
 {{% /md %}}</dd>
@@ -10208,7 +10296,7 @@ The following state arguments are supported:
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}vSphere network where the docker VM will be attached (list)
 {{% /md %}}</dd>
@@ -10285,7 +10373,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
 {{% /md %}}</dd>
@@ -10329,7 +10417,7 @@ The following state arguments are supported:
 <a href="#vapp_properties_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}vSphere vApp properties (list)
 {{% /md %}}</dd>
@@ -10385,6 +10473,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

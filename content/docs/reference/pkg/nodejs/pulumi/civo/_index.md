@@ -3,7 +3,7 @@ title: "Package @pulumi/civo"
 title_tag: "Package @pulumi/civo | Node.js SDK"
 linktitle: "@pulumi/civo"
 meta_desc: "Explore members of the @pulumi/civo package."
-git_sha: "f59f5be19540546efd7e9455a4fbf503a6d67c75"
+git_sha: "995a962a5b6ffafaf736d96eb868bfc87ca66181"
 block_external_search_index: true
 ---
 
@@ -143,7 +143,7 @@ import * as civo from "@pulumi/civo";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="DnsDomainName" data-link-title="DnsDomainName">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L20">
         Resource <strong>DnsDomainName</strong>
     </a>
 </h3>
@@ -163,7 +163,7 @@ const main = new civo.DnsDomainName("main", {});
 ```
 
 <h4 class="pdoc-member-header" id="DnsDomainName-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L55"> <b>constructor</b></a>
 </h4>
 
 
@@ -177,7 +177,7 @@ Create a DnsDomainName resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DnsDomainName-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -188,14 +188,14 @@ Get an existing DnsDomainName resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DnsDomainName-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DnsDomainName-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -206,7 +206,7 @@ Returns true if the given object is an instance of DnsDomainName.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DnsDomainName-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L51">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L51">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -214,7 +214,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The id account of the domain
 
 <h4 class="pdoc-member-header" id="DnsDomainName-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -223,7 +223,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DnsDomainName-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -231,7 +231,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the domain
 
 <h4 class="pdoc-member-header" id="DnsDomainName-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -240,7 +240,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DnsDomainRecord" data-link-title="DnsDomainRecord">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L30">
         Resource <strong>DnsDomainRecord</strong>
     </a>
 </h3>
@@ -258,7 +258,7 @@ import * as civo from "@pulumi/civo";
 // Create a new domain record
 const www = new civo.DnsDomainRecord("www", {
     domainId: civo_dns_domain_name.main.id,
-    type: "a",
+    type: "A",
     value: civo_instance.foo.public_ip,
     ttl: 600,
 }, {
@@ -270,7 +270,7 @@ const www = new civo.DnsDomainRecord("www", {
 ```
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -284,7 +284,7 @@ Create a DnsDomainRecord resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -295,14 +295,14 @@ Get an existing DnsDomainRecord resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -313,7 +313,7 @@ Returns true if the given object is an instance of DnsDomainRecord.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L61">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L61">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -321,7 +321,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The id account of the domain
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L65">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L65">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -329,7 +329,7 @@ The id account of the domain
 The date when it was created in UTC format
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L69">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L69">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -337,7 +337,7 @@ The date when it was created in UTC format
 The id of the domain
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -346,7 +346,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -354,7 +354,7 @@ deployments and may be missing (undefined) during planning phases.
 The portion before the domain name (e.g. www) or an @ for the apex/root domain (you cannot use an A record with an amex/root domain)
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L77">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L77">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -362,7 +362,7 @@ The portion before the domain name (e.g. www) or an @ for the apex/root domain (
 Useful for MX records only, the priority mail should be attempted it (defaults to 10)
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L81">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L81">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -370,15 +370,15 @@ Useful for MX records only, the priority mail should be attempted it (defaults t
 How long caching DNS servers should cache this record for, in seconds (the minimum is 600 and the default if unspecified is 600)
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L85">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L85">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The choice of record type from a, cname, mx or txt
+The choice of record type from A, CNAME, MX, SRV or TXT
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L89">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L89">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ The choice of record type from a, cname, mx or txt
 The date when it was updated in UTC format
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -395,7 +395,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DnsDomainRecord-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L93">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L93">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -403,7 +403,7 @@ deployments.
 The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve for this record
 
 <h3 class="pdoc-module-header" id="Firewall" data-link-title="Firewall">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L20">
         Resource <strong>Firewall</strong>
     </a>
 </h3>
@@ -423,7 +423,7 @@ const www = new civo.Firewall("www", {});
 ```
 
 <h4 class="pdoc-member-header" id="Firewall-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L55"> <b>constructor</b></a>
 </h4>
 
 
@@ -437,7 +437,7 @@ Create a Firewall resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Firewall-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -448,14 +448,14 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Firewall-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Firewall-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -466,7 +466,7 @@ Returns true if the given object is an instance of Firewall.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Firewall-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -475,7 +475,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Firewall-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -483,7 +483,7 @@ deployments and may be missing (undefined) during planning phases.
 The Firewall name
 
 <h4 class="pdoc-member-header" id="Firewall-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L55">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L55">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -491,7 +491,7 @@ The Firewall name
 The region where the firewall was create.
 
 <h4 class="pdoc-member-header" id="Firewall-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -500,7 +500,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FirewallRule" data-link-title="FirewallRule">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L13">
         Resource <strong>FirewallRule</strong>
     </a>
 </h3>
@@ -513,7 +513,7 @@ This resource don't have an update option because the backend don't have the
 support for that, so in this case we use ForceNew for all object in the resource.
 
 <h4 class="pdoc-member-header" id="FirewallRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -527,7 +527,7 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FirewallRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L23">method <b>get</b></a>
 </h4>
 
 
@@ -538,14 +538,14 @@ Get an existing FirewallRule resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FirewallRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L34">method <b>isInstance</b></a>
 </h4>
 
 
@@ -556,7 +556,7 @@ Returns true if the given object is an instance of FirewallRule.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FirewallRule-cidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L44">property <b>cidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L44">property <b>cidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -564,7 +564,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
 
 <h4 class="pdoc-member-header" id="FirewallRule-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L48">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L48">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -572,7 +572,7 @@ the IP address of the other end (i.e. not your instance) to affect, or a valid n
 will this rule affect ingress traffic
 
 <h4 class="pdoc-member-header" id="FirewallRule-endPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L52">property <b>endPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L52">property <b>endPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -580,7 +580,7 @@ will this rule affect ingress traffic
 The end port where traffic to be allowed.
 
 <h4 class="pdoc-member-header" id="FirewallRule-firewallId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L56">property <b>firewallId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L56">property <b>firewallId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firewallId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -588,7 +588,7 @@ The end port where traffic to be allowed.
 The Firewall id
 
 <h4 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -597,7 +597,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FirewallRule-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L60">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L60">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -605,7 +605,7 @@ deployments and may be missing (undefined) during planning phases.
 a string that will be the displayed name/reference for this rule (optional)
 
 <h4 class="pdoc-member-header" id="FirewallRule-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L64">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L64">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -613,7 +613,7 @@ a string that will be the displayed name/reference for this rule (optional)
 This may be one of "tcp", "udp", or "icmp".
 
 <h4 class="pdoc-member-header" id="FirewallRule-startPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L68">property <b>startPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L68">property <b>startPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -621,7 +621,7 @@ This may be one of "tcp", "udp", or "icmp".
 The start port where traffic to be allowed.
 
 <h4 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -630,7 +630,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L11">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -641,7 +641,7 @@ Provides a Civo Instance resource. This can be used to create,
 modify, and delete Instances.
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L122"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L122"> <b>constructor</b></a>
 </h4>
 
 
@@ -655,7 +655,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -666,14 +666,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -684,7 +684,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-cpuCores">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L42">property <b>cpuCores</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L42">property <b>cpuCores</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cpuCores: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -692,7 +692,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Total cpu of the inatance.
 
 <h4 class="pdoc-member-header" id="Instance-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L46">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L46">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ Total cpu of the inatance.
 The date of creation of the instance
 
 <h4 class="pdoc-member-header" id="Instance-diskGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L50">property <b>diskGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L50">property <b>diskGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -708,7 +708,7 @@ The date of creation of the instance
 The size of the disk.
 
 <h4 class="pdoc-member-header" id="Instance-firewallId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L54">property <b>firewallId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L54">property <b>firewallId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firewallId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -716,7 +716,7 @@ The size of the disk.
 The ID of the firewall to use, from the current list. If left blank or not sent, the default firewall will be used (open to all).
 
 <h4 class="pdoc-member-header" id="Instance-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L58">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L58">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ The ID of the firewall to use, from the current list. If left blank or not sent,
 The Instance hostname.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -733,7 +733,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-initialPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L62">property <b>initialPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L62">property <b>initialPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>initialPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -741,7 +741,7 @@ deployments and may be missing (undefined) during planning phases.
 Instance initial password
 
 <h4 class="pdoc-member-header" id="Instance-initialUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L66">property <b>initialUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L66">property <b>initialUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>initialUser: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -749,7 +749,7 @@ Instance initial password
 The name of the initial user created on the server (optional; this will default to the template's defaultUsername and fallback to civo).
 
 <h4 class="pdoc-member-header" id="Instance-networkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L70">property <b>networkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L70">property <b>networkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -757,7 +757,7 @@ The name of the initial user created on the server (optional; this will default 
 This must be the ID of the network from the network listing (optional; default network used when not specified).
 
 <h4 class="pdoc-member-header" id="Instance-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L74">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L74">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -765,7 +765,7 @@ This must be the ID of the network from the network listing (optional; default n
 Add some notes to the instance.
 
 <h4 class="pdoc-member-header" id="Instance-privateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L78">property <b>privateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L78">property <b>privateIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ Add some notes to the instance.
 The private ip.
 
 <h4 class="pdoc-member-header" id="Instance-pseudoIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L82">property <b>pseudoIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L82">property <b>pseudoIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pseudoIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -781,7 +781,7 @@ The private ip.
 Is the ip that is used to route the public ip from the internet to the instance using NAT
 
 <h4 class="pdoc-member-header" id="Instance-publicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L86">property <b>publicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L86">property <b>publicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -789,7 +789,7 @@ Is the ip that is used to route the public ip from the internet to the instance 
 This should be either false, true or `move_ip_from:intances_id`.
 
 <h4 class="pdoc-member-header" id="Instance-publicIpRequiered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L90">property <b>publicIpRequiered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L90">property <b>publicIpRequiered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicIpRequiered: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -797,7 +797,7 @@ This should be either false, true or `move_ip_from:intances_id`.
 This should be either false, true or `move_ip_from:intances_id`.
 
 <h4 class="pdoc-member-header" id="Instance-ramMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L94">property <b>ramMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L94">property <b>ramMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ramMb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -805,7 +805,7 @@ This should be either false, true or `move_ip_from:intances_id`.
 Total ram of the instance.
 
 <h4 class="pdoc-member-header" id="Instance-reverseDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L98">property <b>reverseDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L98">property <b>reverseDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reverseDns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -813,7 +813,7 @@ Total ram of the instance.
 A fully qualified domain name that should be used as the instance's IP's reverse DNS (optional, uses the hostname if unspecified).
 
 <h4 class="pdoc-member-header" id="Instance-script">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L102">property <b>script</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L102">property <b>script</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>script: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -821,7 +821,7 @@ A fully qualified domain name that should be used as the instance's IP's reverse
 the contents of a script that will be uploaded to /usr/local/bin/civo-user-init-script on your instance, read/write/executable only by root and then will be executed at the end of the cloud initialization
 
 <h4 class="pdoc-member-header" id="Instance-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L106">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L106">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -829,7 +829,7 @@ the contents of a script that will be uploaded to /usr/local/bin/civo-user-init-
 The name of the size, from the current list, e.g. g2.small (required).
 
 <h4 class="pdoc-member-header" id="Instance-sshkeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L110">property <b>sshkeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L110">property <b>sshkeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sshkeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -837,7 +837,7 @@ The name of the size, from the current list, e.g. g2.small (required).
 The ID of an already uploaded SSH public key to use for login to the default user (optional; if one isn't provided a random password will be set and returned in the initialPassword field).
 
 <h4 class="pdoc-member-header" id="Instance-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L114">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L114">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -845,7 +845,7 @@ The ID of an already uploaded SSH public key to use for login to the default use
 The status of the instance
 
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L118">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -853,7 +853,7 @@ The status of the instance
 An optional list of tags, represented as a key, value pair.
 
 <h4 class="pdoc-member-header" id="Instance-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L122">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L122">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -861,7 +861,7 @@ An optional list of tags, represented as a key, value pair.
 The ID for the template to use to build the instance.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -870,14 +870,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="KubernetesCluster" data-link-title="KubernetesCluster">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L9">
         Resource <strong>KubernetesCluster</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>KubernetesCluster</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="KubernetesCluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -891,7 +891,7 @@ Create a KubernetesCluster resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -902,14 +902,14 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -920,7 +920,7 @@ Returns true if the given object is an instance of KubernetesCluster.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-apiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L40">property <b>apiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L40">property <b>apiEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -928,7 +928,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The base URL of the API server on the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-applications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L44">property <b>applications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L44">property <b>applications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -936,7 +936,7 @@ The base URL of the API server on the Kubernetes master node.
 A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-builtAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L48">property <b>builtAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L48">property <b>builtAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>builtAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -944,7 +944,7 @@ A comma separated list of applications to install. Spaces within application nam
 The date where the Kubernetes cluster was build.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L52">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L52">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -952,7 +952,7 @@ The date where the Kubernetes cluster was build.
 The date where the Kubernetes cluster was create.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-dnsEntry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L56">property <b>dnsEntry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L56">property <b>dnsEntry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsEntry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -960,7 +960,7 @@ The date where the Kubernetes cluster was create.
 The unique dns entry for the cluster in this case point to the master.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -969,7 +969,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-installedApplications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L60">property <b>installedApplications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L60">property <b>installedApplications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>installedApplications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#KubernetesClusterInstalledApplication'>KubernetesClusterInstalledApplication</a>[]&gt;;</code></pre>
@@ -977,7 +977,7 @@ deployments and may be missing (undefined) during planning phases.
 A unique ID that can be used to identify and reference a Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L64">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L64">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#KubernetesClusterInstance'>KubernetesClusterInstance</a>[]&gt;;</code></pre>
@@ -985,7 +985,7 @@ A unique ID that can be used to identify and reference a Kubernetes cluster.
 In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-kubeconfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L68">property <b>kubeconfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L68">property <b>kubeconfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeconfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -993,7 +993,7 @@ In addition to the arguments provided, these additional attributes about the clu
 A representation of the Kubernetes cluster's kubeconfig in yaml format.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-kubernetesVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L72">property <b>kubernetesVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L72">property <b>kubernetesVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubernetesVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1001,7 +1001,7 @@ A representation of the Kubernetes cluster's kubeconfig in yaml format.
 The version of k3s to install (optional, the default is currently the latest available).
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-masterIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L76">property <b>masterIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L76">property <b>masterIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1009,7 +1009,7 @@ The version of k3s to install (optional, the default is currently the latest ava
 The Ip of the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1017,7 +1017,7 @@ The Ip of the Kubernetes master node.
 A name for the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-numTargetNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L84">property <b>numTargetNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L84">property <b>numTargetNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numTargetNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1025,12 +1025,12 @@ A name for the Kubernetes cluster.
 The number of instances to create (optional, the default at the time of writing is 3).
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-ready">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L85">property <b>ready</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L85">property <b>ready</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ready: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesCluster-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L90">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L90">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1039,7 +1039,7 @@ The status of Kubernetes cluster.
 * `ready` -If the Kubernetes cluster is ready.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1047,7 +1047,7 @@ The status of Kubernetes cluster.
 A space separated list of tags, to be used freely as required.
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-targetNodesSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L98">property <b>targetNodesSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L98">property <b>targetNodesSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetNodesSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1055,7 +1055,7 @@ A space separated list of tags, to be used freely as required.
 The size of each node (optional, the default is currently g2.small)
 
 <h4 class="pdoc-member-header" id="KubernetesCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1064,14 +1064,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LoadBalancer" data-link-title="LoadBalancer">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L9">
         Resource <strong>LoadBalancer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>LoadBalancer</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -1085,7 +1085,7 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -1096,14 +1096,14 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LoadBalancer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1114,7 +1114,7 @@ Returns true if the given object is an instance of LoadBalancer.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L40">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L40">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#LoadBalancerBackend'>LoadBalancerBackend</a>[]&gt;;</code></pre>
@@ -1122,7 +1122,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 a list of backend instances, each containing an instance_id, protocol (http or https) and port
 
 <h4 class="pdoc-member-header" id="LoadBalancer-failTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L44">property <b>failTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L44">property <b>failTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>failTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1130,7 +1130,7 @@ a list of backend instances, each containing an instance_id, protocol (http or h
 how long to wait in seconds before determining a backend has failed, defaults to 30
 
 <h4 class="pdoc-member-header" id="LoadBalancer-healthCheckPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L48">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L48">property <b>healthCheckPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1138,7 +1138,7 @@ how long to wait in seconds before determining a backend has failed, defaults to
 what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 
 <h4 class="pdoc-member-header" id="LoadBalancer-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L53">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L53">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ the hostname to receive traffic for, e.g. www.example.com (optional: sets hostna
 blank)
 
 <h4 class="pdoc-member-header" id="LoadBalancer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1156,7 +1156,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LoadBalancer-ignoreInvalidBackendTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L57">property <b>ignoreInvalidBackendTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L57">property <b>ignoreInvalidBackendTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ignoreInvalidBackendTls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1164,7 +1164,7 @@ deployments and may be missing (undefined) during planning phases.
 should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 
 <h4 class="pdoc-member-header" id="LoadBalancer-maxConns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L61">property <b>maxConns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L61">property <b>maxConns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxConns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1172,7 +1172,7 @@ should self-signed/invalid certificates be ignored from the backend servers, def
 how many concurrent connections can each backend handle, defaults to 10
 
 <h4 class="pdoc-member-header" id="LoadBalancer-maxRequestSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L65">property <b>maxRequestSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L65">property <b>maxRequestSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxRequestSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1180,7 +1180,7 @@ how many concurrent connections can each backend handle, defaults to 10
 the size in megabytes of the maximum request content that will be accepted, defaults to 20
 
 <h4 class="pdoc-member-header" id="LoadBalancer-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L71">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L71">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1190,7 +1190,7 @@ round_robin (sends new requests to the next backend in order), ip_hash (sends re
 same backend), default is random
 
 <h4 class="pdoc-member-header" id="LoadBalancer-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L76">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L76">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1199,7 +1199,7 @@ you can listen on any port, the default is 80 to match the default protocol of h
 (commonly 80 for HTTP or 443 for HTTPS)
 
 <h4 class="pdoc-member-header" id="LoadBalancer-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L80">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L80">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1207,7 +1207,7 @@ you can listen on any port, the default is 80 to match the default protocol of h
 either http or https. If you specify https then you must also provide the next two fields, the default is http
 
 <h4 class="pdoc-member-header" id="LoadBalancer-tlsCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L84">property <b>tlsCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L84">property <b>tlsCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tlsCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1215,7 +1215,7 @@ either http or https. If you specify https then you must also provide the next t
 if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 
 <h4 class="pdoc-member-header" id="LoadBalancer-tlsKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L88">property <b>tlsKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L88">property <b>tlsKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tlsKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1223,7 +1223,7 @@ if your protocol is https then you should send the TLS certificate in Base64-enc
 if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 
 <h4 class="pdoc-member-header" id="LoadBalancer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1232,7 +1232,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Network" data-link-title="Network">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L22">
         Resource <strong>Network</strong>
     </a>
 </h3>
@@ -1254,7 +1254,7 @@ const customNet = new civo.Network("custom_net", {
 ```
 
 <h4 class="pdoc-member-header" id="Network-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -1268,7 +1268,7 @@ Create a Network resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Network-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -1279,14 +1279,14 @@ Get an existing Network resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Network-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Network-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1297,7 +1297,7 @@ Returns true if the given object is an instance of Network.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Network-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L53">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L53">property <b>cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1305,7 +1305,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The block ip assigned to the network.
 
 <h4 class="pdoc-member-header" id="Network-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L57">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L57">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>default: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1313,7 +1313,7 @@ The block ip assigned to the network.
 If is the default network.
 
 <h4 class="pdoc-member-header" id="Network-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1322,7 +1322,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Network-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L61">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L61">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1330,7 +1330,7 @@ deployments and may be missing (undefined) during planning phases.
 The Network label
 
 <h4 class="pdoc-member-header" id="Network-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1338,7 +1338,7 @@ The Network label
 The name of the network.
 
 <h4 class="pdoc-member-header" id="Network-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L69">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L69">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1346,7 +1346,7 @@ The name of the network.
 The region where the network was create.
 
 <h4 class="pdoc-member-header" id="Network-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1355,7 +1355,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -1368,7 +1368,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -1382,14 +1382,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1400,14 +1400,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1416,7 +1416,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1425,7 +1425,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Snapshot" data-link-title="Snapshot">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L19">
         Resource <strong>Snapshot</strong>
     </a>
 </h3>
@@ -1444,7 +1444,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
 ```
 
 <h4 class="pdoc-member-header" id="Snapshot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -1458,7 +1458,7 @@ Create a Snapshot resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Snapshot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L29">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -1469,14 +1469,14 @@ Get an existing Snapshot resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Snapshot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L19">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Snapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L40">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1487,7 +1487,7 @@ Returns true if the given object is an instance of Snapshot.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Snapshot-completedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L50">property <b>completedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L50">property <b>completedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>completedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1495,7 +1495,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The date where the snapshot was completed.
 
 <h4 class="pdoc-member-header" id="Snapshot-cronTiming">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L56">property <b>cronTiming</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L56">property <b>cronTiming</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cronTiming: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1505,7 +1505,7 @@ continuing to automatically update based on the schedule of the cron sequence pr
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L60">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L60">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1513,7 +1513,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 The hostname of the instance.
 
 <h4 class="pdoc-member-header" id="Snapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L19">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L19">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1522,7 +1522,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Snapshot-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L64">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L64">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1530,7 +1530,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Instance from which the snapshot will be taken.
 
 <h4 class="pdoc-member-header" id="Snapshot-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1538,7 +1538,7 @@ The ID of the Instance from which the snapshot will be taken.
 A name for the instance snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-nextExecution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L72">property <b>nextExecution</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L72">property <b>nextExecution</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nextExecution: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1546,7 +1546,7 @@ A name for the instance snapshot.
 if cron was define this date will be the next execution date.
 
 <h4 class="pdoc-member-header" id="Snapshot-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L76">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L76">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1554,7 +1554,7 @@ if cron was define this date will be the next execution date.
 The region where the snapshot was take.
 
 <h4 class="pdoc-member-header" id="Snapshot-requestedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L80">property <b>requestedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L80">property <b>requestedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1562,7 +1562,7 @@ The region where the snapshot was take.
 The date where the snapshot was requested.
 
 <h4 class="pdoc-member-header" id="Snapshot-safe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L87">property <b>safe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L87">property <b>safe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>safe: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1573,7 +1573,7 @@ and hence risking corruption). The default is `false` so you experience no inter
 of service, but a small risk of corruption.
 
 <h4 class="pdoc-member-header" id="Snapshot-sizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L91">property <b>sizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L91">property <b>sizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1581,7 +1581,7 @@ of service, but a small risk of corruption.
 The size of the snapshot in GB.
 
 <h4 class="pdoc-member-header" id="Snapshot-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L95">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L95">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1589,7 +1589,7 @@ The size of the snapshot in GB.
 The status of the snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-templateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L99">property <b>templateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L99">property <b>templateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1597,7 +1597,7 @@ The status of the snapshot.
 The template id.
 
 <h4 class="pdoc-member-header" id="Snapshot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L19">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L19">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1606,7 +1606,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SshKey" data-link-title="SshKey">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L22">
         Resource <strong>SshKey</strong>
     </a>
 </h3>
@@ -1628,7 +1628,7 @@ const my_user = new civo.SshKey("my-user", {publicKey: fs.readFileSync("~/.ssh/i
 ```
 
 <h4 class="pdoc-member-header" id="SshKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L62"> <b>constructor</b></a>
 </h4>
 
 
@@ -1642,7 +1642,7 @@ Create a SshKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SshKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -1653,14 +1653,14 @@ Get an existing SshKey resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SshKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SshKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1671,7 +1671,7 @@ Returns true if the given object is an instance of SshKey.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SshKey-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L53">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L53">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1679,7 +1679,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The fingerprint of the SSH key
 
 <h4 class="pdoc-member-header" id="SshKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1688,7 +1688,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SshKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1696,7 +1696,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the SSH key for identification
 
 <h4 class="pdoc-member-header" id="SshKey-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L62">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L62">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1705,7 +1705,7 @@ The public key. If this is a file, it
 can be read using the file interpolation function.
 
 <h4 class="pdoc-member-header" id="SshKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1714,7 +1714,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Template" data-link-title="Template">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L11">
         Resource <strong>Template</strong>
     </a>
 </h3>
@@ -1725,7 +1725,7 @@ Provides a Civo Template resource.
 This can be used to create, modify, and delete Templates.
 
 <h4 class="pdoc-member-header" id="Template-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -1739,7 +1739,7 @@ Create a Template resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Template-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -1750,14 +1750,14 @@ Get an existing Template resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Template-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Template-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1768,7 +1768,7 @@ Returns true if the given object is an instance of Template.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Template-cloudConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L49">property <b>cloudConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L49">property <b>cloudConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1783,7 +1783,7 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 see our learn guide on templates for more information).
 
 <h4 class="pdoc-member-header" id="Template-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L53">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L53">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>code: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1791,7 +1791,7 @@ see our learn guide on templates for more information).
 This is a unqiue, alphanumerical, short, human readable code for the template.
 
 <h4 class="pdoc-member-header" id="Template-defaultUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L57">property <b>defaultUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L57">property <b>defaultUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1799,7 +1799,7 @@ This is a unqiue, alphanumerical, short, human readable code for the template.
 The default username to suggest that the user creates
 
 <h4 class="pdoc-member-header" id="Template-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1807,7 +1807,7 @@ The default username to suggest that the user creates
 A multi-line description of the template, in Markdown format
 
 <h4 class="pdoc-member-header" id="Template-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1816,7 +1816,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Template-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L66">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L66">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1825,7 +1825,7 @@ This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volumeId is specified).
 
 <h4 class="pdoc-member-header" id="Template-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1833,7 +1833,7 @@ either owned by you or global (optional; but must be specified if no volumeId is
 This is a short human readable name for the template
 
 <h4 class="pdoc-member-header" id="Template-shortDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L74">property <b>shortDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L74">property <b>shortDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shortDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1841,7 +1841,7 @@ This is a short human readable name for the template
 A one line description of the template
 
 <h4 class="pdoc-member-header" id="Template-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1850,7 +1850,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Template-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L79">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L79">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1859,7 +1859,7 @@ This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no imageId is specified)
 
 <h3 class="pdoc-module-header" id="Volume" data-link-title="Volume">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L22">
         Resource <strong>Volume</strong>
     </a>
 </h3>
@@ -1881,7 +1881,7 @@ const db = new civo.Volume("db", {
 ```
 
 <h4 class="pdoc-member-header" id="Volume-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -1895,7 +1895,7 @@ Create a Volume resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Volume-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -1906,14 +1906,14 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Volume-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Volume-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1924,7 +1924,7 @@ Returns true if the given object is an instance of Volume.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Volume-bootable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L53">property <b>bootable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L53">property <b>bootable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bootable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1932,7 +1932,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Mark the volume as bootable.
 
 <h4 class="pdoc-member-header" id="Volume-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L57">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L57">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1940,7 +1940,7 @@ Mark the volume as bootable.
 The date of the creation of the volume.
 
 <h4 class="pdoc-member-header" id="Volume-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1949,7 +1949,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Volume-mountPoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L61">property <b>mountPoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L61">property <b>mountPoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mountPoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1957,7 +1957,7 @@ deployments and may be missing (undefined) during planning phases.
 The mount point of the volume.
 
 <h4 class="pdoc-member-header" id="Volume-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1965,7 +1965,7 @@ The mount point of the volume.
 A name that you wish to use to refer to this volume .
 
 <h4 class="pdoc-member-header" id="Volume-sizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L69">property <b>sizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L69">property <b>sizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1973,7 +1973,7 @@ A name that you wish to use to refer to this volume .
 A minimum of 1 and a maximum of your available disk space from your quota specifies the size of the volume in gigabytes .
 
 <h4 class="pdoc-member-header" id="Volume-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1982,7 +1982,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VolumeAttachment" data-link-title="VolumeAttachment">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L26">
         Resource <strong>VolumeAttachment</strong>
     </a>
 </h3>
@@ -2008,7 +2008,7 @@ const foobar = new civo.VolumeAttachment("foobar", {
 ```
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L61"> <b>constructor</b></a>
 </h4>
 
 
@@ -2022,7 +2022,7 @@ Create a VolumeAttachment resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -2033,14 +2033,14 @@ Get an existing VolumeAttachment resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2051,7 +2051,7 @@ Returns true if the given object is an instance of VolumeAttachment.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2060,7 +2060,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L57">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L57">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2068,7 +2068,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the instance to attach the volume to.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2077,7 +2077,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L61">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L61">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2087,7 +2087,7 @@ ID of the Volume to be attached to the instance.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDnsDomainName" data-link-title="getDnsDomainName">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainName.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainName.ts#L9">
         Function <strong>getDnsDomainName</strong>
     </a>
 </h3>
@@ -2096,7 +2096,7 @@ ID of the Volume to be attached to the instance.
 <pre class="highlight"><code><span class='kd'></span>getDnsDomainName(args?: <a href='#GetDnsDomainNameArgs'>GetDnsDomainNameArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDnsDomainNameResult'>GetDnsDomainNameResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getDnsDomainRecord" data-link-title="getDnsDomainRecord">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L9">
         Function <strong>getDnsDomainRecord</strong>
     </a>
 </h3>
@@ -2105,7 +2105,7 @@ ID of the Volume to be attached to the instance.
 <pre class="highlight"><code><span class='kd'></span>getDnsDomainRecord(args: <a href='#GetDnsDomainRecordArgs'>GetDnsDomainRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDnsDomainRecordResult'>GetDnsDomainRecordResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getInstance" data-link-title="getInstance">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L9">
         Function <strong>getInstance</strong>
     </a>
 </h3>
@@ -2114,7 +2114,7 @@ ID of the Volume to be attached to the instance.
 <pre class="highlight"><code><span class='kd'></span>getInstance(args?: <a href='#GetInstanceArgs'>GetInstanceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetInstanceResult'>GetInstanceResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getInstances" data-link-title="getInstances">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstances.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstances.ts#L9">
         Function <strong>getInstances</strong>
     </a>
 </h3>
@@ -2123,7 +2123,7 @@ ID of the Volume to be attached to the instance.
 <pre class="highlight"><code><span class='kd'></span>getInstances(args?: <a href='#GetInstancesArgs'>GetInstancesArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetInstancesResult'>GetInstancesResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getInstancesSize" data-link-title="getInstancesSize">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstancesSize.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstancesSize.ts#L9">
         Function <strong>getInstancesSize</strong>
     </a>
 </h3>
@@ -2132,7 +2132,7 @@ ID of the Volume to be attached to the instance.
 <pre class="highlight"><code><span class='kd'></span>getInstancesSize(args?: <a href='#GetInstancesSizeArgs'>GetInstancesSizeArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetInstancesSizeResult'>GetInstancesSizeResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getKubernetesCluster" data-link-title="getKubernetesCluster">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L40">
         Function <strong>getKubernetesCluster</strong>
     </a>
 </h3>
@@ -2172,7 +2172,7 @@ const my_cluster = pulumi.output(civo.getKubernetesCluster({
 ```
 
 <h3 class="pdoc-module-header" id="getKubernetesVersion" data-link-title="getKubernetesVersion">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesVersion.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesVersion.ts#L39">
         Function <strong>getKubernetesVersion</strong>
     </a>
 </h3>
@@ -2211,7 +2211,7 @@ const minorVersion = pulumi.output(civo.getKubernetesVersion({
 ```
 
 <h3 class="pdoc-module-header" id="getLoadBalancer" data-link-title="getLoadBalancer">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L9">
         Function <strong>getLoadBalancer</strong>
     </a>
 </h3>
@@ -2220,7 +2220,7 @@ const minorVersion = pulumi.output(civo.getKubernetesVersion({
 <pre class="highlight"><code><span class='kd'></span>getLoadBalancer(args?: <a href='#GetLoadBalancerArgs'>GetLoadBalancerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetLoadBalancerResult'>GetLoadBalancerResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getNetwork" data-link-title="getNetwork">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L9">
         Function <strong>getNetwork</strong>
     </a>
 </h3>
@@ -2229,7 +2229,7 @@ const minorVersion = pulumi.output(civo.getKubernetesVersion({
 <pre class="highlight"><code><span class='kd'></span>getNetwork(args?: <a href='#GetNetworkArgs'>GetNetworkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetNetworkResult'>GetNetworkResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getSnapshot" data-link-title="getSnapshot">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L27">
         Function <strong>getSnapshot</strong>
     </a>
 </h3>
@@ -2256,7 +2256,7 @@ const mysql_vm = pulumi.output(civo.getSnapshot({
 ```
 
 <h3 class="pdoc-module-header" id="getSshKey" data-link-title="getSshKey">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSshKey.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSshKey.ts#L9">
         Function <strong>getSshKey</strong>
     </a>
 </h3>
@@ -2265,7 +2265,7 @@ const mysql_vm = pulumi.output(civo.getSnapshot({
 <pre class="highlight"><code><span class='kd'></span>getSshKey(args?: <a href='#GetSshKeyArgs'>GetSshKeyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSshKeyResult'>GetSshKeyResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getTemplate" data-link-title="getTemplate">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getTemplate.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getTemplate.ts#L9">
         Function <strong>getTemplate</strong>
     </a>
 </h3>
@@ -2274,7 +2274,7 @@ const mysql_vm = pulumi.output(civo.getSnapshot({
 <pre class="highlight"><code><span class='kd'></span>getTemplate(args?: <a href='#GetTemplateArgs'>GetTemplateArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetTemplateResult'>GetTemplateResult</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="getVolume" data-link-title="getVolume">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L9">
         Function <strong>getVolume</strong>
     </a>
 </h3>
@@ -2285,7 +2285,7 @@ const mysql_vm = pulumi.output(civo.getSnapshot({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DnsDomainNameArgs" data-link-title="DnsDomainNameArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L104">
         interface <strong>DnsDomainNameArgs</strong>
     </a>
 </h3>
@@ -2295,7 +2295,7 @@ const mysql_vm = pulumi.output(civo.getSnapshot({
 The set of arguments for constructing a DnsDomainName resource.
 
 <h4 class="pdoc-member-header" id="DnsDomainNameArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2303,7 +2303,7 @@ The set of arguments for constructing a DnsDomainName resource.
 The name of the domain
 
 <h3 class="pdoc-module-header" id="DnsDomainNameState" data-link-title="DnsDomainNameState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L90">
         interface <strong>DnsDomainNameState</strong>
     </a>
 </h3>
@@ -2313,7 +2313,7 @@ The name of the domain
 Input properties used for looking up and filtering DnsDomainName resources.
 
 <h4 class="pdoc-member-header" id="DnsDomainNameState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L94">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L94">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2321,7 +2321,7 @@ Input properties used for looking up and filtering DnsDomainName resources.
 The id account of the domain
 
 <h4 class="pdoc-member-header" id="DnsDomainNameState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainName.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainName.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2329,7 +2329,7 @@ The id account of the domain
 The name of the domain
 
 <h3 class="pdoc-module-header" id="DnsDomainRecordArgs" data-link-title="DnsDomainRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L196">
         interface <strong>DnsDomainRecordArgs</strong>
     </a>
 </h3>
@@ -2339,7 +2339,7 @@ The name of the domain
 The set of arguments for constructing a DnsDomainRecord resource.
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordArgs-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L200">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L200">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2347,7 +2347,7 @@ The set of arguments for constructing a DnsDomainRecord resource.
 The id of the domain
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L204">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2355,7 +2355,7 @@ The id of the domain
 The portion before the domain name (e.g. www) or an @ for the apex/root domain (you cannot use an A record with an amex/root domain)
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L208">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L208">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2363,7 +2363,7 @@ The portion before the domain name (e.g. www) or an @ for the apex/root domain (
 Useful for MX records only, the priority mail should be attempted it (defaults to 10)
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L212">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L212">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2371,15 +2371,15 @@ Useful for MX records only, the priority mail should be attempted it (defaults t
 How long caching DNS servers should cache this record for, in seconds (the minimum is 600 and the default if unspecified is 600)
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L216">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L216">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The choice of record type from a, cname, mx or txt
+The choice of record type from A, CNAME, MX, SRV or TXT
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L220">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L220">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2387,7 +2387,7 @@ The choice of record type from a, cname, mx or txt
 The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve for this record
 
 <h3 class="pdoc-module-header" id="DnsDomainRecordState" data-link-title="DnsDomainRecordState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L154">
         interface <strong>DnsDomainRecordState</strong>
     </a>
 </h3>
@@ -2397,7 +2397,7 @@ The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve fo
 Input properties used for looking up and filtering DnsDomainRecord resources.
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L158">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L158">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2405,7 +2405,7 @@ Input properties used for looking up and filtering DnsDomainRecord resources.
 The id account of the domain
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L162">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L162">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2413,7 +2413,7 @@ The id account of the domain
 The date when it was created in UTC format
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordState-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L166">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L166">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2421,7 +2421,7 @@ The date when it was created in UTC format
 The id of the domain
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2429,7 +2429,7 @@ The id of the domain
 The portion before the domain name (e.g. www) or an @ for the apex/root domain (you cannot use an A record with an amex/root domain)
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L174">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L174">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2437,7 +2437,7 @@ The portion before the domain name (e.g. www) or an @ for the apex/root domain (
 Useful for MX records only, the priority mail should be attempted it (defaults to 10)
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L178">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L178">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2445,15 +2445,15 @@ Useful for MX records only, the priority mail should be attempted it (defaults t
 How long caching DNS servers should cache this record for, in seconds (the minimum is 600 and the default if unspecified is 600)
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L182">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L182">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The choice of record type from a, cname, mx or txt
+The choice of record type from A, CNAME, MX, SRV or TXT
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordState-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L186">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L186">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2461,7 +2461,7 @@ The choice of record type from a, cname, mx or txt
 The date when it was updated in UTC format
 
 <h4 class="pdoc-member-header" id="DnsDomainRecordState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/dnsDomainRecord.ts#L190">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/dnsDomainRecord.ts#L190">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2469,7 +2469,7 @@ The date when it was updated in UTC format
 The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve for this record
 
 <h3 class="pdoc-module-header" id="FirewallArgs" data-link-title="FirewallArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L104">
         interface <strong>FirewallArgs</strong>
     </a>
 </h3>
@@ -2479,7 +2479,7 @@ The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve fo
 The set of arguments for constructing a Firewall resource.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2487,7 +2487,7 @@ The set of arguments for constructing a Firewall resource.
 The Firewall name
 
 <h3 class="pdoc-module-header" id="FirewallRuleArgs" data-link-title="FirewallRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L165">
         interface <strong>FirewallRuleArgs</strong>
     </a>
 </h3>
@@ -2497,7 +2497,7 @@ The Firewall name
 The set of arguments for constructing a FirewallRule resource.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-cidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L169">property <b>cidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L169">property <b>cidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2505,7 +2505,7 @@ The set of arguments for constructing a FirewallRule resource.
 the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L173">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L173">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2513,7 +2513,7 @@ the IP address of the other end (i.e. not your instance) to affect, or a valid n
 will this rule affect ingress traffic
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-endPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L177">property <b>endPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L177">property <b>endPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2521,7 +2521,7 @@ will this rule affect ingress traffic
 The end port where traffic to be allowed.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-firewallId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L181">property <b>firewallId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L181">property <b>firewallId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2529,7 +2529,7 @@ The end port where traffic to be allowed.
 The Firewall id
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L185">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L185">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2537,7 +2537,7 @@ The Firewall id
 a string that will be the displayed name/reference for this rule (optional)
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L189">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L189">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2545,7 +2545,7 @@ a string that will be the displayed name/reference for this rule (optional)
 This may be one of "tcp", "udp", or "icmp".
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-startPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L193">property <b>startPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L193">property <b>startPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2553,7 +2553,7 @@ This may be one of "tcp", "udp", or "icmp".
 The start port where traffic to be allowed.
 
 <h3 class="pdoc-module-header" id="FirewallRuleState" data-link-title="FirewallRuleState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L131">
         interface <strong>FirewallRuleState</strong>
     </a>
 </h3>
@@ -2563,7 +2563,7 @@ The start port where traffic to be allowed.
 Input properties used for looking up and filtering FirewallRule resources.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-cidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L135">property <b>cidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L135">property <b>cidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2571,7 +2571,7 @@ Input properties used for looking up and filtering FirewallRule resources.
 the IP address of the other end (i.e. not your instance) to affect, or a valid network CIDR (defaults to being globally applied, i.e. 0.0.0.0/0).
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L139">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L139">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2579,7 +2579,7 @@ the IP address of the other end (i.e. not your instance) to affect, or a valid n
 will this rule affect ingress traffic
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-endPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L143">property <b>endPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L143">property <b>endPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2587,7 +2587,7 @@ will this rule affect ingress traffic
 The end port where traffic to be allowed.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-firewallId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L147">property <b>firewallId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L147">property <b>firewallId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2595,7 +2595,7 @@ The end port where traffic to be allowed.
 The Firewall id
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L151">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L151">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2603,7 +2603,7 @@ The Firewall id
 a string that will be the displayed name/reference for this rule (optional)
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L155">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L155">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2611,7 +2611,7 @@ a string that will be the displayed name/reference for this rule (optional)
 This may be one of "tcp", "udp", or "icmp".
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-startPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewallRule.ts#L159">property <b>startPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewallRule.ts#L159">property <b>startPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2619,7 +2619,7 @@ This may be one of "tcp", "udp", or "icmp".
 The start port where traffic to be allowed.
 
 <h3 class="pdoc-module-header" id="FirewallState" data-link-title="FirewallState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L90">
         interface <strong>FirewallState</strong>
     </a>
 </h3>
@@ -2629,7 +2629,7 @@ The start port where traffic to be allowed.
 Input properties used for looking up and filtering Firewall resources.
 
 <h4 class="pdoc-member-header" id="FirewallState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L94">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2637,7 +2637,7 @@ Input properties used for looking up and filtering Firewall resources.
 The Firewall name
 
 <h4 class="pdoc-member-header" id="FirewallState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/firewall.ts#L98">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/firewall.ts#L98">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2645,7 +2645,7 @@ The Firewall name
 The region where the firewall was create.
 
 <h3 class="pdoc-module-header" id="GetDnsDomainNameArgs" data-link-title="GetDnsDomainNameArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainName.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainName.ts#L27">
         interface <strong>GetDnsDomainNameArgs</strong>
     </a>
 </h3>
@@ -2655,7 +2655,7 @@ The region where the firewall was create.
 A collection of arguments for invoking getDnsDomainName.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainNameArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainName.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainName.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2663,7 +2663,7 @@ A collection of arguments for invoking getDnsDomainName.
 The id of the domain.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainNameArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainName.ts#L35">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainName.ts#L35">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2671,7 +2671,7 @@ The id of the domain.
 The name of the domain.
 
 <h3 class="pdoc-module-header" id="GetDnsDomainNameResult" data-link-title="GetDnsDomainNameResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainName.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainName.ts#L41">
         interface <strong>GetDnsDomainNameResult</strong>
     </a>
 </h3>
@@ -2681,7 +2681,7 @@ The name of the domain.
 A collection of values returned by getDnsDomainName.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainNameResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainName.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainName.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2689,7 +2689,7 @@ A collection of values returned by getDnsDomainName.
 A unique ID that can be used to identify and reference a domain.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainNameResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainName.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainName.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2697,7 +2697,7 @@ A unique ID that can be used to identify and reference a domain.
 The name of the domain.
 
 <h3 class="pdoc-module-header" id="GetDnsDomainRecordArgs" data-link-title="GetDnsDomainRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L26">
         interface <strong>GetDnsDomainRecordArgs</strong>
     </a>
 </h3>
@@ -2707,7 +2707,7 @@ The name of the domain.
 A collection of arguments for invoking getDnsDomainRecord.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordArgs-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L30">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L30">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2715,7 +2715,7 @@ A collection of arguments for invoking getDnsDomainRecord.
 The domain id of the record.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L34">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L34">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2723,7 +2723,7 @@ The domain id of the record.
 The name of the record.
 
 <h3 class="pdoc-module-header" id="GetDnsDomainRecordResult" data-link-title="GetDnsDomainRecordResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L40">
         interface <strong>GetDnsDomainRecordResult</strong>
     </a>
 </h3>
@@ -2733,7 +2733,7 @@ The name of the record.
 A collection of values returned by getDnsDomainRecord.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordResult-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L44">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L44">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2741,7 +2741,7 @@ A collection of values returned by getDnsDomainRecord.
 The id account of the domain.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L48">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L48">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2749,7 +2749,7 @@ The id account of the domain.
 The date when it was created in UTC format
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordResult-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L52">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L52">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2757,7 +2757,7 @@ The date when it was created in UTC format
 The id of the domain
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2765,7 +2765,7 @@ The id of the domain
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2773,7 +2773,7 @@ The provider-assigned unique ID for this managed resource.
 The portion before the domain name (e.g. www) or an @ for the apex/root domain (you cannot use an A record with an amex/root domain)
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordResult-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L64">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L64">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2781,7 +2781,7 @@ The portion before the domain name (e.g. www) or an @ for the apex/root domain (
 The priority of the record.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordResult-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L68">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L68">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2789,15 +2789,15 @@ The priority of the record.
 How long caching DNS servers should cache this record.
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L72">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L72">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
-The choice of record type from a, cname, mx or txt
+The choice of record type from A, CNAME, MX, SRV or TXT
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordResult-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L76">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L76">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2805,7 +2805,7 @@ The choice of record type from a, cname, mx or txt
 The date when it was updated in UTC format
 
 <h4 class="pdoc-member-header" id="GetDnsDomainRecordResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getDnsDomainRecord.ts#L80">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getDnsDomainRecord.ts#L80">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2813,7 +2813,7 @@ The date when it was updated in UTC format
 The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve for this record
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -2822,7 +2822,7 @@ The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve fo
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -2831,7 +2831,7 @@ The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve fo
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -2840,7 +2840,7 @@ The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve fo
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetInstanceArgs" data-link-title="GetInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L27">
         interface <strong>GetInstanceArgs</strong>
     </a>
 </h3>
@@ -2850,7 +2850,7 @@ The IP address (A or MX), hostname (CNAME or MX) or text value (TXT) to serve fo
 A collection of arguments for invoking getInstance.
 
 <h4 class="pdoc-member-header" id="GetInstanceArgs-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L31">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L31">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2858,7 +2858,7 @@ A collection of arguments for invoking getInstance.
 The hostname of the Instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2866,7 +2866,7 @@ The hostname of the Instance.
 The ID of the Instance
 
 <h3 class="pdoc-module-header" id="GetInstanceResult" data-link-title="GetInstanceResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L41">
         interface <strong>GetInstanceResult</strong>
     </a>
 </h3>
@@ -2876,7 +2876,7 @@ The ID of the Instance
 A collection of values returned by getInstance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-cpuCores">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L45">property <b>cpuCores</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L45">property <b>cpuCores</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuCores: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2884,7 +2884,7 @@ A collection of values returned by getInstance.
 Total cpu of the inatance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L49">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L49">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2892,7 +2892,7 @@ Total cpu of the inatance.
 The date of creation of the instance
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-diskGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L53">property <b>diskGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L53">property <b>diskGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2900,7 +2900,7 @@ The date of creation of the instance
 The size of the disk.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-firewallId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L57">property <b>firewallId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L57">property <b>firewallId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2908,7 +2908,7 @@ The size of the disk.
 The ID of the firewall used.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L61">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L61">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2916,7 +2916,7 @@ The ID of the firewall used.
 The Instance hostname.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2924,7 +2924,7 @@ The Instance hostname.
 The ID of the Instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-initialPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L69">property <b>initialPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L69">property <b>initialPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialPassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2932,7 +2932,7 @@ The ID of the Instance.
 Instance initial password
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-initialUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L73">property <b>initialUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L73">property <b>initialUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialUser: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2940,7 +2940,7 @@ Instance initial password
 The name of the initial user created on the server.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-networkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L77">property <b>networkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L77">property <b>networkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2948,7 +2948,7 @@ The name of the initial user created on the server.
 This will be the ID of the network.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L81">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L81">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2956,7 +2956,7 @@ This will be the ID of the network.
 The notes of the instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-privateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L85">property <b>privateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L85">property <b>privateIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2964,7 +2964,7 @@ The notes of the instance.
 The private ip.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-pseudoIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L89">property <b>pseudoIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L89">property <b>pseudoIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pseudoIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2972,7 +2972,7 @@ The private ip.
 Is the ip that is used to route the public ip from the internet to the instance using NAT
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-publicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L93">property <b>publicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L93">property <b>publicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2980,7 +2980,7 @@ Is the ip that is used to route the public ip from the internet to the instance 
 The public ip.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-ramMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L97">property <b>ramMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L97">property <b>ramMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ramMb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2988,7 +2988,7 @@ The public ip.
 Total ram of the instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-reverseDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L101">property <b>reverseDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L101">property <b>reverseDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reverseDns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2996,7 +2996,7 @@ Total ram of the instance.
 A fully qualified domain name.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-script">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L105">property <b>script</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L105">property <b>script</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>script: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3004,7 +3004,7 @@ A fully qualified domain name.
 the contents of a script uploaded
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L109">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L109">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3012,7 +3012,7 @@ the contents of a script uploaded
 The name of the size.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-sshkeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L113">property <b>sshkeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L113">property <b>sshkeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshkeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3020,7 +3020,7 @@ The name of the size.
 The ID SSH.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L117">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L117">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3028,7 +3028,7 @@ The ID SSH.
 The status of the instance
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L121">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L121">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3036,7 +3036,7 @@ The status of the instance
 An optional list of tags
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstance.ts#L125">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstance.ts#L125">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3044,7 +3044,7 @@ An optional list of tags
 The ID for the template to used to build the instance.
 
 <h3 class="pdoc-module-header" id="GetInstancesArgs" data-link-title="GetInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstances.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstances.ts#L27">
         interface <strong>GetInstancesArgs</strong>
     </a>
 </h3>
@@ -3054,7 +3054,7 @@ The ID for the template to used to build the instance.
 A collection of arguments for invoking getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstances.ts#L32">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstances.ts#L32">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetInstancesFilter'>GetInstancesFilter</a>[];</code></pre>
@@ -3063,7 +3063,7 @@ Filter the results.
 The `filter` block is documented below.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-sorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstances.ts#L37">property <b>sorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstances.ts#L37">property <b>sorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetInstancesSort'>GetInstancesSort</a>[];</code></pre>
@@ -3072,7 +3072,7 @@ Sort the results.
 The `sort` block is documented below.
 
 <h3 class="pdoc-module-header" id="GetInstancesResult" data-link-title="GetInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstances.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstances.ts#L43">
         interface <strong>GetInstancesResult</strong>
     </a>
 </h3>
@@ -3082,12 +3082,12 @@ The `sort` block is documented below.
 A collection of values returned by getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstances.ts#L44">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstances.ts#L44">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetInstancesFilter'>GetInstancesFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstances.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstances.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3095,7 +3095,7 @@ A collection of values returned by getInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstances.ts#L52">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstances.ts#L52">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetInstancesInstance'>GetInstancesInstance</a>[];</code></pre>
@@ -3103,12 +3103,12 @@ The provider-assigned unique ID for this managed resource.
 A list of Instances satisfying any `filter` and `sort` criteria. Each instance has the following attributes:
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-sorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstances.ts#L53">property <b>sorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstances.ts#L53">property <b>sorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetInstancesSort'>GetInstancesSort</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetInstancesSizeArgs" data-link-title="GetInstancesSizeArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstancesSize.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstancesSize.ts#L27">
         interface <strong>GetInstancesSizeArgs</strong>
     </a>
 </h3>
@@ -3118,17 +3118,17 @@ A list of Instances satisfying any `filter` and `sort` criteria. Each instance h
 A collection of arguments for invoking getInstancesSize.
 
 <h4 class="pdoc-member-header" id="GetInstancesSizeArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstancesSize.ts#L28">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstancesSize.ts#L28">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetInstancesSizeFilter'>GetInstancesSizeFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesSizeArgs-sorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstancesSize.ts#L29">property <b>sorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstancesSize.ts#L29">property <b>sorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetInstancesSizeSort'>GetInstancesSizeSort</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetInstancesSizeResult" data-link-title="GetInstancesSizeResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstancesSize.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstancesSize.ts#L35">
         interface <strong>GetInstancesSizeResult</strong>
     </a>
 </h3>
@@ -3138,12 +3138,12 @@ A collection of arguments for invoking getInstancesSize.
 A collection of values returned by getInstancesSize.
 
 <h4 class="pdoc-member-header" id="GetInstancesSizeResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstancesSize.ts#L36">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstancesSize.ts#L36">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetInstancesSizeFilter'>GetInstancesSizeFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesSizeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstancesSize.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstancesSize.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3151,17 +3151,17 @@ A collection of values returned by getInstancesSize.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstancesSizeResult-sizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstancesSize.ts#L41">property <b>sizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstancesSize.ts#L41">property <b>sizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizes: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetInstancesSizeSize'>GetInstancesSizeSize</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesSizeResult-sorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getInstancesSize.ts#L42">property <b>sorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getInstancesSize.ts#L42">property <b>sorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetInstancesSizeSort'>GetInstancesSizeSort</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetKubernetesClusterArgs" data-link-title="GetKubernetesClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L58">
         interface <strong>GetKubernetesClusterArgs</strong>
     </a>
 </h3>
@@ -3171,7 +3171,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getKubernetesCluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3179,7 +3179,7 @@ A collection of arguments for invoking getKubernetesCluster.
 The ID of the kubernetes Cluster
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3187,7 +3187,7 @@ The ID of the kubernetes Cluster
 The name of the kubernetes Cluster.
 
 <h3 class="pdoc-module-header" id="GetKubernetesClusterResult" data-link-title="GetKubernetesClusterResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L72">
         interface <strong>GetKubernetesClusterResult</strong>
     </a>
 </h3>
@@ -3197,7 +3197,7 @@ The name of the kubernetes Cluster.
 A collection of values returned by getKubernetesCluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-apiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L76">property <b>apiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L76">property <b>apiEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3205,7 +3205,7 @@ A collection of values returned by getKubernetesCluster.
 The base URL of the API server on the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-applications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L80">property <b>applications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L80">property <b>applications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applications: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3213,7 +3213,7 @@ The base URL of the API server on the Kubernetes master node.
 A list of application installed.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-builtAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L84">property <b>builtAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L84">property <b>builtAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>builtAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3221,7 +3221,7 @@ A list of application installed.
 The date where the Kubernetes cluster was build.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L88">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L88">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3229,7 +3229,7 @@ The date where the Kubernetes cluster was build.
 The date where the Kubernetes cluster was create.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-dnsEntry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L92">property <b>dnsEntry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L92">property <b>dnsEntry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsEntry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3237,7 +3237,7 @@ The date where the Kubernetes cluster was create.
 The unique dns entry for the cluster in this case point to the master.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L96">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3245,7 +3245,7 @@ The unique dns entry for the cluster in this case point to the master.
 A unique ID that can be used to identify and reference a Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-installedApplications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L100">property <b>installedApplications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L100">property <b>installedApplications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>installedApplications: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetKubernetesClusterInstalledApplication'>GetKubernetesClusterInstalledApplication</a>[];</code></pre>
@@ -3253,7 +3253,7 @@ A unique ID that can be used to identify and reference a Kubernetes cluster.
 A unique ID that can be used to identify and reference a Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L104">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L104">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetKubernetesClusterInstance'>GetKubernetesClusterInstance</a>[];</code></pre>
@@ -3261,7 +3261,7 @@ A unique ID that can be used to identify and reference a Kubernetes cluster.
 In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-kubeconfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L108">property <b>kubeconfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L108">property <b>kubeconfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeconfig: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3269,7 +3269,7 @@ In addition to the arguments provided, these additional attributes about the clu
 A representation of the Kubernetes cluster's kubeconfig in yaml format.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-kubernetesVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L112">property <b>kubernetesVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L112">property <b>kubernetesVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubernetesVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3277,7 +3277,7 @@ A representation of the Kubernetes cluster's kubeconfig in yaml format.
 The version of Kubernetes.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-masterIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L116">property <b>masterIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L116">property <b>masterIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3285,7 +3285,7 @@ The version of Kubernetes.
 The Ip of the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L120">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3293,7 +3293,7 @@ The Ip of the Kubernetes master node.
 The name of your cluster,.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-numTargetNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L124">property <b>numTargetNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L124">property <b>numTargetNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numTargetNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3301,12 +3301,12 @@ The name of your cluster,.
 The size of the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-ready">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L125">property <b>ready</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L125">property <b>ready</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ready: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L130">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L130">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3315,7 +3315,7 @@ The status of Kubernetes cluster.
 * `ready` -If the Kubernetes cluster is ready.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L134">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L134">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3323,7 +3323,7 @@ The status of Kubernetes cluster.
 The tag of the instances
 
 <h4 class="pdoc-member-header" id="GetKubernetesClusterResult-targetNodesSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesCluster.ts#L138">property <b>targetNodesSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesCluster.ts#L138">property <b>targetNodesSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetNodesSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3331,7 +3331,7 @@ The tag of the instances
 The size of each node.
 
 <h3 class="pdoc-module-header" id="GetKubernetesVersionArgs" data-link-title="GetKubernetesVersionArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesVersion.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesVersion.ts#L57">
         interface <strong>GetKubernetesVersionArgs</strong>
     </a>
 </h3>
@@ -3341,7 +3341,7 @@ The size of each node.
 A collection of arguments for invoking getKubernetesVersion.
 
 <h4 class="pdoc-member-header" id="GetKubernetesVersionArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesVersion.ts#L62">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesVersion.ts#L62">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetKubernetesVersionFilter'>GetKubernetesVersionFilter</a>[];</code></pre>
@@ -3350,7 +3350,7 @@ Filter the results.
 The `filter` block is documented below.
 
 <h4 class="pdoc-member-header" id="GetKubernetesVersionArgs-sorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesVersion.ts#L67">property <b>sorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesVersion.ts#L67">property <b>sorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetKubernetesVersionSort'>GetKubernetesVersionSort</a>[];</code></pre>
@@ -3359,7 +3359,7 @@ Sort the results.
 The `sort` block is documented below.
 
 <h3 class="pdoc-module-header" id="GetKubernetesVersionResult" data-link-title="GetKubernetesVersionResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesVersion.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesVersion.ts#L73">
         interface <strong>GetKubernetesVersionResult</strong>
     </a>
 </h3>
@@ -3369,12 +3369,12 @@ The `sort` block is documented below.
 A collection of values returned by getKubernetesVersion.
 
 <h4 class="pdoc-member-header" id="GetKubernetesVersionResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesVersion.ts#L74">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesVersion.ts#L74">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetKubernetesVersionFilter'>GetKubernetesVersionFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesVersionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesVersion.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesVersion.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3382,17 +3382,17 @@ A collection of values returned by getKubernetesVersion.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKubernetesVersionResult-sorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesVersion.ts#L79">property <b>sorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesVersion.ts#L79">property <b>sorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetKubernetesVersionSort'>GetKubernetesVersionSort</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesVersionResult-versions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getKubernetesVersion.ts#L80">property <b>versions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getKubernetesVersion.ts#L80">property <b>versions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versions: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetKubernetesVersionVersion'>GetKubernetesVersionVersion</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetLoadBalancerArgs" data-link-title="GetLoadBalancerArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L27">
         interface <strong>GetLoadBalancerArgs</strong>
     </a>
 </h3>
@@ -3402,7 +3402,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getLoadBalancer.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerArgs-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L31">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L31">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3410,7 +3410,7 @@ A collection of arguments for invoking getLoadBalancer.
 The hostname of the Load Balancer.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3418,7 +3418,7 @@ The hostname of the Load Balancer.
 The ID of the Load Balancer.
 
 <h3 class="pdoc-module-header" id="GetLoadBalancerResult" data-link-title="GetLoadBalancerResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L41">
         interface <strong>GetLoadBalancerResult</strong>
     </a>
 </h3>
@@ -3428,7 +3428,7 @@ The ID of the Load Balancer.
 A collection of values returned by getLoadBalancer.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L45">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L45">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetLoadBalancerBackend'>GetLoadBalancerBackend</a>[];</code></pre>
@@ -3436,7 +3436,7 @@ A collection of values returned by getLoadBalancer.
 A list of backend instances
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-failTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L49">property <b>failTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L49">property <b>failTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3444,7 +3444,7 @@ A list of backend instances
 The wait time until the backend is marked as a failure
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-healthCheckPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L53">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L53">property <b>healthCheckPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3452,7 +3452,7 @@ The wait time until the backend is marked as a failure
 The path to check the health of the backend
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L57">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L57">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3460,7 +3460,7 @@ The path to check the health of the backend
 The hostname of the Load Balancer
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3468,7 +3468,7 @@ The hostname of the Load Balancer
 The ID of the Load Balancer
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-ignoreInvalidBackendTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L65">property <b>ignoreInvalidBackendTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L65">property <b>ignoreInvalidBackendTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreInvalidBackendTls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3476,7 +3476,7 @@ The ID of the Load Balancer
 Should self-signed/invalid certificates be ignored from the backend servers
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-maxConns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L69">property <b>maxConns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L69">property <b>maxConns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3484,7 +3484,7 @@ Should self-signed/invalid certificates be ignored from the backend servers
 How many concurrent connections can each backend handle
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-maxRequestSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L73">property <b>maxRequestSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L73">property <b>maxRequestSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxRequestSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3492,7 +3492,7 @@ How many concurrent connections can each backend handle
 The max request size set in the configuration
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L77">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L77">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3500,7 +3500,7 @@ The max request size set in the configuration
 The policy set in the Load Balancer
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L81">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L81">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3508,7 +3508,7 @@ The policy set in the Load Balancer
 The port set in the configuration.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L85">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L85">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3516,7 +3516,7 @@ The port set in the configuration.
 The protocol used in the configuration.
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-tlsCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L89">property <b>tlsCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L89">property <b>tlsCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCertificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3524,7 +3524,7 @@ The protocol used in the configuration.
 If is set will be returned
 
 <h4 class="pdoc-member-header" id="GetLoadBalancerResult-tlsKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getLoadBalancer.ts#L93">property <b>tlsKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getLoadBalancer.ts#L93">property <b>tlsKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3532,7 +3532,7 @@ If is set will be returned
 If is set will be returned
 
 <h3 class="pdoc-module-header" id="GetNetworkArgs" data-link-title="GetNetworkArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L27">
         interface <strong>GetNetworkArgs</strong>
     </a>
 </h3>
@@ -3542,7 +3542,7 @@ If is set will be returned
 A collection of arguments for invoking getNetwork.
 
 <h4 class="pdoc-member-header" id="GetNetworkArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3550,7 +3550,7 @@ A collection of arguments for invoking getNetwork.
 The unique identifier of an existing Network.
 
 <h4 class="pdoc-member-header" id="GetNetworkArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L35">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L35">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3558,7 +3558,7 @@ The unique identifier of an existing Network.
 The name of an existing Network.
 
 <h3 class="pdoc-module-header" id="GetNetworkResult" data-link-title="GetNetworkResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L41">
         interface <strong>GetNetworkResult</strong>
     </a>
 </h3>
@@ -3568,7 +3568,7 @@ The name of an existing Network.
 A collection of values returned by getNetwork.
 
 <h4 class="pdoc-member-header" id="GetNetworkResult-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L45">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L45">property <b>cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3576,7 +3576,7 @@ A collection of values returned by getNetwork.
 The block ip assigned to the network.
 
 <h4 class="pdoc-member-header" id="GetNetworkResult-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L49">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L49">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>default: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3584,7 +3584,7 @@ The block ip assigned to the network.
 If is the default network.
 
 <h4 class="pdoc-member-header" id="GetNetworkResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3592,7 +3592,7 @@ If is the default network.
 A unique ID that can be used to identify and reference a Network.
 
 <h4 class="pdoc-member-header" id="GetNetworkResult-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L57">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L57">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3600,7 +3600,7 @@ A unique ID that can be used to identify and reference a Network.
 The label used in the configuration.
 
 <h4 class="pdoc-member-header" id="GetNetworkResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3608,7 +3608,7 @@ The label used in the configuration.
 The name of the network.
 
 <h4 class="pdoc-member-header" id="GetNetworkResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getNetwork.ts#L65">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getNetwork.ts#L65">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3616,7 +3616,7 @@ The name of the network.
 The region where the network was create.
 
 <h3 class="pdoc-module-header" id="GetSnapshotArgs" data-link-title="GetSnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L45">
         interface <strong>GetSnapshotArgs</strong>
     </a>
 </h3>
@@ -3626,7 +3626,7 @@ The region where the network was create.
 A collection of arguments for invoking getSnapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3634,7 +3634,7 @@ A collection of arguments for invoking getSnapshot.
 The ID of the snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L53">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3642,7 +3642,7 @@ The ID of the snapshot.
 The name of the snapshot.
 
 <h3 class="pdoc-module-header" id="GetSnapshotResult" data-link-title="GetSnapshotResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L59">
         interface <strong>GetSnapshotResult</strong>
     </a>
 </h3>
@@ -3652,7 +3652,7 @@ The name of the snapshot.
 A collection of values returned by getSnapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-completedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L63">property <b>completedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L63">property <b>completedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>completedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3660,7 +3660,7 @@ A collection of values returned by getSnapshot.
 The date where the snapshot was completed.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-cronTiming">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L67">property <b>cronTiming</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L67">property <b>cronTiming</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronTiming: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3668,7 +3668,7 @@ The date where the snapshot was completed.
 A string with the cron format.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L71">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L71">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3676,12 +3676,12 @@ A string with the cron format.
 The hostname of the instance.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L76">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L76">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3689,7 +3689,7 @@ The hostname of the instance.
 The ID of the Instance from which the snapshot was be taken.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3697,7 +3697,7 @@ The ID of the Instance from which the snapshot was be taken.
 The name of the snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-nextExecution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L84">property <b>nextExecution</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L84">property <b>nextExecution</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextExecution: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3705,7 +3705,7 @@ The name of the snapshot.
 if cron was define this date will be the next execution date.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L88">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L88">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3713,7 +3713,7 @@ if cron was define this date will be the next execution date.
 The region where the snapshot was take.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-requestedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L92">property <b>requestedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L92">property <b>requestedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3721,7 +3721,7 @@ The region where the snapshot was take.
 The date where the snapshot was requested.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-safe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L96">property <b>safe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L96">property <b>safe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>safe: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3729,7 +3729,7 @@ The date where the snapshot was requested.
 If is `true` the instance will be shut down during the snapshot if id `false` them not.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-sizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L100">property <b>sizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L100">property <b>sizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3737,7 +3737,7 @@ If is `true` the instance will be shut down during the snapshot if id `false` th
 The size of the snapshot in GB.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L104">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L104">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3745,7 +3745,7 @@ The size of the snapshot in GB.
 The status of the snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-templateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSnapshot.ts#L108">property <b>templateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSnapshot.ts#L108">property <b>templateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3753,7 +3753,7 @@ The status of the snapshot.
 The template id.
 
 <h3 class="pdoc-module-header" id="GetSshKeyArgs" data-link-title="GetSshKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSshKey.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSshKey.ts#L27">
         interface <strong>GetSshKeyArgs</strong>
     </a>
 </h3>
@@ -3763,7 +3763,7 @@ The template id.
 A collection of arguments for invoking getSshKey.
 
 <h4 class="pdoc-member-header" id="GetSshKeyArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSshKey.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSshKey.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3771,7 +3771,7 @@ A collection of arguments for invoking getSshKey.
 The ID of the ssh key.
 
 <h4 class="pdoc-member-header" id="GetSshKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSshKey.ts#L35">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSshKey.ts#L35">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3779,7 +3779,7 @@ The ID of the ssh key.
 The name of the ssh key.
 
 <h3 class="pdoc-module-header" id="GetSshKeyResult" data-link-title="GetSshKeyResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSshKey.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSshKey.ts#L41">
         interface <strong>GetSshKeyResult</strong>
     </a>
 </h3>
@@ -3789,22 +3789,22 @@ The name of the ssh key.
 A collection of values returned by getSshKey.
 
 <h4 class="pdoc-member-header" id="GetSshKeyResult-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSshKey.ts#L42">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSshKey.ts#L42">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSshKey.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSshKey.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getSshKey.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getSshKey.ts#L44">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetTemplateArgs" data-link-title="GetTemplateArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getTemplate.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getTemplate.ts#L27">
         interface <strong>GetTemplateArgs</strong>
     </a>
 </h3>
@@ -3814,7 +3814,7 @@ A collection of values returned by getSshKey.
 A collection of arguments for invoking getTemplate.
 
 <h4 class="pdoc-member-header" id="GetTemplateArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getTemplate.ts#L32">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getTemplate.ts#L32">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetTemplateFilter'>GetTemplateFilter</a>[];</code></pre>
@@ -3823,7 +3823,7 @@ Filter the results.
 The `filter` block is documented below.
 
 <h4 class="pdoc-member-header" id="GetTemplateArgs-sorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getTemplate.ts#L37">property <b>sorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getTemplate.ts#L37">property <b>sorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetTemplateSort'>GetTemplateSort</a>[];</code></pre>
@@ -3832,7 +3832,7 @@ Sort the results.
 The `sort` block is documented below.
 
 <h3 class="pdoc-module-header" id="GetTemplateResult" data-link-title="GetTemplateResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getTemplate.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getTemplate.ts#L43">
         interface <strong>GetTemplateResult</strong>
     </a>
 </h3>
@@ -3842,12 +3842,12 @@ The `sort` block is documented below.
 A collection of values returned by getTemplate.
 
 <h4 class="pdoc-member-header" id="GetTemplateResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getTemplate.ts#L44">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getTemplate.ts#L44">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetTemplateFilter'>GetTemplateFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplateResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getTemplate.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getTemplate.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3855,17 +3855,17 @@ A collection of values returned by getTemplate.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTemplateResult-sorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getTemplate.ts#L49">property <b>sorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getTemplate.ts#L49">property <b>sorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sorts?: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetTemplateSort'>GetTemplateSort</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplateResult-templates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getTemplate.ts#L50">property <b>templates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getTemplate.ts#L50">property <b>templates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templates: <a href='/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetTemplateTemplate'>GetTemplateTemplate</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -3874,7 +3874,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetVolumeArgs" data-link-title="GetVolumeArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L27">
         interface <strong>GetVolumeArgs</strong>
     </a>
 </h3>
@@ -3884,7 +3884,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getVolume.
 
 <h4 class="pdoc-member-header" id="GetVolumeArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3892,7 +3892,7 @@ A collection of arguments for invoking getVolume.
 The unique identifier for the volume.
 
 <h4 class="pdoc-member-header" id="GetVolumeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L35">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L35">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3900,7 +3900,7 @@ The unique identifier for the volume.
 The name of the volume.
 
 <h3 class="pdoc-module-header" id="GetVolumeResult" data-link-title="GetVolumeResult">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L41">
         interface <strong>GetVolumeResult</strong>
     </a>
 </h3>
@@ -3910,7 +3910,7 @@ The name of the volume.
 A collection of values returned by getVolume.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-bootable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L45">property <b>bootable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L45">property <b>bootable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3918,7 +3918,7 @@ A collection of values returned by getVolume.
 if is bootable or not.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L49">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L49">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3926,7 +3926,7 @@ if is bootable or not.
 The date of the creation of the volume.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3934,7 +3934,7 @@ The date of the creation of the volume.
 The unique identifier for the volume.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-mountPoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L57">property <b>mountPoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L57">property <b>mountPoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountPoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3942,7 +3942,7 @@ The unique identifier for the volume.
 The mount point of the volume.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3950,7 +3950,7 @@ The mount point of the volume.
 Name of the volume.
 
 <h4 class="pdoc-member-header" id="GetVolumeResult-sizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/getVolume.ts#L65">property <b>sizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/getVolume.ts#L65">property <b>sizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3958,7 +3958,7 @@ Name of the volume.
 The size of the volume.
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L288">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L288">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -3968,7 +3968,7 @@ The size of the volume.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-firewallId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L292">property <b>firewallId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L292">property <b>firewallId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3976,7 +3976,7 @@ The set of arguments for constructing a Instance resource.
 The ID of the firewall to use, from the current list. If left blank or not sent, the default firewall will be used (open to all).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L296">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L296">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3984,7 +3984,7 @@ The ID of the firewall to use, from the current list. If left blank or not sent,
 The Instance hostname.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-initialUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L300">property <b>initialUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L300">property <b>initialUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3992,7 +3992,7 @@ The Instance hostname.
 The name of the initial user created on the server (optional; this will default to the template's defaultUsername and fallback to civo).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-networkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L304">property <b>networkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L304">property <b>networkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4000,7 +4000,7 @@ The name of the initial user created on the server (optional; this will default 
 This must be the ID of the network from the network listing (optional; default network used when not specified).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L308">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L308">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4008,7 +4008,7 @@ This must be the ID of the network from the network listing (optional; default n
 Add some notes to the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-publicIpRequiered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L312">property <b>publicIpRequiered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L312">property <b>publicIpRequiered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpRequiered?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4016,7 +4016,7 @@ Add some notes to the instance.
 This should be either false, true or `move_ip_from:intances_id`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-reverseDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L316">property <b>reverseDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L316">property <b>reverseDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reverseDns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4024,7 +4024,7 @@ This should be either false, true or `move_ip_from:intances_id`.
 A fully qualified domain name that should be used as the instance's IP's reverse DNS (optional, uses the hostname if unspecified).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-script">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L320">property <b>script</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L320">property <b>script</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>script?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4032,7 +4032,7 @@ A fully qualified domain name that should be used as the instance's IP's reverse
 the contents of a script that will be uploaded to /usr/local/bin/civo-user-init-script on your instance, read/write/executable only by root and then will be executed at the end of the cloud initialization
 
 <h4 class="pdoc-member-header" id="InstanceArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L324">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L324">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4040,7 +4040,7 @@ the contents of a script that will be uploaded to /usr/local/bin/civo-user-init-
 The name of the size, from the current list, e.g. g2.small (required).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-sshkeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L328">property <b>sshkeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L328">property <b>sshkeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshkeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4048,7 +4048,7 @@ The name of the size, from the current list, e.g. g2.small (required).
 The ID of an already uploaded SSH public key to use for login to the default user (optional; if one isn't provided a random password will be set and returned in the initialPassword field).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L332">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L332">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4056,7 +4056,7 @@ The ID of an already uploaded SSH public key to use for login to the default use
 An optional list of tags, represented as a key, value pair.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L336">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L336">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4064,7 +4064,7 @@ An optional list of tags, represented as a key, value pair.
 The ID for the template to use to build the instance.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L198">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -4074,7 +4074,7 @@ The ID for the template to use to build the instance.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-cpuCores">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L202">property <b>cpuCores</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L202">property <b>cpuCores</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuCores?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4082,7 +4082,7 @@ Input properties used for looking up and filtering Instance resources.
 Total cpu of the inatance.
 
 <h4 class="pdoc-member-header" id="InstanceState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L206">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L206">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4090,7 +4090,7 @@ Total cpu of the inatance.
 The date of creation of the instance
 
 <h4 class="pdoc-member-header" id="InstanceState-diskGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L210">property <b>diskGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L210">property <b>diskGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4098,7 +4098,7 @@ The date of creation of the instance
 The size of the disk.
 
 <h4 class="pdoc-member-header" id="InstanceState-firewallId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L214">property <b>firewallId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L214">property <b>firewallId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4106,7 +4106,7 @@ The size of the disk.
 The ID of the firewall to use, from the current list. If left blank or not sent, the default firewall will be used (open to all).
 
 <h4 class="pdoc-member-header" id="InstanceState-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L218">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L218">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4114,7 +4114,7 @@ The ID of the firewall to use, from the current list. If left blank or not sent,
 The Instance hostname.
 
 <h4 class="pdoc-member-header" id="InstanceState-initialPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L222">property <b>initialPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L222">property <b>initialPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4122,7 +4122,7 @@ The Instance hostname.
 Instance initial password
 
 <h4 class="pdoc-member-header" id="InstanceState-initialUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L226">property <b>initialUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L226">property <b>initialUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialUser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4130,7 +4130,7 @@ Instance initial password
 The name of the initial user created on the server (optional; this will default to the template's defaultUsername and fallback to civo).
 
 <h4 class="pdoc-member-header" id="InstanceState-networkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L230">property <b>networkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L230">property <b>networkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4138,7 +4138,7 @@ The name of the initial user created on the server (optional; this will default 
 This must be the ID of the network from the network listing (optional; default network used when not specified).
 
 <h4 class="pdoc-member-header" id="InstanceState-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L234">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L234">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4146,7 +4146,7 @@ This must be the ID of the network from the network listing (optional; default n
 Add some notes to the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-privateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L238">property <b>privateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L238">property <b>privateIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4154,7 +4154,7 @@ Add some notes to the instance.
 The private ip.
 
 <h4 class="pdoc-member-header" id="InstanceState-pseudoIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L242">property <b>pseudoIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L242">property <b>pseudoIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pseudoIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4162,7 +4162,7 @@ The private ip.
 Is the ip that is used to route the public ip from the internet to the instance using NAT
 
 <h4 class="pdoc-member-header" id="InstanceState-publicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L246">property <b>publicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L246">property <b>publicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4170,7 +4170,7 @@ Is the ip that is used to route the public ip from the internet to the instance 
 This should be either false, true or `move_ip_from:intances_id`.
 
 <h4 class="pdoc-member-header" id="InstanceState-publicIpRequiered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L250">property <b>publicIpRequiered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L250">property <b>publicIpRequiered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpRequiered?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4178,7 +4178,7 @@ This should be either false, true or `move_ip_from:intances_id`.
 This should be either false, true or `move_ip_from:intances_id`.
 
 <h4 class="pdoc-member-header" id="InstanceState-ramMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L254">property <b>ramMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L254">property <b>ramMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ramMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4186,7 +4186,7 @@ This should be either false, true or `move_ip_from:intances_id`.
 Total ram of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-reverseDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L258">property <b>reverseDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L258">property <b>reverseDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reverseDns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4194,7 +4194,7 @@ Total ram of the instance.
 A fully qualified domain name that should be used as the instance's IP's reverse DNS (optional, uses the hostname if unspecified).
 
 <h4 class="pdoc-member-header" id="InstanceState-script">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L262">property <b>script</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L262">property <b>script</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>script?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4202,7 +4202,7 @@ A fully qualified domain name that should be used as the instance's IP's reverse
 the contents of a script that will be uploaded to /usr/local/bin/civo-user-init-script on your instance, read/write/executable only by root and then will be executed at the end of the cloud initialization
 
 <h4 class="pdoc-member-header" id="InstanceState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L266">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L266">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4210,7 +4210,7 @@ the contents of a script that will be uploaded to /usr/local/bin/civo-user-init-
 The name of the size, from the current list, e.g. g2.small (required).
 
 <h4 class="pdoc-member-header" id="InstanceState-sshkeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L270">property <b>sshkeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L270">property <b>sshkeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshkeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4218,7 +4218,7 @@ The name of the size, from the current list, e.g. g2.small (required).
 The ID of an already uploaded SSH public key to use for login to the default user (optional; if one isn't provided a random password will be set and returned in the initialPassword field).
 
 <h4 class="pdoc-member-header" id="InstanceState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L274">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L274">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4226,7 +4226,7 @@ The ID of an already uploaded SSH public key to use for login to the default use
 The status of the instance
 
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L278">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L278">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4234,7 +4234,7 @@ The status of the instance
 An optional list of tags, represented as a key, value pair.
 
 <h4 class="pdoc-member-header" id="InstanceState-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/instance.ts#L282">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/instance.ts#L282">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4242,7 +4242,7 @@ An optional list of tags, represented as a key, value pair.
 The ID for the template to use to build the instance.
 
 <h3 class="pdoc-module-header" id="KubernetesClusterArgs" data-link-title="KubernetesClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L229">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L229">
         interface <strong>KubernetesClusterArgs</strong>
     </a>
 </h3>
@@ -4252,7 +4252,7 @@ The ID for the template to use to build the instance.
 The set of arguments for constructing a KubernetesCluster resource.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-applications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L233">property <b>applications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L233">property <b>applications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4260,7 +4260,7 @@ The set of arguments for constructing a KubernetesCluster resource.
 A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-kubernetesVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L237">property <b>kubernetesVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L237">property <b>kubernetesVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubernetesVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4268,7 +4268,7 @@ A comma separated list of applications to install. Spaces within application nam
 The version of k3s to install (optional, the default is currently the latest available).
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L241">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L241">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4276,7 +4276,7 @@ The version of k3s to install (optional, the default is currently the latest ava
 A name for the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-numTargetNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L245">property <b>numTargetNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L245">property <b>numTargetNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numTargetNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4284,7 +4284,7 @@ A name for the Kubernetes cluster.
 The number of instances to create (optional, the default at the time of writing is 3).
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L249">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L249">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4292,7 +4292,7 @@ The number of instances to create (optional, the default at the time of writing 
 A space separated list of tags, to be used freely as required.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterArgs-targetNodesSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L253">property <b>targetNodesSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L253">property <b>targetNodesSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetNodesSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4300,7 +4300,7 @@ A space separated list of tags, to be used freely as required.
 The size of each node (optional, the default is currently g2.small)
 
 <h3 class="pdoc-module-header" id="KubernetesClusterState" data-link-title="KubernetesClusterState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L161">
         interface <strong>KubernetesClusterState</strong>
     </a>
 </h3>
@@ -4310,7 +4310,7 @@ The size of each node (optional, the default is currently g2.small)
 Input properties used for looking up and filtering KubernetesCluster resources.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-apiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L165">property <b>apiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L165">property <b>apiEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4318,7 +4318,7 @@ Input properties used for looking up and filtering KubernetesCluster resources.
 The base URL of the API server on the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-applications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L169">property <b>applications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L169">property <b>applications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4326,7 +4326,7 @@ The base URL of the API server on the Kubernetes master node.
 A comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. If you want to remove a default installed application, prefix it with a '-', e.g. -traefik
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-builtAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L173">property <b>builtAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L173">property <b>builtAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>builtAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4334,7 +4334,7 @@ A comma separated list of applications to install. Spaces within application nam
 The date where the Kubernetes cluster was build.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L177">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L177">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4342,7 +4342,7 @@ The date where the Kubernetes cluster was build.
 The date where the Kubernetes cluster was create.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-dnsEntry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L181">property <b>dnsEntry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L181">property <b>dnsEntry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsEntry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4350,7 +4350,7 @@ The date where the Kubernetes cluster was create.
 The unique dns entry for the cluster in this case point to the master.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-installedApplications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L185">property <b>installedApplications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L185">property <b>installedApplications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>installedApplications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#KubernetesClusterInstalledApplication'>KubernetesClusterInstalledApplication</a>&gt;[]&gt;;</code></pre>
@@ -4358,7 +4358,7 @@ The unique dns entry for the cluster in this case point to the master.
 A unique ID that can be used to identify and reference a Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L189">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L189">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#KubernetesClusterInstance'>KubernetesClusterInstance</a>&gt;[]&gt;;</code></pre>
@@ -4366,7 +4366,7 @@ A unique ID that can be used to identify and reference a Kubernetes cluster.
 In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-kubeconfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L193">property <b>kubeconfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L193">property <b>kubeconfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeconfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4374,7 +4374,7 @@ In addition to the arguments provided, these additional attributes about the clu
 A representation of the Kubernetes cluster's kubeconfig in yaml format.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-kubernetesVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L197">property <b>kubernetesVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L197">property <b>kubernetesVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubernetesVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4382,7 +4382,7 @@ A representation of the Kubernetes cluster's kubeconfig in yaml format.
 The version of k3s to install (optional, the default is currently the latest available).
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-masterIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L201">property <b>masterIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L201">property <b>masterIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4390,7 +4390,7 @@ The version of k3s to install (optional, the default is currently the latest ava
 The Ip of the Kubernetes master node.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L205">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L205">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4398,7 +4398,7 @@ The Ip of the Kubernetes master node.
 A name for the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-numTargetNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L209">property <b>numTargetNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L209">property <b>numTargetNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numTargetNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4406,12 +4406,12 @@ A name for the Kubernetes cluster.
 The number of instances to create (optional, the default at the time of writing is 3).
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-ready">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L210">property <b>ready</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L210">property <b>ready</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ready?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L215">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L215">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4420,7 +4420,7 @@ The status of Kubernetes cluster.
 * `ready` -If the Kubernetes cluster is ready.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L219">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L219">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4428,7 +4428,7 @@ The status of Kubernetes cluster.
 A space separated list of tags, to be used freely as required.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterState-targetNodesSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/kubernetesCluster.ts#L223">property <b>targetNodesSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/kubernetesCluster.ts#L223">property <b>targetNodesSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetNodesSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4436,7 +4436,7 @@ A space separated list of tags, to be used freely as required.
 The size of each node (optional, the default is currently g2.small)
 
 <h3 class="pdoc-module-header" id="LoadBalancerArgs" data-link-title="LoadBalancerArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L225">
         interface <strong>LoadBalancerArgs</strong>
     </a>
 </h3>
@@ -4446,7 +4446,7 @@ The size of each node (optional, the default is currently g2.small)
 The set of arguments for constructing a LoadBalancer resource.
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L229">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L229">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backends: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#LoadBalancerBackend'>LoadBalancerBackend</a>&gt;[]&gt;;</code></pre>
@@ -4454,7 +4454,7 @@ The set of arguments for constructing a LoadBalancer resource.
 a list of backend instances, each containing an instance_id, protocol (http or https) and port
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-failTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L233">property <b>failTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L233">property <b>failTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4462,7 +4462,7 @@ a list of backend instances, each containing an instance_id, protocol (http or h
 how long to wait in seconds before determining a backend has failed, defaults to 30
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-healthCheckPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L237">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L237">property <b>healthCheckPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4470,7 +4470,7 @@ how long to wait in seconds before determining a backend has failed, defaults to
 what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L242">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L242">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4479,7 +4479,7 @@ the hostname to receive traffic for, e.g. www.example.com (optional: sets hostna
 blank)
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-ignoreInvalidBackendTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L246">property <b>ignoreInvalidBackendTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L246">property <b>ignoreInvalidBackendTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreInvalidBackendTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4487,7 +4487,7 @@ blank)
 should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-maxConns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L250">property <b>maxConns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L250">property <b>maxConns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4495,7 +4495,7 @@ should self-signed/invalid certificates be ignored from the backend servers, def
 how many concurrent connections can each backend handle, defaults to 10
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-maxRequestSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L254">property <b>maxRequestSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L254">property <b>maxRequestSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxRequestSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4503,7 +4503,7 @@ how many concurrent connections can each backend handle, defaults to 10
 the size in megabytes of the maximum request content that will be accepted, defaults to 20
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L260">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L260">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4513,7 +4513,7 @@ round_robin (sends new requests to the next backend in order), ip_hash (sends re
 same backend), default is random
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L265">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L265">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4522,7 +4522,7 @@ you can listen on any port, the default is 80 to match the default protocol of h
 (commonly 80 for HTTP or 443 for HTTPS)
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L269">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L269">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4530,7 +4530,7 @@ you can listen on any port, the default is 80 to match the default protocol of h
 either http or https. If you specify https then you must also provide the next two fields, the default is http
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-tlsCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L273">property <b>tlsCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L273">property <b>tlsCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4538,7 +4538,7 @@ either http or https. If you specify https then you must also provide the next t
 if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 
 <h4 class="pdoc-member-header" id="LoadBalancerArgs-tlsKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L277">property <b>tlsKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L277">property <b>tlsKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4546,7 +4546,7 @@ if your protocol is https then you should send the TLS certificate in Base64-enc
 if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 
 <h3 class="pdoc-module-header" id="LoadBalancerState" data-link-title="LoadBalancerState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L167">
         interface <strong>LoadBalancerState</strong>
     </a>
 </h3>
@@ -4556,7 +4556,7 @@ if your protocol is https then you should send the TLS private key in Base64-enc
 Input properties used for looking up and filtering LoadBalancer resources.
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-backends">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L171">property <b>backends</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L171">property <b>backends</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backends?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/civo/types/input/#LoadBalancerBackend'>LoadBalancerBackend</a>&gt;[]&gt;;</code></pre>
@@ -4564,7 +4564,7 @@ Input properties used for looking up and filtering LoadBalancer resources.
 a list of backend instances, each containing an instance_id, protocol (http or https) and port
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-failTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L175">property <b>failTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L175">property <b>failTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4572,7 +4572,7 @@ a list of backend instances, each containing an instance_id, protocol (http or h
 how long to wait in seconds before determining a backend has failed, defaults to 30
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-healthCheckPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L179">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L179">property <b>healthCheckPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4580,7 +4580,7 @@ how long to wait in seconds before determining a backend has failed, defaults to
 what URL should be used on the backends to determine if it's OK (2xx/3xx status), defaults to /
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L184">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L184">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4589,7 +4589,7 @@ the hostname to receive traffic for, e.g. www.example.com (optional: sets hostna
 blank)
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-ignoreInvalidBackendTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L188">property <b>ignoreInvalidBackendTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L188">property <b>ignoreInvalidBackendTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreInvalidBackendTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4597,7 +4597,7 @@ blank)
 should self-signed/invalid certificates be ignored from the backend servers, defaults to true
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-maxConns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L192">property <b>maxConns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L192">property <b>maxConns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4605,7 +4605,7 @@ should self-signed/invalid certificates be ignored from the backend servers, def
 how many concurrent connections can each backend handle, defaults to 10
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-maxRequestSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L196">property <b>maxRequestSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L196">property <b>maxRequestSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxRequestSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4613,7 +4613,7 @@ how many concurrent connections can each backend handle, defaults to 10
 the size in megabytes of the maximum request content that will be accepted, defaults to 20
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L202">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L202">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4623,7 +4623,7 @@ round_robin (sends new requests to the next backend in order), ip_hash (sends re
 same backend), default is random
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L207">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L207">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4632,7 +4632,7 @@ you can listen on any port, the default is 80 to match the default protocol of h
 (commonly 80 for HTTP or 443 for HTTPS)
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L211">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L211">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4640,7 +4640,7 @@ you can listen on any port, the default is 80 to match the default protocol of h
 either http or https. If you specify https then you must also provide the next two fields, the default is http
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-tlsCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L215">property <b>tlsCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L215">property <b>tlsCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4648,7 +4648,7 @@ either http or https. If you specify https then you must also provide the next t
 if your protocol is https then you should send the TLS certificate in Base64-encoded PEM format
 
 <h4 class="pdoc-member-header" id="LoadBalancerState-tlsKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/loadBalancer.ts#L219">property <b>tlsKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/loadBalancer.ts#L219">property <b>tlsKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4656,7 +4656,7 @@ if your protocol is https then you should send the TLS certificate in Base64-enc
 if your protocol is https then you should send the TLS private key in Base64-encoded PEM format
 
 <h3 class="pdoc-module-header" id="NetworkArgs" data-link-title="NetworkArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L139">
         interface <strong>NetworkArgs</strong>
     </a>
 </h3>
@@ -4666,7 +4666,7 @@ if your protocol is https then you should send the TLS private key in Base64-enc
 The set of arguments for constructing a Network resource.
 
 <h4 class="pdoc-member-header" id="NetworkArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L143">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L143">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4674,7 +4674,7 @@ The set of arguments for constructing a Network resource.
 The Network label
 
 <h3 class="pdoc-module-header" id="NetworkState" data-link-title="NetworkState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L113">
         interface <strong>NetworkState</strong>
     </a>
 </h3>
@@ -4684,7 +4684,7 @@ The Network label
 Input properties used for looking up and filtering Network resources.
 
 <h4 class="pdoc-member-header" id="NetworkState-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L117">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L117">property <b>cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4692,7 +4692,7 @@ Input properties used for looking up and filtering Network resources.
 The block ip assigned to the network.
 
 <h4 class="pdoc-member-header" id="NetworkState-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L121">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L121">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>default?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4700,7 +4700,7 @@ The block ip assigned to the network.
 If is the default network.
 
 <h4 class="pdoc-member-header" id="NetworkState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L125">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L125">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4708,7 +4708,7 @@ If is the default network.
 The Network label
 
 <h4 class="pdoc-member-header" id="NetworkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L129">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4716,7 +4716,7 @@ The Network label
 The name of the network.
 
 <h4 class="pdoc-member-header" id="NetworkState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/network.ts#L133">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/network.ts#L133">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4724,7 +4724,7 @@ The name of the network.
 The region where the network was create.
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/provider.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/provider.ts#L55">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -4734,12 +4734,12 @@ The region where the network was create.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/provider.ts#L56">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/provider.ts#L56">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SnapshotArgs" data-link-title="SnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L216">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L216">
         interface <strong>SnapshotArgs</strong>
     </a>
 </h3>
@@ -4749,7 +4749,7 @@ The set of arguments for constructing a Provider resource.
 The set of arguments for constructing a Snapshot resource.
 
 <h4 class="pdoc-member-header" id="SnapshotArgs-cronTiming">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L222">property <b>cronTiming</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L222">property <b>cronTiming</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronTiming?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4759,7 +4759,7 @@ continuing to automatically update based on the schedule of the cron sequence pr
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L226">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L226">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4767,7 +4767,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 The ID of the Instance from which the snapshot will be taken.
 
 <h4 class="pdoc-member-header" id="SnapshotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L230">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L230">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4775,7 +4775,7 @@ The ID of the Instance from which the snapshot will be taken.
 A name for the instance snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotArgs-safe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L237">property <b>safe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L237">property <b>safe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>safe?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4786,7 +4786,7 @@ and hence risking corruption). The default is `false` so you experience no inter
 of service, but a small risk of corruption.
 
 <h3 class="pdoc-module-header" id="SnapshotState" data-link-title="SnapshotState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L157">
         interface <strong>SnapshotState</strong>
     </a>
 </h3>
@@ -4796,7 +4796,7 @@ of service, but a small risk of corruption.
 Input properties used for looking up and filtering Snapshot resources.
 
 <h4 class="pdoc-member-header" id="SnapshotState-completedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L161">property <b>completedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L161">property <b>completedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>completedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4804,7 +4804,7 @@ Input properties used for looking up and filtering Snapshot resources.
 The date where the snapshot was completed.
 
 <h4 class="pdoc-member-header" id="SnapshotState-cronTiming">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L167">property <b>cronTiming</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L167">property <b>cronTiming</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cronTiming?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4814,7 +4814,7 @@ continuing to automatically update based on the schedule of the cron sequence pr
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L171">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L171">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4822,7 +4822,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 The hostname of the instance.
 
 <h4 class="pdoc-member-header" id="SnapshotState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L175">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L175">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4830,7 +4830,7 @@ The hostname of the instance.
 The ID of the Instance from which the snapshot will be taken.
 
 <h4 class="pdoc-member-header" id="SnapshotState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4838,7 +4838,7 @@ The ID of the Instance from which the snapshot will be taken.
 A name for the instance snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-nextExecution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L183">property <b>nextExecution</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L183">property <b>nextExecution</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextExecution?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4846,7 +4846,7 @@ A name for the instance snapshot.
 if cron was define this date will be the next execution date.
 
 <h4 class="pdoc-member-header" id="SnapshotState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L187">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L187">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4854,7 +4854,7 @@ if cron was define this date will be the next execution date.
 The region where the snapshot was take.
 
 <h4 class="pdoc-member-header" id="SnapshotState-requestedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L191">property <b>requestedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L191">property <b>requestedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4862,7 +4862,7 @@ The region where the snapshot was take.
 The date where the snapshot was requested.
 
 <h4 class="pdoc-member-header" id="SnapshotState-safe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L198">property <b>safe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L198">property <b>safe</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>safe?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4873,7 +4873,7 @@ and hence risking corruption). The default is `false` so you experience no inter
 of service, but a small risk of corruption.
 
 <h4 class="pdoc-member-header" id="SnapshotState-sizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L202">property <b>sizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L202">property <b>sizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4881,7 +4881,7 @@ of service, but a small risk of corruption.
 The size of the snapshot in GB.
 
 <h4 class="pdoc-member-header" id="SnapshotState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L206">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L206">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4889,7 +4889,7 @@ The size of the snapshot in GB.
 The status of the snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-templateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/snapshot.ts#L210">property <b>templateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/snapshot.ts#L210">property <b>templateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4897,7 +4897,7 @@ The status of the snapshot.
 The template id.
 
 <h3 class="pdoc-module-header" id="SshKeyArgs" data-link-title="SshKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L121">
         interface <strong>SshKeyArgs</strong>
     </a>
 </h3>
@@ -4907,7 +4907,7 @@ The template id.
 The set of arguments for constructing a SshKey resource.
 
 <h4 class="pdoc-member-header" id="SshKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L125">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L125">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4915,7 +4915,7 @@ The set of arguments for constructing a SshKey resource.
 The name of the SSH key for identification
 
 <h4 class="pdoc-member-header" id="SshKeyArgs-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L130">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L130">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4924,7 +4924,7 @@ The public key. If this is a file, it
 can be read using the file interpolation function.
 
 <h3 class="pdoc-module-header" id="SshKeyState" data-link-title="SshKeyState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L102">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L102">
         interface <strong>SshKeyState</strong>
     </a>
 </h3>
@@ -4934,7 +4934,7 @@ can be read using the file interpolation function.
 Input properties used for looking up and filtering SshKey resources.
 
 <h4 class="pdoc-member-header" id="SshKeyState-fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L106">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L106">property <b>fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4942,7 +4942,7 @@ Input properties used for looking up and filtering SshKey resources.
 The fingerprint of the SSH key
 
 <h4 class="pdoc-member-header" id="SshKeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4950,7 +4950,7 @@ The fingerprint of the SSH key
 The name of the SSH key for identification
 
 <h4 class="pdoc-member-header" id="SshKeyState-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/sshKey.ts#L115">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/sshKey.ts#L115">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4959,7 +4959,7 @@ The public key. If this is a file, it
 can be read using the file interpolation function.
 
 <h3 class="pdoc-module-header" id="TemplateArgs" data-link-title="TemplateArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L176">
         interface <strong>TemplateArgs</strong>
     </a>
 </h3>
@@ -4969,7 +4969,7 @@ can be read using the file interpolation function.
 The set of arguments for constructing a Template resource.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-cloudConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L187">property <b>cloudConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L187">property <b>cloudConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4984,7 +4984,7 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 see our learn guide on templates for more information).
 
 <h4 class="pdoc-member-header" id="TemplateArgs-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L191">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L191">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4992,7 +4992,7 @@ see our learn guide on templates for more information).
 This is a unqiue, alphanumerical, short, human readable code for the template.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-defaultUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L195">property <b>defaultUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L195">property <b>defaultUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5000,7 +5000,7 @@ This is a unqiue, alphanumerical, short, human readable code for the template.
 The default username to suggest that the user creates
 
 <h4 class="pdoc-member-header" id="TemplateArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L199">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L199">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5008,7 +5008,7 @@ The default username to suggest that the user creates
 A multi-line description of the template, in Markdown format
 
 <h4 class="pdoc-member-header" id="TemplateArgs-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L204">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L204">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5017,7 +5017,7 @@ This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volumeId is specified).
 
 <h4 class="pdoc-member-header" id="TemplateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L208">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L208">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5025,7 +5025,7 @@ either owned by you or global (optional; but must be specified if no volumeId is
 This is a short human readable name for the template
 
 <h4 class="pdoc-member-header" id="TemplateArgs-shortDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L212">property <b>shortDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L212">property <b>shortDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5033,7 +5033,7 @@ This is a short human readable name for the template
 A one line description of the template
 
 <h4 class="pdoc-member-header" id="TemplateArgs-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L217">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L217">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5042,7 +5042,7 @@ This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no imageId is specified)
 
 <h3 class="pdoc-module-header" id="TemplateState" data-link-title="TemplateState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L129">
         interface <strong>TemplateState</strong>
     </a>
 </h3>
@@ -5052,7 +5052,7 @@ This is the ID of a bootable volume, either owned by you or global
 Input properties used for looking up and filtering Template resources.
 
 <h4 class="pdoc-member-header" id="TemplateState-cloudConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L140">property <b>cloudConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L140">property <b>cloudConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5067,7 +5067,7 @@ domain name of the instance and `$SSH_KEY` will be the content of the SSH public
 see our learn guide on templates for more information).
 
 <h4 class="pdoc-member-header" id="TemplateState-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L144">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L144">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5075,7 +5075,7 @@ see our learn guide on templates for more information).
 This is a unqiue, alphanumerical, short, human readable code for the template.
 
 <h4 class="pdoc-member-header" id="TemplateState-defaultUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L148">property <b>defaultUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L148">property <b>defaultUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5083,7 +5083,7 @@ This is a unqiue, alphanumerical, short, human readable code for the template.
 The default username to suggest that the user creates
 
 <h4 class="pdoc-member-header" id="TemplateState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L152">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L152">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5091,7 +5091,7 @@ The default username to suggest that the user creates
 A multi-line description of the template, in Markdown format
 
 <h4 class="pdoc-member-header" id="TemplateState-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L157">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L157">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5100,7 +5100,7 @@ This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volumeId is specified).
 
 <h4 class="pdoc-member-header" id="TemplateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L161">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5108,7 +5108,7 @@ either owned by you or global (optional; but must be specified if no volumeId is
 This is a short human readable name for the template
 
 <h4 class="pdoc-member-header" id="TemplateState-shortDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L165">property <b>shortDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L165">property <b>shortDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5116,7 +5116,7 @@ This is a short human readable name for the template
 A one line description of the template
 
 <h4 class="pdoc-member-header" id="TemplateState-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/template.ts#L170">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/template.ts#L170">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5125,7 +5125,7 @@ This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no imageId is specified)
 
 <h3 class="pdoc-module-header" id="VolumeArgs" data-link-title="VolumeArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L142">
         interface <strong>VolumeArgs</strong>
     </a>
 </h3>
@@ -5135,7 +5135,7 @@ This is the ID of a bootable volume, either owned by you or global
 The set of arguments for constructing a Volume resource.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-bootable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L146">property <b>bootable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L146">property <b>bootable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5143,7 +5143,7 @@ The set of arguments for constructing a Volume resource.
 Mark the volume as bootable.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5151,7 +5151,7 @@ Mark the volume as bootable.
 A name that you wish to use to refer to this volume .
 
 <h4 class="pdoc-member-header" id="VolumeArgs-sizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L154">property <b>sizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L154">property <b>sizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5159,7 +5159,7 @@ A name that you wish to use to refer to this volume .
 A minimum of 1 and a maximum of your available disk space from your quota specifies the size of the volume in gigabytes .
 
 <h3 class="pdoc-module-header" id="VolumeAttachmentArgs" data-link-title="VolumeAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L116">
         interface <strong>VolumeAttachmentArgs</strong>
     </a>
 </h3>
@@ -5169,7 +5169,7 @@ A minimum of 1 and a maximum of your available disk space from your quota specif
 The set of arguments for constructing a VolumeAttachment resource.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L120">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L120">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5177,7 +5177,7 @@ The set of arguments for constructing a VolumeAttachment resource.
 ID of the instance to attach the volume to.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentArgs-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L124">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L124">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5185,7 +5185,7 @@ ID of the instance to attach the volume to.
 ID of the Volume to be attached to the instance.
 
 <h3 class="pdoc-module-header" id="VolumeAttachmentState" data-link-title="VolumeAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L102">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L102">
         interface <strong>VolumeAttachmentState</strong>
     </a>
 </h3>
@@ -5195,7 +5195,7 @@ ID of the Volume to be attached to the instance.
 Input properties used for looking up and filtering VolumeAttachment resources.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L106">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L106">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5203,7 +5203,7 @@ Input properties used for looking up and filtering VolumeAttachment resources.
 ID of the instance to attach the volume to.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentState-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volumeAttachment.ts#L110">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volumeAttachment.ts#L110">property <b>volumeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5211,7 +5211,7 @@ ID of the instance to attach the volume to.
 ID of the Volume to be attached to the instance.
 
 <h3 class="pdoc-module-header" id="VolumeState" data-link-title="VolumeState">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L116">
         interface <strong>VolumeState</strong>
     </a>
 </h3>
@@ -5221,7 +5221,7 @@ ID of the Volume to be attached to the instance.
 Input properties used for looking up and filtering Volume resources.
 
 <h4 class="pdoc-member-header" id="VolumeState-bootable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L120">property <b>bootable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L120">property <b>bootable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5229,7 +5229,7 @@ Input properties used for looking up and filtering Volume resources.
 Mark the volume as bootable.
 
 <h4 class="pdoc-member-header" id="VolumeState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L124">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L124">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5237,7 +5237,7 @@ Mark the volume as bootable.
 The date of the creation of the volume.
 
 <h4 class="pdoc-member-header" id="VolumeState-mountPoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L128">property <b>mountPoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L128">property <b>mountPoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountPoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5245,7 +5245,7 @@ The date of the creation of the volume.
 The mount point of the volume.
 
 <h4 class="pdoc-member-header" id="VolumeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5253,7 +5253,7 @@ The mount point of the volume.
 A name that you wish to use to refer to this volume .
 
 <h4 class="pdoc-member-header" id="VolumeState-sizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/volume.ts#L136">property <b>sizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/volume.ts#L136">property <b>sizeGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

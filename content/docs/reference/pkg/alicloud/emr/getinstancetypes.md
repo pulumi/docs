@@ -143,7 +143,7 @@ export const firstInstanceType = defaultInstanceTypes.types[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_types(</span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_local_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">support_node_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_types(</span><span class="nx">cluster_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_local_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">support_node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -524,7 +524,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
 <a href="#support_node_types_python" style="color: inherit; text-decoration: inherit;">support_<wbr>node_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The specific supported node type list.
 Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK", "GATEWAY"]
@@ -961,7 +961,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of emr instance types IDs.
 {{% /md %}}</dd>
@@ -982,7 +982,7 @@ The following output properties are available:
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypestype">List[Get<wbr>Instance<wbr>Types<wbr>Type]</a></span>
+        <span class="property-type"><a href="#getinstancetypestype">Sequence[Get<wbr>Instance<wbr>Types<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}A list of emr instance types. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1023,7 +1023,7 @@ The following output properties are available:
 <a href="#support_node_types_python" style="color: inherit; text-decoration: inherit;">support_<wbr>node_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1206,7 +1206,7 @@ The following output properties are available:
 <a href="#local_storage_capacity_python" style="color: inherit; text-decoration: inherit;">local_<wbr>storage_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Local capacity of the applied ecs instance for emr cluster. Unit: GB.
 {{% /md %}}</dd>

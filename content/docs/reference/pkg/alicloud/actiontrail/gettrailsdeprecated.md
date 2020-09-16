@@ -25,7 +25,7 @@ meta_desc: "Explore the GetTrailsDeprecated function of the actiontrail module, 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_trails_deprecated(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">include_shadow_trails</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTrailsDeprecatedResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_trails_deprecated(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">include_shadow_trails</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTrailsDeprecatedResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -230,7 +230,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -601,7 +601,7 @@ The following output properties are available:
 <a href="#actiontrails_python" style="color: inherit; text-decoration: inherit;">actiontrails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettrailsdeprecatedactiontrail">List[Get<wbr>Trails<wbr>Deprecated<wbr>Actiontrail]</a></span>
+        <span class="property-type"><a href="#gettrailsdeprecatedactiontrail">Sequence[Get<wbr>Trails<wbr>Deprecated<wbr>Actiontrail]</a></span>
     </dt>
     <dd>{{% md %}}A list of actiontrails. Each element contains the following attributes:
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;actiontrails&#39; has been deprecated from version 1.95.0. Use &#39;trails&#39; instead.{{% /md %}}</p></dd>
@@ -623,7 +623,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -633,7 +633,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of trail names.
 {{% /md %}}</dd>
@@ -644,7 +644,7 @@ The following output properties are available:
 <a href="#trails_python" style="color: inherit; text-decoration: inherit;">trails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettrailsdeprecatedtrail">List[Get<wbr>Trails<wbr>Deprecated<wbr>Trail]</a></span>
+        <span class="property-type"><a href="#gettrailsdeprecatedtrail">Sequence[Get<wbr>Trails<wbr>Deprecated<wbr>Trail]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

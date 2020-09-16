@@ -27,7 +27,7 @@ To get more information about ExternalVpnGateway, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.ExternalVpnGateway">ExternalVpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ExternalVpnGatewayInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.ExternalVpnGateway">ExternalVpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExternalVpnGatewayInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -429,7 +429,7 @@ Possible values are `FOUR_IPS_REDUNDANCY`, `SINGLE_IP_INTERNALLY_REDUNDANT`, and
 <a href="#interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalvpngatewayinterface">List[External<wbr>Vpn<wbr>Gateway<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#externalvpngatewayinterface">Sequence[External<wbr>Vpn<wbr>Gateway<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this external VPN gateway.
 Structure is documented below.
@@ -619,7 +619,7 @@ Get an existing ExternalVpnGateway resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ExternalVpnGatewayInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ExternalVpnGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExternalVpnGatewayInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ExternalVpnGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -996,7 +996,7 @@ Possible values are `FOUR_IPS_REDUNDANCY`, `SINGLE_IP_INTERNALLY_REDUNDANT`, and
 <a href="#state_interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalvpngatewayinterface">List[External<wbr>Vpn<wbr>Gateway<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#externalvpngatewayinterface">Sequence[External<wbr>Vpn<wbr>Gateway<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this external VPN gateway.
 Structure is documented below.
@@ -1201,7 +1201,7 @@ it cannot be an IP address from Google Compute Engine.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
 of this external VPN gateway

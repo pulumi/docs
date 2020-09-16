@@ -105,7 +105,7 @@ export const firstSlbAttachmentInstanceId = sampleDs.slbAttachments[0].instanceI
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_attachments(</span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAttachmentsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_attachments(</span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAttachmentsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -264,7 +264,7 @@ The following arguments are supported:
 <a href="#instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of attached ECS instance IDs.
 {{% /md %}}</dd>
@@ -503,7 +503,7 @@ The following output properties are available:
 <a href="#slb_attachments_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>attachments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getattachmentsslbattachment">List[Get<wbr>Attachments<wbr>Slb<wbr>Attachment]</a></span>
+        <span class="property-type"><a href="#getattachmentsslbattachment">Sequence[Get<wbr>Attachments<wbr>Slb<wbr>Attachment]</a></span>
     </dt>
     <dd>{{% md %}}A list of SLB attachments. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -514,7 +514,7 @@ The following output properties are available:
 <a href="#instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -663,7 +663,7 @@ The following output properties are available:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight associated to the ECS instance.
 {{% /md %}}</dd>

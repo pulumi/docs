@@ -114,7 +114,7 @@ export const firstPolardbClusterId = polardbClustersDs.clusters[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_clusters(</span><span class="nx">db_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClustersResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_clusters(</span><span class="nx">db_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClustersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -389,7 +389,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB cluster IDs.
 {{% /md %}}</dd>
@@ -763,7 +763,7 @@ The following output properties are available:
 <a href="#clusters_python" style="color: inherit; text-decoration: inherit;">clusters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterscluster">List[Get<wbr>Clusters<wbr>Cluster]</a></span>
+        <span class="property-type"><a href="#getclusterscluster">Sequence[Get<wbr>Clusters<wbr>Cluster]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB clusters. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -774,7 +774,7 @@ The following output properties are available:
 <a href="#descriptions_python" style="color: inherit; text-decoration: inherit;">descriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of RDS cluster descriptions.
 {{% /md %}}</dd>
@@ -796,7 +796,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of RDS cluster IDs.
 {{% /md %}}</dd>
@@ -1604,7 +1604,7 @@ The following output properties are available:
 <a href="#db_node_number_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The DBNodeNumber of the PolarDB cluster.
 {{% /md %}}</dd>
@@ -1615,7 +1615,7 @@ The following output properties are available:
 <a href="#db_nodes_python" style="color: inherit; text-decoration: inherit;">db_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersclusterdbnode">List[Get<wbr>Clusters<wbr>Cluster<wbr>Db<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersclusterdbnode">Sequence[Get<wbr>Clusters<wbr>Cluster<wbr>Db<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The DBNodes of the PolarDB cluster.
 {{% /md %}}</dd>
@@ -1648,7 +1648,7 @@ The following output properties are available:
 <a href="#delete_lock_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>lock</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The DeleteLock of the PolarDB cluster.
 {{% /md %}}</dd>
@@ -1758,7 +1758,7 @@ The following output properties are available:
 <a href="#storage_used_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>used</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The StorageUsed of the PolarDB cluster.
 {{% /md %}}</dd>
@@ -2189,7 +2189,7 @@ The following output properties are available:
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max_connections of the db_nodes.
 {{% /md %}}</dd>
@@ -2200,7 +2200,7 @@ The following output properties are available:
 <a href="#max_iops_python" style="color: inherit; text-decoration: inherit;">max_<wbr>iops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max_iops of the db_nodes.
 {{% /md %}}</dd>

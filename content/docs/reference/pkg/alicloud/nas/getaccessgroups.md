@@ -942,7 +942,7 @@ The following output properties are available:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccessgroupsgroup">List[Get<wbr>Access<wbr>Groups<wbr>Group]</a></span>
+        <span class="property-type"><a href="#getaccessgroupsgroup">Sequence[Get<wbr>Access<wbr>Groups<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessGroups. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -964,7 +964,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessGroup IDs, the value is set to `names`. After version 1.95.0 the item value as `<access_group_id>:<file_system_type>`.
 {{% /md %}}</dd>
@@ -975,7 +975,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessGroup names.
 {{% /md %}}</dd>
@@ -1397,7 +1397,7 @@ The following output properties are available:
 <a href="#mount_target_count_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>target_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}MountTargetCount block of the AccessGroup
 {{% /md %}}</dd>
@@ -1408,7 +1408,7 @@ The following output properties are available:
 <a href="#rule_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}RuleCount of the AccessGroup.
 {{% /md %}}</dd>

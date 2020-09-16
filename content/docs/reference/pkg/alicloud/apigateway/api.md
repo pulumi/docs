@@ -22,7 +22,7 @@ meta_desc: "Explore the Api resource of the apigateway module, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/apigateway/#pulumi_alicloud.apigateway.Api">Api</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[List[ApiConstantParameterArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiFcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpVpcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiMockServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[ApiRequestConfigArgs]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[List[ApiRequestParameterArgs]]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[List[ApiSystemParameterArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/apigateway/#pulumi_alicloud.apigateway.Api">Api</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiConstantParameterArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiFcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpVpcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiMockServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[ApiRequestConfigArgs]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiRequestParameterArgs]]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiSystemParameterArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -738,7 +738,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#constant_parameters_python" style="color: inherit; text-decoration: inherit;">constant_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">List[Api<wbr>Constant<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apiconstantparameter">Sequence[Api<wbr>Constant<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
 {{% /md %}}</dd>
@@ -804,7 +804,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">List[Api<wbr>Request<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apirequestparameter">Sequence[Api<wbr>Request<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd>
@@ -815,7 +815,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#stage_names_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 {{% /md %}}</dd>
@@ -826,7 +826,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#system_parameters_python" style="color: inherit; text-decoration: inherit;">system_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">List[Api<wbr>System<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apisystemparameter">Sequence[Api<wbr>System<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd>
@@ -974,7 +974,7 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[List[ApiConstantParameterArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiFcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpVpcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiMockServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[ApiRequestConfigArgs]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[List[ApiRequestParameterArgs]]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[List[ApiSystemParameterArgs]]</span> = None<span class="p">) -&gt;</span> Api</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">constant_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiConstantParameterArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiFcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_vpc_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiHttpVpcServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">mock_service_config</span><span class="p">:</span> <span class="nx">Optional[ApiMockServiceConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_config</span><span class="p">:</span> <span class="nx">Optional[ApiRequestConfigArgs]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiRequestParameterArgs]]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stage_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">system_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiSystemParameterArgs]]</span> = None<span class="p">) -&gt;</span> Api</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1632,7 +1632,7 @@ The following state arguments are supported:
 <a href="#state_constant_parameters_python" style="color: inherit; text-decoration: inherit;">constant_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconstantparameter">List[Api<wbr>Constant<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apiconstantparameter">Sequence[Api<wbr>Constant<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}constant_parameters defines the constant parameters of the api.
 {{% /md %}}</dd>
@@ -1731,7 +1731,7 @@ The following state arguments are supported:
 <a href="#state_request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apirequestparameter">List[Api<wbr>Request<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apirequestparameter">Sequence[Api<wbr>Request<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}request_parameters defines the request parameters of the api.
 {{% /md %}}</dd>
@@ -1753,7 +1753,7 @@ The following state arguments are supported:
 <a href="#state_stage_names_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Stages that the api need to be deployed. Valid value: RELEASE | PRE | TEST.
 {{% /md %}}</dd>
@@ -1764,7 +1764,7 @@ The following state arguments are supported:
 <a href="#state_system_parameters_python" style="color: inherit; text-decoration: inherit;">system_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisystemparameter">List[Api<wbr>System<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apisystemparameter">Sequence[Api<wbr>System<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}system_parameters defines the system parameters of the api.
 {{% /md %}}</dd>
@@ -2249,7 +2249,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
@@ -2512,7 +2512,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>
@@ -2774,7 +2774,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Backend service time-out time; unit: millisecond.
 {{% /md %}}</dd>

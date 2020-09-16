@@ -113,7 +113,7 @@ const foo = pulumi.output(alicloud.slb.getDomainExtensions({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domain_extensions(</span><span class="nx">frontend_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDomainExtensionsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domain_extensions(</span><span class="nx">frontend_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDomainExtensionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -294,7 +294,7 @@ The following arguments are supported:
 <a href="#frontend_port_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The frontend port used by the HTTPS listener of the SLB instance. Valid values: 1–65535.
 {{% /md %}}</dd>
@@ -316,7 +316,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IDs of the SLB domain extensions.
 {{% /md %}}</dd>
@@ -564,7 +564,7 @@ The following output properties are available:
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainextensionsextension">List[Get<wbr>Domain<wbr>Extensions<wbr>Extension]</a></span>
+        <span class="property-type"><a href="#getdomainextensionsextension">Sequence[Get<wbr>Domain<wbr>Extensions<wbr>Extension]</a></span>
     </dt>
     <dd>{{% md %}}A list of SLB domain extension. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -575,7 +575,7 @@ The following output properties are available:
 <a href="#frontend_port_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -596,7 +596,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

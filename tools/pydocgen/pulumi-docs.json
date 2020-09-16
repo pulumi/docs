@@ -44,6 +44,12 @@
       "terraform_provider_name": "azurerm"
     },
     {
+      "name": "Pulumi Azure NextGen",
+      "package_name": "pulumi_azure_nextgen",
+      "pulumi_provider_name": "azure-nextgen",
+      "terraform_provider_name": ""
+    },
+    {
       "name": "Pulumi Azure Active Directory",
       "package_name": "pulumi_azuread",
       "pulumi_provider_name": "azuread",

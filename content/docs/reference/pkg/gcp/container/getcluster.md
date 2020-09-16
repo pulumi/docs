@@ -776,6 +776,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="selflink_csharp">
+<a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="servicesipv4cidr_csharp">
 <a href="#servicesipv4cidr_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr</a>
 </span> 
@@ -1309,6 +1319,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclusterresourceusageexportconfig">[]Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="selflink_go">
+<a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1852,6 +1872,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="selflink_nodejs">
+<a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="servicesipv4cidr_nodejs">
 <a href="#servicesipv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr</a>
 </span> 
@@ -1953,7 +1983,7 @@ The following output properties are available:
 <a href="#additional_zones_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1963,7 +1993,7 @@ The following output properties are available:
 <a href="#addons_configs_python" style="color: inherit; text-decoration: inherit;">addons_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1973,7 +2003,7 @@ The following output properties are available:
 <a href="#authenticator_groups_configs_python" style="color: inherit; text-decoration: inherit;">authenticator_<wbr>groups_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterauthenticatorgroupsconfig">List[Get<wbr>Cluster<wbr>Authenticator<wbr>Groups<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterauthenticatorgroupsconfig">Sequence[Get<wbr>Cluster<wbr>Authenticator<wbr>Groups<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1983,7 +2013,7 @@ The following output properties are available:
 <a href="#cluster_autoscalings_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>autoscalings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclusterautoscaling">List[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling]</a></span>
+        <span class="property-type"><a href="#getclusterclusterautoscaling">Sequence[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2003,7 +2033,7 @@ The following output properties are available:
 <a href="#cluster_telemetries_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>telemetries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclustertelemetry">List[Get<wbr>Cluster<wbr>Cluster<wbr>Telemetry]</a></span>
+        <span class="property-type"><a href="#getclusterclustertelemetry">Sequence[Get<wbr>Cluster<wbr>Cluster<wbr>Telemetry]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2013,7 +2043,7 @@ The following output properties are available:
 <a href="#database_encryptions_python" style="color: inherit; text-decoration: inherit;">database_<wbr>encryptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterdatabaseencryption">List[Get<wbr>Cluster<wbr>Database<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#getclusterdatabaseencryption">Sequence[Get<wbr>Cluster<wbr>Database<wbr>Encryption]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2023,7 +2053,7 @@ The following output properties are available:
 <a href="#default_max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">default_<wbr>max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2033,7 +2063,7 @@ The following output properties are available:
 <a href="#default_snat_statuses_python" style="color: inherit; text-decoration: inherit;">default_<wbr>snat_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterdefaultsnatstatus">List[Get<wbr>Cluster<wbr>Default<wbr>Snat<wbr>Status]</a></span>
+        <span class="property-type"><a href="#getclusterdefaultsnatstatus">Sequence[Get<wbr>Cluster<wbr>Default<wbr>Snat<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2134,7 +2164,7 @@ The following output properties are available:
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2144,7 +2174,7 @@ The following output properties are available:
 <a href="#instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2154,7 +2184,7 @@ The following output properties are available:
 <a href="#ip_allocation_policies_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteripallocationpolicy">List[Get<wbr>Cluster<wbr>Ip<wbr>Allocation<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getclusteripallocationpolicy">Sequence[Get<wbr>Cluster<wbr>Ip<wbr>Allocation<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2184,7 +2214,7 @@ The following output properties are available:
 <a href="#maintenance_policies_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicy">List[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicy">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2194,7 +2224,7 @@ The following output properties are available:
 <a href="#master_authorized_networks_configs_python" style="color: inherit; text-decoration: inherit;">master_<wbr>authorized_<wbr>networks_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermasterauthorizednetworksconfig">List[Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclustermasterauthorizednetworksconfig">Sequence[Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2204,7 +2234,7 @@ The following output properties are available:
 <a href="#master_auths_python" style="color: inherit; text-decoration: inherit;">master_<wbr>auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermasterauth">List[Get<wbr>Cluster<wbr>Master<wbr>Auth]</a></span>
+        <span class="property-type"><a href="#getclustermasterauth">Sequence[Get<wbr>Cluster<wbr>Master<wbr>Auth]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2264,7 +2294,7 @@ The following output properties are available:
 <a href="#network_policies_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternetworkpolicy">List[Get<wbr>Cluster<wbr>Network<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getclusternetworkpolicy">Sequence[Get<wbr>Cluster<wbr>Network<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2284,7 +2314,7 @@ The following output properties are available:
 <a href="#node_configs_python" style="color: inherit; text-decoration: inherit;">node_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2294,7 +2324,7 @@ The following output properties are available:
 <a href="#node_locations_python" style="color: inherit; text-decoration: inherit;">node_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2304,7 +2334,7 @@ The following output properties are available:
 <a href="#node_pools_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepool">List[Get<wbr>Cluster<wbr>Node<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#getclusternodepool">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2334,7 +2364,7 @@ The following output properties are available:
 <a href="#pod_security_policy_configs_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>security_<wbr>policy_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterpodsecuritypolicyconfig">List[Get<wbr>Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterpodsecuritypolicyconfig">Sequence[Get<wbr>Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2344,7 +2374,7 @@ The following output properties are available:
 <a href="#private_cluster_configs_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterprivateclusterconfig">List[Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterprivateclusterconfig">Sequence[Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2354,7 +2384,7 @@ The following output properties are available:
 <a href="#release_channels_python" style="color: inherit; text-decoration: inherit;">release_<wbr>channels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterreleasechannel">List[Get<wbr>Cluster<wbr>Release<wbr>Channel]</a></span>
+        <span class="property-type"><a href="#getclusterreleasechannel">Sequence[Get<wbr>Cluster<wbr>Release<wbr>Channel]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2384,7 +2414,17 @@ The following output properties are available:
 <a href="#resource_usage_export_configs_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>usage_<wbr>export_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterresourceusageexportconfig">List[Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterresourceusageexportconfig">Sequence[Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="self_link_python">
+<a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2424,7 +2464,7 @@ The following output properties are available:
 <a href="#vertical_pod_autoscalings_python" style="color: inherit; text-decoration: inherit;">vertical_<wbr>pod_<wbr>autoscalings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterverticalpodautoscaling">List[Get<wbr>Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling]</a></span>
+        <span class="property-type"><a href="#getclusterverticalpodautoscaling">Sequence[Get<wbr>Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2434,7 +2474,7 @@ The following output properties are available:
 <a href="#workload_identity_configs_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterworkloadidentityconfig">List[Get<wbr>Cluster<wbr>Workload<wbr>Identity<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclusterworkloadidentityconfig">Sequence[Get<wbr>Cluster<wbr>Workload<wbr>Identity<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2836,7 +2876,7 @@ The following output properties are available:
 <a href="#cloudrun_configs_python" style="color: inherit; text-decoration: inherit;">cloudrun_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigcloudrunconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigcloudrunconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2846,7 +2886,7 @@ The following output properties are available:
 <a href="#config_connector_configs_python" style="color: inherit; text-decoration: inherit;">config_<wbr>connector_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigconfigconnectorconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigconfigconnectorconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2856,7 +2896,7 @@ The following output properties are available:
 <a href="#dns_cache_configs_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>cache_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigdnscacheconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigdnscacheconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2866,7 +2906,7 @@ The following output properties are available:
 <a href="#gce_persistent_disk_csi_driver_configs_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>persistent_<wbr>disk_<wbr>csi_<wbr>driver_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfiggcepersistentdiskcsidriverconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfiggcepersistentdiskcsidriverconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2876,7 +2916,7 @@ The following output properties are available:
 <a href="#horizontal_pod_autoscalings_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>pod_<wbr>autoscalings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfighorizontalpodautoscaling">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfighorizontalpodautoscaling">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2886,7 +2926,7 @@ The following output properties are available:
 <a href="#http_load_balancings_python" style="color: inherit; text-decoration: inherit;">http_<wbr>load_<wbr>balancings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfighttploadbalancing">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfighttploadbalancing">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2896,7 +2936,7 @@ The following output properties are available:
 <a href="#istio_configs_python" style="color: inherit; text-decoration: inherit;">istio_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigistioconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigistioconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2906,7 +2946,7 @@ The following output properties are available:
 <a href="#kalm_configs_python" style="color: inherit; text-decoration: inherit;">kalm_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigkalmconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2916,7 +2956,7 @@ The following output properties are available:
 <a href="#kubernetes_dashboards_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>dashboards</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfigkubernetesdashboard">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kubernetes<wbr>Dashboard<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfigkubernetesdashboard">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kubernetes<wbr>Dashboard<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2926,7 +2966,7 @@ The following output properties are available:
 <a href="#network_policy_configs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteraddonsconfignetworkpolicyconfig">List[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteraddonsconfignetworkpolicyconfig">Sequence[Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4088,7 +4128,7 @@ The following output properties are available:
 <a href="#auto_provisioning_defaults_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>defaults</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclusterautoscalingautoprovisioningdefault">List[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Default<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterclusterautoscalingautoprovisioningdefault">Sequence[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Default<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4118,7 +4158,7 @@ The following output properties are available:
 <a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclusterautoscalingresourcelimit">List[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterclusterautoscalingresourcelimit">Sequence[Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4274,7 +4314,7 @@ The following output properties are available:
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4430,7 +4470,7 @@ The following output properties are available:
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4440,7 +4480,7 @@ The following output properties are available:
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5150,7 +5190,7 @@ The following output properties are available:
 <a href="#daily_maintenance_windows_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>maintenance_<wbr>windows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicydailymaintenancewindow">List[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicydailymaintenancewindow">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5160,7 +5200,7 @@ The following output properties are available:
 <a href="#recurring_windows_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>windows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermaintenancepolicyrecurringwindow">List[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustermaintenancepolicyrecurringwindow">Sequence[Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5698,7 +5738,7 @@ The following output properties are available:
 <a href="#client_certificate_configs_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermasterauthclientcertificateconfig">List[Get<wbr>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustermasterauthclientcertificateconfig">Sequence[Get<wbr>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5910,7 +5950,7 @@ The following output properties are available:
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustermasterauthorizednetworksconfigcidrblock">List[Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustermasterauthorizednetworksconfigcidrblock">Sequence[Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6828,7 +6868,7 @@ The following output properties are available:
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6848,7 +6888,7 @@ The following output properties are available:
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigguestaccelerator">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigguestaccelerator">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6868,7 +6908,7 @@ The following output properties are available:
 <a href="#kubelet_configs_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigkubeletconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigkubeletconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6888,7 +6928,7 @@ The following output properties are available:
 <a href="#linux_node_configs_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfiglinuxnodeconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfiglinuxnodeconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6898,7 +6938,7 @@ The following output properties are available:
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6938,7 +6978,7 @@ The following output properties are available:
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6958,7 +6998,7 @@ The following output properties are available:
 <a href="#sandbox_configs_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigsandboxconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigsandboxconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6978,7 +7018,7 @@ The following output properties are available:
 <a href="#shielded_instance_configs_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigshieldedinstanceconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigshieldedinstanceconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6988,7 +7028,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6998,7 +7038,7 @@ The following output properties are available:
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigtaint">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigtaint">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7008,7 +7048,7 @@ The following output properties are available:
 <a href="#workload_metadata_configs_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodeconfigworkloadmetadataconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodeconfigworkloadmetadataconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7124,7 +7164,7 @@ The following output properties are available:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8269,7 +8309,7 @@ The following output properties are available:
 <a href="#autoscalings_python" style="color: inherit; text-decoration: inherit;">autoscalings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolautoscaling">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolautoscaling">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8279,7 +8319,7 @@ The following output properties are available:
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8289,7 +8329,7 @@ The following output properties are available:
 <a href="#instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8299,7 +8339,7 @@ The following output properties are available:
 <a href="#managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolmanagement">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolmanagement">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8309,7 +8349,7 @@ The following output properties are available:
 <a href="#max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8340,7 +8380,7 @@ The following output properties are available:
 <a href="#node_configs_python" style="color: inherit; text-decoration: inherit;">node_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8350,7 +8390,7 @@ The following output properties are available:
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8360,7 +8400,7 @@ The following output properties are available:
 <a href="#node_locations_python" style="color: inherit; text-decoration: inherit;">node_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8370,7 +8410,7 @@ The following output properties are available:
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolupgradesetting">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolupgradesetting">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8496,7 +8536,7 @@ The following output properties are available:
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8506,7 +8546,7 @@ The following output properties are available:
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9298,7 +9338,7 @@ The following output properties are available:
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9318,7 +9358,7 @@ The following output properties are available:
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigguestaccelerator">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigguestaccelerator">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9338,7 +9378,7 @@ The following output properties are available:
 <a href="#kubelet_configs_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigkubeletconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigkubeletconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9358,7 +9398,7 @@ The following output properties are available:
 <a href="#linux_node_configs_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfiglinuxnodeconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfiglinuxnodeconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9368,7 +9408,7 @@ The following output properties are available:
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9408,7 +9448,7 @@ The following output properties are available:
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9428,7 +9468,7 @@ The following output properties are available:
 <a href="#sandbox_configs_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigsandboxconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigsandboxconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9448,7 +9488,7 @@ The following output properties are available:
 <a href="#shielded_instance_configs_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigshieldedinstanceconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigshieldedinstanceconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9458,7 +9498,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9468,7 +9508,7 @@ The following output properties are available:
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigtaint">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigtaint">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9478,7 +9518,7 @@ The following output properties are available:
 <a href="#workload_metadata_configs_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusternodepoolnodeconfigworkloadmetadataconfig">List[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusternodepoolnodeconfigworkloadmetadataconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9594,7 +9634,7 @@ The following output properties are available:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10436,7 +10476,7 @@ The following output properties are available:
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10446,7 +10486,7 @@ The following output properties are available:
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10818,7 +10858,7 @@ The following output properties are available:
 <a href="#master_global_access_configs_python" style="color: inherit; text-decoration: inherit;">master_<wbr>global_<wbr>access_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">List[Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterprivateclusterconfigmasterglobalaccessconfig">Sequence[Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11176,7 +11216,7 @@ The following output properties are available:
 <a href="#bigquery_destinations_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterresourceusageexportconfigbigquerydestination">List[Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterresourceusageexportconfigbigquerydestination">Sequence[Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

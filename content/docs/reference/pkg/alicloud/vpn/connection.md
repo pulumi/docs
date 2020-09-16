@@ -22,7 +22,7 @@ meta_desc: "Explore the Connection resource of the vpn module, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpn/#pulumi_alicloud.vpn.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">effect_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ike_configs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionIkeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_configs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionIpsecConfigArgs]]</span> = None<span class="p">, </span><span class="nx">local_subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpn/#pulumi_alicloud.vpn.Connection">Connection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">effect_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ike_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionIkeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionIpsecConfigArgs]]</span> = None<span class="p">, </span><span class="nx">local_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -496,7 +496,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#local_subnets_python" style="color: inherit; text-decoration: inherit;">local_<wbr>subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#remote_subnets_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionikeconfig">List[Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionikeconfig">Sequence[Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionipsecconfig">List[Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionipsecconfig">Sequence[Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
@@ -710,7 +710,7 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">effect_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ike_configs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionIkeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_configs</span><span class="p">:</span> <span class="nx">Optional[List[ConnectionIpsecConfigArgs]]</span> = None<span class="p">, </span><span class="nx">local_subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">effect_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ike_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionIkeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectionIpsecConfigArgs]]</span> = None<span class="p">, </span><span class="nx">local_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1170,7 +1170,7 @@ The following state arguments are supported:
 <a href="#state_ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionikeconfig">List[Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionikeconfig">Sequence[Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd>
@@ -1181,7 +1181,7 @@ The following state arguments are supported:
 <a href="#state_ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionipsecconfig">List[Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionipsecconfig">Sequence[Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
@@ -1192,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_local_subnets_python" style="color: inherit; text-decoration: inherit;">local_<wbr>subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd>
@@ -1214,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_remote_subnets_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
 {{% /md %}}</dd>
@@ -1620,7 +1620,7 @@ The following state arguments are supported:
 <a href="#ike_lifetime_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. The valid value of n is [0, 86400], the unit is second and the default value is 86400.
 {{% /md %}}</dd>
@@ -1897,7 +1897,7 @@ The following state arguments are supported:
 <a href="#ipsec_lifetime_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. The valid value is [0, 86400], the unit is second and the default value is 86400.
 {{% /md %}}</dd>

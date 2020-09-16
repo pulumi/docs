@@ -900,7 +900,7 @@ The following output properties are available:
 <a href="#cpu_cores_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd>
@@ -922,7 +922,7 @@ The following output properties are available:
 <a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk.
 {{% /md %}}</dd>
@@ -1021,7 +1021,7 @@ The following output properties are available:
 <a href="#ram_mb_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total ram of the instance.
 {{% /md %}}</dd>
@@ -1087,7 +1087,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional list of tags
 {{% /md %}}</dd>

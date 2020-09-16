@@ -544,7 +544,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of topic names.
 {{% /md %}}</dd>
@@ -555,7 +555,7 @@ The following output properties are available:
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettopicstopic">List[Get<wbr>Topics<wbr>Topic]</a></span>
+        <span class="property-type"><a href="#gettopicstopic">Sequence[Get<wbr>Topics<wbr>Topic]</a></span>
     </dt>
     <dd>{{% md %}}A list of topics. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -902,7 +902,7 @@ The following output properties are available:
 <a href="#partition_num_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>num</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Partition number of the topic.
 {{% /md %}}</dd>
@@ -924,7 +924,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The current status code of the topic. There are three values to describe the topic status: 0 stands for the topic is in service, 1 stands for freezing and 2 stands for pause.
 {{% /md %}}</dd>

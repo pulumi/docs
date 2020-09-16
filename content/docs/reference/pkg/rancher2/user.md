@@ -31,9 +31,9 @@ class MyStack : Stack
         // Create a new rancher2 User
         var fooUser = new Rancher2.User("fooUser", new Rancher2.UserArgs
         {
-            Enabled = true,
-            Password = "changeme",
             Username = "foo",
+            Password = "changeme",
+            Enabled = true,
         });
         // Create a new rancher2 global_role_binding for User
         var fooGlobalRoleBinding = new Rancher2.GlobalRoleBinding("fooGlobalRoleBinding", new Rancher2.GlobalRoleBindingArgs
@@ -60,9 +60,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		fooUser, err := rancher2.NewUser(ctx, "fooUser", &rancher2.UserArgs{
-			Enabled:  pulumi.Bool(true),
-			Password: pulumi.String("changeme"),
 			Username: pulumi.String("foo"),
+			Password: pulumi.String("changeme"),
+			Enabled:  pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -88,9 +88,9 @@ import pulumi_rancher2 as rancher2
 
 # Create a new rancher2 User
 foo_user = rancher2.User("fooUser",
-    enabled=True,
+    username="foo",
     password="changeme",
-    username="foo")
+    enabled=True)
 # Create a new rancher2 global_role_binding for User
 foo_global_role_binding = rancher2.GlobalRoleBinding("fooGlobalRoleBinding",
     global_role_id="user-base",
@@ -106,13 +106,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
 // Create a new rancher2 User
-const fooUser = new rancher2.User("foo", {
-    enabled: true,
-    password: "changeme",
+const fooUser = new rancher2.User("fooUser", {
     username: "foo",
+    password: "changeme",
+    enabled: true,
 });
 // Create a new rancher2 global_role_binding for User
-const fooGlobalRoleBinding = new rancher2.GlobalRoleBinding("foo", {
+const fooGlobalRoleBinding = new rancher2.GlobalRoleBinding("fooGlobalRoleBinding", {
     globalRoleId: "user-base",
     userId: fooUser.id,
 });
@@ -703,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_ids_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The user principal IDs (list)
 {{% /md %}}</dd>
@@ -728,7 +728,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1151,7 +1151,7 @@ The following state arguments are supported:
 <a href="#state_principal_ids_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The user principal IDs (list)
 {{% /md %}}</dd>
@@ -1187,6 +1187,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

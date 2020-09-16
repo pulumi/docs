@@ -867,7 +867,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 <a href="#network_endpoints_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodenetworkendpoint">List[Node<wbr>Network<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#nodenetworkendpoint">Sequence[Node<wbr>Network<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
@@ -905,7 +905,7 @@ Get an existing Node resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[NodeNetworkEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_config</span><span class="p">:</span> <span class="nx">Optional[NodeSchedulingConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensorflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Node</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeNetworkEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_config</span><span class="p">:</span> <span class="nx">Optional[NodeSchedulingConfigArgs]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensorflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Node</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1560,7 +1560,7 @@ used.
 <a href="#state_network_endpoints_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodenetworkendpoint">List[Node<wbr>Network<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodenetworkendpoint">Sequence[Node<wbr>Network<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
@@ -1754,7 +1754,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

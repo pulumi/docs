@@ -19,6 +19,204 @@ SignalFx AWS CloudWatch integrations. For help with this integration see [Monito
 
 > **NOTE** You can use the data source "signalfx.aws.getServices" to specify all services.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // This resource returns an account id in `external_id`…
+        var awsMyteamExternal = new SignalFx.Aws.ExternalIntegration("awsMyteamExternal", new SignalFx.Aws.ExternalIntegrationArgs
+        {
+        });
+        // Make yourself an AWS IAM role here, use `signalfx_aws_external_integration.aws_myteam_external.external_id`
+        var awsSfxRole = new Aws.Iam.Role("awsSfxRole", new Aws.Iam.RoleArgs
+        {
+        });
+        // Stuff here that uses the external and account ID
+        var awsMyteam = new SignalFx.Aws.Integration("awsMyteam", new SignalFx.Aws.IntegrationArgs
+        {
+            Enabled = true,
+            IntegrationId = awsMyteamExternal.Id,
+            ExternalId = awsMyteamExternal.ExternalId,
+            RoleArn = awsSfxRole.Arn,
+            Regions = 
+            {
+                "us-east-1",
+            },
+            PollRate = 300,
+            ImportCloudWatch = true,
+            EnableAwsUsage = true,
+            CustomNamespaceSyncRules = 
+            {
+                new SignalFx.Aws.Inputs.IntegrationCustomNamespaceSyncRuleArgs
+                {
+                    DefaultAction = "Exclude",
+                    FilterAction = "Include",
+                    FilterSource = "filter('code', '200')",
+                    Namespace = "fart",
+                },
+            },
+            NamespaceSyncRules = 
+            {
+                new SignalFx.Aws.Inputs.IntegrationNamespaceSyncRuleArgs
+                {
+                    DefaultAction = "Exclude",
+                    FilterAction = "Include",
+                    FilterSource = "filter('code', '200')",
+                    Namespace = "AWS/EC2",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		awsMyteamExternal, err := aws.NewExternalIntegration(ctx, "awsMyteamExternal", nil)
+		if err != nil {
+			return err
+		}
+		awsSfxRole, err := iam.NewRole(ctx, "awsSfxRole", nil)
+		if err != nil {
+			return err
+		}
+		_, err = aws.NewIntegration(ctx, "awsMyteam", &aws.IntegrationArgs{
+			Enabled:       pulumi.Bool(true),
+			IntegrationId: awsMyteamExternal.ID(),
+			ExternalId:    awsMyteamExternal.ExternalId,
+			RoleArn:       awsSfxRole.Arn,
+			Regions: pulumi.StringArray{
+				pulumi.String("us-east-1"),
+			},
+			PollRate:         pulumi.Int(300),
+			ImportCloudWatch: pulumi.Bool(true),
+			EnableAwsUsage:   pulumi.Bool(true),
+			CustomNamespaceSyncRules: aws.IntegrationCustomNamespaceSyncRuleArray{
+				&aws.IntegrationCustomNamespaceSyncRuleArgs{
+					DefaultAction: pulumi.String("Exclude"),
+					FilterAction:  pulumi.String("Include"),
+					FilterSource:  pulumi.String("filter('code', '200')"),
+					Namespace:     pulumi.String("fart"),
+				},
+			},
+			NamespaceSyncRules: aws.IntegrationNamespaceSyncRuleArray{
+				&aws.IntegrationNamespaceSyncRuleArgs{
+					DefaultAction: pulumi.String("Exclude"),
+					FilterAction:  pulumi.String("Include"),
+					FilterSource:  pulumi.String("filter('code', '200')"),
+					Namespace:     pulumi.String("AWS/EC2"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_signalfx as signalfx
+
+# This resource returns an account id in `external_id`…
+aws_myteam_external = signalfx.aws.ExternalIntegration("awsMyteamExternal")
+# Make yourself an AWS IAM role here, use `signalfx_aws_external_integration.aws_myteam_external.external_id`
+aws_sfx_role = aws.iam.Role("awsSfxRole")
+# Stuff here that uses the external and account ID
+aws_myteam = signalfx.aws.Integration("awsMyteam",
+    enabled=True,
+    integration_id=aws_myteam_external.id,
+    external_id=aws_myteam_external.external_id,
+    role_arn=aws_sfx_role.arn,
+    regions=["us-east-1"],
+    poll_rate=300,
+    import_cloud_watch=True,
+    enable_aws_usage=True,
+    custom_namespace_sync_rules=[signalfx.aws.IntegrationCustomNamespaceSyncRuleArgs(
+        default_action="Exclude",
+        filter_action="Include",
+        filter_source="filter('code', '200')",
+        namespace="fart",
+    )],
+    namespace_sync_rules=[signalfx.aws.IntegrationNamespaceSyncRuleArgs(
+        default_action="Exclude",
+        filter_action="Include",
+        filter_source="filter('code', '200')",
+        namespace="AWS/EC2",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as signalfx from "@pulumi/signalfx";
+
+// This resource returns an account id in `external_id`…
+const awsMyteamExternal = new signalfx.aws.ExternalIntegration("awsMyteamExternal", {});
+// Make yourself an AWS IAM role here, use `signalfx_aws_external_integration.aws_myteam_external.external_id`
+const awsSfxRole = new aws.iam.Role("awsSfxRole", {});
+// Stuff here that uses the external and account ID
+const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
+    enabled: true,
+    integrationId: awsMyteamExternal.id,
+    externalId: awsMyteamExternal.externalId,
+    roleArn: awsSfxRole.arn,
+    regions: ["us-east-1"],
+    pollRate: 300,
+    importCloudWatch: true,
+    enableAwsUsage: true,
+    customNamespaceSyncRules: [{
+        defaultAction: "Exclude",
+        filterAction: "Include",
+        filterSource: "filter('code', '200')",
+        namespace: "fart",
+    }],
+    namespaceSyncRules: [{
+        defaultAction: "Exclude",
+        filterAction: "Include",
+        filterSource: "filter('code', '200')",
+        namespace: "AWS/EC2",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Integration Resource {#create}
@@ -30,11 +228,11 @@ SignalFx AWS CloudWatch integrations. For help with this integration see [Monito
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/aws/#pulumi_signalfx.aws.Integration">Integration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_cloudwatch_namespaces=None<span class="p">, </span>custom_namespace_sync_rules=None<span class="p">, </span>enable_aws_usage=None<span class="p">, </span>enabled=None<span class="p">, </span>external_id=None<span class="p">, </span>import_cloud_watch=None<span class="p">, </span>integration_id=None<span class="p">, </span>key=None<span class="p">, </span>namespace_sync_rules=None<span class="p">, </span>poll_rate=None<span class="p">, </span>regions=None<span class="p">, </span>role_arn=None<span class="p">, </span>services=None<span class="p">, </span>token=None<span class="p">, </span>use_get_metric_data_method=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/aws/#pulumi_signalfx.aws.Integration">Integration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_cloudwatch_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_namespace_sync_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationCustomNamespaceSyncRuleArgs]]</span> = None<span class="p">, </span><span class="nx">enable_aws_usage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_check_large_volume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_cloud_watch</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">integration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_sync_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationNamespaceSyncRuleArgs]]</span> = None<span class="p">, </span><span class="nx">poll_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_get_metric_data_method</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -108,7 +306,7 @@ SignalFx AWS CloudWatch integrations. For help with this integration see [Monito
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -128,7 +326,7 @@ SignalFx AWS CloudWatch integrations. For help with this integration see [Monito
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -138,7 +336,7 @@ SignalFx AWS CloudWatch integrations. For help with this integration see [Monito
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -259,6 +457,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablechecklargevolume_csharp">
+<a href="#enablechecklargevolume_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Check<wbr>Large<wbr>Volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalid_csharp">
 <a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
 </span> 
@@ -292,6 +501,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="namedtoken_csharp">
+<a href="#namedtoken_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named token to use for ingest
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="namespacesyncrules_csharp">
 <a href="#namespacesyncrules_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
 </span> 
@@ -309,7 +529,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+    <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -431,6 +651,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablechecklargevolume_go">
+<a href="#enablechecklargevolume_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Check<wbr>Large<wbr>Volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalid_go">
 <a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
 </span> 
@@ -464,6 +695,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="namedtoken_go">
+<a href="#namedtoken_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named token to use for ingest
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="namespacesyncrules_go">
 <a href="#namespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
 </span> 
@@ -481,7 +723,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+    <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -603,6 +845,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablechecklargevolume_nodejs">
+<a href="#enablechecklargevolume_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Check<wbr>Large<wbr>Volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalid_nodejs">
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
 </span> 
@@ -636,6 +889,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="namedtoken_nodejs">
+<a href="#namedtoken_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named token to use for ingest
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="namespacesyncrules_nodejs">
 <a href="#namespacesyncrules_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Sync<wbr>Rules</a>
 </span> 
@@ -653,7 +917,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+    <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -746,7 +1010,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#custom_cloudwatch_namespaces_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cloudwatch_<wbr>namespaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
@@ -757,7 +1021,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#custom_namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>namespace_<wbr>sync_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List[Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Sequence[Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
@@ -771,6 +1035,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_check_large_volume_python">
+<a href="#enable_check_large_volume_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>check_<wbr>large_<wbr>volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -808,11 +1083,22 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="named_token_python">
+<a href="#named_token_python" style="color: inherit; text-decoration: inherit;">named_<wbr>token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A named token to use for ingest
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="namespace_sync_rules_python">
 <a href="#namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>sync_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">List[Integration<wbr>Namespace<wbr>Sync<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#integrationnamespacesyncrule">Sequence[Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
@@ -823,9 +1109,9 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+    <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -834,7 +1120,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
@@ -856,7 +1142,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
@@ -981,15 +1267,16 @@ Get an existing Integration resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_cloudwatch_namespaces=None<span class="p">, </span>custom_namespace_sync_rules=None<span class="p">, </span>enable_aws_usage=None<span class="p">, </span>enabled=None<span class="p">, </span>external_id=None<span class="p">, </span>import_cloud_watch=None<span class="p">, </span>integration_id=None<span class="p">, </span>key=None<span class="p">, </span>namespace_sync_rules=None<span class="p">, </span>poll_rate=None<span class="p">, </span>regions=None<span class="p">, </span>role_arn=None<span class="p">, </span>services=None<span class="p">, </span>token=None<span class="p">, </span>use_get_metric_data_method=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_cloudwatch_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_namespace_sync_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationCustomNamespaceSyncRuleArgs]]</span> = None<span class="p">, </span><span class="nx">enable_aws_usage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_check_large_volume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_cloud_watch</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">integration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_sync_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationNamespaceSyncRuleArgs]]</span> = None<span class="p">, </span><span class="nx">poll_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_get_metric_data_method</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Integration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Integration.html">Integration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.IntegrationState.html">IntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Integration.html">Integration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.IntegrationState.html">IntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1130,6 +1417,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablechecklargevolume_csharp">
+<a href="#state_enablechecklargevolume_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Check<wbr>Large<wbr>Volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
@@ -1185,6 +1483,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_namedtoken_csharp">
+<a href="#state_namedtoken_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named token to use for ingest
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_namespacesyncrules_csharp">
 <a href="#state_namespacesyncrules_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
 </span> 
@@ -1202,7 +1511,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+    <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1302,6 +1611,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablechecklargevolume_go">
+<a href="#state_enablechecklargevolume_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Check<wbr>Large<wbr>Volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
@@ -1357,6 +1677,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_namedtoken_go">
+<a href="#state_namedtoken_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named token to use for ingest
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_namespacesyncrules_go">
 <a href="#state_namespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
 </span> 
@@ -1374,7 +1705,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+    <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1474,6 +1805,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enablechecklargevolume_nodejs">
+<a href="#state_enablechecklargevolume_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Check<wbr>Large<wbr>Volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span> 
@@ -1529,6 +1871,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_namedtoken_nodejs">
+<a href="#state_namedtoken_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A named token to use for ingest
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_namespacesyncrules_nodejs">
 <a href="#state_namespacesyncrules_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Sync<wbr>Rules</a>
 </span> 
@@ -1546,7 +1899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+    <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1617,7 +1970,7 @@ The following state arguments are supported:
 <a href="#state_custom_cloudwatch_namespaces_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cloudwatch_<wbr>namespaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
@@ -1628,7 +1981,7 @@ The following state arguments are supported:
 <a href="#state_custom_namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>namespace_<wbr>sync_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List[Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Sequence[Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
@@ -1642,6 +1995,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_check_large_volume_python">
+<a href="#state_enable_check_large_volume_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>check_<wbr>large_<wbr>volume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1701,11 +2065,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_named_token_python">
+<a href="#state_named_token_python" style="color: inherit; text-decoration: inherit;">named_<wbr>token</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A named token to use for ingest
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_namespace_sync_rules_python">
 <a href="#state_namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>sync_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">List[Integration<wbr>Namespace<wbr>Sync<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#integrationnamespacesyncrule">Sequence[Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
@@ -1716,9 +2091,9 @@ The following state arguments are supported:
 <a href="#state_poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+    <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1727,7 +2102,7 @@ The following state arguments are supported:
 <a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
@@ -1749,7 +2124,7 @@ The following state arguments are supported:
 <a href="#state_services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
@@ -1797,7 +2172,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#IntegrationCustomNamespaceSyncRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#IntegrationCustomNamespaceSyncRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationCustomNamespaceSyncRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationCustomNamespaceSyncRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Inputs.IntegrationCustomNamespaceSyncRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Outputs.IntegrationCustomNamespaceSyncRule.html">output</a> API doc for this type.
@@ -1975,8 +2350,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultaction_python">
-<a href="#defaultaction_python" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+        <span id="default_action_python">
+<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1986,8 +2361,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filteraction_python">
-<a href="#filteraction_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Action</a>
+        <span id="filter_action_python">
+<a href="#filter_action_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1997,8 +2372,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filtersource_python">
-<a href="#filtersource_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Source</a>
+        <span id="filter_source_python">
+<a href="#filter_source_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2019,7 +2394,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#IntegrationNamespaceSyncRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#IntegrationNamespaceSyncRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationNamespaceSyncRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationNamespaceSyncRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Inputs.IntegrationNamespaceSyncRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Outputs.IntegrationNamespaceSyncRule.html">output</a> API doc for this type.
@@ -2197,8 +2572,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultaction_python">
-<a href="#defaultaction_python" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+        <span id="default_action_python">
+<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2208,8 +2583,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filteraction_python">
-<a href="#filteraction_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Action</a>
+        <span id="filter_action_python">
+<a href="#filter_action_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2219,8 +2594,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filtersource_python">
-<a href="#filtersource_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Source</a>
+        <span id="filter_source_python">
+<a href="#filter_source_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2246,6 +2621,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
+	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 </dl>
 

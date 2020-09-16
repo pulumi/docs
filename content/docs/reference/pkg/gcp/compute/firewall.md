@@ -40,7 +40,7 @@ To get more information about Firewall, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Firewall">Firewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[List[FirewallAllowArgs]]</span> = None<span class="p">, </span><span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[List[FirewallDenyArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[FirewallLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Firewall">Firewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallAllowArgs]]</span> = None<span class="p">, </span><span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallDenyArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[FirewallLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1000,7 +1000,7 @@ instances on the specified network.
 <a href="#allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">List[Firewall<wbr>Allow<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallallow">Sequence[Firewall<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
@@ -1014,7 +1014,7 @@ Structure is documented below.
 <a href="#denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">List[Firewall<wbr>Deny<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewalldeny">Sequence[Firewall<wbr>Deny<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
@@ -1039,7 +1039,7 @@ you create the resource.
 <a href="#destination_ranges_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
@@ -1123,7 +1123,7 @@ character, which cannot be a dash.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -1151,7 +1151,7 @@ If it is not provided, the provider project is used.
 <a href="#source_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -1169,7 +1169,7 @@ apply. Only IPv4 is supported.
 <a href="#source_service_accounts_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -1190,7 +1190,7 @@ used at the same time as sourceTags or targetTags.
 <a href="#source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -1209,7 +1209,7 @@ to match both properties for the firewall to apply.
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -1225,7 +1225,7 @@ network.
 <a href="#target_tags_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -1420,7 +1420,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[List[FirewallAllowArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[List[FirewallDenyArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[FirewallLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallAllowArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallDenyArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[FirewallLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2377,7 +2377,7 @@ instances on the specified network.
 <a href="#state_allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">List[Firewall<wbr>Allow<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallallow">Sequence[Firewall<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
@@ -2402,7 +2402,7 @@ Structure is documented below.
 <a href="#state_denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">List[Firewall<wbr>Deny<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewalldeny">Sequence[Firewall<wbr>Deny<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
@@ -2427,7 +2427,7 @@ you create the resource.
 <a href="#state_destination_ranges_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
@@ -2522,7 +2522,7 @@ character, which cannot be a dash.
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -2561,7 +2561,7 @@ If it is not provided, the provider project is used.
 <a href="#state_source_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -2579,7 +2579,7 @@ apply. Only IPv4 is supported.
 <a href="#state_source_service_accounts_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -2600,7 +2600,7 @@ used at the same time as sourceTags or targetTags.
 <a href="#state_source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -2619,7 +2619,7 @@ to match both properties for the firewall to apply.
 <a href="#state_target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -2635,7 +2635,7 @@ network.
 <a href="#state_target_tags_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -2807,7 +2807,7 @@ icmp, esp, ah, sctp, ipip), or the IP protocol number.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2973,7 +2973,7 @@ icmp, esp, ah, sctp, ipip), or the IP protocol number.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be

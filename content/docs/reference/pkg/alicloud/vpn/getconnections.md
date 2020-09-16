@@ -118,7 +118,7 @@ const foo = pulumi.output(alicloud.vpn.getConnections({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connections(</span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectionsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connections(</span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -346,7 +346,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IDs of the VPN connections.
 {{% /md %}}</dd>
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnection">List[Get<wbr>Connections<wbr>Connection]</a></span>
+        <span class="property-type"><a href="#getconnectionsconnection">Sequence[Get<wbr>Connections<wbr>Connection]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN connections. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -711,7 +711,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) IDs of the VPN connections.
 {{% /md %}}</dd>
@@ -722,7 +722,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) names of the VPN connections.
 {{% /md %}}</dd>
@@ -1281,7 +1281,7 @@ The following output properties are available:
 <a href="#ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnectionikeconfig">List[Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getconnectionsconnectionikeconfig">Sequence[Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd>
@@ -1292,7 +1292,7 @@ The following output properties are available:
 <a href="#ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">List[Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">Sequence[Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
@@ -1668,7 +1668,7 @@ The following output properties are available:
 <a href="#ike_lifetime_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation.
 {{% /md %}}</dd>
@@ -1945,7 +1945,7 @@ The following output properties are available:
 <a href="#ipsec_lifetime_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation.
 {{% /md %}}</dd>

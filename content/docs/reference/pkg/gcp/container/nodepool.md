@@ -25,7 +25,7 @@ and [the API reference](https://cloud.google.com/kubernetes-engine/docs/referenc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#pulumi_gcp.container.NodePool">NodePool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling</span><span class="p">:</span> <span class="nx">Optional[NodePoolAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[NodePoolManagementArgs]</span> = None<span class="p">, </span><span class="nx">max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[NodePoolUpgradeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/container/#pulumi_gcp.container.NodePool">NodePool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling</span><span class="p">:</span> <span class="nx">Optional[NodePoolAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[NodePoolManagementArgs]</span> = None<span class="p">, </span><span class="nx">max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[NodePoolUpgradeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -775,7 +775,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
 Changing this will force recreation of the resource.
@@ -810,7 +810,7 @@ auto-upgrade is configured. Structure is documented below.
 <a href="#max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
@@ -861,7 +861,7 @@ gcp.container.Cluster for schema.
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
@@ -873,7 +873,7 @@ update the number of nodes per instance group but should not be used alongside `
 <a href="#node_locations_python" style="color: inherit; text-decoration: inherit;">node_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
@@ -1040,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The resource URLs of the managed instance groups associated with this node pool.
 {{% /md %}}</dd>
@@ -1065,7 +1065,7 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling</span><span class="p">:</span> <span class="nx">Optional[NodePoolAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[NodePoolManagementArgs]</span> = None<span class="p">, </span><span class="nx">max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[NodePoolUpgradeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NodePool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling</span><span class="p">:</span> <span class="nx">Optional[NodePoolAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[NodePoolManagementArgs]</span> = None<span class="p">, </span><span class="nx">max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[NodePoolUpgradeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NodePool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1790,7 +1790,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
 <a href="#state_initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
 Changing this will force recreation of the resource.
@@ -1802,7 +1802,7 @@ Changing this will force recreation of the resource.
 <a href="#state_instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The resource URLs of the managed instance groups associated with this node pool.
 {{% /md %}}</dd>
@@ -1836,7 +1836,7 @@ auto-upgrade is configured. Structure is documented below.
 <a href="#state_max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
@@ -1887,7 +1887,7 @@ gcp.container.Cluster for schema.
 <a href="#state_node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
@@ -1899,7 +1899,7 @@ update the number of nodes per instance group but should not be used alongside `
 <a href="#state_node_locations_python" style="color: inherit; text-decoration: inherit;">node_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of zones in which the node pool's nodes should be located. Nodes must
 be in the region of their regional cluster or in the same region as their
@@ -2077,7 +2077,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count.
 {{% /md %}}</dd>
@@ -2088,7 +2088,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >=0 and
 <= `max_node_count`.
@@ -2890,7 +2890,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2910,7 +2910,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">List[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">Sequence[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2960,7 +2960,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3000,7 +3000,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3050,7 +3050,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3060,7 +3060,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigtaint">List[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigtaint">Sequence[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3186,7 +3186,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4046,7 +4046,7 @@ parallel. Can be set to 0 or greater.
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of additional nodes that can be added to the node pool during
 an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
@@ -4059,7 +4059,7 @@ Can be set to 0 or greater.
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes that can be simultaneously unavailable during
 an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in

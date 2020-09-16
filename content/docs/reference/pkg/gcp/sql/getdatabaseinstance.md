@@ -850,7 +850,7 @@ configuration is detailed below.
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstanceipaddress">List[Get<wbr>Database<wbr>Instance<wbr>Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstanceipaddress">Sequence[Get<wbr>Database<wbr>Instance<wbr>Ip<wbr>Address]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -915,7 +915,7 @@ the master in the replication setup.
 <a href="#replica_configurations_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancereplicaconfiguration">List[Get<wbr>Database<wbr>Instance<wbr>Replica<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancereplicaconfiguration">Sequence[Get<wbr>Database<wbr>Instance<wbr>Replica<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
@@ -949,7 +949,7 @@ configuration is detailed below.
 <a href="#server_ca_certs_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>certs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstanceservercacert">List[Get<wbr>Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstanceservercacert">Sequence[Get<wbr>Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -970,7 +970,7 @@ configuration is detailed below.
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesetting">List[Get<wbr>Database<wbr>Instance<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesetting">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below.
@@ -1603,7 +1603,7 @@ configuration is detailed below.
 <a href="#connect_retry_interval_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>retry_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between connect retries.
 {{% /md %}}</dd>
@@ -1636,7 +1636,7 @@ configuration is detailed below.
 <a href="#master_heartbeat_period_python" style="color: inherit; text-decoration: inherit;">master_<wbr>heartbeat_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time in ms between replication heartbeats.
 {{% /md %}}</dd>
@@ -2566,7 +2566,7 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 <a href="#authorized_gae_applications_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>gae_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Deprecated) This property is only applicable to First Generation instances.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
@@ -2592,7 +2592,7 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
 <a href="#backup_configurations_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">List[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2614,7 +2614,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingdatabaseflag">List[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingdatabaseflag">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2635,7 +2635,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB.
 {{% /md %}}</dd>
@@ -2657,7 +2657,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingipconfiguration">List[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingipconfiguration">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2667,7 +2667,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#location_preferences_python" style="color: inherit; text-decoration: inherit;">location_<wbr>preferences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettinglocationpreference">List[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettinglocationpreference">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2677,7 +2677,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#maintenance_windows_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>windows</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingmaintenancewindow">List[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingmaintenancewindow">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2732,7 +2732,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3309,7 +3309,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseinstancesettingipconfigurationauthorizednetwork">List[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettingipconfigurationauthorizednetwork">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3813,7 +3813,7 @@ formatted date time string indicating when this whitelist expires.
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Day of week (`1-7`), starting on Monday.
 {{% /md %}}</dd>
@@ -3824,7 +3824,7 @@ formatted date time string indicating when this whitelist expires.
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Hour of day (`0-23`), ignored if `day` not set.
 {{% /md %}}</dd>

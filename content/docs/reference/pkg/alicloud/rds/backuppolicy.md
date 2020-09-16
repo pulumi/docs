@@ -196,7 +196,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id}
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/rds/#pulumi_alicloud.rds.BackupPolicy">BackupPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">archive_backup_keep_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">archive_backup_keep_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compress_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">high_space_usage_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_log_retention_hours</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">local_log_retention_space</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">log_backup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_backup_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">log_retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">preferred_backup_periods</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">preferred_backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/rds/#pulumi_alicloud.rds.BackupPolicy">BackupPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">archive_backup_keep_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archive_backup_keep_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compress_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">high_space_usage_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_log_retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">local_log_retention_space</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_backup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_backup_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preferred_backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">preferred_backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1033,7 +1033,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#archive_backup_keep_count_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd>
@@ -1055,7 +1055,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#archive_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd>
@@ -1066,7 +1066,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
@@ -1077,7 +1077,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd>
@@ -1132,7 +1132,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#local_log_retention_hours_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd>
@@ -1143,7 +1143,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#local_log_retention_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [5-50].
 {{% /md %}}</dd>
@@ -1176,7 +1176,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#log_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd>
@@ -1187,7 +1187,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#log_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
@@ -1198,7 +1198,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#preferred_backup_periods_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd>
@@ -1220,7 +1220,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
@@ -1324,7 +1324,7 @@ Get an existing BackupPolicy resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">archive_backup_keep_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">archive_backup_keep_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compress_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">high_space_usage_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_log_retention_hours</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">local_log_retention_space</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">log_backup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_backup_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">log_retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">preferred_backup_periods</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">preferred_backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> BackupPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">archive_backup_keep_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archive_backup_keep_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compress_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">high_space_usage_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_log_retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">local_log_retention_space</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_backup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_backup_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preferred_backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">preferred_backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> BackupPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2092,7 +2092,7 @@ The following state arguments are supported:
 <a href="#state_archive_backup_keep_count_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd>
@@ -2114,7 +2114,7 @@ The following state arguments are supported:
 <a href="#state_archive_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd>
@@ -2125,7 +2125,7 @@ The following state arguments are supported:
 <a href="#state_backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
@@ -2136,7 +2136,7 @@ The following state arguments are supported:
 <a href="#state_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd>
@@ -2202,7 +2202,7 @@ The following state arguments are supported:
 <a href="#state_local_log_retention_hours_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd>
@@ -2213,7 +2213,7 @@ The following state arguments are supported:
 <a href="#state_local_log_retention_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [5-50].
 {{% /md %}}</dd>
@@ -2246,7 +2246,7 @@ The following state arguments are supported:
 <a href="#state_log_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd>
@@ -2257,7 +2257,7 @@ The following state arguments are supported:
 <a href="#state_log_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
@@ -2268,7 +2268,7 @@ The following state arguments are supported:
 <a href="#state_preferred_backup_periods_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd>
@@ -2290,7 +2290,7 @@ The following state arguments are supported:
 <a href="#state_retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>

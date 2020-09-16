@@ -788,7 +788,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk and system disk type IDs.
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdisktypestype">List[Get<wbr>Disk<wbr>Types<wbr>Type]</a></span>
+        <span class="property-type"><a href="#getdisktypestype">Sequence[Get<wbr>Disk<wbr>Types<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}A list of emr instance types. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1001,7 +1001,7 @@ The following output properties are available:
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum value of the data disk to supported the specific instance type
 {{% /md %}}</dd>
@@ -1012,7 +1012,7 @@ The following output properties are available:
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The mininum value of the data disk to supported the specific instance type
 {{% /md %}}</dd>

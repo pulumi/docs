@@ -113,14 +113,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
 // Create a new Rancher2 Cluster Alert Group
-const fooClusterAlertGroup = new rancher2.ClusterAlertGroup("foo", {
+const fooClusterAlertGroup = new rancher2.ClusterAlertGroup("fooClusterAlertGroup", {
     clusterId: "<cluster_id>",
     description: "Terraform cluster alert group",
     groupIntervalSeconds: 300,
     repeatIntervalSeconds: 3600,
 });
 // Create a new Rancher2 Cluster Alert Rule
-const fooClusterAlertRule = new rancher2.ClusterAlertRule("foo", {
+const fooClusterAlertRule = new rancher2.ClusterAlertRule("fooClusterAlertRule", {
     clusterId: fooClusterAlertGroup.clusterId,
     groupId: fooClusterAlertGroup.id,
     groupIntervalSeconds: 600,
@@ -142,7 +142,7 @@ const fooClusterAlertRule = new rancher2.ClusterAlertRule("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.ClusterAlertRule">ClusterAlertRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleEventRuleArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleMetricRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleNodeRuleArgs]</span> = None<span class="p">, </span><span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_service_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleSystemServiceRuleArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.ClusterAlertRule">ClusterAlertRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleEventRuleArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleMetricRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleNodeRuleArgs]</span> = None<span class="p">, </span><span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_service_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleSystemServiceRuleArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -465,7 +465,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -626,7 +626,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -787,7 +787,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -847,7 +847,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#group_interval_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -858,7 +858,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#group_wait_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -924,7 +924,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#repeat_interval_seconds_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -948,7 +948,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -1050,7 +1050,7 @@ Get an existing ClusterAlertRule resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleEventRuleArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleMetricRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleNodeRuleArgs]</span> = None<span class="p">, </span><span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_service_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleSystemServiceRuleArgs]</span> = None<span class="p">) -&gt;</span> ClusterAlertRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleEventRuleArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleMetricRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleNodeRuleArgs]</span> = None<span class="p">, </span><span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_service_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleSystemServiceRuleArgs]</span> = None<span class="p">) -&gt;</span> ClusterAlertRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1315,7 +1315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -1476,7 +1476,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -1637,7 +1637,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -1697,7 +1697,7 @@ The following state arguments are supported:
 <a href="#state_group_interval_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1708,7 +1708,7 @@ The following state arguments are supported:
 <a href="#state_group_wait_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1774,7 +1774,7 @@ The following state arguments are supported:
 <a href="#state_repeat_interval_seconds_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -1798,7 +1798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"`` (list Maxitems:1)
+    <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -2437,7 +2437,7 @@ The following state arguments are supported:
 <a href="#cpu_threshold_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Node rule cpu threshold. Default: `70` (int)
 {{% /md %}}</dd>
@@ -2448,7 +2448,7 @@ The following state arguments are supported:
 <a href="#mem_threshold_python" style="color: inherit; text-decoration: inherit;">mem_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Node rule mem threshold. Default: `70` (int)
 {{% /md %}}</dd>
@@ -2583,6 +2583,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

@@ -26,7 +26,7 @@ documentation](https://cloud.google.com/resource-manager/docs/organization-polic
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/organizations/#pulumi_gcp.organizations.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boolean_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyBooleanPolicyArgs]</span> = None<span class="p">, </span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">list_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyListPolicyArgs]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyRestorePolicyArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/organizations/#pulumi_gcp.organizations.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boolean_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyBooleanPolicyArgs]</span> = None<span class="p">, </span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">list_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyListPolicyArgs]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyRestorePolicyArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -478,7 +478,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd>
@@ -670,7 +670,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boolean_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyBooleanPolicyArgs]</span> = None<span class="p">, </span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">list_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyListPolicyArgs]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyRestorePolicyArgs]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boolean_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyBooleanPolicyArgs]</span> = None<span class="p">, </span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">list_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyListPolicyArgs]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[PolicyRestorePolicyArgs]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1152,7 +1152,7 @@ The following state arguments are supported:
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd>
@@ -1606,7 +1606,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd>
@@ -1740,7 +1740,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd>

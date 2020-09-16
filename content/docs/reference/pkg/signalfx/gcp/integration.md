@@ -71,14 +71,14 @@ gcp_myteam = signalfx.gcp.Integration("gcpMyteam",
     enabled=True,
     poll_rate=300000,
     project_service_keys=[
-        {
-            "projectId": "gcp_project_id_1",
-            "project_key": (lambda path: open(path).read())("/path/to/gcp_credentials_1.json"),
-        },
-        {
-            "projectId": "gcp_project_id_2",
-            "project_key": (lambda path: open(path).read())("/path/to/gcp_credentials_2.json"),
-        },
+        signalfx.gcp.IntegrationProjectServiceKeyArgs(
+            project_id="gcp_project_id_1",
+            project_key=(lambda path: open(path).read())("/path/to/gcp_credentials_1.json"),
+        ),
+        signalfx.gcp.IntegrationProjectServiceKeyArgs(
+            project_id="gcp_project_id_2",
+            project_key=(lambda path: open(path).read())("/path/to/gcp_credentials_2.json"),
+        ),
     ],
     services=["compute"])
 ```
@@ -123,11 +123,11 @@ const gcpMyteam = new signalfx.gcp.Integration("gcp_myteam", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/gcp/#pulumi_signalfx.gcp.Integration">Integration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>named_token=None<span class="p">, </span>poll_rate=None<span class="p">, </span>project_service_keys=None<span class="p">, </span>services=None<span class="p">, </span>whitelists=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/gcp/#pulumi_signalfx.gcp.Integration">Integration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">poll_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_service_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationProjectServiceKeyArgs]]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/gcp?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/gcp?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/gcp?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -201,7 +201,7 @@ const gcpMyteam = new signalfx.gcp.Integration("gcp_myteam", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -221,7 +221,7 @@ const gcpMyteam = new signalfx.gcp.Integration("gcp_myteam", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/gcp?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -231,7 +231,7 @@ const gcpMyteam = new signalfx.gcp.Integration("gcp_myteam", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -586,7 +586,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).
 {{% /md %}}</dd>
@@ -597,7 +597,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#project_service_keys_python" style="color: inherit; text-decoration: inherit;">project_<wbr>service_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationprojectservicekey">List[Integration<wbr>Project<wbr>Service<wbr>Key]</a></span>
+        <span class="property-type"><a href="#integrationprojectservicekey">Sequence[Integration<wbr>Project<wbr>Service<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GCP projects to add.
 {{% /md %}}</dd>
@@ -608,7 +608,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}GCP service metrics to import. Can be an empty list, or not included, to import 'All services'. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valid values.
 {{% /md %}}</dd>
@@ -619,7 +619,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#whitelists_python" style="color: inherit; text-decoration: inherit;">whitelists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Compute Metadata Whitelist
 {{% /md %}}</dd>
@@ -722,15 +722,16 @@ Get an existing Integration resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>named_token=None<span class="p">, </span>poll_rate=None<span class="p">, </span>project_service_keys=None<span class="p">, </span>services=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">poll_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_service_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationProjectServiceKeyArgs]]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Integration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/gcp?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/gcp?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Gcp.Integration.html">Integration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Gcp.IntegrationState.html">IntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Gcp.Integration.html">Integration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Gcp.IntegrationState.html">IntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1127,7 +1128,7 @@ The following state arguments are supported:
 <a href="#state_poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).
 {{% /md %}}</dd>
@@ -1138,7 +1139,7 @@ The following state arguments are supported:
 <a href="#state_project_service_keys_python" style="color: inherit; text-decoration: inherit;">project_<wbr>service_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationprojectservicekey">List[Integration<wbr>Project<wbr>Service<wbr>Key]</a></span>
+        <span class="property-type"><a href="#integrationprojectservicekey">Sequence[Integration<wbr>Project<wbr>Service<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GCP projects to add.
 {{% /md %}}</dd>
@@ -1149,7 +1150,7 @@ The following state arguments are supported:
 <a href="#state_services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}GCP service metrics to import. Can be an empty list, or not included, to import 'All services'. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valid values.
 {{% /md %}}</dd>
@@ -1160,7 +1161,7 @@ The following state arguments are supported:
 <a href="#state_whitelists_python" style="color: inherit; text-decoration: inherit;">whitelists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Compute Metadata Whitelist
 {{% /md %}}</dd>
@@ -1186,7 +1187,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#IntegrationProjectServiceKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/gcp?tab=doc#IntegrationProjectServiceKeyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/gcp?tab=doc#IntegrationProjectServiceKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/gcp?tab=doc#IntegrationProjectServiceKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Gcp.Inputs.IntegrationProjectServiceKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Gcp.Outputs.IntegrationProjectServiceKey.html">output</a> API doc for this type.
@@ -1281,8 +1282,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="projectid_python">
-<a href="#projectid_python" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1317,6 +1318,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
+	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 </dl>
 

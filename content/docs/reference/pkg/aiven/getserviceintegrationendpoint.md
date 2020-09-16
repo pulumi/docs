@@ -2,7 +2,7 @@
 ---
 title: "GetServiceIntegrationEndpoint"
 title_tag: "Function GetServiceIntegrationEndpoint | Package Aiven"
-meta_desc: "Explore the GetServiceIntegrationEndpoint function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetServiceIntegrationEndpoint function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,83 +11,6 @@ meta_desc: "Explore the GetServiceIntegrationEndpoint function of the Aiven pack
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myendpoint = Output.Create(Aiven.GetServiceIntegrationEndpoint.InvokeAsync(new Aiven.GetServiceIntegrationEndpointArgs
-        {
-            Project = data.Aiven_project.Myproject.Project,
-            EndpointName = "<ENDPOINT_NAME>",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.LookupServiceIntegrationEndpoint(ctx, &aiven.LookupServiceIntegrationEndpointArgs{
-			Project:      data.Aiven_project.Myproject.Project,
-			EndpointName: "<ENDPOINT_NAME>",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-myendpoint = aiven.get_service_integration_endpoint(project=data["aiven_project"]["myproject"]["project"],
-    endpoint_name="<ENDPOINT_NAME>")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const myendpoint = aiven.getServiceIntegrationEndpoint({
-    project: data.aiven_project.myproject.project,
-    endpointName: "<ENDPOINT_NAME>",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetServiceIntegrationEndpoint {#using}

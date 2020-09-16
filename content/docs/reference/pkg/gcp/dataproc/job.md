@@ -2214,7 +2214,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
 {{% /md %}}</dd>
@@ -2225,7 +2225,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 {{% /md %}}</dd>
@@ -2236,7 +2236,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 {{% /md %}}</dd>
@@ -2247,7 +2247,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd>
@@ -2648,7 +2648,7 @@ Conflicts with `query_file_uri`
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd>
@@ -2682,7 +2682,7 @@ Conflicts with `query_list`
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
@@ -2996,7 +2996,7 @@ Conflicts with `query_file_uri`
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd>
@@ -3040,7 +3040,7 @@ Conflicts with `query_list`
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
@@ -3593,7 +3593,7 @@ Conflicts with `query_file_uri`
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
 {{% /md %}}</dd>
@@ -3604,7 +3604,7 @@ Conflicts with `query_file_uri`
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 {{% /md %}}</dd>
@@ -3615,7 +3615,7 @@ Conflicts with `query_file_uri`
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 {{% /md %}}</dd>
@@ -3626,7 +3626,7 @@ Conflicts with `query_file_uri`
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd>
@@ -3658,7 +3658,7 @@ Conflicts with `query_file_uri`
 <a href="#python_file_uris_python" style="color: inherit; text-decoration: inherit;">python_<wbr>file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
 {{% /md %}}</dd>
@@ -3917,7 +3917,7 @@ Conflicts with `query_file_uri`
 <a href="#max_failures_per_hour_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>per_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4234,7 +4234,7 @@ Conflicts with `query_file_uri`
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
 {{% /md %}}</dd>
@@ -4245,7 +4245,7 @@ Conflicts with `query_file_uri`
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
 {{% /md %}}</dd>
@@ -4256,7 +4256,7 @@ Conflicts with `query_file_uri`
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
 {{% /md %}}</dd>
@@ -4267,7 +4267,7 @@ Conflicts with `query_file_uri`
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd>
@@ -4654,7 +4654,7 @@ Conflicts with `query_file_uri`
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
 {{% /md %}}</dd>
@@ -4698,7 +4698,7 @@ Conflicts with `query_list`
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`

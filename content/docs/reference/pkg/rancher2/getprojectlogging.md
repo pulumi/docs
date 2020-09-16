@@ -875,7 +875,7 @@ The following output properties are available:
 <a href="#output_flush_interval_python" style="color: inherit; text-decoration: inherit;">output_<wbr>flush_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}(Computed) How often buffered logs would be flushed. Default: `3` seconds (int)
 {{% /md %}}</dd>
@@ -1793,7 +1793,7 @@ The following output properties are available:
 <a href="#fluent_servers_python" style="color: inherit; text-decoration: inherit;">fluent_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectloggingfluentdconfigfluentserver">List[Get<wbr>Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getprojectloggingfluentdconfigfluentserver">Sequence[Get<wbr>Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2149,7 +2149,7 @@ The following output properties are available:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2395,7 +2395,7 @@ The following output properties are available:
 <a href="#broker_endpoints_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2922,6 +2922,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enabletls_csharp">
+<a href="#enabletls_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="program_csharp">
 <a href="#program_csharp" style="color: inherit; text-decoration: inherit;">Program</a>
 </span> 
@@ -3014,6 +3024,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabletls_go">
+<a href="#enabletls_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3116,6 +3136,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enabletls_nodejs">
+<a href="#enabletls_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="program_nodejs">
 <a href="#program_nodejs" style="color: inherit; text-decoration: inherit;">program</a>
 </span> 
@@ -3213,6 +3243,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_tls_python">
+<a href="#enable_tls_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="program_python">
 <a href="#program_python" style="color: inherit; text-decoration: inherit;">program</a>
 </span> 
@@ -3269,6 +3309,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

@@ -31,7 +31,7 @@ To get more information about AccessLevels, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#pulumi_gcp.accesscontextmanager.AccessLevels">AccessLevels</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_levels</span><span class="p">:</span> <span class="nx">Optional[List[AccessLevelsAccessLevelArgs]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#pulumi_gcp.accesscontextmanager.AccessLevels">AccessLevels</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_levels</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessLevelsAccessLevelArgs]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -314,7 +314,7 @@ Format: accessPolicies/{policy_id}
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevel">List[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevel">Sequence[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The desired Access Levels that should replace all existing Access Levels in the Access Policy.
 Structure is documented below.
@@ -419,7 +419,7 @@ Get an existing AccessLevels resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_levels</span><span class="p">:</span> <span class="nx">Optional[List[AccessLevelsAccessLevelArgs]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessLevels</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_levels</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessLevelsAccessLevelArgs]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessLevels</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -632,7 +632,7 @@ Format: accessPolicies/{policy_id}
 <a href="#state_access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevel">List[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevel">Sequence[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The desired Access Levels that should replace all existing Access Levels in the Access Policy.
 Structure is documented below.
@@ -1083,7 +1083,7 @@ Possible values are `AND` and `OR`.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasiccondition">List[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasiccondition">Sequence[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.
 Structure is documented below.
@@ -1448,7 +1448,7 @@ Structure is documented below.
 <a href="#ip_subnetworks_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>subnetworks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of CIDR block IP subnetwork specification. May be IPv4
 or IPv6.
@@ -1468,7 +1468,7 @@ If empty, all IP addresses are allowed.
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An allowed list of members (users, service accounts).
 Using groups is not supported yet.
@@ -1498,7 +1498,7 @@ the Condition overall to be satisfied. Defaults to false.
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The request must originate from one of the provided
 countries/regions.
@@ -1511,7 +1511,7 @@ Format: A valid ISO 3166-1 alpha-2 code.
 <a href="#required_access_levels_python" style="color: inherit; text-decoration: inherit;">required_<wbr>access_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of other access levels defined in the same Policy,
 referenced by resource name. Referencing an AccessLevel which
@@ -1791,7 +1791,7 @@ to be true. Defaults to false.
 <a href="#allowed_device_management_levels_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>device_<wbr>management_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed device management levels.
 An empty list allows all management levels.
@@ -1804,7 +1804,7 @@ Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLET
 <a href="#allowed_encryption_statuses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>encryption_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed encryptions statuses.
 An empty list allows all statuses.
@@ -1817,7 +1817,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
 <a href="#os_constraints_python" style="color: inherit; text-decoration: inherit;">os_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicyosconstraint">List[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicyosconstraint">Sequence[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.

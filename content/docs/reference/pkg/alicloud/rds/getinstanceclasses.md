@@ -1058,7 +1058,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.60.0+) A list of Rds instance class codes.
 {{% /md %}}</dd>
@@ -1069,7 +1069,7 @@ The following output properties are available:
 <a href="#instance_classes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>classes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceclassesinstanceclass">List[Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class]</a></span>
+        <span class="property-type"><a href="#getinstanceclassesinstanceclass">Sequence[Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class]</a></span>
     </dt>
     <dd>{{% md %}}A list of Rds available resource. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1393,7 +1393,7 @@ The following output properties are available:
 <a href="#zone_ids_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceclassesinstanceclasszoneid">List[Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstanceclassesinstanceclasszoneid">Sequence[Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone to launch the DB instance.
 {{% /md %}}</dd>
@@ -1705,7 +1705,7 @@ The following output properties are available:
 <a href="#sub_zone_ids_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of sub zone ids which in the id - e.g If `id` is `cn-beijing-MAZ5(a,b)`, `sub_zone_ids` will be `["cn-beijing-a", "cn-beijing-b"]`.
 {{% /md %}}</dd>

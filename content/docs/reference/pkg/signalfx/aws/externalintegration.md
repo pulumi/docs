@@ -34,41 +34,46 @@ class MyStack : Stack
         var awsMyteamExtern = new SignalFx.Aws.ExternalIntegration("awsMyteamExtern", new SignalFx.Aws.ExternalIntegrationArgs
         {
         });
-        var signalfxAssumePolicy = Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        var signalfxAssumePolicy = Output.Tuple(awsMyteamExtern.SignalfxAwsAccount, awsMyteamExtern.ExternalId).Apply(values =>
         {
-            Statement = 
+            var signalfxAwsAccount = values.Item1;
+            var externalId = values.Item2;
+            return Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
             {
-                
+                Statements = 
                 {
-                    { "actions", 
+                    new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                     {
-                        "sts:AssumeRole",
-                    } },
-                    { "principals", 
-                    {
-                        
+                        Actions = 
                         {
-                            { "type", "AWS" },
-                            { "identifiers", 
-                            {
-                                awsMyteamExtern.SignalfxAwsAccount,
-                            } },
+                            "sts:AssumeRole",
                         },
-                    } },
-                    { "condition", 
-                    {
-                        
+                        Principals = 
                         {
-                            { "test", "StringEquals" },
-                            { "variable", "sts:ExternalId" },
-                            { "values", 
+                            new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
                             {
-                                awsMyteamExtern.ExternalId,
-                            } },
+                                Type = "AWS",
+                                Identifiers = 
+                                {
+                                    signalfxAwsAccount,
+                                },
+                            },
                         },
-                    } },
+                        Conditions = 
+                        {
+                            new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
+                            {
+                                Test = "StringEquals",
+                                Variable = "sts:ExternalId",
+                                Values = 
+                                {
+                                    externalId,
+                                },
+                            },
+                        },
+                    },
                 },
-            },
+            });
         });
         var awsSfxRole = new Aws.Iam.Role("awsSfxRole", new Aws.Iam.RoleArgs
         {
@@ -169,7 +174,66 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		awsMyteamExtern, err := aws.NewExternalIntegration(ctx, "awsMyteamExtern", nil)
+		if err != nil {
+			return err
+		}
+		awsSfxRole, err := iam.NewRole(ctx, "awsSfxRole", &iam.RoleArgs{
+			Description: pulumi.String("signalfx integration to read out data and send it to signalfxs aws account"),
+			AssumeRolePolicy: signalfxAssumePolicy.ApplyT(func(signalfxAssumePolicy iam.GetPolicyDocumentResult) (string, error) {
+				return signalfxAssumePolicy.Json, nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		awsReadPermissions, err := iam.NewPolicy(ctx, "awsReadPermissions", &iam.PolicyArgs{
+			Description: pulumi.String("farts"),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "	\"Version\": \"2012-10-17\",\n", "	\"Statement\": [\n", "		{\n", "			\"Action\": [\n", "				\"dynamodb:ListTables\",\n", "		    \"dynamodb:DescribeTable\",\n", "		    \"dynamodb:ListTagsOfResource\",\n", "		    \"ec2:DescribeInstances\",\n", "		    \"ec2:DescribeInstanceStatus\",\n", "		    \"ec2:DescribeVolumes\",\n", "		    \"ec2:DescribeReservedInstances\",\n", "		    \"ec2:DescribeReservedInstancesModifications\",\n", "		    \"ec2:DescribeTags\",\n", "		    \"organizations:DescribeOrganization\",\n", "		    \"cloudwatch:ListMetrics\",\n", "		    \"cloudwatch:GetMetricData\",\n", "		    \"cloudwatch:GetMetricStatistics\",\n", "		    \"cloudwatch:DescribeAlarms\",\n", "		    \"sqs:ListQueues\",\n", "		    \"sqs:GetQueueAttributes\",\n", "		    \"sqs:ListQueueTags\",\n", "		    \"elasticmapreduce:ListClusters\",\n", "		    \"elasticmapreduce:DescribeCluster\",\n", "		    \"kinesis:ListShards\",\n", "		    \"kinesis:ListStreams\",\n", "		    \"kinesis:DescribeStream\",\n", "		    \"kinesis:ListTagsForStream\",\n", "		    \"rds:DescribeDBInstances\",\n", "		    \"rds:ListTagsForResource\",\n", "		    \"elasticloadbalancing:DescribeLoadBalancers\",\n", "		    \"elasticloadbalancing:DescribeTags\",\n", "		    \"elasticache:describeCacheClusters\",\n", "		    \"redshift:DescribeClusters\",\n", "		    \"lambda:GetAlias\",\n", "		    \"lambda:ListFunctions\",\n", "		    \"lambda:ListTags\",\n", "		    \"autoscaling:DescribeAutoScalingGroups\",\n", "		    \"s3:ListAllMyBuckets\",\n", "		    \"s3:ListBucket\",\n", "		    \"s3:GetBucketLocation\",\n", "		    \"s3:GetBucketTagging\",\n", "		    \"ecs:ListServices\",\n", "		    \"ecs:ListTasks\",\n", "		    \"ecs:DescribeTasks\",\n", "		    \"ecs:DescribeServices\",\n", "		    \"ecs:ListClusters\",\n", "		    \"ecs:DescribeClusters\",\n", "		    \"ecs:ListTaskDefinitions\",\n", "		    \"ecs:ListTagsForResource\",\n", "		    \"apigateway:GET\",\n", "		    \"cloudfront:ListDistributions\",\n", "		    \"cloudfront:ListTagsForResource\",\n", "		    \"tag:GetResources\",\n", "		    \"es:ListDomainNames\",\n", "		    \"es:DescribeElasticsearchDomain\"\n", "			],\n", "			\"Effect\": \"Allow\",\n", "			\"Resource\": \"*\"\n", "		}\n", "	]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicyAttachment(ctx, "sfx_read_attach", &iam.RolePolicyAttachmentArgs{
+			Role:      awsSfxRole.Name,
+			PolicyArn: awsReadPermissions.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = aws.NewIntegration(ctx, "awsMyteam", &aws.IntegrationArgs{
+			Enabled:       pulumi.Bool(true),
+			IntegrationId: awsMyteamExtern.ID(),
+			ExternalId:    awsMyteamExtern.ExternalId,
+			RoleArn:       awsSfxRole.Arn,
+			Regions: pulumi.StringArray{
+				pulumi.String("us-east-1"),
+			},
+			PollRate:         pulumi.Int(300),
+			ImportCloudWatch: pulumi.Bool(true),
+			EnableAwsUsage:   pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -179,18 +243,18 @@ import pulumi_aws as aws
 import pulumi_signalfx as signalfx
 
 aws_myteam_extern = signalfx.aws.ExternalIntegration("awsMyteamExtern")
-signalfx_assume_policy = aws.iam.get_policy_document(statement=[{
+signalfx_assume_policy = pulumi.Output.all(aws_myteam_extern.signalfx_aws_account, aws_myteam_extern.external_id).apply(lambda signalfx_aws_account, external_id: aws.iam.get_policy_document(statements=[{
     "actions": ["sts:AssumeRole"],
     "principals": [{
         "type": "AWS",
-        "identifiers": [aws_myteam_extern.signalfx_aws_account],
+        "identifiers": [signalfx_aws_account],
     }],
-    "condition": [{
+    "conditions": [{
         "test": "StringEquals",
         "variable": "sts:ExternalId",
-        "values": [aws_myteam_extern.external_id],
+        "values": [external_id],
     }],
-}])
+}]))
 aws_sfx_role = aws.iam.Role("awsSfxRole",
     description="signalfx integration to read out data and send it to signalfxs aws account",
     assume_role_policy=signalfx_assume_policy.json)
@@ -283,20 +347,20 @@ import * as aws from "@pulumi/aws";
 import * as signalfx from "@pulumi/signalfx";
 
 const awsMyteamExtern = new signalfx.aws.ExternalIntegration("awsMyteamExtern", {});
-const signalfxAssumePolicy = aws.iam.getPolicyDocument({
-    statement: [{
+const signalfxAssumePolicy = pulumi.all([awsMyteamExtern.signalfxAwsAccount, awsMyteamExtern.externalId]).apply(([signalfxAwsAccount, externalId]) => aws.iam.getPolicyDocument({
+    statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
             type: "AWS",
-            identifiers: [awsMyteamExtern.signalfxAwsAccount],
+            identifiers: [signalfxAwsAccount],
         }],
-        condition: [{
+        conditions: [{
             test: "StringEquals",
             variable: "sts:ExternalId",
-            values: [awsMyteamExtern.externalId],
+            values: [externalId],
         }],
     }],
-});
+}));
 const awsSfxRole = new aws.iam.Role("awsSfxRole", {
     description: "signalfx integration to read out data and send it to signalfxs aws account",
     assumeRolePolicy: signalfxAssumePolicy.json,
@@ -397,11 +461,11 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/aws/#pulumi_signalfx.aws.ExternalIntegration">ExternalIntegration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>named_token=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/aws/#pulumi_signalfx.aws.ExternalIntegration">ExternalIntegration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#ExternalIntegration">NewExternalIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#ExternalIntegrationArgs">ExternalIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#ExternalIntegration">ExternalIntegration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#ExternalIntegration">NewExternalIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#ExternalIntegrationArgs">ExternalIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#ExternalIntegration">ExternalIntegration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -475,7 +539,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -495,7 +559,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#ExternalIntegrationArgs">ExternalIntegrationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#ExternalIntegrationArgs">ExternalIntegrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -505,7 +569,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -580,17 +644,6 @@ The ExternalIntegration resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The name of this integration
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="namedtoken_csharp">
-<a href="#namedtoken_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}A named token to use for ingest
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -607,17 +660,6 @@ The ExternalIntegration resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of this integration
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="namedtoken_go">
-<a href="#namedtoken_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
 
 </dl>
@@ -638,17 +680,6 @@ The ExternalIntegration resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The name of this integration
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="namedtoken_nodejs">
-<a href="#namedtoken_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Token</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}A named token to use for ingest
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -665,17 +696,6 @@ The ExternalIntegration resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of this integration
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="named_token_python">
-<a href="#named_token_python" style="color: inherit; text-decoration: inherit;">named_<wbr>token</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
 
 </dl>
@@ -864,15 +884,16 @@ Get an existing ExternalIntegration resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>external_id=None<span class="p">, </span>name=None<span class="p">, </span>named_token=None<span class="p">, </span>signalfx_aws_account=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signalfx_aws_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ExternalIntegration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetExternalIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#ExternalIntegrationState">ExternalIntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/aws?tab=doc#ExternalIntegration">ExternalIntegration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetExternalIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#ExternalIntegrationState">ExternalIntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#ExternalIntegration">ExternalIntegration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.ExternalIntegration.html">ExternalIntegration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.ExternalIntegrationState.html">ExternalIntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.ExternalIntegration.html">ExternalIntegration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.ExternalIntegrationState.html">ExternalIntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1002,17 +1023,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_namedtoken_csharp">
-<a href="#state_namedtoken_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}A named token to use for ingest
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_signalfxawsaccount_csharp">
 <a href="#state_signalfxawsaccount_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Aws<wbr>Account</a>
 </span> 
@@ -1049,17 +1059,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of this integration
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_namedtoken_go">
-<a href="#state_namedtoken_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1104,17 +1103,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_namedtoken_nodejs">
-<a href="#state_namedtoken_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Token</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}A named token to use for ingest
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_signalfxawsaccount_nodejs">
 <a href="#state_signalfxawsaccount_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>Aws<wbr>Account</a>
 </span> 
@@ -1155,17 +1143,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_named_token_python">
-<a href="#state_named_token_python" style="color: inherit; text-decoration: inherit;">named_<wbr>token</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}A named token to use for ingest
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_signalfx_aws_account_python">
 <a href="#state_signalfx_aws_account_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>aws_<wbr>account</a>
 </span> 
@@ -1195,6 +1172,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
+	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 </dl>
 

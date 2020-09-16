@@ -1163,7 +1163,7 @@ The following output properties are available:
 <a href="#cluster_template_questions_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>template_<wbr>questions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterclustertemplatequestion">List[Get<wbr>Cluster<wbr>Cluster<wbr>Template<wbr>Question]</a></span>
+        <span class="property-type"><a href="#getclusterclustertemplatequestion">Sequence[Get<wbr>Cluster<wbr>Cluster<wbr>Template<wbr>Question]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Cluster template questions (list)
 {{% /md %}}</dd>
@@ -1348,7 +1348,7 @@ The following output properties are available:
 <a href="#scheduled_cluster_scans_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>cluster_<wbr>scans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterscheduledclusterscan">List[Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan]</a></span>
+        <span class="property-type"><a href="#getclusterscheduledclusterscan">Sequence[Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2711,7 +2711,7 @@ The following output properties are available:
 <a href="#agent_os_disk_size_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>os_<wbr>disk_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2771,7 +2771,7 @@ The following output properties are available:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2851,7 +2851,7 @@ The following output properties are available:
 <a href="#max_pods_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4713,7 +4713,7 @@ The following output properties are available:
 <a href="#desired_nodes_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4743,7 +4743,7 @@ The following output properties are available:
 <a href="#maximum_nodes_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4753,7 +4753,7 @@ The following output properties are available:
 <a href="#minimum_nodes_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4763,7 +4763,7 @@ The following output properties are available:
 <a href="#node_volume_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4783,7 +4783,7 @@ The following output properties are available:
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4813,7 +4813,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6586,7 +6586,7 @@ The following output properties are available:
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6666,7 +6666,7 @@ The following output properties are available:
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6727,7 +6727,7 @@ The following output properties are available:
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6907,7 +6907,7 @@ The following output properties are available:
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6917,7 +6917,7 @@ The following output properties are available:
 <a href="#master_authorized_network_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">master_<wbr>authorized_<wbr>network_<wbr>cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6927,7 +6927,7 @@ The following output properties are available:
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6937,7 +6937,7 @@ The following output properties are available:
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6947,7 +6947,7 @@ The following output properties are available:
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6977,7 +6977,7 @@ The following output properties are available:
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7319,7 +7319,7 @@ The following output properties are available:
 <a href="#server_concurrency_python" style="color: inherit; text-decoration: inherit;">server_<wbr>concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7329,7 +7329,7 @@ The following output properties are available:
 <a href="#worker_concurrency_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>concurrency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8015,7 +8015,7 @@ The following output properties are available:
 <a href="#addon_job_timeout_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>job_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8175,7 +8175,7 @@ The following output properties are available:
 <a href="#addons_includes_python" style="color: inherit; text-decoration: inherit;">addons_<wbr>includes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8195,7 +8195,7 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterrkeconfignode">List[Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterrkeconfignode">Sequence[Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8205,7 +8205,7 @@ The following output properties are available:
 <a href="#private_registries_python" style="color: inherit; text-decoration: inherit;">private_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterrkeconfigprivateregistry">List[Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterrkeconfigprivateregistry">Sequence[Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8331,7 +8331,7 @@ The following output properties are available:
 <a href="#sans_python" style="color: inherit; text-decoration: inherit;">sans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9169,7 +9169,7 @@ The following output properties are available:
 <a href="#service_overrides_python" style="color: inherit; text-decoration: inherit;">service_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterrkeconfigcloudproviderawscloudproviderserviceoverride">List[Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterrkeconfigcloudproviderawscloudproviderserviceoverride">Sequence[Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10887,7 +10887,7 @@ The following output properties are available:
 <a href="#cloud_provider_backoff_duration_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10897,7 +10897,7 @@ The following output properties are available:
 <a href="#cloud_provider_backoff_exponent_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>exponent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10907,7 +10907,7 @@ The following output properties are available:
 <a href="#cloud_provider_backoff_jitter_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>jitter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10917,7 +10917,7 @@ The following output properties are available:
 <a href="#cloud_provider_backoff_retries_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10937,7 +10937,7 @@ The following output properties are available:
 <a href="#cloud_provider_rate_limit_bucket_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>rate_<wbr>limit_<wbr>bucket</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10947,7 +10947,7 @@ The following output properties are available:
 <a href="#cloud_provider_rate_limit_qps_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>rate_<wbr>limit_<wbr>qps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10967,7 +10967,7 @@ The following output properties are available:
 <a href="#maximum_load_balancer_rule_count_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>load_<wbr>balancer_<wbr>rule_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12441,7 +12441,7 @@ The following output properties are available:
 <a href="#monitor_max_retries_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>max_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12567,7 +12567,7 @@ The following output properties are available:
 <a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12899,7 +12899,7 @@ The following output properties are available:
 <a href="#virtual_centers_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>centers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterrkeconfigcloudprovidervspherecloudprovidervirtualcenter">List[Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Sequence[Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13271,7 +13271,7 @@ The following output properties are available:
 <a href="#soap_roundtrip_count_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>roundtrip_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13647,7 +13647,7 @@ The following output properties are available:
 <a href="#soap_roundtrip_count_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>roundtrip_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14119,7 +14119,7 @@ The following output properties are available:
 <a href="#reverse_cidrs_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>cidrs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14129,7 +14129,7 @@ The following output properties are available:
 <a href="#upstream_nameservers_python" style="color: inherit; text-decoration: inherit;">upstream_<wbr>nameservers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -14747,7 +14747,7 @@ The following output properties are available:
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -15009,7 +15009,7 @@ The following output properties are available:
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -15019,7 +15019,7 @@ The following output properties are available:
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -15335,7 +15335,7 @@ The following output properties are available:
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -16128,7 +16128,7 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17317,7 +17317,7 @@ The following output properties are available:
 <a href="#external_urls_python" style="color: inherit; text-decoration: inherit;">external_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17327,7 +17327,7 @@ The following output properties are available:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17337,7 +17337,7 @@ The following output properties are available:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17347,7 +17347,7 @@ The following output properties are available:
 <a href="#gid_python" style="color: inherit; text-decoration: inherit;">gid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17357,7 +17357,7 @@ The following output properties are available:
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17573,7 +17573,7 @@ The following output properties are available:
 <a href="#interval_hours_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -17583,7 +17583,7 @@ The following output properties are available:
 <a href="#retention_python" style="color: inherit; text-decoration: inherit;">retention</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -18425,7 +18425,7 @@ The following output properties are available:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -18435,7 +18435,7 @@ The following output properties are available:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -18837,7 +18837,7 @@ The following output properties are available:
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -18847,7 +18847,7 @@ The following output properties are available:
 <a href="#max_backup_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -18857,7 +18857,7 @@ The following output properties are available:
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -18896,13 +18896,13 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -18923,13 +18923,13 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -18950,13 +18950,13 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -18977,13 +18977,13 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19028,7 +19028,7 @@ The following output properties are available:
 <a href="#customconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19055,7 +19055,7 @@ The following output properties are available:
 <a href="#customconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19082,7 +19082,7 @@ The following output properties are available:
 <a href="#customconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19109,7 +19109,7 @@ The following output properties are available:
 <a href="#custom_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19395,7 +19395,7 @@ The following output properties are available:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19405,7 +19405,7 @@ The following output properties are available:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19791,7 +19791,7 @@ The following output properties are available:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19801,7 +19801,7 @@ The following output properties are available:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -20007,7 +20007,7 @@ The following output properties are available:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -20017,7 +20017,7 @@ The following output properties are available:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -20213,7 +20213,7 @@ The following output properties are available:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -20223,7 +20223,7 @@ The following output properties are available:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -20655,7 +20655,7 @@ The following output properties are available:
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -20675,7 +20675,7 @@ The following output properties are available:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -21163,7 +21163,7 @@ The following output properties are available:
 <a href="#override_skips_python" style="color: inherit; text-decoration: inherit;">override_<wbr>skips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -21299,7 +21299,7 @@ The following output properties are available:
 <a href="#retention_python" style="color: inherit; text-decoration: inherit;">retention</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -21321,6 +21321,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

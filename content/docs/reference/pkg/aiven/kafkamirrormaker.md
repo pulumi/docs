@@ -22,7 +22,7 @@ meta_desc: "Explore the KafkaMirrorMaker resource of the Aiven package, includin
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.KafkaMirrorMaker">KafkaMirrorMaker</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[KafkaMirrorMakerServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.KafkaMirrorMaker">KafkaMirrorMaker</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaMirrorMakerServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -683,7 +683,7 @@ The KafkaMirrorMaker resource accepts the following [input]({{< relref "/docs/in
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">List[Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">Sequence[Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd>
@@ -1038,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakercomponent">List[Kafka<wbr>Mirror<wbr>Maker<wbr>Component]</a></span>
+        <span class="property-type"><a href="#kafkamirrormakercomponent">Sequence[Kafka<wbr>Mirror<wbr>Maker<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd>
@@ -1081,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Service port
 {{% /md %}}</dd>
@@ -1150,7 +1150,7 @@ Get an existing KafkaMirrorMaker resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[List[KafkaMirrorMakerComponentArgs]]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[List[KafkaMirrorMakerServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> KafkaMirrorMaker</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaMirrorMakerComponentArgs]]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaMirrorMakerKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaMirrorMakerServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> KafkaMirrorMaker</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1929,7 +1929,7 @@ The following state arguments are supported:
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakercomponent">List[Kafka<wbr>Mirror<wbr>Maker<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kafkamirrormakercomponent">Sequence[Kafka<wbr>Mirror<wbr>Maker<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd>
@@ -2028,7 +2028,7 @@ The following state arguments are supported:
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">List[Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kafkamirrormakerserviceintegration">Sequence[Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd>
@@ -2061,7 +2061,7 @@ The following state arguments are supported:
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Service port
 {{% /md %}}</dd>
@@ -2421,7 +2421,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2567,7 +2567,7 @@ The following state arguments are supported:
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

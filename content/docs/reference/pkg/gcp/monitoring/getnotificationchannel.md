@@ -732,7 +732,7 @@ The following output properties are available:
 <a href="#sensitive_labels_python" style="color: inherit; text-decoration: inherit;">sensitive_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnotificationchannelsensitivelabel">List[Get<wbr>Notification<wbr>Channel<wbr>Sensitive<wbr>Label]</a></span>
+        <span class="property-type"><a href="#getnotificationchannelsensitivelabel">Sequence[Get<wbr>Notification<wbr>Channel<wbr>Sensitive<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

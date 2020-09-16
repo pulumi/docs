@@ -79,6 +79,176 @@ const mydashboardgroup0 = new signalfx.DashboardGroup("mydashboardgroup0", {
 
 {{% /example %}}
 
+### With Mirrored Dashboards
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mydashboardgroupWithmirrors = new SignalFx.DashboardGroup("mydashboardgroupWithmirrors", new SignalFx.DashboardGroupArgs
+        {
+            Description = "Cool dashboard group",
+            Dashboards = 
+            {
+                new SignalFx.Inputs.DashboardGroupDashboardArgs
+                {
+                    DashboardId = signalfx_dashboard.Gc_dashboard.Id,
+                    NameOverride = "GC For My Service",
+                    DescriptionOverride = "Garbage Collection dashboard maintained by JVM team",
+                    FilterOverrides = 
+                    {
+                        new SignalFx.Inputs.DashboardGroupDashboardFilterOverrideArgs
+                        {
+                            Property = "service",
+                            Values = 
+                            {
+                                "myservice",
+                            },
+                            Negated = false,
+                        },
+                    },
+                    VariableOverrides = 
+                    {
+                        new SignalFx.Inputs.DashboardGroupDashboardVariableOverrideArgs
+                        {
+                            Property = "region",
+                            Values = 
+                            {
+                                "us-west1",
+                            },
+                            ValuesSuggesteds = 
+                            {
+                                "us-west-1",
+                                "us-east-1",
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := signalfx.NewDashboardGroup(ctx, "mydashboardgroupWithmirrors", &signalfx.DashboardGroupArgs{
+			Description: pulumi.String("Cool dashboard group"),
+			Dashboards: signalfx.DashboardGroupDashboardArray{
+				&signalfx.DashboardGroupDashboardArgs{
+					DashboardId:         pulumi.Any(signalfx_dashboard.Gc_dashboard.Id),
+					NameOverride:        pulumi.String("GC For My Service"),
+					DescriptionOverride: pulumi.String("Garbage Collection dashboard maintained by JVM team"),
+					FilterOverrides: signalfx.DashboardGroupDashboardFilterOverrideArray{
+						&signalfx.DashboardGroupDashboardFilterOverrideArgs{
+							Property: pulumi.String("service"),
+							Values: pulumi.StringArray{
+								pulumi.String("myservice"),
+							},
+							Negated: pulumi.Bool(false),
+						},
+					},
+					VariableOverrides: signalfx.DashboardGroupDashboardVariableOverrideArray{
+						&signalfx.DashboardGroupDashboardVariableOverrideArgs{
+							Property: pulumi.String("region"),
+							Values: pulumi.StringArray{
+								pulumi.String("us-west1"),
+							},
+							ValuesSuggesteds: pulumi.StringArray{
+								pulumi.String("us-west-1"),
+								pulumi.String("us-east-1"),
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+mydashboardgroup_withmirrors = signalfx.DashboardGroup("mydashboardgroupWithmirrors",
+    description="Cool dashboard group",
+    dashboards=[signalfx.DashboardGroupDashboardArgs(
+        dashboard_id=signalfx_dashboard["gc_dashboard"]["id"],
+        name_override="GC For My Service",
+        description_override="Garbage Collection dashboard maintained by JVM team",
+        filter_overrides=[signalfx.DashboardGroupDashboardFilterOverrideArgs(
+            property="service",
+            values=["myservice"],
+            negated=False,
+        )],
+        variable_overrides=[signalfx.DashboardGroupDashboardVariableOverrideArgs(
+            property="region",
+            values=["us-west1"],
+            values_suggesteds=[
+                "us-west-1",
+                "us-east-1",
+            ],
+        )],
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const mydashboardgroupWithmirrors = new signalfx.DashboardGroup("mydashboardgroupWithmirrors", {
+    description: "Cool dashboard group",
+    dashboards: [{
+        dashboardId: signalfx_dashboard.gc_dashboard.id,
+        nameOverride: "GC For My Service",
+        descriptionOverride: "Garbage Collection dashboard maintained by JVM team",
+        filterOverrides: [{
+            property: "service",
+            values: ["myservice"],
+            negated: false,
+        }],
+        variableOverrides: [{
+            property: "region",
+            values: ["us-west1"],
+            valuesSuggesteds: [
+                "us-west-1",
+                "us-east-1",
+            ],
+        }],
+    }],
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -91,11 +261,11 @@ const mydashboardgroup0 = new signalfx.DashboardGroup("mydashboardgroup0", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.DashboardGroup">DashboardGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorized_writer_teams=None<span class="p">, </span>authorized_writer_users=None<span class="p">, </span>dashboards=None<span class="p">, </span>description=None<span class="p">, </span>import_qualifiers=None<span class="p">, </span>name=None<span class="p">, </span>teams=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.DashboardGroup">DashboardGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorized_writer_teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_writer_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dashboards</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardGroupDashboardArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_qualifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardGroupImportQualifierArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroup">NewDashboardGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupArgs">DashboardGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroup">DashboardGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroup">NewDashboardGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupArgs">DashboardGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroup">DashboardGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -169,7 +339,7 @@ const mydashboardgroup0 = new signalfx.DashboardGroup("mydashboardgroup0", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -189,7 +359,7 @@ const mydashboardgroup0 = new signalfx.DashboardGroup("mydashboardgroup0", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupArgs">DashboardGroupArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupArgs">DashboardGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -199,7 +369,7 @@ const mydashboardgroup0 = new signalfx.DashboardGroup("mydashboardgroup0", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -328,17 +498,6 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Name of the dashboard group.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="teams_csharp">
-<a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -409,17 +568,6 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="teams_go">
-<a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
 {{% /md %}}</dd>
 
 </dl>
@@ -494,17 +642,6 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Name of the dashboard group.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="teams_nodejs">
-<a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -518,7 +655,7 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#authorized_writer_teams_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -529,7 +666,7 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#authorized_writer_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -540,7 +677,7 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dashboards_python" style="color: inherit; text-decoration: inherit;">dashboards</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">List[Dashboard<wbr>Group<wbr>Dashboard]</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboard">Sequence[Dashboard<wbr>Group<wbr>Dashboard<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 {{% /md %}}</dd>
@@ -562,7 +699,7 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#import_qualifiers_python" style="color: inherit; text-decoration: inherit;">import_<wbr>qualifiers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">List[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier]</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifier">Sequence[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -575,17 +712,6 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="teams_python">
-<a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
 {{% /md %}}</dd>
 
 </dl>
@@ -686,15 +812,16 @@ Get an existing DashboardGroup resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>authorized_writer_teams=None<span class="p">, </span>authorized_writer_users=None<span class="p">, </span>dashboards=None<span class="p">, </span>description=None<span class="p">, </span>import_qualifiers=None<span class="p">, </span>name=None<span class="p">, </span>teams=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorized_writer_teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_writer_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dashboards</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardGroupDashboardArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_qualifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardGroupImportQualifierArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DashboardGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboardGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupState">DashboardGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroup">DashboardGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboardGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupState">DashboardGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroup">DashboardGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.DashboardGroup.html">DashboardGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..DashboardGroupState.html">DashboardGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.DashboardGroup.html">DashboardGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..DashboardGroupState.html">DashboardGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -865,17 +992,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the dashboard group.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_teams_csharp">
-<a href="#state_teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -946,17 +1062,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_teams_go">
-<a href="#state_teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
 {{% /md %}}</dd>
 
 </dl>
@@ -1031,17 +1136,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the dashboard group.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_teams_nodejs">
-<a href="#state_teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1055,7 +1149,7 @@ The following state arguments are supported:
 <a href="#state_authorized_writer_teams_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -1066,7 +1160,7 @@ The following state arguments are supported:
 <a href="#state_authorized_writer_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -1077,7 +1171,7 @@ The following state arguments are supported:
 <a href="#state_dashboards_python" style="color: inherit; text-decoration: inherit;">dashboards</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">List[Dashboard<wbr>Group<wbr>Dashboard]</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboard">Sequence[Dashboard<wbr>Group<wbr>Dashboard<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 {{% /md %}}</dd>
@@ -1099,7 +1193,7 @@ The following state arguments are supported:
 <a href="#state_import_qualifiers_python" style="color: inherit; text-decoration: inherit;">import_<wbr>qualifiers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">List[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier]</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifier">Sequence[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1112,17 +1206,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_teams_python">
-<a href="#state_teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
 {{% /md %}}</dd>
 
 </dl>
@@ -1146,7 +1229,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupDashboardArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupDashboardOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupDashboardArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupDashboardOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.DashboardGroupDashboardArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.DashboardGroupDashboard.html">output</a> API doc for this type.
@@ -1343,8 +1426,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="dashboardid_python">
-<a href="#dashboardid_python" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Id</a>
+        <span id="dashboard_id_python">
+<a href="#dashboard_id_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1354,8 +1437,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="descriptionoverride_python">
-<a href="#descriptionoverride_python" style="color: inherit; text-decoration: inherit;">description<wbr>Override</a>
+        <span id="description_override_python">
+<a href="#description_override_python" style="color: inherit; text-decoration: inherit;">description_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1365,19 +1448,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filteroverrides_python">
-<a href="#filteroverrides_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Overrides</a>
+        <span id="filter_overrides_python">
+<a href="#filter_overrides_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">List[Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override]</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">Sequence[Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The description that will override the original dashboards's description.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nameoverride_python">
-<a href="#nameoverride_python" style="color: inherit; text-decoration: inherit;">name<wbr>Override</a>
+        <span id="name_override_python">
+<a href="#name_override_python" style="color: inherit; text-decoration: inherit;">name_<wbr>override</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1387,11 +1470,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="variableoverrides_python">
-<a href="#variableoverrides_python" style="color: inherit; text-decoration: inherit;">variable<wbr>Overrides</a>
+        <span id="variable_overrides_python">
+<a href="#variable_overrides_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">List[Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override]</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">Sequence[Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1408,7 +1491,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupDashboardFilterOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupDashboardFilterOverrideOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupDashboardFilterOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupDashboardFilterOverrideOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.DashboardGroupDashboardFilterOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.DashboardGroupDashboardFilterOverride.html">output</a> API doc for this type.
@@ -1557,7 +1640,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
 {{% /md %}}</dd>
@@ -1586,7 +1669,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupDashboardVariableOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupDashboardVariableOverrideOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupDashboardVariableOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupDashboardVariableOverrideOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.DashboardGroupDashboardVariableOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.DashboardGroupDashboardVariableOverride.html">output</a> API doc for this type.
@@ -1735,18 +1818,18 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="valuessuggesteds_python">
-<a href="#valuessuggesteds_python" style="color: inherit; text-decoration: inherit;">values<wbr>Suggesteds</a>
+        <span id="values_suggesteds_python">
+<a href="#values_suggesteds_python" style="color: inherit; text-decoration: inherit;">values_<wbr>suggesteds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
 {{% /md %}}</dd>
@@ -1764,7 +1847,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupImportQualifierArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupImportQualifierOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupImportQualifierArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupImportQualifierOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.DashboardGroupImportQualifierArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.DashboardGroupImportQualifier.html">output</a> API doc for this type.
@@ -1873,7 +1956,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">List[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">Sequence[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1890,7 +1973,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupImportQualifierFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/?tab=doc#DashboardGroupImportQualifierFilterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupImportQualifierFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#DashboardGroupImportQualifierFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.DashboardGroupImportQualifierFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.DashboardGroupImportQualifierFilter.html">output</a> API doc for this type.
@@ -2039,7 +2122,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
 {{% /md %}}</dd>
@@ -2073,6 +2156,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
+	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 </dl>
 

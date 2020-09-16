@@ -32,7 +32,7 @@ To get more information about StandardAppVersion, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#pulumi_gcp.appengine.StandardAppVersion">StandardAppVersion</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">basic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionBasicScalingArgs]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[List[StandardAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">libraries</span><span class="p">:</span> <span class="nx">Optional[List[StandardAppVersionLibraryArgs]]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threadsafe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#pulumi_gcp.appengine.StandardAppVersion">StandardAppVersion</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">basic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionBasicScalingArgs]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[StandardAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">libraries</span><span class="p">:</span> <span class="nx">Optional[Sequence[StandardAppVersionLibraryArgs]]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threadsafe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -995,7 +995,7 @@ Structure is documented below.
 <a href="#handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">List[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionhandler">Sequence[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -1008,7 +1008,7 @@ Structure is documented below.
 <a href="#inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
@@ -1034,7 +1034,7 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
 <a href="#libraries_python" style="color: inherit; text-decoration: inherit;">libraries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">List[Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">Sequence[Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 Structure is documented below.
@@ -1264,7 +1264,7 @@ Get an existing StandardAppVersion resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">basic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionBasicScalingArgs]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[List[StandardAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">libraries</span><span class="p">:</span> <span class="nx">Optional[List[StandardAppVersionLibraryArgs]]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threadsafe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">) -&gt;</span> StandardAppVersion</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">basic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionBasicScalingArgs]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[StandardAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">libraries</span><span class="p">:</span> <span class="nx">Optional[Sequence[StandardAppVersionLibraryArgs]]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threadsafe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">) -&gt;</span> StandardAppVersion</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2180,7 +2180,7 @@ Structure is documented below.
 <a href="#state_handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">List[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionhandler">Sequence[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -2193,7 +2193,7 @@ Structure is documented below.
 <a href="#state_inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
@@ -2219,7 +2219,7 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
 <a href="#state_libraries_python" style="color: inherit; text-decoration: inherit;">libraries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">List[Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">Sequence[Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 Structure is documented below.
@@ -2609,7 +2609,7 @@ Structure is documented below.
 <a href="#max_concurrent_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
 Defaults to a runtime-specific value.
@@ -2621,7 +2621,7 @@ Defaults to a runtime-specific value.
 <a href="#max_idle_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
 {{% /md %}}</dd>
@@ -2644,7 +2644,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#min_idle_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>idle_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
 {{% /md %}}</dd>
@@ -2857,7 +2857,7 @@ Structure is documented below.
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
 {{% /md %}}</dd>
@@ -2868,7 +2868,7 @@ Structure is documented below.
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
 {{% /md %}}</dd>
@@ -3016,7 +3016,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
 {{% /md %}}</dd>
@@ -3160,7 +3160,7 @@ Structure is documented below.
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentfile">List[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentfile">Sequence[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.
@@ -3486,7 +3486,7 @@ Structure is documented below.
 <a href="#files_count_python" style="color: inherit; text-decoration: inherit;">files_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}files count
 {{% /md %}}</dd>
@@ -4656,7 +4656,7 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of instances to assign to the service at the start.
 **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2

@@ -3,7 +3,7 @@ title: "Module serviceusage"
 title_tag: "Module serviceusage | Package @pulumi/gcp | Node.js SDK"
 linktitle: "serviceusage"
 meta_desc: "Explore members of the serviceusage module in the @pulumi/gcp package."
-git_sha: "da8ea6e04df21372ae7e86dc1edfa82d0f61de1e"
+git_sha: "aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ConsumerQuotaOverride" data-link-title="ConsumerQuotaOverride">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L20">
         Resource <strong>ConsumerQuotaOverride</strong>
     </a>
 </h3>
@@ -50,7 +50,7 @@ To get more information about ConsumerQuotaOverride, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -64,7 +64,7 @@ Create a ConsumerQuotaOverride resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -75,14 +75,14 @@ Get an existing ConsumerQuotaOverride resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -93,7 +93,7 @@ Returns true if the given object is an instance of ConsumerQuotaOverride.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L51">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L51">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dimensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -101,7 +101,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L56">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L56">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>force: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -110,7 +110,7 @@ If the new quota would decrease the existing quota by more than 10%, the request
 If `force` is `true`, that safety check is ignored.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -119,7 +119,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-limit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L60">property <b>limit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L60">property <b>limit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>limit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -127,7 +127,7 @@ deployments and may be missing (undefined) during planning phases.
 The limit on the metric, e.g. `/project/region`.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L64">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L64">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ The limit on the metric, e.g. `/project/region`.
 The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
 The server-generated name of the quota override.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-overrideValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L72">property <b>overrideValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L72">property <b>overrideValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>overrideValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -151,7 +151,7 @@ The server-generated name of the quota override.
 The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L77">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L77">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L81">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L81">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ If it is not provided, the provider project is used.
 The service that the metrics belong to, e.g. `compute.googleapis.com`.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -180,7 +180,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConsumerQuotaOverrideArgs" data-link-title="ConsumerQuotaOverrideArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L180">
         interface <strong>ConsumerQuotaOverrideArgs</strong>
     </a>
 </h3>
@@ -190,7 +190,7 @@ deployments.
 The set of arguments for constructing a ConsumerQuotaOverride resource.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideArgs-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L184">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L184">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -198,7 +198,7 @@ The set of arguments for constructing a ConsumerQuotaOverride resource.
 If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideArgs-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L189">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L189">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ If the new quota would decrease the existing quota by more than 10%, the request
 If `force` is `true`, that safety check is ignored.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideArgs-limit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L193">property <b>limit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L193">property <b>limit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ If `force` is `true`, that safety check is ignored.
 The limit on the metric, e.g. `/project/region`.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideArgs-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L197">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L197">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -223,7 +223,7 @@ The limit on the metric, e.g. `/project/region`.
 The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideArgs-overrideValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L201">property <b>overrideValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L201">property <b>overrideValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overrideValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -231,7 +231,7 @@ The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
 The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L206">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L206">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -240,7 +240,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L210">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L210">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -248,7 +248,7 @@ If it is not provided, the provider project is used.
 The service that the metrics belong to, e.g. `compute.googleapis.com`.
 
 <h3 class="pdoc-module-header" id="ConsumerQuotaOverrideState" data-link-title="ConsumerQuotaOverrideState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L140">
         interface <strong>ConsumerQuotaOverrideState</strong>
     </a>
 </h3>
@@ -258,7 +258,7 @@ The service that the metrics belong to, e.g. `compute.googleapis.com`.
 Input properties used for looking up and filtering ConsumerQuotaOverride resources.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideState-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L144">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L144">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -266,7 +266,7 @@ Input properties used for looking up and filtering ConsumerQuotaOverride resourc
 If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideState-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L149">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L149">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -275,7 +275,7 @@ If the new quota would decrease the existing quota by more than 10%, the request
 If `force` is `true`, that safety check is ignored.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideState-limit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L153">property <b>limit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L153">property <b>limit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -283,7 +283,7 @@ If `force` is `true`, that safety check is ignored.
 The limit on the metric, e.g. `/project/region`.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideState-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L157">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L157">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -291,7 +291,7 @@ The limit on the metric, e.g. `/project/region`.
 The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L161">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -299,7 +299,7 @@ The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
 The server-generated name of the quota override.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideState-overrideValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L165">property <b>overrideValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L165">property <b>overrideValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overrideValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -307,7 +307,7 @@ The server-generated name of the quota override.
 The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L170">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L170">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ConsumerQuotaOverrideState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/da8ea6e04df21372ae7e86dc1edfa82d0f61de1e/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L174">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/serviceusage/consumerQuotaOverride.ts#L174">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

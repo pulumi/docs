@@ -134,7 +134,7 @@ const basic = new alicloud.cms.SiteMonitor("basic", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cms/#pulumi_alicloud.cms.SiteMonitor">SiteMonitor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">isp_cities</span><span class="p">:</span> <span class="nx">Optional[List[SiteMonitorIspCityArgs]]</span> = None<span class="p">, </span><span class="nx">options_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cms/#pulumi_alicloud.cms.SiteMonitor">SiteMonitor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">isp_cities</span><span class="p">:</span> <span class="nx">Optional[Sequence[SiteMonitorIspCityArgs]]</span> = None<span class="p">, </span><span class="nx">options_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -597,7 +597,7 @@ The SiteMonitor resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#alert_ids_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of existing alert rules to be associated with the site monitoring task.
 {{% /md %}}</dd>
@@ -608,7 +608,7 @@ The SiteMonitor resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The monitoring interval of the site monitoring task. Unit: minutes. Valid values: 1, 5, and 15. Default value: 1.
 {{% /md %}}</dd>
@@ -619,7 +619,7 @@ The SiteMonitor resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#isp_cities_python" style="color: inherit; text-decoration: inherit;">isp_<wbr>cities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitemonitorispcity">List[Site<wbr>Monitor<wbr>Isp<wbr>City<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sitemonitorispcity">Sequence[Site<wbr>Monitor<wbr>Isp<wbr>City<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The detection points in a JSON array. For example, `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]` indicates the detection points in Beijing, Hangzhou, and Qingdao respectively. You can call the [DescribeSiteMonitorISPCityList](https://www.alibabacloud.com/help/en/doc-detail/115045.htm?spm=a2c63.p38356.b99.238.5fec36962UlFG6) operation to query detection point information. If this parameter is not specified, three detection points will be chosen randomly for monitoring.
 {{% /md %}}</dd>
@@ -854,7 +854,7 @@ Get an existing SiteMonitor resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">isp_cities</span><span class="p">:</span> <span class="nx">Optional[List[SiteMonitorIspCityArgs]]</span> = None<span class="p">, </span><span class="nx">options_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SiteMonitor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">isp_cities</span><span class="p">:</span> <span class="nx">Optional[Sequence[SiteMonitorIspCityArgs]]</span> = None<span class="p">, </span><span class="nx">options_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SiteMonitor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1327,7 +1327,7 @@ The following state arguments are supported:
 <a href="#state_alert_ids_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of existing alert rules to be associated with the site monitoring task.
 {{% /md %}}</dd>
@@ -1348,7 +1348,7 @@ The following state arguments are supported:
 <a href="#state_interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The monitoring interval of the site monitoring task. Unit: minutes. Valid values: 1, 5, and 15. Default value: 1.
 {{% /md %}}</dd>
@@ -1359,7 +1359,7 @@ The following state arguments are supported:
 <a href="#state_isp_cities_python" style="color: inherit; text-decoration: inherit;">isp_<wbr>cities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitemonitorispcity">List[Site<wbr>Monitor<wbr>Isp<wbr>City<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sitemonitorispcity">Sequence[Site<wbr>Monitor<wbr>Isp<wbr>City<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The detection points in a JSON array. For example, `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]` indicates the detection points in Beijing, Hangzhou, and Qingdao respectively. You can call the [DescribeSiteMonitorISPCityList](https://www.alibabacloud.com/help/en/doc-detail/115045.htm?spm=a2c63.p38356.b99.238.5fec36962UlFG6) operation to query detection point information. If this parameter is not specified, three detection points will be chosen randomly for monitoring.
 {{% /md %}}</dd>

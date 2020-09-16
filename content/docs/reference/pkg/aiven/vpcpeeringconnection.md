@@ -2,7 +2,7 @@
 ---
 title: "VpcPeeringConnection"
 title_tag: "Resource VpcPeeringConnection | Package Aiven"
-meta_desc: "Explore the VpcPeeringConnection resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the VpcPeeringConnection resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,92 +11,6 @@ meta_desc: "Explore the VpcPeeringConnection resource of the Aiven package, incl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mypeeringconnection = new Aiven.VpcPeeringConnection("mypeeringconnection", new Aiven.VpcPeeringConnectionArgs
-        {
-            PeerCloudAccount = "<PEER_ACCOUNT_ID>",
-            PeerRegion = "<PEER_REGION>",
-            PeerVpc = "<PEER_VPC_ID/NAME>",
-            VpcId = aiven_project_vpc.Myvpc.Id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.NewVpcPeeringConnection(ctx, "mypeeringconnection", &aiven.VpcPeeringConnectionArgs{
-			PeerCloudAccount: pulumi.String("<PEER_ACCOUNT_ID>"),
-			PeerRegion:       pulumi.String("<PEER_REGION>"),
-			PeerVpc:          pulumi.String("<PEER_VPC_ID/NAME>"),
-			VpcId:            pulumi.Any(aiven_project_vpc.Myvpc.Id),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-mypeeringconnection = aiven.VpcPeeringConnection("mypeeringconnection",
-    peer_cloud_account="<PEER_ACCOUNT_ID>",
-    peer_region="<PEER_REGION>",
-    peer_vpc="<PEER_VPC_ID/NAME>",
-    vpc_id=aiven_project_vpc["myvpc"]["id"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection", {
-    peerCloudAccount: "<PEER_ACCOUNT_ID>",
-    peerRegion: "<PEER_REGION>",
-    peerVpc: "<PEER_VPC_ID/NAME>",
-    vpcId: aiven_project_vpc_myvpc.id,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a VpcPeeringConnection Resource {#create}

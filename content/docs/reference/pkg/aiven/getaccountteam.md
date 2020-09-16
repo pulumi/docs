@@ -2,7 +2,7 @@
 ---
 title: "GetAccountTeam"
 title_tag: "Function GetAccountTeam | Package Aiven"
-meta_desc: "Explore the GetAccountTeam function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetAccountTeam function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,83 +11,6 @@ meta_desc: "Explore the GetAccountTeam function of the Aiven package, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var accountTeam1 = Output.Create(Aiven.GetAccountTeam.InvokeAsync(new Aiven.GetAccountTeamArgs
-        {
-            AccountId = aiven_account.Team.Account_id,
-            Name = "account_team1",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.LookupAccountTeam(ctx, &aiven.LookupAccountTeamArgs{
-			AccountId: aiven_account.Team.Account_id,
-			Name:      "account_team1",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-account_team1 = aiven.get_account_team(account_id=aiven_account["team"]["account_id"],
-    name="account_team1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const accountTeam1 = aiven_account_team.accountId.apply(accountId => aiven.getAccountTeam({
-    accountId: accountId,
-    name: "account_team1",
-}, { async: true }));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetAccountTeam {#using}

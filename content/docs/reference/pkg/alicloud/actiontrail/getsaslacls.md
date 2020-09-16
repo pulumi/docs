@@ -680,7 +680,7 @@ The following output properties are available:
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsaslaclsacl">List[Get<wbr>Sasl<wbr>Acls<wbr>Acl]</a></span>
+        <span class="property-type"><a href="#getsaslaclsacl">Sequence[Get<wbr>Sasl<wbr>Acls<wbr>Acl]</a></span>
     </dt>
     <dd>{{% md %}}A list of sasl acls. Each element contains the following attributes:
 {{% /md %}}</dd>

@@ -2,7 +2,7 @@
 ---
 title: "GetAccount"
 title_tag: "Function GetAccount | Package Aiven"
-meta_desc: "Explore the GetAccount function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetAccount function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,79 +11,6 @@ meta_desc: "Explore the GetAccount function of the Aiven package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var account1 = Output.Create(Aiven.GetAccount.InvokeAsync(new Aiven.GetAccountArgs
-        {
-            Name = "<ACCOUNT_NAME>",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.LookupAccount(ctx, &aiven.LookupAccountArgs{
-			Name: "<ACCOUNT_NAME>",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-account1 = aiven.get_account(name="<ACCOUNT_NAME>")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const account1 = pulumi.output(aiven.getAccount({
-    name: "<ACCOUNT_NAME>",
-}, { async: true }));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetAccount {#using}

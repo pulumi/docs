@@ -1862,7 +1862,7 @@ Structure is documented below.
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -1881,7 +1881,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
@@ -1894,7 +1894,7 @@ Format: projects/{project_number}
 <a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -2040,7 +2040,7 @@ list of APIs specified in 'allowedServices'.
 <a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
@@ -2290,7 +2290,7 @@ Structure is documented below.
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -2309,7 +2309,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
@@ -2322,7 +2322,7 @@ Format: projects/{project_number}
 <a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -2468,7 +2468,7 @@ list of APIs specified in 'allowedServices'.
 <a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.

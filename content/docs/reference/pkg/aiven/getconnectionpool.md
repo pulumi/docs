@@ -2,7 +2,7 @@
 ---
 title: "GetConnectionPool"
 title_tag: "Function GetConnectionPool | Package Aiven"
-meta_desc: "Explore the GetConnectionPool function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetConnectionPool function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,87 +11,6 @@ meta_desc: "Explore the GetConnectionPool function of the Aiven package, includi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mytestpool = Output.Create(Aiven.GetConnectionPool.InvokeAsync(new Aiven.GetConnectionPoolArgs
-        {
-            Project = data.Aiven_service.Myservice.Project,
-            ServiceName = data.Aiven_service.Myservice.Service_name,
-            PoolName = "<POOLNAME>",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.LookupConnectionPool(ctx, &aiven.LookupConnectionPoolArgs{
-			Project:     data.Aiven_service.Myservice.Project,
-			ServiceName: data.Aiven_service.Myservice.Service_name,
-			PoolName:    "<POOLNAME>",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-mytestpool = aiven.get_connection_pool(project=data["aiven_service"]["myservice"]["project"],
-    service_name=data["aiven_service"]["myservice"]["service_name"],
-    pool_name="<POOLNAME>")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const mytestpool = aiven.getConnectionPool({
-    project: data.aiven_service.myservice.project,
-    serviceName: data.aiven_service.myservice.service_name,
-    poolName: "<POOLNAME>",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetConnectionPool {#using}
@@ -105,7 +24,7 @@ const mytestpool = aiven.getConnectionPool({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connection_pool(</span><span class="nx">connection_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectionPoolResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connection_pool(</span><span class="nx">connection_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectionPoolResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -459,7 +378,7 @@ The following arguments are supported:
 <a href="#pool_size_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -864,7 +783,7 @@ The following output properties are available:
 <a href="#pool_size_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

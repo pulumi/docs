@@ -265,7 +265,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -382,7 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -499,7 +499,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -592,7 +592,7 @@ The following output properties are available:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the record.
 {{% /md %}}</dd>
@@ -603,7 +603,7 @@ The following output properties are available:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long caching DNS servers should cache this record.
 {{% /md %}}</dd>
@@ -616,7 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-"

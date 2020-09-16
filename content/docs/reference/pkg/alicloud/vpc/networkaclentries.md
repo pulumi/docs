@@ -295,7 +295,7 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("defaultNetw
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.NetworkAclEntries">NetworkAclEntries</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egresses</span><span class="p">:</span> <span class="nx">Optional[List[NetworkAclEntriesEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingresses</span><span class="p">:</span> <span class="nx">Optional[List[NetworkAclEntriesIngressArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.NetworkAclEntries">NetworkAclEntries</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclEntriesEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclEntriesIngressArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -604,7 +604,7 @@ The NetworkAclEntries resource accepts the following [input]({{< relref "/docs/i
 <a href="#egresses_python" style="color: inherit; text-decoration: inherit;">egresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">List[Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkaclentriesegress">Sequence[Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
@@ -615,7 +615,7 @@ The NetworkAclEntries resource accepts the following [input]({{< relref "/docs/i
 <a href="#ingresses_python" style="color: inherit; text-decoration: inherit;">ingresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">List[Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkaclentriesingress">Sequence[Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
@@ -719,7 +719,7 @@ Get an existing NetworkAclEntries resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egresses</span><span class="p">:</span> <span class="nx">Optional[List[NetworkAclEntriesEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingresses</span><span class="p">:</span> <span class="nx">Optional[List[NetworkAclEntriesIngressArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkAclEntries</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclEntriesEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclEntriesIngressArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkAclEntries</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -959,7 +959,7 @@ The following state arguments are supported:
 <a href="#state_egresses_python" style="color: inherit; text-decoration: inherit;">egresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">List[Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkaclentriesegress">Sequence[Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
@@ -970,7 +970,7 @@ The following state arguments are supported:
 <a href="#state_ingresses_python" style="color: inherit; text-decoration: inherit;">ingresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">List[Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkaclentriesingress">Sequence[Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>

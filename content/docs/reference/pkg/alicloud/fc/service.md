@@ -22,7 +22,7 @@ meta_desc: "Explore the Service resource of the fc module, including examples, i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/fc/#pulumi_alicloud.fc.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[ServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ServiceVpcConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/fc/#pulumi_alicloud.fc.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[ServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nas_config</span><span class="p">:</span> <span class="nx">Optional[ServiceNasConfigArgs]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ServiceVpcConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -251,6 +251,17 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="nasconfig_csharp">
+<a href="#nasconfig_csharp" style="color: inherit; text-decoration: inherit;">Nas<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Service<wbr>Nas<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Provide [NAS configuration](https://www.alibabacloud.com/help/doc-detail/87401.htm) to allow FC service to access your NAS resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span> 
@@ -331,6 +342,17 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nasconfig_go">
+<a href="#nasconfig_go" style="color: inherit; text-decoration: inherit;">Nas<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfig">Service<wbr>Nas<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Provide [NAS configuration](https://www.alibabacloud.com/help/doc-detail/87401.htm) to allow FC service to access your NAS resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -419,6 +441,17 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="nasconfig_nodejs">
+<a href="#nasconfig_nodejs" style="color: inherit; text-decoration: inherit;">nas<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfig">Service<wbr>Nas<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Provide [NAS configuration](https://www.alibabacloud.com/help/doc-detail/87401.htm) to allow FC service to access your NAS resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
@@ -499,6 +532,17 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nas_config_python">
+<a href="#nas_config_python" style="color: inherit; text-decoration: inherit;">nas_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfig">Service<wbr>Nas<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Provide [NAS configuration](https://www.alibabacloud.com/help/doc-detail/87401.htm) to allow FC service to access your NAS resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -710,7 +754,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[ServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ServiceVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[ServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nas_config</span><span class="p">:</span> <span class="nx">Optional[ServiceNasConfigArgs]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ServiceVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -892,6 +936,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_nasconfig_csharp">
+<a href="#state_nasconfig_csharp" style="color: inherit; text-decoration: inherit;">Nas<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Service<wbr>Nas<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Provide [NAS configuration](https://www.alibabacloud.com/help/doc-detail/87401.htm) to allow FC service to access your NAS resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span> 
@@ -994,6 +1049,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nasconfig_go">
+<a href="#state_nasconfig_go" style="color: inherit; text-decoration: inherit;">Nas<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfig">Service<wbr>Nas<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Provide [NAS configuration](https://www.alibabacloud.com/help/doc-detail/87401.htm) to allow FC service to access your NAS resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1104,6 +1170,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_nasconfig_nodejs">
+<a href="#state_nasconfig_nodejs" style="color: inherit; text-decoration: inherit;">nas<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfig">Service<wbr>Nas<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Provide [NAS configuration](https://www.alibabacloud.com/help/doc-detail/87401.htm) to allow FC service to access your NAS resources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span> 
@@ -1206,6 +1283,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nas_config_python">
+<a href="#state_nas_config_python" style="color: inherit; text-decoration: inherit;">nas_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfig">Service<wbr>Nas<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Provide [NAS configuration](https://www.alibabacloud.com/help/doc-detail/87401.htm) to allow FC service to access your NAS resources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1390,6 +1478,318 @@ The following state arguments are supported:
 
 
 
+<h4 id="servicenasconfig">Service<wbr>Nas<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ServiceNasConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ServiceNasConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#ServiceNasConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#ServiceNasConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.FC.Inputs.ServiceNasConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.FC.Outputs.ServiceNasConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The group id of your NAS file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountpoints_csharp">
+<a href="#mountpoints_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Points</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfigmountpoint">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Config the NAS mount points, including following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userid_csharp">
+<a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The user id of your NAS file system.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The group id of your NAS file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountpoints_go">
+<a href="#mountpoints_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Points</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfigmountpoint">[]Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point</a></span>
+    </dt>
+    <dd>{{% md %}}Config the NAS mount points, including following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userid_go">
+<a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The user id of your NAS file system.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The group id of your NAS file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountpoints_nodejs">
+<a href="#mountpoints_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Points</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfigmountpoint">Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point[]</a></span>
+    </dt>
+    <dd>{{% md %}}Config the NAS mount points, including following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="userid_nodejs">
+<a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The user id of your NAS file system.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The group id of your NAS file system.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mount_points_python">
+<a href="#mount_points_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>points</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicenasconfigmountpoint">Sequence[Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Config the NAS mount points, including following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The user id of your NAS file system.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="servicenasconfigmountpoint">Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ServiceNasConfigMountPoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ServiceNasConfigMountPoint">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#ServiceNasConfigMountPointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#ServiceNasConfigMountPointOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.FC.Inputs.ServiceNasConfigMountPointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.FC.Outputs.ServiceNasConfigMountPoint.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountdir_csharp">
+<a href="#mountdir_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The local address where to mount your remote NAS directory.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serveraddr_csharp">
+<a href="#serveraddr_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the remote NAS directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountdir_go">
+<a href="#mountdir_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The local address where to mount your remote NAS directory.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serveraddr_go">
+<a href="#serveraddr_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the remote NAS directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mountdir_nodejs">
+<a href="#mountdir_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The local address where to mount your remote NAS directory.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serveraddr_nodejs">
+<a href="#serveraddr_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the remote NAS directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mount_dir_python">
+<a href="#mount_dir_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The local address where to mount your remote NAS directory.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="server_addr_python">
+<a href="#server_addr_python" style="color: inherit; text-decoration: inherit;">server_<wbr>addr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The address of the remote NAS directory.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="servicevpcconfig">Service<wbr>Vpc<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ServiceVpcConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ServiceVpcConfig">output</a> API doc for this type.
@@ -1542,7 +1942,7 @@ The following state arguments are supported:
 <a href="#vswitch_ids_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of vswitch IDs associated with the FC service.
 {{% /md %}}</dd>

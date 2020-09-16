@@ -595,7 +595,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of topic names.
 {{% /md %}}</dd>
@@ -606,7 +606,7 @@ The following output properties are available:
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettopicstopic">List[Get<wbr>Topics<wbr>Topic]</a></span>
+        <span class="property-type"><a href="#gettopicstopic">Sequence[Get<wbr>Topics<wbr>Topic]</a></span>
     </dt>
     <dd>{{% md %}}A list of topics. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -975,7 +975,7 @@ The following output properties are available:
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The type of the message. Read [Fields in PublishInfoDo](https://www.alibabacloud.com/help/doc-detail/29590.html) for further details.
 {{% /md %}}</dd>
@@ -997,7 +997,7 @@ The following output properties are available:
 <a href="#relation_python" style="color: inherit; text-decoration: inherit;">relation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relation ID. Read [Fields in PublishInfoDo](https://www.alibabacloud.com/help/doc-detail/29590.html) for further details.
 {{% /md %}}</dd>

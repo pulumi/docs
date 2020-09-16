@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/alicloud package."
-git_sha: "c2484ffe8d16b32fc9b862da2b63e69be7ee81af"
+git_sha: "e05848fea3b8bad6ca0b4f5e8c073608d920ce30"
 block_external_search_index: true
 ---
 
@@ -43,7 +43,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="accessKey" data-link-title="accessKey">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L15">
         let <strong>accessKey</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ The access key for API operations. You can retrieve this from the 'Security Mana
 console.
 
 <h3 class="pdoc-module-header" id="accountId" data-link-title="accountId">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L20">
         let <strong>accountId</strong>
     </a>
 </h3>
@@ -65,14 +65,14 @@ The account ID for some service API operations. You can retrieve this from the '
 Alibaba Cloud console.
 
 <h3 class="pdoc-module-header" id="assumeRole" data-link-title="assumeRole">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L21">
         let <strong>assumeRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> assumeRole: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#AssumeRole'>AssumeRole</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.AssumeRole&gt;(&#34;assumeRole&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="configurationSource" data-link-title="configurationSource">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L25">
         let <strong>configurationSource</strong>
     </a>
 </h3>
@@ -82,7 +82,7 @@ Alibaba Cloud console.
 Use this to mark a terraform configuration file source.
 
 <h3 class="pdoc-module-header" id="ecsRoleName" data-link-title="ecsRoleName">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L30">
         let <strong>ecsRoleName</strong>
     </a>
 </h3>
@@ -93,42 +93,42 @@ The RAM Role Name attached on a ECS instance for API operations. You can retriev
 of the Alibaba Cloud console.
 
 <h3 class="pdoc-module-header" id="endpoints" data-link-title="endpoints">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L31">
         let <strong>endpoints</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#Endpoints'>Endpoints</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.Endpoints[]&gt;(&#34;endpoints&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="fc" data-link-title="fc">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L32">
         let <strong>fc</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> fc: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;fc&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="logEndpoint" data-link-title="logEndpoint">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L33">
         let <strong>logEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> logEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;logEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="mnsEndpoint" data-link-title="mnsEndpoint">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L34">
         let <strong>mnsEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> mnsEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;mnsEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="otsInstanceName" data-link-title="otsInstanceName">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L35">
         let <strong>otsInstanceName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> otsInstanceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;otsInstanceName&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="profile" data-link-title="profile">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L39">
         let <strong>profile</strong>
     </a>
 </h3>
@@ -138,14 +138,14 @@ of the Alibaba Cloud console.
 The profile for API operations. If not set, the default profile created with `aliyun configure` will be used.
 
 <h3 class="pdoc-module-header" id="protocol" data-link-title="protocol">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L40">
         let <strong>protocol</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;protocol&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="region" data-link-title="region">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L44">
         let <strong>region</strong>
     </a>
 </h3>
@@ -155,7 +155,7 @@ The profile for API operations. If not set, the default profile created with `al
 The region where Alibaba Cloud operations will take place. Examples are cn-beijing, cn-hangzhou, eu-central-1, etc.
 
 <h3 class="pdoc-module-header" id="secretKey" data-link-title="secretKey">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L49">
         let <strong>secretKey</strong>
     </a>
 </h3>
@@ -166,7 +166,7 @@ The secret key for API operations. You can retrieve this from the 'Security Mana
 console.
 
 <h3 class="pdoc-module-header" id="securityToken" data-link-title="securityToken">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L53">
         let <strong>securityToken</strong>
     </a>
 </h3>
@@ -176,7 +176,7 @@ console.
 security token. A security token is only required if you are using Security Token Service.
 
 <h3 class="pdoc-module-header" id="sharedCredentialsFile" data-link-title="sharedCredentialsFile">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L57">
         let <strong>sharedCredentialsFile</strong>
     </a>
 </h3>
@@ -186,7 +186,7 @@ security token. A security token is only required if you are using Security Toke
 The path to the shared credentials file. If not set this defaults to ~/.aliyun/config.json
 
 <h3 class="pdoc-module-header" id="skipRegionValidation" data-link-title="skipRegionValidation">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/c2484ffe8d16b32fc9b862da2b63e69be7ee81af/sdk/nodejs/config/vars.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/config/vars.ts#L62">
         let <strong>skipRegionValidation</strong>
     </a>
 </h3>

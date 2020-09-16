@@ -653,7 +653,7 @@ The following output properties are available:
 <a href="#registries_python" style="color: inherit; text-decoration: inherit;">registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregistryregistry">List[Get<wbr>Registry<wbr>Registry]</a></span>
+        <span class="property-type"><a href="#getregistryregistry">Sequence[Get<wbr>Registry<wbr>Registry]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Registries data for registry (list)
 {{% /md %}}</dd>
@@ -858,6 +858,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupsgroup">List[Get<wbr>Groups<wbr>Group]</a></span>
+        <span class="property-type"><a href="#getgroupsgroup">Sequence[Get<wbr>Groups<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}The list of groups under the provided customer or namespace. Structure is documented below.
 {{% /md %}}</dd>
@@ -617,7 +617,7 @@ The following output properties are available:
 <a href="#group_keys_python" style="color: inherit; text-decoration: inherit;">group_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupsgroupgroupkey">List[Get<wbr>Groups<wbr>Group<wbr>Group<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getgroupsgroupgroupkey">Sequence[Get<wbr>Groups<wbr>Group<wbr>Group<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

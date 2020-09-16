@@ -1453,7 +1453,7 @@ Structure is documented below.
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Local BGP Autonomous System Number (ASN). Must be an RFC6996
 private ASN, either 16-bit or 32-bit. The value will be fixed for
@@ -1480,7 +1480,7 @@ Possible values are `DEFAULT` and `CUSTOM`.
 <a href="#advertised_groups_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode.
 This field can only be populated if advertiseMode is CUSTOM and
@@ -1496,7 +1496,7 @@ This enum field has the one valid value: ALL_SUBNETS
 <a href="#advertised_ip_ranges_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgpadvertisediprange">List[Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routerbgpadvertisediprange">Sequence[Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if advertiseMode

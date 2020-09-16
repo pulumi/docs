@@ -23,7 +23,7 @@ Allows management of audit logging config for a given service for a Google Cloud
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/organizations/#pulumi_gcp.organizations.IamAuditConfig">IamAuditConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">audit_log_configs</span><span class="p">:</span> <span class="nx">Optional[List[IamAuditConfigAuditLogConfigArgs]]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/organizations/#pulumi_gcp.organizations.IamAuditConfig">IamAuditConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">audit_log_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[IamAuditConfigAuditLogConfigArgs]]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -321,7 +321,7 @@ The IamAuditConfig resource accepts the following [input]({{< relref "/docs/intr
 <a href="#audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iamauditconfigauditlogconfig">List[Iam<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iamauditconfigauditlogconfig">Sequence[Iam<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd>
@@ -491,7 +491,7 @@ Get an existing IamAuditConfig resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">audit_log_configs</span><span class="p">:</span> <span class="nx">Optional[List[IamAuditConfigAuditLogConfigArgs]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IamAuditConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">audit_log_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[IamAuditConfigAuditLogConfigArgs]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">org_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IamAuditConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -764,7 +764,7 @@ The following state arguments are supported:
 <a href="#state_audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iamauditconfigauditlogconfig">List[Iam<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iamauditconfigauditlogconfig">Sequence[Iam<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd>
@@ -954,7 +954,7 @@ Each entry can have one of the following values:
 <a href="#exempted_members_python" style="color: inherit; text-decoration: inherit;">exempted_<wbr>members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Identities that do not cause logging for this type of permission.
 Each entry can have one of the following values:

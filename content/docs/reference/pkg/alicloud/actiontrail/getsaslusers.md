@@ -548,7 +548,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of sasl usernames.
 {{% /md %}}</dd>
@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsaslusersuser">List[Get<wbr>Sasl<wbr>Users<wbr>User]</a></span>
+        <span class="property-type"><a href="#getsaslusersuser">Sequence[Get<wbr>Sasl<wbr>Users<wbr>User]</a></span>
     </dt>
     <dd>{{% md %}}A list of sasl users. Each element contains the following attributes:
 {{% /md %}}</dd>

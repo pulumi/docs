@@ -29,7 +29,7 @@ To get more information about Trigger, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudbuild/#pulumi_gcp.cloudbuild.Trigger">Trigger</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[TriggerBuildArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[TriggerGithubArgs]</span> = None<span class="p">, </span><span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudbuild/#pulumi_gcp.cloudbuild.Trigger">Trigger</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[TriggerBuildArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[TriggerGithubArgs]</span> = None<span class="p">, </span><span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -757,7 +757,7 @@ Structure is documented below.
 <a href="#ignored_files_python" style="color: inherit; text-decoration: inherit;">ignored_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -774,7 +774,7 @@ of the ignoredFiles globs, then we do not trigger a build.
 <a href="#included_files_python" style="color: inherit; text-decoration: inherit;">included_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -829,7 +829,7 @@ If it is not provided, the provider project is used.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
@@ -1037,7 +1037,7 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[TriggerBuildArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[TriggerGithubArgs]</span> = None<span class="p">, </span><span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[TriggerBuildArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[TriggerGithubArgs]</span> = None<span class="p">, </span><span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1784,7 +1784,7 @@ Structure is documented below.
 <a href="#state_ignored_files_python" style="color: inherit; text-decoration: inherit;">ignored_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -1801,7 +1801,7 @@ of the ignoredFiles globs, then we do not trigger a build.
 <a href="#state_included_files_python" style="color: inherit; text-decoration: inherit;">included_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -1856,7 +1856,7 @@ If it is not provided, the provider project is used.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
@@ -2287,7 +2287,7 @@ completes or the build itself times out.
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstep">List[Trigger<wbr>Build<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildstep">Sequence[Trigger<wbr>Build<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The operations to be performed on the workspace.
 Structure is documented below.
@@ -2299,7 +2299,7 @@ Structure is documented below.
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
 The images are pushed using the builder service account's credentials.
@@ -2339,7 +2339,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsecret">List[Trigger<wbr>Build<wbr>Secret<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildsecret">Sequence[Trigger<wbr>Build<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
 Structure is documented below.
@@ -2375,7 +2375,7 @@ Structure is documented below.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
@@ -3857,7 +3857,7 @@ Docker volumes. Each named volume must be used by at least two build steps.
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of arguments that will be presented to the step when it is started.
 If the image used to run the step's container has an entrypoint, the args
@@ -3904,7 +3904,7 @@ If unset, the image's default entrypoint is used
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of environment variable definitions to be used when
 running a step.
@@ -3930,7 +3930,7 @@ reference this build step as a dependency.
 <a href="#secret_envs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of environment variables which are encrypted using
 a Cloud Key
@@ -3970,7 +3970,7 @@ build step.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstepvolume">List[Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildstepvolume">Sequence[Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes to mount into the build step.
 Each volume is created as an empty volume prior to execution of the
@@ -3987,7 +3987,7 @@ Structure is documented below.
 <a href="#wait_fors_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>fors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on.
 This build step will not start until all the build steps in `wait_for`

@@ -36,7 +36,7 @@ To get more information about Slo, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#pulumi_gcp.monitoring.Slo">Slo</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[SloBasicSliArgs]</span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloRequestBasedSliArgs]</span> = None<span class="p">, </span><span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloWindowsBasedSliArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#pulumi_gcp.monitoring.Slo">Slo</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[SloBasicSliArgs]</span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloRequestBasedSliArgs]</span> = None<span class="p">, </span><span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloWindowsBasedSliArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -737,7 +737,7 @@ Structure is documented below.
 <a href="#rolling_period_days_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>period_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
@@ -920,7 +920,7 @@ Get an existing Slo resource's state with the given name, ID, and optional extra
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[SloBasicSliArgs]</span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloRequestBasedSliArgs]</span> = None<span class="p">, </span><span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloWindowsBasedSliArgs]</span> = None<span class="p">) -&gt;</span> Slo</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[SloBasicSliArgs]</span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloRequestBasedSliArgs]</span> = None<span class="p">, </span><span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloWindowsBasedSliArgs]</span> = None<span class="p">) -&gt;</span> Slo</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1600,7 +1600,7 @@ Structure is documented below.
 <a href="#state_rolling_period_days_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>period_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
@@ -1899,7 +1899,7 @@ Structure is documented below.
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
 Telemetry from other locations will not be used to calculate
@@ -1915,7 +1915,7 @@ field will result in an error.
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
 Telemetry from other methods will not be used to calculate
@@ -1931,7 +1931,7 @@ error.
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of API versions to which this SLI is relevant.
 Telemetry from other API versions will not be used to
@@ -2513,7 +2513,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -2526,7 +2526,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -3579,7 +3579,7 @@ Structure is documented below.
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
 Telemetry from other locations will not be used to calculate
@@ -3595,7 +3595,7 @@ field will result in an error.
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
 Telemetry from other methods will not be used to calculate
@@ -3611,7 +3611,7 @@ error.
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of API versions to which this SLI is relevant.
 Telemetry from other API versions will not be used to
@@ -4193,7 +4193,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4206,7 +4206,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4771,7 +4771,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4784,7 +4784,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -5103,7 +5103,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -5116,7 +5116,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range

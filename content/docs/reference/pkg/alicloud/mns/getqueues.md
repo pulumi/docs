@@ -453,7 +453,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of queue names.
 {{% /md %}}</dd>
@@ -464,7 +464,7 @@ The following output properties are available:
 <a href="#queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getqueuesqueue">List[Get<wbr>Queues<wbr>Queue]</a></span>
+        <span class="property-type"><a href="#getqueuesqueue">Sequence[Get<wbr>Queues<wbr>Queue]</a></span>
     </dt>
     <dd>{{% md %}}A list of queues. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -778,7 +778,7 @@ The following output properties are available:
 <a href="#delay_seconds_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}This attribute defines the length of time, in seconds, after which every message sent to the queue is dequeued.
 {{% /md %}}</dd>
@@ -800,7 +800,7 @@ The following output properties are available:
 <a href="#maximum_message_size_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>message_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}This indicates the maximum length, in bytes, of any message body sent to the queue.
 {{% /md %}}</dd>
@@ -811,7 +811,7 @@ The following output properties are available:
 <a href="#message_retention_period_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Messages are deleted from the queue after a specified length of time, whether they have been activated or not. This attribute defines the viability period, in seconds, for every message in the queue.
 {{% /md %}}</dd>
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#polling_wait_seconds_python" style="color: inherit; text-decoration: inherit;">polling_<wbr>wait_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Long polling is measured in seconds. When this attribute is set to 0, long polling is disabled. When it is not set to 0, long polling is enabled and message dequeue requests will be processed only when valid messages are received or when long polling times out.
 {{% /md %}}</dd>
@@ -844,7 +844,7 @@ The following output properties are available:
 <a href="#visibility_timeouts_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>timeouts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Dequeued messages change from active (visible) status to inactive (invisible) status. This attribute defines the length of time, in seconds, that messages remain invisible. Messages return to active status after the set period.
 {{% /md %}}</dd>

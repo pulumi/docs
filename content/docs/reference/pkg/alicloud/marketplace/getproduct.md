@@ -447,7 +447,7 @@ The following output properties are available:
 <a href="#products_python" style="color: inherit; text-decoration: inherit;">products</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproduct">List[Get<wbr>Product<wbr>Product]</a></span>
+        <span class="property-type"><a href="#getproductproduct">Sequence[Get<wbr>Product<wbr>Product]</a></span>
     </dt>
     <dd>{{% md %}}A product. It contains the following attributes:
 {{% /md %}}</dd>
@@ -685,7 +685,7 @@ The following output properties are available:
 <a href="#skuses_python" style="color: inherit; text-decoration: inherit;">skuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskus">List[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getproductproductskus">Sequence[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing sku attributes of an object. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -874,7 +874,7 @@ The following output properties are available:
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskusimage">List[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getproductproductskusimage">Sequence[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom ECS images, Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -885,7 +885,7 @@ The following output properties are available:
 <a href="#package_versions_python" style="color: inherit; text-decoration: inherit;">package_<wbr>versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskuspackageversion">List[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getproductproductskuspackageversion">Sequence[Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of package version details of this product sku, Each element contains the following attributes:
 {{% /md %}}</dd>

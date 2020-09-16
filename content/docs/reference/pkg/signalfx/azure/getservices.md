@@ -29,7 +29,8 @@ class MyStack : Stack
     {
         var azureServices = Output.Create(SignalFx.Azure.GetServices.InvokeAsync());
         // Leaves out most of the integration bits, see the docs
-        // for signalfx.azure.Integration for more
+        // for signalfx_azure_integration for more
+        // …
         var azureMyteam = new SignalFx.Azure.Integration("azureMyteam", new SignalFx.Azure.IntegrationArgs
         {
             Services = 
@@ -60,7 +61,8 @@ import * as signalfx from "@pulumi/signalfx";
 
 const azureServices = signalfx.azure.getServices({});
 // Leaves out most of the integration bits, see the docs
-// for signalfx.azure.Integration for more
+// for signalfx_azure_integration for more
+// …
 const azureMyteam = new signalfx.azure.Integration("azureMyteam", {services: [azureServices.then(azureServices => azureServices.services)].map(__item => __item?.name)});
 ```
 
@@ -80,12 +82,12 @@ const azureMyteam = new signalfx.azure.Integration("azureMyteam", {services: [az
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_services(</span>services=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_services(</span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetServicesServiceArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServicesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServices<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#GetServicesArgs">GetServicesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#GetServicesResult">GetServicesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServices<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#GetServicesArgs">GetServicesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#GetServicesResult">GetServicesResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -162,7 +164,7 @@ The following arguments are supported:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservice">List[Get<wbr>Services<wbr>Service]</a></span>
+        <span class="property-type"><a href="#getservicesservice">Sequence[Get<wbr>Services<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -287,7 +289,7 @@ The following output properties are available:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservice">List[Get<wbr>Services<wbr>Service]</a></span>
+        <span class="property-type"><a href="#getservicesservice">Sequence[Get<wbr>Services<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -310,7 +312,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#GetServicesServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#GetServicesService">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#GetServicesServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#GetServicesService">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Azure.Inputs.GetServicesServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Azure.Outputs.GetServicesService.html">output</a> API doc for this type.
@@ -401,6 +403,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
+	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 </dl>
 

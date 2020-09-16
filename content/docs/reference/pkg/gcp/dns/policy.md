@@ -30,7 +30,7 @@ To get more information about Policy, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dns/#pulumi_gcp.dns.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternative_name_server_config</span><span class="p">:</span> <span class="nx">Optional[PolicyAlternativeNameServerConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_inbound_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[PolicyNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dns/#pulumi_gcp.dns.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternative_name_server_config</span><span class="p">:</span> <span class="nx">Optional[PolicyAlternativeNameServerConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_inbound_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -549,7 +549,7 @@ Defaults to no logging if not set.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policynetwork">List[Policy<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policynetwork">Sequence[Policy<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
@@ -666,7 +666,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternative_name_server_config</span><span class="p">:</span> <span class="nx">Optional[PolicyAlternativeNameServerConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_inbound_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[PolicyNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternative_name_server_config</span><span class="p">:</span> <span class="nx">Optional[PolicyAlternativeNameServerConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_inbound_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1127,7 +1127,7 @@ Defaults to no logging if not set.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policynetwork">List[Policy<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policynetwork">Sequence[Policy<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
@@ -1247,7 +1247,7 @@ Structure is documented below.
 <a href="#target_name_servers_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name_<wbr>servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">List[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">Sequence[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
 all DNS queries are forwarded to a name server that you choose. Names such as .internal

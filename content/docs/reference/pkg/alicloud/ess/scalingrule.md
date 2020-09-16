@@ -22,7 +22,7 @@ meta_desc: "Explore the ScalingRule resource of the ess module, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScalingRule">ScalingRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">adjustment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">adjustment_value</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cooldown</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disable_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">estimated_instance_warmup</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_rule_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_adjustments</span><span class="p">:</span> <span class="nx">Optional[List[ScalingRuleStepAdjustmentArgs]]</span> = None<span class="p">, </span><span class="nx">target_value</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScalingRule">ScalingRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">adjustment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">adjustment_value</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cooldown</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disable_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">estimated_instance_warmup</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_rule_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_adjustments</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingRuleStepAdjustmentArgs]]</span> = None<span class="p">, </span><span class="nx">target_value</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -227,7 +227,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Adjusted value of a scaling rule. Value range:
+    <dd>{{% md %}}The number of ECS instances to be adjusted in the scaling rule. This parameter is required and applicable only to simple scaling rules. The number of ECS instances to be adjusted in a single scaling activity cannot exceed 500. Value range:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
@@ -241,7 +241,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Cool-down time of a scaling rule. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
+    <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,7 +361,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Adjusted value of a scaling rule. Value range:
+    <dd>{{% md %}}The number of ECS instances to be adjusted in the scaling rule. This parameter is required and applicable only to simple scaling rules. The number of ECS instances to be adjusted in a single scaling activity cannot exceed 500. Value range:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
@@ -375,7 +375,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Cool-down time of a scaling rule. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
+    <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -495,7 +495,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Adjusted value of a scaling rule. Value range:
+    <dd>{{% md %}}The number of ECS instances to be adjusted in the scaling rule. This parameter is required and applicable only to simple scaling rules. The number of ECS instances to be adjusted in a single scaling activity cannot exceed 500. Value range:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
@@ -509,7 +509,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Cool-down time of a scaling rule. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
+    <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -627,9 +627,9 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#adjustment_value_python" style="color: inherit; text-decoration: inherit;">adjustment_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Adjusted value of a scaling rule. Value range:
+    <dd>{{% md %}}The number of ECS instances to be adjusted in the scaling rule. This parameter is required and applicable only to simple scaling rules. The number of ECS instances to be adjusted in a single scaling activity cannot exceed 500. Value range:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
@@ -641,9 +641,9 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Cool-down time of a scaling rule. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
+    <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -663,7 +663,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#estimated_instance_warmup_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>instance_<wbr>warmup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
 {{% /md %}}</dd>
@@ -707,7 +707,7 @@ The ScalingRule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingrulestepadjustment">List[Scaling<wbr>Rule<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalingrulestepadjustment">Sequence[Scaling<wbr>Rule<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Steps for StepScalingRule. See Block stepAdjustment below for details.
 {{% /md %}}</dd>
@@ -862,7 +862,7 @@ Get an existing ScalingRule resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">adjustment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">adjustment_value</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ari</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cooldown</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disable_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">estimated_instance_warmup</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_rule_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_adjustments</span><span class="p">:</span> <span class="nx">Optional[List[ScalingRuleStepAdjustmentArgs]]</span> = None<span class="p">, </span><span class="nx">target_value</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> ScalingRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">adjustment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">adjustment_value</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ari</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cooldown</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disable_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">estimated_instance_warmup</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_rule_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_adjustments</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingRuleStepAdjustmentArgs]]</span> = None<span class="p">, </span><span class="nx">target_value</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> ScalingRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -998,7 +998,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Adjusted value of a scaling rule. Value range:
+    <dd>{{% md %}}The number of ECS instances to be adjusted in the scaling rule. This parameter is required and applicable only to simple scaling rules. The number of ECS instances to be adjusted in a single scaling activity cannot exceed 500. Value range:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
@@ -1022,7 +1022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Cool-down time of a scaling rule. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
+    <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1142,7 +1142,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Adjusted value of a scaling rule. Value range:
+    <dd>{{% md %}}The number of ECS instances to be adjusted in the scaling rule. This parameter is required and applicable only to simple scaling rules. The number of ECS instances to be adjusted in a single scaling activity cannot exceed 500. Value range:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
@@ -1166,7 +1166,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Cool-down time of a scaling rule. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
+    <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1286,7 +1286,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Adjusted value of a scaling rule. Value range:
+    <dd>{{% md %}}The number of ECS instances to be adjusted in the scaling rule. This parameter is required and applicable only to simple scaling rules. The number of ECS instances to be adjusted in a single scaling activity cannot exceed 500. Value range:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
@@ -1310,7 +1310,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Cool-down time of a scaling rule. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
+    <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1428,9 +1428,9 @@ The following state arguments are supported:
 <a href="#state_adjustment_value_python" style="color: inherit; text-decoration: inherit;">adjustment_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Adjusted value of a scaling rule. Value range:
+    <dd>{{% md %}}The number of ECS instances to be adjusted in the scaling rule. This parameter is required and applicable only to simple scaling rules. The number of ECS instances to be adjusted in a single scaling activity cannot exceed 500. Value range:
 - QuantityChangeInCapacity：(0, 500] U (-500, 0]
 - PercentChangeInCapacity：[0, 10000] U [-100, 0]
 - TotalCapacity：[0, 1000]
@@ -1452,9 +1452,9 @@ The following state arguments are supported:
 <a href="#state_cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Cool-down time of a scaling rule. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
+    <dd>{{% md %}}The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1474,7 +1474,7 @@ The following state arguments are supported:
 <a href="#state_estimated_instance_warmup_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>instance_<wbr>warmup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
 {{% /md %}}</dd>
@@ -1529,7 +1529,7 @@ The following state arguments are supported:
 <a href="#state_step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingrulestepadjustment">List[Scaling<wbr>Rule<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalingrulestepadjustment">Sequence[Scaling<wbr>Rule<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Steps for StepScalingRule. See Block stepAdjustment below for details.
 {{% /md %}}</dd>
@@ -1715,7 +1715,7 @@ The following state arguments are supported:
 <a href="#scaling_adjustment_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>adjustment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

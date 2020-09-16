@@ -29,7 +29,7 @@ To get more information about Dataset, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.Dataset">Dataset</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accesses</span><span class="p">:</span> <span class="nx">Optional[List[DatasetAccessArgs]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[DatasetDefaultEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">default_partition_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">default_table_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">delete_contents_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.Dataset">Dataset</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accesses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatasetAccessArgs]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[DatasetDefaultEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">default_partition_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_table_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">delete_contents_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -635,7 +635,7 @@ If it is not provided, the provider project is used.
 <a href="#accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccess">List[Dataset<wbr>Access<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasetaccess">Sequence[Dataset<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
@@ -661,7 +661,7 @@ Structure is documented below.
 <a href="#default_partition_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>partition_<wbr>expiration_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
@@ -673,7 +673,7 @@ the dataset, in milliseconds.
 <a href="#default_table_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>table_<wbr>expiration_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
@@ -957,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
 {{% /md %}}</dd>
@@ -1025,7 +1025,7 @@ Get an existing Dataset resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accesses</span><span class="p">:</span> <span class="nx">Optional[List[DatasetAccessArgs]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[DatasetDefaultEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">default_partition_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">default_table_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">delete_contents_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Dataset</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accesses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatasetAccessArgs]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[DatasetDefaultEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">default_partition_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_table_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">delete_contents_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Dataset</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1694,7 +1694,7 @@ If it is not provided, the provider project is used.
 <a href="#state_accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccess">List[Dataset<wbr>Access<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasetaccess">Sequence[Dataset<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
@@ -1706,7 +1706,7 @@ Structure is documented below.
 <a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.
 {{% /md %}}</dd>
@@ -1742,7 +1742,7 @@ Structure is documented below.
 <a href="#state_default_partition_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>partition_<wbr>expiration_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
@@ -1754,7 +1754,7 @@ the dataset, in milliseconds.
 <a href="#state_default_table_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>table_<wbr>expiration_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
@@ -1824,7 +1824,7 @@ organize and group your datasets
 <a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
 {{% /md %}}</dd>

@@ -27,7 +27,7 @@ Provides a collection of ECI Image Cache to the specified filters.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image_caches(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageCachesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image_caches(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageCachesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -307,7 +307,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list ids of ECI Image Cache.
 {{% /md %}}</dd>
@@ -745,7 +745,7 @@ The following output properties are available:
 <a href="#caches_python" style="color: inherit; text-decoration: inherit;">caches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagecachescach">List[Get<wbr>Image<wbr>Caches<wbr>Cach]</a></span>
+        <span class="property-type"><a href="#getimagecachescach">Sequence[Get<wbr>Image<wbr>Caches<wbr>Cach]</a></span>
     </dt>
     <dd>{{% md %}}A list of caches. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -767,7 +767,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list ids of ECI Image Cache.
 {{% /md %}}</dd>
@@ -778,7 +778,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of ECI Image Cache names.
 {{% /md %}}</dd>
@@ -1245,7 +1245,7 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagecachescachevent">List[Get<wbr>Image<wbr>Caches<wbr>Cach<wbr>Event<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getimagecachescachevent">Sequence[Get<wbr>Image<wbr>Caches<wbr>Cach<wbr>Event<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Image cache pulls image event information.
 {{% /md %}}</dd>
@@ -1300,7 +1300,7 @@ The following output properties are available:
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of cached images.
 {{% /md %}}</dd>
@@ -1585,7 +1585,7 @@ The following output properties are available:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of events.
 {{% /md %}}</dd>

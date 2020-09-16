@@ -212,7 +212,7 @@ const minorVersion = pulumi.output(civo.getKubernetesVersion({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kubernetes_version(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetKubernetesVersionFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetKubernetesVersionSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKubernetesVersionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kubernetes_version(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetKubernetesVersionFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetKubernetesVersionSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKubernetesVersionResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -336,7 +336,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesversionfilter">List[Get<wbr>Kubernetes<wbr>Version<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesversionfilter">Sequence[Get<wbr>Kubernetes<wbr>Version<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -348,7 +348,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesversionsort">List[Get<wbr>Kubernetes<wbr>Version<wbr>Sort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesversionsort">Sequence[Get<wbr>Kubernetes<wbr>Version<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -535,7 +535,7 @@ The following output properties are available:
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesversionversion">List[Get<wbr>Kubernetes<wbr>Version<wbr>Version]</a></span>
+        <span class="property-type"><a href="#getkubernetesversionversion">Sequence[Get<wbr>Kubernetes<wbr>Version<wbr>Version]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -545,7 +545,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesversionfilter">List[Get<wbr>Kubernetes<wbr>Version<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getkubernetesversionfilter">Sequence[Get<wbr>Kubernetes<wbr>Version<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -555,7 +555,7 @@ The following output properties are available:
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesversionsort">List[Get<wbr>Kubernetes<wbr>Version<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#getkubernetesversionsort">Sequence[Get<wbr>Kubernetes<wbr>Version<wbr>Sort]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -701,7 +701,7 @@ one of the values provided here.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Only retrieves the version which keys has value that matches
 one of the values provided here.

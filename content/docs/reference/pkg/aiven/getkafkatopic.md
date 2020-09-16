@@ -2,7 +2,7 @@
 ---
 title: "GetKafkaTopic"
 title_tag: "Function GetKafkaTopic | Package Aiven"
-meta_desc: "Explore the GetKafkaTopic function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetKafkaTopic function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,87 +11,6 @@ meta_desc: "Explore the GetKafkaTopic function of the Aiven package, including e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mytesttopic = Output.Create(Aiven.GetKafkaTopic.InvokeAsync(new Aiven.GetKafkaTopicArgs
-        {
-            Project = data.Aiven_service.Myservice.Project,
-            ServiceName = data.Aiven_service.Myservice.Service_name,
-            TopicName = "<TOPIC_NAME>",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.LookupKafkaTopic(ctx, &aiven.LookupKafkaTopicArgs{
-			Project:     data.Aiven_service.Myservice.Project,
-			ServiceName: data.Aiven_service.Myservice.Service_name,
-			TopicName:   "<TOPIC_NAME>",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-mytesttopic = aiven.get_kafka_topic(project=data["aiven_service"]["myservice"]["project"],
-    service_name=data["aiven_service"]["myservice"]["service_name"],
-    topic_name="<TOPIC_NAME>")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const mytesttopic = aiven.getKafkaTopic({
-    project: data.aiven_service.myservice.project,
-    serviceName: data.aiven_service.myservice.service_name,
-    topicName: "<TOPIC_NAME>",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetKafkaTopic {#using}
@@ -105,7 +24,7 @@ const mytesttopic = aiven.getKafkaTopic({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka_topic(</span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaTopicResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka_topic(</span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaTopicResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -499,7 +418,7 @@ The following arguments are supported:
 <a href="#minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -509,7 +428,7 @@ The following arguments are supported:
 <a href="#partitions_python" style="color: inherit; text-decoration: inherit;">partitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -519,7 +438,7 @@ The following arguments are supported:
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -529,7 +448,7 @@ The following arguments are supported:
 <a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -539,7 +458,7 @@ The following arguments are supported:
 <a href="#retention_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -984,7 +903,7 @@ The following output properties are available:
 <a href="#minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -994,7 +913,7 @@ The following output properties are available:
 <a href="#partitions_python" style="color: inherit; text-decoration: inherit;">partitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1004,7 +923,7 @@ The following output properties are available:
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1014,7 +933,7 @@ The following output properties are available:
 <a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1024,7 +943,7 @@ The following output properties are available:
 <a href="#retention_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

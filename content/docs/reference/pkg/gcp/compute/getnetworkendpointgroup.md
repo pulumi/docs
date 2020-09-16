@@ -657,7 +657,7 @@ The following output properties are available:
 <a href="#default_port_python" style="color: inherit; text-decoration: inherit;">default_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The NEG default port.
 {{% /md %}}</dd>
@@ -712,7 +712,7 @@ The following output properties are available:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of network endpoints in the network endpoint group.
 {{% /md %}}</dd>

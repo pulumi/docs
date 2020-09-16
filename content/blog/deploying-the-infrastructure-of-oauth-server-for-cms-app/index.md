@@ -18,7 +18,7 @@ We used Netlify's Go example to deploy on ECS Fargate and configure the domain a
 
 ## Building the OAuth Server
 
-Netlify's CMS website provides [External OAuth Client examples](https://www.netlifycms.org/docs/external-oauth-clients/#header) for various languages and platforms. We used the [Go example]((https://github.com/igk1972/netlify-cms-oauth-provider-go)) as a template for our server.
+Netlify's CMS website provides [External OAuth Client examples](https://www.netlifycms.org/docs/external-oauth-clients/#header) for various languages and platforms. We used the [Go example](https://github.com/igk1972/netlify-cms-oauth-provider-go) as a template for our server.
 
 In *Netlify's example*, the `./dotenv/dotenv.go` retrieves environment variables from a file. The main.go file uses [goth](https://github.com/markbates/goth) to instantiate the OAuth provider. The `./randstr/randstr.go` file generates a random string for the `SESSION_SECRET` environment variable, which is used for authentication. However,  Pulumi can implement both functions, replacing the code in goth by using Pulumi's random package.
 

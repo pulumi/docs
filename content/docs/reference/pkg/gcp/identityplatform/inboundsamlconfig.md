@@ -1225,7 +1225,7 @@ Structure is documented below.
 <a href="#idp_certificates_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">List[Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inboundsamlconfigidpconfigidpcertificate">Sequence[Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
@@ -1526,7 +1526,7 @@ Structure is documented below.
 <a href="#sp_certificates_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">List[Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inboundsamlconfigspconfigspcertificate">Sequence[Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
 The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.

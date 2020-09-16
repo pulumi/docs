@@ -32,7 +32,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#pulumi_gcp.monitoring.UptimeCheckConfig">UptimeCheckConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[List[UptimeCheckConfigContentMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigHttpCheckArgs]</span> = None<span class="p">, </span><span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigMonitoredResourceArgs]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigResourceGroupArgs]</span> = None<span class="p">, </span><span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigTcpCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#pulumi_gcp.monitoring.UptimeCheckConfig">UptimeCheckConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[UptimeCheckConfigContentMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigHttpCheckArgs]</span> = None<span class="p">, </span><span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigMonitoredResourceArgs]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigResourceGroupArgs]</span> = None<span class="p">, </span><span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigTcpCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -601,7 +601,7 @@ Structure is documented below.
 <a href="#content_matchers_python" style="color: inherit; text-decoration: inherit;">content_<wbr>matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">List[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Sequence[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
@@ -672,7 +672,7 @@ Structure is documented below.
 <a href="#selected_regions_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd>
@@ -880,7 +880,7 @@ Get an existing UptimeCheckConfig resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[List[UptimeCheckConfigContentMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigHttpCheckArgs]</span> = None<span class="p">, </span><span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigMonitoredResourceArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigResourceGroupArgs]</span> = None<span class="p">, </span><span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigTcpCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uptime_check_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UptimeCheckConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[UptimeCheckConfigContentMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigHttpCheckArgs]</span> = None<span class="p">, </span><span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigMonitoredResourceArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigResourceGroupArgs]</span> = None<span class="p">, </span><span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigTcpCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uptime_check_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UptimeCheckConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1438,7 +1438,7 @@ Structure is documented below.
 <a href="#state_content_matchers_python" style="color: inherit; text-decoration: inherit;">content_<wbr>matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">List[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Sequence[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
@@ -1532,7 +1532,7 @@ Structure is documented below.
 <a href="#state_selected_regions_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd>
@@ -2183,7 +2183,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd>
@@ -2718,7 +2718,7 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd>

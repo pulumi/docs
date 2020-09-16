@@ -14,6 +14,97 @@ This data source provides a list of Route Tables owned by an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.36.0+.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var name = config.Get("name") ?? "route-tables-datasource-example-name";
+        var fooNetwork = new AliCloud.Vpc.Network("fooNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/12",
+        });
+        var fooRouteTable = new AliCloud.Vpc.RouteTable("fooRouteTable", new AliCloud.Vpc.RouteTableArgs
+        {
+            Description = name,
+            VpcId = fooNetwork.Id,
+        });
+        var fooRouteTables = fooRouteTable.Id.Apply(id => AliCloud.Vpc.GetRouteTables.InvokeAsync(new AliCloud.Vpc.GetRouteTablesArgs
+        {
+            Ids = 
+            {
+                id,
+            },
+        }));
+        this.RouteTableIds = fooRouteTables.Apply(fooRouteTables => fooRouteTables.Ids);
+    }
+
+    [Output("routeTableIds")]
+    public Output<string> RouteTableIds { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "route-tables-datasource-example-name"
+foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/12")
+foo_route_table = alicloud.vpc.RouteTable("fooRouteTable",
+    description=name,
+    vpc_id=foo_network.id)
+foo_route_tables = foo_route_table.id.apply(lambda id: alicloud.vpc.get_route_tables(ids=[id]))
+pulumi.export("routeTableIds", foo_route_tables.ids)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "route-tables-datasource-example-name";
+
+const fooNetwork = new alicloud.vpc.Network("foo", {
+    cidrBlock: "172.16.0.0/12",
+});
+const fooRouteTable = new alicloud.vpc.RouteTable("foo", {
+    description: name,
+    vpcId: fooNetwork.id,
+});
+const fooRouteTables = fooRouteTable.id.apply(id => alicloud.vpc.getRouteTables({
+    ids: [id],
+}, { async: true }));
+
+export const routeTableIds = fooRouteTables.ids!;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetRouteTables {#using}
@@ -27,7 +118,7 @@ This data source provides a list of Route Tables owned by an Alibaba Cloud accou
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_tables(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteTablesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_tables(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteTablesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -274,7 +365,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Route Tables IDs.
 {{% /md %}}</dd>
@@ -676,7 +767,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A list of Route Tables IDs.
 {{% /md %}}</dd>
@@ -687,7 +778,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Route Tables names.
 {{% /md %}}</dd>
@@ -698,7 +789,7 @@ The following output properties are available:
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablestable">List[Get<wbr>Route<wbr>Tables<wbr>Table]</a></span>
+        <span class="property-type"><a href="#getroutetablestable">Sequence[Get<wbr>Route<wbr>Tables<wbr>Table]</a></span>
     </dt>
     <dd>{{% md %}}A list of Route Tables. Each element contains the following attributes:
 {{% /md %}}</dd>

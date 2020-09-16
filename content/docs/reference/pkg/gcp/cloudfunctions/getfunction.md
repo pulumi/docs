@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#available_memory_mb_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
 {{% /md %}}</dd>
@@ -1022,7 +1022,7 @@ The following output properties are available:
 <a href="#event_triggers_python" style="color: inherit; text-decoration: inherit;">event_<wbr>triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfunctioneventtrigger">List[Get<wbr>Function<wbr>Event<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#getfunctioneventtrigger">Sequence[Get<wbr>Function<wbr>Event<wbr>Trigger]</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below.
 {{% /md %}}</dd>
@@ -1077,7 +1077,7 @@ The following output properties are available:
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
 {{% /md %}}</dd>
@@ -1143,7 +1143,7 @@ The following output properties are available:
 <a href="#source_repositories_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repositories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfunctionsourcerepository">List[Get<wbr>Function<wbr>Source<wbr>Repository]</a></span>
+        <span class="property-type"><a href="#getfunctionsourcerepository">Sequence[Get<wbr>Function<wbr>Source<wbr>Repository]</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
 {{% /md %}}</dd>
@@ -1154,7 +1154,7 @@ The following output properties are available:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Function execution timeout (in seconds).
 {{% /md %}}</dd>
@@ -1388,7 +1388,7 @@ for a full reference of accepted triggers.
 <a href="#failure_policies_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfunctioneventtriggerfailurepolicy">List[Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getfunctioneventtriggerfailurepolicy">Sequence[Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Policy for failed executions. Structure is documented below.
 {{% /md %}}</dd>

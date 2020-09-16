@@ -43,7 +43,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Snapshot">Snapshot</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSnapshotEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSourceDiskEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Snapshot">Snapshot</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSnapshotEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSourceDiskEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">storage_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,6 +306,17 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="storagelocations_csharp">
+<a href="#storagelocations_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span> 
@@ -409,6 +420,17 @@ Structure is documented below.
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storagelocations_go">
+<a href="#storagelocations_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -520,6 +542,17 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="storagelocations_nodejs">
+<a href="#storagelocations_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span> 
@@ -623,6 +656,17 @@ Structure is documented below.
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_locations_python">
+<a href="#storage_locations_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -992,7 +1036,7 @@ creation/deletion.
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the snapshot, specified in GB.
 {{% /md %}}</dd>
@@ -1024,7 +1068,7 @@ creation/deletion.
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of public visible licenses that apply to this snapshot. This can be because the original image had licenses
 attached (such as a Windows image). snapshotEncryptionKey nested object Encrypts the snapshot using a customer-supplied
@@ -1048,7 +1092,7 @@ encryption key.
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1069,7 +1113,7 @@ encryption key.
 <a href="#storage_bytes_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
 creation/deletion.
@@ -1095,7 +1139,7 @@ Get an existing Snapshot resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">licenses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSnapshotEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSourceDiskEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">source_disk_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Snapshot</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSnapshotEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[SnapshotSourceDiskEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">source_disk_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Snapshot</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1390,6 +1434,17 @@ creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_storagelocations_csharp">
+<a href="#state_storagelocations_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span> 
@@ -1583,6 +1638,17 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
 creation/deletion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_storagelocations_go">
+<a href="#state_storagelocations_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1784,6 +1850,17 @@ creation/deletion.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_storagelocations_nodejs">
+<a href="#state_storagelocations_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span> 
@@ -1828,7 +1905,7 @@ creation/deletion.
 <a href="#state_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the snapshot, specified in GB.
 {{% /md %}}</dd>
@@ -1861,7 +1938,7 @@ creation/deletion.
 <a href="#state_licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of public visible licenses that apply to this snapshot. This can be because the original image had licenses
 attached (such as a Windows image). snapshotEncryptionKey nested object Encrypts the snapshot using a customer-supplied
@@ -1927,7 +2004,7 @@ Structure is documented below.
 <a href="#state_snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1973,10 +2050,21 @@ Structure is documented below.
 <a href="#state_storage_bytes_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot
 creation/deletion.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_storage_locations_python">
+<a href="#state_storage_locations_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>locations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2023,8 +2111,31 @@ creation/deletion.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyselflink_csharp">
+<a href="#kmskeyselflink_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyserviceaccount_csharp">
+<a href="#kmskeyserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="rawkey_csharp">
 <a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
 </span> 
@@ -2056,8 +2167,31 @@ encryption key that protects this resource.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyselflink_go">
+<a href="#kmskeyselflink_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyserviceaccount_go">
+<a href="#kmskeyserviceaccount_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="rawkey_go">
 <a href="#rawkey_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
 </span> 
@@ -2089,8 +2223,31 @@ encryption key that protects this resource.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyselflink_nodejs">
+<a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyserviceaccount_nodejs">
+<a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="rawkey_nodejs">
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
 </span> 
@@ -2122,8 +2279,31 @@ encryption key that protects this resource.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_self_link_python">
+<a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_service_account_python">
+<a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="raw_key_python">
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span> 
@@ -2175,6 +2355,18 @@ encryption key that protects this resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="kmskeyserviceaccount_csharp">
+<a href="#kmskeyserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="rawkey_csharp">
 <a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
 </span> 
@@ -2192,6 +2384,18 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyserviceaccount_go">
+<a href="#kmskeyserviceaccount_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2215,6 +2419,18 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="kmskeyserviceaccount_nodejs">
+<a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="rawkey_nodejs">
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
 </span> 
@@ -2232,6 +2448,18 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_service_account_python">
+<a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
+If absent, the Compute Engine Service Agent service account is used.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

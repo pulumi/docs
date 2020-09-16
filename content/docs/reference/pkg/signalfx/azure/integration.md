@@ -17,6 +17,154 @@ SignalFx Azure integrations. For help with this integration see [Monitoring Micr
 
 > **NOTE** You can use the data source "signalfx.azure.getServices" to specify all services.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using SignalFx = Pulumi.SignalFx;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var azureMyteam = new SignalFx.Azure.Integration("azureMyteam", new SignalFx.Azure.IntegrationArgs
+        {
+            AppId = "YYY",
+            CustomNamespacesPerServices = 
+            {
+                new SignalFx.Azure.Inputs.IntegrationCustomNamespacesPerServiceArgs
+                {
+                    Namespaces = 
+                    {
+                        "monitoringAgent",
+                        "customNamespace",
+                    },
+                    Service = "Microsoft.Compute/virtualMachines",
+                },
+            },
+            Enabled = true,
+            Environment = "azure",
+            PollRate = 300,
+            SecretKey = "XXX",
+            Services = 
+            {
+                "microsoft.sql/servers/elasticpools",
+            },
+            Subscriptions = 
+            {
+                "sub-guid-here",
+            },
+            TenantId = "ZZZ",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := azure.NewIntegration(ctx, "azureMyteam", &azure.IntegrationArgs{
+			AppId: pulumi.String("YYY"),
+			CustomNamespacesPerServices: azure.IntegrationCustomNamespacesPerServiceArray{
+				&azure.IntegrationCustomNamespacesPerServiceArgs{
+					Namespaces: pulumi.StringArray{
+						pulumi.String("monitoringAgent"),
+						pulumi.String("customNamespace"),
+					},
+					Service: pulumi.String("Microsoft.Compute/virtualMachines"),
+				},
+			},
+			Enabled:     pulumi.Bool(true),
+			Environment: pulumi.String("azure"),
+			PollRate:    pulumi.Int(300),
+			SecretKey:   pulumi.String("XXX"),
+			Services: pulumi.StringArray{
+				pulumi.String("microsoft.sql/servers/elasticpools"),
+			},
+			Subscriptions: pulumi.StringArray{
+				pulumi.String("sub-guid-here"),
+			},
+			TenantId: pulumi.String("ZZZ"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_signalfx as signalfx
+
+azure_myteam = signalfx.azure.Integration("azureMyteam",
+    app_id="YYY",
+    custom_namespaces_per_services=[signalfx.azure.IntegrationCustomNamespacesPerServiceArgs(
+        namespaces=[
+            "monitoringAgent",
+            "customNamespace",
+        ],
+        service="Microsoft.Compute/virtualMachines",
+    )],
+    enabled=True,
+    environment="azure",
+    poll_rate=300,
+    secret_key="XXX",
+    services=["microsoft.sql/servers/elasticpools"],
+    subscriptions=["sub-guid-here"],
+    tenant_id="ZZZ")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const azureMyteam = new signalfx.azure.Integration("azure_myteam", {
+    appId: "YYY",
+    // Optional
+    customNamespacesPerServices: [{
+        namespaces: [
+            "monitoringAgent",
+            "customNamespace",
+        ],
+        service: "Microsoft.Compute/virtualMachines",
+    }],
+    enabled: true,
+    environment: "azure",
+    pollRate: 300,
+    secretKey: "XXX",
+    services: ["microsoft.sql/servers/elasticpools"],
+    subscriptions: ["sub-guid-here"],
+    tenantId: "ZZZ",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Integration Resource {#create}
@@ -28,11 +176,11 @@ SignalFx Azure integrations. For help with this integration see [Monitoring Micr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/azure/#pulumi_signalfx.azure.Integration">Integration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_id=None<span class="p">, </span>enabled=None<span class="p">, </span>environment=None<span class="p">, </span>name=None<span class="p">, </span>named_token=None<span class="p">, </span>poll_rate=None<span class="p">, </span>secret_key=None<span class="p">, </span>services=None<span class="p">, </span>subscriptions=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/azure/#pulumi_signalfx.azure.Integration">Integration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_namespaces_per_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationCustomNamespacesPerServiceArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">poll_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secret_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subscriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">sync_guest_os_namespaces</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -106,7 +254,7 @@ SignalFx Azure integrations. For help with this integration see [Monitoring Micr
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -126,7 +274,7 @@ SignalFx Azure integrations. For help with this integration see [Monitoring Micr
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -136,7 +284,7 @@ SignalFx Azure integrations. For help with this integration see [Monitoring Micr
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -268,6 +416,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="customnamespacesperservices_csharp">
+<a href="#customnamespacesperservices_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespaces<wbr>Per<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesperservice">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Azure.<wbr>Inputs.<wbr>Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `sync_guest_os_namespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="environment_csharp">
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span> 
@@ -308,6 +467,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncguestosnamespaces_csharp">
+<a href="#syncguestosnamespaces_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Guest<wbr>Os<wbr>Namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -385,6 +555,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="customnamespacesperservices_go">
+<a href="#customnamespacesperservices_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespaces<wbr>Per<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesperservice">[]Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `sync_guest_os_namespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="environment_go">
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span> 
@@ -425,6 +606,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncguestosnamespaces_go">
+<a href="#syncguestosnamespaces_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Guest<wbr>Os<wbr>Namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -502,6 +694,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span id="customnamespacesperservices_nodejs">
+<a href="#customnamespacesperservices_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Namespaces<wbr>Per<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesperservice">Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service[]</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `sync_guest_os_namespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="environment_nodejs">
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
@@ -542,6 +745,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncguestosnamespaces_nodejs">
+<a href="#syncguestosnamespaces_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Guest<wbr>Os<wbr>Namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -590,7 +804,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Microsoft Azure service names for the Azure services you want SignalFx to monitor. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
@@ -601,7 +815,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure subscriptions that SignalFx should monitor.
 {{% /md %}}</dd>
@@ -615,6 +829,17 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Azure ID of the Azure tenant. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure) in the product documentation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_namespaces_per_services_python">
+<a href="#custom_namespaces_per_services_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>namespaces_<wbr>per_<wbr>services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesperservice">Sequence[Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `sync_guest_os_namespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -656,9 +881,20 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_guest_os_namespaces_python">
+<a href="#sync_guest_os_namespaces_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>guest_<wbr>os_<wbr>namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
 {{% /md %}}</dd>
 
 </dl>
@@ -759,15 +995,16 @@ Get an existing Integration resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_id=None<span class="p">, </span>enabled=None<span class="p">, </span>environment=None<span class="p">, </span>name=None<span class="p">, </span>named_token=None<span class="p">, </span>poll_rate=None<span class="p">, </span>secret_key=None<span class="p">, </span>services=None<span class="p">, </span>subscriptions=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_namespaces_per_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationCustomNamespacesPerServiceArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">named_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">poll_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secret_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subscriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">sync_guest_os_namespaces</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Integration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx/azure?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Azure.Integration.html">Integration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Azure.IntegrationState.html">IntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Azure.Integration.html">Integration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Azure.IntegrationState.html">IntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -886,6 +1123,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_customnamespacesperservices_csharp">
+<a href="#state_customnamespacesperservices_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespaces<wbr>Per<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesperservice">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Azure.<wbr>Inputs.<wbr>Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `sync_guest_os_namespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span> 
@@ -974,6 +1222,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_syncguestosnamespaces_csharp">
+<a href="#state_syncguestosnamespaces_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Guest<wbr>Os<wbr>Namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
 </span> 
@@ -999,6 +1258,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Azure application ID for the SignalFx app. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure) in the product documentation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_customnamespacesperservices_go">
+<a href="#state_customnamespacesperservices_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespaces<wbr>Per<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesperservice">[]Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `sync_guest_os_namespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1091,6 +1361,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_syncguestosnamespaces_go">
+<a href="#state_syncguestosnamespaces_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Guest<wbr>Os<wbr>Namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
 </span> 
@@ -1116,6 +1397,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Azure application ID for the SignalFx app. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure) in the product documentation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_customnamespacesperservices_nodejs">
+<a href="#state_customnamespacesperservices_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Namespaces<wbr>Per<wbr>Services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesperservice">Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service[]</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `sync_guest_os_namespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1208,6 +1500,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_syncguestosnamespaces_nodejs">
+<a href="#state_syncguestosnamespaces_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Guest<wbr>Os<wbr>Namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span> 
@@ -1233,6 +1536,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Azure application ID for the SignalFx app. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure) in the product documentation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_custom_namespaces_per_services_python">
+<a href="#state_custom_namespaces_per_services_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>namespaces_<wbr>per_<wbr>services</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesperservice">Sequence[Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `sync_guest_os_namespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1285,7 +1599,7 @@ The following state arguments are supported:
 <a href="#state_poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
@@ -1307,7 +1621,7 @@ The following state arguments are supported:
 <a href="#state_services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Microsoft Azure service names for the Azure services you want SignalFx to monitor. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
@@ -1318,9 +1632,20 @@ The following state arguments are supported:
 <a href="#state_subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure subscriptions that SignalFx should monitor.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sync_guest_os_namespaces_python">
+<a href="#state_sync_guest_os_namespaces_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>guest_<wbr>os_<wbr>namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1346,6 +1671,146 @@ The following state arguments are supported:
 
 
 
+## Supporting Types
+
+
+<h4 id="integrationcustomnamespacesperservice">Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationCustomNamespacesPerService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationCustomNamespacesPerService">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#IntegrationCustomNamespacesPerServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/azure?tab=doc#IntegrationCustomNamespacesPerServiceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Azure.Inputs.IntegrationCustomNamespacesPerServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Azure.Outputs.IntegrationCustomNamespacesPerService.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="namespaces_csharp">
+<a href="#namespaces_csharp" style="color: inherit; text-decoration: inherit;">Namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The additional namespaces.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="namespaces_go">
+<a href="#namespaces_go" style="color: inherit; text-decoration: inherit;">Namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The additional namespaces.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="namespaces_nodejs">
+<a href="#namespaces_nodejs" style="color: inherit; text-decoration: inherit;">namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The additional namespaces.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="namespaces_python">
+<a href="#namespaces_python" style="color: inherit; text-decoration: inherit;">namespaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The additional namespaces.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
 
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
@@ -1354,6 +1819,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
+	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 </dl>
 

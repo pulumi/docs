@@ -13,7 +13,6 @@ meta_desc: "Explore the GetNetworkInterfaces function of the ecs module, includi
 Use this data source to get a list of elastic network interfaces according to the specified filters in an Alibaba Cloud account.
 
 For information about elastic network interface and how to use it, see [Elastic Network Interface](https://www.alibabacloud.com/help/doc-detail/58496.html)
-
 ## Argument Reference
 
 The following arguments are supported:
@@ -31,6 +30,231 @@ The following arguments are supported:
 * `output_file` - (Optional) The name of output file that saves the filter results.
 * `resource_group_id` - (Optional, ForceNew, Available in 1.57.0+) The Id of resource group which the network interface belongs.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var name = config.Get("name") ?? "networkInterfacesName";
+        var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "192.168.0.0/24",
+        });
+        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
+        {
+            AvailableResourceCreation = "VSwitch",
+        }));
+        var vswitch = new AliCloud.Vpc.Switch("vswitch", new AliCloud.Vpc.SwitchArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            CidrBlock = "192.168.0.0/24",
+            VpcId = vpc.Id,
+        });
+        var @group = new AliCloud.Ecs.SecurityGroup("group", new AliCloud.Ecs.SecurityGroupArgs
+        {
+            VpcId = vpc.Id,
+        });
+        var @interface = new AliCloud.Vpc.NetworkInterface("interface", new AliCloud.Vpc.NetworkInterfaceArgs
+        {
+            Description = "Basic test",
+            PrivateIp = "192.168.0.2",
+            SecurityGroups = 
+            {
+                @group.Id,
+            },
+            Tags = 
+            {
+                { "TF-VER", "0.11.3" },
+            },
+            VswitchId = vswitch.Id,
+        });
+        var instance = new AliCloud.Ecs.Instance("instance", new AliCloud.Ecs.InstanceArgs
+        {
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            ImageId = "centos_7_04_64_20G_alibase_201701015.vhd",
+            InstanceName = name,
+            InstanceType = "ecs.e3.xlarge",
+            InternetMaxBandwidthOut = 10,
+            SecurityGroups = 
+            {
+                @group.Id,
+            },
+            SystemDiskCategory = "cloud_efficiency",
+            VswitchId = vswitch.Id,
+        });
+        var attachment = new AliCloud.Vpc.NetworkInterfaceAttachment("attachment", new AliCloud.Vpc.NetworkInterfaceAttachmentArgs
+        {
+            InstanceId = instance.Id,
+            NetworkInterfaceId = @interface.Id,
+        });
+        var defaultNetworkInterfaces = Output.Tuple(attachment.NetworkInterfaceId, instance.Id, @group.Id, vpc.Id, vswitch.Id).Apply(values =>
+        {
+            var networkInterfaceId = values.Item1;
+            var instanceId = values.Item2;
+            var groupId = values.Item3;
+            var vpcId = values.Item4;
+            var vswitchId = values.Item5;
+            return AliCloud.Ecs.GetNetworkInterfaces.InvokeAsync(new AliCloud.Ecs.GetNetworkInterfacesArgs
+            {
+                Ids = 
+                {
+                    networkInterfaceId,
+                },
+                InstanceId = instanceId,
+                NameRegex = name,
+                PrivateIp = "192.168.0.2",
+                SecurityGroupId = groupId,
+                Tags = 
+                {
+                    { "TF-VER", "0.11.3" },
+                },
+                Type = "Secondary",
+                VpcId = vpcId,
+                VswitchId = vswitchId,
+            });
+        });
+        this.Eni0Name = defaultNetworkInterfaces.Apply(defaultNetworkInterfaces => defaultNetworkInterfaces.Interfaces[0].Name);
+    }
+
+    [Output("eni0Name")]
+    public Output<string> Eni0Name { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "networkInterfacesName"
+vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/24")
+default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
+vswitch = alicloud.vpc.Switch("vswitch",
+    availability_zone=default_zones.zones[0].id,
+    cidr_block="192.168.0.0/24",
+    vpc_id=vpc.id)
+group = alicloud.ecs.SecurityGroup("group", vpc_id=vpc.id)
+interface = alicloud.vpc.NetworkInterface("interface",
+    description="Basic test",
+    private_ip="192.168.0.2",
+    security_groups=[group.id],
+    tags={
+        "TF-VER": "0.11.3",
+    },
+    vswitch_id=vswitch.id)
+instance = alicloud.ecs.Instance("instance",
+    availability_zone=default_zones.zones[0].id,
+    image_id="centos_7_04_64_20G_alibase_201701015.vhd",
+    instance_name=name,
+    instance_type="ecs.e3.xlarge",
+    internet_max_bandwidth_out=10,
+    security_groups=[group.id],
+    system_disk_category="cloud_efficiency",
+    vswitch_id=vswitch.id)
+attachment = alicloud.vpc.NetworkInterfaceAttachment("attachment",
+    instance_id=instance.id,
+    network_interface_id=interface.id)
+default_network_interfaces = pulumi.Output.all(attachment.network_interface_id, instance.id, group.id, vpc.id, vswitch.id).apply(lambda network_interface_id, instanceId, groupId, vpcId, vswitchId: alicloud.ecs.get_network_interfaces(ids=[network_interface_id],
+    instance_id=instance_id,
+    name_regex=name,
+    private_ip="192.168.0.2",
+    security_group_id=group_id,
+    tags={
+        "TF-VER": "0.11.3",
+    },
+    type="Secondary",
+    vpc_id=vpc_id,
+    vswitch_id=vswitch_id))
+pulumi.export("eni0Name", default_network_interfaces.interfaces[0].name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "networkInterfacesName";
+
+const vpc = new alicloud.vpc.Network("vpc", {
+    cidrBlock: "192.168.0.0/24",
+});
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const vswitch = new alicloud.vpc.Switch("vswitch", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "192.168.0.0/24",
+    vpcId: vpc.id,
+});
+const group = new alicloud.ecs.SecurityGroup("group", {
+    vpcId: vpc.id,
+});
+const interfaceNetworkInterface = new alicloud.vpc.NetworkInterface("interface", {
+    description: "Basic test",
+    privateIp: "192.168.0.2",
+    securityGroups: [group.id],
+    tags: {
+        "TF-VER": "0.11.3",
+    },
+    vswitchId: vswitch.id,
+});
+const instance = new alicloud.ecs.Instance("instance", {
+    availabilityZone: defaultZones.zones[0].id,
+    imageId: "centos_7_04_64_20G_alibase_201701015.vhd",
+    instanceName: name,
+    instanceType: "ecs.e3.xlarge",
+    internetMaxBandwidthOut: 10,
+    securityGroups: [group.id],
+    systemDiskCategory: "cloud_efficiency",
+    vswitchId: vswitch.id,
+});
+const attachment = new alicloud.vpc.NetworkInterfaceAttachment("attachment", {
+    instanceId: instance.id,
+    networkInterfaceId: interfaceNetworkInterface.id,
+});
+const defaultNetworkInterfaces = pulumi.all([attachment.networkInterfaceId, instance.id, group.id, vpc.id, vswitch.id]).apply(([networkInterfaceId, instanceId, groupId, vpcId, vswitchId]) => alicloud.ecs.getNetworkInterfaces({
+    ids: [networkInterfaceId],
+    instanceId: instanceId,
+    nameRegex: name,
+    privateIp: "192.168.0.2",
+    securityGroupId: groupId,
+    tags: {
+        "TF-VER": "0.11.3",
+    },
+    type: "Secondary",
+    vpcId: vpcId,
+    vswitchId: vswitchId,
+}, { async: true }));
+
+export const eni0Name = defaultNetworkInterfaces.interfaces[0].name;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNetworkInterfaces {#using}
@@ -44,7 +268,7 @@ The following arguments are supported:
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_network_interfaces(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworkInterfacesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_network_interfaces(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworkInterfacesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -444,7 +668,7 @@ The following arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1056,7 +1280,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1066,7 +1290,7 @@ The following output properties are available:
 <a href="#interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnetworkinterfacesinterface">List[Get<wbr>Network<wbr>Interfaces<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#getnetworkinterfacesinterface">Sequence[Get<wbr>Network<wbr>Interfaces<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}A list of ENIs. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -1077,7 +1301,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1850,7 +2074,7 @@ The following output properties are available:
 <a href="#private_ips_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary private IP address that is assigned to the ENI.
 {{% /md %}}</dd>
@@ -1883,7 +2107,7 @@ The following output properties are available:
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group that the ENI belongs to.
 {{% /md %}}</dd>

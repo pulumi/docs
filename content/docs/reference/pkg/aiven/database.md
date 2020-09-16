@@ -2,7 +2,7 @@
 ---
 title: "Database"
 title_tag: "Resource Database | Package Aiven"
-meta_desc: "Explore the Database resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the Database resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,88 +11,6 @@ meta_desc: "Explore the Database resource of the Aiven package, including exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mydatabase = new Aiven.Database("mydatabase", new Aiven.DatabaseArgs
-        {
-            DatabaseName = "<DATABASE_NAME>",
-            Project = aiven_project.Myproject.Project,
-            ServiceName = aiven_service.Myservice.Service_name,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.NewDatabase(ctx, "mydatabase", &aiven.DatabaseArgs{
-			DatabaseName: pulumi.String("<DATABASE_NAME>"),
-			Project:      pulumi.Any(aiven_project.Myproject.Project),
-			ServiceName:  pulumi.Any(aiven_service.Myservice.Service_name),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-mydatabase = aiven.Database("mydatabase",
-    database_name="<DATABASE_NAME>",
-    project=aiven_project["myproject"]["project"],
-    service_name=aiven_service["myservice"]["service_name"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const mydatabase = new aiven.Database("mydatabase", {
-    databaseName: "<DATABASE_NAME>",
-    project: aiven_project_myproject.project,
-    serviceName: aiven_service_myservice.serviceName,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Database Resource {#create}

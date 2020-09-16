@@ -329,7 +329,7 @@ The following output properties are available:
 <a href="#directories_python" style="color: inherit; text-decoration: inherit;">directories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcedirectoriesdirectory">List[Get<wbr>Resource<wbr>Directories<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#getresourcedirectoriesdirectory">Sequence[Get<wbr>Resource<wbr>Directories<wbr>Directory]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource directories. Each element contains the following attributes:
 {{% /md %}}</dd>

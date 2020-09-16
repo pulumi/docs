@@ -2,7 +2,7 @@
 ---
 title: "ProjectVpc"
 title_tag: "Resource ProjectVpc | Package Aiven"
-meta_desc: "Explore the ProjectVpc resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
+meta_desc: "Explore the ProjectVpc resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -11,88 +11,6 @@ meta_desc: "Explore the ProjectVpc resource of the Aiven package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myvpc = new Aiven.ProjectVpc("myvpc", new Aiven.ProjectVpcArgs
-        {
-            CloudName = "google-europe-west1",
-            NetworkCidr = "192.168.0.1/24",
-            Project = aiven_project.Myproject.Project,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aiven.NewProjectVpc(ctx, "myvpc", &aiven.ProjectVpcArgs{
-			CloudName:   pulumi.String("google-europe-west1"),
-			NetworkCidr: pulumi.String("192.168.0.1/24"),
-			Project:     pulumi.Any(aiven_project.Myproject.Project),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-myvpc = aiven.ProjectVpc("myvpc",
-    cloud_name="google-europe-west1",
-    network_cidr="192.168.0.1/24",
-    project=aiven_project["myproject"]["project"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const myvpc = new aiven.ProjectVpc("myvpc", {
-    cloudName: "google-europe-west1",
-    networkCidr: "192.168.0.1/24",
-    project: aiven_project_myproject.project,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ProjectVpc Resource {#create}

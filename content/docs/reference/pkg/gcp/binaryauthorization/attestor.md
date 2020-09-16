@@ -1094,7 +1094,7 @@ different naming pattern.
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">List[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">Sequence[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Public keys that verify attestations signed by this attestor. This
 field may be updated.

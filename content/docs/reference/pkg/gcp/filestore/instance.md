@@ -31,7 +31,7 @@ To get more information about Instance, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/filestore/#pulumi_gcp.filestore.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_shares</span><span class="p">:</span> <span class="nx">Optional[InstanceFileSharesArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/filestore/#pulumi_gcp.filestore.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_shares</span><span class="p">:</span> <span class="nx">Optional[InstanceFileSharesArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -525,7 +525,7 @@ Structure is documented below.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancenetwork">Sequence[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
@@ -787,7 +787,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_shares</span><span class="p">:</span> <span class="nx">Optional[InstanceFileSharesArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_shares</span><span class="p">:</span> <span class="nx">Optional[InstanceFileSharesArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1344,7 +1344,7 @@ Structure is documented below.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancenetwork">Sequence[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
@@ -1545,7 +1545,7 @@ for the standard tier, or 2560 GiB for the premium tier.
 <a href="#capacity_gb_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}File share capacity in GiB. This must be at least 1024 GiB
 for the standard tier, or 2560 GiB for the premium tier.
@@ -1568,7 +1568,7 @@ for the standard tier, or 2560 GiB for the premium tier.
 <a href="#nfs_export_options_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefilesharesnfsexportoption">List[Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefilesharesnfsexportoption">Sequence[Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1839,7 +1839,7 @@ Possible values are `READ_ONLY` and `READ_WRITE`.
 <a href="#anon_gid_python" style="color: inherit; text-decoration: inherit;">anon_<wbr>gid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534.
 Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
@@ -1852,7 +1852,7 @@ if this field is specified for other squashMode settings.
 <a href="#anon_uid_python" style="color: inherit; text-decoration: inherit;">anon_<wbr>uid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534.
 Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
@@ -1865,7 +1865,7 @@ if this field is specified for other squashMode settings.
 <a href="#ip_ranges_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
 Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
@@ -2085,7 +2085,7 @@ addresses reserved for this instance.
 <a href="#modes_python" style="color: inherit; text-decoration: inherit;">modes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IP versions for which the instance has
 IP addresses assigned.
@@ -2110,7 +2110,7 @@ instance is connected.
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}-
 A list of IPv4 or IPv6 addresses.

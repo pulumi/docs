@@ -103,7 +103,7 @@ const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/oss/#pulumi_alicloud.oss.Bucket">Bucket</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[List[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[List[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[BucketLoggingArgs]</span> = None<span class="p">, </span><span class="nx">logging_isenable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">referer_config</span><span class="p">:</span> <span class="nx">Optional[BucketRefererConfigArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_rule</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionRuleArgs]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/oss/#pulumi_alicloud.oss.Bucket">Bucket</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[BucketLoggingArgs]</span> = None<span class="p">, </span><span class="nx">logging_isenable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">referer_config</span><span class="p">:</span> <span class="nx">Optional[BucketRefererConfigArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_rule</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionRuleArgs]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -815,7 +815,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Sequence[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://www.alibabacloud.com/help/doc-detail/31903.htm) (documented below). The items of core rule are no more than 10 for every OSS bucket.
 {{% /md %}}</dd>
@@ -837,7 +837,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](https://www.alibabacloud.com/help/doc-detail/31904.htm) (documented below).
 {{% /md %}}</dd>
@@ -1271,7 +1271,7 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[List[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extranet_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">intranet_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[List[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[BucketLoggingArgs]</span> = None<span class="p">, </span><span class="nx">logging_isenable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">referer_config</span><span class="p">:</span> <span class="nx">Optional[BucketRefererConfigArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_rule</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionRuleArgs]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extranet_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">intranet_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[BucketLoggingArgs]</span> = None<span class="p">, </span><span class="nx">logging_isenable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">referer_config</span><span class="p">:</span> <span class="nx">Optional[BucketRefererConfigArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_rule</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionRuleArgs]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2090,7 +2090,7 @@ The following state arguments are supported:
 <a href="#state_cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Sequence[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://www.alibabacloud.com/help/doc-detail/31903.htm) (documented below). The items of core rule are no more than 10 for every OSS bucket.
 {{% /md %}}</dd>
@@ -2145,7 +2145,7 @@ The following state arguments are supported:
 <a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](https://www.alibabacloud.com/help/doc-detail/31904.htm) (documented below).
 {{% /md %}}</dd>
@@ -2507,7 +2507,7 @@ The following state arguments are supported:
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies which methods are allowed. Can be GET, PUT, POST, DELETE or HEAD.
 {{% /md %}}</dd>
@@ -2518,7 +2518,7 @@ The following state arguments are supported:
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies which origins are allowed.
 {{% /md %}}</dd>
@@ -2529,7 +2529,7 @@ The following state arguments are supported:
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies which headers are allowed.
 {{% /md %}}</dd>
@@ -2540,7 +2540,7 @@ The following state arguments are supported:
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies expose header in the response.
 {{% /md %}}</dd>
@@ -2551,7 +2551,7 @@ The following state arguments are supported:
 <a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd>
@@ -2784,7 +2784,7 @@ The following state arguments are supported:
 <a href="#expirations_python" style="color: inherit; text-decoration: inherit;">expirations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleexpiration">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's expire (documented below).
 {{% /md %}}</dd>
@@ -2817,7 +2817,7 @@ The following state arguments are supported:
 <a href="#transitions_python" style="color: inherit; text-decoration: inherit;">transitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruletransition">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruletransition">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time when an object is converted to the IA or archive storage class during a valid life cycle. (documented below).
 {{% /md %}}</dd>
@@ -2951,7 +2951,7 @@ The following state arguments are supported:
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd>
@@ -3118,7 +3118,7 @@ The following state arguments are supported:
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd>
@@ -3386,7 +3386,7 @@ The following state arguments are supported:
 <a href="#referers_python" style="color: inherit; text-decoration: inherit;">referers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of referer.
 {{% /md %}}</dd>

@@ -154,7 +154,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.ImageImport">ImageImport</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_device_mappings</span><span class="p">:</span> <span class="nx">Optional[List[ImageImportDiskDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.ImageImport">ImageImport</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ImageImportDiskDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -584,7 +584,7 @@ The ImageImport resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#disk_device_mappings_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>device_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimportdiskdevicemapping">List[Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageimportdiskdevicemapping">Sequence[Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Description of the system with disks and snapshots under the image.
 {{% /md %}}</dd>
@@ -754,7 +754,7 @@ Get an existing ImageImport resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_device_mappings</span><span class="p">:</span> <span class="nx">Optional[List[ImageImportDiskDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ImageImport</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ImageImportDiskDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ImageImport</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
 <a href="#state_disk_device_mappings_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>device_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimportdiskdevicemapping">List[Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageimportdiskdevicemapping">Sequence[Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Description of the system with disks and snapshots under the image.
 {{% /md %}}</dd>
@@ -1433,7 +1433,7 @@ The following state arguments are supported:
 <a href="#disk_image_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>image_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Resolution size. You must ensure that the system disk space ≥ file system space. Ranges: When n = 1, the system disk: 5 ~ 500GiB, When n = 2 ~ 17, that is, data disk: 5 ~ 1000GiB, When temporary is introduced, the system automatically detects the size, which is subject to the detection result.
 {{% /md %}}</dd>
