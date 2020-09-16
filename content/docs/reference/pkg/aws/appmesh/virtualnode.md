@@ -1977,7 +1977,7 @@ The following state arguments are supported:
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackend">List[Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackend">Sequence[Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The backends to which the virtual node is expected to send outbound traffic.
 {{% /md %}}</dd>
@@ -2612,7 +2612,7 @@ The following state arguments are supported:
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
 {{% /md %}}</dd>
@@ -2623,7 +2623,7 @@ The following state arguments are supported:
 <a href="#interval_millis_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>millis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time period in milliseconds between each health check execution.
 {{% /md %}}</dd>
@@ -2645,7 +2645,7 @@ The following state arguments are supported:
 <a href="#timeout_millis_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>millis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
 {{% /md %}}</dd>
@@ -2656,7 +2656,7 @@ The following state arguments are supported:
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
 {{% /md %}}</dd>
@@ -2678,7 +2678,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
 {{% /md %}}</dd>
@@ -2801,7 +2801,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
 {{% /md %}}</dd>

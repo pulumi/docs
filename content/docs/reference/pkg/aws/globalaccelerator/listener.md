@@ -167,7 +167,7 @@ const exampleListener = new aws.globalaccelerator.Listener("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/globalaccelerator/#pulumi_aws.globalaccelerator.Listener">Listener</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_ranges</span><span class="p">:</span> <span class="nx">Optional[List[ListenerPortRangeArgs]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/globalaccelerator/#pulumi_aws.globalaccelerator.Listener">Listener</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerPortRangeArgs]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -509,7 +509,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#port_ranges_python" style="color: inherit; text-decoration: inherit;">port_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerportrange">List[Listener<wbr>Port<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerportrange">Sequence[Listener<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
 {{% /md %}}</dd>
@@ -635,7 +635,7 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_ranges</span><span class="p">:</span> <span class="nx">Optional[List[ListenerPortRangeArgs]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Listener</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerPortRangeArgs]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Listener</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -930,7 +930,7 @@ The following state arguments are supported:
 <a href="#state_port_ranges_python" style="color: inherit; text-decoration: inherit;">port_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerportrange">List[Listener<wbr>Port<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerportrange">Sequence[Listener<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
 {{% /md %}}</dd>
@@ -1072,7 +1072,7 @@ The following state arguments are supported:
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The first port in the range of ports, inclusive.
 {{% /md %}}</dd>
@@ -1083,7 +1083,7 @@ The following state arguments are supported:
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The last port in the range of ports, inclusive.
 {{% /md %}}</dd>

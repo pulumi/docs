@@ -232,7 +232,7 @@ const myUsagePlan = new aws.apigateway.UsagePlan("myUsagePlan", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.UsagePlan">UsagePlan</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_stages</span><span class="p">:</span> <span class="nx">Optional[List[UsagePlanApiStageArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quota_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanQuotaSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throttle_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanThrottleSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.UsagePlan">UsagePlan</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[UsagePlanApiStageArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quota_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanQuotaSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throttle_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanThrottleSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -662,7 +662,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#api_stages_python" style="color: inherit; text-decoration: inherit;">api_<wbr>stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanapistage">List[Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args]</a></span>
+        <span class="property-type"><a href="#usageplanapistage">Sequence[Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd>
@@ -876,7 +876,7 @@ Get an existing UsagePlan resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_stages</span><span class="p">:</span> <span class="nx">Optional[List[UsagePlanApiStageArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quota_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanQuotaSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throttle_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanThrottleSettingsArgs]</span> = None<span class="p">) -&gt;</span> UsagePlan</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[UsagePlanApiStageArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quota_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanQuotaSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throttle_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanThrottleSettingsArgs]</span> = None<span class="p">) -&gt;</span> UsagePlan</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1281,7 +1281,7 @@ The following state arguments are supported:
 <a href="#state_api_stages_python" style="color: inherit; text-decoration: inherit;">api_<wbr>stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanapistage">List[Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args]</a></span>
+        <span class="property-type"><a href="#usageplanapistage">Sequence[Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd>
@@ -1656,7 +1656,7 @@ The following state arguments are supported:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of requests that can be made in a given time period.
 {{% /md %}}</dd>
@@ -1678,7 +1678,7 @@ The following state arguments are supported:
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of requests subtracted from the given limit in the initial time period.
 {{% /md %}}</dd>
@@ -1801,7 +1801,7 @@ The following state arguments are supported:
 <a href="#burst_limit_python" style="color: inherit; text-decoration: inherit;">burst_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
 {{% /md %}}</dd>

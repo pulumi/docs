@@ -1464,7 +1464,7 @@ The following state arguments are supported:
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
 {{% /md %}}</dd>
@@ -1475,7 +1475,7 @@ The following state arguments are supported:
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">List[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">Sequence[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See the `schedule` configuration block.
 {{% /md %}}</dd>
@@ -1908,7 +1908,7 @@ The following state arguments are supported:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How often this lifecycle policy should be evaluated. `1`, `2`,`3`,`4`,`6`,`8`,`12` or `24` are valid values.
 {{% /md %}}</dd>
@@ -2020,7 +2020,7 @@ The following state arguments are supported:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How many snapshots to keep. Must be an integer between 1 and 1000.
 {{% /md %}}</dd>

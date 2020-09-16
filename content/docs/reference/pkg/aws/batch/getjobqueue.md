@@ -525,7 +525,7 @@ of the job queue.
 <a href="#compute_environment_orders_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>environment_<wbr>orders</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getjobqueuecomputeenvironmentorder">List[Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order]</a></span>
+        <span class="property-type"><a href="#getjobqueuecomputeenvironmentorder">Sequence[Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order]</a></span>
     </dt>
     <dd>{{% md %}}The compute environments that are attached to the job queue and the order in
 which job placement is preferred. Compute environments are selected for job placement in ascending order.
@@ -560,7 +560,7 @@ which job placement is preferred. Compute environments are selected for job plac
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the job queue. Job queues with a higher priority are evaluated first when
 associated with the same compute environment.
@@ -728,7 +728,7 @@ of the job queue.
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

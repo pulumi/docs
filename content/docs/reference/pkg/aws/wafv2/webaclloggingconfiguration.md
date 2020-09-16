@@ -137,7 +137,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.WebAclLoggingConfiguration">WebAclLoggingConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[List[WebAclLoggingConfigurationRedactedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.WebAclLoggingConfiguration">WebAclLoggingConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebAclLoggingConfigurationRedactedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -435,7 +435,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
 <a href="#log_destination_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
 {{% /md %}}</dd>
@@ -457,7 +457,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
 <a href="#redacted_fields_python" style="color: inherit; text-decoration: inherit;">redacted_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">List[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
 {{% /md %}}</dd>
@@ -561,7 +561,7 @@ Get an existing WebAclLoggingConfiguration resource's state with the given name,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[List[WebAclLoggingConfigurationRedactedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> WebAclLoggingConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebAclLoggingConfigurationRedactedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> WebAclLoggingConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -801,7 +801,7 @@ The following state arguments are supported:
 <a href="#state_log_destination_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ The following state arguments are supported:
 <a href="#state_redacted_fields_python" style="color: inherit; text-decoration: inherit;">redacted_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">List[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
 {{% /md %}}</dd>

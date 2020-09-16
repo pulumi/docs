@@ -1288,7 +1288,7 @@ The following state arguments are supported:
 <a href="#gid_python" style="color: inherit; text-decoration: inherit;">gid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The POSIX group ID used for all file system operations using this access point.
 {{% /md %}}</dd>
@@ -1299,7 +1299,7 @@ The following state arguments are supported:
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The POSIX user ID used for all file system operations using this access point.
 {{% /md %}}</dd>
@@ -1310,7 +1310,7 @@ The following state arguments are supported:
 <a href="#secondary_gids_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>gids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Secondary POSIX group IDs used for all file system operations using this access point.
 {{% /md %}}</dd>
@@ -1600,7 +1600,7 @@ The following state arguments are supported:
 <a href="#owner_gid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>gid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX group ID to apply to the `root_directory`.
 {{% /md %}}</dd>
@@ -1611,7 +1611,7 @@ The following state arguments are supported:
 <a href="#owner_uid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>uid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the POSIX user ID to apply to the `root_directory`.
 {{% /md %}}</dd>

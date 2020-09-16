@@ -91,7 +91,7 @@ const foo = new aws.ecs.Cluster("foo", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecs/#pulumi_aws.ecs.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_providers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ClusterDefaultCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[List[ClusterSettingArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecs/#pulumi_aws.ecs.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterDefaultCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterSettingArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -455,7 +455,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#capacity_providers_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd>
@@ -466,7 +466,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#default_capacity_provider_strategies_python" style="color: inherit; text-decoration: inherit;">default_<wbr>capacity_<wbr>provider_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">List[Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Sequence[Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
 {{% /md %}}</dd>
@@ -488,7 +488,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">List[Cluster<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustersetting">Sequence[Cluster<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 {{% /md %}}</dd>
@@ -647,7 +647,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_providers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ClusterDefaultCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[List[ClusterSettingArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterDefaultCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterSettingArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -997,7 +997,7 @@ The following state arguments are supported:
 <a href="#state_capacity_providers_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd>
@@ -1008,7 +1008,7 @@ The following state arguments are supported:
 <a href="#state_default_capacity_provider_strategies_python" style="color: inherit; text-decoration: inherit;">default_<wbr>capacity_<wbr>provider_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">List[Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Sequence[Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
 {{% /md %}}</dd>
@@ -1030,7 +1030,7 @@ The following state arguments are supported:
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">List[Cluster<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustersetting">Sequence[Cluster<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 {{% /md %}}</dd>
@@ -1216,7 +1216,7 @@ The following state arguments are supported:
 <a href="#base_python" style="color: inherit; text-decoration: inherit;">base</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
 {{% /md %}}</dd>
@@ -1227,7 +1227,7 @@ The following state arguments are supported:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
 {{% /md %}}</dd>

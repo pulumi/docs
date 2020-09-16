@@ -443,7 +443,7 @@ const exampleDomain = new aws.elasticsearch.Domain("exampleDomain", {logPublishi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticsearch/#pulumi_aws.elasticsearch.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsArgs]</span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEbsOptionsArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_at_rest</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptAtRestArgs]</span> = None<span class="p">, </span><span class="nx">log_publishing_options</span><span class="p">:</span> <span class="nx">Optional[List[DomainLogPublishingOptionArgs]]</span> = None<span class="p">, </span><span class="nx">node_to_node_encryption</span><span class="p">:</span> <span class="nx">Optional[DomainNodeToNodeEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_options</span><span class="p">:</span> <span class="nx">Optional[DomainSnapshotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_options</span><span class="p">:</span> <span class="nx">Optional[DomainVpcOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticsearch/#pulumi_aws.elasticsearch.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsArgs]</span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEbsOptionsArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_at_rest</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptAtRestArgs]</span> = None<span class="p">, </span><span class="nx">log_publishing_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainLogPublishingOptionArgs]]</span> = None<span class="p">, </span><span class="nx">node_to_node_encryption</span><span class="p">:</span> <span class="nx">Optional[DomainNodeToNodeEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_options</span><span class="p">:</span> <span class="nx">Optional[DomainSnapshotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_options</span><span class="p">:</span> <span class="nx">Optional[DomainVpcOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1255,7 +1255,7 @@ domain on every apply.
 <a href="#log_publishing_options_python" style="color: inherit; text-decoration: inherit;">log_<wbr>publishing_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogpublishingoption">List[Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainlogpublishingoption">Sequence[Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Options for publishing slow  and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource.
 {{% /md %}}</dd>
@@ -1587,7 +1587,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEbsOptionsArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_at_rest</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptAtRestArgs]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kibana_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_publishing_options</span><span class="p">:</span> <span class="nx">Optional[List[DomainLogPublishingOptionArgs]]</span> = None<span class="p">, </span><span class="nx">node_to_node_encryption</span><span class="p">:</span> <span class="nx">Optional[DomainNodeToNodeEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_options</span><span class="p">:</span> <span class="nx">Optional[DomainSnapshotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_options</span><span class="p">:</span> <span class="nx">Optional[DomainVpcOptionsArgs]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">advanced_security_options</span><span class="p">:</span> <span class="nx">Optional[DomainAdvancedSecurityOptionsArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[DomainClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">cognito_options</span><span class="p">:</span> <span class="nx">Optional[DomainCognitoOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_endpoint_options</span><span class="p">:</span> <span class="nx">Optional[DomainDomainEndpointOptionsArgs]</span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_options</span><span class="p">:</span> <span class="nx">Optional[DomainEbsOptionsArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypt_at_rest</span><span class="p">:</span> <span class="nx">Optional[DomainEncryptAtRestArgs]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kibana_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_publishing_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainLogPublishingOptionArgs]]</span> = None<span class="p">, </span><span class="nx">node_to_node_encryption</span><span class="p">:</span> <span class="nx">Optional[DomainNodeToNodeEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_options</span><span class="p">:</span> <span class="nx">Optional[DomainSnapshotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_options</span><span class="p">:</span> <span class="nx">Optional[DomainVpcOptionsArgs]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2525,7 +2525,7 @@ domain on every apply.
 <a href="#state_log_publishing_options_python" style="color: inherit; text-decoration: inherit;">log_<wbr>publishing_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogpublishingoption">List[Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainlogpublishingoption">Sequence[Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Options for publishing slow  and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource.
 {{% /md %}}</dd>
@@ -3320,7 +3320,7 @@ domain on every apply.
 <a href="#dedicated_master_count_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster
 {{% /md %}}</dd>
@@ -3353,7 +3353,7 @@ domain on every apply.
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
@@ -3375,7 +3375,7 @@ domain on every apply.
 <a href="#warm_count_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
 {{% /md %}}</dd>
@@ -3509,7 +3509,7 @@ domain on every apply.
 <a href="#availability_zone_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of Availability Zones for the domain to use with `zone_awareness_enabled`. Defaults to `2`. Valid values: `2` or `3`.
 {{% /md %}}</dd>
@@ -4071,7 +4071,7 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes
 attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
@@ -4083,7 +4083,7 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 **Required** if `ebs_enabled` is set to `true`.
@@ -4590,7 +4590,7 @@ snapshot of the indices in the domain.
 <a href="#automated_snapshot_start_hour_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>snapshot_<wbr>start_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Hour during which the service takes an automated daily
 snapshot of the indices in the domain.
@@ -4774,7 +4774,7 @@ snapshot of the indices in the domain.
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4784,7 +4784,7 @@ snapshot of the indices in the domain.
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of VPC Security Group IDs to be applied to the Elasticsearch domain endpoints. If omitted, the default Security Group for the VPC will be used.
 {{% /md %}}</dd>
@@ -4795,7 +4795,7 @@ snapshot of the indices in the domain.
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.
 {{% /md %}}</dd>

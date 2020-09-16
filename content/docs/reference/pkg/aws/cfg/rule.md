@@ -1838,7 +1838,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
 <a href="#compliance_resource_types_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an
 evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify
@@ -2041,7 +2041,7 @@ want to trigger an evaluation for the rule.
 <a href="#source_details_python" style="color: inherit; text-decoration: inherit;">source_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesourcesourcedetail">List[Rule<wbr>Source<wbr>Source<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesourcesourcedetail">Sequence[Rule<wbr>Source<wbr>Source<wbr>Detail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provides the source and type of the event that causes AWS Config to evaluate your AWS resources. Only valid if `owner` is `CUSTOM_LAMBDA`.
 {{% /md %}}</dd>

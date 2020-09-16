@@ -297,7 +297,7 @@ const test = pulumi.output(aws.ec2.getVpcEndpointService({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpc_endpoint_service(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetVpcEndpointServiceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpcEndpointServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpc_endpoint_service(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetVpcEndpointServiceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpcEndpointServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -483,7 +483,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointservicefilter">List[Get<wbr>Vpc<wbr>Endpoint<wbr>Service<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getvpcendpointservicefilter">Sequence[Get<wbr>Vpc<wbr>Endpoint<wbr>Service<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>
@@ -1076,7 +1076,7 @@ The following output properties are available:
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -1087,7 +1087,7 @@ The following output properties are available:
 <a href="#base_endpoint_dns_names_python" style="color: inherit; text-decoration: inherit;">base_<wbr>endpoint_<wbr>dns_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -1196,7 +1196,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointservicefilter">List[Get<wbr>Vpc<wbr>Endpoint<wbr>Service<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getvpcendpointservicefilter">Sequence[Get<wbr>Vpc<wbr>Endpoint<wbr>Service<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1345,7 +1345,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
 {{% /md %}}</dd>

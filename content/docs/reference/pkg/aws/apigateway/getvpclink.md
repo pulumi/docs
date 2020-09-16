@@ -581,7 +581,7 @@ The following output properties are available:
 <a href="#target_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target.
 {{% /md %}}</dd>

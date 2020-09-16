@@ -33,7 +33,7 @@ want to wait, you need to use the `retain_on_delete` flag.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudfront/#pulumi_aws.cloudfront.Distribution">Distribution</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[List[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudfront/#pulumi_aws.cloudfront.Distribution">Distribution</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -958,7 +958,7 @@ user requests for content.
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">List[Distribution<wbr>Origin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigin">Sequence[Distribution<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -995,7 +995,7 @@ one).
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -1019,7 +1019,7 @@ distribution.
 <a href="#custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">Sequence[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd>
@@ -1079,7 +1079,7 @@ to your distribution (maximum one).
 <a href="#ordered_cache_behaviors_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>cache_<wbr>behaviors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -1092,7 +1092,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">Sequence[Distribution<wbr>Origin<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -1631,7 +1631,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 <a href="#in_progress_validation_batches_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>validation_<wbr>batches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -1667,7 +1667,7 @@ CloudFront system.
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigner">List[Distribution<wbr>Trusted<wbr>Signer]</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">Sequence[Distribution<wbr>Trusted<wbr>Signer]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -1693,7 +1693,7 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">caller_reference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[List[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">in_progress_validation_batches</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_signers</span><span class="p">:</span> <span class="nx">Optional[List[DistributionTrustedSignerArgs]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Distribution</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">caller_reference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">in_progress_validation_batches</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_signers</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionTrustedSignerArgs]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Distribution</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2860,7 +2860,7 @@ region and the credentials configuring this argument must have
 <a href="#state_aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -2907,7 +2907,7 @@ distribution.
 <a href="#state_custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">List[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">Sequence[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd>
@@ -3004,7 +3004,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 <a href="#state_in_progress_validation_batches_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>validation_<wbr>batches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -3051,7 +3051,7 @@ to your distribution (maximum one).
 <a href="#state_ordered_cache_behaviors_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>cache_<wbr>behaviors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -3064,7 +3064,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#state_origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">List[Distribution<wbr>Origin<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">Sequence[Distribution<wbr>Origin<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -3076,7 +3076,7 @@ distribution (multiples allowed).
 <a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">List[Distribution<wbr>Origin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigin">Sequence[Distribution<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -3149,7 +3149,7 @@ CloudFront system.
 <a href="#state_trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigner">List[Distribution<wbr>Trusted<wbr>Signer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">Sequence[Distribution<wbr>Trusted<wbr>Signer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -3403,7 +3403,7 @@ example, `/custom_404.html`).
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
@@ -3415,7 +3415,7 @@ customize.
 <a href="#error_caching_min_ttl_python" style="color: inherit; text-decoration: inherit;">error_<wbr>caching_<wbr>min_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
@@ -3428,7 +3428,7 @@ origin to see whether the object has been updated.
 <a href="#response_code_python" style="color: inherit; text-decoration: inherit;">response_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
@@ -3996,7 +3996,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -4008,7 +4008,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 <a href="#cached_methods_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -4072,7 +4072,7 @@ the request header (default: `false`).
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4097,7 +4097,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 <a href="#lambda_function_associations_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>associations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">List[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Sequence[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda function with
 specific actions. Defined below, maximum 4.
@@ -4109,7 +4109,7 @@ specific actions. Defined below, maximum 4.
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4124,7 +4124,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 <a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -4150,7 +4150,7 @@ associated with this cache behavior.
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -4385,7 +4385,7 @@ query strings to the origin that is associated with this cache behavior.
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -4398,7 +4398,7 @@ headers.
 <a href="#query_string_cache_keys_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>cache_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -4553,7 +4553,7 @@ subsequent `whitelisted_names`
 <a href="#whitelisted_names_python" style="color: inherit; text-decoration: inherit;">whitelisted_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -5522,7 +5522,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -5534,7 +5534,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 <a href="#cached_methods_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -5610,7 +5610,7 @@ the request header (default: `false`).
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -5635,7 +5635,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
 <a href="#lambda_function_associations_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>associations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">List[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda function with
 specific actions. Defined below, maximum 4.
@@ -5647,7 +5647,7 @@ specific actions. Defined below, maximum 4.
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -5662,7 +5662,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 <a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -5688,7 +5688,7 @@ associated with this cache behavior.
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -5923,7 +5923,7 @@ query strings to the origin that is associated with this cache behavior.
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -5936,7 +5936,7 @@ headers.
 <a href="#query_string_cache_keys_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>cache_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -6091,7 +6091,7 @@ subsequent `whitelisted_names`
 <a href="#whitelisted_names_python" style="color: inherit; text-decoration: inherit;">whitelisted_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -6584,7 +6584,7 @@ web site of your custom origin.
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomheader">List[Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigincustomheader">Sequence[Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
@@ -7015,7 +7015,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
 {{% /md %}}</dd>
@@ -7026,7 +7026,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
 {{% /md %}}</dd>
@@ -7049,7 +7049,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
 <a href="#origin_ssl_protocols_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>ssl_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
@@ -7062,7 +7062,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#origin_keepalive_timeout_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>keepalive_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd>
@@ -7073,7 +7073,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#origin_read_timeout_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>read_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd>
@@ -7240,7 +7240,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupmember">List[Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigingroupmember">Sequence[Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
 {{% /md %}}</dd>
@@ -7341,7 +7341,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
 {{% /md %}}</dd>
@@ -7759,7 +7759,7 @@ distribution of your content by country: `none`, `whitelist`, or
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
@@ -7899,7 +7899,7 @@ user requests for content.
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigneritem">List[Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">Sequence[Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
 {{% /md %}}</dd>
@@ -8033,7 +8033,7 @@ user requests for content.
 <a href="#key_pair_ids_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
 {{% /md %}}</dd>

@@ -286,7 +286,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iamPolicyForLambda", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#pulumi_aws.iot.TopicRule">TopicRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_alarm</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchAlarmArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_metric</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchMetricArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDynamodbArgs]</span> = None<span class="p">, </span><span class="nx">dynamodbv2s</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleDynamodbv2Args]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[TopicRuleElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_action</span><span class="p">:</span> <span class="nx">Optional[TopicRuleErrorActionArgs]</span> = None<span class="p">, </span><span class="nx">firehose</span><span class="p">:</span> <span class="nx">Optional[TopicRuleFirehoseArgs]</span> = None<span class="p">, </span><span class="nx">iot_analytics</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleIotAnalyticArgs]]</span> = None<span class="p">, </span><span class="nx">iot_events</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleIotEventArgs]]</span> = None<span class="p">, </span><span class="nx">kinesis</span><span class="p">:</span> <span class="nx">Optional[TopicRuleKinesisArgs]</span> = None<span class="p">, </span><span class="nx">lambda_</span><span class="p">:</span> <span class="nx">Optional[TopicRuleLambdaArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">republish</span><span class="p">:</span> <span class="nx">Optional[TopicRuleRepublishArgs]</span> = None<span class="p">, </span><span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[TopicRuleS3Args]</span> = None<span class="p">, </span><span class="nx">sns</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSnsArgs]</span> = None<span class="p">, </span><span class="nx">sql</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sqs</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSqsArgs]</span> = None<span class="p">, </span><span class="nx">step_functions</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleStepFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#pulumi_aws.iot.TopicRule">TopicRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_alarm</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchAlarmArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_metric</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchMetricArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDynamodbArgs]</span> = None<span class="p">, </span><span class="nx">dynamodbv2s</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleDynamodbv2Args]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[TopicRuleElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_action</span><span class="p">:</span> <span class="nx">Optional[TopicRuleErrorActionArgs]</span> = None<span class="p">, </span><span class="nx">firehose</span><span class="p">:</span> <span class="nx">Optional[TopicRuleFirehoseArgs]</span> = None<span class="p">, </span><span class="nx">iot_analytics</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleIotAnalyticArgs]]</span> = None<span class="p">, </span><span class="nx">iot_events</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleIotEventArgs]]</span> = None<span class="p">, </span><span class="nx">kinesis</span><span class="p">:</span> <span class="nx">Optional[TopicRuleKinesisArgs]</span> = None<span class="p">, </span><span class="nx">lambda_</span><span class="p">:</span> <span class="nx">Optional[TopicRuleLambdaArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">republish</span><span class="p">:</span> <span class="nx">Optional[TopicRuleRepublishArgs]</span> = None<span class="p">, </span><span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[TopicRuleS3Args]</span> = None<span class="p">, </span><span class="nx">sns</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSnsArgs]</span> = None<span class="p">, </span><span class="nx">sql</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sqs</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSqsArgs]</span> = None<span class="p">, </span><span class="nx">step_functions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleStepFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1240,7 +1240,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dynamodbv2s_python" style="color: inherit; text-decoration: inherit;">dynamodbv2s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2">List[Topic<wbr>Rule<wbr>Dynamodbv2Args]</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">Sequence[Topic<wbr>Rule<wbr>Dynamodbv2Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1281,7 +1281,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#iot_analytics_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>analytics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotanalytic">List[Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">Sequence[Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1291,7 +1291,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#iot_events_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotevent">List[Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicruleiotevent">Sequence[Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1372,7 +1372,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulestepfunction">List[Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicrulestepfunction">Sequence[Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1530,7 +1530,7 @@ Get an existing TopicRule resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_alarm</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchAlarmArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_metric</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchMetricArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDynamodbArgs]</span> = None<span class="p">, </span><span class="nx">dynamodbv2s</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleDynamodbv2Args]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[TopicRuleElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_action</span><span class="p">:</span> <span class="nx">Optional[TopicRuleErrorActionArgs]</span> = None<span class="p">, </span><span class="nx">firehose</span><span class="p">:</span> <span class="nx">Optional[TopicRuleFirehoseArgs]</span> = None<span class="p">, </span><span class="nx">iot_analytics</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleIotAnalyticArgs]]</span> = None<span class="p">, </span><span class="nx">iot_events</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleIotEventArgs]]</span> = None<span class="p">, </span><span class="nx">kinesis</span><span class="p">:</span> <span class="nx">Optional[TopicRuleKinesisArgs]</span> = None<span class="p">, </span><span class="nx">lambda_</span><span class="p">:</span> <span class="nx">Optional[TopicRuleLambdaArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">republish</span><span class="p">:</span> <span class="nx">Optional[TopicRuleRepublishArgs]</span> = None<span class="p">, </span><span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[TopicRuleS3Args]</span> = None<span class="p">, </span><span class="nx">sns</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSnsArgs]</span> = None<span class="p">, </span><span class="nx">sql</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sqs</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSqsArgs]</span> = None<span class="p">, </span><span class="nx">step_functions</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleStepFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> TopicRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_alarm</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchAlarmArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_metric</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchMetricArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDynamodbArgs]</span> = None<span class="p">, </span><span class="nx">dynamodbv2s</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleDynamodbv2Args]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[TopicRuleElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_action</span><span class="p">:</span> <span class="nx">Optional[TopicRuleErrorActionArgs]</span> = None<span class="p">, </span><span class="nx">firehose</span><span class="p">:</span> <span class="nx">Optional[TopicRuleFirehoseArgs]</span> = None<span class="p">, </span><span class="nx">iot_analytics</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleIotAnalyticArgs]]</span> = None<span class="p">, </span><span class="nx">iot_events</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleIotEventArgs]]</span> = None<span class="p">, </span><span class="nx">kinesis</span><span class="p">:</span> <span class="nx">Optional[TopicRuleKinesisArgs]</span> = None<span class="p">, </span><span class="nx">lambda_</span><span class="p">:</span> <span class="nx">Optional[TopicRuleLambdaArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">republish</span><span class="p">:</span> <span class="nx">Optional[TopicRuleRepublishArgs]</span> = None<span class="p">, </span><span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[TopicRuleS3Args]</span> = None<span class="p">, </span><span class="nx">sns</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSnsArgs]</span> = None<span class="p">, </span><span class="nx">sql</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sqs</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSqsArgs]</span> = None<span class="p">, </span><span class="nx">step_functions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleStepFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> TopicRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2437,7 +2437,7 @@ The following state arguments are supported:
 <a href="#state_dynamodbv2s_python" style="color: inherit; text-decoration: inherit;">dynamodbv2s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2">List[Topic<wbr>Rule<wbr>Dynamodbv2Args]</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">Sequence[Topic<wbr>Rule<wbr>Dynamodbv2Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2489,7 +2489,7 @@ The following state arguments are supported:
 <a href="#state_iot_analytics_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>analytics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotanalytic">List[Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">Sequence[Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2499,7 +2499,7 @@ The following state arguments are supported:
 <a href="#state_iot_events_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotevent">List[Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicruleiotevent">Sequence[Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2602,7 +2602,7 @@ The following state arguments are supported:
 <a href="#state_step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulestepfunction">List[Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicrulestepfunction">Sequence[Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7218,7 +7218,7 @@ The following state arguments are supported:
 <a href="#qos_python" style="color: inherit; text-decoration: inherit;">qos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
 {{% /md %}}</dd>
@@ -8866,7 +8866,7 @@ The following state arguments are supported:
 <a href="#qos_python" style="color: inherit; text-decoration: inherit;">qos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
 {{% /md %}}</dd>

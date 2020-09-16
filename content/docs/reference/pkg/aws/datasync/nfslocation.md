@@ -1161,7 +1161,7 @@ The following state arguments are supported:
 <a href="#agent_arns_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.
 {{% /md %}}</dd>

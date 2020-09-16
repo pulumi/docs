@@ -2157,7 +2157,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of allowed HTTP headers.
 {{% /md %}}</dd>
@@ -2168,7 +2168,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of allowed HTTP methods.
 {{% /md %}}</dd>
@@ -2179,7 +2179,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of allowed origins.
 {{% /md %}}</dd>
@@ -2190,7 +2190,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of exposed HTTP headers.
 {{% /md %}}</dd>
@@ -2201,7 +2201,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds that the browser should cache preflight request results.
 {{% /md %}}</dd>

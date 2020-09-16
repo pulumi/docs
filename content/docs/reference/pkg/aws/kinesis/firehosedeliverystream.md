@@ -2979,7 +2979,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#buffering_interval_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
 {{% /md %}}</dd>
@@ -2990,7 +2990,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#buffering_size_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
 {{% /md %}}</dd>
@@ -3034,7 +3034,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd>
@@ -3368,7 +3368,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -3502,7 +3502,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
@@ -4150,7 +4150,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -4161,7 +4161,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -4976,7 +4976,7 @@ be used.
 <a href="#timestamp_formats_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>formats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of how you want Kinesis Data Firehose to parse the date and time stamps that may be present in your input data JSON. To specify these format strings, follow the pattern syntax of JodaTime's DateTimeFormat format strings. For more information, see [Class DateTimeFormat](https://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html). You can also use the special value millis to parse time stamps in epoch milliseconds. If you don't specify a format, Kinesis Data Firehose uses java.sql.Timestamp::valueOf by default.
 {{% /md %}}</dd>
@@ -5765,7 +5765,7 @@ be used.
 <a href="#block_size_bytes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd>
@@ -5776,7 +5776,7 @@ be used.
 <a href="#bloom_filter_columns_python" style="color: inherit; text-decoration: inherit;">bloom_<wbr>filter_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of column names for which you want Kinesis Data Firehose to create bloom filters.
 {{% /md %}}</dd>
@@ -5853,7 +5853,7 @@ be used.
 <a href="#row_index_stride_python" style="color: inherit; text-decoration: inherit;">row_<wbr>index_<wbr>stride</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows between index entries. The default is `10000` and the minimum is `1000`.
 {{% /md %}}</dd>
@@ -5864,7 +5864,7 @@ be used.
 <a href="#stripe_size_bytes_python" style="color: inherit; text-decoration: inherit;">stripe_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of bytes in each stripe. The default is 64 MiB and the minimum is 8 MiB.
 {{% /md %}}</dd>
@@ -6119,7 +6119,7 @@ be used.
 <a href="#block_size_bytes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd>
@@ -6152,7 +6152,7 @@ be used.
 <a href="#max_padding_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>padding_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
 {{% /md %}}</dd>
@@ -6163,7 +6163,7 @@ be used.
 <a href="#page_size_bytes_python" style="color: inherit; text-decoration: inherit;">page_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
 {{% /md %}}</dd>
@@ -6618,7 +6618,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -6752,7 +6752,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
@@ -7235,7 +7235,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -7246,7 +7246,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -8156,7 +8156,7 @@ be used.
 <a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
 {{% /md %}}</dd>
@@ -8490,7 +8490,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -8624,7 +8624,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
@@ -9107,7 +9107,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -9118,7 +9118,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -9691,7 +9691,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -9702,7 +9702,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -10370,7 +10370,7 @@ be used.
 <a href="#hec_acknowledgment_timeout_python" style="color: inherit; text-decoration: inherit;">hec_<wbr>acknowledgment_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
 {{% /md %}}</dd>
@@ -10403,7 +10403,7 @@ be used.
 <a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd>
@@ -10726,7 +10726,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -10860,7 +10860,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>

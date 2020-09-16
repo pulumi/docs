@@ -296,7 +296,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.DefaultSecurityGroup">DefaultSecurityGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultSecurityGroupEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultSecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.DefaultSecurityGroup">DefaultSecurityGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultSecurityGroupEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultSecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -669,7 +669,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">List[Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupegress">Sequence[Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -681,7 +681,7 @@ egress rule. Each egress block supports fields documented below.
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">List[Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupingress">Sequence[Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -992,7 +992,7 @@ Get an existing DefaultSecurityGroup resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultSecurityGroupEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultSecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DefaultSecurityGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultSecurityGroupEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultSecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DefaultSecurityGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1457,7 +1457,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#state_egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">List[Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupegress">Sequence[Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -1469,7 +1469,7 @@ egress rule. Each egress block supports fields documented below.
 <a href="#state_ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">List[Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupingress">Sequence[Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -1864,7 +1864,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1884,7 +1884,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1894,7 +1894,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1915,7 +1915,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1925,7 +1925,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#prefix_list_ids_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>list_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1935,7 +1935,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2274,7 +2274,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2294,7 +2294,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2304,7 +2304,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2325,7 +2325,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2335,7 +2335,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#prefix_list_ids_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>list_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2345,7 +2345,7 @@ modified, added, or removed.** It will be left in its current state
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -23,7 +23,7 @@ Provides an Gamelift Game Session Queue resource.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/gamelift/#pulumi_aws.gamelift.GameSessionQueue">GameSessionQueue</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destinations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">player_latency_policies</span><span class="p">:</span> <span class="nx">Optional[List[GameSessionQueuePlayerLatencyPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/gamelift/#pulumi_aws.gamelift.GameSessionQueue">GameSessionQueue</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destinations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">player_latency_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[GameSessionQueuePlayerLatencyPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -387,7 +387,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
 <a href="#player_latency_policies_python" style="color: inherit; text-decoration: inherit;">player_<wbr>latency_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">List[Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">Sequence[Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
 {{% /md %}}</dd>
@@ -431,7 +431,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
 {{% /md %}}</dd>
@@ -579,7 +579,7 @@ Get an existing GameSessionQueue resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destinations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">player_latency_policies</span><span class="p">:</span> <span class="nx">Optional[List[GameSessionQueuePlayerLatencyPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> GameSessionQueue</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destinations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">player_latency_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[GameSessionQueuePlayerLatencyPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> GameSessionQueue</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -929,7 +929,7 @@ The following state arguments are supported:
 <a href="#state_destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}</dd>
@@ -951,7 +951,7 @@ The following state arguments are supported:
 <a href="#state_player_latency_policies_python" style="color: inherit; text-decoration: inherit;">player_<wbr>latency_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">List[Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">Sequence[Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
 {{% /md %}}</dd>
@@ -973,7 +973,7 @@ The following state arguments are supported:
 <a href="#state_timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
 {{% /md %}}</dd>
@@ -1104,7 +1104,7 @@ The following state arguments are supported:
 <a href="#maximum_individual_player_latency_milliseconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>individual_<wbr>player_<wbr>latency_<wbr>milliseconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum latency value that is allowed for any player.
 {{% /md %}}</dd>
@@ -1115,7 +1115,7 @@ The following state arguments are supported:
 <a href="#policy_duration_seconds_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>duration_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
 {{% /md %}}</dd>

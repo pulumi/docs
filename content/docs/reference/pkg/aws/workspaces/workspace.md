@@ -1808,7 +1808,7 @@ The following state arguments are supported:
 <a href="#root_volume_size_gib_python" style="color: inherit; text-decoration: inherit;">root_<wbr>volume_<wbr>size_<wbr>gib</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the root volume.
 {{% /md %}}</dd>
@@ -1830,7 +1830,7 @@ The following state arguments are supported:
 <a href="#running_mode_auto_stop_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">running_<wbr>mode_<wbr>auto_<wbr>stop_<wbr>timeout_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.
 {{% /md %}}</dd>
@@ -1841,7 +1841,7 @@ The following state arguments are supported:
 <a href="#user_volume_size_gib_python" style="color: inherit; text-decoration: inherit;">user_<wbr>volume_<wbr>size_<wbr>gib</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the user storage.
 {{% /md %}}</dd>
