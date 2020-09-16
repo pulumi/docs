@@ -1,4 +1,4 @@
-name: "Scheduled jobs: Remove buckets"
+name: "Scheduled jobs: Bucket cleanup"
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string.
@@ -8,14 +8,16 @@ jobs:
   all:
     env:
       GOPATH: ${{ github.workspace }}
-    name: Remove buckets
+    name: Bucket cleanup
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Run make remove_buckets
-        run: make remove_buckets
+      - name: Run make ci_bucket_cleanup
+        run: make ci_bucket_cleanup
         env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
             SLACK_ACCESS_TOKEN: ${{ secrets.SLACK_ACCESS_TOKEN }}
