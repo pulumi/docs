@@ -11,6 +11,8 @@ What is the cloud? Three months ago, that one word simply meant a bunch of water
 
 Hi, I’m [Sashu Shankar](https://www.linkedin.com/in/sashushankar/), a second-year computer science student at the University of Washington, and this is my life as a Pulumi intern!
 
+<!--more-->
+
 ## My Pulumi Experience
 
 ### Getting to Know the Team
