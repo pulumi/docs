@@ -554,7 +554,7 @@ function waitForElementToExists(selector, callback) {
         var element = $(selector)[0];
 
         if (element) {
-            return callback($(selector));
+            return callback();
         } else {
             return waitForElementToExists(selector, callback);
         }
@@ -562,97 +562,98 @@ function waitForElementToExists(selector, callback) {
 }
 
 $(function() {
-    var validPages = [ "/kube2pulumi/", "/tf2pulumi/" ];
-    var currentPath = window.location.pathname;
+    waitForElementToExists("pulumi-chooser[type='language'] > ul > li > a", function() {
+        var validPages = [ "/kube2pulumi/", "/tf2pulumi/" ];
+        var currentPath = window.location.pathname;
 
-    // If this is not a *2pulumi page, return.
-    if (validPages.indexOf(currentPath) === -1) {
-        return;
-    }
+        // If this is not a *2pulumi page, return.
+        if (validPages.indexOf(currentPath) === -1) {
+            return;
+        }
 
-    // If there are querystring parameters populate the fields.
-    let tfUrl = getQueryVariable("url");
-    let tfCode = getQueryVariable("code");
+        // If there are querystring parameters populate the fields.
+        let tfUrl = getQueryVariable("url");
+        let tfCode = getQueryVariable("code");
 
-    // Let's initialize the code conversion component.
-    if (tfUrl) {
-        $("#terraform-url").val(tfUrl);
-        setCurrentInputKind("url");
-        convertCode(getCurrentLanguage() || "typescript", "url");
-    } else {
-        if (tfCode) {
-            $("#terraform-code").val(tfCode);
+        // Let's initialize the code conversion component.
+        if (tfUrl) {
+            $("#terraform-url").val(tfUrl);
+            setCurrentInputKind("url");
+            convertCode(getCurrentLanguage() || "typescript", "url");
         } else {
+            if (tfCode) {
+                $("#terraform-code").val(tfCode);
+            } else {
+                loadCannedExample();
+            }
+            setCurrentInputKind("code");
+            console.log(getCurrentLanguage());
+            convertCode(getCurrentLanguage() || "typescript", "code");
+        }
+
+        // We auto-submit the code based on user interaction, including (1) after they finish typing,
+        // (2) if they hit enter in the URL box, (3) after selecting files to upload, and (4) when
+        // switching the language in the right-hand converted code box.
+
+        // After a while of no typing, submit.
+        var typingTimer;
+        let doneTypingMs = 1500;
+        $("#terraform-code").keyup(function (e) {
+            clearTimeout(typingTimer);
+            if ($(this).val() !== "") {
+                typingTimer = setTimeout(convertCode, doneTypingMs);
+            }
+        });
+        $("#terraform-code").keydown(function (e) {
+            clearTimeout(typingTimer);
+        });
+        $("#terraform-url").keyup(function (e) {
+            clearTimeout(typingTimer);
+            if ($(this).val() !== "" && e.which !== 13) {
+                typingTimer = setTimeout(convertCode, doneTypingMs);
+            }
+        });
+        $("#terraform-url").keydown(function (e) {
+            clearTimeout(typingTimer);
+            if (e.which === 13) {
+                // If you hit enter in the URL bar, submit immediately.
+                convertCode();
+                return false;
+            }
+        });
+
+        // After the file upload selector has occurred, submit.
+        $("#terraform-upload").change(function (e) {
+            let files = $("#terraform-upload")[0].files;
+            if (files && files.length) {
+                convertCode();
+                return false;
+            }
+        });
+
+        // Enable tabs within the code window, to make it easier to type code.
+        $("#terraform-code").keydown(function (e) {
+            if ((e.which || e.keyCode) === 9) {
+                e.preventDefault();
+                let start = this.selectionStart;
+                let end = this.selectionEnd;
+                $(this).val(
+                    $(this).val().substring(0, start) +
+                    "\t" +
+                    $(this).val().substring(end)
+                );
+                this.selectionStart = this.selectionEnd = start + 1;
+            }
+        });
+
+        // If the canned example is changed, use it to load the code.
+        $("#terraform-canned-example").change(function (e) {
             loadCannedExample();
-        }
-        setCurrentInputKind("code");
-        convertCode(getCurrentLanguage() || "typescript", "code");
-    }
-
-    // We auto-submit the code based on user interaction, including (1) after they finish typing,
-    // (2) if they hit enter in the URL box, (3) after selecting files to upload, and (4) when
-    // switching the language in the right-hand converted code box.
-
-    // After a while of no typing, submit.
-    var typingTimer;
-    let doneTypingMs = 1500;
-    $("#terraform-code").keyup(function (e) {
-        clearTimeout(typingTimer);
-        if ($(this).val() !== "") {
-            typingTimer = setTimeout(convertCode, doneTypingMs);
-        }
-    });
-    $("#terraform-code").keydown(function (e) {
-        clearTimeout(typingTimer);
-    });
-    $("#terraform-url").keyup(function (e) {
-        clearTimeout(typingTimer);
-        if ($(this).val() !== "" && e.which !== 13) {
-            typingTimer = setTimeout(convertCode, doneTypingMs);
-        }
-    });
-    $("#terraform-url").keydown(function (e) {
-        clearTimeout(typingTimer);
-        if (e.which === 13) {
-            // If you hit enter in the URL bar, submit immediately.
             convertCode();
-            return false;
-        }
-    });
+        });
 
-    // After the file upload selector has occurred, submit.
-    $("#terraform-upload").change(function (e) {
-        let files = $("#terraform-upload")[0].files;
-        if (files && files.length) {
-            convertCode();
-            return false;
-        }
-    });
-
-    // Enable tabs within the code window, to make it easier to type code.
-    $("#terraform-code").keydown(function (e) {
-        if ((e.which || e.keyCode) === 9) {
-            e.preventDefault();
-            let start = this.selectionStart;
-            let end = this.selectionEnd;
-            $(this).val(
-                $(this).val().substring(0, start) +
-                "\t" +
-                $(this).val().substring(end)
-            );
-            this.selectionStart = this.selectionEnd = start + 1;
-        }
-    });
-
-    // If the canned example is changed, use it to load the code.
-    $("#terraform-canned-example").change(function (e) {
-        loadCannedExample();
-        convertCode();
-    });
-
-    // Hook up event handlers for the language choosers.
-    waitForElementToExists("pulumi-chooser[type='language'] > ul > li > a", function(elements) {
-        elements.each(function (i, e) {
+        // Hook up event handlers for the language choosers.
+        $("pulumi-chooser[type='language'] > ul > li > a").each(function (i, e) {
             $(e).click(function() {
                 // We need to check that the inputKind has been properly set and if it
                 // has not, let's set the value to "code" and update the handler. If the
