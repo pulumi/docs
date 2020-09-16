@@ -1405,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
 
@@ -1435,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd>
 
@@ -1678,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_replicas_python" style="color: inherit; text-decoration: inherit;">current_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
 
@@ -1688,7 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desired_replicas_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
 
@@ -1718,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}observedGeneration is the most recent generation observed by this autoscaler.{{% /md %}}</dd>
 
@@ -3386,7 +3386,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd>
 
@@ -3432,7 +3432,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd>
 
@@ -4768,7 +4768,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_average_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>average_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
 
@@ -4941,7 +4941,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#current_average_utilization_python" style="color: inherit; text-decoration: inherit;">current_<wbr>average_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
 
