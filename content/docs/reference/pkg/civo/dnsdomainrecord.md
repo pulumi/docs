@@ -30,7 +30,7 @@ class MyStack : Stack
         var www = new Civo.DnsDomainRecord("www", new Civo.DnsDomainRecordArgs
         {
             DomainId = civo_dns_domain_name.Main.Id,
-            Type = "a",
+            Type = "A",
             Value = civo_instance.Foo.Public_ip,
             Ttl = 600,
         }, new CustomResourceOptions
@@ -61,7 +61,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := civo.NewDnsDomainRecord(ctx, "www", &civo.DnsDomainRecordArgs{
 			DomainId: pulumi.Any(civo_dns_domain_name.Main.Id),
-			Type:     pulumi.String("a"),
+			Type:     pulumi.String("A"),
 			Value:    pulumi.Any(civo_instance.Foo.Public_ip),
 			Ttl:      pulumi.Int(600),
 		}, pulumi.DependsOn([]pulumi.Resource{
@@ -86,7 +86,7 @@ import pulumi_civo as civo
 # Create a new domain record
 www = civo.DnsDomainRecord("www",
     domain_id=civo_dns_domain_name["main"]["id"],
-    type="a",
+    type="A",
     value=civo_instance["foo"]["public_ip"],
     ttl=600,
     opts=ResourceOptions(depends_on=[
@@ -106,7 +106,7 @@ import * as civo from "@pulumi/civo";
 // Create a new domain record
 const www = new civo.DnsDomainRecord("www", {
     domainId: civo_dns_domain_name.main.id,
-    type: "a",
+    type: "A",
     value: civo_instance.foo.public_ip,
     ttl: 600,
 }, {
@@ -131,7 +131,7 @@ const www = new civo.DnsDomainRecord("www", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_civo/#pulumi_civo.DnsDomainRecord">DnsDomainRecord</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_civo/#pulumi_civo.DnsDomainRecord">DnsDomainRecord</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -333,7 +333,7 @@ The DnsDomainRecord resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -406,7 +406,7 @@ The DnsDomainRecord resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -479,7 +479,7 @@ The DnsDomainRecord resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -539,7 +539,7 @@ The DnsDomainRecord resource accepts the following [input]({{< relref "/docs/int
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long caching DNS servers should cache this record for, in seconds (the minimum is 600 and the default if unspecified is 600)
 {{% /md %}}</dd>
@@ -552,7 +552,7 @@ The DnsDomainRecord resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -583,7 +583,7 @@ The DnsDomainRecord resource accepts the following [input]({{< relref "/docs/int
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Useful for MX records only, the priority mail should be attempted it (defaults to 10)
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ Get an existing DnsDomainRecord resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DnsDomainRecord</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DnsDomainRecord</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1007,7 +1007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1113,7 +1113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1219,7 +1219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1301,7 +1301,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Useful for MX records only, the priority mail should be attempted it (defaults to 10)
 {{% /md %}}</dd>
@@ -1312,7 +1312,7 @@ The following state arguments are supported:
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long caching DNS servers should cache this record for, in seconds (the minimum is 600 and the default if unspecified is 600)
 {{% /md %}}</dd>
@@ -1325,7 +1325,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The choice of record type from a, cname, mx or txt
+    <dd>{{% md %}}The choice of record type from A, CNAME, MX, SRV or TXT
 {{% /md %}}</dd>
 
     <dt class="property-optional"

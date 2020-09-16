@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/civo | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/civo package."
-git_sha: "f59f5be19540546efd7e9455a4fbf503a6d67c75"
+git_sha: "995a962a5b6ffafaf736d96eb868bfc87ca66181"
 block_external_search_index: true
 ---
 
@@ -37,14 +37,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="GetInstancesFilter" data-link-title="GetInstancesFilter">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L8">
         interface <strong>GetInstancesFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetInstancesFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesFilter-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L13">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L13">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -53,7 +53,7 @@ Filter the Instances by this key. This may be one of '`id`, `hostname`, `publicI
 `pseudoIp`, `size`, `cpuCores`, `ramMb`, `diskGb`, `template` or `createdAt`.
 
 <h4 class="pdoc-member-header" id="GetInstancesFilter-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L18">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L18">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -62,48 +62,48 @@ A list of values to match against the `key` field. Only retrieves Instances
 where the `key` field takes on one or more of the values provided here.
 
 <h3 class="pdoc-module-header" id="GetInstancesSizeFilter" data-link-title="GetInstancesSizeFilter">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L21">
         interface <strong>GetInstancesSizeFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetInstancesSizeFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesSizeFilter-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L22">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L22">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesSizeFilter-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L23">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L23">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetInstancesSizeSort" data-link-title="GetInstancesSizeSort">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L26">
         interface <strong>GetInstancesSizeSort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetInstancesSizeSort</span></code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesSizeSort-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L27">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L27">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>direction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesSizeSort-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L28">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L28">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstancesSort" data-link-title="GetInstancesSort">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L31">
         interface <strong>GetInstancesSort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetInstancesSort</span></code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesSort-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L35">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L35">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>direction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -111,7 +111,7 @@ where the `key` field takes on one or more of the values provided here.
 The sort direction. This may be either `asc` or `desc`.
 
 <h4 class="pdoc-member-header" id="GetInstancesSort-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L40">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L40">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -120,14 +120,14 @@ Sort the Instance by this key. This may be one of `id`, `hostname`, `publicIp`, 
 `pseudoIp`, `size`, `cpuCores`, `ramMb`, `diskGb`, `template` or `createdAt`.
 
 <h3 class="pdoc-module-header" id="GetKubernetesVersionFilter" data-link-title="GetKubernetesVersionFilter">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L43">
         interface <strong>GetKubernetesVersionFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetKubernetesVersionFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesVersionFilter-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L48">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L48">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -136,7 +136,7 @@ Filter the sizes by this key. This may be one of `version`,
 `label`, `type`, `default`.
 
 <h4 class="pdoc-member-header" id="GetKubernetesVersionFilter-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L53">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L53">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -145,14 +145,14 @@ Only retrieves the version which keys has value that matches
 one of the values provided here.
 
 <h3 class="pdoc-module-header" id="GetKubernetesVersionSort" data-link-title="GetKubernetesVersionSort">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L56">
         interface <strong>GetKubernetesVersionSort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetKubernetesVersionSort</span></code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesVersionSort-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L60">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L60">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>direction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -160,7 +160,7 @@ one of the values provided here.
 The sort direction. This may be either `asc` or `desc`.
 
 <h4 class="pdoc-member-header" id="GetKubernetesVersionSort-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L64">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L64">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -168,14 +168,14 @@ The sort direction. This may be either `asc` or `desc`.
 Sort the sizes by this key. This may be one of `version`.
 
 <h3 class="pdoc-module-header" id="GetTemplateFilter" data-link-title="GetTemplateFilter">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L67">
         interface <strong>GetTemplateFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetTemplateFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="GetTemplateFilter-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L72">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L72">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -184,7 +184,7 @@ Filter the sizes by this key. This may be one of `code`,
 `name`.
 
 <h4 class="pdoc-member-header" id="GetTemplateFilter-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L77">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L77">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -193,14 +193,14 @@ Only retrieves the template which keys has value that matches
 one of the values provided here.
 
 <h3 class="pdoc-module-header" id="GetTemplateSort" data-link-title="GetTemplateSort">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L80">
         interface <strong>GetTemplateSort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetTemplateSort</span></code></pre>
 <h4 class="pdoc-member-header" id="GetTemplateSort-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L84">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L84">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>direction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -208,7 +208,7 @@ one of the values provided here.
 The sort direction. This may be either `asc` or `desc`.
 
 <h4 class="pdoc-member-header" id="GetTemplateSort-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L89">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L89">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -217,14 +217,14 @@ Sort the sizes by this key. This may be one of `code`,
 `name`.
 
 <h3 class="pdoc-module-header" id="KubernetesClusterInstalledApplication" data-link-title="KubernetesClusterInstalledApplication">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L92">
         interface <strong>KubernetesClusterInstalledApplication</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KubernetesClusterInstalledApplication</span></code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterInstalledApplication-application">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L96">property <b>application</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L96">property <b>application</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>application?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -232,7 +232,7 @@ Sort the sizes by this key. This may be one of `code`,
 The name of the application
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstalledApplication-category">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L100">property <b>category</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L100">property <b>category</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>category?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -240,7 +240,7 @@ The name of the application
 The category of the application
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstalledApplication-installed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L104">property <b>installed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L104">property <b>installed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>installed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -248,7 +248,7 @@ The category of the application
 if installed or not
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstalledApplication-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L108">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L108">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -256,14 +256,14 @@ if installed or not
 The version of the application
 
 <h3 class="pdoc-module-header" id="KubernetesClusterInstance" data-link-title="KubernetesClusterInstance">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L111">
         interface <strong>KubernetesClusterInstance</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KubernetesClusterInstance</span></code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-cpuCores">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L115">property <b>cpuCores</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L115">property <b>cpuCores</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuCores?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -271,7 +271,7 @@ The version of the application
 Total cpu of the inatance.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L119">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L119">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -279,7 +279,7 @@ Total cpu of the inatance.
 The date where the Kubernetes cluster was create.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-diskGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L123">property <b>diskGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L123">property <b>diskGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -287,7 +287,7 @@ The date where the Kubernetes cluster was create.
 The size of the disk.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-firewallId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L127">property <b>firewallId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L127">property <b>firewallId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -295,7 +295,7 @@ The size of the disk.
 The firewall id assigned to the instance
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L131">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L131">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -303,7 +303,7 @@ The firewall id assigned to the instance
 The hostname of the instance.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-publicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L135">property <b>publicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L135">property <b>publicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -311,7 +311,7 @@ The hostname of the instance.
 The public ip of the instances, only available if the instances is the master
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-ramMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L139">property <b>ramMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L139">property <b>ramMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ramMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ The public ip of the instances, only available if the instances is the master
 Total ram of the instance.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L143">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L143">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -327,7 +327,7 @@ Total ram of the instance.
 The region where instance are.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L147">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L147">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -335,7 +335,7 @@ The region where instance are.
 The size of the instance.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L152">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L152">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -344,7 +344,7 @@ The status of Kubernetes cluster.
 * `ready` -If the Kubernetes cluster is ready.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterInstance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L156">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L156">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -352,24 +352,24 @@ The status of Kubernetes cluster.
 A space separated list of tags, to be used freely as required.
 
 <h3 class="pdoc-module-header" id="LoadBalancerBackend" data-link-title="LoadBalancerBackend">
-    <a href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L159">
         interface <strong>LoadBalancerBackend</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LoadBalancerBackend</span></code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerBackend-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L160">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L160">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerBackend-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L161">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L161">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerBackend-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/f59f5be19540546efd7e9455a4fbf503a6d67c75/sdk/nodejs/types/input.ts#L162">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-civo/blob/995a962a5b6ffafaf736d96eb868bfc87ca66181/sdk/nodejs/types/input.ts#L162">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

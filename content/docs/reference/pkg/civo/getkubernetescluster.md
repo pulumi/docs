@@ -907,7 +907,7 @@ The following output properties are available:
 <a href="#installed_applications_python" style="color: inherit; text-decoration: inherit;">installed_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterinstalledapplication">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Installed<wbr>Application]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterinstalledapplication">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Installed<wbr>Application]</a></span>
     </dt>
     <dd>{{% md %}}A unique ID that can be used to identify and reference a Kubernetes cluster.
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ The following output properties are available:
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterinstance">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Instance]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterinstance">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Instance]</a></span>
     </dt>
     <dd>{{% md %}}In addition to the arguments provided, these additional attributes about the cluster's default node instance are exported.
 {{% /md %}}</dd>
@@ -962,7 +962,7 @@ The following output properties are available:
 <a href="#num_target_nodes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>target_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -1679,7 +1679,7 @@ The following output properties are available:
 <a href="#cpu_cores_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total cpu of the inatance.
 {{% /md %}}</dd>
@@ -1701,7 +1701,7 @@ The following output properties are available:
 <a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk.
 {{% /md %}}</dd>
@@ -1745,7 +1745,7 @@ The following output properties are available:
 <a href="#ram_mb_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>mb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Total ram of the instance
 {{% /md %}}</dd>
@@ -1790,7 +1790,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The tag of the instances
 {{% /md %}}</dd>

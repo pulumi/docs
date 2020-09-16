@@ -24,7 +24,7 @@ meta_desc: "Explore the GetTemplate function of the civo package, including exam
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_template(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetTemplateFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[List[GetTemplateSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTemplateResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_template(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetTemplateFilterArgs]]</span> = None<span class="p">, </span><span class="nx">sorts</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetTemplateSortArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTemplateResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -150,7 +150,7 @@ The `sort` block is documented below.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettemplatefilter">List[Get<wbr>Template<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gettemplatefilter">Sequence[Get<wbr>Template<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -162,7 +162,7 @@ The `filter` block is documented below.
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettemplatesort">List[Get<wbr>Template<wbr>Sort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gettemplatesort">Sequence[Get<wbr>Template<wbr>Sort<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -349,7 +349,7 @@ The following output properties are available:
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettemplatetemplate">List[Get<wbr>Template<wbr>Template]</a></span>
+        <span class="property-type"><a href="#gettemplatetemplate">Sequence[Get<wbr>Template<wbr>Template]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettemplatefilter">List[Get<wbr>Template<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#gettemplatefilter">Sequence[Get<wbr>Template<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettemplatesort">List[Get<wbr>Template<wbr>Sort]</a></span>
+        <span class="property-type"><a href="#gettemplatesort">Sequence[Get<wbr>Template<wbr>Sort]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -515,7 +515,7 @@ one of the values provided here.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Only retrieves the template which keys has value that matches
 one of the values provided here.
