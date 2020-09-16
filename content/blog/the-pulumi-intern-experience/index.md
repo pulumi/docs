@@ -30,7 +30,7 @@ I’m definitely not a fan of the [remote environment]({{< relref "/blog/coronav
 
 ### Introduction to the Pulumi Model
 
-I worked on the Platform team for the last 3 months, and they focused their work on the Pulumi SDK. The first few weeks were a huge learning curve, as the interns were tasked with converting Pulumi deployment examples from Typescript to Python, C#, and Go. This intro project taught me a lot about cloud resources, how they are deployed, and introduced me to helpful debugging tools through this process. I also learned how to write [tests](https://www.pulumi.com/docs/guides/testing/) to validate output for a deployment which proved helpful as I learned how the entire process was working.
+I worked on the Platform team for the last 3 months, and they focused their work on the Pulumi SDK. The first few weeks were a huge learning curve, as the interns were tasked with converting Pulumi deployment examples from Typescript to Python, C#, and Go. This intro project taught me a lot about cloud resources, how they are deployed, and introduced me to helpful debugging tools through this process. I also learned how to write [tests]({{< relref "/docs/guides/testing" >}}) to validate output for a deployment which proved helpful as I learned how the entire process was working.
 
 ### kube2pulumi Tooling
 
