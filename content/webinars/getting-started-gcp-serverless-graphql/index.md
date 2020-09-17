@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Getting Started with Serverless GraphQL on GCP"
-meta_desc: "In this guide, Lee Zen will walk you through building a serverless GraphQL API using Apollo GraphQL, and GCP Functions with the help of Pulumi."
+meta_desc: "In this episode, Lee Zen walks you through building a serverless GraphQL API using Apollo GraphQL and GCP Functions with the help of Pulumi."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -57,7 +57,7 @@ main:
     datetime: "MAY 19, 2020"
     # Description of the webinar.
     description: |
-        In today's episode, we are building a serverless GraphQL API using Apollo GraphQL, Google Cloud Functions, and Pulumi. Code for this episode available [here](https://github.com/pulumi/pulumitv/tree/master/modern-infrastructure-wednesday/2020-05-20).
+        In this episode, Lee Zen walks you through building a serverless GraphQL API using Apollo GraphQL and GCP Functions with the help of Pulumi. The code for this episode is [available on GitHub](https://github.com/pulumi/pulumitv/tree/master/modern-infrastructure-wednesday/2020-05-20).
 
     # The webinar presenters
     presenters:
