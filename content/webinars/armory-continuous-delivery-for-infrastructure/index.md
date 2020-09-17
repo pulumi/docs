@@ -1,7 +1,7 @@
 ---
 title: "Armory + Pulumi: Continuous Delivery for your IaC"
 meta_desc: Learn how the Pulumi plugin for Spinnaker simplifies your deployments
-  by having infrastructure and application code in a single workflow.
+  by having infrastructure and application code in a single workflow. lol
 featured: false
 pre_recorded: false
 pulumi_tv: false
@@ -10,6 +10,7 @@ unlisted: false
 gated: true
 type: webinars
 external: false
+block_external_search_index: false
 url_slug: armory-continuous-delivery-for-infrastructure
 hero:
   title: "Armory + Pulumi: Continuous Delivery for your Infrastructure as Code"
@@ -34,7 +35,6 @@ main:
 form:
   gotowebinar_key: "7516354254778856975"
   hubspot_form_id: bdb2e44f-d0ff-4a57-97b4-b2467abf6a39
-block_external_search_index: false
 aliases:
   - /webinars/armory-continuos-delivery-for-infrastructure
 ---
