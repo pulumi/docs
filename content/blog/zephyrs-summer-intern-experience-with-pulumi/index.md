@@ -1,6 +1,6 @@
 ---
 title: "Zephyr's Summer Intern Experience with Pulumi"
-date: "2020-09-16"
+date: "2020-09-17"
 meta_desc: "Zephyr's internship experience in Summer 2020, personal growth, skills learned and reflection"
 meta_image: zephyr-pulumi.png
 authors: ["zephyr-zhou"]
@@ -68,14 +68,14 @@ I cannot express enough thanks to Lee Zen, our site supervisor, for organizing t
 
 Moreover, my completion of the internship could not accomplish with:
 
-- Chris Smith. Thank you for helping me to understand the concept of assuming a role and set up the credentials and domains for my CMS project.
+- Chris Smith. Thank you for helping me to understand the concept of assuming a role and seting up the credentials and domains for my CMS project.
 
-- Sophia Parafina. Thank you for proofreading my three blog posts and carefully fixed my expression errors.
+- Sophia Parafina. Thank you for proofreading my three blog posts and carefully fixing my expression errors.
 
 - Isaac Harris, Lindsay Marolich, and Jay Wampold. Thank you for spending time learning and trying out the CMS and sharing suggestions for improvement.
 
 - Zack Chase. Thank you for informing me about the components of Pulumi's website and trying out my CMS application.
 
-- Freddy Hernandez. Thank you for ensuring our compensation and organize various team building games, which made my life in quarantine fascinating.
+- Freddy Hernandez. Thank you for ensuring our compensation and organizing various team building games, which made my life in quarantine fascinating.
 
 - Everyone at Pulumi. Thank you all for helping me and my fellow interns out and contribute to my wonderful internship experience!
