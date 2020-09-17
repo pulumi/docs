@@ -87,9 +87,9 @@
                         <time class="webinar-datetime uppercase text-orange text-sm font-bold">
                             <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
                         </time>
-                        <div class="text-gray-600">
+                        <p class="text-gray-600">
                             {{ .description | markdownify }}
-                        </div>
+                        </p>
                         <h6 class="uppercase">Presenters</h6>
                         <ul class="list-none p-0">
                             {{ range .presenters }}
