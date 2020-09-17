@@ -12,9 +12,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+
+      - name: Install Go
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.13.x
+
+      - name: Install assume-role
+        run: go get -u github.com/remind101/assume-role
+
+      - name: Add GOBIN to PATH
+        run: echo "::add-path::$(go env GOPATH)/bin"
+
       - name: Run make ci_bucket_cleanup
         run: make ci_bucket_cleanup
         env:
