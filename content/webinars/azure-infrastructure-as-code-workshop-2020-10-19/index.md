@@ -3,7 +3,7 @@ title: Azure Infrastructure as Code Workshop
 meta_desc: In this workshop, Mikhail Shilkov and Paul Stack show you
   how to tackle common challenges using Infrastructure as Code.
 featured: false
-pre_recorded: true
+pre_recorded: false
 pulumi_tv: false
 preview_image: /images/webinar/pulumi_workshop.jpg
 unlisted: false
