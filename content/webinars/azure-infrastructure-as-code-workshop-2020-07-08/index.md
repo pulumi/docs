@@ -2,7 +2,7 @@
 title: Azure Infrastructure as Code Workshop
 meta_desc: In this workshop, Luke Hoban and the Pulumi team show you how to
   tackle common challenges using Infrastructure as Code through a series of
-  hands-on labs.
+  hands-on labs. Also, this is just a test.
 featured: false
 pre_recorded: true
 pulumi_tv: false
