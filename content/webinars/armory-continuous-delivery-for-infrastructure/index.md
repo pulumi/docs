@@ -1,7 +1,7 @@
 ---
 title: "Armory + Pulumi: Continuous Delivery for your IaC"
 meta_desc: Learn how the Pulumi plugin for Spinnaker simplifies your deployments
-  by having infrastructure and application code in a single workflow. dsf
+  by having infrastructure and application code in a single workflow.
 featured: false
 pre_recorded: false
 pulumi_tv: false
