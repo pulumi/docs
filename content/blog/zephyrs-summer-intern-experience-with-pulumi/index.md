@@ -1,0 +1,81 @@
+---
+title: "Zephyr's Summer Intern Experience with Pulumi"
+date: "2020-09-16"
+meta_desc: "Zephyr's internship experience in Summer 2020, personal growth, skills learned and reflection"
+meta_image: zephyr-pulumi.png
+authors: ["zephyr-zhou"]
+tags: ["pulumi","intern"]
+---
+
+Hi, I am [Zephyr Zhou](https://www.linkedin.com/in/zephyr-zhou-a17741196/), a senior Computer Science student at the University of Washington. I have just spent this entire Summer interned at Pulumi. This is my first internship ever in my life. Thanks to Pulumi for providing this opportunity even in this difficult time of the Covid-19 epidemic. Despite the sad truth that I couldn't get in touch offline, I believe this would be one of the most precious memory.
+
+Time goes by so fast, but before saying goodbye to my internship, I would like to share the story.
+
+<!--more-->
+
+## Personal Growth
+
+Honestly, before my internship start, I was so nervous that I couldn't sleep. Previously, I had taken only one data management course that contains a tutorial about set up Azure SQL Database. Other than that, I have known nothing about the cloud. Although I have read about the [Getting Started documentation](https://www.pulumi.com/docs/get-started/aws/) and Golang, I was worried that my understanding was not good enough. Also, I transferred from a community college to the University of Washington as a junior student and was admitted to the Computer Science major after that. Therefore, I felt relatively new to programming compare to my peers and less confident working in the industry, even less working remotely.
+
+However, I am glad that I was brave enough to make the first step out of my comfort zone to learn about new things and improve my understanding during practicing. That was one of the important reasons for me to choose to intern at Pulumi, a startup with great potential. Also, due to the nature of startups, Pulumi has smaller but more connected teams. Personally, I felt more comfortable discussing issues and thoughts in small groups. Also, I am able to work with the different team and people, where broaden my horizons and improved my collaborating skills.
+
+I found the more I got familiar with the company and the job, the more confidence I am. This is also indispensable from the support of company members. The warm greetings and kind help gave me a lot of powers and courage. Working remotely with Pulumi was much more interactive than I thought. The one-to-one meeting with my mentor and site supervisor has boosted my working efficiency because I could compile my questions and updates, talk about them all together, and get informed about if I am on the right path. I also loved the fact that I was able to join other team meetings so I could learn about the different projects other people are working on.
+
+In addition, I absolutely love the various team-building games, especially the virtual escape room, and the pair-up chatting with other engineers in the team. These interesting events and relaxed atmosphere made me feel more welcomed and less stressful. I've been moved and realized it is okay to be imperfect and improve step by step. Despite I got less coding experience, I am still welcomed and cared for by everyone at Pulumi.
+
+Moreover, I am so glad that I could work on my individual internship project: building the content management system(CMS) for Pulumi's website. I have taken control of the whole development phase of the Content Management System project. I was able to research and write up proposals, implement the project, plan the next step, and improve. In the end, the CMS was published and running. I have contributed back to the Netlify CMS, the provider for the CMS. I have compiled CMS as an [open-source example](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth) and written blog posts on deploying the [CMS application]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}) and its [OAuth Access Token Server]({{< relref "/blog/deploying-the-infrastructure-of-oauth-server-for-cms-app" >}}) to AWS.
+
+When I heard the CMS project would be a great help for the marketing team during our meetings, I felt indescribable happiness and proud of myself. Although far from perfect, I was finally able to prove myself with this unforgettable experience.
+
+The confidence is the greatest gift that Pulumi gave me during this Summer internship. I felt a lot more confident in entering the technology industry and pursue my career goal as a software engineer. Thanks to this internship experience, I have grown braver and stronger than before.
+
+## Technology Skills
+
+I have learned a lot of skills that I have never learned in the classrooms.
+
+- First of all, I learned a lot about Pulumi and cloud technology.
+  - Before my internship, I only read about that Pulumi provides the code for building infrastructure before my internship. At first, I thought the benefit would just be to reduce the amount of work to click through different settings on the provider's website. However, during the development process of CMS, I found writing infrastructure as code can do many more things than that. For example, I have implemented the Github Actions, which will deploy the infrastructure automatically when I push or merge a pull request. It saves time to upload and deploy again and prevent any manual error by automating the process. Also, if we want to completely remove the cloud settings, Pulumi enables us to do a simple `pulumi destroy` rather than going through cloud settings and worry about any configuration that we fail to set back to original.
+  - I also learned to build the cloud infrastructure for a static website by configuring AWS S3 bucket, Route 53, CloudFront, and Certificate Manager. I also learned to configure AWS Fargate Service and create a Dockerfile.
+  - I learned more concepts including assume role, CDN(Content Delivery Network), target groups, and load balancers.
+
+- Besides cloud technology, I have to get in touch with the Continuous Delivery/ Continuous Integration concept and have practiced it with the Github to work with the team.
+  - I learned more details about git command including the difference between `git rebase` and `git merge`
+  - I learned to create Github projects, issues, and pull requests and link them together for better preference.
+  - I get to know about Github Actions and Workflow and implemented one for my internship project to increase efficiency in deploying.
+  - I learned about Github OAuth Applications and more about Github API while working on the OAuth Server for the CMS application.
+
+- I only learned to create a static website using plain HTML and CSS in the classroom. During my internship, I was able to get in touch with modern front-end technology including Netlify CMS, Hugo, Markdown, and React while building CMS and the preview of the website.
+
+## Reflection and Next Steps
+
+Although the basic infrastructure of the CMS application is working and provides a content management interface for the constantly updating webinar pages and events pages, there are more things I want to improve. During the last meeting with the marketing team, we have discussed creating [custom widget](https://www.netlifycms.org/docs/custom-widgets/#header) for shortcodes and image storage system. I have included in the issues and CMS Github project but don't have time to implement it.
+
+I realized I should have a clearer time schedule of development while writing the proposal and come up with a priority list of the features I want to develop in the beginning. During my meeting with the marketing team in the beginning we only discussed the potential improvement but fail to count the time it takes to develop each feature and the priority of them. If I could communicate about that better and wrote a better-timed plan, then I would be able to implement more new features.
+
+Also, as my mentor and supervisor points out, I had the bad habits of rushing through and things done without learning more details about the pathway that I choose in the beginning. If I would dig deeper into the problem, I believe I could organize the time better.
+
+In general, these lessons and experience would benefit me a lot, especially after I enter the industry after graduation in Spring 2021. I feel more prepared now. I have been fascinated by the concept of cloud and cloud infrastructure as code. I feel the potential of cloud technology and believe I will develop my career goal in this direction.
+
+Soon I will return to my senior year's schoolwork. However, please feel free to keep in touch with me via my [Linkedin](https://www.linkedin.com/in/zephyr-zhou-a17741196/) or my email <xzhou1551@outlook.com>.
+
+## Special Thanks!
+
+First of all, I offer my sincere appreciation to Joe Duffy and Luke Hoban for the decision of offering this internship opportunity and having meetings with us in the middle of our internship.
+
+Words can't express my thanks to Praneet Loke, my mentor, who spent every day having sync meetings with me to guide my internship pathway and help me move forward step by step. I can't count how many times he saved me from daunting problems and patiently explain the knowledge that was obscure to me.
+
+I cannot express enough thanks to Lee Zen, our site supervisor, for organizing this internship, ensuring our internship experience, entrusting me with the exciting CMS project, and guiding me towards the correct path during our weekly meeting.
+
+Moreover, my completion of the internship could not accomplish with:
+
+- Chris Smith. Thank you for helping me to understand the concept of assuming a role and set up the credentials and domains for my CMS project.
+
+- Sophia Parafina. Thank you for proofreading my three blog posts and carefully fixed my expression errors.
+
+- Isaac Harris, Lindsay Marolich, and Jay Wampold. Thank you for spent time learning and trying out the CMS and shares suggestion for improvement.
+
+- Zack Chase. Thank you for informing me about the components of Pulumi's website and tried out my CMS application.
+
+- Freddy Hernandez. Thank you for ensuring our compensation and organize various team building games, which made my life in quarantine fascinating.
+
+- Everyone in Pulumi. Thank you all for helping me and my fellow interns out and contributes to my wonderful intern experience!
