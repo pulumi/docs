@@ -1,12 +1,12 @@
 ---
-title: Cloud Engineering on Azure
+title: Modern Infrastructure as Code for Azure | Pulumi
 layout: azure
 url: /azure
 
-meta_desc: Cloud Engineering on the Azure cloud with Pulumi for huge productivity gains and a unified programming model for developers and operators.
+meta_desc: Modern Infrastructure as Code on the Azure cloud with Pulumi gives you huge productivity gains and a unified programming model for developers and operators.
 
 hero:
-    title: Cloud Engineering on Azure
+    title: Modern Infrastructure as Code for Azure
     description: |
         Pulumi's infrastructure as code SDK helps create, deploy, and manage Microsoft Azure containers, serverless functions, and infrastructure using real programming languages.
     cta_text: See What's New
@@ -106,12 +106,20 @@ hero:
                 }
 
 azure_overview:
-  title: Cloud Engineering on Azure
+  title: Modern Infrastructure as Code on Azure
   list:
     - Define infrastructure in JavaScript, TypeScript, Python, Go, or any .NET language, including C#, F#, and VB.
     - Increase your productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate all your Azure resources.
-    - Keep your cloud clean and secure by enforcing policies on every deployment.
+    - Keep your cloud secure and in compliance by enforcing policies on every deployment.
     - Codify best practices and policies then share them with your team or community as self-service architectures.
+  cta: Learn More
+  cta_url: "/blog/new-kubernetes-superpowers"
+
+arm2pulumi:
+  title: ARM &rarr; Pulumi
+  description: |
+    Whether you are just starting with Azure or already have infrastructure you're managing in Azure, Pulumi offers a simple path to adoption. If you are just starting, it is as easy as just writing your infrastructure code with Pulumi. If you already have existing resources in Azure you can simply export an ARM template from Azure and use Pulumi’s `arm2pulumi` tool to convert the ARM template to the language of your choice.
+
   cta: Learn More
   cta_url: "/blog/new-kubernetes-superpowers"
 
@@ -124,7 +132,7 @@ detail_sections:
     cta_url: "/blog/new-kubernetes-superpowers"
     items:
         - title: Everything In One Place
-          description: The SDKs include full coverage for Azure services, includinglike Azure Static Web Apps, Azure Synapse Analytics, Azure Logic Apps, Azure Service Fabric, Azure Blockchain Service, Azure API Management, and dozens of other services.
+          description: The SDKs include full coverage for Azure services, including Azure Static Web Apps, Azure Synapse Analytics, Azure Logic Apps, Azure Service Fabric, Azure Blockchain Service, Azure API Management, and dozens of other services.
           icon: fa-tools
 
         - title: Efficient Adoption
@@ -147,15 +155,15 @@ detail_sections:
     cta_url: "/docs/guides/crosswalk/kubernetes"
     items:
         - title: Auto Generated
-          description: We generate Pulumi SDKs for `azurerm` automatically from Azure API specifications published by Microsoft. An automated pipeline releases updated resources within hours after any current API specifications are merged.
+          description: We generate Pulumi SDKs for `azurerm` automatically from Azure API specifications published by Microsoft. An automated pipeline releases updated resources within hours after any current API specifications are merged. Auto generated means less manual implementation and fewer chances for bugs, meaning a high fidelity, high quality experience.
           icon: fa-sun
 
         - title: Familiar Concepts
-          description: Azure Resource Manager API is structured around Resource Providers &mdash; high-level groups like "storage", "compute", or "web". We map Resource Providers to top-level modules or namespaces in Pulumi SDKs.
+          description: Azure Resource Manager API is structured around Resource Providers &mdash; high-level groups like `storage`, `compute`, or `web`. We map Resource Providers to top-level modules or namespaces in Pulumi SDKs.
           icon: fa-users
 
         - title: API Versions
-          description: Each resource provider defines one or more API versions, for example, "2015-05-01", "2020-09-01", or "2020-08-01-preview". Every version of every ARM API is available in Pulumi SDKs, and each version has its own module or namespace.
+          description: Each resource provider defines one or more API versions, for example, `2015-05-01`, `2020-09-01`, or `2020-08-01-preview`. Every version of every ARM API is available in Pulumi SDKs, and each version has its own module or namespace.
           icon: fa-chalkboard-teacher
 
         - title: All Languages
@@ -219,7 +227,7 @@ superpowers:
 contact_us_form:
     section_id: contact-us
     hubspot_form_id: 826f708b-53a9-4abc-9cb9-950f47362b72
-    headline: Need help with cloud-native infrastructure as code on Azure?
+    headline: Need help with Azure?
     quote:
         title: Learn how top engineering teams are using Pulumi's SDK to create, deploy, and manage Azure resources.
         name: Josh Imhoff

@@ -3,12 +3,7 @@
         <div class="header-hero-items container mx-auto">
             <div class="header-hero-item">
                 <h1>{{ .Params.hero.title }}</h1>
-                <div class="flex flex-col md:flex-row">
-                    <p class="md:w-3/4 mr-4">{{ .Params.hero.description }}</p>
-                    <div class="top-0">
-                        <img class="object-scale-down w-48 md:mr-4" src="/images/partners/msft-partner.jpg" alt="Microsoft Partner">
-                    </div>
-                </div>
+                <p class="mr-4">{{ .Params.hero.description }}</p>
                 <p class="my-6">
                     <a class="inline-flex items-center text-white hover:text-white font-bold" href="{{ relref . .Params.hero.cta_url }}">
                         <span class="inline-block w-6 text-orange-300 mr-3">
@@ -94,7 +89,7 @@
         <div class="container mx-auto uppercase">
             <ul>
                 <li><a href="#azure-overview">Overview</a></li>
-                <li><a href="#superpowers">Features</a></li>
+                <li><a href="#arm2pulumi">ARM &rarr; Pulumi</a></li>
                 <li><a href="#summit">Cloud Engineering Summit</a></li>
                 <li><a href="#contact-us">Contact Us</a></li>
             </ul>
@@ -138,12 +133,12 @@
         </div>
     </section>
 
-    <section id="azure-overview" class="py-16 bg-gray-100 px-4 lg:px-0">
+    <section id="azure-overview" class="py-16 bg-white px-4 lg:px-0">
         <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
             {{ with .Params.azure_overview }}
                 <div class="lg:w-1/2">
-                    <div class="w-2/3 pb-16 mx-auto">
-                        {{ partial "pulumipus" (dict "type" "rocket") }}
+                    <div class="w-full pb-16 mx-auto">
+                        <img src="/images/partners/microsoft-partner-pulumipus.png" />
                     </div>
                 </div>
                 <div class="lg:w-1/2">
@@ -165,6 +160,30 @@
             {{ end }}
         </div>
     </section>
+
+    <section id="arm2pulumi" class="py-16 bg-white px-4 lg:px-0">
+        <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
+            {{ with .Params.arm2pulumi }}
+                <div class="lg:w-1/2 pr-10">
+                    <div class="md:px-24 lg:px-4">
+                        <h2>{{ .title | markdownify }}</h2>
+                        <p>{{ .description | markdownify }}</p>
+                        <div class="my-8">
+                            <a class="btn block text-center lg:inline-block" href="{{ relref $pageContext .cta_url }}">
+                                {{ .cta }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="w-full pb-16 mx-auto">
+                        <img src="/images/partners/arm2pulumi.png" />
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+
 
     {{ range $index, $item := .Params.detail_sections }}
         {{ $bgColor := "bg-white" }}
@@ -194,7 +213,7 @@
                                 </div>
                                 <div class="lg:w-3/4">
                                     <h5 class="text-center lg:text-left">{{ $row.title }}</h5>
-                                    <p class="lg:text-sm md:px-24 lg:px-0">{{ $row.description }}</p>
+                                    <p class="lg:text-sm md:px-24 lg:px-0">{{ $row.description | markdownify }}</p>
                                 </div>
                             </div>
                         </div>
