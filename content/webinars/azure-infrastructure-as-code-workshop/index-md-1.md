@@ -21,16 +21,16 @@ main:
   sortable_date: 2020-10-29T08:42:00.000-04:00
   duration: 2 1/2 hours
   datetime: Thu Oct 29, 2020 AT 06:00AM PT
-  description: >
+  description: >-
     The hardest part of Kubernetes is setting up the infrastructure: clusters,
     DNS, firewalls, load balancers, IAM, storage, logging, and performance
     monitoring, often spanning private, public, and hybrid cloud architectures.
 
 
-    In this workshop, Luke Hoban and the Pulumi team show you how to tackle these challenges using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud --- Azure, AWS, and GCP. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
+    In this workshop, the Pulumi team will show you how to tackle these challenges using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud -- Azure, AWS, and GCP. You'll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
 
 
-    After completing this workshop, you'll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You'll also be ready to empower your development teams to be more productive --- continuously deploying both their applications and infrastructure.
+    After completing this workshop, you'll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You'll also be ready to empower your development teams to be more productive -- continuously deploying both their applications and infrastructure.
   presenters:
     - name: Mikhail Shilkov
       role: Software Engineer, Pulumi
