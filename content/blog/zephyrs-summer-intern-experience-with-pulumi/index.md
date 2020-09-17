@@ -40,7 +40,7 @@ I have learned a lot of skills that I have never learned in the classrooms.
 
 - Besides cloud technology, I also got to work with the Continuous Integration/Continuous Delivery concept and have practiced it with the GitHub to work with the team.
   - I learned more details about git command including the difference between `git rebase` and `git merge`
-  - I learned to create GitHub projects, issues, and pull requests and link them together for better preference.
+  - I learned to create GitHub projects, issues, and pull requests and link them together for better references.
   - I get to know about GitHub Actions and Workflow and implemented one for my internship project to increase efficiency in deploying.
   - I learned about GitHub OAuth Applications and more about GitHub API while working on the OAuth Server for the CMS application.
 
