@@ -72,7 +72,7 @@
                     {{ end }}
                 </div>
             {{ else }}
-                <div class="md:mx-auto">
+                <div class="md:mx-auto w-full">
                     {{ $topLevelContext := . }}
                     {{ with .Params.main }}
                         <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
@@ -87,9 +87,9 @@
                         <time class="webinar-datetime uppercase text-orange text-sm font-bold">
                             <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
                         </time>
-                        <div class="text-gray-600">
+                        <p class="text-gray-600">
                             {{ .description | markdownify }}
-                        </div>
+                        </p>
                         <h6 class="uppercase">Presenters</h6>
                         <ul class="list-none p-0">
                             {{ range .presenters }}
@@ -105,6 +105,12 @@
                                 <li>{{ . }}</li>
                             {{ end }}
                         </ul>
+                    {{ end }}
+                    {{ if .Params.transcript }}
+                        <div class="mt-10">
+                            <h3>Transcript</h3>
+                            <p>{{ .Params.transcript | markdownify }}</p>
+                        </div>
                     {{ end }}
                 </div>
             {{ end }}
