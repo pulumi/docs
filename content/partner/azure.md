@@ -199,7 +199,7 @@ superpowers:
     description: |
         Pulumi allows you to use top programming languages across all public clouds with support
         for dozens of popular infrastructure service providers including private and hybrid clouds
-        helping ensure any multi-cloud strategy is succesfull one.
+        helping ensure any multi-cloud strategy is succesful one.
 
   - title: Reduce Provisioning Time
     cta: Learn more
