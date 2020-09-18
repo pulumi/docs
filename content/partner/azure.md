@@ -11,7 +11,7 @@ hero:
         Pulumi's infrastructure as code SDK helps create, deploy, and manage 100% of your
         Microsoft Azure infrastructure, including containers, serverless functions, and
         infrastructure using modern programming languages.
-    cta_text: See What's New
+    cta_text: See what's new
     cta_url: "/blog/announcing-nextgen-azure-provider"
     ide:
         tabs:
