@@ -59,17 +59,14 @@ The Next Generation Azure provider is available in preview today for all Pulumi 
 {{< choosable language typescript >}}
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
 import * as resources from "@pulumi/azure-nextgen/resources/latest";
 import * as storage from "@pulumi/azure-nextgen/storage/latest";
 
-// Create an Azure Resource Group
 const resourceGroup = new resources.ResourceGroup("resourceGroup", {
     resourceGroupName: "my-rg",
     location: "WestUS",
 });
 
-// Create an Azure resource (Storage Account)
 const storageAccount = new storage.StorageAccount("sa", {
     resourceGroupName: resourceGroup.name,
     accountName: "mystorageaccount",
@@ -86,7 +83,6 @@ const storageAccount = new storage.StorageAccount("sa", {
 {{< choosable language python >}}
 
 ```python
-import pulumi
 from pulumi_azure_nextgen.storage import latest as storage
 from pulumi_azure_nextgen.resources import latest as resources
 
@@ -215,28 +211,28 @@ New Pulumi templates are available for the new `azure-nextgen` provider:
 {{< choosable language typescript >}}
 
 ```sh
-$ pulumi new azurerm-typescript
+$ pulumi new azure-nextgen-typescript
 ```
 
 {{< /choosable >}}
 {{< choosable language python >}}
 
 ```sh
-$ pulumi new azurerm-python
+$ pulumi new azure-nextgen-python
 ```
 
 {{< /choosable >}}
 {{< choosable language csharp >}}
 
 ```sh
-$ pulumi new azurerm-csharp
+$ pulumi new azure-nextgen-csharp
 ```
 
 {{< /choosable >}}
 {{< choosable language go >}}
 
 ```sh
-$ pulumi new azurerm-go
+$ pulumi new azure-nextgen-go
 ```
 
 {{< /choosable >}}
