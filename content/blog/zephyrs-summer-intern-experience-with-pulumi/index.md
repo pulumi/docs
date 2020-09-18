@@ -19,7 +19,7 @@ Honestly, before my internship started, I was so nervous that I couldn't sleep. 
 
 However, I am glad that I was brave enough to make the first step out of my comfort zone to learn about new things and improve my understanding while practicing. That was one of the important reasons for choosing to intern at Pulumi, a startup with great potential. Also, due to the nature of startups, Pulumi has smaller but more connected teams. Personally, I felt more comfortable discussing issues and thoughts in small groups. Also, I was able to work with different teams and people. I was also able to broaden my horizons and improve my collaboration skills.
 
-I found that the more familiar I got with the company and the job, the more confident I was. This is also indispensable from the support of company members. The warm greetings and kind help gave me a lot of power and courage. Working remotely with Pulumi was much more interactive than I thought. The one-to-one meeting with my mentor and manager has boosted my working efficiency because I could compile my questions and updates, talk about them all together, and get informed about if I am on the right path. I also loved the fact that I could join other team meetings so I could learn about the different projects other people are working on.
+I found that the more familiar I got with the company and the job, the more confident I was. My confidence was boosted in large part from the support of team members. The warm greetings and kind help gave me a lot of powers and courage. Working remotely with Pulumi was much more interactive than I thought. The one-to-one meeting with my mentor and site supervisor has boosted my working efficiency because I could compile my questions and updates, talk about them all together, and get informed about if I am on the right path. I also loved the fact that I was able to join other team meetings so I could learn about the different projects other people are working on.
 
 In addition, I absolutely loved the various team-building games, especially the virtual escape room and the pair-up chatting with other engineers in the team. These interesting events and relaxed atmosphere made me feel more welcomed and less stressful. I've been moved and realized it is okay to be imperfect and improve step by step. Despite having less coding experience, I was still welcomed and cared for by everyone at Pulumi.
 
@@ -44,7 +44,7 @@ I have learned a lot of skills that I have never learned in the classrooms.
   - I got to know about GitHub Actions and Workflow and implemented one for my internship project to increase efficiency in deploying.
   - I learned about GitHub OAuth Applications and more about GitHub API while working on the OAuth Server for the CMS application.
 
-- I only learned to create a static website using plain HTML and CSS in the classroom. During my internship, I was able to get in touch with modern front-end technology including Netlify CMS, Hugo, Markdown, and React, while building the CMS and improving upon the preview feature within it.
+- I learned to create a static website using plain HTML and CSS in the classroom. During my internship, I was able to get in touch with modern front-end technology including Netlify CMS, Hugo, Markdown, and React, while building CMS and the website's preview.
 
 ## Reflection and Next Steps
 
@@ -56,7 +56,7 @@ Also, my mentor and manager taught me to dig deeper into the problem to understa
 
 In general, these lessons and experience will benefit me a lot, especially after I enter the industry after graduation in Spring 2021. I feel more prepared now. I have been fascinated by the concept of cloud and cloud infrastructure as code. I feel the potential of cloud technology and believe I will develop my career goal in this direction.
 
-Soon I will return to my senior year's schoolwork. However, please feel free to keep in touch with me via my [Linkedin](https://www.linkedin.com/in/zephyr-zhou-a17741196/) or my email <xzhou1551@outlook.com>.
+Soon I will return to my senior year's schoolwork. However, please feel free to keep in touch with me via my [Linkedin](https://www.linkedin.com/in/zephyr-zhou-a17741196/).
 
 ## Special Thanks!
 
