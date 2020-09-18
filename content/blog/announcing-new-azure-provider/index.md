@@ -179,6 +179,7 @@ func main() {
 ```
 
 {{< /choosable >}}
+{{< /chooser >}}
 
 API documentation is available at [Azure NextGen API Reference](/docs/reference/pkg/azure-nextgen) and includes more than 1,000 resource examples.
 
@@ -239,6 +240,7 @@ $ pulumi new azurerm-go
 ```
 
 {{< /choosable >}}
+{{< /chooser >}}
 
 Several larger examples are available in the Pulumi Examples repo:
 
