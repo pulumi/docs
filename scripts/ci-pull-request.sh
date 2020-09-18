@@ -13,6 +13,7 @@ fi
 
 source ./scripts/ci-login.sh
 
+./scripts/run-unit-tests.sh
 ./scripts/build-site.sh preview
 ./scripts/sync-and-test-bucket.sh preview
 ./scripts/publish-sentry-release.sh

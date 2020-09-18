@@ -26,11 +26,11 @@ export const configureStore = () => {
         console.error("Failed to read pulumi_state from localStorage:", e);
     }
 
-    const persistedState: Partial<AppState> = local ? JSON.parse(local) : {};
+    const persistedState: any = local ? JSON.parse(local) : {};
 
     const store = createStore(
         rootReducer,
-        persistedState,
+        normalizeState(persistedState),
         composeWithDevTools(applyMiddleware(thunk))
     );
 
@@ -48,4 +48,41 @@ export const configureStore = () => {
     });
 
     return store;
+}
+
+// normalizeState transforms slices of serialized state into a shape that conforms to
+// our current expectations.
+export function normalizeState(persistedState: any): Partial<AppState> {
+    let state: Partial<AppState> = {};
+
+    try {
+
+        // state.banners
+        if (persistedState.banners && Array.isArray(persistedState.banners.dismissed)) {
+
+            // Only load banner dismissals recorded within the last four days.
+            const fourDaysAgo = Date.now() - (60 * 60 * 24 * 4 * 1000);
+            state.banners = {
+                dismissed: persistedState.banners.dismissed.filter(b => {
+                    return !!b.name && b.dismissedAt && b.dismissedAt > fourDaysAgo;
+                }),
+            };
+        }
+
+        // state.preferences
+        if (persistedState.preferences) {
+            state.preferences = {
+                language: persistedState.preferences.language || "typescript",
+                os: persistedState.preferences.os || "macos",
+                cloud: persistedState.preferences.cloud || "aws",
+                k8sLanguage: persistedState.preferences.k8sLanguage || "typescript",
+                inputKind: persistedState.preferences.inputKind || "code",
+            };
+        }
+    }
+    catch (e) {
+        return state;
+    }
+
+    return state;
 }
