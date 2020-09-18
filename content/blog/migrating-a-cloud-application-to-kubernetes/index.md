@@ -388,4 +388,4 @@ In this example, we demonstrated the benefits Kubernetes offers and showed how t
 
 Next week, we'll explore applications using the MERN stack: MongoDB, Express, React, and NodeJS.
 
-The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/vova/aws-ts-k8s-voting-app/aws-ts-k8s-voting-app).
+The blog post's code can be [found on Github](https://github.com/pulumi/examples/tree/master/aws-ts-k8s-voting-app).
