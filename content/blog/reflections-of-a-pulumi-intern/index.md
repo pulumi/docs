@@ -39,11 +39,11 @@ In contrast, real software development at Pulumi was far more multi-person, rich
 
 I thought that Pulumi gave me an excellent balance between guidance and autonomy. My co-workers gave me an outline on what my project should acheive, and some pointers on how which tools to use, but other than that it was up to me to implement it.
 
-One aspect that I liked about Pulumi was that its main audience is of course developers, so it was easier to design `crd2pulumi` since I myself am a developer. Being able to see and directly interact with other programmers that use my tool and offer feedback was immensely satisfying. I loved was the energy that came from working with a fast-growing startup that provided real value to real people. It was excited to come to Monday's team meeting and see Pulumi's user count contiously rise, and hear about the latest deal that the sales team had just closed.
+One aspect that I liked about Pulumi was that its main audience is of course developers, so it was easier to design `crd2pulumi` since I myself am a developer. Being able to see and directly interact with other programmers that use my tool and offer feedback was immensely satisfying. I loved the energy that came from working with a fast-growing startup that provided real value to real people. It was exciting to come to Monday's team meeting and see Pulumi's user count contiously rise, and hear about the latest deal that the sales team had just closed.
 
 ## Pros of the Virtual Life
 
-Words cannot describe how much I appreciate the flexibility of virtual work-from-home. In conjunction with the two summer classes I was taking, this allowed to me to ocassionally optimize my schedule. For example, if I had stayed up late on Tuesday night submitting a problem set and I knew I had no meetings tommorow, I could wake up later on Wednesday morning, but just work a few more hours in the evening to compensate. However I tried my best to avoid this to keep in sync with the majority of Pulumi employees that are on from 9am to 5pm PST.
+I hugely appreciated the flexibility of virtual work-from-home. In conjunction with the two summer classes I was taking, this allowed to me to ocassionally optimize my schedule. For example, if I had stayed up late on Tuesday night submitting a problem set and I knew I had no meetings tommorow, I could wake up later on Wednesday morning, but just work a few more hours in the evening to compensate. However I tried my best to avoid this to keep in sync with the majority of Pulumi employees that are on from 9am to 5pm PST.
 
 After a few days, I settled into a routine of:
 - Wake up around 9-10am and drink some water
