@@ -19,7 +19,7 @@ export class Banner {
     @Prop()
     name: string;
 
-    // Whether the banner can be closed. Controls whether the "x" symbols appears.
+    // Whether the banner can be closed. Controls whether the "x" symbol appears.
     @Prop()
     dismissible: boolean = true;
 
@@ -34,9 +34,10 @@ export class Banner {
         this.store.mapDispatchToProps(this, { dismissBanner });
 
         this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
+
             return {
                 // Banners are visible if they have a name and haven't been dismissed.
-                visible: !!this.name && !state.banners.dismissed.includes(this.name),
+                visible: !!this.name && !state.banners.dismissed.find(b => b.name),
             }
         });
     }

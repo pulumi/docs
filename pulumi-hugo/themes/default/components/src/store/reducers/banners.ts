@@ -14,7 +14,15 @@ export const banners = (currentState = getInitialState(), action: BannersAction)
 
     switch (action.type) {
         case TypeKeys.DISMISS_BANNER:
-            return { ...currentState, dismissed: [ ...currentState.dismissed, action.name ] };
+            const { name, dismissedAt } = action.payload;
+
+            return {
+                ...currentState,
+                dismissed: [
+                    ...currentState.dismissed.filter(b => b.name !== name),
+                    { name, dismissedAt }
+                ]
+            };
         default:
             return currentState;
     }
