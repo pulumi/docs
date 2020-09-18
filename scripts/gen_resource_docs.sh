@@ -19,6 +19,7 @@ TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 PROVIDERS=(
     "aws"
     "azure"
+    "azure-nextgen"
     "azuread"
     "gcp"
 )
@@ -30,9 +31,13 @@ popd
 
 generate_docs() {
     provider=$1
+    repository="pulumi-${provider}"
+    if [ "$provider" = "azure-nextgen" ]; then
+        repository="pulumi-azure-nextgen-provider"
+    fi
 
-    echo -e "\033[0;95m--- Updating repo pulumi/pulumi-${provider} ---\033[0m"
-    pushd "../pulumi-${provider}"
+    echo -e "\033[0;95m--- Updating repo pulumi/${repository} ---\033[0m"
+    pushd "../${repository}"
     git fetch --tags
 
     plugin_version=$(git describe --tags "$(git rev-list --max-count=1 --tags --not --tags='*-dev')")
@@ -46,13 +51,13 @@ generate_docs() {
         plugin_version=${plugin_version:9}
     fi
 
-    echo -e "\033[0;93mCheckout pulumi/pulumi-${provider} at tag $plugin_version\033[0m"
+    echo -e "\033[0;93mCheckout pulumi/${repository} at tag $plugin_version\033[0m"
     git -c advice.detachedHead=false checkout "$plugin_version" >/dev/null
 
     # Go back to the docs repo.
     popd
 
-    EXISTING_SCHEMA_FILE="../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
+    EXISTING_SCHEMA_FILE="../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
     if [ "$provider" = "kubernetes" ]; then
         EXISTING_SCHEMA_FILE="../pulumi-kubernetes/sdk/schema/schema.json"
     fi
@@ -68,7 +73,7 @@ generate_docs() {
             pulumi plugin install resource "${provider}" "${plugin_version}"
         fi
 
-        pushd "../pulumi-${provider}"
+        pushd "../${repository}"
         make generate_schema
         popd
     fi
@@ -76,7 +81,7 @@ generate_docs() {
     if [ "$provider" = "kubernetes" ]; then
         SCHEMA_FILE="../../../pulumi-kubernetes/sdk/schema/schema.json"
     else
-        SCHEMA_FILE="../../../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
+        SCHEMA_FILE="../../../${repository}/provider/cmd/pulumi-resource-${provider}/schema.json"
     fi
 
     OVERLAY_SCHEMA_FILE=""
