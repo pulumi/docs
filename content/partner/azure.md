@@ -169,7 +169,7 @@ detail_sections:
   - title: Always Up To Date
     description: |
         The provider is designed to be always up to date with additions and changes
-        to Azure APIs. Pulumi SDKs are generated for `azurerm` automatically from
+        to Azure APIs. Pulumi SDKs are generated for `azure-nextgen` automatically from
         Azure API specifications published by Microsoft ensuring whichever SDK you choose
         is always up to date.
     cta: Learn More
