@@ -22,6 +22,10 @@ explore what's possible, you've come to the right place.
 
 {{< resource-providers "aws,azure,gcp,kubernetes" >}}
 
+### Next Generation Providers
+
+{{< resource-providers "azure-nextgen" >}}
+
 ### Cloud Providers
 
 {{< resource-providers "digitalocean,linode,vsphere,fastly,packet,openstack,alicloud,cloudamqp,hcloud,civo" >}}
