@@ -2,7 +2,7 @@
 title: "Reflections of a Pulumi Intern"
 meta_image: meta.png
 authors: ["albert-zhong"]
-meta_desc: "Peek into the kind of things I've experienced and accomplished as Pulumi's first."
+meta_desc: "A reflection of my Pulumi intern experiences"
 tags: ["pulumi", "intern"]
 date: "2020-09-18"
 ---
