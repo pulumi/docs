@@ -6,11 +6,13 @@ url: /azure
 meta_desc: Modern Infrastructure as Code on the Azure cloud with Pulumi gives you huge productivity gains and a unified programming model for developers and operators.
 
 hero:
-    title: Modern Infrastructure as Code for Microsoft Azure
+    title: Modern Infrastructure as Code for 100% of Microsoft Azure
     description: |
-        Pulumi's infrastructure as code SDK helps create, deploy, and manage Microsoft Azure containers, serverless functions, and infrastructure using modern programming languages.
+        Pulumi's infrastructure as code SDK helps create, deploy, and manage 100% of your
+        Microsoft Azure infrastructure, including containers, serverless functions, and
+        infrastructure using modern programming languages.
     cta_text: See What's New
-    cta_url: "/blog/new-kubernetes-superpowers" # /blog/announcing-nextgen-azure-provider
+    cta_url: "/blog/announcing-nextgen-azure-provider"
     ide:
         tabs:
             - title: index.ts
@@ -129,17 +131,17 @@ azure_overview:
     - Keep your cloud secure and in compliance by enforcing policies on every deployment.
     - Codify best practices and policies then share them with your team or community as self-service architectures.
   cta: Learn More
-  cta_url: "/blog/new-kubernetes-superpowers" # /blog/announcing-nextgen-azure-provider
+  cta_url: "/blog/announcing-nextgen-azure-provider"
 
 arm2pulumi:
   title: ARM &rarr; Pulumi
   description: |
-    Whether you're new to Microsoft Azure or already using it to manage your infrastructure, Pulumi makes getting started easy. If you're just starting out, you can write your infrastructure code using the Pulumi Azure SDK. Or if you're already managing resources with Azure, you can export an ARM template from Azure and use the `arm2pulumi` conversion tool to turn the template into a Pulumi program in the language of your choice.
+    Whether you're new to Microsoft Azure or already using it to manage your infrastructure, Pulumi makes getting started easy. If you're just starting out, you can write your infrastructure code using the Pulumi Azure SDK. Or if you're already managing resources with Azure, you can deploy an existing ARM template using Pulumi or you can rewrite the ARM template JSON in a programming language, either entirely, or one resource at a time.
 
     If you can deploy a resource with ARM templates, you can deploy it with the Pulumi Azure provider!
 
-  cta: Try it Now
-  cta_url: "/blog/new-kubernetes-superpowers" # /arm2pulumi
+  cta: Learn More
+  cta_url: "/docs/guides/adopting/from_azure"
 
 detail_sections:
   - title: 100% API Coverage
@@ -148,7 +150,7 @@ detail_sections:
         Resource Manager giving you the full power of Azure at your fingertips. Every
         property of each resource is always represented in the SDKs.
     cta: Learn More
-    cta_url: "/blog/new-kubernetes-superpowers" # /blog/announcing-nextgen-azure-provider
+    cta_url: "/blog/announcing-nextgen-azure-provider"
     items:
         - title: Everything In One Place
           description: The SDKs include full coverage for Azure services, including Azure Static Web Apps, Azure Synapse Analytics, Azure Logic Apps, Azure Service Fabric, Azure Blockchain Service, Azure API Management, and dozens of other services.
@@ -173,7 +175,7 @@ detail_sections:
         specifications published by Microsoft, which means you'll always have access to the latest
         Azure features and improvements.
     cta: Learn More
-    cta_url: "/docs/guides/crosswalk/kubernetes"
+    cta_url: "/blog/announcing-nextgen-azure-provider"
     items:
         - title: Auto Generated
           description: An automated pipeline releases updated resources within hours after any current API specifications are merged. Auto generated means less manual implementation and fewer chances for bugs, meaning a high fidelity, high quality experience.
