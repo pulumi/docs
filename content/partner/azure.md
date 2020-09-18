@@ -1,14 +1,14 @@
 ---
-title: Modern Infrastructure as Code for Azure | Pulumi
+title: Modern Infrastructure as Code for Microsoft Azure | Pulumi
 layout: azure
 url: /azure
 
 meta_desc: Modern Infrastructure as Code on the Azure cloud with Pulumi gives you huge productivity gains and a unified programming model for developers and operators.
 
 hero:
-    title: Modern Infrastructure as Code for Azure
+    title: Modern Infrastructure as Code for Microsoft Azure
     description: |
-        Pulumi's infrastructure as code SDK helps create, deploy, and manage Microsoft Azure containers, serverless functions, and infrastructure using real programming languages.
+        Pulumi's infrastructure as code SDK helps create, deploy, and manage Microsoft Azure containers, serverless functions, and infrastructure using modern programming languages.
     cta_text: See What's New
     cta_url: "/blog/new-kubernetes-superpowers" # /blog/announcing-nextgen-azure-provider
     ide:
@@ -125,7 +125,7 @@ azure_overview:
   title: Modern Infrastructure as Code on Azure
   list:
     - Define infrastructure in JavaScript, TypeScript, Python, Go, or any .NET language, including C#, F#, and VB.
-    - Increase your productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate all your Azure resources.
+    - Increase your productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate all of your Azure resources.
     - Keep your cloud secure and in compliance by enforcing policies on every deployment.
     - Codify best practices and policies then share them with your team or community as self-service architectures.
   cta: Learn More
@@ -134,11 +134,11 @@ azure_overview:
 arm2pulumi:
   title: ARM &rarr; Pulumi
   description: |
-    Whether you are just starting with Azure or already have infrastructure you're managing in Azure, Pulumi gives you a simple path to adoption. If you are just starting, it is as easy as just writing your infrastructure code with Pulumi. If you already have existing resources in Azure you can simply export an ARM template from Azure and use Pulumi’s `arm2pulumi` tool to convert the ARM template to the language of your choice.
+    Whether you're new to Microsoft Azure or already using it to manage your infrastructure, Pulumi makes getting started easy. If you're just starting out, you can write your infrastructure code using the Pulumi Azure SDK. Or if you're already managing resources with Azure, you can export an ARM template from Azure and use the `arm2pulumi` conversion tool to turn the template into a Pulumi program in the language of your choice.
 
-    If you can deploy a resource with ARM Templates, you can deploy it with the Pulumi Azure provider!
+    If you can deploy a resource with ARM templates, you can deploy it with the Pulumi Azure provider!
 
-  cta: Learn More
+  cta: Try it Now
   cta_url: "/blog/new-kubernetes-superpowers" # /arm2pulumi
 
 detail_sections:
@@ -166,12 +166,12 @@ detail_sections:
           description: The provider also contains functions to retrieve keys, secrets, and connection strings from all resources that expose them.
           icon: fa-people-carry
 
-  - title: Always Up To Date
+  - title: Always Up to Date
     description: |
-        The provider is designed to be always up to date with additions and changes
-        to Azure APIs. Pulumi SDKs are generated for `azure-nextgen` automatically from
-        Azure API specifications published by Microsoft ensuring whichever SDK you choose
-        is always up to date.
+        Pulumi's Microsoft Azure provider is designed to stay up-to-date with additions and changes
+        to Azure APIs. The `azure-nextgen` SDK is generated automatically from the Azure API
+        specifications published by Microsoft, which means you'll always have access to the latest
+        Azure features and improvements.
     cta: Learn More
     cta_url: "/docs/guides/crosswalk/kubernetes"
     items:
@@ -188,7 +188,7 @@ detail_sections:
           icon: fa-chalkboard-teacher
 
         - title: All Languages
-          description: The Pulumi Azure provider is available in all Pulumi languages. The SDKs are open source on GitHub and available in NPM, NuGet, PyPI, and Go Modules.
+          description: The Pulumi Azure provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, and .NET Core. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
           icon: fa-pager
 
 superpowers:
