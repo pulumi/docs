@@ -180,7 +180,7 @@ func main() {
 
 {{< /choosable >}}
 
-API documentation is available at [Azure NextGen API Reference]({{< relref "/docs/reference/pkg/azure-nextgen" >}}) and includes more than 1,000 resource examples.
+API documentation is available at [Azure NextGen API Reference](/docs/reference/pkg/azure-nextgen) and includes more than 1,000 resource examples.
 
 ## Integrated with Azure Ecosystem
 
