@@ -3,7 +3,7 @@ title: "Module certificates/v1"
 title_tag: "Module certificates/v1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1"
 meta_desc: "Explore members of the v1 module in the @pulumi/kubernetes package."
-git_sha: "ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f"
+git_sha: "37f9ccc3cc778db52fc6ffadd0524341e5efb806"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="CertificateSigningRequest" data-link-title="CertificateSigningRequest">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L18">
         Resource <strong>CertificateSigningRequest</strong>
     </a>
 </h3>
@@ -47,7 +47,7 @@ Kubelets use this API to obtain:
 This API can be used to request client certificates to authenticate to kube-apiserver (with the "kubernetes.io/kube-apiserver-client" signerName), or to obtain certificates from custom non-Kubernetes signers.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L61"> <b>constructor</b></a>
 </h4>
 
 
@@ -61,7 +61,7 @@ Create a CertificateSigningRequest resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -72,14 +72,14 @@ Get an existing CertificateSigningRequest resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -90,7 +90,7 @@ Returns true if the given object is an instance of CertificateSigningRequest.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L48">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L48">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"certificates.k8s.io/v1"</span>&gt;;</code></pre>
@@ -98,7 +98,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -107,7 +107,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L52">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L52">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CertificateSigningRequest"</span>&gt;;</code></pre>
@@ -115,12 +115,12 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L53">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L53">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L57">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L57">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CertificateSigningRequestSpec'>CertificateSigningRequestSpec</a>&gt;;</code></pre>
@@ -128,7 +128,7 @@ Kind is a string value representing the REST resource this object represents. Se
 spec contains the certificate request, and is immutable after creation. Only the request, signerName, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L61">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L61">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CertificateSigningRequestStatus'>CertificateSigningRequestStatus</a>&gt;;</code></pre>
@@ -136,7 +136,7 @@ spec contains the certificate request, and is immutable after creation. Only the
 status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequest-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -145,7 +145,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CertificateSigningRequestList" data-link-title="CertificateSigningRequestList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L12">
         Resource <strong>CertificateSigningRequestList</strong>
     </a>
 </h3>
@@ -155,7 +155,7 @@ deployments.
 CertificateSigningRequestList is a collection of CertificateSigningRequest objects
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L51"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L51"> <b>constructor</b></a>
 </h4>
 
 
@@ -169,7 +169,7 @@ Create a CertificateSigningRequestList resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -180,14 +180,14 @@ Get an existing CertificateSigningRequestList resource's state with the given na
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -198,7 +198,7 @@ Returns true if the given object is an instance of CertificateSigningRequestList
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"certificates.k8s.io/v1"</span>&gt;;</code></pre>
@@ -206,7 +206,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -215,7 +215,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L46">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L46">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CertificateSigningRequest'>CertificateSigningRequest</a>[]&gt;;</code></pre>
@@ -223,7 +223,7 @@ deployments and may be missing (undefined) during planning phases.
 items is a collection of CertificateSigningRequest objects
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L50">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L50">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CertificateSigningRequestList"</span>&gt;;</code></pre>
@@ -231,12 +231,12 @@ items is a collection of CertificateSigningRequest objects
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L51">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L51">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateSigningRequestList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -248,7 +248,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CertificateSigningRequestArgs" data-link-title="CertificateSigningRequestArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L104">
         interface <strong>CertificateSigningRequestArgs</strong>
     </a>
 </h3>
@@ -258,7 +258,7 @@ deployments.
 The set of arguments for constructing a CertificateSigningRequest resource.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L108">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L108">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"certificates.k8s.io/v1"</span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ The set of arguments for constructing a CertificateSigningRequest resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L112">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L112">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"CertificateSigningRequest"</span>&gt;;</code></pre>
@@ -274,12 +274,12 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L113">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L113">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CertificateSigningRequestArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L117">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequest.ts#L117">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CertificateSigningRequestSpec'>CertificateSigningRequestSpec</a>&gt;;</code></pre>
@@ -287,7 +287,7 @@ Kind is a string value representing the REST resource this object represents. Se
 spec contains the certificate request, and is immutable after creation. Only the request, signerName, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.
 
 <h3 class="pdoc-module-header" id="CertificateSigningRequestListArgs" data-link-title="CertificateSigningRequestListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L90">
         interface <strong>CertificateSigningRequestListArgs</strong>
     </a>
 </h3>
@@ -297,7 +297,7 @@ spec contains the certificate request, and is immutable after creation. Only the
 The set of arguments for constructing a CertificateSigningRequestList resource.
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L94">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L94">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"certificates.k8s.io/v1"</span>&gt;;</code></pre>
@@ -305,7 +305,7 @@ The set of arguments for constructing a CertificateSigningRequestList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L98">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L98">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CertificateSigningRequest'>CertificateSigningRequest</a>&gt;[]&gt;;</code></pre>
@@ -313,7 +313,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 items is a collection of CertificateSigningRequest objects
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L102">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L102">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"CertificateSigningRequestList"</span>&gt;;</code></pre>
@@ -321,7 +321,7 @@ items is a collection of CertificateSigningRequest objects
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="CertificateSigningRequestListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L103">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/certificates/v1/certificateSigningRequestList.ts#L103">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>

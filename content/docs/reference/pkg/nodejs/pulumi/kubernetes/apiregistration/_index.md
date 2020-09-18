@@ -3,7 +3,7 @@ title: "Module apiregistration"
 title_tag: "Module apiregistration | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "apiregistration"
 meta_desc: "Explore members of the apiregistration module in the @pulumi/kubernetes package."
-git_sha: "ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f"
+git_sha: "37f9ccc3cc778db52fc6ffadd0524341e5efb806"
 block_external_search_index: true
 ---
 

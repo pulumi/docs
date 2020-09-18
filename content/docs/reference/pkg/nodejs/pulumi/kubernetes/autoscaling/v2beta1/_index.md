@@ -3,7 +3,7 @@ title: "Module autoscaling/v2beta1"
 title_tag: "Module autoscaling/v2beta1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v2beta1"
 meta_desc: "Explore members of the v2beta1 module in the @pulumi/kubernetes package."
-git_sha: "ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f"
+git_sha: "37f9ccc3cc778db52fc6ffadd0524341e5efb806"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="HorizontalPodAutoscaler" data-link-title="HorizontalPodAutoscaler">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L12">
         Resource <strong>HorizontalPodAutoscaler</strong>
     </a>
 </h3>
@@ -41,7 +41,7 @@ block_external_search_index: true
 HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which automatically manages the replica count of any resource implementing the scale subresource based on the metrics specified.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -55,7 +55,7 @@ Create a HorizontalPodAutoscaler resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -66,14 +66,14 @@ Get an existing HorizontalPodAutoscaler resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Returns true if the given object is an instance of HorizontalPodAutoscaler.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"autoscaling/v2beta1"</span>&gt;;</code></pre>
@@ -92,7 +92,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -101,7 +101,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L46">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L46">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"HorizontalPodAutoscaler"</span>&gt;;</code></pre>
@@ -109,7 +109,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L50">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L50">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -117,7 +117,7 @@ Kind is a string value representing the REST resource this object represents. Se
 metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L54">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L54">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerSpec'>HorizontalPodAutoscalerSpec</a>&gt;;</code></pre>
@@ -125,7 +125,7 @@ metadata is the standard object metadata. More info: https://git.k8s.io/communit
 spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L58">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L58">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerStatus'>HorizontalPodAutoscalerStatus</a>&gt;;</code></pre>
@@ -133,7 +133,7 @@ spec is the specification for the behaviour of the autoscaler. More info: https:
 status is the current information about the autoscaler.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscaler-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -142,7 +142,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="HorizontalPodAutoscalerList" data-link-title="HorizontalPodAutoscalerList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L12">
         Resource <strong>HorizontalPodAutoscalerList</strong>
     </a>
 </h3>
@@ -152,7 +152,7 @@ deployments.
 HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -166,7 +166,7 @@ Create a HorizontalPodAutoscalerList resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -177,14 +177,14 @@ Get an existing HorizontalPodAutoscalerList resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -195,7 +195,7 @@ Returns true if the given object is an instance of HorizontalPodAutoscalerList. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"autoscaling/v2beta1"</span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -212,7 +212,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L46">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L46">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscaler'>HorizontalPodAutoscaler</a>[]&gt;;</code></pre>
@@ -220,7 +220,7 @@ deployments and may be missing (undefined) during planning phases.
 items is the list of horizontal pod autoscaler objects.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L50">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L50">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"HorizontalPodAutoscalerList"</span>&gt;;</code></pre>
@@ -228,7 +228,7 @@ items is the list of horizontal pod autoscaler objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L54">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L54">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -236,7 +236,7 @@ Kind is a string value representing the REST resource this object represents. Se
 metadata is the standard list metadata.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -248,7 +248,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="HorizontalPodAutoscalerArgs" data-link-title="HorizontalPodAutoscalerArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L98">
         interface <strong>HorizontalPodAutoscalerArgs</strong>
     </a>
 </h3>
@@ -258,7 +258,7 @@ deployments.
 The set of arguments for constructing a HorizontalPodAutoscaler resource.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L102">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L102">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"autoscaling/v2beta1"</span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ The set of arguments for constructing a HorizontalPodAutoscaler resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L106">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L106">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"HorizontalPodAutoscaler"</span>&gt;;</code></pre>
@@ -274,7 +274,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L110">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L110">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -282,7 +282,7 @@ Kind is a string value representing the REST resource this object represents. Se
 metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L114">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscaler.ts#L114">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HorizontalPodAutoscalerSpec'>HorizontalPodAutoscalerSpec</a>&gt;;</code></pre>
@@ -290,7 +290,7 @@ metadata is the standard object metadata. More info: https://git.k8s.io/communit
 spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
 
 <h3 class="pdoc-module-header" id="HorizontalPodAutoscalerListArgs" data-link-title="HorizontalPodAutoscalerListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L93">
         interface <strong>HorizontalPodAutoscalerListArgs</strong>
     </a>
 </h3>
@@ -300,7 +300,7 @@ spec is the specification for the behaviour of the autoscaler. More info: https:
 The set of arguments for constructing a HorizontalPodAutoscalerList resource.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L97">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L97">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"autoscaling/v2beta1"</span>&gt;;</code></pre>
@@ -308,7 +308,7 @@ The set of arguments for constructing a HorizontalPodAutoscalerList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L101">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L101">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HorizontalPodAutoscaler'>HorizontalPodAutoscaler</a>&gt;[]&gt;;</code></pre>
@@ -316,7 +316,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 items is the list of horizontal pod autoscaler objects.
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L105">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L105">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"HorizontalPodAutoscalerList"</span>&gt;;</code></pre>
@@ -324,7 +324,7 @@ items is the list of horizontal pod autoscaler objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="HorizontalPodAutoscalerListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff20a0da8abd6e3b4c5bd0e8ccb605d2406c7a7f/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L109">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/37f9ccc3cc778db52fc6ffadd0524341e5efb806/sdk/nodejs/autoscaling/v2beta1/horizontalPodAutoscalerList.ts#L109">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>
