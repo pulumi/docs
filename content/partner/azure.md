@@ -10,99 +10,115 @@ hero:
     description: |
         Pulumi's infrastructure as code SDK helps create, deploy, and manage Microsoft Azure containers, serverless functions, and infrastructure using real programming languages.
     cta_text: See What's New
-    cta_url: "/blog/new-kubernetes-superpowers"
+    cta_url: "/blog/new-kubernetes-superpowers" # /blog/announcing-nextgen-azure-provider
     ide:
         tabs:
             - title: index.ts
               language: typescript
               code: |
-                import * as pulumi from "@pulumi/pulumi";
-                import * as azure from "@pulumi/azure";
+                import * as resources from "@pulumi/azure-nextgen/resources/latest";
+                import * as storage from "@pulumi/azure-nextgen/storage/latest";
 
-                // Create a resource group
-                const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {
-                    location: "West Europe"
+                const resourceGroup = new resources.ResourceGroup("resourceGroup", {
+                    resourceGroupName: "my-rg",
+                    location: "WestUS",
                 });
 
-                // Create a virtual network within the resource group
-                const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
-                    resourceGroupName: exampleResourceGroup.name,
-                    location: exampleResourceGroup.location,
-                    addressSpaces: ["10.0.0.0/16"],
+                const storageAccount = new storage.StorageAccount("sa", {
+                    resourceGroupName: resourceGroup.name,
+                    accountName: "mystorageaccount",
+                    location: resourceGroup.location,
+                    sku: {
+                        name: "Standard_LRS",
+                        tier: "Standard",
+                    },
+                    kind: "StorageV2",
                 });
             - title: __main__.py
               language: python
               code: |
-                import pulumi
-                import pulumi_azure as azure
+                from pulumi_azure_nextgen.storage import latest as storage
+                from pulumi_azure_nextgen.resources import latest as resources
 
-                # Create a resource group
-                example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+                resource_group = resources.ResourceGroup('resource_group',
+                    resource_group_name='my-rg',
+                    location='WestUS')
 
-                # Create a virtual network within the resource group
-                example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
-                    resource_group_name=example_resource_group.name,
-                    location=example_resource_group.location,
-                    address_spaces=["10.0.0.0/16"])
+                account = storage.StorageAccount('sa',
+                    account_name='mystorageaccount',
+                    resource_group_name=resource_group.name,
+                    location=resource_group.location,
+                    sku=storage.SkuArgs(
+                        name='Standard_LRS',
+                        tier='Standard',
+                    ),
+                    kind='StorageV2')
             - title: main.go
               language: go
               code: |
-                    package main
+                package main
 
-                    import (
-                        "github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-                        "github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
-                        "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-                    )
+                import (
+                    resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+                    storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
+                    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+                )
 
-                    func main() {
-                        pulumi.Run(func(ctx *pulumi.Context) error {
-                            exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-                                Location: pulumi.String("West Europe"),
-                            })
-                            if err != nil {
-                                return err
-                            }
-                            _, err = network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
-                                ResourceGroupName: exampleResourceGroup.Name,
-                                Location:          exampleResourceGroup.Location,
-                                AddressSpaces: pulumi.StringArray{
-                                    pulumi.String("10.0.0.0/16"),
-                                },
-                            })
-                            if err != nil {
-                                return err
-                            }
-                            return nil
+                func main() {
+                    pulumi.Run(func(ctx *pulumi.Context) error {
+                        resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", &resources.ResourceGroupArgs{
+                            ResourceGroupName: pulumi.String("my-rg"),
+                            Location:          pulumi.String("WestUS"),
                         })
-                    }
+                        if err != nil {
+                            return err
+                        }
+
+                        account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
+                            ResourceGroupName: resourceGroup.Name,
+                            AccountName:       pulumi.String("mystorageaccount"),
+                            Location:          resourceGroup.Location,
+                            Sku: &storage.SkuArgs{
+                                Name: pulumi.String("Standard_LRS"),
+                                Tier: pulumi.String("Standard"),
+                            },
+                            Kind: pulumi.String("StorageV2"),
+                        })
+
+                        return err
+                    })
+                }
             - title: MyStack.cs
               language: csharp
               code: |
                 using Pulumi;
-                using Azure = Pulumi.Azure;
+                using Pulumi.AzureNextGen.Resources.Latest;
+                using Pulumi.AzureNextGen.Storage.Latest;
+                using Pulumi.AzureNextGen.Storage.Latest.Inputs;
 
                 class MyStack : Stack
                 {
                     public MyStack()
                     {
-                        // Create a resource group
-                        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+                        var resourceGroup = new ResourceGroup("resourceGroup", new ResourceGroupArgs
                         {
-                            Location = "West Europe",
+                            ResourceGroupName = "my-rg",
+                            Location = "WestUS"
                         });
-                        // Create a virtual network within the resource group
-                        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+
+                        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
                         {
-                            ResourceGroupName = exampleResourceGroup.Name,
-                            Location = exampleResourceGroup.Location,
-                            AddressSpaces =
+                            ResourceGroupName = resourceGroup.Name,
+                            AccountName = "mystorageaccount",
+                            Location = resourceGroup.Location,
+                            Sku = new SkuArgs
                             {
-                                "10.0.0.0/16",
+                                Name = "Standard_LRS",
+                                Tier = "Standard"
                             },
+                            Kind = "StorageV2"
                         });
                     }
-
                 }
 
 azure_overview:
@@ -113,30 +129,33 @@ azure_overview:
     - Keep your cloud secure and in compliance by enforcing policies on every deployment.
     - Codify best practices and policies then share them with your team or community as self-service architectures.
   cta: Learn More
-  cta_url: "/blog/new-kubernetes-superpowers"
+  cta_url: "/blog/new-kubernetes-superpowers" # /blog/announcing-nextgen-azure-provider
 
 arm2pulumi:
   title: ARM &rarr; Pulumi
   description: |
-    Whether you are just starting with Azure or already have infrastructure you're managing in Azure, Pulumi offers a simple path to adoption. If you are just starting, it is as easy as just writing your infrastructure code with Pulumi. If you already have existing resources in Azure you can simply export an ARM template from Azure and use Pulumi’s `arm2pulumi` tool to convert the ARM template to the language of your choice.
+    Whether you are just starting with Azure or already have infrastructure you're managing in Azure, Pulumi gives you a simple path to adoption. If you are just starting, it is as easy as just writing your infrastructure code with Pulumi. If you already have existing resources in Azure you can simply export an ARM template from Azure and use Pulumi’s `arm2pulumi` tool to convert the ARM template to the language of your choice.
+
+    If you can deploy a resource with ARM Templates, you can deploy it with the Pulumi Azure provider!
 
   cta: Learn More
-  cta_url: "/blog/new-kubernetes-superpowers"
+  cta_url: "/blog/new-kubernetes-superpowers" # /arm2pulumi
 
 detail_sections:
   - title: 100% API Coverage
     description: |
         The Pulumi Azure provider covers 100% of the resources available in Azure
-        Resource Manager.
+        Resource Manager giving you the full power of Azure at your fingertips. Every
+        property of each resource is always represented in the SDKs.
     cta: Learn More
-    cta_url: "/blog/new-kubernetes-superpowers"
+    cta_url: "/blog/new-kubernetes-superpowers" # /blog/announcing-nextgen-azure-provider
     items:
         - title: Everything In One Place
           description: The SDKs include full coverage for Azure services, including Azure Static Web Apps, Azure Synapse Analytics, Azure Logic Apps, Azure Service Fabric, Azure Blockchain Service, Azure API Management, and dozens of other services.
           icon: fa-tools
 
         - title: Efficient Adoption
-          description: There’s no need to rewrite your existing Azure configurations to get started with Pulumi. You can efficiently adopt existing Azure resources to deploy your application to save time and effort.
+          description: There’s no need to rewrite your existing Azure configurations to get started with Pulumi. You can efficiently adopt existing Azure resources to deploy your application to yourself save time and effort.
           icon: fa-book
 
         - title: Secrets Management
@@ -150,12 +169,14 @@ detail_sections:
   - title: Always Up To Date
     description: |
         The provider is designed to be always up to date with additions and changes
-        to Azure APIs.
+        to Azure APIs. Pulumi SDKs are generated for `azurerm` automatically from
+        Azure API specifications published by Microsoft ensuring whichever SDK you choose
+        is always up to date.
     cta: Learn More
     cta_url: "/docs/guides/crosswalk/kubernetes"
     items:
         - title: Auto Generated
-          description: We generate Pulumi SDKs for `azurerm` automatically from Azure API specifications published by Microsoft. An automated pipeline releases updated resources within hours after any current API specifications are merged. Auto generated means less manual implementation and fewer chances for bugs, meaning a high fidelity, high quality experience.
+          description: An automated pipeline releases updated resources within hours after any current API specifications are merged. Auto generated means less manual implementation and fewer chances for bugs, meaning a high fidelity, high quality experience.
           icon: fa-sun
 
         - title: Familiar Concepts
@@ -176,8 +197,9 @@ superpowers:
     cta_url: "/docs/get-started/azure"
     icon_type: cloud
     description: |
-        Pulumi gives you the power to work seamlessly with other cloud
-        providers helping ensure any multi cloud strategy is a successful one.
+        Pulumi allows you to use top programming languages across all public clouds with support
+        for dozens of popular infrastructure service providers including private and hybrid clouds
+        helping ensure any multi-cloud strategy is succesfull one.
 
   - title: Reduce Provisioning Time
     cta: Learn more

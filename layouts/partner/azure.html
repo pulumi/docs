@@ -137,8 +137,8 @@
         <div class="container mx-auto flex flex-col lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-center">
             {{ with .Params.azure_overview }}
                 <div class="lg:w-1/2">
-                    <div class="w-full pb-16 mx-auto">
-                        <img src="/images/partners/microsoft-partner-pulumipus.png" />
+                    <div class="w-2/3 pb-16 mx-auto">
+                        {{ partial "pulumipus" (dict "type" "lightning") }}
                     </div>
                 </div>
                 <div class="lg:w-1/2">
@@ -199,7 +199,7 @@
             <div class="container mx-auto lg:flex">
                 <div class="lg:w-1/2 lg:mr-8">
                     <h2 class="text-center lg:text-left md:px-24 lg:px-0">{{ $item.title }}</h2>
-                    <p class="text-xl md:px-24 lg:px-0">{{ $item.description }}</p>
+                    <p class="text-xl md:px-24 lg:px-0">{{ $item.description | markdownify }}</p>
                     <a class="hidden btn block text-center lg:inline-block {{ $ctaButtonColor }} my-4" href="{{ relref $pageContext $item.cta_url }}">
                         {{ $item.cta }}
                     </a>
