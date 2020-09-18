@@ -79,7 +79,7 @@ form:
 </div>
 
 <div id="pulumi-code-download-icon" class="float-right mt-4 mr-1 hidden">
-    <button class="copy-button" onclick="downloadCode()"><i class="fa fa-download text-xl" title="Download"></i></button>
+    <button class="copy-button" onclick="downloadCode('tf2pulumi.zip')"><i class="fa fa-download text-xl" title="Download"></i></button>
 </div>
 
 {{< chooser language "typescript,javascript,python,go,csharp" >}}
@@ -125,5 +125,5 @@ form:
 
 <div class="text-center py-8">
     <a id="pulumi-code-download-button"
-        class="btn btn-lg mr-4 opacity-50 cursor-not-allowed" onclick="downloadCode()">Download Code</a>
+        class="btn btn-lg mr-4 opacity-50 cursor-not-allowed" onclick="downloadCode('tf2pulumi.zip')">Download Code</a>
 </div>
