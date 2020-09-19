@@ -133,11 +133,11 @@ A module is a collection of topics that share a common theme and that are organi
 
 These definitions aren't perfect, but they should hopefully help clarify the differences.
 
-* An **example** is single Pulumi program (possibly expressed in multiple languages) with a concise README and a maybe a [Deploy with Pulumi button](https://www.pulumi.com/docs/intro/console/extensions/pulumi-button/). Examples are meant to serve as references; they're like snapshots of a finished product. Most of the programs in the [examples repo](https://github.com/pulumi/examples) today fall into this category.
+* An **example** is a single Pulumi program (possibly expressed in multiple languages) with a concise README and a maybe a [Deploy with Pulumi button](https://www.pulumi.com/docs/intro/console/extensions/pulumi-button/). Examples are meant to serve as references; they're like snapshots of a finished product. Most of the programs in the [examples repo](https://github.com/pulumi/examples) today fall into this category.
 
 * A **tutorial** is a guided walkthrough that often ends with a finished example. Like a blog post (and unlike an example), it's written in a familiar tone, generally in the second person ("you/your"), and it's aimed at having the reader learn by doing. Whereas an example might say, _Here's a finished thing you can look at and use_, a tutorial says, _Let's build a thing together_, from start to finish.
 
-* A **module** is more like a chapter in a book, its topics like sections within that chapter. Stylistically, a topic may be written like a tutorial, but it may not always end with a concrete result; instead, a topic might just tell you how to do something, or walk you through how something works. By the end of a module, though, you should have a fairly thorough understanding of whatever it is the module set out to communicate at the start.
+* A **module** is more like a chapter in a book, its topics like are sections within that chapter. Stylistically, a topic may be written like a tutorial, but it may not always end with a concrete result; instead, a topic might just tell you how to do something, or walk you through how something works. By the end of a module, though, you should have a fairly thorough understanding of whatever it is the module set out to communicate at the start.
 
 It might help to think about the differences with some sample titles:
 
@@ -159,6 +159,6 @@ Again, these may not be perfect, but should hopefully help you decide on the rig
 
 ## Questions?
 
-Ping Christian or anyone in the #docs channel.
+Ping Christian or anyone in the #docs channel on [Pulumi Community Slack](https://slack.pulumi.com).
 
 Thank you!
