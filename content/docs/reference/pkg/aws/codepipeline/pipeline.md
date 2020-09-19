@@ -12,6 +12,424 @@ meta_desc: "Explore the Pipeline resource of the codepipeline module, including 
 
 Provides a CodePipeline.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var codepipelineBucket = new Aws.S3.Bucket("codepipelineBucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+        });
+        var codepipelineRole = new Aws.Iam.Role("codepipelineRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Effect"": ""Allow"",
+      ""Principal"": {
+        ""Service"": ""codepipeline.amazonaws.com""
+      },
+      ""Action"": ""sts:AssumeRole""
+    }
+  ]
+}
+",
+        });
+        var s3kmskey = Output.Create(Aws.Kms.GetAlias.InvokeAsync(new Aws.Kms.GetAliasArgs
+        {
+            Name = "alias/myKmsKey",
+        }));
+        var codepipeline = new Aws.CodePipeline.Pipeline("codepipeline", new Aws.CodePipeline.PipelineArgs
+        {
+            RoleArn = codepipelineRole.Arn,
+            ArtifactStore = new Aws.CodePipeline.Inputs.PipelineArtifactStoreArgs
+            {
+                Location = codepipelineBucket.BucketName,
+                Type = "S3",
+                EncryptionKey = new Aws.CodePipeline.Inputs.PipelineArtifactStoreEncryptionKeyArgs
+                {
+                    Id = s3kmskey.Apply(s3kmskey => s3kmskey.Arn),
+                    Type = "KMS",
+                },
+            },
+            Stages = 
+            {
+                new Aws.CodePipeline.Inputs.PipelineStageArgs
+                {
+                    Name = "Source",
+                    Actions = 
+                    {
+                        new Aws.CodePipeline.Inputs.PipelineStageActionArgs
+                        {
+                            Name = "Source",
+                            Category = "Source",
+                            Owner = "ThirdParty",
+                            Provider = "GitHub",
+                            Version = "1",
+                            OutputArtifacts = 
+                            {
+                                "source_output",
+                            },
+                            Configuration = 
+                            {
+                                { "Owner", "my-organization" },
+                                { "Repo", "test" },
+                                { "Branch", "master" },
+                                { "OAuthToken", @var.Github_token },
+                            },
+                        },
+                    },
+                },
+                new Aws.CodePipeline.Inputs.PipelineStageArgs
+                {
+                    Name = "Build",
+                    Actions = 
+                    {
+                        new Aws.CodePipeline.Inputs.PipelineStageActionArgs
+                        {
+                            Name = "Build",
+                            Category = "Build",
+                            Owner = "AWS",
+                            Provider = "CodeBuild",
+                            InputArtifacts = 
+                            {
+                                "source_output",
+                            },
+                            OutputArtifacts = 
+                            {
+                                "build_output",
+                            },
+                            Version = "1",
+                            Configuration = 
+                            {
+                                { "ProjectName", "test" },
+                            },
+                        },
+                    },
+                },
+                new Aws.CodePipeline.Inputs.PipelineStageArgs
+                {
+                    Name = "Deploy",
+                    Actions = 
+                    {
+                        new Aws.CodePipeline.Inputs.PipelineStageActionArgs
+                        {
+                            Name = "Deploy",
+                            Category = "Deploy",
+                            Owner = "AWS",
+                            Provider = "CloudFormation",
+                            InputArtifacts = 
+                            {
+                                "build_output",
+                            },
+                            Version = "1",
+                            Configuration = 
+                            {
+                                { "ActionMode", "REPLACE_ON_FAILURE" },
+                                { "Capabilities", "CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM" },
+                                { "OutputFileName", "CreateStackOutput.json" },
+                                { "StackName", "MyStack" },
+                                { "TemplatePath", "build_output::sam-templated.yaml" },
+                            },
+                        },
+                    },
+                },
+            },
+        });
+        var codepipelinePolicy = new Aws.Iam.RolePolicy("codepipelinePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Role = codepipelineRole.Id,
+            Policy = Output.Tuple(codepipelineBucket.Arn, codepipelineBucket.Arn).Apply(values =>
+            {
+                var codepipelineBucketArn = values.Item1;
+                var codepipelineBucketArn1 = values.Item2;
+                return @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Effect"":""Allow"",
+      ""Action"": [
+        ""s3:GetObject"",
+        ""s3:GetObjectVersion"",
+        ""s3:GetBucketVersioning"",
+        ""s3:PutObject""
+      ],
+      ""Resource"": [
+        ""{codepipelineBucketArn}"",
+        ""{codepipelineBucketArn1}/*""
+      ]
+    }},
+    {{
+      ""Effect"": ""Allow"",
+      ""Action"": [
+        ""codebuild:BatchGetBuilds"",
+        ""codebuild:StartBuild""
+      ],
+      ""Resource"": ""*""
+    }}
+  ]
+}}
+";
+            }),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+codepipeline_bucket = aws.s3.Bucket("codepipelineBucket", acl="private")
+codepipeline_role = aws.iam.Role("codepipelineRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codepipeline.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+""")
+s3kmskey = aws.kms.get_alias(name="alias/myKmsKey")
+codepipeline = aws.codepipeline.Pipeline("codepipeline",
+    role_arn=codepipeline_role.arn,
+    artifact_store=aws.codepipeline.PipelineArtifactStoreArgs(
+        location=codepipeline_bucket.bucket,
+        type="S3",
+        encryption_key={
+            "id": s3kmskey.arn,
+            "type": "KMS",
+        },
+    ),
+    stages=[
+        aws.codepipeline.PipelineStageArgs(
+            name="Source",
+            actions=[aws.codepipeline.PipelineStageActionArgs(
+                name="Source",
+                category="Source",
+                owner="ThirdParty",
+                provider="GitHub",
+                version="1",
+                output_artifacts=["source_output"],
+                configuration={
+                    "Owner": "my-organization",
+                    "Repo": "test",
+                    "Branch": "master",
+                    "OAuthToken": var["github_token"],
+                },
+            )],
+        ),
+        aws.codepipeline.PipelineStageArgs(
+            name="Build",
+            actions=[aws.codepipeline.PipelineStageActionArgs(
+                name="Build",
+                category="Build",
+                owner="AWS",
+                provider="CodeBuild",
+                input_artifacts=["source_output"],
+                output_artifacts=["build_output"],
+                version="1",
+                configuration={
+                    "ProjectName": "test",
+                },
+            )],
+        ),
+        aws.codepipeline.PipelineStageArgs(
+            name="Deploy",
+            actions=[aws.codepipeline.PipelineStageActionArgs(
+                name="Deploy",
+                category="Deploy",
+                owner="AWS",
+                provider="CloudFormation",
+                input_artifacts=["build_output"],
+                version="1",
+                configuration={
+                    "ActionMode": "REPLACE_ON_FAILURE",
+                    "Capabilities": "CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM",
+                    "OutputFileName": "CreateStackOutput.json",
+                    "StackName": "MyStack",
+                    "TemplatePath": "build_output::sam-templated.yaml",
+                },
+            )],
+        ),
+    ])
+codepipeline_policy = aws.iam.RolePolicy("codepipelinePolicy",
+    role=codepipeline_role.id,
+    policy=pulumi.Output.all(codepipeline_bucket.arn, codepipeline_bucket.arn).apply(lambda codepipelineBucketArn, codepipelineBucketArn1: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Effect":"Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion",
+        "s3:GetBucketVersioning",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "{codepipeline_bucket_arn}",
+        "{codepipeline_bucket_arn1}/*"
+      ]
+    }},
+    {{
+      "Effect": "Allow",
+      "Action": [
+        "codebuild:BatchGetBuilds",
+        "codebuild:StartBuild"
+      ],
+      "Resource": "*"
+    }}
+  ]
+}}
+"""))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const codepipelineBucket = new aws.s3.Bucket("codepipelineBucket", {acl: "private"});
+const codepipelineRole = new aws.iam.Role("codepipelineRole", {assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codepipeline.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`});
+const s3kmskey = aws.kms.getAlias({
+    name: "alias/myKmsKey",
+});
+const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
+    roleArn: codepipelineRole.arn,
+    artifactStore: {
+        location: codepipelineBucket.bucket,
+        type: "S3",
+        encryptionKey: {
+            id: s3kmskey.then(s3kmskey => s3kmskey.arn),
+            type: "KMS",
+        },
+    },
+    stages: [
+        {
+            name: "Source",
+            actions: [{
+                name: "Source",
+                category: "Source",
+                owner: "ThirdParty",
+                provider: "GitHub",
+                version: "1",
+                outputArtifacts: ["source_output"],
+                configuration: {
+                    Owner: "my-organization",
+                    Repo: "test",
+                    Branch: "master",
+                    OAuthToken: _var.github_token,
+                },
+            }],
+        },
+        {
+            name: "Build",
+            actions: [{
+                name: "Build",
+                category: "Build",
+                owner: "AWS",
+                provider: "CodeBuild",
+                inputArtifacts: ["source_output"],
+                outputArtifacts: ["build_output"],
+                version: "1",
+                configuration: {
+                    ProjectName: "test",
+                },
+            }],
+        },
+        {
+            name: "Deploy",
+            actions: [{
+                name: "Deploy",
+                category: "Deploy",
+                owner: "AWS",
+                provider: "CloudFormation",
+                inputArtifacts: ["build_output"],
+                version: "1",
+                configuration: {
+                    ActionMode: "REPLACE_ON_FAILURE",
+                    Capabilities: "CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM",
+                    OutputFileName: "CreateStackOutput.json",
+                    StackName: "MyStack",
+                    TemplatePath: "build_output::sam-templated.yaml",
+                },
+            }],
+        },
+    ],
+});
+const codepipelinePolicy = new aws.iam.RolePolicy("codepipelinePolicy", {
+    role: codepipelineRole.id,
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect":"Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion",
+        "s3:GetBucketVersioning",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "${codepipelineBucket.arn}",
+        "${codepipelineBucket.arn}/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "codebuild:BatchGetBuilds",
+        "codebuild:StartBuild"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Pipeline Resource {#create}
@@ -23,7 +441,7 @@ Provides a CodePipeline.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline/#pulumi_aws.codepipeline.Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[List[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline/#pulumi_aws.codepipeline.Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,7 +827,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinestage">Sequence[Pipeline<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
@@ -579,7 +997,7 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[List[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -962,7 +1380,7 @@ The following state arguments are supported:
 <a href="#state_stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinestage">Sequence[Pipeline<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
@@ -1460,7 +1878,7 @@ The following state arguments are supported:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestageaction">List[Pipeline<wbr>Stage<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinestageaction">Sequence[Pipeline<wbr>Stage<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The action(s) to include in the stage. Defined as an `action` block below
 {{% /md %}}</dd>
@@ -1990,7 +2408,7 @@ The following state arguments are supported:
 <a href="#input_artifacts_python" style="color: inherit; text-decoration: inherit;">input_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of artifact names to be worked on.
 {{% /md %}}</dd>
@@ -2012,7 +2430,7 @@ The following state arguments are supported:
 <a href="#output_artifacts_python" style="color: inherit; text-decoration: inherit;">output_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of artifact names to output. Output artifact names must be unique within a pipeline.
 {{% /md %}}</dd>
@@ -2045,7 +2463,7 @@ The following state arguments are supported:
 <a href="#run_order_python" style="color: inherit; text-decoration: inherit;">run_<wbr>order</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The order in which actions are run.
 {{% /md %}}</dd>

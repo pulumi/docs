@@ -117,7 +117,7 @@ const service = new aws.ecs.TaskDefinition("service", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecs/#pulumi_aws.ecs.TaskDefinition">TaskDefinition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionInferenceAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionProxyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionVolumeArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecs/#pulumi_aws.ecs.TaskDefinition">TaskDefinition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionInferenceAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionProxyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionVolumeArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -297,12 +297,13 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A list of valid [container definitions]
-(http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a
-single valid JSON document. Please note that you should only provide values that are part of the container
-definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
-(https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the
-official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+    <dd>{{% md %}}A list of valid [container
+definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
+provided as a single valid JSON document. Please note that you should only
+provide values that are part of the container definition document. For a
+detailed description of what parameters are available, see the [Task Definition
+Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
+section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -474,12 +475,13 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A list of valid [container definitions]
-(http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a
-single valid JSON document. Please note that you should only provide values that are part of the container
-definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
-(https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the
-official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+    <dd>{{% md %}}A list of valid [container
+definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
+provided as a single valid JSON document. Please note that you should only
+provide values that are part of the container definition document. For a
+detailed description of what parameters are available, see the [Task Definition
+Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
+section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -651,12 +653,13 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A list of valid [container definitions]
-(http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a
-single valid JSON document. Please note that you should only provide values that are part of the container
-definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
-(https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the
-official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+    <dd>{{% md %}}A list of valid [container
+definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
+provided as a single valid JSON document. Please note that you should only
+provide values that are part of the container definition document. For a
+detailed description of what parameters are available, see the [Task Definition
+Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
+section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -828,12 +831,13 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A list of valid [container definitions]
-(http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a
-single valid JSON document. Please note that you should only provide values that are part of the container
-definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
-(https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the
-official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+    <dd>{{% md %}}A list of valid [container
+definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
+provided as a single valid JSON document. Please note that you should only
+provide values that are part of the container definition document. For a
+detailed description of what parameters are available, see the [Task Definition
+Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
+section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -875,7 +879,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#inference_accelerators_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">List[Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">Sequence[Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Inference Accelerators settings. Detailed below.
 {{% /md %}}</dd>
@@ -930,7 +934,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionplacementconstraint">List[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">Sequence[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
 {{% /md %}}</dd>
@@ -952,7 +956,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#requires_compatibilities_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>compatibilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
 {{% /md %}}</dd>
@@ -985,7 +989,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolume">List[Task<wbr>Definition<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolume">Sequence[Task<wbr>Definition<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of volume blocks that containers in your task may use.
 {{% /md %}}</dd>
@@ -1152,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The revision of the task in a particular family.
 {{% /md %}}</dd>
@@ -1177,7 +1181,7 @@ Get an existing TaskDefinition resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionInferenceAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionProxyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionVolumeArgs]]</span> = None<span class="p">) -&gt;</span> TaskDefinition</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionInferenceAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionProxyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TaskDefinitionVolumeArgs]]</span> = None<span class="p">) -&gt;</span> TaskDefinition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1310,12 +1314,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A list of valid [container definitions]
-(http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a
-single valid JSON document. Please note that you should only provide values that are part of the container
-definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
-(https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the
-official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+    <dd>{{% md %}}A list of valid [container
+definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
+provided as a single valid JSON document. Please note that you should only
+provide values that are part of the container definition document. For a
+detailed description of what parameters are available, see the [Task Definition
+Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
+section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1509,12 +1514,13 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A list of valid [container definitions]
-(http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a
-single valid JSON document. Please note that you should only provide values that are part of the container
-definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
-(https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the
-official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+    <dd>{{% md %}}A list of valid [container
+definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
+provided as a single valid JSON document. Please note that you should only
+provide values that are part of the container definition document. For a
+detailed description of what parameters are available, see the [Task Definition
+Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
+section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1708,12 +1714,13 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A list of valid [container definitions]
-(http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a
-single valid JSON document. Please note that you should only provide values that are part of the container
-definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
-(https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the
-official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+    <dd>{{% md %}}A list of valid [container
+definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
+provided as a single valid JSON document. Please note that you should only
+provide values that are part of the container definition document. For a
+detailed description of what parameters are available, see the [Task Definition
+Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
+section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1907,12 +1914,13 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A list of valid [container definitions]
-(http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a
-single valid JSON document. Please note that you should only provide values that are part of the container
-definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
-(https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the
-official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+    <dd>{{% md %}}A list of valid [container
+definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
+provided as a single valid JSON document. Please note that you should only
+provide values that are part of the container definition document. For a
+detailed description of what parameters are available, see the [Task Definition
+Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
+section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1954,7 +1962,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#state_inference_accelerators_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">List[Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">Sequence[Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Inference Accelerators settings. Detailed below.
 {{% /md %}}</dd>
@@ -2009,7 +2017,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#state_placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionplacementconstraint">List[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">Sequence[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
 {{% /md %}}</dd>
@@ -2031,7 +2039,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#state_requires_compatibilities_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>compatibilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
 {{% /md %}}</dd>
@@ -2042,7 +2050,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#state_revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The revision of the task in a particular family.
 {{% /md %}}</dd>
@@ -2075,7 +2083,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolume">List[Task<wbr>Definition<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolume">Sequence[Task<wbr>Definition<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of volume blocks that containers in your task may use.
 {{% /md %}}</dd>
@@ -3299,7 +3307,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#transit_encryption_port_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port to use for transit encryption. If you do not specify a transit encryption port, it will use the port selection strategy that the Amazon EFS mount helper uses.
 {{% /md %}}</dd>

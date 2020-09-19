@@ -488,7 +488,7 @@ The following output properties are available:
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getgroupuser">List[Get<wbr>Group<wbr>User]</a></span>
+        <span class="property-type"><a href="#getgroupuser">Sequence[Get<wbr>Group<wbr>User]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing group member information. See supported fields below.
 {{% /md %}}</dd>

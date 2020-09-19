@@ -28,10 +28,10 @@ class MyStack : Stack
     {
         var test = new Aws.Ses.IdentityNotificationTopic("test", new Aws.Ses.IdentityNotificationTopicArgs
         {
+            TopicArn = aws_sns_topic.Example.Arn,
+            NotificationType = "Bounce",
             Identity = aws_ses_domain_identity.Example.Domain,
             IncludeOriginalHeaders = true,
-            NotificationType = "Bounce",
-            TopicArn = aws_sns_topic.Example.Arn,
         });
     }
 
@@ -52,10 +52,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ses.NewIdentityNotificationTopic(ctx, "test", &ses.IdentityNotificationTopicArgs{
+			TopicArn:               pulumi.Any(aws_sns_topic.Example.Arn),
+			NotificationType:       pulumi.String("Bounce"),
 			Identity:               pulumi.Any(aws_ses_domain_identity.Example.Domain),
 			IncludeOriginalHeaders: pulumi.Bool(true),
-			NotificationType:       pulumi.String("Bounce"),
-			TopicArn:               pulumi.Any(aws_sns_topic.Example.Arn),
 		})
 		if err != nil {
 			return err
@@ -73,10 +73,10 @@ import pulumi
 import pulumi_aws as aws
 
 test = aws.ses.IdentityNotificationTopic("test",
-    identity=aws_ses_domain_identity["example"]["domain"],
-    include_original_headers=True,
+    topic_arn=aws_sns_topic["example"]["arn"],
     notification_type="Bounce",
-    topic_arn=aws_sns_topic["example"]["arn"])
+    identity=aws_ses_domain_identity["example"]["domain"],
+    include_original_headers=True)
 ```
 
 {{% /example %}}
@@ -88,10 +88,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const test = new aws.ses.IdentityNotificationTopic("test", {
-    identity: aws_ses_domain_identity_example.domain,
-    includeOriginalHeaders: true,
+    topicArn: aws_sns_topic.example.arn,
     notificationType: "Bounce",
-    topicArn: aws_sns_topic_example.arn,
+    identity: aws_ses_domain_identity.example.domain,
+    includeOriginalHeaders: true,
 });
 ```
 

@@ -11,6 +11,8 @@ Explore the resources and functions of the xray module in the AWS package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="encryptionconfig" title="EncryptionConfig"><span class="symbol resource"></span>EncryptionConfig</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="samplingrule" title="SamplingRule"><span class="symbol resource"></span>SamplingRule</a></li>
 </ul>
 
@@ -23,7 +25,7 @@ Explore the resources and functions of the xray module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.2.1</dd>
+	<dd>3.3.0</dd>
 </dl>
 
 

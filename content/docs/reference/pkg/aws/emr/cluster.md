@@ -15,8 +15,678 @@ process large amounts of data efficiently. See [Amazon Elastic MapReduce Documen
 for more information.
 
 To configure [Instance Groups](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for [task nodes](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-task), see the `aws.emr.InstanceGroup` resource.
+## Instance Fleet
 
-> Support for [Instance Fleets](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-fleets) will be made available in an upcoming release.
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.emr.Cluster("example", {
+    masterInstanceFleet: {
+        instanceTypeConfigs: [{
+            instanceType: "m4.xlarge",
+        }],
+        targetOnDemandCapacity: 1,
+    },
+    coreInstanceFleet: {
+        instanceTypeConfigs: [
+            {
+                bidPriceAsPercentageOfOnDemandPrice: 80,
+                ebsConfigs: [{
+                    size: 100,
+                    type: "gp2",
+                    volumesPerInstance: 1,
+                }],
+                instanceType: "m3.xlarge",
+                weightedCapacity: 1,
+            },
+            {
+                bidPriceAsPercentageOfOnDemandPrice: 100,
+                ebsConfigs: [{
+                    size: 100,
+                    type: "gp2",
+                    volumesPerInstance: 1,
+                }],
+                instanceType: "m4.xlarge",
+                weightedCapacity: 1,
+            },
+            {
+                bidPriceAsPercentageOfOnDemandPrice: 100,
+                ebsConfigs: [{
+                    size: 100,
+                    type: "gp2",
+                    volumesPerInstance: 1,
+                }],
+                instanceType: "m4.2xlarge",
+                weightedCapacity: 2,
+            },
+        ],
+        launchSpecifications: {
+            spotSpecifications: [{
+                allocationStrategy: "capacity-optimized",
+                blockDurationMinutes: 0,
+                timeoutAction: "SWITCH_TO_ON_DEMAND",
+                timeoutDurationMinutes: 10,
+            }],
+        },
+        name: "core fleet",
+        targetOnDemandCapacity: 2,
+        targetSpotCapacity: 2,
+    },
+});
+const task = new aws.emr.InstanceFleet("task", {
+    clusterId: example.id,
+    instanceTypeConfigs: [
+        {
+            bidPriceAsPercentageOfOnDemandPrice: 100,
+            ebsConfigs: [{
+                size: 100,
+                type: "gp2",
+                volumesPerInstance: 1,
+            }],
+            instanceType: "m4.xlarge",
+            weightedCapacity: 1,
+        },
+        {
+            bidPriceAsPercentageOfOnDemandPrice: 100,
+            ebsConfigs: [{
+                size: 100,
+                type: "gp2",
+                volumesPerInstance: 1,
+            }],
+            instanceType: "m4.2xlarge",
+            weightedCapacity: 2,
+        },
+    ],
+    launchSpecifications: {
+        spotSpecifications: [{
+            allocationStrategy: "capacity-optimized",
+            blockDurationMinutes: 0,
+            timeoutAction: "TERMINATE_CLUSTER",
+            timeoutDurationMinutes: 10,
+        }],
+    },
+    targetOnDemandCapacity: 1,
+    targetSpotCapacity: 1,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.emr.Cluster("example",
+    master_instance_fleet=aws.emr.ClusterMasterInstanceFleetArgs(
+        instance_type_configs=[{
+            "instance_type": "m4.xlarge",
+        }],
+        target_on_demand_capacity=1,
+    ),
+    core_instance_fleet=aws.emr.ClusterCoreInstanceFleetArgs(
+        instance_type_configs=[
+            {
+                "bidPriceAsPercentageOfOnDemandPrice": 80,
+                "ebs_configs": [{
+                    "size": 100,
+                    "type": "gp2",
+                    "volumesPerInstance": 1,
+                }],
+                "instance_type": "m3.xlarge",
+                "weightedCapacity": 1,
+            },
+            {
+                "bidPriceAsPercentageOfOnDemandPrice": 100,
+                "ebs_configs": [{
+                    "size": 100,
+                    "type": "gp2",
+                    "volumesPerInstance": 1,
+                }],
+                "instance_type": "m4.xlarge",
+                "weightedCapacity": 1,
+            },
+            {
+                "bidPriceAsPercentageOfOnDemandPrice": 100,
+                "ebs_configs": [{
+                    "size": 100,
+                    "type": "gp2",
+                    "volumesPerInstance": 1,
+                }],
+                "instance_type": "m4.2xlarge",
+                "weightedCapacity": 2,
+            },
+        ],
+        launch_specifications={
+            "spotSpecifications": [{
+                "allocation_strategy": "capacity-optimized",
+                "block_duration_minutes": 0,
+                "timeoutAction": "SWITCH_TO_ON_DEMAND",
+                "timeoutDurationMinutes": 10,
+            }],
+        },
+        name="core fleet",
+        target_on_demand_capacity=2,
+        target_spot_capacity=2,
+    ))
+task = aws.emr.InstanceFleet("task",
+    cluster_id=example.id,
+    instance_type_configs=[
+        aws.emr.InstanceFleetInstanceTypeConfigArgs(
+            bid_price_as_percentage_of_on_demand_price=100,
+            ebs_configs=[{
+                "size": 100,
+                "type": "gp2",
+                "volumesPerInstance": 1,
+            }],
+            instance_type="m4.xlarge",
+            weighted_capacity=1,
+        ),
+        aws.emr.InstanceFleetInstanceTypeConfigArgs(
+            bid_price_as_percentage_of_on_demand_price=100,
+            ebs_configs=[{
+                "size": 100,
+                "type": "gp2",
+                "volumesPerInstance": 1,
+            }],
+            instance_type="m4.2xlarge",
+            weighted_capacity=2,
+        ),
+    ],
+    launch_specifications=aws.emr.InstanceFleetLaunchSpecificationsArgs(
+        spot_specifications=[aws.emr.InstanceFleetLaunchSpecificationsSpotSpecificationArgs(
+            allocation_strategy="capacity-optimized",
+            block_duration_minutes=0,
+            timeout_action="TERMINATE_CLUSTER",
+            timeout_duration_minutes=10,
+        )],
+    ),
+    target_on_demand_capacity=1,
+    target_spot_capacity=1)
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Emr.Cluster("example", new Aws.Emr.ClusterArgs
+        {
+            MasterInstanceFleet = new Aws.Emr.Inputs.ClusterMasterInstanceFleetArgs
+            {
+                InstanceTypeConfigs = 
+                {
+                    new Aws.Emr.Inputs.ClusterMasterInstanceFleetInstanceTypeConfigArgs
+                    {
+                        InstanceType = "m4.xlarge",
+                    },
+                },
+                TargetOnDemandCapacity = 1,
+            },
+            CoreInstanceFleet = new Aws.Emr.Inputs.ClusterCoreInstanceFleetArgs
+            {
+                InstanceTypeConfigs = 
+                {
+                    new Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigArgs
+                    {
+                        BidPriceAsPercentageOfOnDemandPrice = 80,
+                        EbsConfigs = 
+                        {
+                            new Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs
+                            {
+                                Size = 100,
+                                Type = "gp2",
+                                VolumesPerInstance = 1,
+                            },
+                        },
+                        InstanceType = "m3.xlarge",
+                        WeightedCapacity = 1,
+                    },
+                    new Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigArgs
+                    {
+                        BidPriceAsPercentageOfOnDemandPrice = 100,
+                        EbsConfigs = 
+                        {
+                            new Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs
+                            {
+                                Size = 100,
+                                Type = "gp2",
+                                VolumesPerInstance = 1,
+                            },
+                        },
+                        InstanceType = "m4.xlarge",
+                        WeightedCapacity = 1,
+                    },
+                    new Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigArgs
+                    {
+                        BidPriceAsPercentageOfOnDemandPrice = 100,
+                        EbsConfigs = 
+                        {
+                            new Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs
+                            {
+                                Size = 100,
+                                Type = "gp2",
+                                VolumesPerInstance = 1,
+                            },
+                        },
+                        InstanceType = "m4.2xlarge",
+                        WeightedCapacity = 2,
+                    },
+                },
+                LaunchSpecifications = new Aws.Emr.Inputs.ClusterCoreInstanceFleetLaunchSpecificationsArgs
+                {
+                    SpotSpecifications = 
+                    {
+                        new Aws.Emr.Inputs.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs
+                        {
+                            AllocationStrategy = "capacity-optimized",
+                            BlockDurationMinutes = 0,
+                            TimeoutAction = "SWITCH_TO_ON_DEMAND",
+                            TimeoutDurationMinutes = 10,
+                        },
+                    },
+                },
+                Name = "core fleet",
+                TargetOnDemandCapacity = 2,
+                TargetSpotCapacity = 2,
+            },
+        });
+        var task = new Aws.Emr.InstanceFleet("task", new Aws.Emr.InstanceFleetArgs
+        {
+            ClusterId = example.Id,
+            InstanceTypeConfigs = 
+            {
+                new Aws.Emr.Inputs.InstanceFleetInstanceTypeConfigArgs
+                {
+                    BidPriceAsPercentageOfOnDemandPrice = 100,
+                    EbsConfigs = 
+                    {
+                        new Aws.Emr.Inputs.InstanceFleetInstanceTypeConfigEbsConfigArgs
+                        {
+                            Size = 100,
+                            Type = "gp2",
+                            VolumesPerInstance = 1,
+                        },
+                    },
+                    InstanceType = "m4.xlarge",
+                    WeightedCapacity = 1,
+                },
+                new Aws.Emr.Inputs.InstanceFleetInstanceTypeConfigArgs
+                {
+                    BidPriceAsPercentageOfOnDemandPrice = 100,
+                    EbsConfigs = 
+                    {
+                        new Aws.Emr.Inputs.InstanceFleetInstanceTypeConfigEbsConfigArgs
+                        {
+                            Size = 100,
+                            Type = "gp2",
+                            VolumesPerInstance = 1,
+                        },
+                    },
+                    InstanceType = "m4.2xlarge",
+                    WeightedCapacity = 2,
+                },
+            },
+            LaunchSpecifications = new Aws.Emr.Inputs.InstanceFleetLaunchSpecificationsArgs
+            {
+                SpotSpecifications = 
+                {
+                    new Aws.Emr.Inputs.InstanceFleetLaunchSpecificationsSpotSpecificationArgs
+                    {
+                        AllocationStrategy = "capacity-optimized",
+                        BlockDurationMinutes = 0,
+                        TimeoutAction = "TERMINATE_CLUSTER",
+                        TimeoutDurationMinutes = 10,
+                    },
+                },
+            },
+            TargetOnDemandCapacity = 1,
+            TargetSpotCapacity = 1,
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := emr.NewCluster(ctx, "example", &emr.ClusterArgs{
+			MasterInstanceFleet: &emr.ClusterMasterInstanceFleetArgs{
+				InstanceTypeConfigs: emr.ClusterMasterInstanceFleetInstanceTypeConfigArray{
+					&emr.ClusterMasterInstanceFleetInstanceTypeConfigArgs{
+						InstanceType: pulumi.String("m4.xlarge"),
+					},
+				},
+				TargetOnDemandCapacity: pulumi.Int(1),
+			},
+			CoreInstanceFleet: &emr.ClusterCoreInstanceFleetArgs{
+				InstanceTypeConfigs: emr.ClusterCoreInstanceFleetInstanceTypeConfigArray{
+					&emr.ClusterCoreInstanceFleetInstanceTypeConfigArgs{
+						BidPriceAsPercentageOfOnDemandPrice: pulumi.Float64(80),
+						EbsConfigs: emr.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArray{
+							&emr.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs{
+								Size:               pulumi.Int(100),
+								Type:               pulumi.String("gp2"),
+								VolumesPerInstance: pulumi.Int(1),
+							},
+						},
+						InstanceType:     pulumi.String("m3.xlarge"),
+						WeightedCapacity: pulumi.Int(1),
+					},
+					&emr.ClusterCoreInstanceFleetInstanceTypeConfigArgs{
+						BidPriceAsPercentageOfOnDemandPrice: pulumi.Float64(100),
+						EbsConfigs: emr.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArray{
+							&emr.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs{
+								Size:               pulumi.Int(100),
+								Type:               pulumi.String("gp2"),
+								VolumesPerInstance: pulumi.Int(1),
+							},
+						},
+						InstanceType:     pulumi.String("m4.xlarge"),
+						WeightedCapacity: pulumi.Int(1),
+					},
+					&emr.ClusterCoreInstanceFleetInstanceTypeConfigArgs{
+						BidPriceAsPercentageOfOnDemandPrice: pulumi.Float64(100),
+						EbsConfigs: emr.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArray{
+							&emr.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs{
+								Size:               pulumi.Int(100),
+								Type:               pulumi.String("gp2"),
+								VolumesPerInstance: pulumi.Int(1),
+							},
+						},
+						InstanceType:     pulumi.String("m4.2xlarge"),
+						WeightedCapacity: pulumi.Int(2),
+					},
+				},
+				LaunchSpecifications: &emr.ClusterCoreInstanceFleetLaunchSpecificationsArgs{
+					SpotSpecifications: emr.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArray{
+						&emr.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs{
+							AllocationStrategy:     pulumi.String("capacity-optimized"),
+							BlockDurationMinutes:   pulumi.Int(0),
+							TimeoutAction:          pulumi.String("SWITCH_TO_ON_DEMAND"),
+							TimeoutDurationMinutes: pulumi.Int(10),
+						},
+					},
+				},
+				Name:                   pulumi.String("core fleet"),
+				TargetOnDemandCapacity: pulumi.Int(2),
+				TargetSpotCapacity:     pulumi.Int(2),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = emr.NewInstanceFleet(ctx, "task", &emr.InstanceFleetArgs{
+			ClusterId: example.ID(),
+			InstanceTypeConfigs: emr.InstanceFleetInstanceTypeConfigArray{
+				&emr.InstanceFleetInstanceTypeConfigArgs{
+					BidPriceAsPercentageOfOnDemandPrice: pulumi.Float64(100),
+					EbsConfigs: emr.InstanceFleetInstanceTypeConfigEbsConfigArray{
+						&emr.InstanceFleetInstanceTypeConfigEbsConfigArgs{
+							Size:               pulumi.Int(100),
+							Type:               pulumi.String("gp2"),
+							VolumesPerInstance: pulumi.Int(1),
+						},
+					},
+					InstanceType:     pulumi.String("m4.xlarge"),
+					WeightedCapacity: pulumi.Int(1),
+				},
+				&emr.InstanceFleetInstanceTypeConfigArgs{
+					BidPriceAsPercentageOfOnDemandPrice: pulumi.Float64(100),
+					EbsConfigs: emr.InstanceFleetInstanceTypeConfigEbsConfigArray{
+						&emr.InstanceFleetInstanceTypeConfigEbsConfigArgs{
+							Size:               pulumi.Int(100),
+							Type:               pulumi.String("gp2"),
+							VolumesPerInstance: pulumi.Int(1),
+						},
+					},
+					InstanceType:     pulumi.String("m4.2xlarge"),
+					WeightedCapacity: pulumi.Int(2),
+				},
+			},
+			LaunchSpecifications: &emr.InstanceFleetLaunchSpecificationsArgs{
+				SpotSpecifications: emr.InstanceFleetLaunchSpecificationsSpotSpecificationArray{
+					&emr.InstanceFleetLaunchSpecificationsSpotSpecificationArgs{
+						AllocationStrategy:     pulumi.String("capacity-optimized"),
+						BlockDurationMinutes:   pulumi.Int(0),
+						TimeoutAction:          pulumi.String("TERMINATE_CLUSTER"),
+						TimeoutDurationMinutes: pulumi.Int(10),
+					},
+				},
+			},
+			TargetOnDemandCapacity: pulumi.Int(1),
+			TargetSpotCapacity:     pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+### Enable Debug Logging
+
+[Debug logging in EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-debugging.html)
+is implemented as a step. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other
+steps are being managed outside of this provider.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// ... other configuration ...
+const example = new aws.emr.Cluster("example", {steps: [{
+    actionOnFailure: "TERMINATE_CLUSTER",
+    name: "Setup Hadoop Debugging",
+    hadoopJarStep: {
+        jar: "command-runner.jar",
+        args: ["state-pusher-script"],
+    },
+}]});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+# ... other configuration ...
+example = aws.emr.Cluster("example", steps=[aws.emr.ClusterStepArgs(
+    action_on_failure="TERMINATE_CLUSTER",
+    name="Setup Hadoop Debugging",
+    hadoop_jar_step=aws.emr.ClusterStepHadoopJarStepArgs(
+        jar="command-runner.jar",
+        args=["state-pusher-script"],
+    ),
+)])
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // ... other configuration ...
+        var example = new Aws.Emr.Cluster("example", new Aws.Emr.ClusterArgs
+        {
+            Steps = 
+            {
+                new Aws.Emr.Inputs.ClusterStepArgs
+                {
+                    ActionOnFailure = "TERMINATE_CLUSTER",
+                    Name = "Setup Hadoop Debugging",
+                    HadoopJarStep = new Aws.Emr.Inputs.ClusterStepHadoopJarStepArgs
+                    {
+                        Jar = "command-runner.jar",
+                        Args = 
+                        {
+                            "state-pusher-script",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := emr.NewCluster(ctx, "example", &emr.ClusterArgs{
+			Steps: emr.ClusterStepArray{
+				&emr.ClusterStepArgs{
+					ActionOnFailure: pulumi.String("TERMINATE_CLUSTER"),
+					Name:            pulumi.String("Setup Hadoop Debugging"),
+					HadoopJarStep: &emr.ClusterStepHadoopJarStepArgs{
+						Jar: pulumi.String("command-runner.jar"),
+						Args: pulumi.StringArray{
+							pulumi.String("state-pusher-script"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+### Multiple Node Master Instance Group
+
+Available in EMR version 5.23.0 and later, an EMR Cluster can be launched with three master nodes for high availability. Additional information about this functionality and its requirements can be found in the [EMR Management Guide](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-ha.html).
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// This configuration is for illustrative purposes and highlights
+// only relevant configurations for working with this functionality.
+// Map public IP on launch must be enabled for public (Internet accessible) subnets
+// ... other configuration ...
+const exampleSubnet = new aws.ec2.Subnet("exampleSubnet", {mapPublicIpOnLaunch: true});
+// ... other configuration ...
+const exampleCluster = new aws.emr.Cluster("exampleCluster", {
+    releaseLabel: "emr-5.24.1",
+    terminationProtection: true,
+    ec2Attributes: {
+        subnetId: exampleSubnet.id,
+    },
+    masterInstanceGroup: {
+        instanceCount: 3,
+    },
+    coreInstanceGroup: {},
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+# This configuration is for illustrative purposes and highlights
+# only relevant configurations for working with this functionality.
+# Map public IP on launch must be enabled for public (Internet accessible) subnets
+# ... other configuration ...
+example_subnet = aws.ec2.Subnet("exampleSubnet", map_public_ip_on_launch=True)
+# ... other configuration ...
+example_cluster = aws.emr.Cluster("exampleCluster",
+    release_label="emr-5.24.1",
+    termination_protection=True,
+    ec2_attributes=aws.emr.ClusterEc2AttributesArgs(
+        subnet_id=example_subnet.id,
+    ),
+    master_instance_group=aws.emr.ClusterMasterInstanceGroupArgs(
+        instance_count=3,
+    ),
+    core_instance_group=aws.emr.ClusterCoreInstanceGroupArgs())
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // This configuration is for illustrative purposes and highlights
+        // only relevant configurations for working with this functionality.
+        // Map public IP on launch must be enabled for public (Internet accessible) subnets
+        // ... other configuration ...
+        var exampleSubnet = new Aws.Ec2.Subnet("exampleSubnet", new Aws.Ec2.SubnetArgs
+        {
+            MapPublicIpOnLaunch = true,
+        });
+        // ... other configuration ...
+        var exampleCluster = new Aws.Emr.Cluster("exampleCluster", new Aws.Emr.ClusterArgs
+        {
+            ReleaseLabel = "emr-5.24.1",
+            TerminationProtection = true,
+            Ec2Attributes = new Aws.Emr.Inputs.ClusterEc2AttributesArgs
+            {
+                SubnetId = exampleSubnet.Id,
+            },
+            MasterInstanceGroup = new Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs
+            {
+                InstanceCount = 3,
+            },
+            CoreInstanceGroup = ,
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleSubnet, err := ec2.NewSubnet(ctx, "exampleSubnet", &ec2.SubnetArgs{
+			MapPublicIpOnLaunch: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = emr.NewCluster(ctx, "exampleCluster", &emr.ClusterArgs{
+			ReleaseLabel:          pulumi.String("emr-5.24.1"),
+			TerminationProtection: pulumi.Bool(true),
+			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
+				SubnetId: exampleSubnet.ID(),
+			},
+			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
+				InstanceCount: pulumi.Int(3),
+			},
+			CoreInstanceGroup: nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 ## Example bootable config
 
 **NOTE:** This configuration demonstrates a minimal configuration needed to
@@ -1415,246 +2085,6 @@ const cluster = new aws.emr.Cluster("cluster", {
 
 {{% /example %}}
 
-### Enable Debug Logging
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // ... other configuration ...
-        var example = new Aws.Emr.Cluster("example", new Aws.Emr.ClusterArgs
-        {
-            Steps = 
-            {
-                new Aws.Emr.Inputs.ClusterStepArgs
-                {
-                    ActionOnFailure = "TERMINATE_CLUSTER",
-                    Name = "Setup Hadoop Debugging",
-                    HadoopJarStep = new Aws.Emr.Inputs.ClusterStepHadoopJarStepArgs
-                    {
-                        Jar = "command-runner.jar",
-                        Args = 
-                        {
-                            "state-pusher-script",
-                        },
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := emr.NewCluster(ctx, "example", &emr.ClusterArgs{
-			Steps: emr.ClusterStepArray{
-				&emr.ClusterStepArgs{
-					ActionOnFailure: pulumi.String("TERMINATE_CLUSTER"),
-					Name:            pulumi.String("Setup Hadoop Debugging"),
-					HadoopJarStep: &emr.ClusterStepHadoopJarStepArgs{
-						Jar: pulumi.String("command-runner.jar"),
-						Args: pulumi.StringArray{
-							pulumi.String("state-pusher-script"),
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-# ... other configuration ...
-example = aws.emr.Cluster("example", steps=[aws.emr.ClusterStepArgs(
-    action_on_failure="TERMINATE_CLUSTER",
-    name="Setup Hadoop Debugging",
-    hadoop_jar_step=aws.emr.ClusterStepHadoopJarStepArgs(
-        jar="command-runner.jar",
-        args=["state-pusher-script"],
-    ),
-)])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// ... other configuration ...
-const example = new aws.emr.Cluster("example", {steps: [{
-    actionOnFailure: "TERMINATE_CLUSTER",
-    name: "Setup Hadoop Debugging",
-    hadoopJarStep: {
-        jar: "command-runner.jar",
-        args: ["state-pusher-script"],
-    },
-}]});
-```
-
-{{% /example %}}
-
-### Multiple Node Master Instance Group
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // This configuration is for illustrative purposes and highlights
-        // only relevant configurations for working with this functionality.
-        // Map public IP on launch must be enabled for public (Internet accessible) subnets
-        // ... other configuration ...
-        var exampleSubnet = new Aws.Ec2.Subnet("exampleSubnet", new Aws.Ec2.SubnetArgs
-        {
-            MapPublicIpOnLaunch = true,
-        });
-        // ... other configuration ...
-        var exampleCluster = new Aws.Emr.Cluster("exampleCluster", new Aws.Emr.ClusterArgs
-        {
-            ReleaseLabel = "emr-5.24.1",
-            TerminationProtection = true,
-            Ec2Attributes = new Aws.Emr.Inputs.ClusterEc2AttributesArgs
-            {
-                SubnetId = exampleSubnet.Id,
-            },
-            MasterInstanceGroup = new Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs
-            {
-                InstanceCount = 3,
-            },
-            CoreInstanceGroup = ,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleSubnet, err := ec2.NewSubnet(ctx, "exampleSubnet", &ec2.SubnetArgs{
-			MapPublicIpOnLaunch: pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = emr.NewCluster(ctx, "exampleCluster", &emr.ClusterArgs{
-			ReleaseLabel:          pulumi.String("emr-5.24.1"),
-			TerminationProtection: pulumi.Bool(true),
-			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
-				SubnetId: exampleSubnet.ID(),
-			},
-			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
-				InstanceCount: pulumi.Int(3),
-			},
-			CoreInstanceGroup: nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-# This configuration is for illustrative purposes and highlights
-# only relevant configurations for working with this functionality.
-# Map public IP on launch must be enabled for public (Internet accessible) subnets
-# ... other configuration ...
-example_subnet = aws.ec2.Subnet("exampleSubnet", map_public_ip_on_launch=True)
-# ... other configuration ...
-example_cluster = aws.emr.Cluster("exampleCluster",
-    release_label="emr-5.24.1",
-    termination_protection=True,
-    ec2_attributes=aws.emr.ClusterEc2AttributesArgs(
-        subnet_id=example_subnet.id,
-    ),
-    master_instance_group=aws.emr.ClusterMasterInstanceGroupArgs(
-        instance_count=3,
-    ),
-    core_instance_group=aws.emr.ClusterCoreInstanceGroupArgs())
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// This configuration is for illustrative purposes and highlights
-// only relevant configurations for working with this functionality.
-// Map public IP on launch must be enabled for public (Internet accessible) subnets
-// ... other configuration ...
-const exampleSubnet = new aws.ec2.Subnet("exampleSubnet", {mapPublicIpOnLaunch: true});
-// ... other configuration ...
-const exampleCluster = new aws.emr.Cluster("exampleCluster", {
-    releaseLabel: "emr-5.24.1",
-    terminationProtection: true,
-    ec2Attributes: {
-        subnetId: exampleSubnet.id,
-    },
-    masterInstanceGroup: {
-        instanceCount: 3,
-    },
-    coreInstanceGroup: {},
-});
-```
-
-{{% /example %}}
-
 {{% /examples %}}
 
 
@@ -1667,7 +2097,7 @@ const exampleCluster = new aws.emr.Cluster("exampleCluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/emr/#pulumi_aws.emr.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[List[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[List[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/emr/#pulumi_aws.emr.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1913,7 +2343,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1925,6 +2355,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="coreinstancefleet_csharp">
+<a href="#coreinstancefleet_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2006,6 +2447,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="masterinstancefleet_csharp">
+<a href="#masterinstancefleet_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="masterinstancegroup_csharp">
 <a href="#masterinstancegroup_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Group</a>
 </span> 
@@ -2023,7 +2475,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2184,7 +2636,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2196,6 +2648,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="coreinstancefleet_go">
+<a href="#coreinstancefleet_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2277,6 +2740,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="masterinstancefleet_go">
+<a href="#masterinstancefleet_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="masterinstancegroup_go">
 <a href="#masterinstancegroup_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Group</a>
 </span> 
@@ -2294,7 +2768,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2455,7 +2929,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2467,6 +2941,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="coreinstancefleet_nodejs">
+<a href="#coreinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2548,6 +3033,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="masterinstancefleet_nodejs">
+<a href="#masterinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="masterinstancegroup_nodejs">
 <a href="#masterinstancegroup_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Group</a>
 </span> 
@@ -2565,7 +3061,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2691,7 +3187,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 {{% /md %}}</dd>
@@ -2713,7 +3209,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Sequence[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
@@ -2726,7 +3222,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2738,6 +3234,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="core_instance_fleet_python">
+<a href="#core_instance_fleet_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2768,7 +3275,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ebs_root_volume_size_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>root_<wbr>volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 {{% /md %}}</dd>
@@ -2819,6 +3326,17 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="master_instance_fleet_python">
+<a href="#master_instance_fleet_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="master_instance_group_python">
 <a href="#master_instance_group_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>group</a>
 </span> 
@@ -2836,7 +3354,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2867,7 +3385,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#step_concurrency_level_python" style="color: inherit; text-decoration: inherit;">step_<wbr>concurrency_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd>
@@ -2878,7 +3396,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">List[Cluster<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterstep">Sequence[Cluster<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd>
@@ -3143,7 +3661,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[List[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">master_public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[List[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">master_public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3319,7 +3837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3331,6 +3849,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_coreinstancefleet_csharp">
+<a href="#state_coreinstancefleet_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3412,6 +3941,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_masterinstancefleet_csharp">
+<a href="#state_masterinstancefleet_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_masterinstancegroup_csharp">
 <a href="#state_masterinstancegroup_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Group</a>
 </span> 
@@ -3441,7 +3981,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3632,7 +4172,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3644,6 +4184,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_coreinstancefleet_go">
+<a href="#state_coreinstancefleet_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3725,6 +4276,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_masterinstancefleet_go">
+<a href="#state_masterinstancefleet_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_masterinstancegroup_go">
 <a href="#state_masterinstancegroup_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Group</a>
 </span> 
@@ -3754,7 +4316,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3935,7 +4497,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3947,6 +4509,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_coreinstancefleet_nodejs">
+<a href="#state_coreinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4028,6 +4601,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_masterinstancefleet_nodejs">
+<a href="#state_masterinstancefleet_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_masterinstancegroup_nodejs">
 <a href="#state_masterinstancegroup_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Group</a>
 </span> 
@@ -4057,7 +4641,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4183,7 +4767,7 @@ The following state arguments are supported:
 <a href="#state_applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 {{% /md %}}</dd>
@@ -4215,7 +4799,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Sequence[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
@@ -4238,7 +4822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4250,6 +4834,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_core_instance_fleet_python">
+<a href="#state_core_instance_fleet_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4280,7 +4875,7 @@ The following state arguments are supported:
 <a href="#state_ebs_root_volume_size_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>root_<wbr>volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 {{% /md %}}</dd>
@@ -4331,6 +4926,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_master_instance_fleet_python">
+<a href="#state_master_instance_fleet_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>fleet</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_master_instance_group_python">
 <a href="#state_master_instance_group_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>group</a>
 </span> 
@@ -4360,7 +4966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4413,7 +5019,7 @@ The following state arguments are supported:
 <a href="#state_step_concurrency_level_python" style="color: inherit; text-decoration: inherit;">step_<wbr>concurrency_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd>
@@ -4424,7 +5030,7 @@ The following state arguments are supported:
 <a href="#state_steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">List[Cluster<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterstep">Sequence[Cluster<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd>
@@ -4503,7 +5109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4543,7 +5149,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4583,7 +5189,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4623,7 +5229,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4643,9 +5249,1511 @@ The following state arguments are supported:
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of command line arguments passed to the JAR file's main function when executed.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleet">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleet.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancetypeconfigs_csharp">
+<a href="#instancetypeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for instance fleet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchspecifications_csharp">
+<a href="#launchspecifications_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for launch specification
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name given to the instance fleet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedondemandcapacity_csharp">
+<a href="#provisionedondemandcapacity_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedspotcapacity_csharp">
+<a href="#provisionedspotcapacity_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetondemandcapacity_csharp">
+<a href="#targetondemandcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetspotcapacity_csharp">
+<a href="#targetspotcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancetypeconfigs_go">
+<a href="#instancetypeconfigs_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">[]Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for instance fleet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchspecifications_go">
+<a href="#launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for launch specification
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name given to the instance fleet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedondemandcapacity_go">
+<a href="#provisionedondemandcapacity_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedspotcapacity_go">
+<a href="#provisionedspotcapacity_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetondemandcapacity_go">
+<a href="#targetondemandcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetspotcapacity_go">
+<a href="#targetspotcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancetypeconfigs_nodejs">
+<a href="#instancetypeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for instance fleet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchspecifications_nodejs">
+<a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for launch specification
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name given to the instance fleet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedondemandcapacity_nodejs">
+<a href="#provisionedondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedspotcapacity_nodejs">
+<a href="#provisionedspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetondemandcapacity_nodejs">
+<a href="#targetondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetspotcapacity_nodejs">
+<a href="#targetspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_type_configs_python">
+<a href="#instance_type_configs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for instance fleet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launch_specifications_python">
+<a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for launch specification
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name given to the instance fleet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioned_on_demand_capacity_python">
+<a href="#provisioned_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>on_<wbr>demand_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioned_spot_capacity_python">
+<a href="#provisioned_spot_capacity_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>spot_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_on_demand_capacity_python">
+<a href="#target_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>on_<wbr>demand_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_spot_capacity_python">
+<a href="#target_spot_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>spot_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustercoreinstancefleetinstancetypeconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetInstanceTypeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetInstanceTypeConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetInstanceTypeConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidprice_csharp">
+<a href="#bidprice_csharp" style="color: inherit; text-decoration: inherit;">Bid<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidpriceaspercentageofondemandprice_csharp">
+<a href="#bidpriceaspercentageofondemandprice_csharp" style="color: inherit; text-decoration: inherit;">Bid<wbr>Price<wbr>As<wbr>Percentage<wbr>Of<wbr>On<wbr>Demand<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configurations_csharp">
+<a href="#configurations_csharp" style="color: inherit; text-decoration: inherit;">Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebsconfigs_csharp">
+<a href="#ebsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedcapacity_csharp">
+<a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidprice_go">
+<a href="#bidprice_go" style="color: inherit; text-decoration: inherit;">Bid<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidpriceaspercentageofondemandprice_go">
+<a href="#bidpriceaspercentageofondemandprice_go" style="color: inherit; text-decoration: inherit;">Bid<wbr>Price<wbr>As<wbr>Percentage<wbr>Of<wbr>On<wbr>Demand<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configurations_go">
+<a href="#configurations_go" style="color: inherit; text-decoration: inherit;">Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">[]Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebsconfigs_go">
+<a href="#ebsconfigs_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">[]Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedcapacity_go">
+<a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidprice_nodejs">
+<a href="#bidprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidpriceaspercentageofondemandprice_nodejs">
+<a href="#bidpriceaspercentageofondemandprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price<wbr>As<wbr>Percentage<wbr>Of<wbr>On<wbr>Demand<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configurations_nodejs">
+<a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebsconfigs_nodejs">
+<a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedcapacity_nodejs">
+<a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bid_price_python">
+<a href="#bid_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bid_price_as_percentage_of_on_demand_price_python">
+<a href="#bid_price_as_percentage_of_on_demand_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price_<wbr>as_<wbr>percentage_<wbr>of_<wbr>on_<wbr>demand_<wbr>price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configurations_python">
+<a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebs_configs_python">
+<a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weighted_capacity_python">
+<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustercoreinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetInstanceTypeConfigConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetInstanceTypeConfigConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetInstanceTypeConfigConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="classification_csharp">
+<a href="#classification_csharp" style="color: inherit; text-decoration: inherit;">Classification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The classification within a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of properties specified within a configuration classification
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="classification_go">
+<a href="#classification_go" style="color: inherit; text-decoration: inherit;">Classification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The classification within a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A map of properties specified within a configuration classification
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="classification_nodejs">
+<a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The classification within a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A map of properties specified within a configuration classification
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="classification_python">
+<a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The classification within a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A map of properties specified within a configuration classification
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustercoreinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The volume size, in gibibytes (GiB).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_csharp">
+<a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesperinstance_csharp">
+<a href="#volumesperinstance_csharp" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Per<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The volume size, in gibibytes (GiB).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_go">
+<a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesperinstance_go">
+<a href="#volumesperinstance_go" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Per<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The volume size, in gibibytes (GiB).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_nodejs">
+<a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesperinstance_nodejs">
+<a href="#volumesperinstance_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The volume size, in gibibytes (GiB).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_python">
+<a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumes_per_instance_python">
+<a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetLaunchSpecifications">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetLaunchSpecifications">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetLaunchSpecificationsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetLaunchSpecifications.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ondemandspecifications_csharp">
+<a href="#ondemandspecifications_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for on demand instances launch specifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spotspecifications_csharp">
+<a href="#spotspecifications_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for spot instances launch specifications
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ondemandspecifications_go">
+<a href="#ondemandspecifications_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">[]Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for on demand instances launch specifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spotspecifications_go">
+<a href="#spotspecifications_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">[]Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for spot instances launch specifications
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ondemandspecifications_nodejs">
+<a href="#ondemandspecifications_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for on demand instances launch specifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spotspecifications_nodejs">
+<a href="#spotspecifications_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for spot instances launch specifications
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="on_demand_specifications_python">
+<a href="#on_demand_specifications_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for on demand instances launch specifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spot_specifications_python">
+<a href="#spot_specifications_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for spot instances launch specifications
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustercoreinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_csharp">
+<a href="#allocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_go">
+<a href="#allocationstrategy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_nodejs">
+<a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocation_strategy_python">
+<a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustercoreinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_csharp">
+<a href="#allocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutaction_csharp">
+<a href="#timeoutaction_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutdurationminutes_csharp">
+<a href="#timeoutdurationminutes_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blockdurationminutes_csharp">
+<a href="#blockdurationminutes_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_go">
+<a href="#allocationstrategy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutaction_go">
+<a href="#timeoutaction_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutdurationminutes_go">
+<a href="#timeoutdurationminutes_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blockdurationminutes_go">
+<a href="#blockdurationminutes_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_nodejs">
+<a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutaction_nodejs">
+<a href="#timeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutdurationminutes_nodejs">
+<a href="#timeoutdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blockdurationminutes_nodejs">
+<a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocation_strategy_python">
+<a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeout_action_python">
+<a href="#timeout_action_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeout_duration_minutes_python">
+<a href="#timeout_duration_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>duration_<wbr>minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="block_duration_minutes_python">
+<a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 {{% /md %}}</dd>
 
 </dl>
@@ -4681,7 +6789,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4703,7 +6811,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4747,7 +6855,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -4765,7 +6873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4787,7 +6895,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4831,7 +6939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -4849,7 +6957,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4871,7 +6979,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4915,7 +7023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -4933,7 +7041,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4955,7 +7063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4964,7 +7072,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">List[Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd>
@@ -4986,7 +7094,7 @@ The following state arguments are supported:
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have `map public IP on launch` enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
 {{% /md %}}</dd>
@@ -4999,7 +7107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -5186,7 +7294,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -5208,7 +7316,7 @@ The following state arguments are supported:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd>
@@ -5219,7 +7327,7 @@ The following state arguments are supported:
 <a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd>
@@ -5895,6 +8003,1508 @@ The following state arguments are supported:
 
 
 
+<h4 id="clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleet">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleet.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancetypeconfigs_csharp">
+<a href="#instancetypeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for instance fleet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchspecifications_csharp">
+<a href="#launchspecifications_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for launch specification
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name given to the instance fleet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedondemandcapacity_csharp">
+<a href="#provisionedondemandcapacity_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedspotcapacity_csharp">
+<a href="#provisionedspotcapacity_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetondemandcapacity_csharp">
+<a href="#targetondemandcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetspotcapacity_csharp">
+<a href="#targetspotcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancetypeconfigs_go">
+<a href="#instancetypeconfigs_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">[]Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for instance fleet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchspecifications_go">
+<a href="#launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for launch specification
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name given to the instance fleet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedondemandcapacity_go">
+<a href="#provisionedondemandcapacity_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedspotcapacity_go">
+<a href="#provisionedspotcapacity_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetondemandcapacity_go">
+<a href="#targetondemandcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetspotcapacity_go">
+<a href="#targetspotcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancetypeconfigs_nodejs">
+<a href="#instancetypeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for instance fleet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchspecifications_nodejs">
+<a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for launch specification
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name given to the instance fleet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedondemandcapacity_nodejs">
+<a href="#provisionedondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionedspotcapacity_nodejs">
+<a href="#provisionedspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetondemandcapacity_nodejs">
+<a href="#targetondemandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>On<wbr>Demand<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetspotcapacity_nodejs">
+<a href="#targetspotcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Spot<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_type_configs_python">
+<a href="#instance_type_configs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for instance fleet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launch_specifications_python">
+<a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for launch specification
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name given to the instance fleet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioned_on_demand_capacity_python">
+<a href="#provisioned_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>on_<wbr>demand_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioned_spot_capacity_python">
+<a href="#provisioned_spot_capacity_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>spot_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_on_demand_capacity_python">
+<a href="#target_on_demand_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>on_<wbr>demand_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_spot_capacity_python">
+<a href="#target_spot_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>spot_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustermasterinstancefleetinstancetypeconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetInstanceTypeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetInstanceTypeConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetInstanceTypeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetInstanceTypeConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidprice_csharp">
+<a href="#bidprice_csharp" style="color: inherit; text-decoration: inherit;">Bid<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidpriceaspercentageofondemandprice_csharp">
+<a href="#bidpriceaspercentageofondemandprice_csharp" style="color: inherit; text-decoration: inherit;">Bid<wbr>Price<wbr>As<wbr>Percentage<wbr>Of<wbr>On<wbr>Demand<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configurations_csharp">
+<a href="#configurations_csharp" style="color: inherit; text-decoration: inherit;">Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebsconfigs_csharp">
+<a href="#ebsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedcapacity_csharp">
+<a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidprice_go">
+<a href="#bidprice_go" style="color: inherit; text-decoration: inherit;">Bid<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidpriceaspercentageofondemandprice_go">
+<a href="#bidpriceaspercentageofondemandprice_go" style="color: inherit; text-decoration: inherit;">Bid<wbr>Price<wbr>As<wbr>Percentage<wbr>Of<wbr>On<wbr>Demand<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configurations_go">
+<a href="#configurations_go" style="color: inherit; text-decoration: inherit;">Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">[]Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebsconfigs_go">
+<a href="#ebsconfigs_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">[]Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedcapacity_go">
+<a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidprice_nodejs">
+<a href="#bidprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bidpriceaspercentageofondemandprice_nodejs">
+<a href="#bidpriceaspercentageofondemandprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price<wbr>As<wbr>Percentage<wbr>Of<wbr>On<wbr>Demand<wbr>Price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configurations_nodejs">
+<a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebsconfigs_nodejs">
+<a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weightedcapacity_nodejs">
+<a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bid_price_python">
+<a href="#bid_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bid_price_as_percentage_of_on_demand_price_python">
+<a href="#bid_price_as_percentage_of_on_demand_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price_<wbr>as_<wbr>percentage_<wbr>of_<wbr>on_<wbr>demand_<wbr>price</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configurations_python">
+<a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebs_configs_python">
+<a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weighted_capacity_python">
+<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustermasterinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetInstanceTypeConfigConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetInstanceTypeConfigConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetInstanceTypeConfigConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="classification_csharp">
+<a href="#classification_csharp" style="color: inherit; text-decoration: inherit;">Classification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The classification within a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of properties specified within a configuration classification
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="classification_go">
+<a href="#classification_go" style="color: inherit; text-decoration: inherit;">Classification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The classification within a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A map of properties specified within a configuration classification
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="classification_nodejs">
+<a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The classification within a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A map of properties specified within a configuration classification
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="classification_python">
+<a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The classification within a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A map of properties specified within a configuration classification
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustermasterinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The volume size, in gibibytes (GiB).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_csharp">
+<a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesperinstance_csharp">
+<a href="#volumesperinstance_csharp" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Per<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The volume size, in gibibytes (GiB).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_go">
+<a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesperinstance_go">
+<a href="#volumesperinstance_go" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Per<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The volume size, in gibibytes (GiB).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_nodejs">
+<a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesperinstance_nodejs">
+<a href="#volumesperinstance_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The volume size, in gibibytes (GiB).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_python">
+<a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumes_per_instance_python">
+<a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetLaunchSpecifications">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetLaunchSpecifications">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetLaunchSpecificationsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetLaunchSpecifications.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ondemandspecifications_csharp">
+<a href="#ondemandspecifications_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for on demand instances launch specifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spotspecifications_csharp">
+<a href="#spotspecifications_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for spot instances launch specifications
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ondemandspecifications_go">
+<a href="#ondemandspecifications_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">[]Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for on demand instances launch specifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spotspecifications_go">
+<a href="#spotspecifications_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">[]Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for spot instances launch specifications
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ondemandspecifications_nodejs">
+<a href="#ondemandspecifications_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for on demand instances launch specifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spotspecifications_nodejs">
+<a href="#spotspecifications_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for spot instances launch specifications
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="on_demand_specifications_python">
+<a href="#on_demand_specifications_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for on demand instances launch specifications
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spot_specifications_python">
+<a href="#spot_specifications_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>specifications</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block for spot instances launch specifications
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustermasterinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_csharp">
+<a href="#allocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_go">
+<a href="#allocationstrategy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_nodejs">
+<a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocation_strategy_python">
+<a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="clustermasterinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_csharp">
+<a href="#allocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutaction_csharp">
+<a href="#timeoutaction_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutdurationminutes_csharp">
+<a href="#timeoutdurationminutes_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blockdurationminutes_csharp">
+<a href="#blockdurationminutes_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_go">
+<a href="#allocationstrategy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutaction_go">
+<a href="#timeoutaction_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutdurationminutes_go">
+<a href="#timeoutdurationminutes_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blockdurationminutes_go">
+<a href="#blockdurationminutes_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocationstrategy_nodejs">
+<a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutaction_nodejs">
+<a href="#timeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeoutdurationminutes_nodejs">
+<a href="#timeoutdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blockdurationminutes_nodejs">
+<a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allocation_strategy_python">
+<a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeout_action_python">
+<a href="#timeout_action_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take when TargetSpotCapacity has not been fulfilled when the TimeoutDurationMinutes has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`. SWITCH_TO_ON_DEMAND specifies that if no Spot instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="timeout_duration_minutes_python">
+<a href="#timeout_duration_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>duration_<wbr>minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The spot provisioning timeout period in minutes. If Spot instances are not provisioned within this time period, the TimeOutAction is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="block_duration_minutes_python">
+<a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The defined duration for Spot instances (also known as Spot blocks) in minutes. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceGroup">output</a> API doc for this type.
@@ -5921,7 +9531,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5932,7 +9542,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5976,7 +9586,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -5994,7 +9604,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6005,7 +9615,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6049,7 +9659,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -6067,7 +9677,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6078,7 +9688,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6122,7 +9732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -6140,7 +9750,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
+    <dd>{{% md %}}An EC2 instance type, such as m4.xlarge.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6151,7 +9761,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+    <dd>{{% md %}}The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6160,7 +9770,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">List[Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd>
@@ -6182,7 +9792,7 @@ The following state arguments are supported:
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have `map public IP on launch` enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
 {{% /md %}}</dd>
@@ -6195,7 +9805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -6382,7 +9992,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The volume size, in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -6404,7 +10014,7 @@ The following state arguments are supported:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
 {{% /md %}}</dd>
@@ -6415,7 +10025,7 @@ The following state arguments are supported:
 <a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
 {{% /md %}}</dd>
@@ -6475,7 +10085,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -6515,7 +10125,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -6555,7 +10165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -6595,7 +10205,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the step.
+    <dd>{{% md %}}Friendly name given to the instance fleet.
 {{% /md %}}</dd>
 
 </dl>
@@ -6664,7 +10274,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+    <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd>
 
 </dl>
@@ -6715,7 +10325,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+    <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd>
 
 </dl>
@@ -6766,7 +10376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+    <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd>
 
 </dl>
@@ -6793,7 +10403,7 @@ The following state arguments are supported:
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of command line arguments passed to the JAR file's main function when executed.
 {{% /md %}}</dd>
@@ -6817,7 +10427,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+    <dd>{{% md %}}A map of properties specified within a configuration classification
 {{% /md %}}</dd>
 
 </dl>

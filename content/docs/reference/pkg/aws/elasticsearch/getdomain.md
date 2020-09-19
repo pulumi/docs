@@ -1026,7 +1026,7 @@ The following output properties are available:
 <a href="#advanced_security_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainadvancedsecurityoption">List[Get<wbr>Domain<wbr>Advanced<wbr>Security<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomainadvancedsecurityoption">Sequence[Get<wbr>Domain<wbr>Advanced<wbr>Security<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}Status of the Elasticsearch domain's advanced security options. The block consists of the following attributes:
 {{% /md %}}</dd>
@@ -1048,7 +1048,7 @@ The following output properties are available:
 <a href="#cluster_configs_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainclusterconfig">List[Get<wbr>Domain<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getdomainclusterconfig">Sequence[Get<wbr>Domain<wbr>Cluster<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration of the domain.
 {{% /md %}}</dd>
@@ -1059,7 +1059,7 @@ The following output properties are available:
 <a href="#cognito_options_python" style="color: inherit; text-decoration: inherit;">cognito_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomaincognitooption">List[Get<wbr>Domain<wbr>Cognito<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomaincognitooption">Sequence[Get<wbr>Domain<wbr>Cognito<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}Domain Amazon Cognito Authentication options for Kibana.
 {{% /md %}}</dd>
@@ -1113,7 +1113,7 @@ The following output properties are available:
 <a href="#ebs_options_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainebsoption">List[Get<wbr>Domain<wbr>Ebs<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomainebsoption">Sequence[Get<wbr>Domain<wbr>Ebs<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}EBS Options for the instances in the domain.
 {{% /md %}}</dd>
@@ -1135,7 +1135,7 @@ The following output properties are available:
 <a href="#encryption_at_rests_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>at_<wbr>rests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainencryptionatrest">List[Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest]</a></span>
+        <span class="property-type"><a href="#getdomainencryptionatrest">Sequence[Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest]</a></span>
     </dt>
     <dd>{{% md %}}Domain encryption at rest related options.
 {{% /md %}}</dd>
@@ -1179,7 +1179,7 @@ The following output properties are available:
 <a href="#log_publishing_options_python" style="color: inherit; text-decoration: inherit;">log_<wbr>publishing_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainlogpublishingoption">List[Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomainlogpublishingoption">Sequence[Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}Domain log publishing related options.
 {{% /md %}}</dd>
@@ -1190,7 +1190,7 @@ The following output properties are available:
 <a href="#node_to_node_encryptions_python" style="color: inherit; text-decoration: inherit;">node_<wbr>to_<wbr>node_<wbr>encryptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainnodetonodeencryption">List[Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#getdomainnodetonodeencryption">Sequence[Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></span>
     </dt>
     <dd>{{% md %}}Domain in transit encryption related options.
 {{% /md %}}</dd>
@@ -1213,7 +1213,7 @@ The following output properties are available:
 <a href="#snapshot_options_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainsnapshotoption">List[Get<wbr>Domain<wbr>Snapshot<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomainsnapshotoption">Sequence[Get<wbr>Domain<wbr>Snapshot<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1234,7 +1234,7 @@ The following output properties are available:
 <a href="#vpc_options_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainvpcoption">List[Get<wbr>Domain<wbr>Vpc<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomainvpcoption">Sequence[Get<wbr>Domain<wbr>Vpc<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}VPC Options for private Elasticsearch domains.
 {{% /md %}}</dd>
@@ -1761,7 +1761,7 @@ The following output properties are available:
 <a href="#dedicated_master_count_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1794,7 +1794,7 @@ The following output properties are available:
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
@@ -1816,7 +1816,7 @@ The following output properties are available:
 <a href="#warm_count_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of warm nodes in the cluster.
 {{% /md %}}</dd>
@@ -1838,7 +1838,7 @@ The following output properties are available:
 <a href="#zone_awareness_configs_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>awareness_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">List[Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">Sequence[Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings.
 {{% /md %}}</dd>
@@ -1950,7 +1950,7 @@ The following output properties are available:
 <a href="#availability_zone_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
@@ -2375,7 +2375,7 @@ attached to data nodes.
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes
 attached to data nodes.
@@ -2387,7 +2387,7 @@ attached to data nodes.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
@@ -2893,7 +2893,7 @@ snapshot of the indices in the domain.
 <a href="#automated_snapshot_start_hour_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>snapshot_<wbr>start_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Hour during which the service takes an automated daily
 snapshot of the indices in the domain.
@@ -3083,7 +3083,7 @@ snapshot of the indices in the domain.
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
@@ -3094,7 +3094,7 @@ snapshot of the indices in the domain.
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
@@ -3105,7 +3105,7 @@ snapshot of the indices in the domain.
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>

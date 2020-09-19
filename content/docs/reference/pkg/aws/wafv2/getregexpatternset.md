@@ -520,7 +520,7 @@ The following output properties are available:
 <a href="#regular_expressions_python" style="color: inherit; text-decoration: inherit;">regular_<wbr>expressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregexpatternsetregularexpression">List[Get<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Regular<wbr>Expression]</a></span>
+        <span class="property-type"><a href="#getregexpatternsetregularexpression">Sequence[Get<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Regular<wbr>Expression]</a></span>
     </dt>
     <dd>{{% md %}}One or more blocks of regular expression patterns that AWS WAF is searching for. See Regular Expression below for details.
 {{% /md %}}</dd>

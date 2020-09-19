@@ -12,6 +12,81 @@ meta_desc: "Explore the GetInternetGateway function of the ec2 module, including
 
 `aws.ec2.InternetGateway` provides details about a specific Internet Gateway.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var vpcId = config.RequireObject<dynamic>("vpcId");
+        var @default = Output.Create(Aws.Ec2.GetInternetGateway.InvokeAsync(new Aws.Ec2.GetInternetGatewayArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetInternetGatewayFilterArgs
+                {
+                    Name = "attachment.vpc-id",
+                    Values = 
+                    {
+                        vpcId,
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+config = pulumi.Config()
+vpc_id = config.require_object("vpcId")
+default = aws.ec2.get_internet_gateway(filters=[aws.ec2.GetInternetGatewayFilterArgs(
+    name="attachment.vpc-id",
+    values=[vpc_id],
+)])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+const vpcId = config.requireObject("vpcId");
+const default = aws.ec2.getInternetGateway({
+    filters: [{
+        name: "attachment.vpc-id",
+        values: [vpcId],
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetInternetGateway {#using}
@@ -25,7 +100,7 @@ meta_desc: "Explore the GetInternetGateway function of the ec2 module, including
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_internet_gateway(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetInternetGatewayFilterArgs]]</span> = None<span class="p">, </span><span class="nx">internet_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInternetGatewayResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_internet_gateway(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInternetGatewayFilterArgs]]</span> = None<span class="p">, </span><span class="nx">internet_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInternetGatewayResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -181,7 +256,7 @@ a pair on the desired Internet Gateway.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinternetgatewayfilter">List[Get<wbr>Internet<wbr>Gateway<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinternetgatewayfilter">Sequence[Get<wbr>Internet<wbr>Gateway<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -486,7 +561,7 @@ The following output properties are available:
 <a href="#attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinternetgatewayattachment">List[Get<wbr>Internet<wbr>Gateway<wbr>Attachment]</a></span>
+        <span class="property-type"><a href="#getinternetgatewayattachment">Sequence[Get<wbr>Internet<wbr>Gateway<wbr>Attachment]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -538,7 +613,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinternetgatewayfilter">List[Get<wbr>Internet<wbr>Gateway<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getinternetgatewayfilter">Sequence[Get<wbr>Internet<wbr>Gateway<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -818,7 +893,7 @@ An Internet Gateway will be selected if any one of the given values matches.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 An Internet Gateway will be selected if any one of the given values matches.

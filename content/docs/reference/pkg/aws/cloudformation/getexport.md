@@ -36,7 +36,7 @@ class MyStack : Stack
         var web = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
         {
             Ami = "ami-abb07bcb",
-            InstanceType = "t1.micro",
+            InstanceType = "t2.micro",
             SubnetId = subnetId.Apply(subnetId => subnetId.Value),
         });
     }
@@ -66,7 +66,7 @@ func main() {
 		}
 		_, err = ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
 			Ami:          pulumi.String("ami-abb07bcb"),
-			InstanceType: pulumi.String("t1.micro"),
+			InstanceType: pulumi.String("t2.micro"),
 			SubnetId:     pulumi.String(subnetId.Value),
 		})
 		if err != nil {
@@ -87,7 +87,7 @@ import pulumi_aws as aws
 subnet_id = aws.cloudformation.get_export(name="mySubnetIdExportName")
 web = aws.ec2.Instance("web",
     ami="ami-abb07bcb",
-    instance_type="t1.micro",
+    instance_type="t2.micro",
     subnet_id=subnet_id.value)
 ```
 
@@ -104,7 +104,7 @@ const subnetId = aws.cloudformation.getExport({
 });
 const web = new aws.ec2.Instance("web", {
     ami: "ami-abb07bcb",
-    instanceType: "t1.micro",
+    instanceType: "t2.micro",
     subnetId: subnetId.then(subnetId => subnetId.value),
 });
 ```

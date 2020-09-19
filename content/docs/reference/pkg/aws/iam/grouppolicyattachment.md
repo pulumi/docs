@@ -34,9 +34,8 @@ class MyStack : Stack
         var policy = new Aws.Iam.Policy("policy", new Aws.Iam.PolicyArgs
         {
             Description = "A test policy",
-            Policy = "",
+            Policy = "{ ... policy JSON ... }",
         });
-        // insert policy here
         var test_attach = new Aws.Iam.GroupPolicyAttachment("test-attach", new Aws.Iam.GroupPolicyAttachmentArgs
         {
             Group = @group.Name,
@@ -66,7 +65,7 @@ func main() {
 		}
 		policy, err := iam.NewPolicy(ctx, "policy", &iam.PolicyArgs{
 			Description: pulumi.String("A test policy"),
-			Policy:      pulumi.String(""),
+			Policy:      pulumi.String("{ ... policy JSON ... }"),
 		})
 		if err != nil {
 			return err
@@ -93,8 +92,7 @@ import pulumi_aws as aws
 group = aws.iam.Group("group")
 policy = aws.iam.Policy("policy",
     description="A test policy",
-    policy="")
-# insert policy here
+    policy="{ ... policy JSON ... }")
 test_attach = aws.iam.GroupPolicyAttachment("test-attach",
     group=group.name,
     policy_arn=policy.arn)
@@ -111,7 +109,7 @@ import * as aws from "@pulumi/aws";
 const group = new aws.iam.Group("group", {});
 const policy = new aws.iam.Policy("policy", {
     description: "A test policy",
-    policy: "", // insert policy here
+    policy: "{ ... policy JSON ... }",
 });
 const test_attach = new aws.iam.GroupPolicyAttachment("test-attach", {
     group: group.name,

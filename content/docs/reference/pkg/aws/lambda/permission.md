@@ -48,7 +48,7 @@ class MyStack : Stack
             Code = new FileArchive("lambdatest.zip"),
             Role = iamForLambda.Arn,
             Handler = "exports.handler",
-            Runtime = "nodejs8.10",
+            Runtime = "nodejs12.x",
         });
         var testAlias = new Aws.Lambda.Alias("testAlias", new Aws.Lambda.AliasArgs
         {
@@ -98,7 +98,7 @@ test_lambda = aws.lambda_.Function("testLambda",
     code=pulumi.FileArchive("lambdatest.zip"),
     role=iam_for_lambda.arn,
     handler="exports.handler",
-    runtime="nodejs8.10")
+    runtime="nodejs12.x")
 test_alias = aws.lambda_.Alias("testAlias",
     description="a sample description",
     function_name=test_lambda.name,
@@ -137,7 +137,7 @@ const testLambda = new aws.lambda.Function("testLambda", {
     code: new pulumi.asset.FileArchive("lambdatest.zip"),
     role: iamForLambda.arn,
     handler: "exports.handler",
-    runtime: "nodejs8.10",
+    runtime: "nodejs12.x",
 });
 const testAlias = new aws.lambda.Alias("testAlias", {
     description: "a sample description",

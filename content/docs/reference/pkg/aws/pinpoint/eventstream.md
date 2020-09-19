@@ -48,7 +48,6 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var stream = new Aws.Pinpoint.EventStream("stream", new Aws.Pinpoint.EventStreamArgs
@@ -59,6 +58,7 @@ class MyStack : Stack
         });
         var testRolePolicy = new Aws.Iam.RolePolicy("testRolePolicy", new Aws.Iam.RolePolicyArgs
         {
+            Role = testRole.Id,
             Policy = @"{
   ""Version"": ""2012-10-17"",
   ""Statement"": {
@@ -72,9 +72,7 @@ class MyStack : Stack
     ]
   }
 }
-
 ",
-            Role = testRole.Id,
         });
     }
 
@@ -109,7 +107,7 @@ func main() {
 			return err
 		}
 		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"pinpoint.us-east-1.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"pinpoint.us-east-1.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -123,8 +121,8 @@ func main() {
 			return err
 		}
 		_, err = iam.NewRolePolicy(ctx, "testRolePolicy", &iam.RolePolicyArgs{
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": {\n", "    \"Action\": [\n", "      \"kinesis:PutRecords\",\n", "      \"kinesis:DescribeStream\"\n", "    ],\n", "    \"Effect\": \"Allow\",\n", "    \"Resource\": [\n", "      \"arn:aws:kinesis:us-east-1:*:*/*\"\n", "    ]\n", "  }\n", "}\n", "\n")),
 			Role:   testRole.ID(),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": {\n", "    \"Action\": [\n", "      \"kinesis:PutRecords\",\n", "      \"kinesis:DescribeStream\"\n", "    ],\n", "    \"Effect\": \"Allow\",\n", "    \"Resource\": [\n", "      \"arn:aws:kinesis:us-east-1:*:*/*\"\n", "    ]\n", "  }\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -156,13 +154,13 @@ test_role = aws.iam.Role("testRole", assume_role_policy="""{
     }
   ]
 }
-
 """)
 stream = aws.pinpoint.EventStream("stream",
     application_id=app.application_id,
     destination_stream_arn=test_stream.arn,
     role_arn=test_role.arn)
 test_role_policy = aws.iam.RolePolicy("testRolePolicy",
+    role=test_role.id,
     policy="""{
   "Version": "2012-10-17",
   "Statement": {
@@ -176,9 +174,7 @@ test_role_policy = aws.iam.RolePolicy("testRolePolicy",
     ]
   }
 }
-
-""",
-    role=test_role.id)
+""")
 ```
 
 {{% /example %}}
@@ -190,11 +186,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const app = new aws.pinpoint.App("app", {});
-const testStream = new aws.kinesis.Stream("test_stream", {
-    shardCount: 1,
-});
-const testRole = new aws.iam.Role("test_role", {
-    assumeRolePolicy: `{
+const testStream = new aws.kinesis.Stream("testStream", {shardCount: 1});
+const testRole = new aws.iam.Role("testRole", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -207,14 +200,14 @@ const testRole = new aws.iam.Role("test_role", {
     }
   ]
 }
-`,
-});
+`});
 const stream = new aws.pinpoint.EventStream("stream", {
     applicationId: app.applicationId,
     destinationStreamArn: testStream.arn,
     roleArn: testRole.arn,
 });
-const testRolePolicy = new aws.iam.RolePolicy("test_role_policy", {
+const testRolePolicy = new aws.iam.RolePolicy("testRolePolicy", {
+    role: testRole.id,
     policy: `{
   "Version": "2012-10-17",
   "Statement": {
@@ -229,7 +222,6 @@ const testRolePolicy = new aws.iam.RolePolicy("test_role_policy", {
   }
 }
 `,
-    role: testRole.id,
 });
 ```
 

@@ -11,6 +11,179 @@ meta_desc: "Explore the Integration resource of the apigateway module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an HTTP Method Integration for an API Gateway Integration.
+## VPC Link
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+const name = config.requireObject("name");
+const subnetId = config.requireObject("subnetId");
+const testLoadBalancer = new aws.lb.LoadBalancer("testLoadBalancer", {
+    internal: true,
+    loadBalancerType: "network",
+    subnets: [subnetId],
+});
+const testVpcLink = new aws.apigateway.VpcLink("testVpcLink", {targetArn: [testLoadBalancer.arn]});
+const testRestApi = new aws.apigateway.RestApi("testRestApi", {});
+const testResource = new aws.apigateway.Resource("testResource", {
+    restApi: testRestApi.id,
+    parentId: testRestApi.rootResourceId,
+    pathPart: "test",
+});
+const testMethod = new aws.apigateway.Method("testMethod", {
+    restApi: testRestApi.id,
+    resourceId: testResource.id,
+    httpMethod: "GET",
+    authorization: "NONE",
+    requestModels: {
+        "application/json": "Error",
+    },
+});
+const testIntegration = new aws.apigateway.Integration("testIntegration", {
+    restApi: testRestApi.id,
+    resourceId: testResource.id,
+    httpMethod: testMethod.httpMethod,
+    requestTemplates: {
+        "application/json": "",
+        "application/xml": `#set($inputRoot = $input.path('$'))
+{ }`,
+    },
+    requestParameters: {
+        "integration.request.header.X-Authorization": "'static'",
+        "integration.request.header.X-Foo": "'Bar'",
+    },
+    type: "HTTP",
+    uri: "https://www.google.de",
+    integrationHttpMethod: "GET",
+    passthroughBehavior: "WHEN_NO_MATCH",
+    contentHandling: "CONVERT_TO_TEXT",
+    connectionType: "VPC_LINK",
+    connectionId: testVpcLink.id,
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+config = pulumi.Config()
+name = config.require_object("name")
+subnet_id = config.require_object("subnetId")
+test_load_balancer = aws.lb.LoadBalancer("testLoadBalancer",
+    internal=True,
+    load_balancer_type="network",
+    subnets=[subnet_id])
+test_vpc_link = aws.apigateway.VpcLink("testVpcLink", target_arn=[test_load_balancer.arn])
+test_rest_api = aws.apigateway.RestApi("testRestApi")
+test_resource = aws.apigateway.Resource("testResource",
+    rest_api=test_rest_api.id,
+    parent_id=test_rest_api.root_resource_id,
+    path_part="test")
+test_method = aws.apigateway.Method("testMethod",
+    rest_api=test_rest_api.id,
+    resource_id=test_resource.id,
+    http_method="GET",
+    authorization="NONE",
+    request_models={
+        "application/json": "Error",
+    })
+test_integration = aws.apigateway.Integration("testIntegration",
+    rest_api=test_rest_api.id,
+    resource_id=test_resource.id,
+    http_method=test_method.http_method,
+    request_templates={
+        "application/json": "",
+        "application/xml": """#set($inputRoot = $input.path('$'))
+{ }""",
+    },
+    request_parameters={
+        "integration.request.header.X-Authorization": "'static'",
+        "integration.request.header.X-Foo": "'Bar'",
+    },
+    type="HTTP",
+    uri="https://www.google.de",
+    integration_http_method="GET",
+    passthrough_behavior="WHEN_NO_MATCH",
+    content_handling="CONVERT_TO_TEXT",
+    connection_type="VPC_LINK",
+    connection_id=test_vpc_link.id)
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var name = config.RequireObject<dynamic>("name");
+        var subnetId = config.RequireObject<dynamic>("subnetId");
+        var testLoadBalancer = new Aws.LB.LoadBalancer("testLoadBalancer", new Aws.LB.LoadBalancerArgs
+        {
+            Internal = true,
+            LoadBalancerType = "network",
+            Subnets = 
+            {
+                subnetId,
+            },
+        });
+        var testVpcLink = new Aws.ApiGateway.VpcLink("testVpcLink", new Aws.ApiGateway.VpcLinkArgs
+        {
+            TargetArn = 
+            {
+                testLoadBalancer.Arn,
+            },
+        });
+        var testRestApi = new Aws.ApiGateway.RestApi("testRestApi", new Aws.ApiGateway.RestApiArgs
+        {
+        });
+        var testResource = new Aws.ApiGateway.Resource("testResource", new Aws.ApiGateway.ResourceArgs
+        {
+            RestApi = testRestApi.Id,
+            ParentId = testRestApi.RootResourceId,
+            PathPart = "test",
+        });
+        var testMethod = new Aws.ApiGateway.Method("testMethod", new Aws.ApiGateway.MethodArgs
+        {
+            RestApi = testRestApi.Id,
+            ResourceId = testResource.Id,
+            HttpMethod = "GET",
+            Authorization = "NONE",
+            RequestModels = 
+            {
+                { "application/json", "Error" },
+            },
+        });
+        var testIntegration = new Aws.ApiGateway.Integration("testIntegration", new Aws.ApiGateway.IntegrationArgs
+        {
+            RestApi = testRestApi.Id,
+            ResourceId = testResource.Id,
+            HttpMethod = testMethod.HttpMethod,
+            RequestTemplates = 
+            {
+                { "application/json", "" },
+                { "application/xml", @"#set($inputRoot = $input.path('$'))
+{ }" },
+            },
+            RequestParameters = 
+            {
+                { "integration.request.header.X-Authorization", "'static'" },
+                { "integration.request.header.X-Foo", "'Bar'" },
+            },
+            Type = "HTTP",
+            Uri = "https://www.google.de",
+            IntegrationHttpMethod = "GET",
+            PassthroughBehavior = "WHEN_NO_MATCH",
+            ContentHandling = "CONVERT_TO_TEXT",
+            ConnectionType = "VPC_LINK",
+            ConnectionId = testVpcLink.Id,
+        });
+    }
+
+}
+```
 
 {{% examples %}}
 ## Example Usage
@@ -225,7 +398,7 @@ const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.Integration">Integration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_key_parameters</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cache_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_handling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">passthrough_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">request_templates</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_milliseconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.Integration">Integration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_key_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cache_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_handling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">passthrough_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">request_templates</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_milliseconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1021,7 +1194,7 @@ when calling the associated resource.
 <a href="#cache_key_parameters_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of cache key parameters for the integration.
 {{% /md %}}</dd>
@@ -1136,7 +1309,7 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
 <a href="#timeout_milliseconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>milliseconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
 {{% /md %}}</dd>
@@ -1253,7 +1426,7 @@ Get an existing Integration resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_key_parameters</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cache_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_handling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">passthrough_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">request_templates</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_milliseconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Integration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_key_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cache_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_handling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">passthrough_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">request_templates</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_milliseconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Integration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1946,7 +2119,7 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
 <a href="#state_cache_key_parameters_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of cache key parameters for the integration.
 {{% /md %}}</dd>
@@ -2095,7 +2268,7 @@ For example: `request_parameters = { "integration.request.header.X-Some-Other-He
 <a href="#state_timeout_milliseconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>milliseconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
 {{% /md %}}</dd>

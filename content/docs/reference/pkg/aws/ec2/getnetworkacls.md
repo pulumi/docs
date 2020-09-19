@@ -2,7 +2,7 @@
 ---
 title: "GetNetworkAcls"
 title_tag: "Function GetNetworkAcls | Module ec2 | Package AWS"
-meta_desc: "Explore the GetNetworkAcls function of the ec2 module, including examples, input properties, output properties, and supporting types. "
+meta_desc: "Explore the GetNetworkAcls function of the ec2 module, including examples, input properties, output properties, and supporting types. {{% examples %}}"
 ---
 
 
@@ -11,6 +11,86 @@ meta_desc: "Explore the GetNetworkAcls function of the ec2 module, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleNetworkAcls = Output.Create(Aws.Ec2.GetNetworkAcls.InvokeAsync(new Aws.Ec2.GetNetworkAclsArgs
+        {
+            VpcId = @var.Vpc_id,
+        }));
+        this.Example = exampleNetworkAcls.Apply(exampleNetworkAcls => exampleNetworkAcls.Ids);
+    }
+
+    [Output("example")]
+    public Output<string> Example { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := _var.Vpc_id
+		exampleNetworkAcls, err := ec2.GetNetworkAcls(ctx, &ec2.GetNetworkAclsArgs{
+			VpcId: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("example", exampleNetworkAcls.Ids)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_network_acls = aws.ec2.get_network_acls(vpc_id=var["vpc_id"])
+pulumi.export("example", example_network_acls.ids)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleNetworkAcls = aws.ec2.getNetworkAcls({
+    vpcId: _var.vpc_id,
+});
+export const example = exampleNetworkAcls.then(exampleNetworkAcls => exampleNetworkAcls.ids);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetNetworkAcls {#using}
@@ -24,7 +104,7 @@ meta_desc: "Explore the GetNetworkAcls function of the ec2 module, including exa
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_network_acls(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetNetworkAclsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworkAclsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_network_acls(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetNetworkAclsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNetworkAclsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -178,7 +258,7 @@ a pair on the desired network ACLs.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnetworkaclsfilter">List[Get<wbr>Network<wbr>Acls<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getnetworkaclsfilter">Sequence[Get<wbr>Network<wbr>Acls<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -420,7 +500,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of all the network ACL ids found. This data source will fail if none are found.
 {{% /md %}}</dd>
@@ -441,7 +521,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnetworkaclsfilter">List[Get<wbr>Network<wbr>Acls<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getnetworkaclsfilter">Sequence[Get<wbr>Network<wbr>Acls<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -597,7 +677,7 @@ A VPC will be selected if any one of the given values matches.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.

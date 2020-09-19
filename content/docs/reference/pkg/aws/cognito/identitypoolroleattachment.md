@@ -28,8 +28,8 @@ class MyStack : Stack
     {
         var mainIdentityPool = new Aws.Cognito.IdentityPool("mainIdentityPool", new Aws.Cognito.IdentityPoolArgs
         {
-            AllowUnauthenticatedIdentities = false,
             IdentityPoolName = "identity pool",
+            AllowUnauthenticatedIdentities = false,
             SupportedLoginProviders = 
             {
                 { "graph.facebook.com", "7346241598935555" },
@@ -57,11 +57,11 @@ class MyStack : Stack
     }}
   ]
 }}
-
 "),
         });
         var authenticatedRolePolicy = new Aws.Iam.RolePolicy("authenticatedRolePolicy", new Aws.Iam.RolePolicyArgs
         {
+            Role = authenticatedRole.Id,
             Policy = @"{
   ""Version"": ""2012-10-17"",
   ""Statement"": [
@@ -78,9 +78,7 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
-            Role = authenticatedRole.Id,
         });
         var mainIdentityPoolRoleAttachment = new Aws.Cognito.IdentityPoolRoleAttachment("mainIdentityPoolRoleAttachment", new Aws.Cognito.IdentityPoolRoleAttachmentArgs
         {
@@ -89,8 +87,9 @@ class MyStack : Stack
             {
                 new Aws.Cognito.Inputs.IdentityPoolRoleAttachmentRoleMappingArgs
                 {
-                    AmbiguousRoleResolution = "AuthenticatedRole",
                     IdentityProvider = "graph.facebook.com",
+                    AmbiguousRoleResolution = "AuthenticatedRole",
+                    Type = "Rules",
                     MappingRules = 
                     {
                         new Aws.Cognito.Inputs.IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs
@@ -101,7 +100,6 @@ class MyStack : Stack
                             Value = "paid",
                         },
                     },
-                    Type = "Rules",
                 },
             },
             Roles = 
@@ -131,8 +129,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		mainIdentityPool, err := cognito.NewIdentityPool(ctx, "mainIdentityPool", &cognito.IdentityPoolArgs{
-			AllowUnauthenticatedIdentities: pulumi.Bool(false),
 			IdentityPoolName:               pulumi.String("identity pool"),
+			AllowUnauthenticatedIdentities: pulumi.Bool(false),
 			SupportedLoginProviders: pulumi.StringMap{
 				"graph.facebook.com": pulumi.String("7346241598935555"),
 			},
@@ -142,15 +140,15 @@ func main() {
 		}
 		authenticatedRole, err := iam.NewRole(ctx, "authenticatedRole", &iam.RoleArgs{
 			AssumeRolePolicy: mainIdentityPool.ID().ApplyT(func(id string) (string, error) {
-				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Federated\": \"cognito-identity.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRoleWithWebIdentity\",\n", "      \"Condition\": {\n", "        \"StringEquals\": {\n", "          \"cognito-identity.amazonaws.com:aud\": \"", id, "\"\n", "        },\n", "        \"ForAnyValue:StringLike\": {\n", "          \"cognito-identity.amazonaws.com:amr\": \"authenticated\"\n", "        }\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n"), nil
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Federated\": \"cognito-identity.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRoleWithWebIdentity\",\n", "      \"Condition\": {\n", "        \"StringEquals\": {\n", "          \"cognito-identity.amazonaws.com:aud\": \"", id, "\"\n", "        },\n", "        \"ForAnyValue:StringLike\": {\n", "          \"cognito-identity.amazonaws.com:amr\": \"authenticated\"\n", "        }\n", "      }\n", "    }\n", "  ]\n", "}\n"), nil
 			}).(pulumi.StringOutput),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = iam.NewRolePolicy(ctx, "authenticatedRolePolicy", &iam.RolePolicyArgs{
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Action\": [\n", "        \"mobileanalytics:PutEvents\",\n", "        \"cognito-sync:*\",\n", "        \"cognito-identity:*\"\n", "      ],\n", "      \"Resource\": [\n", "        \"*\"\n", "      ]\n", "    }\n", "  ]\n", "}\n", "\n")),
 			Role:   authenticatedRole.ID(),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Action\": [\n", "        \"mobileanalytics:PutEvents\",\n", "        \"cognito-sync:*\",\n", "        \"cognito-identity:*\"\n", "      ],\n", "      \"Resource\": [\n", "        \"*\"\n", "      ]\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -159,8 +157,9 @@ func main() {
 			IdentityPoolId: mainIdentityPool.ID(),
 			RoleMappings: cognito.IdentityPoolRoleAttachmentRoleMappingArray{
 				&cognito.IdentityPoolRoleAttachmentRoleMappingArgs{
-					AmbiguousRoleResolution: pulumi.String("AuthenticatedRole"),
 					IdentityProvider:        pulumi.String("graph.facebook.com"),
+					AmbiguousRoleResolution: pulumi.String("AuthenticatedRole"),
+					Type:                    pulumi.String("Rules"),
 					MappingRules: cognito.IdentityPoolRoleAttachmentRoleMappingMappingRuleArray{
 						&cognito.IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs{
 							Claim:     pulumi.String("isAdmin"),
@@ -169,7 +168,6 @@ func main() {
 							Value:     pulumi.String("paid"),
 						},
 					},
-					Type: pulumi.String("Rules"),
 				},
 			},
 			Roles: pulumi.StringMap{
@@ -192,8 +190,8 @@ import pulumi
 import pulumi_aws as aws
 
 main_identity_pool = aws.cognito.IdentityPool("mainIdentityPool",
-    allow_unauthenticated_identities=False,
     identity_pool_name="identity pool",
+    allow_unauthenticated_identities=False,
     supported_login_providers={
         "graph.facebook.com": "7346241598935555",
     })
@@ -217,9 +215,9 @@ authenticated_role = aws.iam.Role("authenticatedRole", assume_role_policy=main_i
     }}
   ]
 }}
-
 """))
 authenticated_role_policy = aws.iam.RolePolicy("authenticatedRolePolicy",
+    role=authenticated_role.id,
     policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -236,21 +234,19 @@ authenticated_role_policy = aws.iam.RolePolicy("authenticatedRolePolicy",
     }
   ]
 }
-
-""",
-    role=authenticated_role.id)
+""")
 main_identity_pool_role_attachment = aws.cognito.IdentityPoolRoleAttachment("mainIdentityPoolRoleAttachment",
     identity_pool_id=main_identity_pool.id,
     role_mappings=[aws.cognito.IdentityPoolRoleAttachmentRoleMappingArgs(
-        ambiguous_role_resolution="AuthenticatedRole",
         identity_provider="graph.facebook.com",
+        ambiguous_role_resolution="AuthenticatedRole",
+        type="Rules",
         mapping_rules=[aws.cognito.IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs(
             claim="isAdmin",
             match_type="Equals",
             role_arn=authenticated_role.arn,
             value="paid",
         )],
-        type="Rules",
     )],
     roles={
         "authenticated": authenticated_role.arn,
@@ -265,15 +261,14 @@ main_identity_pool_role_attachment = aws.cognito.IdentityPoolRoleAttachment("mai
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const mainIdentityPool = new aws.cognito.IdentityPool("main", {
-    allowUnauthenticatedIdentities: false,
+const mainIdentityPool = new aws.cognito.IdentityPool("mainIdentityPool", {
     identityPoolName: "identity pool",
+    allowUnauthenticatedIdentities: false,
     supportedLoginProviders: {
         "graph.facebook.com": "7346241598935555",
     },
 });
-const authenticatedRole = new aws.iam.Role("authenticated", {
-    assumeRolePolicy: pulumi.interpolate`{
+const authenticatedRole = new aws.iam.Role("authenticatedRole", {assumeRolePolicy: pulumi.interpolate`{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -293,9 +288,9 @@ const authenticatedRole = new aws.iam.Role("authenticated", {
     }
   ]
 }
-`,
-});
-const authenticatedRolePolicy = new aws.iam.RolePolicy("authenticated", {
+`});
+const authenticatedRolePolicy = new aws.iam.RolePolicy("authenticatedRolePolicy", {
+    role: authenticatedRole.id,
     policy: `{
   "Version": "2012-10-17",
   "Statement": [
@@ -313,20 +308,19 @@ const authenticatedRolePolicy = new aws.iam.RolePolicy("authenticated", {
   ]
 }
 `,
-    role: authenticatedRole.id,
 });
-const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachment("main", {
+const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachment("mainIdentityPoolRoleAttachment", {
     identityPoolId: mainIdentityPool.id,
     roleMappings: [{
-        ambiguousRoleResolution: "AuthenticatedRole",
         identityProvider: "graph.facebook.com",
+        ambiguousRoleResolution: "AuthenticatedRole",
+        type: "Rules",
         mappingRules: [{
             claim: "isAdmin",
             matchType: "Equals",
             roleArn: authenticatedRole.arn,
             value: "paid",
         }],
-        type: "Rules",
     }],
     roles: {
         authenticated: authenticatedRole.arn,
@@ -348,7 +342,7 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cognito/#pulumi_aws.cognito.IdentityPoolRoleAttachment">IdentityPoolRoleAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_mappings</span><span class="p">:</span> <span class="nx">Optional[List[IdentityPoolRoleAttachmentRoleMappingArgs]]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cognito/#pulumi_aws.cognito.IdentityPoolRoleAttachment">IdentityPoolRoleAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentityPoolRoleAttachmentRoleMappingArgs]]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -668,7 +662,7 @@ The IdentityPoolRoleAttachment resource accepts the following [input]({{< relref
 <a href="#role_mappings_python" style="color: inherit; text-decoration: inherit;">role_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Sequence[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd>
@@ -772,7 +766,7 @@ Get an existing IdentityPoolRoleAttachment resource's state with the given name,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_mappings</span><span class="p">:</span> <span class="nx">Optional[List[IdentityPoolRoleAttachmentRoleMappingArgs]]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> IdentityPoolRoleAttachment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[IdentityPoolRoleAttachmentRoleMappingArgs]]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> IdentityPoolRoleAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1023,7 +1017,7 @@ The following state arguments are supported:
 <a href="#state_role_mappings_python" style="color: inherit; text-decoration: inherit;">role_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Sequence[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd>
@@ -1264,7 +1258,7 @@ The following state arguments are supported:
 <a href="#mapping_rules_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Sequence[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
 {{% /md %}}</dd>

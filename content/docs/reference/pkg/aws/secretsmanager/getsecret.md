@@ -765,7 +765,7 @@ The following output properties are available:
 <a href="#rotation_rules_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecretrotationrule">List[Get<wbr>Secret<wbr>Rotation<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getsecretrotationrule">Sequence[Get<wbr>Secret<wbr>Rotation<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Rotation rules if rotation is enabled.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
@@ -869,7 +869,7 @@ The following output properties are available:
 <a href="#automatically_after_days_python" style="color: inherit; text-decoration: inherit;">automatically_<wbr>after_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

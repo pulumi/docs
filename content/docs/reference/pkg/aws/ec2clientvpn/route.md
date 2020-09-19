@@ -2,7 +2,7 @@
 ---
 title: "Route"
 title_tag: "Resource Route | Module ec2clientvpn | Package AWS"
-meta_desc: "Explore the Route resource of the ec2clientvpn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides additional routes for AWS Client VPN endpoints. For more information on usage, please see the "
+meta_desc: "Explore the Route resource of the ec2clientvpn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides additional routes for AWS Client VPN endpoints. For more information on usage, please see the"
 ---
 
 
@@ -12,13 +12,6 @@ meta_desc: "Explore the Route resource of the ec2clientvpn module, including exa
 
 Provides additional routes for AWS Client VPN endpoints. For more information on usage, please see the
 [AWS Client VPN Administrator's Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
-## Attribute Reference
-
-In addition to all arguments above, the following attributes are exported:
-
-* `id` - The ID of the Client VPN endpoint.
-* `origin` - Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
-* `type` - The type of the route.
 
 {{% examples %}}
 ## Example Usage
@@ -595,7 +588,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -605,7 +599,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the route.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -632,7 +627,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -642,7 +638,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the route.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -669,7 +666,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -679,7 +677,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the route.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -706,7 +705,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -716,7 +716,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the route.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -893,7 +894,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -914,7 +916,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the route.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -964,7 +967,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -985,7 +989,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the route.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1035,7 +1040,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1056,7 +1062,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the route.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1106,7 +1113,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1127,7 +1135,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the route.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

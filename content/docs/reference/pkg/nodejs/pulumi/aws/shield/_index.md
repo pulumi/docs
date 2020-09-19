@@ -3,7 +3,7 @@ title: "Module shield"
 title_tag: "Module shield | Package @pulumi/aws | Node.js SDK"
 linktitle: "shield"
 meta_desc: "Explore members of the shield module in the @pulumi/aws package."
-git_sha: "96a856ed11314bec542cd860851b3cc05711aaab"
+git_sha: "3d3072ac52d05fe557c01f4a7c7669b120df0b37"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Protection" data-link-title="Protection">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L29">
         Resource <strong>Protection</strong>
     </a>
 </h3>
@@ -47,15 +47,19 @@ The resource can be an Amazon CloudFront distribution, Elastic Load Balancing lo
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const available = aws.getAvailabilityZones({});
-const currentRegion = aws.getRegion({});
-const currentCallerIdentity = aws.getCallerIdentity({});
-const fooEip = new aws.ec2.Eip("fooEip", {vpc: true});
-const fooProtection = new aws.shield.Protection("fooProtection", {resourceArn: pulumi.all([currentRegion, currentCallerIdentity, fooEip.id]).apply(([currentRegion, currentCallerIdentity, id]) => `arn:aws:ec2:${currentRegion.name}:${currentCallerIdentity.accountId}:eip-allocation/${id}`)});
+const available = pulumi.output(aws.getAvailabilityZones({ async: true }));
+const currentRegion = pulumi.output(aws.getRegion({ async: true }));
+const currentCallerIdentity = pulumi.output(aws.getCallerIdentity({ async: true }));
+const exampleEip = new aws.ec2.Eip("example", {
+    vpc: true,
+});
+const exampleProtection = new aws.shield.Protection("example", {
+    resourceArn: pulumi.interpolate`arn:aws:ec2:${currentRegion.name!}:${currentCallerIdentity.accountId}:eip-allocation/${exampleEip.id}`,
+});
 ```
 
 <h4 class="pdoc-member-header" id="Protection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L60"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -69,7 +73,7 @@ Create a Protection resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Protection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -80,14 +84,14 @@ Get an existing Protection resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Protection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Protection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -98,7 +102,7 @@ Returns true if the given object is an instance of Protection.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Protection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -107,7 +111,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Protection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -115,7 +119,7 @@ deployments and may be missing (undefined) during planning phases.
 A friendly name for the Protection you are creating.
 
 <h4 class="pdoc-member-header" id="Protection-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L60">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L64">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -123,7 +127,7 @@ A friendly name for the Protection you are creating.
 The ARN (Amazon Resource Name) of the resource to be protected.
 
 <h4 class="pdoc-member-header" id="Protection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -135,7 +139,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ProtectionArgs" data-link-title="ProtectionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L116">
         interface <strong>ProtectionArgs</strong>
     </a>
 </h3>
@@ -145,7 +149,7 @@ deployments.
 The set of arguments for constructing a Protection resource.
 
 <h4 class="pdoc-member-header" id="ProtectionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L120">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -153,7 +157,7 @@ The set of arguments for constructing a Protection resource.
 A friendly name for the Protection you are creating.
 
 <h4 class="pdoc-member-header" id="ProtectionArgs-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L120">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L124">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +165,7 @@ A friendly name for the Protection you are creating.
 The ARN (Amazon Resource Name) of the resource to be protected.
 
 <h3 class="pdoc-module-header" id="ProtectionState" data-link-title="ProtectionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L102">
         interface <strong>ProtectionState</strong>
     </a>
 </h3>
@@ -171,7 +175,7 @@ The ARN (Amazon Resource Name) of the resource to be protected.
 Input properties used for looking up and filtering Protection resources.
 
 <h4 class="pdoc-member-header" id="ProtectionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -179,7 +183,7 @@ Input properties used for looking up and filtering Protection resources.
 A friendly name for the Protection you are creating.
 
 <h4 class="pdoc-member-header" id="ProtectionState-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/shield/protection.ts#L106">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/shield/protection.ts#L110">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

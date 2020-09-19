@@ -227,7 +227,7 @@ const example = pulumi.output(aws.pricing.getProduct({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_product(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetProductFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProductResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_product(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetProductFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProductResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -345,7 +345,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductfilter">List[Get<wbr>Product<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getproductfilter">Sequence[Get<wbr>Product<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of filters. Passed directly to the API (see GetProducts API reference). These filters must describe a single product, this resource will fail if more than one product is returned by the API.
 {{% /md %}}</dd>
@@ -534,7 +534,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductfilter">List[Get<wbr>Product<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getproductfilter">Sequence[Get<wbr>Product<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

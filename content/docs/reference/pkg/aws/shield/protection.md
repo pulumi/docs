@@ -30,13 +30,13 @@ class MyStack : Stack
         var available = Output.Create(Aws.GetAvailabilityZones.InvokeAsync());
         var currentRegion = Output.Create(Aws.GetRegion.InvokeAsync());
         var currentCallerIdentity = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
-        var fooEip = new Aws.Ec2.Eip("fooEip", new Aws.Ec2.EipArgs
+        var exampleEip = new Aws.Ec2.Eip("exampleEip", new Aws.Ec2.EipArgs
         {
             Vpc = true,
         });
-        var fooProtection = new Aws.Shield.Protection("fooProtection", new Aws.Shield.ProtectionArgs
+        var exampleProtection = new Aws.Shield.Protection("exampleProtection", new Aws.Shield.ProtectionArgs
         {
-            ResourceArn = Output.Tuple(currentRegion, currentCallerIdentity, fooEip.Id).Apply(values =>
+            ResourceArn = Output.Tuple(currentRegion, currentCallerIdentity, exampleEip.Id).Apply(values =>
             {
                 var currentRegion = values.Item1;
                 var currentCallerIdentity = values.Item2;
@@ -78,14 +78,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		fooEip, err := ec2.NewEip(ctx, "fooEip", &ec2.EipArgs{
+		exampleEip, err := ec2.NewEip(ctx, "exampleEip", &ec2.EipArgs{
 			Vpc: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = shield.NewProtection(ctx, "fooProtection", &shield.ProtectionArgs{
-			ResourceArn: fooEip.ID().ApplyT(func(id string) (string, error) {
+		_, err = shield.NewProtection(ctx, "exampleProtection", &shield.ProtectionArgs{
+			ResourceArn: exampleEip.ID().ApplyT(func(id string) (string, error) {
 				return fmt.Sprintf("%v%v%v%v%v%v", "arn:aws:ec2:", currentRegion.Name, ":", currentCallerIdentity.AccountId, ":eip-allocation/", id), nil
 			}).(pulumi.StringOutput),
 		})
@@ -107,8 +107,8 @@ import pulumi_aws as aws
 available = aws.get_availability_zones()
 current_region = aws.get_region()
 current_caller_identity = aws.get_caller_identity()
-foo_eip = aws.ec2.Eip("fooEip", vpc=True)
-foo_protection = aws.shield.Protection("fooProtection", resource_arn=foo_eip.id.apply(lambda id: f"arn:aws:ec2:{current_region.name}:{current_caller_identity.account_id}:eip-allocation/{id}"))
+example_eip = aws.ec2.Eip("exampleEip", vpc=True)
+example_protection = aws.shield.Protection("exampleProtection", resource_arn=example_eip.id.apply(lambda id: f"arn:aws:ec2:{current_region.name}:{current_caller_identity.account_id}:eip-allocation/{id}"))
 ```
 
 {{% /example %}}
@@ -119,11 +119,15 @@ foo_protection = aws.shield.Protection("fooProtection", resource_arn=foo_eip.id.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const available = aws.getAvailabilityZones({});
-const currentRegion = aws.getRegion({});
-const currentCallerIdentity = aws.getCallerIdentity({});
-const fooEip = new aws.ec2.Eip("fooEip", {vpc: true});
-const fooProtection = new aws.shield.Protection("fooProtection", {resourceArn: pulumi.all([currentRegion, currentCallerIdentity, fooEip.id]).apply(([currentRegion, currentCallerIdentity, id]) => `arn:aws:ec2:${currentRegion.name}:${currentCallerIdentity.accountId}:eip-allocation/${id}`)});
+const available = pulumi.output(aws.getAvailabilityZones({ async: true }));
+const currentRegion = pulumi.output(aws.getRegion({ async: true }));
+const currentCallerIdentity = pulumi.output(aws.getCallerIdentity({ async: true }));
+const exampleEip = new aws.ec2.Eip("example", {
+    vpc: true,
+});
+const exampleProtection = new aws.shield.Protection("example", {
+    resourceArn: pulumi.interpolate`arn:aws:ec2:${currentRegion.name!}:${currentCallerIdentity.accountId}:eip-allocation/${exampleEip.id}`,
+});
 ```
 
 {{% /example %}}

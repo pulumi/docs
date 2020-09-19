@@ -160,7 +160,7 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOfferings({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_type_offerings(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetInstanceTypeOfferingsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">location_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypeOfferingsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_type_offerings(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceTypeOfferingsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">location_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypeOfferingsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -278,7 +278,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeofferingsfilter">List[Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancetypeofferingsfilter">Sequence[Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html) for supported filters. Detailed below.
 {{% /md %}}</dd>
@@ -478,7 +478,7 @@ The following output properties are available:
 <a href="#instance_types_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of EC2 Instance Types.
 {{% /md %}}</dd>
@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeofferingsfilter">List[Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getinstancetypeofferingsfilter">Sequence[Get<wbr>Instance<wbr>Type<wbr>Offerings<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -638,7 +638,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>

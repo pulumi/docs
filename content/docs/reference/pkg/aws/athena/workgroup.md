@@ -1372,7 +1372,7 @@ The following state arguments are supported:
 <a href="#bytes_scanned_cutoff_per_query_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>scanned_<wbr>cutoff_<wbr>per_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
 {{% /md %}}</dd>

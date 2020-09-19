@@ -29,7 +29,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var foo = Output.Create(Aws.Kms.GetKey.InvokeAsync(new Aws.Kms.GetKeyArgs
+        var byAlias = Output.Create(Aws.Kms.GetKey.InvokeAsync(new Aws.Kms.GetKeyArgs
+        {
+            KeyId = "alias/my-key",
+        }));
+        var byId = Output.Create(Aws.Kms.GetKey.InvokeAsync(new Aws.Kms.GetKeyArgs
+        {
+            KeyId = "1234abcd-12ab-34cd-56ef-1234567890ab",
+        }));
+        var byAliasArn = Output.Create(Aws.Kms.GetKey.InvokeAsync(new Aws.Kms.GetKeyArgs
+        {
+            KeyId = "arn:aws:kms:us-east-1:111122223333:alias/my-key",
+        }));
+        var byKeyArn = Output.Create(Aws.Kms.GetKey.InvokeAsync(new Aws.Kms.GetKeyArgs
         {
             KeyId = "arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab",
         }));
@@ -52,6 +64,24 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := kms.LookupKey(ctx, &kms.LookupKeyArgs{
+			KeyId: "alias/my-key",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = kms.LookupKey(ctx, &kms.LookupKeyArgs{
+			KeyId: "1234abcd-12ab-34cd-56ef-1234567890ab",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = kms.LookupKey(ctx, &kms.LookupKeyArgs{
+			KeyId: "arn:aws:kms:us-east-1:111122223333:alias/my-key",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = kms.LookupKey(ctx, &kms.LookupKeyArgs{
 			KeyId: "arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab",
 		}, nil)
 		if err != nil {
@@ -69,7 +99,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-foo = aws.kms.get_key(key_id="arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab")
+by_alias = aws.kms.get_key(key_id="alias/my-key")
+by_id = aws.kms.get_key(key_id="1234abcd-12ab-34cd-56ef-1234567890ab")
+by_alias_arn = aws.kms.get_key(key_id="arn:aws:kms:us-east-1:111122223333:alias/my-key")
+by_key_arn = aws.kms.get_key(key_id="arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab")
 ```
 
 {{% /example %}}
@@ -80,7 +113,16 @@ foo = aws.kms.get_key(key_id="arn:aws:kms:us-east-1:111122223333:key/1234abcd-12
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = pulumi.output(aws.kms.getKey({
+const byAlias = pulumi.output(aws.kms.getKey({
+    keyId: "alias/my-key",
+}, { async: true }));
+const byId = pulumi.output(aws.kms.getKey({
+    keyId: "1234abcd-12ab-34cd-56ef-1234567890ab",
+}, { async: true }));
+const byAliasArn = pulumi.output(aws.kms.getKey({
+    keyId: "arn:aws:kms:us-east-1:111122223333:alias/my-key",
+}, { async: true }));
+const byKeyArn = pulumi.output(aws.kms.getKey({
     keyId: "arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab",
 }, { async: true }));
 ```
@@ -101,7 +143,7 @@ const foo = pulumi.output(aws.kms.getKey({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_key(</span><span class="nx">grant_tokens</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKeyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_key(</span><span class="nx">grant_tokens</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKeyResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -248,7 +290,7 @@ The following arguments are supported:
 <a href="#grant_tokens_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of grant tokens
 {{% /md %}}</dd>
@@ -934,7 +976,7 @@ The following output properties are available:
 <a href="#grant_tokens_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

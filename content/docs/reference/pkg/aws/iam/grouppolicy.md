@@ -32,7 +32,7 @@ class MyStack : Stack
         });
         var myDeveloperPolicy = new Aws.Iam.GroupPolicy("myDeveloperPolicy", new Aws.Iam.GroupPolicyArgs
         {
-            Group = myDevelopers.Id,
+            Group = myDevelopers.Name,
             Policy = @"{
   ""Version"": ""2012-10-17"",
   ""Statement"": [
@@ -74,7 +74,7 @@ func main() {
 			return err
 		}
 		_, err = iam.NewGroupPolicy(ctx, "myDeveloperPolicy", &iam.GroupPolicyArgs{
-			Group:  myDevelopers.ID(),
+			Group:  myDevelopers.Name,
 			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
@@ -94,7 +94,7 @@ import pulumi_aws as aws
 
 my_developers = aws.iam.Group("myDevelopers", path="/users/")
 my_developer_policy = aws.iam.GroupPolicy("myDeveloperPolicy",
-    group=my_developers.id,
+    group=my_developers.name,
     policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -120,7 +120,7 @@ import * as aws from "@pulumi/aws";
 
 const myDevelopers = new aws.iam.Group("myDevelopers", {path: "/users/"});
 const myDeveloperPolicy = new aws.iam.GroupPolicy("myDeveloperPolicy", {
-    group: myDevelopers.id,
+    group: myDevelopers.name,
     policy: `{
   "Version": "2012-10-17",
   "Statement": [

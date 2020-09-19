@@ -426,7 +426,7 @@ const example = new aws.wafv2.RuleGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.RuleGroup">RuleGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.RuleGroup">RuleGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -856,7 +856,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The web ACL capacity units (WCUs) required for this rule group. See [here](https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateRuleGroup.html#API_CreateRuleGroup_RequestSyntax) for general information and [here](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statements-list.html) for capacity specific information.
 {{% /md %}}</dd>
@@ -911,7 +911,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprule">List[Rule<wbr>Group<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
 {{% /md %}}</dd>
@@ -1110,7 +1110,7 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">) -&gt;</span> RuleGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">) -&gt;</span> RuleGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1556,7 +1556,7 @@ The following state arguments are supported:
 <a href="#state_capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The web ACL capacity units (WCUs) required for this rule group. See [here](https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateRuleGroup.html#API_CreateRuleGroup_RequestSyntax) for general information and [here](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statements-list.html) for capacity specific information.
 {{% /md %}}</dd>
@@ -1599,7 +1599,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprule">List[Rule<wbr>Group<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprule">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
 {{% /md %}}</dd>
@@ -1884,7 +1884,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If you define more than one Rule in a WebACL, AWS WAF evaluates each request against the `rules` in order based on the value of `priority`. AWS WAF processes rules with lower priority first.
 {{% /md %}}</dd>
@@ -2660,7 +2660,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -3236,7 +3236,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -3801,7 +3801,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -4469,7 +4469,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -4521,6 +4521,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4537,6 +4548,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -4557,6 +4579,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4570,9 +4603,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -4611,6 +4789,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4627,6 +4816,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -4647,6 +4847,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4663,6 +4874,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -4827,7 +5227,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -5495,7 +5895,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -5706,7 +6106,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -5717,7 +6117,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -6385,7 +6785,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -6519,7 +6919,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -7187,7 +7587,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -7321,7 +7721,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -7989,7 +8389,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -8211,7 +8611,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -8879,7 +9279,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -8931,6 +9331,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -8947,6 +9358,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -8967,6 +9389,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -8980,9 +9413,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -9021,6 +9599,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -9037,6 +9626,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -9057,6 +9657,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -9073,6 +9684,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -9160,7 +9960,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -9725,7 +10525,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -10393,7 +11193,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -10445,6 +11245,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -10461,6 +11272,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -10481,6 +11303,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -10494,9 +11327,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -10535,6 +11513,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -10551,6 +11540,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -10571,6 +11571,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -10587,6 +11598,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -10751,7 +11951,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -11419,7 +12619,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -11630,7 +12830,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -11641,7 +12841,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -12309,7 +13509,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -12443,7 +13643,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -13111,7 +14311,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -13245,7 +14445,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -13913,7 +15113,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -14014,7 +15214,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -14579,7 +15779,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -15247,7 +16447,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -15299,6 +16499,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -15315,6 +16526,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -15335,6 +16557,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -15348,9 +16581,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -15389,6 +16767,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -15405,6 +16794,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -15425,6 +16825,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -15441,6 +16852,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -15605,7 +17205,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -16273,7 +17873,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -16484,7 +18084,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -16495,7 +18095,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -17163,7 +18763,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -17297,7 +18897,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -17965,7 +19565,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -18099,7 +19699,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -18767,7 +20367,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -18945,7 +20545,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -19613,7 +21213,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -19824,7 +21424,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -19835,7 +21435,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -20503,7 +22103,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -20637,7 +22237,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -21305,7 +22905,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -21439,7 +23039,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -22107,7 +23707,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -22329,7 +23929,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -22997,7 +24597,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -23049,6 +24649,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -23065,6 +24676,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -23085,6 +24707,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -23098,9 +24731,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -23139,6 +24917,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -23155,6 +24944,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -23175,6 +24975,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -23191,6 +25002,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -23278,7 +25278,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -23854,7 +25854,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -24419,7 +26419,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -25087,7 +27087,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -25139,6 +27139,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -25155,6 +27166,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -25175,6 +27197,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -25188,9 +27221,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -25229,6 +27407,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -25245,6 +27434,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -25265,6 +27465,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -25281,6 +27492,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -25445,7 +27845,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -26113,7 +28513,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -26324,7 +28724,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -26335,7 +28735,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -27003,7 +29403,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -27137,7 +29537,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -27805,7 +30205,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -27939,7 +30339,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -28607,7 +31007,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -28829,7 +31229,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -29497,7 +31897,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -29549,6 +31949,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -29565,6 +31976,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -29585,6 +32007,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -29598,9 +32031,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -29639,6 +32217,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -29655,6 +32244,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -29675,6 +32275,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -29691,6 +32302,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -29778,7 +32578,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -30343,7 +33143,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -31011,7 +33811,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -31063,6 +33863,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -31079,6 +33890,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -31099,6 +33921,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -31112,9 +33945,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -31153,6 +34131,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -31169,6 +34158,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -31189,6 +34189,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -31205,6 +34216,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -31369,7 +34569,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -32037,7 +35237,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -32248,7 +35448,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -32259,7 +35459,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -32927,7 +36127,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -33061,7 +36261,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -33729,7 +36929,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -33863,7 +37063,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -34531,7 +37731,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -34632,7 +37832,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -35197,7 +38397,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -35865,7 +39065,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -35917,6 +39117,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -35933,6 +39144,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -35953,6 +39175,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -35966,9 +39199,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -36007,6 +39385,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -36023,6 +39412,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -36043,6 +39443,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -36059,6 +39470,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -36223,7 +39823,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -36891,7 +40491,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -37102,7 +40702,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -37113,7 +40713,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -37781,7 +41381,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -37915,7 +41515,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -38583,7 +42183,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -38717,7 +42317,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -39385,7 +42985,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -39563,7 +43163,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -40231,7 +43831,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -40442,7 +44042,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -40453,7 +44053,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -41121,7 +44721,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -41255,7 +44855,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -41923,7 +45523,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -42057,7 +45657,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -42725,7 +46325,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -42826,7 +46426,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -43402,7 +47002,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -43967,7 +47567,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -44635,7 +48235,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -44687,6 +48287,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -44703,6 +48314,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -44723,6 +48345,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -44736,9 +48369,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -44777,6 +48555,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -44793,6 +48582,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -44813,6 +48613,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -44829,6 +48640,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -44993,7 +48993,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -45661,7 +49661,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -45872,7 +49872,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -45883,7 +49883,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -46551,7 +50551,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -46685,7 +50685,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -47353,7 +51353,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -47487,7 +51487,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -48155,7 +52155,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -48377,7 +52377,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -49045,7 +53045,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -49097,6 +53097,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -49113,6 +53124,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -49133,6 +53155,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -49146,9 +53179,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -49187,6 +53365,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -49203,6 +53392,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -49223,6 +53423,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -49239,6 +53450,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -49326,7 +53726,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -49891,7 +54291,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -50559,7 +54959,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -50611,6 +55011,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -50627,6 +55038,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -50647,6 +55069,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -50660,9 +55093,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -50701,6 +55279,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -50717,6 +55306,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -50737,6 +55337,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -50753,6 +55364,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -50917,7 +55717,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -51585,7 +56385,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -51796,7 +56596,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -51807,7 +56607,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -52475,7 +57275,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -52609,7 +57409,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -53277,7 +58077,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -53411,7 +58211,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -54079,7 +58879,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -54180,7 +58980,7 @@ The following state arguments are supported:
 <a href="#statements_python" style="color: inherit; text-decoration: inherit;">statements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatement">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatement">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd>
@@ -54745,7 +59545,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -55413,7 +60213,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -55465,6 +60265,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_csharp">
+<a href="#forwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -55481,6 +60292,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_go">
+<a href="#forwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -55501,6 +60323,17 @@ The following state arguments are supported:
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwardedipconfig_nodejs">
+<a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -55514,9 +60347,154 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of two-character country codes, for example, [ "US", "CN" ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forwarded_ip_config_python">
+<a href="#forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -55555,6 +60533,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_csharp">
+<a href="#ipsetforwardedipconfig_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -55571,6 +60560,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_go">
+<a href="#ipsetforwardedipconfig_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd>
 
 </dl>
@@ -55591,6 +60591,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipsetforwardedipconfig_nodejs">
+<a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -55607,6 +60618,195 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IP Set that this statement references.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_set_forwarded_ip_config_python">
+<a href="#ip_set_forwarded_ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>set_<wbr>forwarded_<wbr>ip_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_csharp">
+<a href="#fallbackbehavior_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_csharp">
+<a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_csharp">
+<a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_go">
+<a href="#fallbackbehavior_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_go">
+<a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_go">
+<a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallbackbehavior_nodejs">
+<a href="#fallbackbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="headername_nodejs">
+<a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_nodejs">
+<a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fallback_behavior_python">
+<a href="#fallback_behavior_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>behavior</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The name of the HTTP header to use for the IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="position_python">
+<a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}- The position in the header to search for the IP address. Valid values include: `FIRST`, `LAST`, or `ANY`. If `ANY` is specified and the header contains more than 10 IP addresses, AWS WAFv2 inspects the last 10.
 {{% /md %}}</dd>
 
 </dl>
@@ -55771,7 +60971,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -56439,7 +61639,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -56650,7 +61850,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -56661,7 +61861,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -57329,7 +62529,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -57463,7 +62663,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -58131,7 +63331,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -58265,7 +63465,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -58933,7 +64133,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -59111,7 +64311,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -59779,7 +64979,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -59990,7 +65190,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -60001,7 +65201,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -60669,7 +65869,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -60803,7 +66003,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -61471,7 +66671,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -61605,7 +66805,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -62273,7 +67473,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -62451,7 +67651,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -63119,7 +68319,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -63330,7 +68530,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, to compare to the request part, after any transformations. Valid values are integers between 0 and 21474836480, inclusive.
 {{% /md %}}</dd>
@@ -63341,7 +68541,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -64009,7 +69209,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -64143,7 +69343,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -64811,7 +70011,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>
@@ -64945,7 +70145,7 @@ The following state arguments are supported:
 <a href="#text_transformations_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementtexttransformation">List[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementtexttransformation">Sequence[Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd>
@@ -65613,7 +70813,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
 {{% /md %}}</dd>

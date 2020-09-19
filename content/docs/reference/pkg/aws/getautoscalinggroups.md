@@ -200,7 +200,7 @@ const slackNotifications = new aws.autoscaling.Notification("slackNotifications"
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_autoscaling_groups(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetAutoscalingGroupsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAutoscalingGroupsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_autoscaling_groups(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetAutoscalingGroupsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAutoscalingGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -285,7 +285,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getautoscalinggroupsfilter">List[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getautoscalinggroupsfilter">Sequence[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
 {{% /md %}}</dd>
@@ -466,7 +466,7 @@ The following output properties are available:
 <a href="#arns_python" style="color: inherit; text-decoration: inherit;">arns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the Autoscaling Groups Arns in the current region.
 {{% /md %}}</dd>
@@ -488,7 +488,7 @@ The following output properties are available:
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the Autoscaling Groups in the current region.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getautoscalinggroupsfilter">List[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getautoscalinggroupsfilter">Sequence[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -638,7 +638,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The value of the filter.
 {{% /md %}}</dd>

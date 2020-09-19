@@ -36,7 +36,7 @@ class MyStack : Stack
         {
             Ami = "ami-21f78e11",
             AvailabilityZone = "us-west-2a",
-            InstanceType = "t1.micro",
+            InstanceType = "t2.micro",
             Tags = 
             {
                 { "Name", "HelloWorld" },
@@ -72,7 +72,7 @@ func main() {
 		web, err := ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
 			Ami:              pulumi.String("ami-21f78e11"),
 			AvailabilityZone: pulumi.String("us-west-2a"),
-			InstanceType:     pulumi.String("t1.micro"),
+			InstanceType:     pulumi.String("t2.micro"),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("HelloWorld"),
 			},
@@ -108,7 +108,7 @@ import pulumi_aws as aws
 web = aws.ec2.Instance("web",
     ami="ami-21f78e11",
     availability_zone="us-west-2a",
-    instance_type="t1.micro",
+    instance_type="t2.micro",
     tags={
         "Name": "HelloWorld",
     })
@@ -129,7 +129,7 @@ import * as aws from "@pulumi/aws";
 const web = new aws.ec2.Instance("web", {
     ami: "ami-21f78e11",
     availabilityZone: "us-west-2a",
-    instanceType: "t1.micro",
+    instanceType: "t2.micro",
     tags: {
         Name: "HelloWorld",
     },

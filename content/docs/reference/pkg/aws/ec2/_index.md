@@ -118,6 +118,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="getvpcendpoint" title="GetVpcEndpoint"><span class="symbol function"></span>GetVpcEndpoint</a></li>
     <li><a href="getvpcendpointservice" title="GetVpcEndpointService"><span class="symbol function"></span>GetVpcEndpointService</a></li>
     <li><a href="getvpcpeeringconnection" title="GetVpcPeeringConnection"><span class="symbol function"></span>GetVpcPeeringConnection</a></li>
+    <li><a href="getvpcpeeringconnections" title="GetVpcPeeringConnections"><span class="symbol function"></span>GetVpcPeeringConnections</a></li>
     <li><a href="getvpcs" title="GetVpcs"><span class="symbol function"></span>GetVpcs</a></li>
     <li><a href="getvpngateway" title="GetVpnGateway"><span class="symbol function"></span>GetVpnGateway</a></li>
 </ul>
@@ -131,7 +132,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.2.1</dd>
+	<dd>3.3.0</dd>
 </dl>
 
 

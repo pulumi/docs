@@ -137,7 +137,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.WebAclLoggingConfiguration">WebAclLoggingConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[List[WebAclLoggingConfigurationRedactedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.WebAclLoggingConfiguration">WebAclLoggingConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebAclLoggingConfigurationRedactedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -435,7 +435,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
 <a href="#log_destination_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
 {{% /md %}}</dd>
@@ -457,7 +457,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
 <a href="#redacted_fields_python" style="color: inherit; text-decoration: inherit;">redacted_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">List[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
 {{% /md %}}</dd>
@@ -561,7 +561,7 @@ Get an existing WebAclLoggingConfiguration resource's state with the given name,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[List[WebAclLoggingConfigurationRedactedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> WebAclLoggingConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">log_destination_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">redacted_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebAclLoggingConfigurationRedactedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> WebAclLoggingConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -801,7 +801,7 @@ The following state arguments are supported:
 <a href="#state_log_destination_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ The following state arguments are supported:
 <a href="#state_redacted_fields_python" style="color: inherit; text-decoration: inherit;">redacted_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">List[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
 {{% /md %}}</dd>
@@ -869,7 +869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldallqueryarguments">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect all query arguments.
+    <dd>{{% md %}}Redact all query arguments.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -880,7 +880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldbody">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Body<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
+    <dd>{{% md %}}Redact the request body, which immediately follows the request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -891,7 +891,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldmethod">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Method<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+    <dd>{{% md %}}Redact the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -902,7 +902,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldquerystring">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+    <dd>{{% md %}}Redact the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -913,7 +913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsingleheader">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect a single header. See Single Header below for details.
+    <dd>{{% md %}}Redact a single header. See Single Header below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -924,7 +924,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsinglequeryargument">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
+    <dd>{{% md %}}Redact a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -935,7 +935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfielduripath">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+    <dd>{{% md %}}Redact the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd>
 
 </dl>
@@ -953,7 +953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldallqueryarguments">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>All<wbr>Query<wbr>Arguments</a></span>
     </dt>
-    <dd>{{% md %}}Inspect all query arguments.
+    <dd>{{% md %}}Redact all query arguments.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -964,7 +964,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldbody">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Body</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
+    <dd>{{% md %}}Redact the request body, which immediately follows the request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -975,7 +975,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldmethod">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+    <dd>{{% md %}}Redact the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -986,7 +986,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldquerystring">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Query<wbr>String</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+    <dd>{{% md %}}Redact the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -997,7 +997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsingleheader">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Header</a></span>
     </dt>
-    <dd>{{% md %}}Inspect a single header. See Single Header below for details.
+    <dd>{{% md %}}Redact a single header. See Single Header below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1008,7 +1008,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsinglequeryargument">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Query<wbr>Argument</a></span>
     </dt>
-    <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
+    <dd>{{% md %}}Redact a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1019,7 +1019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfielduripath">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Uri<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+    <dd>{{% md %}}Redact the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1037,7 +1037,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldallqueryarguments">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>All<wbr>Query<wbr>Arguments</a></span>
     </dt>
-    <dd>{{% md %}}Inspect all query arguments.
+    <dd>{{% md %}}Redact all query arguments.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1048,7 +1048,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldbody">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Body</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
+    <dd>{{% md %}}Redact the request body, which immediately follows the request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,7 +1059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldmethod">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+    <dd>{{% md %}}Redact the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1070,7 +1070,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldquerystring">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Query<wbr>String</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+    <dd>{{% md %}}Redact the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1081,7 +1081,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsingleheader">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Header</a></span>
     </dt>
-    <dd>{{% md %}}Inspect a single header. See Single Header below for details.
+    <dd>{{% md %}}Redact a single header. See Single Header below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1092,7 +1092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsinglequeryargument">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Query<wbr>Argument</a></span>
     </dt>
-    <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
+    <dd>{{% md %}}Redact a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1103,7 +1103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfielduripath">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Uri<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+    <dd>{{% md %}}Redact the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldallqueryarguments">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect all query arguments.
+    <dd>{{% md %}}Redact all query arguments.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1132,7 +1132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldbody">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Body<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
+    <dd>{{% md %}}Redact the request body, which immediately follows the request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1143,7 +1143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldmethod">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Method<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+    <dd>{{% md %}}Redact the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1154,7 +1154,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldquerystring">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+    <dd>{{% md %}}Redact the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,7 +1165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsingleheader">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect a single header. See Single Header below for details.
+    <dd>{{% md %}}Redact a single header. See Single Header below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1176,7 +1176,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsinglequeryargument">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
+    <dd>{{% md %}}Redact a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1187,7 +1187,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfielduripath">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+    <dd>{{% md %}}Redact the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1223,7 +1223,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the query header to inspect. This setting must be provided as lower case characters.
+    <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -1241,7 +1241,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the query header to inspect. This setting must be provided as lower case characters.
+    <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -1259,7 +1259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the query header to inspect. This setting must be provided as lower case characters.
+    <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the query header to inspect. This setting must be provided as lower case characters.
+    <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -1313,7 +1313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the query header to inspect. This setting must be provided as lower case characters.
+    <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -1331,7 +1331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the query header to inspect. This setting must be provided as lower case characters.
+    <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -1349,7 +1349,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the query header to inspect. This setting must be provided as lower case characters.
+    <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
 {{% /md %}}</dd>
 
 </dl>
@@ -1367,7 +1367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the query header to inspect. This setting must be provided as lower case characters.
+    <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
 {{% /md %}}</dd>
 
 </dl>

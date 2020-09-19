@@ -114,7 +114,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/storagegateway/#pulumi_aws.storagegateway.NfsFileShare">NfsFileShare</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guess_mime_type_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nfs_file_share_defaults</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareNfsFileShareDefaultsArgs]</span> = None<span class="p">, </span><span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/storagegateway/#pulumi_aws.storagegateway.NfsFileShare">NfsFileShare</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_attributes</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareCacheAttributesArgs]</span> = None<span class="p">, </span><span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guess_mime_type_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nfs_file_share_defaults</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareNfsFileShareDefaultsArgs]</span> = None<span class="p">, </span><span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -332,6 +332,17 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cacheattributes_csharp">
+<a href="#cacheattributes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultstorageclass_csharp">
 <a href="#defaultstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Class</a>
 </span> 
@@ -382,7 +393,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with file share default values. More information below.
+    <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -493,6 +504,17 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cacheattributes_go">
+<a href="#cacheattributes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</a></span>
+    </dt>
+    <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultstorageclass_go">
 <a href="#defaultstorageclass_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Class</a>
 </span> 
@@ -543,7 +565,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with file share default values. More information below.
+    <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -654,6 +676,17 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cacheattributes_nodejs">
+<a href="#cacheattributes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</a></span>
+    </dt>
+    <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultstorageclass_nodejs">
 <a href="#defaultstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Storage<wbr>Class</a>
 </span> 
@@ -704,7 +737,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with file share default values. More information below.
+    <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -775,7 +808,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#client_lists_python" style="color: inherit; text-decoration: inherit;">client_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd>
@@ -811,6 +844,17 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cache_attributes_python">
+<a href="#cache_attributes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -865,7 +909,7 @@ The NfsFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with file share default values. More information below.
+    <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1154,7 +1198,7 @@ Get an existing NfsFileShare resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fileshare_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guess_mime_type_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nfs_file_share_defaults</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareNfsFileShareDefaultsArgs]</span> = None<span class="p">, </span><span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> NfsFileShare</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_attributes</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareCacheAttributesArgs]</span> = None<span class="p">, </span><span class="nx">client_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fileshare_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guess_mime_type_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_encrypted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nfs_file_share_defaults</span><span class="p">:</span> <span class="nx">Optional[NfsFileShareNfsFileShareDefaultsArgs]</span> = None<span class="p">, </span><span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">squash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> NfsFileShare</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1281,6 +1325,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cacheattributes_csharp">
+<a href="#state_cacheattributes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_clientlists_csharp">
 <a href="#state_clientlists_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Lists</a>
 </span> 
@@ -1375,7 +1430,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with file share default values. More information below.
+    <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1475,6 +1530,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cacheattributes_go">
+<a href="#state_cacheattributes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</a></span>
+    </dt>
+    <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_clientlists_go">
 <a href="#state_clientlists_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Lists</a>
 </span> 
@@ -1569,7 +1635,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with file share default values. More information below.
+    <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1669,6 +1735,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cacheattributes_nodejs">
+<a href="#state_cacheattributes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</a></span>
+    </dt>
+    <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_clientlists_nodejs">
 <a href="#state_clientlists_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Lists</a>
 </span> 
@@ -1763,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with file share default values. More information below.
+    <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1863,11 +1940,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cache_attributes_python">
+<a href="#state_cache_attributes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>attributes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Refresh cache information. see Cache Attributes for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_client_lists_python">
 <a href="#state_client_lists_python" style="color: inherit; text-decoration: inherit;">client_<wbr>lists</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd>
@@ -1957,7 +2045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with file share default values. More information below.
+    <dd>{{% md %}}Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2050,6 +2138,104 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="nfsfilesharecacheattributes">Nfs<wbr>File<wbr>Share<wbr>Cache<wbr>Attributes</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsFileShareCacheAttributes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NfsFileShareCacheAttributes">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#NfsFileShareCacheAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#NfsFileShareCacheAttributesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.Inputs.NfsFileShareCacheAttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.Outputs.NfsFileShareCacheAttributes.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachestaletimeoutinseconds_csharp">
+<a href="#cachestaletimeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Stale<wbr>Timeout<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Refreshes a file share's cache by using Time To Live (TTL).
+TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
+to first refresh that directory's contents from the Amazon S3 bucket. Valid Values: 300 to 2,592,000 seconds (5 minutes to 30 days)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachestaletimeoutinseconds_go">
+<a href="#cachestaletimeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Stale<wbr>Timeout<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Refreshes a file share's cache by using Time To Live (TTL).
+TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
+to first refresh that directory's contents from the Amazon S3 bucket. Valid Values: 300 to 2,592,000 seconds (5 minutes to 30 days)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachestaletimeoutinseconds_nodejs">
+<a href="#cachestaletimeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Stale<wbr>Timeout<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Refreshes a file share's cache by using Time To Live (TTL).
+TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
+to first refresh that directory's contents from the Amazon S3 bucket. Valid Values: 300 to 2,592,000 seconds (5 minutes to 30 days)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cache_stale_timeout_in_seconds_python">
+<a href="#cache_stale_timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>stale_<wbr>timeout_<wbr>in_<wbr>seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Refreshes a file share's cache by using Time To Live (TTL).
+TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
+to first refresh that directory's contents from the Amazon S3 bucket. Valid Values: 300 to 2,592,000 seconds (5 minutes to 30 days)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="nfsfilesharenfsfilesharedefaults">Nfs<wbr>File<wbr>Share<wbr>Nfs<wbr>File<wbr>Share<wbr>Defaults</h4>
@@ -2251,7 +2437,7 @@ The following state arguments are supported:
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd>
@@ -2262,7 +2448,7 @@ The following state arguments are supported:
 <a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd>

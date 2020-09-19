@@ -1429,7 +1429,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The value when the type is `FLEET_PERCENT` represents the minimum number of healthy instances as
 a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
@@ -1733,7 +1733,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
 {{% /md %}}</dd>
@@ -1744,7 +1744,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
 {{% /md %}}</dd>
@@ -1867,7 +1867,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
 {{% /md %}}</dd>
@@ -1878,7 +1878,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
 {{% /md %}}</dd>

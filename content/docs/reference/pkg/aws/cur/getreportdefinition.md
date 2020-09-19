@@ -271,6 +271,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="refreshclosedreports_csharp">
+<a href="#refreshclosedreports_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Closed<wbr>Reports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true reports are updated after they have been finalized.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="reportname_csharp">
 <a href="#reportname_csharp" style="color: inherit; text-decoration: inherit;">Report<wbr>Name</a>
 </span> 
@@ -278,6 +289,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="reportversioning_csharp">
+<a href="#reportversioning_csharp" style="color: inherit; text-decoration: inherit;">Report<wbr>Versioning</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -387,6 +409,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="refreshclosedreports_go">
+<a href="#refreshclosedreports_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Closed<wbr>Reports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true reports are updated after they have been finalized.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="reportname_go">
 <a href="#reportname_go" style="color: inherit; text-decoration: inherit;">Report<wbr>Name</a>
 </span> 
@@ -394,6 +427,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="reportversioning_go">
+<a href="#reportversioning_go" style="color: inherit; text-decoration: inherit;">Report<wbr>Versioning</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -503,6 +547,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="refreshclosedreports_nodejs">
+<a href="#refreshclosedreports_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Closed<wbr>Reports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If true reports are updated after they have been finalized.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="reportname_nodejs">
 <a href="#reportname_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Name</a>
 </span> 
@@ -510,6 +565,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="reportversioning_nodejs">
+<a href="#reportversioning_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Versioning</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -568,7 +634,7 @@ The following output properties are available:
 <a href="#additional_artifacts_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>artifacts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional artifacts.
 {{% /md %}}</dd>
@@ -579,7 +645,7 @@ The following output properties are available:
 <a href="#additional_schema_elements_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>schema_<wbr>elements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of schema elements.
 {{% /md %}}</dd>
@@ -619,6 +685,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="refresh_closed_reports_python">
+<a href="#refresh_closed_reports_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>closed_<wbr>reports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If true reports are updated after they have been finalized.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="report_name_python">
 <a href="#report_name_python" style="color: inherit; text-decoration: inherit;">report_<wbr>name</a>
 </span> 
@@ -626,6 +703,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="report_versioning_python">
+<a href="#report_versioning_python" style="color: inherit; text-decoration: inherit;">report_<wbr>versioning</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

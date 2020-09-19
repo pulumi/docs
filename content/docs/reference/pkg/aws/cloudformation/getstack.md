@@ -34,7 +34,7 @@ class MyStack : Stack
         var web = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
         {
             Ami = "ami-abb07bcb",
-            InstanceType = "t1.micro",
+            InstanceType = "t2.micro",
             SubnetId = network.Apply(network => network.Outputs.SubnetId),
             Tags = 
             {
@@ -68,7 +68,7 @@ func main() {
 		}
 		_, err = ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
 			Ami:          pulumi.String("ami-abb07bcb"),
-			InstanceType: pulumi.String("t1.micro"),
+			InstanceType: pulumi.String("t2.micro"),
 			SubnetId:     pulumi.String(network.Outputs.SubnetId),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("HelloWorld"),
@@ -92,7 +92,7 @@ import pulumi_aws as aws
 network = aws.cloudformation.get_stack(name="my-network-stack")
 web = aws.ec2.Instance("web",
     ami="ami-abb07bcb",
-    instance_type="t1.micro",
+    instance_type="t2.micro",
     subnet_id=network.outputs["SubnetId"],
     tags={
         "Name": "HelloWorld",
@@ -112,7 +112,7 @@ const network = aws.cloudformation.getStack({
 });
 const web = new aws.ec2.Instance("web", {
     ami: "ami-abb07bcb",
-    instanceType: "t1.micro",
+    instanceType: "t2.micro",
     subnetId: network.then(network => network.outputs.SubnetId),
     tags: {
         Name: "HelloWorld",
@@ -712,7 +712,7 @@ The following output properties are available:
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of capabilities
 {{% /md %}}</dd>
@@ -777,7 +777,7 @@ The following output properties are available:
 <a href="#notification_arns_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of SNS topic ARNs to publish stack related events
 {{% /md %}}</dd>
@@ -832,7 +832,7 @@ The following output properties are available:
 <a href="#timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time that can pass before the stack status becomes `CREATE_FAILED`
 {{% /md %}}</dd>

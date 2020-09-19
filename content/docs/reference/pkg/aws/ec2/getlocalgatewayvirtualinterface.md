@@ -12,6 +12,43 @@ meta_desc: "Explore the GetLocalGatewayVirtualInterface function of the ec2 modu
 
 Provides details about an EC2 Local Gateway Virtual Interface. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = [aws.ec2.get_local_gateway_virtual_interface(id=__value) for __key, __value in data["aws_ec2_local_gateway_virtual_interface_group"]["example"]["local_gateway_virtual_interface_ids"]]
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = .map(([, ]) => aws.ec2.getLocalGatewayVirtualInterface({
+    id: __value,
+}));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetLocalGatewayVirtualInterface {#using}
@@ -25,7 +62,7 @@ Provides details about an EC2 Local Gateway Virtual Interface. More information 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_local_gateway_virtual_interface(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetLocalGatewayVirtualInterfaceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLocalGatewayVirtualInterfaceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_local_gateway_virtual_interface(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetLocalGatewayVirtualInterfaceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLocalGatewayVirtualInterfaceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -176,7 +213,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlocalgatewayvirtualinterfacefilter">List[Get<wbr>Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getlocalgatewayvirtualinterfacefilter">Sequence[Get<wbr>Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaces.html) for supported filters. Detailed below.
 {{% /md %}}</dd>
@@ -589,7 +626,7 @@ The following output properties are available:
 <a href="#local_bgp_asn_python" style="color: inherit; text-decoration: inherit;">local_<wbr>bgp_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the EC2 Local Gateway.
 {{% /md %}}</dd>
@@ -611,7 +648,7 @@ The following output properties are available:
 <a href="#local_gateway_virtual_interface_ids_python" style="color: inherit; text-decoration: inherit;">local_<wbr>gateway_<wbr>virtual_<wbr>interface_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -632,7 +669,7 @@ The following output properties are available:
 <a href="#peer_bgp_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>bgp_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the peer.
 {{% /md %}}</dd>
@@ -653,7 +690,7 @@ The following output properties are available:
 <a href="#vlan_python" style="color: inherit; text-decoration: inherit;">vlan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Virtual Local Area Network.
 {{% /md %}}</dd>
@@ -664,7 +701,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlocalgatewayvirtualinterfacefilter">List[Get<wbr>Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getlocalgatewayvirtualinterfacefilter">Sequence[Get<wbr>Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -803,7 +840,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>

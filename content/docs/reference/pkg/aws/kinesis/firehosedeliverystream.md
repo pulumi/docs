@@ -71,7 +71,7 @@ class MyStack : Stack
             Code = new FileArchive("lambda.zip"),
             Role = lambdaIam.Arn,
             Handler = "exports.handler",
-            Runtime = "nodejs8.10",
+            Runtime = "nodejs12.x",
         });
         var extendedS3Stream = new Aws.Kinesis.FirehoseDeliveryStream("extendedS3Stream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
         {
@@ -150,7 +150,7 @@ lambda_processor = aws.lambda_.Function("lambdaProcessor",
     code=pulumi.FileArchive("lambda.zip"),
     role=lambda_iam.arn,
     handler="exports.handler",
-    runtime="nodejs8.10")
+    runtime="nodejs12.x")
 extended_s3_stream = aws.kinesis.FirehoseDeliveryStream("extendedS3Stream",
     destination="extended_s3",
     extended_s3_configuration=aws.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationArgs(
@@ -210,7 +210,7 @@ const lambdaProcessor = new aws.lambda.Function("lambdaProcessor", {
     code: new pulumi.asset.FileArchive("lambda.zip"),
     role: lambdaIam.arn,
     handler: "exports.handler",
-    runtime: "nodejs8.10",
+    runtime: "nodejs12.x",
 });
 const extendedS3Stream = new aws.kinesis.FirehoseDeliveryStream("extendedS3Stream", {
     destination: "extended_s3",
@@ -398,7 +398,7 @@ class MyStack : Stack
     {
         var testCluster = new Aws.RedShift.Cluster("testCluster", new Aws.RedShift.ClusterArgs
         {
-            ClusterIdentifier = "tf-redshift-cluster-%d",
+            ClusterIdentifier = "tf-redshift-cluster",
             DatabaseName = "test",
             MasterUsername = "testuser",
             MasterPassword = "T3stPass",
@@ -463,7 +463,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testCluster, err := redshift.NewCluster(ctx, "testCluster", &redshift.ClusterArgs{
-			ClusterIdentifier: pulumi.String(fmt.Sprintf("%v%v%v", "tf-redshift-cluster-", "%", "d")),
+			ClusterIdentifier: pulumi.String("tf-redshift-cluster"),
 			DatabaseName:      pulumi.String("test"),
 			MasterUsername:    pulumi.String("testuser"),
 			MasterPassword:    pulumi.String("T3stPass"),
@@ -520,7 +520,7 @@ import pulumi
 import pulumi_aws as aws
 
 test_cluster = aws.redshift.Cluster("testCluster",
-    cluster_identifier="tf-redshift-cluster-%d",
+    cluster_identifier="tf-redshift-cluster",
     database_name="test",
     master_username="testuser",
     master_password="T3stPass",
@@ -563,7 +563,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const testCluster = new aws.redshift.Cluster("testCluster", {
-    clusterIdentifier: `tf-redshift-cluster-%d`,
+    clusterIdentifier: "tf-redshift-cluster",
     databaseName: "test",
     masterUsername: "testuser",
     masterPassword: "T3stPass",
@@ -784,6 +784,296 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
             }],
         },
     },
+});
+```
+
+{{% /example %}}
+
+### Elasticsearch Destination With VPC
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testCluster = new Aws.ElasticSearch.Domain("testCluster", new Aws.ElasticSearch.DomainArgs
+        {
+            ClusterConfig = new Aws.ElasticSearch.Inputs.DomainClusterConfigArgs
+            {
+                InstanceCount = 2,
+                ZoneAwarenessEnabled = true,
+                InstanceType = "t2.small.elasticsearch",
+            },
+            EbsOptions = new Aws.ElasticSearch.Inputs.DomainEbsOptionsArgs
+            {
+                EbsEnabled = true,
+                VolumeSize = 10,
+            },
+            VpcOptions = new Aws.ElasticSearch.Inputs.DomainVpcOptionsArgs
+            {
+                SecurityGroupIds = 
+                {
+                    aws_security_group.First.Id,
+                },
+                SubnetIds = 
+                {
+                    aws_subnet.First.Id,
+                    aws_subnet.Second.Id,
+                },
+            },
+        });
+        var firehose_elasticsearch = new Aws.Iam.RolePolicy("firehose-elasticsearch", new Aws.Iam.RolePolicyArgs
+        {
+            Role = aws_iam_role.Firehose.Id,
+            Policy = Output.Tuple(testCluster.Arn, testCluster.Arn).Apply(values =>
+            {
+                var testClusterArn = values.Item1;
+                var testClusterArn1 = values.Item2;
+                return @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Effect"": ""Allow"",
+      ""Action"": [
+        ""es:*""
+      ],
+      ""Resource"": [
+        ""{testClusterArn}"",
+        ""{testClusterArn1}/*""
+      ]
+        }},
+        {{
+          ""Effect"": ""Allow"",
+          ""Action"": [
+            ""ec2:DescribeVpcs"",
+            ""ec2:DescribeVpcAttribute"",
+            ""ec2:DescribeSubnets"",
+            ""ec2:DescribeSecurityGroups"",
+            ""ec2:DescribeNetworkInterfaces"",
+            ""ec2:CreateNetworkInterface"",
+            ""ec2:CreateNetworkInterfacePermission"",
+            ""ec2:DeleteNetworkInterface""
+          ],
+          ""Resource"": [
+            ""*""
+          ]
+        }}
+  ]
+}}
+";
+            }),
+        });
+        var test = new Aws.Kinesis.FirehoseDeliveryStream("test", new Aws.Kinesis.FirehoseDeliveryStreamArgs
+        {
+            Destination = "elasticsearch",
+            S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
+            {
+                RoleArn = aws_iam_role.Firehose.Arn,
+                BucketArn = aws_s3_bucket.Bucket.Arn,
+            },
+            ElasticsearchConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationArgs
+            {
+                DomainArn = testCluster.Arn,
+                RoleArn = aws_iam_role.Firehose.Arn,
+                IndexName = "test",
+                TypeName = "test",
+                VpcConfig = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs
+                {
+                    SubnetIds = 
+                    {
+                        aws_subnet.First.Id,
+                        aws_subnet.Second.Id,
+                    },
+                    SecurityGroupIds = 
+                    {
+                        aws_security_group.First.Id,
+                    },
+                    RoleArn = aws_iam_role.Firehose.Arn,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                firehose_elasticsearch,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_cluster = aws.elasticsearch.Domain("testCluster",
+    cluster_config=aws.elasticsearch.DomainClusterConfigArgs(
+        instance_count=2,
+        zone_awareness_enabled=True,
+        instance_type="t2.small.elasticsearch",
+    ),
+    ebs_options=aws.elasticsearch.DomainEbsOptionsArgs(
+        ebs_enabled=True,
+        volume_size=10,
+    ),
+    vpc_options=aws.elasticsearch.DomainVpcOptionsArgs(
+        security_group_ids=[aws_security_group["first"]["id"]],
+        subnet_ids=[
+            aws_subnet["first"]["id"],
+            aws_subnet["second"]["id"],
+        ],
+    ))
+firehose_elasticsearch = aws.iam.RolePolicy("firehose-elasticsearch",
+    role=aws_iam_role["firehose"]["id"],
+    policy=pulumi.Output.all(test_cluster.arn, test_cluster.arn).apply(lambda testClusterArn, testClusterArn1: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Effect": "Allow",
+      "Action": [
+        "es:*"
+      ],
+      "Resource": [
+        "{test_cluster_arn}",
+        "{test_cluster_arn1}/*"
+      ]
+        }},
+        {{
+          "Effect": "Allow",
+          "Action": [
+            "ec2:DescribeVpcs",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface"
+          ],
+          "Resource": [
+            "*"
+          ]
+        }}
+  ]
+}}
+"""))
+test = aws.kinesis.FirehoseDeliveryStream("test",
+    destination="elasticsearch",
+    s3_configuration=aws.kinesis.FirehoseDeliveryStreamS3ConfigurationArgs(
+        role_arn=aws_iam_role["firehose"]["arn"],
+        bucket_arn=aws_s3_bucket["bucket"]["arn"],
+    ),
+    elasticsearch_configuration=aws.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationArgs(
+        domain_arn=test_cluster.arn,
+        role_arn=aws_iam_role["firehose"]["arn"],
+        index_name="test",
+        type_name="test",
+        vpc_config={
+            "subnet_ids": [
+                aws_subnet["first"]["id"],
+                aws_subnet["second"]["id"],
+            ],
+            "security_group_ids": [aws_security_group["first"]["id"]],
+            "role_arn": aws_iam_role["firehose"]["arn"],
+        },
+    ),
+    opts=ResourceOptions(depends_on=[firehose_elasticsearch]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testCluster = new aws.elasticsearch.Domain("testCluster", {
+    clusterConfig: {
+        instanceCount: 2,
+        zoneAwarenessEnabled: true,
+        instanceType: "t2.small.elasticsearch",
+    },
+    ebsOptions: {
+        ebsEnabled: true,
+        volumeSize: 10,
+    },
+    vpcOptions: {
+        securityGroupIds: [aws_security_group.first.id],
+        subnetIds: [
+            aws_subnet.first.id,
+            aws_subnet.second.id,
+        ],
+    },
+});
+const firehose_elasticsearch = new aws.iam.RolePolicy("firehose-elasticsearch", {
+    role: aws_iam_role.firehose.id,
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "es:*"
+      ],
+      "Resource": [
+        "${testCluster.arn}",
+        "${testCluster.arn}/*"
+      ]
+        },
+        {
+          "Effect": "Allow",
+          "Action": [
+            "ec2:DescribeVpcs",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface"
+          ],
+          "Resource": [
+            "*"
+          ]
+        }
+  ]
+}
+`,
+});
+const test = new aws.kinesis.FirehoseDeliveryStream("test", {
+    destination: "elasticsearch",
+    s3Configuration: {
+        roleArn: aws_iam_role.firehose.arn,
+        bucketArn: aws_s3_bucket.bucket.arn,
+    },
+    elasticsearchConfiguration: {
+        domainArn: testCluster.arn,
+        roleArn: aws_iam_role.firehose.arn,
+        indexName: "test",
+        typeName: "test",
+        vpcConfig: {
+            subnetIds: [
+                aws_subnet.first.id,
+                aws_subnet.second.id,
+            ],
+            securityGroupIds: [aws_security_group.first.id],
+            roleArn: aws_iam_role.firehose.arn,
+        },
+    },
+}, {
+    dependsOn: [firehose_elasticsearch],
 });
 ```
 
@@ -2558,17 +2848,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span id="domainarn_csharp">
-<a href="#domainarn_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Arn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="indexname_csharp">
 <a href="#indexname_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Name</a>
 </span> 
@@ -2620,6 +2899,28 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterendpoint_csharp">
+<a href="#clusterendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint to use when communicating with the cluster. Conflicts with `domain_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainarn_csharp">
+<a href="#domainarn_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`. Conflicts with `cluster_endpoint`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2677,23 +2978,23 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     <dd>{{% md %}}The Elasticsearch type name with maximum length of 100 characters.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpcconfig_csharp">
+<a href="#vpcconfig_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="domainarn_go">
-<a href="#domainarn_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Arn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2752,6 +3053,28 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
+        <span id="clusterendpoint_go">
+<a href="#clusterendpoint_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint to use when communicating with the cluster. Conflicts with `domain_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainarn_go">
+<a href="#domainarn_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`. Conflicts with `cluster_endpoint`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="indexrotationperiod_go">
 <a href="#indexrotationperiod_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Rotation<wbr>Period</a>
 </span> 
@@ -2805,23 +3128,23 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     <dd>{{% md %}}The Elasticsearch type name with maximum length of 100 characters.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpcconfig_go">
+<a href="#vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="domainarn_nodejs">
-<a href="#domainarn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Arn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2880,6 +3203,28 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
+        <span id="clusterendpoint_nodejs">
+<a href="#clusterendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint to use when communicating with the cluster. Conflicts with `domain_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainarn_nodejs">
+<a href="#domainarn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`. Conflicts with `cluster_endpoint`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="indexrotationperiod_nodejs">
 <a href="#indexrotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Rotation<wbr>Period</a>
 </span> 
@@ -2933,23 +3278,23 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     <dd>{{% md %}}The Elasticsearch type name with maximum length of 100 characters.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpcconfig_nodejs">
+<a href="#vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="domain_arn_python">
-<a href="#domain_arn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>arn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2979,7 +3324,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#buffering_interval_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
 {{% /md %}}</dd>
@@ -2990,7 +3335,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#buffering_size_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
 {{% /md %}}</dd>
@@ -3004,6 +3349,28 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_endpoint_python">
+<a href="#cluster_endpoint_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>endpoint</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The endpoint to use when communicating with the cluster. Conflicts with `domain_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domain_arn_python">
+<a href="#domain_arn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`. Conflicts with `cluster_endpoint`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3034,7 +3401,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd>
@@ -3059,6 +3426,17 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Elasticsearch type name with maximum length of 100 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpc_config_python">
+<a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
 {{% /md %}}</dd>
 
 </dl>
@@ -3368,7 +3746,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -3502,7 +3880,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
@@ -3640,6 +4018,224 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     </dt>
     <dd>{{% md %}}Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="firehosedeliverystreamelasticsearchconfigurationvpcconfig">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Vpc<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_csharp">
+<a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary [IAM permissions](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es-vpc)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securitygroupids_csharp">
+<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to associate with Kinesis Firehose.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetids_csharp">
+<a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to associate with Kinesis Firehose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpcid_csharp">
+<a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_go">
+<a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary [IAM permissions](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es-vpc)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securitygroupids_go">
+<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to associate with Kinesis Firehose.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetids_go">
+<a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to associate with Kinesis Firehose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpcid_go">
+<a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rolearn_nodejs">
+<a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary [IAM permissions](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es-vpc)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securitygroupids_nodejs">
+<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to associate with Kinesis Firehose.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetids_nodejs">
+<a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to associate with Kinesis Firehose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpcid_nodejs">
+<a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="role_arn_python">
+<a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary [IAM permissions](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es-vpc)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="security_group_ids_python">
+<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to associate with Kinesis Firehose.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subnet_ids_python">
+<a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to associate with Kinesis Firehose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpc_id_python">
+<a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4150,7 +4746,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -4161,7 +4757,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -4976,7 +5572,7 @@ be used.
 <a href="#timestamp_formats_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>formats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of how you want Kinesis Data Firehose to parse the date and time stamps that may be present in your input data JSON. To specify these format strings, follow the pattern syntax of JodaTime's DateTimeFormat format strings. For more information, see [Class DateTimeFormat](https://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html). You can also use the special value millis to parse time stamps in epoch milliseconds. If you don't specify a format, Kinesis Data Firehose uses java.sql.Timestamp::valueOf by default.
 {{% /md %}}</dd>
@@ -5765,7 +6361,7 @@ be used.
 <a href="#block_size_bytes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd>
@@ -5776,7 +6372,7 @@ be used.
 <a href="#bloom_filter_columns_python" style="color: inherit; text-decoration: inherit;">bloom_<wbr>filter_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of column names for which you want Kinesis Data Firehose to create bloom filters.
 {{% /md %}}</dd>
@@ -5853,7 +6449,7 @@ be used.
 <a href="#row_index_stride_python" style="color: inherit; text-decoration: inherit;">row_<wbr>index_<wbr>stride</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of rows between index entries. The default is `10000` and the minimum is `1000`.
 {{% /md %}}</dd>
@@ -5864,7 +6460,7 @@ be used.
 <a href="#stripe_size_bytes_python" style="color: inherit; text-decoration: inherit;">stripe_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of bytes in each stripe. The default is 64 MiB and the minimum is 8 MiB.
 {{% /md %}}</dd>
@@ -6119,7 +6715,7 @@ be used.
 <a href="#block_size_bytes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd>
@@ -6152,7 +6748,7 @@ be used.
 <a href="#max_padding_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>padding_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
 {{% /md %}}</dd>
@@ -6163,7 +6759,7 @@ be used.
 <a href="#page_size_bytes_python" style="color: inherit; text-decoration: inherit;">page_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
 {{% /md %}}</dd>
@@ -6618,7 +7214,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -6752,7 +7348,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
@@ -7235,7 +7831,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -7246,7 +7842,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -8156,7 +8752,7 @@ be used.
 <a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
 {{% /md %}}</dd>
@@ -8490,7 +9086,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -8624,7 +9220,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
@@ -9107,7 +9703,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -9118,7 +9714,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -9691,7 +10287,7 @@ be used.
 <a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -9702,7 +10298,7 @@ be used.
 <a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -10370,7 +10966,7 @@ be used.
 <a href="#hec_acknowledgment_timeout_python" style="color: inherit; text-decoration: inherit;">hec_<wbr>acknowledgment_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
 {{% /md %}}</dd>
@@ -10403,7 +10999,7 @@ be used.
 <a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd>
@@ -10726,7 +11322,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -10860,7 +11456,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Sequence[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>

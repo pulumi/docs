@@ -28,6 +28,13 @@ class MyStack : Stack
     {
         var cloudwatch = new Aws.Ses.EventDestination("cloudwatch", new Aws.Ses.EventDestinationArgs
         {
+            ConfigurationSetName = aws_ses_configuration_set.Example.Name,
+            Enabled = true,
+            MatchingTypes = 
+            {
+                "bounce",
+                "send",
+            },
             CloudwatchDestinations = 
             {
                 new Aws.Ses.Inputs.EventDestinationCloudwatchDestinationArgs
@@ -36,13 +43,6 @@ class MyStack : Stack
                     DimensionName = "dimension",
                     ValueSource = "emailHeader",
                 },
-            },
-            ConfigurationSetName = aws_ses_configuration_set.Example.Name,
-            Enabled = true,
-            MatchingTypes = 
-            {
-                "bounce",
-                "send",
             },
         });
     }
@@ -64,18 +64,18 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ses.NewEventDestination(ctx, "cloudwatch", &ses.EventDestinationArgs{
+			ConfigurationSetName: pulumi.Any(aws_ses_configuration_set.Example.Name),
+			Enabled:              pulumi.Bool(true),
+			MatchingTypes: pulumi.StringArray{
+				pulumi.String("bounce"),
+				pulumi.String("send"),
+			},
 			CloudwatchDestinations: ses.EventDestinationCloudwatchDestinationArray{
 				&ses.EventDestinationCloudwatchDestinationArgs{
 					DefaultValue:  pulumi.String("default"),
 					DimensionName: pulumi.String("dimension"),
 					ValueSource:   pulumi.String("emailHeader"),
 				},
-			},
-			ConfigurationSetName: pulumi.Any(aws_ses_configuration_set.Example.Name),
-			Enabled:              pulumi.Bool(true),
-			MatchingTypes: pulumi.StringArray{
-				pulumi.String("bounce"),
-				pulumi.String("send"),
 			},
 		})
 		if err != nil {
@@ -94,17 +94,17 @@ import pulumi
 import pulumi_aws as aws
 
 cloudwatch = aws.ses.EventDestination("cloudwatch",
-    cloudwatch_destinations=[aws.ses.EventDestinationCloudwatchDestinationArgs(
-        default_value="default",
-        dimension_name="dimension",
-        value_source="emailHeader",
-    )],
     configuration_set_name=aws_ses_configuration_set["example"]["name"],
     enabled=True,
     matching_types=[
         "bounce",
         "send",
-    ])
+    ],
+    cloudwatch_destinations=[aws.ses.EventDestinationCloudwatchDestinationArgs(
+        default_value="default",
+        dimension_name="dimension",
+        value_source="emailHeader",
+    )])
 ```
 
 {{% /example %}}
@@ -116,17 +116,17 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const cloudwatch = new aws.ses.EventDestination("cloudwatch", {
-    cloudwatchDestinations: [{
-        defaultValue: "default",
-        dimensionName: "dimension",
-        valueSource: "emailHeader",
-    }],
-    configurationSetName: aws_ses_configuration_set_example.name,
+    configurationSetName: aws_ses_configuration_set.example.name,
     enabled: true,
     matchingTypes: [
         "bounce",
         "send",
     ],
+    cloudwatchDestinations: [{
+        defaultValue: "default",
+        dimensionName: "dimension",
+        valueSource: "emailHeader",
+    }],
 });
 ```
 
@@ -146,15 +146,15 @@ class MyStack : Stack
         {
             ConfigurationSetName = aws_ses_configuration_set.Example.Name,
             Enabled = true,
-            KinesisDestination = new Aws.Ses.Inputs.EventDestinationKinesisDestinationArgs
-            {
-                RoleArn = aws_iam_role.Example.Arn,
-                StreamArn = aws_kinesis_firehose_delivery_stream.Example.Arn,
-            },
             MatchingTypes = 
             {
                 "bounce",
                 "send",
+            },
+            KinesisDestination = new Aws.Ses.Inputs.EventDestinationKinesisDestinationArgs
+            {
+                StreamArn = aws_kinesis_firehose_delivery_stream.Example.Arn,
+                RoleArn = aws_iam_role.Example.Arn,
             },
         });
     }
@@ -178,13 +178,13 @@ func main() {
 		_, err := ses.NewEventDestination(ctx, "kinesis", &ses.EventDestinationArgs{
 			ConfigurationSetName: pulumi.Any(aws_ses_configuration_set.Example.Name),
 			Enabled:              pulumi.Bool(true),
-			KinesisDestination: &ses.EventDestinationKinesisDestinationArgs{
-				RoleArn:   pulumi.Any(aws_iam_role.Example.Arn),
-				StreamArn: pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
-			},
 			MatchingTypes: pulumi.StringArray{
 				pulumi.String("bounce"),
 				pulumi.String("send"),
+			},
+			KinesisDestination: &ses.EventDestinationKinesisDestinationArgs{
+				StreamArn: pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
+				RoleArn:   pulumi.Any(aws_iam_role.Example.Arn),
 			},
 		})
 		if err != nil {
@@ -205,14 +205,14 @@ import pulumi_aws as aws
 kinesis = aws.ses.EventDestination("kinesis",
     configuration_set_name=aws_ses_configuration_set["example"]["name"],
     enabled=True,
-    kinesis_destination=aws.ses.EventDestinationKinesisDestinationArgs(
-        role_arn=aws_iam_role["example"]["arn"],
-        stream_arn=aws_kinesis_firehose_delivery_stream["example"]["arn"],
-    ),
     matching_types=[
         "bounce",
         "send",
-    ])
+    ],
+    kinesis_destination=aws.ses.EventDestinationKinesisDestinationArgs(
+        stream_arn=aws_kinesis_firehose_delivery_stream["example"]["arn"],
+        role_arn=aws_iam_role["example"]["arn"],
+    ))
 ```
 
 {{% /example %}}
@@ -224,16 +224,16 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const kinesis = new aws.ses.EventDestination("kinesis", {
-    configurationSetName: aws_ses_configuration_set_example.name,
+    configurationSetName: aws_ses_configuration_set.example.name,
     enabled: true,
-    kinesisDestination: {
-        roleArn: aws_iam_role_example.arn,
-        streamArn: aws_kinesis_firehose_delivery_stream_example.arn,
-    },
     matchingTypes: [
         "bounce",
         "send",
     ],
+    kinesisDestination: {
+        streamArn: aws_kinesis_firehose_delivery_stream.example.arn,
+        roleArn: aws_iam_role.example.arn,
+    },
 });
 ```
 
@@ -328,14 +328,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const sns = new aws.ses.EventDestination("sns", {
-    configurationSetName: aws_ses_configuration_set_example.name,
+    configurationSetName: aws_ses_configuration_set.example.name,
     enabled: true,
     matchingTypes: [
         "bounce",
         "send",
     ],
     snsDestination: {
-        topicArn: aws_sns_topic_example.arn,
+        topicArn: aws_sns_topic.example.arn,
     },
 });
 ```
@@ -354,7 +354,7 @@ const sns = new aws.ses.EventDestination("sns", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ses/#pulumi_aws.ses.EventDestination">EventDestination</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_destinations</span><span class="p">:</span> <span class="nx">Optional[List[EventDestinationCloudwatchDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">configuration_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kinesis_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationKinesisDestinationArgs]</span> = None<span class="p">, </span><span class="nx">matching_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationSnsDestinationArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ses/#pulumi_aws.ses.EventDestination">EventDestination</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_destinations</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventDestinationCloudwatchDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">configuration_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kinesis_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationKinesisDestinationArgs]</span> = None<span class="p">, </span><span class="nx">matching_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationSnsDestinationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -795,7 +795,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#matching_types_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 {{% /md %}}</dd>
@@ -806,7 +806,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#cloudwatch_destinations_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">List[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">Sequence[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch destination for the events
 {{% /md %}}</dd>
@@ -954,7 +954,7 @@ Get an existing EventDestination resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_destinations</span><span class="p">:</span> <span class="nx">Optional[List[EventDestinationCloudwatchDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">configuration_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kinesis_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationKinesisDestinationArgs]</span> = None<span class="p">, </span><span class="nx">matching_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationSnsDestinationArgs]</span> = None<span class="p">) -&gt;</span> EventDestination</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_destinations</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventDestinationCloudwatchDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">configuration_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kinesis_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationKinesisDestinationArgs]</span> = None<span class="p">, </span><span class="nx">matching_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationSnsDestinationArgs]</span> = None<span class="p">) -&gt;</span> EventDestination</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1326,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatch_destinations_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>destinations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">List[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">Sequence[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch destination for the events
 {{% /md %}}</dd>
@@ -1370,7 +1370,7 @@ The following state arguments are supported:
 <a href="#state_matching_types_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 {{% /md %}}</dd>

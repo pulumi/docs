@@ -21,7 +21,7 @@ import * as aws from "@pulumi/aws";
 
 const testTargetGroup = new aws.lb.TargetGroup("testTargetGroup", {targetType: "lambda"});
 const testFunction = new aws.lambda.Function("testFunction", {});
-// Other arguments
+// ... other configuration ...
 const withLb = new aws.lambda.Permission("withLb", {
     action: "lambda:InvokeFunction",
     "function": testFunction.arn,
@@ -41,7 +41,7 @@ import pulumi_aws as aws
 
 test_target_group = aws.lb.TargetGroup("testTargetGroup", target_type="lambda")
 test_function = aws.lambda_.Function("testFunction")
-# Other arguments
+# ... other configuration ...
 with_lb = aws.lambda_.Permission("withLb",
     action="lambda:InvokeFunction",
     function=test_function.arn,
@@ -67,7 +67,7 @@ class MyStack : Stack
         var testFunction = new Aws.Lambda.Function("testFunction", new Aws.Lambda.FunctionArgs
         {
         });
-        // Other arguments
+        // ... other configuration ...
         var withLb = new Aws.Lambda.Permission("withLb", new Aws.Lambda.PermissionArgs
         {
             Action = "lambda:InvokeFunction",
@@ -151,11 +151,11 @@ class MyStack : Stack
         var testTargetGroup = new Aws.LB.TargetGroup("testTargetGroup", new Aws.LB.TargetGroupArgs
         {
         });
-        // Other arguments
+        // ... other configuration ...
         var testInstance = new Aws.Ec2.Instance("testInstance", new Aws.Ec2.InstanceArgs
         {
         });
-        // Other arguments
+        // ... other configuration ...
         var testTargetGroupAttachment = new Aws.LB.TargetGroupAttachment("testTargetGroupAttachment", new Aws.LB.TargetGroupAttachmentArgs
         {
             TargetGroupArn = testTargetGroup.Arn,
@@ -210,9 +210,9 @@ import pulumi
 import pulumi_aws as aws
 
 test_target_group = aws.lb.TargetGroup("testTargetGroup")
-# Other arguments
+# ... other configuration ...
 test_instance = aws.ec2.Instance("testInstance")
-# Other arguments
+# ... other configuration ...
 test_target_group_attachment = aws.lb.TargetGroupAttachment("testTargetGroupAttachment",
     target_group_arn=test_target_group.arn,
     target_id=test_instance.id,
@@ -228,9 +228,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const testTargetGroup = new aws.lb.TargetGroup("testTargetGroup", {});
-// Other arguments
+// ... other configuration ...
 const testInstance = new aws.ec2.Instance("testInstance", {});
-// Other arguments
+// ... other configuration ...
 const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("testTargetGroupAttachment", {
     targetGroupArn: testTargetGroup.arn,
     targetId: testInstance.id,
@@ -252,7 +252,7 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("testTargetGr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lb/#pulumi_aws.lb.TargetGroupAttachment">TargetGroupAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">target_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lb/#pulumi_aws.lb.TargetGroupAttachment">TargetGroupAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -616,7 +616,7 @@ The TargetGroupAttachment resource accepts the following [input]({{< relref "/do
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port on which targets receive traffic.
 {{% /md %}}</dd>
@@ -720,7 +720,7 @@ Get an existing TargetGroupAttachment resource's state with the given name, ID, 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">target_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TargetGroupAttachment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TargetGroupAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1004,7 +1004,7 @@ The following state arguments are supported:
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port on which targets receive traffic.
 {{% /md %}}</dd>

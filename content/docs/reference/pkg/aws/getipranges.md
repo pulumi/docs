@@ -12,6 +12,119 @@ meta_desc: "Explore the GetIpRanges function of the AWS package, including examp
 
 Use this data source to get the IP ranges of various AWS products and services. For more information about the contents of this data source and required JSON syntax if referencing a custom URL, see the [AWS IP Address Ranges documention](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var europeanEc2 = Output.Create(Aws.GetIpRanges.InvokeAsync(new Aws.GetIpRangesArgs
+        {
+            Regions = 
+            {
+                "eu-west-1",
+                "eu-central-1",
+            },
+            Services = 
+            {
+                "ec2",
+            },
+        }));
+        var fromEurope = new Aws.Ec2.SecurityGroup("fromEurope", new Aws.Ec2.SecurityGroupArgs
+        {
+            Ingress = 
+            {
+                new Aws.Ec2.Inputs.SecurityGroupIngressArgs
+                {
+                    FromPort = 443,
+                    ToPort = 443,
+                    Protocol = "tcp",
+                    CidrBlocks = europeanEc2.Apply(europeanEc2 => europeanEc2.CidrBlocks),
+                    Ipv6CidrBlocks = europeanEc2.Apply(europeanEc2 => europeanEc2.Ipv6CidrBlocks),
+                },
+            },
+            Tags = 
+            {
+                { "CreateDate", europeanEc2.Apply(europeanEc2 => europeanEc2.CreateDate) },
+                { "SyncToken", europeanEc2.Apply(europeanEc2 => europeanEc2.SyncToken) },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+european_ec2 = aws.get_ip_ranges(regions=[
+        "eu-west-1",
+        "eu-central-1",
+    ],
+    services=["ec2"])
+from_europe = aws.ec2.SecurityGroup("fromEurope",
+    ingress=[aws.ec2.SecurityGroupIngressArgs(
+        from_port="443",
+        to_port="443",
+        protocol="tcp",
+        cidr_blocks=european_ec2.cidr_blocks,
+        ipv6_cidr_blocks=european_ec2.ipv6_cidr_blocks,
+    )],
+    tags={
+        "CreateDate": european_ec2.create_date,
+        "SyncToken": european_ec2.sync_token,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const europeanEc2 = aws.getIpRanges({
+    regions: [
+        "eu-west-1",
+        "eu-central-1",
+    ],
+    services: ["ec2"],
+});
+const fromEurope = new aws.ec2.SecurityGroup("fromEurope", {
+    ingress: [{
+        fromPort: "443",
+        toPort: "443",
+        protocol: "tcp",
+        cidrBlocks: europeanEc2.then(europeanEc2 => europeanEc2.cidrBlocks),
+        ipv6CidrBlocks: europeanEc2.then(europeanEc2 => europeanEc2.ipv6CidrBlocks),
+    }],
+    tags: {
+        CreateDate: europeanEc2.then(europeanEc2 => europeanEc2.createDate),
+        SyncToken: europeanEc2.then(europeanEc2 => europeanEc2.syncToken),
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetIpRanges {#using}
@@ -25,7 +138,7 @@ Use this data source to get the IP ranges of various AWS products and services. 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ip_ranges(</span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIpRangesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ip_ranges(</span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIpRangesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -194,7 +307,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Filter IP ranges by services. Valid items are `amazon`
 (for amazon.com), `amazon_connect`, `api_gateway`, `cloud9`, `cloudfront`,
@@ -209,7 +322,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Filter IP ranges by regions (or include all regions, if
 omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
@@ -532,7 +645,7 @@ The following output properties are available:
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The lexically ordered list of CIDR blocks.
 {{% /md %}}</dd>
@@ -565,7 +678,7 @@ The following output properties are available:
 <a href="#ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The lexically ordered list of IPv6 CIDR blocks.
 {{% /md %}}</dd>
@@ -576,7 +689,7 @@ The following output properties are available:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -586,7 +699,7 @@ The following output properties are available:
 <a href="#sync_token_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The publication time of the IP ranges, in Unix epoch time format
 (e.g. `1470267965`).
@@ -598,7 +711,7 @@ The following output properties are available:
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

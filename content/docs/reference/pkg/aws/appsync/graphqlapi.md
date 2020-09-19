@@ -670,7 +670,7 @@ const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {logCo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appsync/#pulumi_aws.appsync.GraphQLApi">GraphQLApi</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_authentication_providers</span><span class="p">:</span> <span class="nx">Optional[List[GraphQLApiAdditionalAuthenticationProviderArgs]]</span> = None<span class="p">, </span><span class="nx">authentication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openid_connect_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiOpenidConnectConfigArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiUserPoolConfigArgs]</span> = None<span class="p">, </span><span class="nx">xray_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appsync/#pulumi_aws.appsync.GraphQLApi">GraphQLApi</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_authentication_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GraphQLApiAdditionalAuthenticationProviderArgs]]</span> = None<span class="p">, </span><span class="nx">authentication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openid_connect_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiOpenidConnectConfigArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiUserPoolConfigArgs]</span> = None<span class="p">, </span><span class="nx">xray_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1177,7 +1177,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#additional_authentication_providers_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>authentication_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">List[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args]</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">Sequence[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more additional authentication providers for the GraphqlApi. Defined below.
 {{% /md %}}</dd>
@@ -1446,7 +1446,7 @@ Get an existing GraphQLApi resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_authentication_providers</span><span class="p">:</span> <span class="nx">Optional[List[GraphQLApiAdditionalAuthenticationProviderArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openid_connect_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiOpenidConnectConfigArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiUserPoolConfigArgs]</span> = None<span class="p">, </span><span class="nx">xray_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> GraphQLApi</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_authentication_providers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GraphQLApiAdditionalAuthenticationProviderArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openid_connect_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiOpenidConnectConfigArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiUserPoolConfigArgs]</span> = None<span class="p">, </span><span class="nx">xray_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> GraphQLApi</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1950,7 +1950,7 @@ The following state arguments are supported:
 <a href="#state_additional_authentication_providers_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>authentication_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">List[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args]</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">Sequence[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more additional authentication providers for the GraphqlApi. Defined below.
 {{% /md %}}</dd>
@@ -2446,7 +2446,7 @@ The following state arguments are supported:
 <a href="#auth_ttl_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of milliseconds a token is valid after being authenticated.
 {{% /md %}}</dd>
@@ -2468,7 +2468,7 @@ The following state arguments are supported:
 <a href="#iat_ttl_python" style="color: inherit; text-decoration: inherit;">iat_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of milliseconds a token is valid after being issued to a user.
 {{% /md %}}</dd>
@@ -3024,7 +3024,7 @@ The following state arguments are supported:
 <a href="#auth_ttl_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of milliseconds a token is valid after being authenticated.
 {{% /md %}}</dd>
@@ -3046,7 +3046,7 @@ The following state arguments are supported:
 <a href="#iat_ttl_python" style="color: inherit; text-decoration: inherit;">iat_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of milliseconds a token is valid after being issued to a user.
 {{% /md %}}</dd>
