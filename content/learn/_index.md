@@ -18,6 +18,9 @@ tutorials:
     description: |
         Here's a bit of text that'll go along with this section. It'll have a little info, etc.
         You get the idea.
+
+# Exclude from search-engine indexing for now.
+block_external_search_index: true
 ---
 
 This is some content that goes with the page as a whole. You know, if we need it. Or something.
