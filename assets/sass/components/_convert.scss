@@ -1,0 +1,14 @@
+pulumi-convert {
+
+    #code-input, #code-output {
+        @apply bg-white w-full rounded h-64 my-8 p-4;
+    }
+
+    select {
+        @apply p-2 rounded mx-2;
+    }
+
+    button {
+        @apply btn;
+    }
+}
