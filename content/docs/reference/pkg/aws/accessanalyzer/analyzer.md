@@ -16,7 +16,7 @@ Manages an Access Analyzer Analyzer. More information can be found in the [Acces
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
+### Account Analyzer
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -79,6 +79,108 @@ import * as aws from "@pulumi/aws";
 
 const example = new aws.accessanalyzer.Analyzer("example", {
     analyzerName: "example",
+});
+```
+
+{{% /example %}}
+
+### Organization Analyzer
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleOrganization = new Aws.Organizations.Organization("exampleOrganization", new Aws.Organizations.OrganizationArgs
+        {
+            AwsServiceAccessPrincipals = 
+            {
+                "access-analyzer.amazonaws.com",
+            },
+        });
+        var exampleAnalyzer = new Aws.AccessAnalyzer.Analyzer("exampleAnalyzer", new Aws.AccessAnalyzer.AnalyzerArgs
+        {
+            AnalyzerName = "example",
+            Type = "ORGANIZATION",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleOrganization,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/accessanalyzer"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+			AwsServiceAccessPrincipals: pulumi.StringArray{
+				pulumi.String("access-analyzer.amazonaws.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = accessanalyzer.NewAnalyzer(ctx, "exampleAnalyzer", &accessanalyzer.AnalyzerArgs{
+			AnalyzerName: pulumi.String("example"),
+			Type:         pulumi.String("ORGANIZATION"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleOrganization,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_organization = aws.organizations.Organization("exampleOrganization", aws_service_access_principals=["access-analyzer.amazonaws.com"])
+example_analyzer = aws.accessanalyzer.Analyzer("exampleAnalyzer",
+    analyzer_name="example",
+    type="ORGANIZATION",
+    opts=ResourceOptions(depends_on=[example_organization]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleOrganization = new aws.organizations.Organization("exampleOrganization", {awsServiceAccessPrincipals: ["access-analyzer.amazonaws.com"]});
+const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
+    analyzerName: "example",
+    type: "ORGANIZATION",
+}, {
+    dependsOn: [exampleOrganization],
 });
 ```
 
@@ -298,7 +400,7 @@ The Analyzer resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Analyzer. Valid value is currently only `ACCOUNT`. Defaults to `ACCOUNT`.
+    <dd>{{% md %}}Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -338,7 +440,7 @@ The Analyzer resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Analyzer. Valid value is currently only `ACCOUNT`. Defaults to `ACCOUNT`.
+    <dd>{{% md %}}Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -378,7 +480,7 @@ The Analyzer resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Analyzer. Valid value is currently only `ACCOUNT`. Defaults to `ACCOUNT`.
+    <dd>{{% md %}}Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -418,7 +520,7 @@ The Analyzer resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of Analyzer. Valid value is currently only `ACCOUNT`. Defaults to `ACCOUNT`.
+    <dd>{{% md %}}Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -714,7 +816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Analyzer. Valid value is currently only `ACCOUNT`. Defaults to `ACCOUNT`.
+    <dd>{{% md %}}Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -764,7 +866,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Analyzer. Valid value is currently only `ACCOUNT`. Defaults to `ACCOUNT`.
+    <dd>{{% md %}}Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -814,7 +916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Analyzer. Valid value is currently only `ACCOUNT`. Defaults to `ACCOUNT`.
+    <dd>{{% md %}}Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -864,7 +966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of Analyzer. Valid value is currently only `ACCOUNT`. Defaults to `ACCOUNT`.
+    <dd>{{% md %}}Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
 {{% /md %}}</dd>
 
 </dl>

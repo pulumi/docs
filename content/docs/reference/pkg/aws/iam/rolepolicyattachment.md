@@ -43,7 +43,6 @@ class MyStack : Stack
         }
       ]
     }
-
 ",
         });
         var policy = new Aws.Iam.Policy("policy", new Aws.Iam.PolicyArgs
@@ -61,13 +60,12 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var test_attach = new Aws.Iam.RolePolicyAttachment("test-attach", new Aws.Iam.RolePolicyAttachmentArgs
         {
-            PolicyArn = policy.Arn,
             Role = role.Name,
+            PolicyArn = policy.Arn,
         });
     }
 
@@ -90,21 +88,21 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "      \"Version\": \"2012-10-17\",\n", "      \"Statement\": [\n", "        {\n", "          \"Action\": \"sts:AssumeRole\",\n", "          \"Principal\": {\n", "            \"Service\": \"ec2.amazonaws.com\"\n", "          },\n", "          \"Effect\": \"Allow\",\n", "          \"Sid\": \"\"\n", "        }\n", "      ]\n", "    }\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "      \"Version\": \"2012-10-17\",\n", "      \"Statement\": [\n", "        {\n", "          \"Action\": \"sts:AssumeRole\",\n", "          \"Principal\": {\n", "            \"Service\": \"ec2.amazonaws.com\"\n", "          },\n", "          \"Effect\": \"Allow\",\n", "          \"Sid\": \"\"\n", "        }\n", "      ]\n", "    }\n")),
 		})
 		if err != nil {
 			return err
 		}
 		policy, err := iam.NewPolicy(ctx, "policy", &iam.PolicyArgs{
 			Description: pulumi.String("A test policy"),
-			Policy:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			Policy:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = iam.NewRolePolicyAttachment(ctx, "test_attach", &iam.RolePolicyAttachmentArgs{
-			PolicyArn: policy.Arn,
 			Role:      role.Name,
+			PolicyArn: policy.Arn,
 		})
 		if err != nil {
 			return err
@@ -134,7 +132,6 @@ role = aws.iam.Role("role", assume_role_policy="""    {
         }
       ]
     }
-
 """)
 policy = aws.iam.Policy("policy",
     description="A test policy",
@@ -150,11 +147,10 @@ policy = aws.iam.Policy("policy",
     }
   ]
 }
-
 """)
 test_attach = aws.iam.RolePolicyAttachment("test-attach",
-    policy_arn=policy.arn,
-    role=role.name)
+    role=role.name,
+    policy_arn=policy.arn)
 ```
 
 {{% /example %}}
@@ -165,8 +161,7 @@ test_attach = aws.iam.RolePolicyAttachment("test-attach",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const role = new aws.iam.Role("role", {
-    assumeRolePolicy: `    {
+const role = new aws.iam.Role("role", {assumeRolePolicy: `    {
       "Version": "2012-10-17",
       "Statement": [
         {
@@ -179,8 +174,7 @@ const role = new aws.iam.Role("role", {
         }
       ]
     }
-`,
-});
+`});
 const policy = new aws.iam.Policy("policy", {
     description: "A test policy",
     policy: `{
@@ -198,8 +192,8 @@ const policy = new aws.iam.Policy("policy", {
 `,
 });
 const test_attach = new aws.iam.RolePolicyAttachment("test-attach", {
-    policyArn: policy.arn,
     role: role.name,
+    policyArn: policy.arn,
 });
 ```
 

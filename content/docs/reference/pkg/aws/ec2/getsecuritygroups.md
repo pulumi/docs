@@ -13,6 +13,92 @@ meta_desc: "Explore the GetSecurityGroups function of the ec2 module, including 
 Use this data source to get IDs and VPC membership of Security Groups that are created
 outside of this provider.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = Output.Create(Aws.Ec2.GetSecurityGroups.InvokeAsync(new Aws.Ec2.GetSecurityGroupsArgs
+        {
+            Tags = 
+            {
+                { "Application", "k8s" },
+                { "Environment", "dev" },
+            },
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.GetSecurityGroups(ctx, &ec2.GetSecurityGroupsArgs{
+			Tags: map[string]interface{}{
+				"Application": "k8s",
+				"Environment": "dev",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.ec2.get_security_groups(tags={
+    "Application": "k8s",
+    "Environment": "dev",
+})
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = pulumi.output(aws.ec2.getSecurityGroups({
+    tags: {
+        Application: "k8s",
+        Environment: "dev",
+    },
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSecurityGroups {#using}
@@ -26,7 +112,7 @@ outside of this provider.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_security_groups(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetSecurityGroupsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecurityGroupsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_security_groups(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetSecurityGroupsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecurityGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -153,7 +239,7 @@ desired security groups.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritygroupsfilter">List[Get<wbr>Security<wbr>Groups<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getsecuritygroupsfilter">Sequence[Get<wbr>Security<wbr>Groups<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
@@ -392,7 +478,7 @@ unless the `vpc-id` filter is also used.
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}IDs of the matches security groups.
 {{% /md %}}</dd>
@@ -413,7 +499,7 @@ unless the `vpc-id` filter is also used.
 <a href="#vpc_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs*
 unless the `vpc-id` filter is also used.
@@ -425,7 +511,7 @@ unless the `vpc-id` filter is also used.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritygroupsfilter">List[Get<wbr>Security<wbr>Groups<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getsecuritygroupsfilter">Sequence[Get<wbr>Security<wbr>Groups<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -557,7 +643,7 @@ unless the `vpc-id` filter is also used.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

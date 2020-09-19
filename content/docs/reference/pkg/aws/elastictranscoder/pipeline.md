@@ -135,7 +135,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elastictranscoder/#pulumi_aws.elastictranscoder.Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_config</span><span class="p">:</span> <span class="nx">Optional[PipelineContentConfigArgs]</span> = None<span class="p">, </span><span class="nx">content_config_permissions</span><span class="p">:</span> <span class="nx">Optional[List[PipelineContentConfigPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">input_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[PipelineNotificationsArgs]</span> = None<span class="p">, </span><span class="nx">output_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnail_config</span><span class="p">:</span> <span class="nx">Optional[PipelineThumbnailConfigArgs]</span> = None<span class="p">, </span><span class="nx">thumbnail_config_permissions</span><span class="p">:</span> <span class="nx">Optional[List[PipelineThumbnailConfigPermissionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elastictranscoder/#pulumi_aws.elastictranscoder.Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_config</span><span class="p">:</span> <span class="nx">Optional[PipelineContentConfigArgs]</span> = None<span class="p">, </span><span class="nx">content_config_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineContentConfigPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">input_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[PipelineNotificationsArgs]</span> = None<span class="p">, </span><span class="nx">output_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnail_config</span><span class="p">:</span> <span class="nx">Optional[PipelineThumbnailConfigArgs]</span> = None<span class="p">, </span><span class="nx">thumbnail_config_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineThumbnailConfigPermissionArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -708,7 +708,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#content_config_permissions_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">List[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">Sequence[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
@@ -763,7 +763,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#thumbnail_config_permissions_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Sequence[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
@@ -907,7 +907,7 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_config</span><span class="p">:</span> <span class="nx">Optional[PipelineContentConfigArgs]</span> = None<span class="p">, </span><span class="nx">content_config_permissions</span><span class="p">:</span> <span class="nx">Optional[List[PipelineContentConfigPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">input_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[PipelineNotificationsArgs]</span> = None<span class="p">, </span><span class="nx">output_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnail_config</span><span class="p">:</span> <span class="nx">Optional[PipelineThumbnailConfigArgs]</span> = None<span class="p">, </span><span class="nx">thumbnail_config_permissions</span><span class="p">:</span> <span class="nx">Optional[List[PipelineThumbnailConfigPermissionArgs]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_kms_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_config</span><span class="p">:</span> <span class="nx">Optional[PipelineContentConfigArgs]</span> = None<span class="p">, </span><span class="nx">content_config_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineContentConfigPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">input_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[PipelineNotificationsArgs]</span> = None<span class="p">, </span><span class="nx">output_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnail_config</span><span class="p">:</span> <span class="nx">Optional[PipelineThumbnailConfigArgs]</span> = None<span class="p">, </span><span class="nx">thumbnail_config_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineThumbnailConfigPermissionArgs]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1440,7 +1440,7 @@ The following state arguments are supported:
 <a href="#state_content_config_permissions_python" style="color: inherit; text-decoration: inherit;">content_<wbr>config_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">List[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">Sequence[Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
@@ -1517,7 +1517,7 @@ The following state arguments are supported:
 <a href="#state_thumbnail_config_permissions_python" style="color: inherit; text-decoration: inherit;">thumbnail_<wbr>config_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">Sequence[Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
@@ -1815,7 +1815,7 @@ The following state arguments are supported:
 <a href="#accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`
 {{% /md %}}</dd>
@@ -2349,7 +2349,7 @@ The following state arguments are supported:
 <a href="#accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`.
 {{% /md %}}</dd>

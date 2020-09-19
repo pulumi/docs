@@ -633,7 +633,7 @@ The following output properties are available:
 <a href="#posix_users_python" style="color: inherit; text-decoration: inherit;">posix_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccesspointposixuser">List[Get<wbr>Access<wbr>Point<wbr>Posix<wbr>User]</a></span>
+        <span class="property-type"><a href="#getaccesspointposixuser">Sequence[Get<wbr>Access<wbr>Point<wbr>Posix<wbr>User]</a></span>
     </dt>
     <dd>{{% md %}}Single element list containing operating system user and group applied to all file system requests made using the access point.
 {{% /md %}}</dd>
@@ -644,7 +644,7 @@ The following output properties are available:
 <a href="#root_directories_python" style="color: inherit; text-decoration: inherit;">root_<wbr>directories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccesspointrootdirectory">List[Get<wbr>Access<wbr>Point<wbr>Root<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#getaccesspointrootdirectory">Sequence[Get<wbr>Access<wbr>Point<wbr>Root<wbr>Directory]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#gid_python" style="color: inherit; text-decoration: inherit;">gid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Group ID
 {{% /md %}}</dd>
@@ -830,7 +830,7 @@ The following output properties are available:
 <a href="#secondary_gids_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>gids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}Secondary group IDs
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ The following output properties are available:
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}User Id
 * `root_directory`- Single element list containing information on the directory on the Amazon EFS file system that the access point provides access to.
@@ -965,7 +965,7 @@ The following output properties are available:
 <a href="#creation_infos_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>infos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccesspointrootdirectorycreationinfo">List[Get<wbr>Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getaccesspointrootdirectorycreationinfo">Sequence[Get<wbr>Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Single element list containing information on the creation permissions of the directory
 {{% /md %}}</dd>
@@ -1132,7 +1132,7 @@ The following output properties are available:
 <a href="#owner_gid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>gid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}POSIX owner group ID
 {{% /md %}}</dd>
@@ -1143,7 +1143,7 @@ The following output properties are available:
 <a href="#owner_uid_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>uid</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}POSIX owner user ID
 {{% /md %}}</dd>

@@ -114,7 +114,7 @@ const org = new aws.organizations.Organization("org", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/organizations/#pulumi_aws.organizations.Organization">Organization</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_service_access_principals</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enabled_policy_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">feature_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/organizations/#pulumi_aws.organizations.Organization">Organization</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_service_access_principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enabled_policy_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">feature_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -412,7 +412,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#aws_service_access_principals_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>service_<wbr>access_<wbr>principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 {{% /md %}}</dd>
@@ -423,7 +423,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#enabled_policy_types_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>policy_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 {{% /md %}}</dd>
@@ -745,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accounts_python" style="color: inherit; text-decoration: inherit;">accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationaccount">List[Organization<wbr>Account]</a></span>
+        <span class="property-type"><a href="#organizationaccount">Sequence[Organization<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -810,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_master_accounts_python" style="color: inherit; text-decoration: inherit;">non_<wbr>master_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationnonmasteraccount">List[Organization<wbr>Non<wbr>Master<wbr>Account]</a></span>
+        <span class="property-type"><a href="#organizationnonmasteraccount">Sequence[Organization<wbr>Non<wbr>Master<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -821,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roots_python" style="color: inherit; text-decoration: inherit;">roots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationroot">List[Organization<wbr>Root]</a></span>
+        <span class="property-type"><a href="#organizationroot">Sequence[Organization<wbr>Root]</a></span>
     </dt>
     <dd>{{% md %}}List of organization roots. All elements have these attributes:
 {{% /md %}}</dd>
@@ -846,7 +846,7 @@ Get an existing Organization resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accounts</span><span class="p">:</span> <span class="nx">Optional[List[OrganizationAccountArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_service_access_principals</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enabled_policy_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">feature_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_account_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">non_master_accounts</span><span class="p">:</span> <span class="nx">Optional[List[OrganizationNonMasterAccountArgs]]</span> = None<span class="p">, </span><span class="nx">roots</span><span class="p">:</span> <span class="nx">Optional[List[OrganizationRootArgs]]</span> = None<span class="p">) -&gt;</span> Organization</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[OrganizationAccountArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_service_access_principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enabled_policy_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">feature_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_account_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">non_master_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[OrganizationNonMasterAccountArgs]]</span> = None<span class="p">, </span><span class="nx">roots</span><span class="p">:</span> <span class="nx">Optional[Sequence[OrganizationRootArgs]]</span> = None<span class="p">) -&gt;</span> Organization</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1317,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_accounts_python" style="color: inherit; text-decoration: inherit;">accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationaccount">List[Organization<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationaccount">Sequence[Organization<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -1339,7 +1339,7 @@ The following state arguments are supported:
 <a href="#state_aws_service_access_principals_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>service_<wbr>access_<wbr>principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
 {{% /md %}}</dd>
@@ -1350,7 +1350,7 @@ The following state arguments are supported:
 <a href="#state_enabled_policy_types_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>policy_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g. `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
 {{% /md %}}</dd>
@@ -1405,7 +1405,7 @@ The following state arguments are supported:
 <a href="#state_non_master_accounts_python" style="color: inherit; text-decoration: inherit;">non_<wbr>master_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationnonmasteraccount">List[Organization<wbr>Non<wbr>Master<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationnonmasteraccount">Sequence[Organization<wbr>Non<wbr>Master<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
 {{% /md %}}</dd>
@@ -1416,7 +1416,7 @@ The following state arguments are supported:
 <a href="#state_roots_python" style="color: inherit; text-decoration: inherit;">roots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationroot">List[Organization<wbr>Root<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationroot">Sequence[Organization<wbr>Root<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of organization roots. All elements have these attributes:
 {{% /md %}}</dd>
@@ -2178,7 +2178,7 @@ The following state arguments are supported:
 <a href="#policy_types_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationrootpolicytype">List[Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationrootpolicytype">Sequence[Organization<wbr>Root<wbr>Policy<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of policy types enabled for this root. All elements have these attributes:
 {{% /md %}}</dd>

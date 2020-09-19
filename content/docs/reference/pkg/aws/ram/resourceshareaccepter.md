@@ -41,7 +41,7 @@ class MyStack : Stack
             },
         }, new CustomResourceOptions
         {
-            Provider = "aws.alternate",
+            Provider = aws.Alternate,
         });
         var receiver = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
         var senderInvite = new Aws.Ram.PrincipalAssociation("senderInvite", new Aws.Ram.PrincipalAssociationArgs
@@ -50,7 +50,7 @@ class MyStack : Stack
             ResourceShareArn = senderShare.Arn,
         }, new CustomResourceOptions
         {
-            Provider = "aws.alternate",
+            Provider = aws.Alternate,
         });
         var receiverAccept = new Aws.Ram.ResourceShareAccepter("receiverAccept", new Aws.Ram.ResourceShareAccepterArgs
         {
@@ -87,7 +87,7 @@ func main() {
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("tf-test-resource-share"),
 			},
-		}, pulumi.Provider("aws.alternate"))
+		}, pulumi.Provider(aws.Alternate))
 		if err != nil {
 			return err
 		}
@@ -98,7 +98,7 @@ func main() {
 		senderInvite, err := ram.NewPrincipalAssociation(ctx, "senderInvite", &ram.PrincipalAssociationArgs{
 			Principal:        pulumi.String(receiver.AccountId),
 			ResourceShareArn: senderShare.Arn,
-		}, pulumi.Provider("aws.alternate"))
+		}, pulumi.Provider(aws.Alternate))
 		if err != nil {
 			return err
 		}
@@ -127,12 +127,12 @@ sender_share = aws.ram.ResourceShare("senderShare",
     tags={
         "Name": "tf-test-resource-share",
     },
-    opts=ResourceOptions(provider="aws.alternate"))
+    opts=ResourceOptions(provider=aws["alternate"]))
 receiver = aws.get_caller_identity()
 sender_invite = aws.ram.PrincipalAssociation("senderInvite",
     principal=receiver.account_id,
     resource_share_arn=sender_share.arn,
-    opts=ResourceOptions(provider="aws.alternate"))
+    opts=ResourceOptions(provider=aws["alternate"]))
 receiver_accept = aws.ram.ResourceShareAccepter("receiverAccept", share_arn=sender_invite.resource_share_arn)
 ```
 
@@ -144,23 +144,23 @@ receiver_accept = aws.ram.ResourceShareAccepter("receiverAccept", share_arn=send
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const alternate = new aws.Provider("alternate", {
-    profile: "profile1",
-});
-const senderShare = new aws.ram.ResourceShare("sender_share", {
+const alternate = new aws.Provider("alternate", {profile: "profile1"});
+const senderShare = new aws.ram.ResourceShare("senderShare", {
     allowExternalPrincipals: true,
     tags: {
         Name: "tf-test-resource-share",
     },
-}, { provider: alternate });
-const receiver = pulumi.output(aws.getCallerIdentity({ async: true }));
-const senderInvite = new aws.ram.PrincipalAssociation("sender_invite", {
-    principal: receiver.accountId,
-    resourceShareArn: senderShare.arn,
-}, { provider: alternate });
-const receiverAccept = new aws.ram.ResourceShareAccepter("receiver_accept", {
-    shareArn: senderInvite.resourceShareArn,
+}, {
+    provider: aws.alternate,
 });
+const receiver = aws.getCallerIdentity({});
+const senderInvite = new aws.ram.PrincipalAssociation("senderInvite", {
+    principal: receiver.then(receiver => receiver.accountId),
+    resourceShareArn: senderShare.arn,
+}, {
+    provider: aws.alternate,
+});
+const receiverAccept = new aws.ram.ResourceShareAccepter("receiverAccept", {shareArn: senderInvite.resourceShareArn});
 ```
 
 {{% /example %}}
@@ -752,7 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the resource ARNs shared via the resource share.
 {{% /md %}}</dd>
@@ -821,7 +821,7 @@ Get an existing ResourceShareAccepter resource's state with the given name, ID, 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">invitation_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">receiver_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">sender_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceShareAccepter</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">invitation_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">receiver_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">sender_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceShareAccepter</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1248,7 +1248,7 @@ The following state arguments are supported:
 <a href="#state_resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the resource ARNs shared via the resource share.
 {{% /md %}}</dd>

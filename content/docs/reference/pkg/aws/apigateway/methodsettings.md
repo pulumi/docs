@@ -1477,7 +1477,7 @@ The following state arguments are supported:
 <a href="#cache_ttl_in_seconds_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>ttl_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
 {{% /md %}}</dd>
@@ -1543,7 +1543,7 @@ The following state arguments are supported:
 <a href="#throttling_burst_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>burst_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling burst limit. Default: `-1` (throttling disabled).
 {{% /md %}}</dd>

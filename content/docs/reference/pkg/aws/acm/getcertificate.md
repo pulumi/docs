@@ -28,7 +28,24 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var example = Output.Create(Aws.Acm.GetCertificate.InvokeAsync(new Aws.Acm.GetCertificateArgs
+        var issued = Output.Create(Aws.Acm.GetCertificate.InvokeAsync(new Aws.Acm.GetCertificateArgs
+        {
+            Domain = "tf.example.com",
+            Statuses = 
+            {
+                "ISSUED",
+            },
+        }));
+        var amazonIssued = Output.Create(Aws.Acm.GetCertificate.InvokeAsync(new Aws.Acm.GetCertificateArgs
+        {
+            Domain = "tf.example.com",
+            MostRecent = true,
+            Types = 
+            {
+                "AMAZON_ISSUED",
+            },
+        }));
+        var rsa4096 = Output.Create(Aws.Acm.GetCertificate.InvokeAsync(new Aws.Acm.GetCertificateArgs
         {
             Domain = "tf.example.com",
             KeyTypes = 
@@ -56,6 +73,26 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := acm.LookupCertificate(ctx, &acm.LookupCertificateArgs{
 			Domain: "tf.example.com",
+			Statuses: []string{
+				"ISSUED",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt0 := true
+		_, err = acm.LookupCertificate(ctx, &acm.LookupCertificateArgs{
+			Domain:     "tf.example.com",
+			MostRecent: &opt0,
+			Types: []string{
+				"AMAZON_ISSUED",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = acm.LookupCertificate(ctx, &acm.LookupCertificateArgs{
+			Domain: "tf.example.com",
 			KeyTypes: []string{
 				"RSA_4096",
 			},
@@ -75,7 +112,12 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.acm.get_certificate(domain="tf.example.com",
+issued = aws.acm.get_certificate(domain="tf.example.com",
+    statuses=["ISSUED"])
+amazon_issued = aws.acm.get_certificate(domain="tf.example.com",
+    most_recent=True,
+    types=["AMAZON_ISSUED"])
+rsa4096 = aws.acm.get_certificate(domain="tf.example.com",
     key_types=["RSA_4096"])
 ```
 
@@ -87,8 +129,19 @@ example = aws.acm.get_certificate(domain="tf.example.com",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+// Find a certificate that is issued
+const issued = pulumi.output(aws.acm.getCertificate({
+    domain: "tf.example.com",
+    statuses: ["ISSUED"],
+}, { async: true }));
+// Find a certificate issued by (not imported into) ACM
+const amazonIssued = pulumi.output(aws.acm.getCertificate({
+    domain: "tf.example.com",
+    mostRecent: true,
+    types: ["AMAZON_ISSUED"],
+}, { async: true }));
 // Find a RSA 4096 bit certificate
-const example = pulumi.output(aws.acm.getCertificate({
+const rsa4096 = pulumi.output(aws.acm.getCertificate({
     domain: "tf.example.com",
     keyTypes: ["RSA_4096"],
 }, { async: true }));
@@ -110,7 +163,7 @@ const example = pulumi.output(aws.acm.getCertificate({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificate(</span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificateResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificate(</span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificateResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -379,7 +432,7 @@ are returned.
 <a href="#key_types_python" style="color: inherit; text-decoration: inherit;">key_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. Valid values are `RSA_1024`, `RSA_2048`, `RSA_4096`, `EC_prime256v1`, `EC_secp384r1`, and `EC_secp521r1`.
 {{% /md %}}</dd>
@@ -401,7 +454,7 @@ are returned.
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of statuses on which to filter the returned list. Valid values are `PENDING_VALIDATION`, `ISSUED`,
 `INACTIVE`, `EXPIRED`, `VALIDATION_TIMED_OUT`, `REVOKED` and `FAILED`. If no value is specified, only certificates in the `ISSUED` state
@@ -425,7 +478,7 @@ are returned.
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
 {{% /md %}}</dd>
@@ -769,7 +822,7 @@ The following output properties are available:
 <a href="#key_types_python" style="color: inherit; text-decoration: inherit;">key_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -789,7 +842,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -799,7 +852,7 @@ The following output properties are available:
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

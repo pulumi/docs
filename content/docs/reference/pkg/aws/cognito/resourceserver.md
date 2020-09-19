@@ -118,8 +118,8 @@ class MyStack : Stack
             {
                 new Aws.Cognito.Inputs.ResourceServerScopeArgs
                 {
-                    ScopeDescription = "a Sample Scope Description",
                     ScopeName = "sample-scope",
+                    ScopeDescription = "a Sample Scope Description",
                 },
             },
             UserPoolId = pool.Id,
@@ -150,8 +150,8 @@ func main() {
 			Identifier: pulumi.String("https://example.com"),
 			Scopes: cognito.ResourceServerScopeArray{
 				&cognito.ResourceServerScopeArgs{
-					ScopeDescription: pulumi.String("a Sample Scope Description"),
 					ScopeName:        pulumi.String("sample-scope"),
+					ScopeDescription: pulumi.String("a Sample Scope Description"),
 				},
 			},
 			UserPoolId: pool.ID(),
@@ -175,8 +175,8 @@ pool = aws.cognito.UserPool("pool")
 resource = aws.cognito.ResourceServer("resource",
     identifier="https://example.com",
     scopes=[aws.cognito.ResourceServerScopeArgs(
-        scope_description="a Sample Scope Description",
         scope_name="sample-scope",
+        scope_description="a Sample Scope Description",
     )],
     user_pool_id=pool.id)
 ```
@@ -193,8 +193,8 @@ const pool = new aws.cognito.UserPool("pool", {});
 const resource = new aws.cognito.ResourceServer("resource", {
     identifier: "https://example.com",
     scopes: [{
-        scopeDescription: "a Sample Scope Description",
         scopeName: "sample-scope",
+        scopeDescription: "a Sample Scope Description",
     }],
     userPoolId: pool.id,
 });
@@ -214,7 +214,7 @@ const resource = new aws.cognito.ResourceServer("resource", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cognito/#pulumi_aws.cognito.ResourceServer">ResourceServer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[ResourceServerScopeArgs]]</span> = None<span class="p">, </span><span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cognito/#pulumi_aws.cognito.ResourceServer">ResourceServer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceServerScopeArgs]]</span> = None<span class="p">, </span><span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -574,7 +574,7 @@ The ResourceServer resource accepts the following [input]({{< relref "/docs/intr
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">List[Resource<wbr>Server<wbr>Scope<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceserverscope">Sequence[Resource<wbr>Server<wbr>Scope<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Authorization Scope.
 {{% /md %}}</dd>
@@ -697,7 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_identifiers_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>identifiers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of all scopes configured for this resource server in the format identifier/scope_name.
 {{% /md %}}</dd>
@@ -722,7 +722,7 @@ Get an existing ResourceServer resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_identifiers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[ResourceServerScopeArgs]]</span> = None<span class="p">, </span><span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceServer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ResourceServerScopeArgs]]</span> = None<span class="p">, </span><span class="nx">user_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ResourceServer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1047,7 +1047,7 @@ The following state arguments are supported:
 <a href="#state_scope_identifiers_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>identifiers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of all scopes configured for this resource server in the format identifier/scope_name.
 {{% /md %}}</dd>
@@ -1058,7 +1058,7 @@ The following state arguments are supported:
 <a href="#state_scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">List[Resource<wbr>Server<wbr>Scope<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceserverscope">Sequence[Resource<wbr>Server<wbr>Scope<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Authorization Scope.
 {{% /md %}}</dd>

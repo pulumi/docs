@@ -700,7 +700,7 @@ The following output properties are available:
 <a href="#enabled_cluster_log_types_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>cluster_<wbr>log_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The enabled control plane logs.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ The following output properties are available:
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteridentity">List[Get<wbr>Cluster<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getclusteridentity">Sequence[Get<wbr>Cluster<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the `aws.eks.Cluster` resource documentation.
 {{% /md %}}</dd>
@@ -995,7 +995,7 @@ The following output properties are available:
 <a href="#oidcs_python" style="color: inherit; text-decoration: inherit;">oidcs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteridentityoidc">List[Get<wbr>Cluster<wbr>Identity<wbr>Oidc<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusteridentityoidc">Sequence[Get<wbr>Cluster<wbr>Identity<wbr>Oidc<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
 {{% /md %}}</dd>
@@ -1406,7 +1406,7 @@ The following output properties are available:
 <a href="#public_access_cidrs_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access_<wbr>cidrs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
 {{% /md %}}</dd>
@@ -1417,7 +1417,7 @@ The following output properties are available:
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of security group IDs
 {{% /md %}}</dd>
@@ -1428,7 +1428,7 @@ The following output properties are available:
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of subnet IDs
 {{% /md %}}</dd>

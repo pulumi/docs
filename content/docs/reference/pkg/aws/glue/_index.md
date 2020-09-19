@@ -19,6 +19,7 @@ Explore the resources and functions of the glue module in the AWS package.
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
     <li><a href="securityconfiguration" title="SecurityConfiguration"><span class="symbol resource"></span>SecurityConfiguration</a></li>
     <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
+    <li><a href="userdefinedfunction" title="UserDefinedFunction"><span class="symbol resource"></span>UserDefinedFunction</a></li>
     <li><a href="workflow" title="Workflow"><span class="symbol resource"></span>Workflow</a></li>
 </ul>
 
@@ -36,7 +37,7 @@ Explore the resources and functions of the glue module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.2.1</dd>
+	<dd>3.3.0</dd>
 </dl>
 
 

@@ -132,7 +132,7 @@ const route = new aws.ec2.Route("route", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_table(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetRouteTableFilterArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteTableResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_route_table(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRouteTableFilterArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRouteTableResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -387,7 +387,7 @@ a pair on the desired Route Table.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablefilter">List[Get<wbr>Route<wbr>Table<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getroutetablefilter">Sequence[Get<wbr>Route<wbr>Table<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -810,7 +810,7 @@ The following output properties are available:
 <a href="#associations_python" style="color: inherit; text-decoration: inherit;">associations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetableassociation">List[Get<wbr>Route<wbr>Table<wbr>Association]</a></span>
+        <span class="property-type"><a href="#getroutetableassociation">Sequence[Get<wbr>Route<wbr>Table<wbr>Association]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -864,7 +864,7 @@ The following output properties are available:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetableroute">List[Get<wbr>Route<wbr>Table<wbr>Route]</a></span>
+        <span class="property-type"><a href="#getroutetableroute">Sequence[Get<wbr>Route<wbr>Table<wbr>Route]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -905,7 +905,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablefilter">List[Get<wbr>Route<wbr>Table<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getroutetablefilter">Sequence[Get<wbr>Route<wbr>Table<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1317,7 +1317,7 @@ A Route Table will be selected if any one of the given values matches.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A Route Table will be selected if any one of the given values matches.
@@ -1401,6 +1401,17 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block of the route.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="localgatewayid_csharp">
+<a href="#localgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Gateway<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Local Gateway ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1511,6 +1522,17 @@ A Route Table will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
+        <span id="localgatewayid_go">
+<a href="#localgatewayid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Gateway<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Local Gateway ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="natgatewayid_go">
 <a href="#natgatewayid_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -1617,6 +1639,17 @@ A Route Table will be selected if any one of the given values matches.
 
     <dt class="property-required"
             title="Required">
+        <span id="localgatewayid_nodejs">
+<a href="#localgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Gateway<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Local Gateway ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="natgatewayid_nodejs">
 <a href="#natgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway<wbr>Id</a>
 </span> 
@@ -1719,6 +1752,17 @@ A Route Table will be selected if any one of the given values matches.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block of the route.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="local_gateway_id_python">
+<a href="#local_gateway_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>gateway_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Local Gateway ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"

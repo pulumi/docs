@@ -2,7 +2,7 @@
 ---
 title: "GetResource"
 title_tag: "Function GetResource | Module apigateway | Package AWS"
-meta_desc: "Explore the GetResource function of the apigateway module, including examples, input properties, output properties, and supporting types. Use this data source to get the id of a Resource in API Gateway. "
+meta_desc: "Explore the GetResource function of the apigateway module, including examples, input properties, output properties, and supporting types. Use this data source to get the id of a Resource in API Gateway."
 ---
 
 

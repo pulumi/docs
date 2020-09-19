@@ -28,11 +28,11 @@ class MyStack : Stack
     {
         var example = new Aws.Ec2.TransitGatewayPeeringAttachmentAccepter("example", new Aws.Ec2.TransitGatewayPeeringAttachmentAccepterArgs
         {
+            TransitGatewayAttachmentId = aws_ec2_transit_gateway_peering_attachment.Example.Id,
             Tags = 
             {
                 { "Name", "Example cross-account attachment" },
             },
-            TransitGatewayAttachmentId = aws_ec2_transit_gateway_peering_attachment.Example.Id,
         });
     }
 
@@ -53,10 +53,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ec2.NewTransitGatewayPeeringAttachmentAccepter(ctx, "example", &ec2.TransitGatewayPeeringAttachmentAccepterArgs{
+			TransitGatewayAttachmentId: pulumi.Any(aws_ec2_transit_gateway_peering_attachment.Example.Id),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("Example cross-account attachment"),
 			},
-			TransitGatewayAttachmentId: pulumi.Any(aws_ec2_transit_gateway_peering_attachment.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -74,10 +74,10 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.ec2.TransitGatewayPeeringAttachmentAccepter("example",
+    transit_gateway_attachment_id=aws_ec2_transit_gateway_peering_attachment["example"]["id"],
     tags={
         "Name": "Example cross-account attachment",
-    },
-    transit_gateway_attachment_id=aws_ec2_transit_gateway_peering_attachment["example"]["id"])
+    })
 ```
 
 {{% /example %}}
@@ -89,10 +89,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
+    transitGatewayAttachmentId: aws_ec2_transit_gateway_peering_attachment.example.id,
     tags: {
         Name: "Example cross-account attachment",
     },
-    transitGatewayAttachmentId: aws_ec2_transit_gateway_peering_attachment_example.id,
 });
 ```
 

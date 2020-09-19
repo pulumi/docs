@@ -12,6 +12,137 @@ meta_desc: "Explore the LogService resource of the directoryservice module, incl
 
 Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
+        {
+            RetentionInDays = 14,
+        });
+        var ad_log_policyPolicyDocument = exampleLogGroup.Arn.Apply(arn => Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "logs:CreateLogStream",
+                        "logs:PutLogEvents",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Identifiers = 
+                            {
+                                "ds.amazonaws.com",
+                            },
+                            Type = "Service",
+                        },
+                    },
+                    Resources = 
+                    {
+                        $"{arn}:*",
+                    },
+                    Effect = "Allow",
+                },
+            },
+        }));
+        var ad_log_policyLogResourcePolicy = new Aws.CloudWatch.LogResourcePolicy("ad-log-policyLogResourcePolicy", new Aws.CloudWatch.LogResourcePolicyArgs
+        {
+            PolicyDocument = ad_log_policyPolicyDocument.Apply(ad_log_policyPolicyDocument => ad_log_policyPolicyDocument.Json),
+            PolicyName = "ad-log-policy",
+        });
+        var exampleLogService = new Aws.DirectoryService.LogService("exampleLogService", new Aws.DirectoryService.LogServiceArgs
+        {
+            DirectoryId = aws_directory_service_directory.Example.Id,
+            LogGroupName = exampleLogGroup.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup", retention_in_days=14)
+ad_log_policy_policy_document = example_log_group.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    actions=[
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+    ],
+    principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+        identifiers=["ds.amazonaws.com"],
+        type="Service",
+    )],
+    resources=[f"{arn}:*"],
+    effect="Allow",
+)]))
+ad_log_policy_log_resource_policy = aws.cloudwatch.LogResourcePolicy("ad-log-policyLogResourcePolicy",
+    policy_document=ad_log_policy_policy_document.json,
+    policy_name="ad-log-policy")
+example_log_service = aws.directoryservice.LogService("exampleLogService",
+    directory_id=aws_directory_service_directory["example"]["id"],
+    log_group_name=example_log_group.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {retentionInDays: 14});
+const ad-log-policyPolicyDocument = exampleLogGroup.arn.apply(arn => aws.iam.getPolicyDocument({
+    statements: [{
+        actions: [
+            "logs:CreateLogStream",
+            "logs:PutLogEvents",
+        ],
+        principals: [{
+            identifiers: ["ds.amazonaws.com"],
+            type: "Service",
+        }],
+        resources: [`${arn}:*`],
+        effect: "Allow",
+    }],
+}));
+const ad_log_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("ad-log-policyLogResourcePolicy", {
+    policyDocument: ad_log_policyPolicyDocument.json,
+    policyName: "ad-log-policy",
+});
+const exampleLogService = new aws.directoryservice.LogService("exampleLogService", {
+    directoryId: aws_directory_service_directory.example.id,
+    logGroupName: exampleLogGroup.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a LogService Resource {#create}

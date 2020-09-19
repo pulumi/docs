@@ -296,7 +296,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.DefaultSecurityGroup">DefaultSecurityGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultSecurityGroupEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultSecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.DefaultSecurityGroup">DefaultSecurityGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultSecurityGroupEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultSecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -476,8 +476,7 @@ The DefaultSecurityGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupegress">List&lt;Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -488,8 +487,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupingress">List&lt;Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -521,9 +519,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
+    <dd>{{% md %}}The VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -541,8 +537,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupegress">[]Default<wbr>Security<wbr>Group<wbr>Egress</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -553,8 +548,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupingress">[]Default<wbr>Security<wbr>Group<wbr>Ingress</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -586,9 +580,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
+    <dd>{{% md %}}The VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -606,8 +598,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -618,8 +609,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -651,9 +641,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
+    <dd>{{% md %}}The VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -669,10 +657,9 @@ modified, added, or removed.** It will be left in its current state
 <a href="#egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">List[Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupegress">Sequence[Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -681,10 +668,9 @@ egress rule. Each egress block supports fields documented below.
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">List[Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupingress">Sequence[Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -716,9 +702,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
+    <dd>{{% md %}}The VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -747,7 +731,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the security group
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -757,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -807,7 +792,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the security group
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -817,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -867,7 +853,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the security group
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -877,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -927,7 +914,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the security group
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -937,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -992,7 +980,7 @@ Get an existing DefaultSecurityGroup resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultSecurityGroupEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[List[DefaultSecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DefaultSecurityGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultSecurityGroupEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingress</span><span class="p">:</span> <span class="nx">Optional[Sequence[DefaultSecurityGroupIngressArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoke_rules_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DefaultSecurityGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1114,7 +1102,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the security group
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1124,7 +1113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1135,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupegress">List&lt;Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1147,8 +1135,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupingress">List&lt;Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1202,9 +1189,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
+    <dd>{{% md %}}The VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -1222,7 +1207,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the security group
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1232,7 +1218,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1243,8 +1229,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupegress">[]Default<wbr>Security<wbr>Group<wbr>Egress</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1255,8 +1240,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupingress">[]Default<wbr>Security<wbr>Group<wbr>Ingress</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1310,9 +1294,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
+    <dd>{{% md %}}The VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -1330,7 +1312,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the security group
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1340,7 +1323,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1351,8 +1334,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1363,8 +1345,7 @@ egress rule. Each egress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress[]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1418,9 +1399,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
+    <dd>{{% md %}}The VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -1438,7 +1417,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the security group
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1448,7 +1428,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1457,10 +1437,9 @@ modified, added, or removed.** It will be left in its current state
 <a href="#state_egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">List[Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupegress">Sequence[Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1469,10 +1448,9 @@ egress rule. Each egress block supports fields documented below.
 <a href="#state_ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">List[Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupingress">Sequence[Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
+    <dd>{{% md %}}Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1526,9 +1504,7 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
+    <dd>{{% md %}}The VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -1572,7 +1548,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1582,7 +1559,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The protocol. If you select a protocol of "-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0. If not icmp, tcp, udp, or "-1" use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1592,7 +1570,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1602,7 +1581,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1612,7 +1592,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1623,7 +1603,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1633,7 +1614,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1643,7 +1625,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1653,7 +1636,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, the security group itself will be added as a source to this egress rule.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1670,7 +1654,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1680,7 +1665,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The protocol. If you select a protocol of "-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0. If not icmp, tcp, udp, or "-1" use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1690,7 +1676,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1700,7 +1687,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1710,7 +1698,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1721,7 +1709,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1731,7 +1720,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1741,7 +1731,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1751,7 +1742,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, the security group itself will be added as a source to this egress rule.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1768,7 +1760,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1778,7 +1771,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The protocol. If you select a protocol of "-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0. If not icmp, tcp, udp, or "-1" use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1788,7 +1782,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1798,7 +1793,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1808,7 +1804,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1819,7 +1815,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1829,7 +1826,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1839,7 +1837,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1849,7 +1848,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, the security group itself will be added as a source to this egress rule.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1864,9 +1864,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1876,7 +1877,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The protocol. If you select a protocol of "-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0. If not icmp, tcp, udp, or "-1" use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1884,9 +1886,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1894,9 +1897,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1906,7 +1910,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1915,9 +1919,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1925,9 +1930,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#prefix_list_ids_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>list_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1935,9 +1941,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1947,7 +1954,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, the security group itself will be added as a source to this egress rule.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1982,7 +1990,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1992,7 +2001,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The protocol. If you select a protocol of "-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0. If not icmp, tcp, udp, or "-1" use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2002,7 +2012,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2012,7 +2023,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2022,7 +2034,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2033,7 +2045,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2043,7 +2056,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2053,7 +2067,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2063,7 +2078,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, the security group itself will be added as a source to this egress rule.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2080,7 +2096,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2090,7 +2107,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The protocol. If you select a protocol of "-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0. If not icmp, tcp, udp, or "-1" use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2100,7 +2118,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2110,7 +2129,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2120,7 +2140,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2131,7 +2151,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2141,7 +2162,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2151,7 +2173,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2161,7 +2184,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, the security group itself will be added as a source to this egress rule.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2178,7 +2202,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2188,7 +2213,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The protocol. If you select a protocol of "-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0. If not icmp, tcp, udp, or "-1" use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2198,7 +2224,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2208,7 +2235,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2218,7 +2246,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2229,7 +2257,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2239,7 +2268,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2249,7 +2279,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2259,7 +2290,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, the security group itself will be added as a source to this egress rule.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2274,9 +2306,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp")
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2286,7 +2319,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The protocol. If you select a protocol of "-1" (semantically equivalent to `"all"`, which is not a valid value here), you must specify a "from_port" and "to_port" equal to 0. If not icmp, tcp, udp, or "-1" use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2294,9 +2328,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The end range port (or ICMP code if protocol is "icmp").
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2304,9 +2339,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2316,7 +2352,7 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the security group
+    <dd>{{% md %}}Description of this egress rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2325,9 +2361,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of IPv6 CIDR blocks.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2335,9 +2372,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#prefix_list_ids_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>list_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2345,9 +2383,10 @@ modified, added, or removed.** It will be left in its current state
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2357,7 +2396,8 @@ modified, added, or removed.** It will be left in its current state
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If true, the security group itself will be added as a source to this egress rule.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

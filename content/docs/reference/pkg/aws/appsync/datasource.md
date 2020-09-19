@@ -82,6 +82,7 @@ class MyStack : Stack
         var exampleDataSource = new Aws.AppSync.DataSource("exampleDataSource", new Aws.AppSync.DataSourceArgs
         {
             ApiId = exampleGraphQLApi.Id,
+            Name = "tf_appsync_example",
             ServiceRoleArn = exampleRole.Arn,
             Type = "AMAZON_DYNAMODB",
             DynamodbConfig = new Aws.AppSync.Inputs.DataSourceDynamodbConfigArgs
@@ -148,6 +149,7 @@ func main() {
 		}
 		_, err = appsync.NewDataSource(ctx, "exampleDataSource", &appsync.DataSourceArgs{
 			ApiId:          exampleGraphQLApi.ID(),
+			Name:           pulumi.String("tf_appsync_example"),
 			ServiceRoleArn: exampleRole.Arn,
 			Type:           pulumi.String("AMAZON_DYNAMODB"),
 			DynamodbConfig: &appsync.DataSourceDynamodbConfigArgs{
@@ -210,6 +212,7 @@ example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
 example_graph_ql_api = aws.appsync.GraphQLApi("exampleGraphQLApi", authentication_type="API_KEY")
 example_data_source = aws.appsync.DataSource("exampleDataSource",
     api_id=example_graph_ql_api.id,
+    name="tf_appsync_example",
     service_role_arn=example_role.arn,
     type="AMAZON_DYNAMODB",
     dynamodb_config=aws.appsync.DataSourceDynamodbConfigArgs(
@@ -268,6 +271,7 @@ const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
 const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {authenticationType: "API_KEY"});
 const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
     apiId: exampleGraphQLApi.id,
+    name: "tf_appsync_example",
     serviceRoleArn: exampleRole.arn,
     type: "AMAZON_DYNAMODB",
     dynamodbConfig: {

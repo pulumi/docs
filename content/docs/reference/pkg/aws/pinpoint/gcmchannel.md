@@ -33,8 +33,8 @@ class MyStack : Stack
         });
         var gcm = new Aws.Pinpoint.GcmChannel("gcm", new Aws.Pinpoint.GcmChannelArgs
         {
-            ApiKey = "api_key",
             ApplicationId = app.ApplicationId,
+            ApiKey = "api_key",
         });
     }
 
@@ -59,8 +59,8 @@ func main() {
 			return err
 		}
 		_, err = pinpoint.NewGcmChannel(ctx, "gcm", &pinpoint.GcmChannelArgs{
-			ApiKey:        pulumi.String("api_key"),
 			ApplicationId: app.ApplicationId,
+			ApiKey:        pulumi.String("api_key"),
 		})
 		if err != nil {
 			return err
@@ -79,8 +79,8 @@ import pulumi_aws as aws
 
 app = aws.pinpoint.App("app")
 gcm = aws.pinpoint.GcmChannel("gcm",
-    api_key="api_key",
-    application_id=app.application_id)
+    application_id=app.application_id,
+    api_key="api_key")
 ```
 
 {{% /example %}}
@@ -93,8 +93,8 @@ import * as aws from "@pulumi/aws";
 
 const app = new aws.pinpoint.App("app", {});
 const gcm = new aws.pinpoint.GcmChannel("gcm", {
-    apiKey: "api_key",
     applicationId: app.applicationId,
+    apiKey: "api_key",
 });
 ```
 

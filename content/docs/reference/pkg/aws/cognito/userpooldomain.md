@@ -113,8 +113,8 @@ class MyStack : Stack
         });
         var main = new Aws.Cognito.UserPoolDomain("main", new Aws.Cognito.UserPoolDomainArgs
         {
-            CertificateArn = aws_acm_certificate.Cert.Arn,
             Domain = "example-domain.example.com",
+            CertificateArn = aws_acm_certificate.Cert.Arn,
             UserPoolId = exampleUserPool.Id,
         });
         var exampleZone = Output.Create(Aws.Route53.GetZone.InvokeAsync(new Aws.Route53.GetZoneArgs
@@ -123,6 +123,9 @@ class MyStack : Stack
         }));
         var auth_cognito_A = new Aws.Route53.Record("auth-cognito-A", new Aws.Route53.RecordArgs
         {
+            Name = main.Domain,
+            Type = "A",
+            ZoneId = exampleZone.Apply(exampleZone => exampleZone.ZoneId),
             Aliases = 
             {
                 new Aws.Route53.Inputs.RecordAliasArgs
@@ -132,9 +135,6 @@ class MyStack : Stack
                     ZoneId = "Z2FDTNDATAQYW2",
                 },
             },
-            Name = main.Domain,
-            Type = "A",
-            ZoneId = exampleZone.Apply(exampleZone => exampleZone.ZoneId),
         });
     }
 
@@ -160,8 +160,8 @@ func main() {
 			return err
 		}
 		main, err := cognito.NewUserPoolDomain(ctx, "main", &cognito.UserPoolDomainArgs{
-			CertificateArn: pulumi.Any(aws_acm_certificate.Cert.Arn),
 			Domain:         pulumi.String("example-domain.example.com"),
+			CertificateArn: pulumi.Any(aws_acm_certificate.Cert.Arn),
 			UserPoolId:     exampleUserPool.ID(),
 		})
 		if err != nil {
@@ -175,6 +175,9 @@ func main() {
 			return err
 		}
 		_, err = route53.NewRecord(ctx, "auth_cognito_A", &route53.RecordArgs{
+			Name:   main.Domain,
+			Type:   pulumi.String("A"),
+			ZoneId: pulumi.String(exampleZone.ZoneId),
 			Aliases: route53.RecordAliasArray{
 				&route53.RecordAliasArgs{
 					EvaluateTargetHealth: pulumi.Bool(false),
@@ -182,9 +185,6 @@ func main() {
 					ZoneId:               pulumi.String("Z2FDTNDATAQYW2"),
 				},
 			},
-			Name:   main.Domain,
-			Type:   pulumi.String("A"),
-			ZoneId: pulumi.String(exampleZone.ZoneId),
 		})
 		if err != nil {
 			return err
@@ -203,19 +203,19 @@ import pulumi_aws as aws
 
 example_user_pool = aws.cognito.UserPool("exampleUserPool")
 main = aws.cognito.UserPoolDomain("main",
-    certificate_arn=aws_acm_certificate["cert"]["arn"],
     domain="example-domain.example.com",
+    certificate_arn=aws_acm_certificate["cert"]["arn"],
     user_pool_id=example_user_pool.id)
 example_zone = aws.route53.get_zone(name="example.com")
 auth_cognito__a = aws.route53.Record("auth-cognito-A",
+    name=main.domain,
+    type="A",
+    zone_id=example_zone.zone_id,
     aliases=[aws.route53.RecordAliasArgs(
         evaluate_target_health=False,
         name=main.cloudfront_distribution_arn,
         zone_id="Z2FDTNDATAQYW2",
-    )],
-    name=main.domain,
-    type="A",
-    zone_id=example_zone.zone_id)
+    )])
 ```
 
 {{% /example %}}
@@ -226,25 +226,24 @@ auth_cognito__a = aws.route53.Record("auth-cognito-A",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleUserPool = new aws.cognito.UserPool("example", {});
+const exampleUserPool = new aws.cognito.UserPool("exampleUserPool", {});
 const main = new aws.cognito.UserPoolDomain("main", {
-    certificateArn: aws_acm_certificate_cert.arn,
     domain: "example-domain.example.com",
+    certificateArn: aws_acm_certificate.cert.arn,
     userPoolId: exampleUserPool.id,
 });
-const exampleZone = pulumi.output(aws.route53.getZone({
+const exampleZone = aws.route53.getZone({
     name: "example.com",
-}, { async: true }));
+});
 const auth_cognito_A = new aws.route53.Record("auth-cognito-A", {
+    name: main.domain,
+    type: "A",
+    zoneId: exampleZone.then(exampleZone => exampleZone.zoneId),
     aliases: [{
         evaluateTargetHealth: false,
         name: main.cloudfrontDistributionArn,
-        // This zone_id is fixed
         zoneId: "Z2FDTNDATAQYW2",
     }],
-    name: main.domain,
-    type: "A",
-    zoneId: exampleZone.zoneId!,
 });
 ```
 

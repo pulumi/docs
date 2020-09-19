@@ -1580,7 +1580,7 @@ The following state arguments are supported:
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">List[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">Sequence[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
 {{% /md %}}</dd>
@@ -2336,7 +2336,7 @@ The following state arguments are supported:
 <a href="#instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
 {{% /md %}}</dd>
@@ -2536,7 +2536,7 @@ The following state arguments are supported:
 <a href="#total_target_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of units to request, filled using `default_target_capacity_type`.
 {{% /md %}}</dd>
@@ -2547,7 +2547,7 @@ The following state arguments are supported:
 <a href="#on_demand_target_capacity_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of On-Demand units to request.
 {{% /md %}}</dd>
@@ -2558,7 +2558,7 @@ The following state arguments are supported:
 <a href="#spot_target_capacity_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>target_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of Spot units to request.
 {{% /md %}}</dd>

@@ -3,7 +3,7 @@ title: "Module elasticache"
 title_tag: "Module elasticache | Package @pulumi/aws | Node.js SDK"
 linktitle: "elasticache"
 meta_desc: "Explore members of the elasticache module in the @pulumi/aws package."
-git_sha: "96a856ed11314bec542cd860851b3cc05711aaab"
+git_sha: "3d3072ac52d05fe557c01f4a7c7669b120df0b37"
 block_external_search_index: true
 ---
 
@@ -51,7 +51,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L62">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -111,7 +111,7 @@ const replica = new aws.elasticache.Cluster("replica", {replicationGroupId: aws_
 ```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L218"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L218"> <b>constructor</b></a>
 </h4>
 
 
@@ -125,7 +125,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L72">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L72">method <b>get</b></a>
 </h4>
 
 
@@ -136,14 +136,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L62">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L62">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L83">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L83">method <b>isInstance</b></a>
 </h4>
 
 
@@ -154,7 +154,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L96">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L96">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applyImmediately: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -165,12 +165,12 @@ are applied immediately, or during the next maintenance window. Default is
 (Available since v0.6.0)
 
 <h4 class="pdoc-member-header" id="Cluster-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L97">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L97">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L101">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L101">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ are applied immediately, or during the next maintenance window. Default is
 The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferredAvailabilityZones` instead. Default: System chosen Availability Zone.
 
 <h4 class="pdoc-member-header" id="Cluster-azMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L105">property <b>azMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L105">property <b>azMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ The Availability Zone for the cache cluster. If you want to create cache nodes i
 Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `numCacheNodes` must be greater than `1`
 
 <h4 class="pdoc-member-header" id="Cluster-cacheNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L110">property <b>cacheNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L110">property <b>cacheNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cacheNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCacheNode'>ClusterCacheNode</a>[]&gt;;</code></pre>
@@ -195,7 +195,7 @@ List of node objects including `id`, `address`, `port` and `availabilityZone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
 
 <h4 class="pdoc-member-header" id="Cluster-clusterAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L114">property <b>clusterAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L114">property <b>clusterAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
 (Memcached only) The DNS name of the cache cluster without the port appended.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L119">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L119">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ Group identifier. ElastiCache converts
 this name to lowercase
 
 <h4 class="pdoc-member-header" id="Cluster-configurationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L123">property <b>configurationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L123">property <b>configurationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configurationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -220,7 +220,7 @@ this name to lowercase
 (Memcached only) The configuration endpoint to allow host discovery.
 
 <h4 class="pdoc-member-header" id="Cluster-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L128">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L128">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ Name of the cache engine to be used for this cache cluster.
 Valid values for this parameter are `memcached` or `redis`
 
 <h4 class="pdoc-member-header" id="Cluster-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L134">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L134">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -239,7 +239,7 @@ See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/refe
 in the AWS Documentation center for supported versions
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -248,7 +248,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L140">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L140">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h4 class="pdoc-member-header" id="Cluster-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L146">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L146">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -268,7 +268,7 @@ The compute and memory capacity of the nodes. See
 supported node types
 
 <h4 class="pdoc-member-header" id="Cluster-notificationTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L152">property <b>notificationTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L152">property <b>notificationTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h4 class="pdoc-member-header" id="Cluster-numCacheNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L159">property <b>numCacheNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L159">property <b>numCacheNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numCacheNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
 
 <h4 class="pdoc-member-header" id="Cluster-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L164">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L164">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameterGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ Name of the parameter group to associate
 with this cache cluster
 
 <h4 class="pdoc-member-header" id="Cluster-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L168">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L168">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ with this cache cluster
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replicationGroupId`.
 
 <h4 class="pdoc-member-header" id="Cluster-preferredAvailabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L172">property <b>preferredAvailabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L172">property <b>preferredAvailabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredAvailabilityZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -314,7 +314,7 @@ The port number on which each of the cache nodes will accept connections. For Me
 A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `numCacheNodes`. If you want all the nodes in the same Availability Zone, use `availabilityZone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
 
 <h4 class="pdoc-member-header" id="Cluster-replicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L176">property <b>replicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L176">property <b>replicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ A list of the Availability Zones in which cache nodes are created. If you are cr
 The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
 
 <h4 class="pdoc-member-header" id="Cluster-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L181">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L181">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -331,7 +331,7 @@ One or more VPC security groups associated
 with the cache cluster
 
 <h4 class="pdoc-member-header" id="Cluster-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L186">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L186">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -340,7 +340,7 @@ List of security group
 names to associate with this cache cluster
 
 <h4 class="pdoc-member-header" id="Cluster-snapshotArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L192">property <b>snapshotArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L192">property <b>snapshotArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h4 class="pdoc-member-header" id="Cluster-snapshotName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L196">property <b>snapshotName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L196">property <b>snapshotName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -358,7 +358,7 @@ Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 The name of a snapshot from which to restore data into the new node group.  Changing the `snapshotName` forces a new resource.
 
 <h4 class="pdoc-member-header" id="Cluster-snapshotRetentionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L204">property <b>snapshotRetentionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L204">property <b>snapshotRetentionLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotRetentionLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -370,7 +370,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshotRetentionLimit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h4 class="pdoc-member-header" id="Cluster-snapshotWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L209">property <b>snapshotWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L209">property <b>snapshotWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
 
 <h4 class="pdoc-member-header" id="Cluster-subnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L214">property <b>subnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L214">property <b>subnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -388,7 +388,7 @@ Name of the subnet group to be used
 for the cache cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L218">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L218">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -396,7 +396,7 @@ for the cache cluster.
 A map of tags to assign to the resource
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L62">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L62">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -405,7 +405,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ParameterGroup" data-link-title="ParameterGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L35">
         Resource <strong>ParameterGroup</strong>
     </a>
 </h3>
@@ -438,7 +438,7 @@ const defaultParameterGroup = new aws.elasticache.ParameterGroup("default", {
 ```
 
 <h4 class="pdoc-member-header" id="ParameterGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -452,7 +452,7 @@ Create a ParameterGroup resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -463,14 +463,14 @@ Get an existing ParameterGroup resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ParameterGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -481,7 +481,7 @@ Returns true if the given object is an instance of ParameterGroup.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -489,7 +489,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroup-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L70">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L70">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -497,7 +497,7 @@ The description of the ElastiCache parameter group. Defaults to "Managed by Pulu
 The family of the ElastiCache parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -506,7 +506,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -514,7 +514,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the ElastiCache parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L78">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L78">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ParameterGroupParameter'>ParameterGroupParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -522,7 +522,7 @@ The name of the ElastiCache parameter.
 A list of ElastiCache parameters to apply.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -531,7 +531,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ReplicationGroup" data-link-title="ReplicationGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L98">
         Resource <strong>ReplicationGroup</strong>
     </a>
 </h3>
@@ -627,7 +627,7 @@ and unavailable on T1 node types. For T2 node types, it is only available on Red
 for full details on using Replication Groups.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L256"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L256"> <b>constructor</b></a>
 </h4>
 
 
@@ -641,7 +641,7 @@ Create a ReplicationGroup resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L108">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L108">method <b>get</b></a>
 </h4>
 
 
@@ -652,14 +652,14 @@ Get an existing ReplicationGroup resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L98">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L98">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L119">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L119">method <b>isInstance</b></a>
 </h4>
 
 
@@ -670,7 +670,7 @@ Returns true if the given object is an instance of ReplicationGroup.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L129">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L129">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applyImmediately: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -678,7 +678,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-atRestEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L133">property <b>atRestEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L133">property <b>atRestEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>atRestEncryptionEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -686,7 +686,7 @@ Specifies whether any modifications are applied immediately, or during the next 
 Whether to enable encryption at rest.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-authToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L137">property <b>authToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L137">property <b>authToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -694,7 +694,7 @@ Whether to enable encryption at rest.
 The password used to access a password protected server. Can be specified only if `transitEncryptionEnabled = true`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L141">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L141">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoMinorVersionUpgrade: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -702,7 +702,7 @@ The password used to access a password protected server. Can be specified only i
 Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-automaticFailoverEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L145">property <b>automaticFailoverEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L145">property <b>automaticFailoverEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automaticFailoverEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -710,7 +710,7 @@ Specifies whether a minor engine upgrades will be applied automatically to the u
 Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L149">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L149">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -718,7 +718,7 @@ Specifies whether a read-only replica will be automatically promoted to read/wri
 A list of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-clusterMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L153">property <b>clusterMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L153">property <b>clusterMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ReplicationGroupClusterMode'>ReplicationGroupClusterMode</a>&gt;;</code></pre>
@@ -726,7 +726,7 @@ A list of EC2 availability zones in which the replication group's cache clusters
 Create a native redis cluster. `automaticFailoverEnabled` must be set to true. Cluster Mode documented below. Only 1 `clusterMode` block is allowed.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-configurationEndpointAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L157">property <b>configurationEndpointAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L157">property <b>configurationEndpointAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configurationEndpointAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -734,7 +734,7 @@ Create a native redis cluster. `automaticFailoverEnabled` must be set to true. C
 The address of the replication group configuration endpoint when cluster mode is enabled.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L161">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L161">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -742,7 +742,7 @@ The address of the replication group configuration endpoint when cluster mode is
 The name of the cache engine to be used for the clusters in this replication group. e.g. `redis`
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L165">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L165">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -750,7 +750,7 @@ The name of the cache engine to be used for the clusters in this replication gro
 The version number of the cache engine to be used for the cache clusters in this replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L98">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L98">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -759,7 +759,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L169">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L169">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -767,7 +767,7 @@ deployments and may be missing (undefined) during planning phases.
 The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `atRestEncryptionEnabled = true`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L175">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L175">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -777,7 +777,7 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-memberClusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L179">property <b>memberClusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L179">property <b>memberClusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memberClusters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -785,7 +785,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 The identifiers of all the nodes that are part of this replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L183">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L183">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -793,7 +793,7 @@ The identifiers of all the nodes that are part of this replication group.
 The compute and memory capacity of the nodes in the node group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-notificationTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L189">property <b>notificationTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L189">property <b>notificationTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -803,7 +803,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-numberCacheClusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L193">property <b>numberCacheClusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L193">property <b>numberCacheClusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numberCacheClusters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -811,7 +811,7 @@ SNS topic to send ElastiCache notifications to. Example:
 The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L197">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L197">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameterGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -819,7 +819,7 @@ The number of cache clusters (primary and replicas) this replication group will 
 The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L201">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L201">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -827,7 +827,7 @@ The name of the parameter group to associate with this replication group. If thi
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-primaryEndpointAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L205">property <b>primaryEndpointAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L205">property <b>primaryEndpointAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryEndpointAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -835,7 +835,7 @@ The port number on which each of the cache nodes will accept connections. For Me
 (Redis only) The address of the endpoint for the primary node in the replication group, if the cluster mode is disabled.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-replicationGroupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L209">property <b>replicationGroupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L209">property <b>replicationGroupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationGroupDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -843,7 +843,7 @@ The port number on which each of the cache nodes will accept connections. For Me
 A user-created description for the replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-replicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L213">property <b>replicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L213">property <b>replicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -851,7 +851,7 @@ A user-created description for the replication group.
 The replication group identifier. This parameter is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L217">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L217">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -859,7 +859,7 @@ The replication group identifier. This parameter is stored as a lowercase string
 One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L221">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L221">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -867,7 +867,7 @@ One or more Amazon VPC security groups associated with this replication group. U
 A list of cache security group names to associate with this replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-snapshotArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L227">property <b>snapshotArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L227">property <b>snapshotArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -877,7 +877,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-snapshotName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L231">property <b>snapshotName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L231">property <b>snapshotName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -885,7 +885,7 @@ Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 The name of a snapshot from which to restore data into the new node group. Changing the `snapshotName` forces a new resource.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-snapshotRetentionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L239">property <b>snapshotRetentionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L239">property <b>snapshotRetentionLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotRetentionLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -897,7 +897,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshotRetentionLimit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-snapshotWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L244">property <b>snapshotWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L244">property <b>snapshotWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -906,7 +906,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-subnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L248">property <b>subnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L248">property <b>subnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -914,15 +914,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 The name of the cache subnet group to be used for the replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L252">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L252">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-A map of tags to assign to the resource
+A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-transitEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L256">property <b>transitEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L256">property <b>transitEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transitEncryptionEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -930,7 +930,7 @@ A map of tags to assign to the resource
 Whether to enable encryption in transit.
 
 <h4 class="pdoc-member-header" id="ReplicationGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L98">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L98">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -939,7 +939,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecurityGroup" data-link-title="SecurityGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L25">
         Resource <strong>SecurityGroup</strong>
     </a>
 </h3>
@@ -964,7 +964,7 @@ const barElasticache_securityGroupSecurityGroup = new aws.elasticache.SecurityGr
 ```
 
 <h4 class="pdoc-member-header" id="SecurityGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -978,7 +978,7 @@ Create a SecurityGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -989,14 +989,14 @@ Get an existing SecurityGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1007,7 +1007,7 @@ Returns true if the given object is an instance of SecurityGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L56">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L56">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1015,7 +1015,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 description for the cache security group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SecurityGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1024,7 +1024,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1032,7 +1032,7 @@ deployments and may be missing (undefined) during planning phases.
 Name for the cache security group. This value is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L65">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L65">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1041,7 +1041,7 @@ List of EC2 security group names to be
 authorized for ingress to the cache security group
 
 <h4 class="pdoc-member-header" id="SecurityGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1050,7 +1050,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SubnetGroup" data-link-title="SubnetGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L37">
         Resource <strong>SubnetGroup</strong>
     </a>
 </h3>
@@ -1087,7 +1087,7 @@ const bar = new aws.elasticache.SubnetGroup("bar", {subnetIds: [fooSubnet.id]});
 ```
 
 <h4 class="pdoc-member-header" id="SubnetGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -1101,7 +1101,7 @@ Create a SubnetGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -1112,14 +1112,14 @@ Get an existing SubnetGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SubnetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1130,7 +1130,7 @@ Returns true if the given object is an instance of SubnetGroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L68">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L68">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1138,7 +1138,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Description for the cache subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ deployments and may be missing (undefined) during planning phases.
 Name for the cache subnet group. Elasticache converts this name to lowercase.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L76">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L76">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ Name for the cache subnet group. Elasticache converts this name to lowercase.
 List of VPC Subnet IDs for the cache subnet group
 
 <h4 class="pdoc-member-header" id="SubnetGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1174,7 +1174,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCluster" data-link-title="getCluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L23">
         Function <strong>getCluster</strong>
     </a>
 </h3>
@@ -1197,7 +1197,7 @@ const myCluster = pulumi.output(aws.elasticache.getCluster({
 ```
 
 <h3 class="pdoc-module-header" id="getReplicationGroup" data-link-title="getReplicationGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L23">
         Function <strong>getReplicationGroup</strong>
     </a>
 </h3>
@@ -1222,7 +1222,7 @@ const bar = pulumi.output(aws.elasticache.getReplicationGroup({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L436">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L436">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -1232,7 +1232,7 @@ const bar = pulumi.output(aws.elasticache.getReplicationGroup({
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L443">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L443">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1243,7 +1243,7 @@ are applied immediately, or during the next maintenance window. Default is
 (Available since v0.6.0)
 
 <h4 class="pdoc-member-header" id="ClusterArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L447">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L447">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1251,7 +1251,7 @@ are applied immediately, or during the next maintenance window. Default is
 The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferredAvailabilityZones` instead. Default: System chosen Availability Zone.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-azMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L451">property <b>azMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L451">property <b>azMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1259,7 +1259,7 @@ The Availability Zone for the cache cluster. If you want to create cache nodes i
 Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `numCacheNodes` must be greater than `1`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L456">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L456">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1268,7 +1268,7 @@ Group identifier. ElastiCache converts
 this name to lowercase
 
 <h4 class="pdoc-member-header" id="ClusterArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L461">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L461">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1277,7 +1277,7 @@ Name of the cache engine to be used for this cache cluster.
 Valid values for this parameter are `memcached` or `redis`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L467">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L467">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1287,7 +1287,7 @@ See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/refe
 in the AWS Documentation center for supported versions
 
 <h4 class="pdoc-member-header" id="ClusterArgs-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L473">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L473">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1297,7 +1297,7 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L479">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L479">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1307,7 +1307,7 @@ The compute and memory capacity of the nodes. See
 supported node types
 
 <h4 class="pdoc-member-header" id="ClusterArgs-notificationTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L485">property <b>notificationTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L485">property <b>notificationTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1317,7 +1317,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-numCacheNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L492">property <b>numCacheNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L492">property <b>numCacheNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numCacheNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1328,7 +1328,7 @@ value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L497">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L497">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1337,7 @@ Name of the parameter group to associate
 with this cache cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L501">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L501">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1345,7 +1345,7 @@ with this cache cluster
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replicationGroupId`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-preferredAvailabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L505">property <b>preferredAvailabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L505">property <b>preferredAvailabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredAvailabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1353,7 +1353,7 @@ The port number on which each of the cache nodes will accept connections. For Me
 A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `numCacheNodes`. If you want all the nodes in the same Availability Zone, use `availabilityZone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-replicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L509">property <b>replicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L509">property <b>replicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1361,7 +1361,7 @@ A list of the Availability Zones in which cache nodes are created. If you are cr
 The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L514">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L514">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1370,7 +1370,7 @@ One or more VPC security groups associated
 with the cache cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L519">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L519">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1379,7 +1379,7 @@ List of security group
 names to associate with this cache cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-snapshotArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L525">property <b>snapshotArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L525">property <b>snapshotArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1389,7 +1389,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-snapshotName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L529">property <b>snapshotName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L529">property <b>snapshotName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1397,7 +1397,7 @@ Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 The name of a snapshot from which to restore data into the new node group.  Changing the `snapshotName` forces a new resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-snapshotRetentionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L537">property <b>snapshotRetentionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L537">property <b>snapshotRetentionLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotRetentionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1409,7 +1409,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshotRetentionLimit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h4 class="pdoc-member-header" id="ClusterArgs-snapshotWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L542">property <b>snapshotWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L542">property <b>snapshotWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1418,7 +1418,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
 
 <h4 class="pdoc-member-header" id="ClusterArgs-subnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L547">property <b>subnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L547">property <b>subnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1427,7 +1427,7 @@ Name of the subnet group to be used
 for the cache cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L551">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L551">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1435,7 +1435,7 @@ for the cache cluster.
 A map of tags to assign to the resource
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L301">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L301">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -1445,7 +1445,7 @@ A map of tags to assign to the resource
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L308">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L308">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1456,12 +1456,12 @@ are applied immediately, or during the next maintenance window. Default is
 (Available since v0.6.0)
 
 <h4 class="pdoc-member-header" id="ClusterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L309">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L309">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L313">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L313">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1469,7 +1469,7 @@ are applied immediately, or during the next maintenance window. Default is
 The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferredAvailabilityZones` instead. Default: System chosen Availability Zone.
 
 <h4 class="pdoc-member-header" id="ClusterState-azMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L317">property <b>azMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L317">property <b>azMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1477,7 +1477,7 @@ The Availability Zone for the cache cluster. If you want to create cache nodes i
 Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `numCacheNodes` must be greater than `1`
 
 <h4 class="pdoc-member-header" id="ClusterState-cacheNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L322">property <b>cacheNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L322">property <b>cacheNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCacheNode'>ClusterCacheNode</a>&gt;[]&gt;;</code></pre>
@@ -1486,7 +1486,7 @@ List of node objects including `id`, `address`, `port` and `availabilityZone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L326">property <b>clusterAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L326">property <b>clusterAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1494,7 +1494,7 @@ Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
 (Memcached only) The DNS name of the cache cluster without the port appended.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L331">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L331">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1503,7 +1503,7 @@ Group identifier. ElastiCache converts
 this name to lowercase
 
 <h4 class="pdoc-member-header" id="ClusterState-configurationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L335">property <b>configurationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L335">property <b>configurationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1511,7 +1511,7 @@ this name to lowercase
 (Memcached only) The configuration endpoint to allow host discovery.
 
 <h4 class="pdoc-member-header" id="ClusterState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L340">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L340">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1520,7 +1520,7 @@ Name of the cache engine to be used for this cache cluster.
 Valid values for this parameter are `memcached` or `redis`
 
 <h4 class="pdoc-member-header" id="ClusterState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L346">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L346">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1530,7 +1530,7 @@ See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/refe
 in the AWS Documentation center for supported versions
 
 <h4 class="pdoc-member-header" id="ClusterState-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L352">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L352">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1540,7 +1540,7 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h4 class="pdoc-member-header" id="ClusterState-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L358">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L358">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1550,7 +1550,7 @@ The compute and memory capacity of the nodes. See
 supported node types
 
 <h4 class="pdoc-member-header" id="ClusterState-notificationTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L364">property <b>notificationTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L364">property <b>notificationTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1560,7 +1560,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h4 class="pdoc-member-header" id="ClusterState-numCacheNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L371">property <b>numCacheNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L371">property <b>numCacheNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numCacheNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1571,7 +1571,7 @@ value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
 
 <h4 class="pdoc-member-header" id="ClusterState-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L376">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L376">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1580,7 +1580,7 @@ Name of the parameter group to associate
 with this cache cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L380">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L380">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1588,7 +1588,7 @@ with this cache cluster
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replicationGroupId`.
 
 <h4 class="pdoc-member-header" id="ClusterState-preferredAvailabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L384">property <b>preferredAvailabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L384">property <b>preferredAvailabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredAvailabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1596,7 +1596,7 @@ The port number on which each of the cache nodes will accept connections. For Me
 A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `numCacheNodes`. If you want all the nodes in the same Availability Zone, use `availabilityZone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
 
 <h4 class="pdoc-member-header" id="ClusterState-replicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L388">property <b>replicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L388">property <b>replicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1604,7 +1604,7 @@ A list of the Availability Zones in which cache nodes are created. If you are cr
 The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
 
 <h4 class="pdoc-member-header" id="ClusterState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L393">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L393">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1613,7 +1613,7 @@ One or more VPC security groups associated
 with the cache cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L398">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L398">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1622,7 +1622,7 @@ List of security group
 names to associate with this cache cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-snapshotArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L404">property <b>snapshotArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L404">property <b>snapshotArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1632,7 +1632,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h4 class="pdoc-member-header" id="ClusterState-snapshotName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L408">property <b>snapshotName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L408">property <b>snapshotName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1640,7 +1640,7 @@ Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 The name of a snapshot from which to restore data into the new node group.  Changing the `snapshotName` forces a new resource.
 
 <h4 class="pdoc-member-header" id="ClusterState-snapshotRetentionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L416">property <b>snapshotRetentionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L416">property <b>snapshotRetentionLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotRetentionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1652,7 +1652,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshotRetentionLimit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h4 class="pdoc-member-header" id="ClusterState-snapshotWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L421">property <b>snapshotWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L421">property <b>snapshotWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1661,7 +1661,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
 
 <h4 class="pdoc-member-header" id="ClusterState-subnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L426">property <b>subnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L426">property <b>subnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1670,7 +1670,7 @@ Name of the subnet group to be used
 for the cache cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/cluster.ts#L430">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/cluster.ts#L430">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1678,7 +1678,7 @@ for the cache cluster.
 A map of tags to assign to the resource
 
 <h3 class="pdoc-module-header" id="GetClusterArgs" data-link-title="GetClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L40">
         interface <strong>GetClusterArgs</strong>
     </a>
 </h3>
@@ -1688,7 +1688,7 @@ A map of tags to assign to the resource
 A collection of arguments for invoking getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L44">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L44">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1696,7 +1696,7 @@ A collection of arguments for invoking getCluster.
 Group identifier.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L48">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L48">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1704,7 +1704,7 @@ Group identifier.
 The tags assigned to the resource
 
 <h3 class="pdoc-module-header" id="GetClusterResult" data-link-title="GetClusterResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L54">
         interface <strong>GetClusterResult</strong>
     </a>
 </h3>
@@ -1714,12 +1714,12 @@ The tags assigned to the resource
 A collection of values returned by getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L55">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L55">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L59">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L59">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1727,7 +1727,7 @@ A collection of values returned by getCluster.
 The Availability Zone for the cache cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-cacheNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L64">property <b>cacheNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L64">property <b>cacheNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheNodes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterCacheNode'>GetClusterCacheNode</a>[];</code></pre>
@@ -1736,7 +1736,7 @@ List of node objects including `id`, `address`, `port` and `availabilityZone`.
 Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}`
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L68">property <b>clusterAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L68">property <b>clusterAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1744,12 +1744,12 @@ Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}
 (Memcached only) The DNS name of the cache cluster without the port appended.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L69">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L69">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-configurationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L73">property <b>configurationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L73">property <b>configurationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1757,7 +1757,7 @@ Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}
 (Memcached only) The configuration endpoint to allow host discovery.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L77">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L77">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1765,7 +1765,7 @@ Referenceable e.g. as `${data.aws_elasticache_cluster.bar.cache_nodes.0.address}
 Name of the cache engine.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L81">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L81">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1773,7 +1773,7 @@ Name of the cache engine.
 Version number of the cache engine.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1781,7 +1781,7 @@ Version number of the cache engine.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L90">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L90">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1790,7 +1790,7 @@ Specifies the weekly time range for when maintenance
 on the cache cluster is performed.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L94">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L94">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1798,7 +1798,7 @@ on the cache cluster is performed.
 The cluster node type.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-notificationTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L99">property <b>notificationTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L99">property <b>notificationTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTopicArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1807,7 +1807,7 @@ An Amazon Resource Name (ARN) of an
 SNS topic that ElastiCache notifications get sent to.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-numCacheNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L103">property <b>numCacheNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L103">property <b>numCacheNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numCacheNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1815,7 +1815,7 @@ SNS topic that ElastiCache notifications get sent to.
 The number of cache nodes that the cache cluster has.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L107">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L107">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1823,7 +1823,7 @@ The number of cache nodes that the cache cluster has.
 Name of the parameter group associated with this cache cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L112">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L112">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1832,7 +1832,7 @@ The port number on which each of the cache nodes will
 accept connections.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-replicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L116">property <b>replicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L116">property <b>replicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1840,7 +1840,7 @@ accept connections.
 The replication group to which this cache cluster belongs.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L120">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L120">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1848,7 +1848,7 @@ The replication group to which this cache cluster belongs.
 List VPC security groups associated with the cache cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L124">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L124">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1856,7 +1856,7 @@ List VPC security groups associated with the cache cluster.
 List of security group names associated with this cache cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-snapshotRetentionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L129">property <b>snapshotRetentionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L129">property <b>snapshotRetentionLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotRetentionLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1865,7 +1865,7 @@ The number of days for which ElastiCache will
 retain automatic cache cluster snapshots before deleting them.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-snapshotWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L134">property <b>snapshotWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L134">property <b>snapshotWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1874,7 +1874,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of the cache cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-subnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L138">property <b>subnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L138">property <b>subnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1882,7 +1882,7 @@ begin taking a daily snapshot of the cache cluster.
 Name of the subnet group associated to the cache cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getCluster.ts#L142">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getCluster.ts#L142">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1890,7 +1890,7 @@ Name of the subnet group associated to the cache cluster.
 The tags assigned to the resource
 
 <h3 class="pdoc-module-header" id="GetReplicationGroupArgs" data-link-title="GetReplicationGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L39">
         interface <strong>GetReplicationGroupArgs</strong>
     </a>
 </h3>
@@ -1900,7 +1900,7 @@ The tags assigned to the resource
 A collection of arguments for invoking getReplicationGroup.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupArgs-replicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L43">property <b>replicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L43">property <b>replicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1908,7 +1908,7 @@ A collection of arguments for invoking getReplicationGroup.
 The identifier for the replication group.
 
 <h3 class="pdoc-module-header" id="GetReplicationGroupResult" data-link-title="GetReplicationGroupResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L49">
         interface <strong>GetReplicationGroupResult</strong>
     </a>
 </h3>
@@ -1918,7 +1918,7 @@ The identifier for the replication group.
 A collection of values returned by getReplicationGroup.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-authTokenEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L53">property <b>authTokenEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L53">property <b>authTokenEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authTokenEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1926,7 +1926,7 @@ A collection of values returned by getReplicationGroup.
 A flag that enables using an AuthToken (password) when issuing Redis commands.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-automaticFailoverEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L57">property <b>automaticFailoverEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L57">property <b>automaticFailoverEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticFailoverEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1934,7 +1934,7 @@ A flag that enables using an AuthToken (password) when issuing Redis commands.
 A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-configurationEndpointAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L61">property <b>configurationEndpointAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L61">property <b>configurationEndpointAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationEndpointAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1942,7 +1942,7 @@ A flag whether a read-only replica will be automatically promoted to read/write 
 The configuration endpoint address to allow host discovery.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1950,7 +1950,7 @@ The configuration endpoint address to allow host discovery.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-memberClusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L69">property <b>memberClusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L69">property <b>memberClusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberClusters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1958,7 +1958,7 @@ The provider-assigned unique ID for this managed resource.
 The identifiers of all the nodes that are part of this replication group.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L73">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L73">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1966,7 +1966,7 @@ The identifiers of all the nodes that are part of this replication group.
 The cluster node type.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-numberCacheClusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L77">property <b>numberCacheClusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L77">property <b>numberCacheClusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numberCacheClusters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1974,7 +1974,7 @@ The cluster node type.
 The number of cache clusters that the replication group has.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L81">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L81">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1982,7 +1982,7 @@ The number of cache clusters that the replication group has.
 The port number on which the configuration endpoint will accept connections.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-primaryEndpointAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L85">property <b>primaryEndpointAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L85">property <b>primaryEndpointAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryEndpointAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1990,7 +1990,7 @@ The port number on which the configuration endpoint will accept connections.
 The endpoint of the primary node in this node group (shard).
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-replicationGroupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L89">property <b>replicationGroupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L89">property <b>replicationGroupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationGroupDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1998,7 +1998,7 @@ The endpoint of the primary node in this node group (shard).
 The description of the replication group.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-replicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L93">property <b>replicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L93">property <b>replicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2006,7 +2006,7 @@ The description of the replication group.
 The identifier for the replication group.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-snapshotRetentionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L97">property <b>snapshotRetentionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L97">property <b>snapshotRetentionLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotRetentionLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2014,7 +2014,7 @@ The identifier for the replication group.
 The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
 
 <h4 class="pdoc-member-header" id="GetReplicationGroupResult-snapshotWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/getReplicationGroup.ts#L101">property <b>snapshotWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/getReplicationGroup.ts#L101">property <b>snapshotWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2022,7 +2022,7 @@ The number of days for which ElastiCache retains automatic cache cluster snapsho
 The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
 
 <h3 class="pdoc-module-header" id="ParameterGroupArgs" data-link-title="ParameterGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L142">
         interface <strong>ParameterGroupArgs</strong>
     </a>
 </h3>
@@ -2032,7 +2032,7 @@ The daily time range (in UTC) during which ElastiCache begins taking a daily sna
 The set of arguments for constructing a ParameterGroup resource.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L146">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2040,7 +2040,7 @@ The set of arguments for constructing a ParameterGroup resource.
 The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L150">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L150">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2048,7 +2048,7 @@ The description of the ElastiCache parameter group. Defaults to "Managed by Pulu
 The family of the ElastiCache parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L154">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2056,7 +2056,7 @@ The family of the ElastiCache parameter group.
 The name of the ElastiCache parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L158">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L158">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -2064,7 +2064,7 @@ The name of the ElastiCache parameter.
 A list of ElastiCache parameters to apply.
 
 <h3 class="pdoc-module-header" id="ParameterGroupState" data-link-title="ParameterGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L120">
         interface <strong>ParameterGroupState</strong>
     </a>
 </h3>
@@ -2074,7 +2074,7 @@ A list of ElastiCache parameters to apply.
 Input properties used for looking up and filtering ParameterGroup resources.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L124">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L124">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2082,7 +2082,7 @@ Input properties used for looking up and filtering ParameterGroup resources.
 The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L128">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L128">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2090,7 +2090,7 @@ The description of the ElastiCache parameter group. Defaults to "Managed by Pulu
 The family of the ElastiCache parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2098,7 +2098,7 @@ The family of the ElastiCache parameter group.
 The name of the ElastiCache parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/parameterGroup.ts#L136">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/parameterGroup.ts#L136">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -2106,7 +2106,7 @@ The name of the ElastiCache parameter.
 A list of ElastiCache parameters to apply.
 
 <h3 class="pdoc-module-header" id="ReplicationGroupArgs" data-link-title="ReplicationGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L487">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L487">
         interface <strong>ReplicationGroupArgs</strong>
     </a>
 </h3>
@@ -2116,7 +2116,7 @@ A list of ElastiCache parameters to apply.
 The set of arguments for constructing a ReplicationGroup resource.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L491">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L491">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2124,7 +2124,7 @@ The set of arguments for constructing a ReplicationGroup resource.
 Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-atRestEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L495">property <b>atRestEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L495">property <b>atRestEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>atRestEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2132,7 +2132,7 @@ Specifies whether any modifications are applied immediately, or during the next 
 Whether to enable encryption at rest.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-authToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L499">property <b>authToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L499">property <b>authToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2140,7 +2140,7 @@ Whether to enable encryption at rest.
 The password used to access a password protected server. Can be specified only if `transitEncryptionEnabled = true`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L503">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L503">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2148,7 +2148,7 @@ The password used to access a password protected server. Can be specified only i
 Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-automaticFailoverEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L507">property <b>automaticFailoverEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L507">property <b>automaticFailoverEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticFailoverEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2156,7 +2156,7 @@ Specifies whether a minor engine upgrades will be applied automatically to the u
 Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L511">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L511">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2164,7 +2164,7 @@ Specifies whether a read-only replica will be automatically promoted to read/wri
 A list of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-clusterMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L515">property <b>clusterMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L515">property <b>clusterMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReplicationGroupClusterMode'>ReplicationGroupClusterMode</a>&gt;;</code></pre>
@@ -2172,7 +2172,7 @@ A list of EC2 availability zones in which the replication group's cache clusters
 Create a native redis cluster. `automaticFailoverEnabled` must be set to true. Cluster Mode documented below. Only 1 `clusterMode` block is allowed.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L519">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L519">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2180,7 +2180,7 @@ Create a native redis cluster. `automaticFailoverEnabled` must be set to true. C
 The name of the cache engine to be used for the clusters in this replication group. e.g. `redis`
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L523">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L523">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2188,7 +2188,7 @@ The name of the cache engine to be used for the clusters in this replication gro
 The version number of the cache engine to be used for the cache clusters in this replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L527">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L527">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2196,7 +2196,7 @@ The version number of the cache engine to be used for the cache clusters in this
 The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `atRestEncryptionEnabled = true`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L533">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L533">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2206,7 +2206,7 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L537">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L537">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2214,7 +2214,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 The compute and memory capacity of the nodes in the node group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-notificationTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L543">property <b>notificationTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L543">property <b>notificationTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2224,7 +2224,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-numberCacheClusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L547">property <b>numberCacheClusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L547">property <b>numberCacheClusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numberCacheClusters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2232,7 +2232,7 @@ SNS topic to send ElastiCache notifications to. Example:
 The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L551">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L551">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2240,7 +2240,7 @@ The number of cache clusters (primary and replicas) this replication group will 
 The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L555">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L555">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2248,7 +2248,7 @@ The name of the parameter group to associate with this replication group. If thi
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-replicationGroupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L559">property <b>replicationGroupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L559">property <b>replicationGroupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationGroupDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2256,7 +2256,7 @@ The port number on which each of the cache nodes will accept connections. For Me
 A user-created description for the replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-replicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L563">property <b>replicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L563">property <b>replicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2264,7 +2264,7 @@ A user-created description for the replication group.
 The replication group identifier. This parameter is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L567">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L567">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2272,7 +2272,7 @@ The replication group identifier. This parameter is stored as a lowercase string
 One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L571">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L571">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2280,7 +2280,7 @@ One or more Amazon VPC security groups associated with this replication group. U
 A list of cache security group names to associate with this replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-snapshotArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L577">property <b>snapshotArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L577">property <b>snapshotArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2290,7 +2290,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-snapshotName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L581">property <b>snapshotName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L581">property <b>snapshotName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2298,7 +2298,7 @@ Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 The name of a snapshot from which to restore data into the new node group. Changing the `snapshotName` forces a new resource.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-snapshotRetentionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L589">property <b>snapshotRetentionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L589">property <b>snapshotRetentionLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotRetentionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2310,7 +2310,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshotRetentionLimit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-snapshotWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L594">property <b>snapshotWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L594">property <b>snapshotWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2319,7 +2319,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-subnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L598">property <b>subnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L598">property <b>subnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2327,15 +2327,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 The name of the cache subnet group to be used for the replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L602">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L602">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
-A map of tags to assign to the resource
+A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupArgs-transitEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L606">property <b>transitEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L606">property <b>transitEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2343,7 +2343,7 @@ A map of tags to assign to the resource
 Whether to enable encryption in transit.
 
 <h3 class="pdoc-module-header" id="ReplicationGroupState" data-link-title="ReplicationGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L350">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L350">
         interface <strong>ReplicationGroupState</strong>
     </a>
 </h3>
@@ -2353,7 +2353,7 @@ Whether to enable encryption in transit.
 Input properties used for looking up and filtering ReplicationGroup resources.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L354">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L354">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2361,7 +2361,7 @@ Input properties used for looking up and filtering ReplicationGroup resources.
 Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-atRestEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L358">property <b>atRestEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L358">property <b>atRestEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>atRestEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2369,7 +2369,7 @@ Specifies whether any modifications are applied immediately, or during the next 
 Whether to enable encryption at rest.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-authToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L362">property <b>authToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L362">property <b>authToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2377,7 +2377,7 @@ Whether to enable encryption at rest.
 The password used to access a password protected server. Can be specified only if `transitEncryptionEnabled = true`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L366">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L366">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2385,7 +2385,7 @@ The password used to access a password protected server. Can be specified only i
 Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-automaticFailoverEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L370">property <b>automaticFailoverEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L370">property <b>automaticFailoverEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticFailoverEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2393,7 +2393,7 @@ Specifies whether a minor engine upgrades will be applied automatically to the u
 Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L374">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L374">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2401,7 +2401,7 @@ Specifies whether a read-only replica will be automatically promoted to read/wri
 A list of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-clusterMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L378">property <b>clusterMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L378">property <b>clusterMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ReplicationGroupClusterMode'>ReplicationGroupClusterMode</a>&gt;;</code></pre>
@@ -2409,7 +2409,7 @@ A list of EC2 availability zones in which the replication group's cache clusters
 Create a native redis cluster. `automaticFailoverEnabled` must be set to true. Cluster Mode documented below. Only 1 `clusterMode` block is allowed.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-configurationEndpointAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L382">property <b>configurationEndpointAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L382">property <b>configurationEndpointAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationEndpointAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2417,7 +2417,7 @@ Create a native redis cluster. `automaticFailoverEnabled` must be set to true. C
 The address of the replication group configuration endpoint when cluster mode is enabled.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L386">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L386">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2425,7 +2425,7 @@ The address of the replication group configuration endpoint when cluster mode is
 The name of the cache engine to be used for the clusters in this replication group. e.g. `redis`
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L390">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L390">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2433,7 +2433,7 @@ The name of the cache engine to be used for the clusters in this replication gro
 The version number of the cache engine to be used for the cache clusters in this replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L394">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L394">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2441,7 +2441,7 @@ The version number of the cache engine to be used for the cache clusters in this
 The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `atRestEncryptionEnabled = true`.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L400">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L400">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2451,7 +2451,7 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-memberClusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L404">property <b>memberClusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L404">property <b>memberClusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberClusters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2459,7 +2459,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 The identifiers of all the nodes that are part of this replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L408">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L408">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2467,7 +2467,7 @@ The identifiers of all the nodes that are part of this replication group.
 The compute and memory capacity of the nodes in the node group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-notificationTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L414">property <b>notificationTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L414">property <b>notificationTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2477,7 +2477,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-numberCacheClusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L418">property <b>numberCacheClusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L418">property <b>numberCacheClusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numberCacheClusters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2485,7 +2485,7 @@ SNS topic to send ElastiCache notifications to. Example:
 The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L422">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L422">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2493,7 +2493,7 @@ The number of cache clusters (primary and replicas) this replication group will 
 The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L426">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L426">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2501,7 +2501,7 @@ The name of the parameter group to associate with this replication group. If thi
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-primaryEndpointAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L430">property <b>primaryEndpointAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L430">property <b>primaryEndpointAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryEndpointAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2509,7 +2509,7 @@ The port number on which each of the cache nodes will accept connections. For Me
 (Redis only) The address of the endpoint for the primary node in the replication group, if the cluster mode is disabled.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-replicationGroupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L434">property <b>replicationGroupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L434">property <b>replicationGroupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationGroupDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2517,7 +2517,7 @@ The port number on which each of the cache nodes will accept connections. For Me
 A user-created description for the replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-replicationGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L438">property <b>replicationGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L438">property <b>replicationGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2525,7 +2525,7 @@ A user-created description for the replication group.
 The replication group identifier. This parameter is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L442">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L442">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2533,7 +2533,7 @@ The replication group identifier. This parameter is stored as a lowercase string
 One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L446">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L446">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2541,7 +2541,7 @@ One or more Amazon VPC security groups associated with this replication group. U
 A list of cache security group names to associate with this replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-snapshotArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L452">property <b>snapshotArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L452">property <b>snapshotArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2551,7 +2551,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-snapshotName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L456">property <b>snapshotName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L456">property <b>snapshotName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2559,7 +2559,7 @@ Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 The name of a snapshot from which to restore data into the new node group. Changing the `snapshotName` forces a new resource.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-snapshotRetentionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L464">property <b>snapshotRetentionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L464">property <b>snapshotRetentionLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotRetentionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2571,7 +2571,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshotRetentionLimit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-snapshotWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L469">property <b>snapshotWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L469">property <b>snapshotWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2580,7 +2580,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-subnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L473">property <b>subnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L473">property <b>subnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2588,15 +2588,15 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 The name of the cache subnet group to be used for the replication group.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L477">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L477">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
-A map of tags to assign to the resource
+A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
 
 <h4 class="pdoc-member-header" id="ReplicationGroupState-transitEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/replicationGroup.ts#L481">property <b>transitEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/replicationGroup.ts#L481">property <b>transitEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transitEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2604,7 +2604,7 @@ A map of tags to assign to the resource
 Whether to enable encryption in transit.
 
 <h3 class="pdoc-module-header" id="SecurityGroupArgs" data-link-title="SecurityGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L124">
         interface <strong>SecurityGroupArgs</strong>
     </a>
 </h3>
@@ -2614,7 +2614,7 @@ Whether to enable encryption in transit.
 The set of arguments for constructing a SecurityGroup resource.
 
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L128">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L128">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2622,7 +2622,7 @@ The set of arguments for constructing a SecurityGroup resource.
 description for the cache security group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2630,7 +2630,7 @@ description for the cache security group. Defaults to "Managed by Pulumi".
 Name for the cache security group. This value is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L137">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L137">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2639,7 +2639,7 @@ List of EC2 security group names to be
 authorized for ingress to the cache security group
 
 <h3 class="pdoc-module-header" id="SecurityGroupState" data-link-title="SecurityGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L105">
         interface <strong>SecurityGroupState</strong>
     </a>
 </h3>
@@ -2649,7 +2649,7 @@ authorized for ingress to the cache security group
 Input properties used for looking up and filtering SecurityGroup resources.
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L109">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L109">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2657,7 +2657,7 @@ Input properties used for looking up and filtering SecurityGroup resources.
 description for the cache security group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L113">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2665,7 +2665,7 @@ description for the cache security group. Defaults to "Managed by Pulumi".
 Name for the cache security group. This value is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/securityGroup.ts#L118">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/securityGroup.ts#L118">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2674,7 +2674,7 @@ List of EC2 security group names to be
 authorized for ingress to the cache security group
 
 <h3 class="pdoc-module-header" id="SubnetGroupArgs" data-link-title="SubnetGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L134">
         interface <strong>SubnetGroupArgs</strong>
     </a>
 </h3>
@@ -2684,7 +2684,7 @@ authorized for ingress to the cache security group
 The set of arguments for constructing a SubnetGroup resource.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L138">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L138">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2692,7 +2692,7 @@ The set of arguments for constructing a SubnetGroup resource.
 Description for the cache subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2700,7 +2700,7 @@ Description for the cache subnet group. Defaults to "Managed by Pulumi".
 Name for the cache subnet group. Elasticache converts this name to lowercase.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L146">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L146">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2708,7 +2708,7 @@ Name for the cache subnet group. Elasticache converts this name to lowercase.
 List of VPC Subnet IDs for the cache subnet group
 
 <h3 class="pdoc-module-header" id="SubnetGroupState" data-link-title="SubnetGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L116">
         interface <strong>SubnetGroupState</strong>
     </a>
 </h3>
@@ -2718,7 +2718,7 @@ List of VPC Subnet IDs for the cache subnet group
 Input properties used for looking up and filtering SubnetGroup resources.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L120">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L120">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2726,7 +2726,7 @@ Input properties used for looking up and filtering SubnetGroup resources.
 Description for the cache subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L124">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2734,7 +2734,7 @@ Description for the cache subnet group. Defaults to "Managed by Pulumi".
 Name for the cache subnet group. Elasticache converts this name to lowercase.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/elasticache/subnetGroup.ts#L128">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/elasticache/subnetGroup.ts#L128">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>

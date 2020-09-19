@@ -21,6 +21,8 @@ Explore the resources and functions of the rds module in the AWS package.
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
     <li><a href="optiongroup" title="OptionGroup"><span class="symbol resource"></span>OptionGroup</a></li>
     <li><a href="parametergroup" title="ParameterGroup"><span class="symbol resource"></span>ParameterGroup</a></li>
+    <li><a href="proxy" title="Proxy"><span class="symbol resource"></span>Proxy</a></li>
+    <li><a href="proxydefaulttargetgroup" title="ProxyDefaultTargetGroup"><span class="symbol resource"></span>ProxyDefaultTargetGroup</a></li>
     <li><a href="roleassociation" title="RoleAssociation"><span class="symbol resource"></span>RoleAssociation</a></li>
     <li><a href="securitygroup" title="SecurityGroup"><span class="symbol resource"></span>SecurityGroup</a></li>
     <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
@@ -33,7 +35,9 @@ Explore the resources and functions of the rds module in the AWS package.
     <li><a href="getclustersnapshot" title="GetClusterSnapshot"><span class="symbol function"></span>GetClusterSnapshot</a></li>
     <li><a href="geteventcategories" title="GetEventCategories"><span class="symbol function"></span>GetEventCategories</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getorderabledbinstance" title="GetOrderableDbInstance"><span class="symbol function"></span>GetOrderableDbInstance</a></li>
     <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
+    <li><a href="getsubnetgroup" title="GetSubnetGroup"><span class="symbol function"></span>GetSubnetGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -45,7 +49,7 @@ Explore the resources and functions of the rds module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.2.1</dd>
+	<dd>3.3.0</dd>
 </dl>
 
 

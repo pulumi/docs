@@ -34,13 +34,12 @@ class MyStack : Stack
         var policy = new Aws.Iam.Policy("policy", new Aws.Iam.PolicyArgs
         {
             Description = "A test policy",
-            Policy = "",
+            Policy = "{ ... policy JSON ... }",
         });
-        // insert policy here
         var test_attach = new Aws.Iam.UserPolicyAttachment("test-attach", new Aws.Iam.UserPolicyAttachmentArgs
         {
-            PolicyArn = policy.Arn,
             User = user.Name,
+            PolicyArn = policy.Arn,
         });
     }
 
@@ -66,14 +65,14 @@ func main() {
 		}
 		policy, err := iam.NewPolicy(ctx, "policy", &iam.PolicyArgs{
 			Description: pulumi.String("A test policy"),
-			Policy:      pulumi.String(""),
+			Policy:      pulumi.String("{ ... policy JSON ... }"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = iam.NewUserPolicyAttachment(ctx, "test_attach", &iam.UserPolicyAttachmentArgs{
-			PolicyArn: policy.Arn,
 			User:      user.Name,
+			PolicyArn: policy.Arn,
 		})
 		if err != nil {
 			return err
@@ -93,11 +92,10 @@ import pulumi_aws as aws
 user = aws.iam.User("user")
 policy = aws.iam.Policy("policy",
     description="A test policy",
-    policy="")
-# insert policy here
+    policy="{ ... policy JSON ... }")
 test_attach = aws.iam.UserPolicyAttachment("test-attach",
-    policy_arn=policy.arn,
-    user=user.name)
+    user=user.name,
+    policy_arn=policy.arn)
 ```
 
 {{% /example %}}
@@ -111,11 +109,11 @@ import * as aws from "@pulumi/aws";
 const user = new aws.iam.User("user", {});
 const policy = new aws.iam.Policy("policy", {
     description: "A test policy",
-    policy: "", // insert policy here
+    policy: "{ ... policy JSON ... }",
 });
 const test_attach = new aws.iam.UserPolicyAttachment("test-attach", {
-    policyArn: policy.arn,
     user: user.name,
+    policyArn: policy.arn,
 });
 ```
 

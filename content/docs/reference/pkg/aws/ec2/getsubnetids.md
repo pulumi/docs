@@ -14,6 +14,116 @@ meta_desc: "Explore the GetSubnetIds function of the ec2 module, including examp
 
 This resource can be useful for getting back a set of subnet ids for a vpc.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @private = Output.Create(Aws.Ec2.GetSubnetIds.InvokeAsync(new Aws.Ec2.GetSubnetIdsArgs
+        {
+            VpcId = @var.Vpc_id,
+            Tags = 
+            {
+                { "Tier", "Private" },
+            },
+        }));
+        var app = new List<Aws.Ec2.Instance>();
+        for (var rangeIndex = 0; rangeIndex < data.Aws_subnet_ids.Example.Ids; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            app.Add(new Aws.Ec2.Instance($"app-{range.Value}", new Aws.Ec2.InstanceArgs
+            {
+                Ami = @var.Ami,
+                InstanceType = "t2.micro",
+                SubnetId = range.Value,
+            }));
+        }
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.GetSubnetIds(ctx, &ec2.GetSubnetIdsArgs{
+			VpcId: _var.Vpc_id,
+			Tags: map[string]interface{}{
+				"Tier": "Private",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		var app []*ec2.Instance
+		for key0, val0 := range data.Aws_subnet_ids.Example.Ids {
+			__res, err := ec2.NewInstance(ctx, fmt.Sprintf("app-%v", key0), &ec2.InstanceArgs{
+				Ami:          pulumi.Any(_var.Ami),
+				InstanceType: pulumi.String("t2.micro"),
+				SubnetId:     pulumi.Any(val0),
+			})
+			if err != nil {
+				return err
+			}
+			app = append(app, __res)
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_subnet_ids = aws.ec2.get_subnet_ids(vpc_id=var["vpc_id"])
+example_subnet = [aws.ec2.get_subnet(id=__value) for __key, __value in example_subnet_ids.ids]
+pulumi.export("subnetCidrBlocks", [s.cidr_block for s in example_subnet])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleSubnetIds = aws.ec2.getSubnetIds({
+    vpcId: _var.vpc_id,
+});
+const exampleSubnet = exampleSubnetIds.then(exampleSubnetIds => exampleSubnetIds.ids.map((v, k) => [k, v]).map(([, ]) => aws.ec2.getSubnet({
+    id: __value,
+})));
+export const subnetCidrBlocks = exampleSubnet.map(s => s.cidrBlock);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSubnetIds {#using}
@@ -27,7 +137,7 @@ This resource can be useful for getting back a set of subnet ids for a vpc.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_subnet_ids(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetSubnetIdsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSubnetIdsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_subnet_ids(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetSubnetIdsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSubnetIdsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -192,7 +302,7 @@ a pair on the desired subnets.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsubnetidsfilter">List[Get<wbr>Subnet<wbr>Ids<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getsubnetidsfilter">Sequence[Get<wbr>Subnet<wbr>Ids<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -423,7 +533,7 @@ The following output properties are available:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of all the subnet ids found. This data source will fail if none are found.
 {{% /md %}}</dd>
@@ -454,7 +564,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsubnetidsfilter">List[Get<wbr>Subnet<wbr>Ids<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getsubnetidsfilter">Sequence[Get<wbr>Subnet<wbr>Ids<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -604,7 +714,7 @@ For example, if matching against tag `Name`, use:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 Subnet IDs will be selected if any one of the given values match.

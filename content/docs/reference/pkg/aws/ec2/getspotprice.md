@@ -12,6 +12,112 @@ meta_desc: "Explore the GetSpotPrice function of the ec2 module, including examp
 
 Information about most recent Spot Price for a given EC2 instance.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2.GetSpotPrice.InvokeAsync(new Aws.Ec2.GetSpotPriceArgs
+        {
+            AvailabilityZone = "us-west-2a",
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetSpotPriceFilterArgs
+                {
+                    Name = "product-description",
+                    Values = 
+                    {
+                        "Linux/UNIX",
+                    },
+                },
+            },
+            InstanceType = "t3.medium",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "us-west-2a"
+		opt1 := "t3.medium"
+		_, err := ec2.GetSpotPrice(ctx, &ec2.GetSpotPriceArgs{
+			AvailabilityZone: &opt0,
+			Filters: []ec2.GetSpotPriceFilter{
+				ec2.GetSpotPriceFilter{
+					Name: "product-description",
+					Values: []string{
+						"Linux/UNIX",
+					},
+				},
+			},
+			InstanceType: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2.get_spot_price(availability_zone="us-west-2a",
+    filters=[aws.ec2.GetSpotPriceFilterArgs(
+        name="product-description",
+        values=["Linux/UNIX"],
+    )],
+    instance_type="t3.medium")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = pulumi.output(aws.ec2.getSpotPrice({
+    availabilityZone: "us-west-2a",
+    filters: [{
+        name: "product-description",
+        values: ["Linux/UNIX"],
+    }],
+    instanceType: "t3.medium",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetSpotPrice {#using}
@@ -25,7 +131,7 @@ Information about most recent Spot Price for a given EC2 instance.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_spot_price(</span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetSpotPriceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSpotPriceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_spot_price(</span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetSpotPriceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSpotPriceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -187,7 +293,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspotpricefilter">List[Get<wbr>Spot<wbr>Price<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspotpricefilter">Sequence[Get<wbr>Spot<wbr>Price<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSpotPriceHistory.html) for supported filters. Detailed below.
 {{% /md %}}</dd>
@@ -482,7 +588,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspotpricefilter">List[Get<wbr>Spot<wbr>Price<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getspotpricefilter">Sequence[Get<wbr>Spot<wbr>Price<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -631,7 +737,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>

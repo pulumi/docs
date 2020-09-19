@@ -102,11 +102,8 @@ example_principal_association = aws.ram.PrincipalAssociation("examplePrincipalAs
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleResourceShare = new aws.ram.ResourceShare("example", {
-    // ... other configuration ...
-    allowExternalPrincipals: true,
-});
-const examplePrincipalAssociation = new aws.ram.PrincipalAssociation("example", {
+const exampleResourceShare = new aws.ram.ResourceShare("exampleResourceShare", {allowExternalPrincipals: true});
+const examplePrincipalAssociation = new aws.ram.PrincipalAssociation("examplePrincipalAssociation", {
     principal: "111111111111",
     resourceShareArn: exampleResourceShare.arn,
 });
@@ -180,8 +177,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.ram.PrincipalAssociation("example", {
-    principal: aws_organizations_organization_example.arn,
-    resourceShareArn: aws_ram_resource_share_example.arn,
+    principal: aws_organizations_organization.example.arn,
+    resourceShareArn: aws_ram_resource_share.example.arn,
 });
 ```
 

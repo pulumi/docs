@@ -41,11 +41,11 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var dlmLifecycle = new Aws.Iam.RolePolicy("dlmLifecycle", new Aws.Iam.RolePolicyArgs
         {
+            Role = dlmLifecycleRole.Id,
             Policy = @"{
    ""Version"": ""2012-10-17"",
    ""Statement"": [
@@ -68,14 +68,13 @@ class MyStack : Stack
       }
    ]
 }
-
 ",
-            Role = dlmLifecycleRole.Id,
         });
         var example = new Aws.Dlm.LifecyclePolicy("example", new Aws.Dlm.LifecyclePolicyArgs
         {
             Description = "example DLM lifecycle policy",
             ExecutionRoleArn = dlmLifecycleRole.Arn,
+            State = "ENABLED",
             PolicyDetails = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsArgs
             {
                 ResourceTypes = 
@@ -86,14 +85,16 @@ class MyStack : Stack
                 {
                     new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleArgs
                     {
-                        CopyTags = false,
+                        Name = "2 weeks of daily snapshots",
                         CreateRule = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs
                         {
                             Interval = 24,
                             IntervalUnit = "HOURS",
-                            Times = "23:45",
+                            Times = 
+                            {
+                                "23:45",
+                            },
                         },
-                        Name = "2 weeks of daily snapshots",
                         RetainRule = new Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs
                         {
                             Count = 14,
@@ -102,6 +103,7 @@ class MyStack : Stack
                         {
                             { "SnapshotCreator", "DLM" },
                         },
+                        CopyTags = false,
                     },
                 },
                 TargetTags = 
@@ -109,7 +111,6 @@ class MyStack : Stack
                     { "Snapshot", "true" },
                 },
             },
-            State = "ENABLED",
         });
     }
 
@@ -133,14 +134,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		dlmLifecycleRole, err := iam.NewRole(ctx, "dlmLifecycleRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"dlm.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"dlm.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = iam.NewRolePolicy(ctx, "dlmLifecycle", &iam.RolePolicyArgs{
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "   \"Version\": \"2012-10-17\",\n", "   \"Statement\": [\n", "      {\n", "         \"Effect\": \"Allow\",\n", "         \"Action\": [\n", "            \"ec2:CreateSnapshot\",\n", "            \"ec2:DeleteSnapshot\",\n", "            \"ec2:DescribeVolumes\",\n", "            \"ec2:DescribeSnapshots\"\n", "         ],\n", "         \"Resource\": \"*\"\n", "      },\n", "      {\n", "         \"Effect\": \"Allow\",\n", "         \"Action\": [\n", "            \"ec2:CreateTags\"\n", "         ],\n", "         \"Resource\": \"arn:aws:ec2:*::snapshot/*\"\n", "      }\n", "   ]\n", "}\n", "\n")),
 			Role:   dlmLifecycleRole.ID(),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "   \"Version\": \"2012-10-17\",\n", "   \"Statement\": [\n", "      {\n", "         \"Effect\": \"Allow\",\n", "         \"Action\": [\n", "            \"ec2:CreateSnapshot\",\n", "            \"ec2:DeleteSnapshot\",\n", "            \"ec2:DescribeVolumes\",\n", "            \"ec2:DescribeSnapshots\"\n", "         ],\n", "         \"Resource\": \"*\"\n", "      },\n", "      {\n", "         \"Effect\": \"Allow\",\n", "         \"Action\": [\n", "            \"ec2:CreateTags\"\n", "         ],\n", "         \"Resource\": \"arn:aws:ec2:*::snapshot/*\"\n", "      }\n", "   ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -148,32 +149,34 @@ func main() {
 		_, err = dlm.NewLifecyclePolicy(ctx, "example", &dlm.LifecyclePolicyArgs{
 			Description:      pulumi.String("example DLM lifecycle policy"),
 			ExecutionRoleArn: dlmLifecycleRole.Arn,
+			State:            pulumi.String("ENABLED"),
 			PolicyDetails: &dlm.LifecyclePolicyPolicyDetailsArgs{
 				ResourceTypes: pulumi.StringArray{
 					pulumi.String("VOLUME"),
 				},
 				Schedules: dlm.LifecyclePolicyPolicyDetailsScheduleArray{
 					&dlm.LifecyclePolicyPolicyDetailsScheduleArgs{
-						CopyTags: pulumi.Bool(false),
+						Name: pulumi.String("2 weeks of daily snapshots"),
 						CreateRule: &dlm.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs{
 							Interval:     pulumi.Int(24),
 							IntervalUnit: pulumi.String("HOURS"),
-							Times:        pulumi.String("23:45"),
+							Times: pulumi.String(pulumi.String{
+								pulumi.String("23:45"),
+							}),
 						},
-						Name: pulumi.String("2 weeks of daily snapshots"),
 						RetainRule: &dlm.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs{
 							Count: pulumi.Int(14),
 						},
 						TagsToAdd: pulumi.StringMap{
 							"SnapshotCreator": pulumi.String("DLM"),
 						},
+						CopyTags: pulumi.Bool(false),
 					},
 				},
 				TargetTags: pulumi.StringMap{
 					"Snapshot": pulumi.String("true"),
 				},
 			},
-			State: pulumi.String("ENABLED"),
 		})
 		if err != nil {
 			return err
@@ -203,9 +206,9 @@ dlm_lifecycle_role = aws.iam.Role("dlmLifecycleRole", assume_role_policy="""{
     }
   ]
 }
-
 """)
 dlm_lifecycle = aws.iam.RolePolicy("dlmLifecycle",
+    role=dlm_lifecycle_role.id,
     policy="""{
    "Version": "2012-10-17",
    "Statement": [
@@ -228,34 +231,32 @@ dlm_lifecycle = aws.iam.RolePolicy("dlmLifecycle",
       }
    ]
 }
-
-""",
-    role=dlm_lifecycle_role.id)
+""")
 example = aws.dlm.LifecyclePolicy("example",
     description="example DLM lifecycle policy",
     execution_role_arn=dlm_lifecycle_role.arn,
+    state="ENABLED",
     policy_details=aws.dlm.LifecyclePolicyPolicyDetailsArgs(
         resource_types=["VOLUME"],
         schedules=[aws.dlm.LifecyclePolicyPolicyDetailsScheduleArgs(
-            copy_tags=False,
+            name="2 weeks of daily snapshots",
             create_rule=aws.dlm.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs(
                 interval=24,
                 interval_unit="HOURS",
-                times="23:45",
+                times=["23:45"],
             ),
-            name="2 weeks of daily snapshots",
             retain_rule=aws.dlm.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs(
                 count=14,
             ),
             tags_to_add={
                 "SnapshotCreator": "DLM",
             },
+            copy_tags=False,
         )],
         target_tags={
             "Snapshot": "true",
         },
-    ),
-    state="ENABLED")
+    ))
 ```
 
 {{% /example %}}
@@ -266,8 +267,7 @@ example = aws.dlm.LifecyclePolicy("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const dlmLifecycleRole = new aws.iam.Role("dlm_lifecycle_role", {
-    assumeRolePolicy: `{
+const dlmLifecycleRole = new aws.iam.Role("dlmLifecycleRole", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -280,9 +280,9 @@ const dlmLifecycleRole = new aws.iam.Role("dlm_lifecycle_role", {
     }
   ]
 }
-`,
-});
-const dlmLifecycle = new aws.iam.RolePolicy("dlm_lifecycle", {
+`});
+const dlmLifecycle = new aws.iam.RolePolicy("dlmLifecycle", {
+    role: dlmLifecycleRole.id,
     policy: `{
    "Version": "2012-10-17",
    "Statement": [
@@ -306,33 +306,32 @@ const dlmLifecycle = new aws.iam.RolePolicy("dlm_lifecycle", {
    ]
 }
 `,
-    role: dlmLifecycleRole.id,
 });
 const example = new aws.dlm.LifecyclePolicy("example", {
     description: "example DLM lifecycle policy",
     executionRoleArn: dlmLifecycleRole.arn,
+    state: "ENABLED",
     policyDetails: {
         resourceTypes: ["VOLUME"],
         schedules: [{
-            copyTags: false,
+            name: "2 weeks of daily snapshots",
             createRule: {
                 interval: 24,
                 intervalUnit: "HOURS",
-                times: "23:45",
+                times: ["23:45"],
             },
-            name: "2 weeks of daily snapshots",
             retainRule: {
                 count: 14,
             },
             tagsToAdd: {
                 SnapshotCreator: "DLM",
             },
+            copyTags: false,
         }],
         targetTags: {
             Snapshot: "true",
         },
     },
-    state: "ENABLED",
 });
 ```
 
@@ -1464,7 +1463,7 @@ The following state arguments are supported:
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
 {{% /md %}}</dd>
@@ -1475,7 +1474,7 @@ The following state arguments are supported:
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">List[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">Sequence[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See the `schedule` configuration block.
 {{% /md %}}</dd>
@@ -1908,7 +1907,7 @@ The following state arguments are supported:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How often this lifecycle policy should be evaluated. `1`, `2`,`3`,`4`,`6`,`8`,`12` or `24` are valid values.
 {{% /md %}}</dd>
@@ -2020,7 +2019,7 @@ The following state arguments are supported:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How many snapshots to keep. Must be an integer between 1 and 1000.
 {{% /md %}}</dd>

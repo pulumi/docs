@@ -83,6 +83,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
     <li><a href="lambda/" title="lambda"><span class="symbol module"></span>lambda</a></li>
     <li><a href="lb/" title="lb"><span class="symbol module"></span>lb</a></li>
+    <li><a href="lex/" title="lex"><span class="symbol module"></span>lex</a></li>
     <li><a href="licensemanager/" title="licensemanager"><span class="symbol module"></span>licensemanager</a></li>
     <li><a href="lightsail/" title="lightsail"><span class="symbol module"></span>lightsail</a></li>
     <li><a href="macie/" title="macie"><span class="symbol module"></span>macie</a></li>
@@ -162,7 +163,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.2.1</dd>
+	<dd>3.3.0</dd>
 </dl>
 
 

@@ -1315,7 +1315,7 @@ The following state arguments are supported:
 <a href="#reserved_slots_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>slots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the number of reserved transcode slots (RTS) for queue.
 {{% /md %}}</dd>

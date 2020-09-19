@@ -11,6 +11,95 @@ meta_desc: "Explore the MetricAlarm resource of the cloudwatch module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a CloudWatch Metric Alarm resource.
+## Example in Conjunction with Scaling Policies
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const batPolicy = new aws.autoscaling.Policy("batPolicy", {
+    scalingAdjustment: 4,
+    adjustmentType: "ChangeInCapacity",
+    cooldown: 300,
+    autoscalingGroupName: aws_autoscaling_group.bar.name,
+});
+const batMetricAlarm = new aws.cloudwatch.MetricAlarm("batMetricAlarm", {
+    comparisonOperator: "GreaterThanOrEqualToThreshold",
+    evaluationPeriods: "2",
+    metricName: "CPUUtilization",
+    namespace: "AWS/EC2",
+    period: "120",
+    statistic: "Average",
+    threshold: "80",
+    dimensions: {
+        AutoScalingGroupName: aws_autoscaling_group.bar.name,
+    },
+    alarmDescription: "This metric monitors ec2 cpu utilization",
+    alarmActions: [batPolicy.arn],
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+bat_policy = aws.autoscaling.Policy("batPolicy",
+    scaling_adjustment=4,
+    adjustment_type="ChangeInCapacity",
+    cooldown=300,
+    autoscaling_group_name=aws_autoscaling_group["bar"]["name"])
+bat_metric_alarm = aws.cloudwatch.MetricAlarm("batMetricAlarm",
+    comparison_operator="GreaterThanOrEqualToThreshold",
+    evaluation_periods=2,
+    metric_name="CPUUtilization",
+    namespace="AWS/EC2",
+    period=120,
+    statistic="Average",
+    threshold=80,
+    dimensions={
+        "AutoScalingGroupName": aws_autoscaling_group["bar"]["name"],
+    },
+    alarm_description="This metric monitors ec2 cpu utilization",
+    alarm_actions=[bat_policy.arn])
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var batPolicy = new Aws.AutoScaling.Policy("batPolicy", new Aws.AutoScaling.PolicyArgs
+        {
+            ScalingAdjustment = 4,
+            AdjustmentType = "ChangeInCapacity",
+            Cooldown = 300,
+            AutoscalingGroupName = aws_autoscaling_group.Bar.Name,
+        });
+        var batMetricAlarm = new Aws.CloudWatch.MetricAlarm("batMetricAlarm", new Aws.CloudWatch.MetricAlarmArgs
+        {
+            ComparisonOperator = "GreaterThanOrEqualToThreshold",
+            EvaluationPeriods = 2,
+            MetricName = "CPUUtilization",
+            Namespace = "AWS/EC2",
+            Period = 120,
+            Statistic = "Average",
+            Threshold = 80,
+            Dimensions = 
+            {
+                { "AutoScalingGroupName", aws_autoscaling_group.Bar.Name },
+            },
+            AlarmDescription = "This metric monitors ec2 cpu utilization",
+            AlarmActions = 
+            {
+                batPolicy.Arn,
+            },
+        });
+    }
+
+}
+```
+
 ## Example with an Expression
 
 ```typescript
@@ -388,6 +477,92 @@ func main() {
 }
 ```
 
+## Example of monitoring Healthy Hosts on NLB using Target Group and NLB
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const nlbHealthyhosts = new aws.cloudwatch.MetricAlarm("nlbHealthyhosts", {
+    comparisonOperator: "LessThanThreshold",
+    evaluationPeriods: "1",
+    metricName: "HealthyHostCount",
+    namespace: "AWS/NetworkELB",
+    period: "60",
+    statistic: "Average",
+    threshold: _var.logstash_servers_count,
+    alarmDescription: "Number of healthy nodes in Target Group",
+    actionsEnabled: "true",
+    alarmActions: [aws_sns_topic.sns.arn],
+    okActions: [aws_sns_topic.sns.arn],
+    dimensions: {
+        TargetGroup: aws_lb_target_group["lb-tg"].arn_suffix,
+        LoadBalancer: aws_lb.lb.arn_suffix,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+nlb_healthyhosts = aws.cloudwatch.MetricAlarm("nlbHealthyhosts",
+    comparison_operator="LessThanThreshold",
+    evaluation_periods=1,
+    metric_name="HealthyHostCount",
+    namespace="AWS/NetworkELB",
+    period=60,
+    statistic="Average",
+    threshold=var["logstash_servers_count"],
+    alarm_description="Number of healthy nodes in Target Group",
+    actions_enabled=True,
+    alarm_actions=[aws_sns_topic["sns"]["arn"]],
+    ok_actions=[aws_sns_topic["sns"]["arn"]],
+    dimensions={
+        "TargetGroup": aws_lb_target_group["lb-tg"]["arn_suffix"],
+        "LoadBalancer": aws_lb["lb"]["arn_suffix"],
+    })
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var nlbHealthyhosts = new Aws.CloudWatch.MetricAlarm("nlbHealthyhosts", new Aws.CloudWatch.MetricAlarmArgs
+        {
+            ComparisonOperator = "LessThanThreshold",
+            EvaluationPeriods = 1,
+            MetricName = "HealthyHostCount",
+            Namespace = "AWS/NetworkELB",
+            Period = 60,
+            Statistic = "Average",
+            Threshold = @var.Logstash_servers_count,
+            AlarmDescription = "Number of healthy nodes in Target Group",
+            ActionsEnabled = true,
+            AlarmActions = 
+            {
+                aws_sns_topic.Sns.Arn,
+            },
+            OkActions = 
+            {
+                aws_sns_topic.Sns.Arn,
+            },
+            Dimensions = 
+            {
+                { "TargetGroup", aws_lb_target_group.Lb_tg.Arn_suffix },
+                { "LoadBalancer", aws_lb.Lb.Arn_suffix },
+            },
+        });
+    }
+
+}
+```
+
+> **NOTE:**  You cannot create a metric alarm consisting of both `statistic` and `extended_statistic` parameters.
+You must choose one or the other
+
 {{% examples %}}
 ## Example Usage
 
@@ -505,7 +680,7 @@ const foobar = new aws.cloudwatch.MetricAlarm("foobar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.MetricAlarm">MetricAlarm</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">alarm_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">alarm_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comparison_operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datapoints_to_alarm</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">evaluate_low_sample_count_percentiles</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_periods</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">extended_statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insufficient_data_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_queries</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlarmMetricQueryArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ok_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">threshold_metric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">treat_missing_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.MetricAlarm">MetricAlarm</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">alarm_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">alarm_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comparison_operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datapoints_to_alarm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">evaluate_low_sample_count_percentiles</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_periods</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">extended_statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insufficient_data_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_queries</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricAlarmMetricQueryArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ok_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">threshold_metric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">treat_missing_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1465,7 +1640,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
 {{% /md %}}</dd>
@@ -1487,7 +1662,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#alarm_actions_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -1509,7 +1684,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#datapoints_to_alarm_python" style="color: inherit; text-decoration: inherit;">datapoints_<wbr>to_<wbr>alarm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of datapoints that must be breaching to trigger the alarm.
 {{% /md %}}</dd>
@@ -1558,7 +1733,7 @@ The following values are supported: `ignore`, and `evaluate`.
 <a href="#insufficient_data_actions_python" style="color: inherit; text-decoration: inherit;">insufficient_<wbr>data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -1581,7 +1756,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#metric_queries_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquery">List[Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquery">Sequence[Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 {{% /md %}}</dd>
@@ -1615,7 +1790,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#ok_actions_python" style="color: inherit; text-decoration: inherit;">ok_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -1626,7 +1801,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The period in seconds over which the specified `stat` is applied.
 {{% /md %}}</dd>
@@ -1841,7 +2016,7 @@ Get an existing MetricAlarm resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">alarm_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">alarm_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comparison_operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datapoints_to_alarm</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">evaluate_low_sample_count_percentiles</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_periods</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">extended_statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insufficient_data_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_queries</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlarmMetricQueryArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ok_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">threshold_metric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">treat_missing_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MetricAlarm</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">alarm_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">alarm_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comparison_operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datapoints_to_alarm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">evaluate_low_sample_count_percentiles</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_periods</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">extended_statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insufficient_data_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_queries</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricAlarmMetricQueryArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ok_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">threshold_metric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">treat_missing_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MetricAlarm</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2776,7 +2951,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_alarm_actions_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -2820,7 +2995,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_datapoints_to_alarm_python" style="color: inherit; text-decoration: inherit;">datapoints_<wbr>to_<wbr>alarm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of datapoints that must be breaching to trigger the alarm.
 {{% /md %}}</dd>
@@ -2858,7 +3033,7 @@ The following values are supported: `ignore`, and `evaluate`.
 <a href="#state_evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
 {{% /md %}}</dd>
@@ -2880,7 +3055,7 @@ The following values are supported: `ignore`, and `evaluate`.
 <a href="#state_insufficient_data_actions_python" style="color: inherit; text-decoration: inherit;">insufficient_<wbr>data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -2903,7 +3078,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#state_metric_queries_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquery">List[Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquery">Sequence[Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 {{% /md %}}</dd>
@@ -2937,7 +3112,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#state_ok_actions_python" style="color: inherit; text-decoration: inherit;">ok_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -2948,7 +3123,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The period in seconds over which the specified `stat` is applied.
 {{% /md %}}</dd>
@@ -3565,7 +3740,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The period in seconds over which the specified `stat` is applied.
 {{% /md %}}</dd>

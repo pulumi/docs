@@ -794,7 +794,7 @@ The following output properties are available:
 <a href="#dns_ip_addresses_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses of the DNS servers for the directory.
 {{% /md %}}</dd>
@@ -827,7 +827,7 @@ The following output properties are available:
 <a href="#ip_group_ids_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
 {{% /md %}}</dd>
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#self_service_permissions_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryselfservicepermission">List[Get<wbr>Directory<wbr>Self<wbr>Service<wbr>Permission]</a></span>
+        <span class="property-type"><a href="#getdirectoryselfservicepermission">Sequence[Get<wbr>Directory<wbr>Self<wbr>Service<wbr>Permission]</a></span>
     </dt>
     <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
 {{% /md %}}</dd>
@@ -860,7 +860,7 @@ The following output properties are available:
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>

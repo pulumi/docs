@@ -968,7 +968,7 @@ Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gate
 <a href="#burst_limit_python" style="color: inherit; text-decoration: inherit;">burst_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
 {{% /md %}}</dd>

@@ -48,7 +48,6 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var email = new Aws.Pinpoint.EmailChannel("email", new Aws.Pinpoint.EmailChannelArgs
@@ -60,6 +59,7 @@ class MyStack : Stack
         });
         var rolePolicy = new Aws.Iam.RolePolicy("rolePolicy", new Aws.Iam.RolePolicyArgs
         {
+            Role = role.Id,
             Policy = @"{
   ""Version"": ""2012-10-17"",
   ""Statement"": {
@@ -73,9 +73,7 @@ class MyStack : Stack
     ]
   }
 }
-
 ",
-            Role = role.Id,
         });
     }
 
@@ -110,7 +108,7 @@ func main() {
 			return err
 		}
 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"pinpoint.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"pinpoint.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -125,8 +123,8 @@ func main() {
 			return err
 		}
 		_, err = iam.NewRolePolicy(ctx, "rolePolicy", &iam.RolePolicyArgs{
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": {\n", "    \"Action\": [\n", "      \"mobileanalytics:PutEvents\",\n", "      \"mobileanalytics:PutItems\"\n", "    ],\n", "    \"Effect\": \"Allow\",\n", "    \"Resource\": [\n", "      \"*\"\n", "    ]\n", "  }\n", "}\n", "\n")),
 			Role:   role.ID(),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": {\n", "    \"Action\": [\n", "      \"mobileanalytics:PutEvents\",\n", "      \"mobileanalytics:PutItems\"\n", "    ],\n", "    \"Effect\": \"Allow\",\n", "    \"Resource\": [\n", "      \"*\"\n", "    ]\n", "  }\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -158,7 +156,6 @@ role = aws.iam.Role("role", assume_role_policy="""{
     }
   ]
 }
-
 """)
 email = aws.pinpoint.EmailChannel("email",
     application_id=app.application_id,
@@ -166,6 +163,7 @@ email = aws.pinpoint.EmailChannel("email",
     identity=identity.arn,
     role_arn=role.arn)
 role_policy = aws.iam.RolePolicy("rolePolicy",
+    role=role.id,
     policy="""{
   "Version": "2012-10-17",
   "Statement": {
@@ -179,9 +177,7 @@ role_policy = aws.iam.RolePolicy("rolePolicy",
     ]
   }
 }
-
-""",
-    role=role.id)
+""")
 ```
 
 {{% /example %}}
@@ -193,11 +189,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const app = new aws.pinpoint.App("app", {});
-const identity = new aws.ses.DomainIdentity("identity", {
-    domain: "example.com",
-});
-const role = new aws.iam.Role("role", {
-    assumeRolePolicy: `{
+const identity = new aws.ses.DomainIdentity("identity", {domain: "example.com"});
+const role = new aws.iam.Role("role", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -210,15 +203,15 @@ const role = new aws.iam.Role("role", {
     }
   ]
 }
-`,
-});
+`});
 const email = new aws.pinpoint.EmailChannel("email", {
     applicationId: app.applicationId,
     fromAddress: "user@example.com",
     identity: identity.arn,
     roleArn: role.arn,
 });
-const rolePolicy = new aws.iam.RolePolicy("role_policy", {
+const rolePolicy = new aws.iam.RolePolicy("rolePolicy", {
+    role: role.id,
     policy: `{
   "Version": "2012-10-17",
   "Statement": {
@@ -233,7 +226,6 @@ const rolePolicy = new aws.iam.RolePolicy("role_policy", {
   }
 }
 `,
-    role: role.id,
 });
 ```
 
@@ -782,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messages_per_second_python" style="color: inherit; text-decoration: inherit;">messages_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Messages per second that can be sent.
 {{% /md %}}</dd>
@@ -807,7 +799,7 @@ Get an existing EmailChannel resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">from_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">messages_per_second</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EmailChannel</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">from_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">messages_per_second</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EmailChannel</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1190,7 +1182,7 @@ The following state arguments are supported:
 <a href="#state_messages_per_second_python" style="color: inherit; text-decoration: inherit;">messages_<wbr>per_<wbr>second</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Messages per second that can be sent.
 {{% /md %}}</dd>

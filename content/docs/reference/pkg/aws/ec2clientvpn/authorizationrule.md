@@ -2,7 +2,7 @@
 ---
 title: "AuthorizationRule"
 title_tag: "Resource AuthorizationRule | Module ec2clientvpn | Package AWS"
-meta_desc: "Explore the AuthorizationRule resource of the ec2clientvpn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides authorization rules for AWS Client VPN endpoints. For more information on usage, please see the "
+meta_desc: "Explore the AuthorizationRule resource of the ec2clientvpn module, including examples, input properties, output properties, lookup functions, and supporting types. Provides authorization rules for AWS Client VPN endpoints. For more information on usage, please see the"
 ---
 
 

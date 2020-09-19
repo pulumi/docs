@@ -2,7 +2,7 @@
 ---
 title: "Fleet"
 title_tag: "Resource Fleet | Module worklink | Package AWS"
-meta_desc: "Explore the Fleet resource of the worklink module, including examples, input properties, output properties, lookup functions, and supporting types. "
+meta_desc: "Explore the Fleet resource of the worklink module, including examples, input properties, output properties, lookup functions, and supporting types. {{% examples %}}"
 ---
 
 
@@ -11,6 +11,74 @@ meta_desc: "Explore the Fleet resource of the worklink module, including example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.WorkLink.Fleet("example", new Aws.WorkLink.FleetArgs
+        {
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/worklink"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := worklink.NewFleet(ctx, "example", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.worklink.Fleet("example")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.worklink.Fleet("example", {});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Fleet Resource {#create}
@@ -202,7 +270,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
+    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -286,7 +354,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
+    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -370,7 +438,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
+    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -454,7 +522,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
+    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -931,7 +999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
+    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,7 +1127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
+    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1187,7 +1255,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
+    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1315,7 +1383,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events.
+    <dd>{{% md %}}The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1710,7 +1778,7 @@ The following state arguments are supported:
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs associated with access to the provided subnets.
 {{% /md %}}</dd>
@@ -1721,7 +1789,7 @@ The following state arguments are supported:
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs used for X-ENI connections from Amazon WorkLink rendering containers.
 {{% /md %}}</dd>

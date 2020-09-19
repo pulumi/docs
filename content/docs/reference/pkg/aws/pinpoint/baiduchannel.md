@@ -33,8 +33,8 @@ class MyStack : Stack
         });
         var channel = new Aws.Pinpoint.BaiduChannel("channel", new Aws.Pinpoint.BaiduChannelArgs
         {
-            ApiKey = "",
             ApplicationId = app.ApplicationId,
+            ApiKey = "",
             SecretKey = "",
         });
     }
@@ -60,8 +60,8 @@ func main() {
 			return err
 		}
 		_, err = pinpoint.NewBaiduChannel(ctx, "channel", &pinpoint.BaiduChannelArgs{
-			ApiKey:        pulumi.String(""),
 			ApplicationId: app.ApplicationId,
+			ApiKey:        pulumi.String(""),
 			SecretKey:     pulumi.String(""),
 		})
 		if err != nil {
@@ -81,8 +81,8 @@ import pulumi_aws as aws
 
 app = aws.pinpoint.App("app")
 channel = aws.pinpoint.BaiduChannel("channel",
-    api_key="",
     application_id=app.application_id,
+    api_key="",
     secret_key="")
 ```
 
@@ -96,8 +96,8 @@ import * as aws from "@pulumi/aws";
 
 const app = new aws.pinpoint.App("app", {});
 const channel = new aws.pinpoint.BaiduChannel("channel", {
-    apiKey: "",
     applicationId: app.applicationId,
+    apiKey: "",
     secretKey: "",
 });
 ```

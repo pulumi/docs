@@ -964,7 +964,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.BucketNotification">BucketNotification</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_functions</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationLambdaFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationQueueArgs]]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationTopicArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.BucketNotification">BucketNotification</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_functions</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationLambdaFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationQueueArgs]]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationTopicArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1306,7 +1306,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
 <a href="#lambda_functions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">List[Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">Sequence[Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
@@ -1317,7 +1317,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
 <a href="#queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">List[Bucket<wbr>Notification<wbr>Queue<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">Sequence[Bucket<wbr>Notification<wbr>Queue<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
@@ -1328,7 +1328,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">List[Bucket<wbr>Notification<wbr>Topic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">Sequence[Bucket<wbr>Notification<wbr>Topic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
@@ -1432,7 +1432,7 @@ Get an existing BucketNotification resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_functions</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationLambdaFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationQueueArgs]]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[List[BucketNotificationTopicArgs]]</span> = None<span class="p">) -&gt;</span> BucketNotification</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_functions</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationLambdaFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationQueueArgs]]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationTopicArgs]]</span> = None<span class="p">) -&gt;</span> BucketNotification</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1716,7 +1716,7 @@ The following state arguments are supported:
 <a href="#state_lambda_functions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">List[Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">Sequence[Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
@@ -1727,7 +1727,7 @@ The following state arguments are supported:
 <a href="#state_queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">List[Bucket<wbr>Notification<wbr>Queue<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">Sequence[Bucket<wbr>Notification<wbr>Queue<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
@@ -1738,7 +1738,7 @@ The following state arguments are supported:
 <a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">List[Bucket<wbr>Notification<wbr>Topic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">Sequence[Bucket<wbr>Notification<wbr>Topic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
@@ -1968,7 +1968,7 @@ The following state arguments are supported:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
@@ -2234,7 +2234,7 @@ The following state arguments are supported:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
@@ -2500,7 +2500,7 @@ The following state arguments are supported:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>

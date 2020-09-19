@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var testGraphQLApi = new Aws.AppSync.GraphQLApi("testGraphQLApi", new Aws.AppSync.GraphQLApiArgs
+        var exampleGraphQLApi = new Aws.AppSync.GraphQLApi("exampleGraphQLApi", new Aws.AppSync.GraphQLApiArgs
         {
             AuthenticationType = "API_KEY",
             Schema = @"type Mutation {
@@ -48,20 +48,21 @@ schema {
 }
 ",
         });
-        var testDataSource = new Aws.AppSync.DataSource("testDataSource", new Aws.AppSync.DataSourceArgs
+        var exampleDataSource = new Aws.AppSync.DataSource("exampleDataSource", new Aws.AppSync.DataSourceArgs
         {
-            ApiId = testGraphQLApi.Id,
+            ApiId = exampleGraphQLApi.Id,
+            Name = "example",
             Type = "HTTP",
             HttpConfig = new Aws.AppSync.Inputs.DataSourceHttpConfigArgs
             {
                 Endpoint = "http://example.com",
             },
         });
-        var testFunction = new Aws.AppSync.Function("testFunction", new Aws.AppSync.FunctionArgs
+        var exampleFunction = new Aws.AppSync.Function("exampleFunction", new Aws.AppSync.FunctionArgs
         {
-            ApiId = testGraphQLApi.Id,
-            DataSource = testDataSource.Name,
-            Name = "tf_example",
+            ApiId = exampleGraphQLApi.Id,
+            DataSource = exampleDataSource.Name,
+            Name = "example",
             RequestMappingTemplate = @"{
     ""version"": ""2018-05-29"",
     ""method"": ""GET"",
@@ -98,15 +99,16 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		testGraphQLApi, err := appsync.NewGraphQLApi(ctx, "testGraphQLApi", &appsync.GraphQLApiArgs{
+		exampleGraphQLApi, err := appsync.NewGraphQLApi(ctx, "exampleGraphQLApi", &appsync.GraphQLApiArgs{
 			AuthenticationType: pulumi.String("API_KEY"),
 			Schema:             pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "type Mutation {\n", "  putPost(id: ID!, title: String!): Post\n", "}\n", "\n", "type Post {\n", "  id: ID!\n", "  title: String!\n", "}\n", "\n", "type Query {\n", "  singlePost(id: ID!): Post\n", "}\n", "\n", "schema {\n", "  query: Query\n", "  mutation: Mutation\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
-		testDataSource, err := appsync.NewDataSource(ctx, "testDataSource", &appsync.DataSourceArgs{
-			ApiId: testGraphQLApi.ID(),
+		exampleDataSource, err := appsync.NewDataSource(ctx, "exampleDataSource", &appsync.DataSourceArgs{
+			ApiId: exampleGraphQLApi.ID(),
+			Name:  pulumi.String("example"),
 			Type:  pulumi.String("HTTP"),
 			HttpConfig: &appsync.DataSourceHttpConfigArgs{
 				Endpoint: pulumi.String("http://example.com"),
@@ -115,10 +117,10 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = appsync.NewFunction(ctx, "testFunction", &appsync.FunctionArgs{
-			ApiId:                   testGraphQLApi.ID(),
-			DataSource:              testDataSource.Name,
-			Name:                    pulumi.String("tf_example"),
+		_, err = appsync.NewFunction(ctx, "exampleFunction", &appsync.FunctionArgs{
+			ApiId:                   exampleGraphQLApi.ID(),
+			DataSource:              exampleDataSource.Name,
+			Name:                    pulumi.String("example"),
 			RequestMappingTemplate:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"version\": \"2018-05-29\",\n", "    \"method\": \"GET\",\n", "    \"resourcePath\": \"/\",\n", "    \"params\":{\n", "        \"headers\": ", "$", "utils.http.copyheaders(", "$", "ctx.request.headers)\n", "    }\n", "}\n")),
 			ResponseMappingTemplate: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "#if(", "$", "ctx.result.statusCode == 200)\n", "    ", "$", "ctx.result.body\n", "#else\n", "    ", "$", "utils.appendError(", "$", "ctx.result.body, ", "$", "ctx.result.statusCode)\n", "#end\n")),
 		})
@@ -137,7 +139,7 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-test_graph_ql_api = aws.appsync.GraphQLApi("testGraphQLApi",
+example_graph_ql_api = aws.appsync.GraphQLApi("exampleGraphQLApi",
     authentication_type="API_KEY",
     schema="""type Mutation {
   putPost(id: ID!, title: String!): Post
@@ -157,16 +159,17 @@ schema {
   mutation: Mutation
 }
 """)
-test_data_source = aws.appsync.DataSource("testDataSource",
-    api_id=test_graph_ql_api.id,
+example_data_source = aws.appsync.DataSource("exampleDataSource",
+    api_id=example_graph_ql_api.id,
+    name="example",
     type="HTTP",
     http_config=aws.appsync.DataSourceHttpConfigArgs(
         endpoint="http://example.com",
     ))
-test_function = aws.appsync.Function("testFunction",
-    api_id=test_graph_ql_api.id,
-    data_source=test_data_source.name,
-    name="tf_example",
+example_function = aws.appsync.Function("exampleFunction",
+    api_id=example_graph_ql_api.id,
+    data_source=example_data_source.name,
+    name="example",
     request_mapping_template="""{
     "version": "2018-05-29",
     "method": "GET",
@@ -192,7 +195,7 @@ test_function = aws.appsync.Function("testFunction",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testGraphQLApi = new aws.appsync.GraphQLApi("testGraphQLApi", {
+const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {
     authenticationType: "API_KEY",
     schema: `type Mutation {
   putPost(id: ID!, title: String!): Post
@@ -213,17 +216,18 @@ schema {
 }
 `,
 });
-const testDataSource = new aws.appsync.DataSource("testDataSource", {
-    apiId: testGraphQLApi.id,
+const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
+    apiId: exampleGraphQLApi.id,
+    name: "example",
     type: "HTTP",
     httpConfig: {
         endpoint: "http://example.com",
     },
 });
-const testFunction = new aws.appsync.Function("testFunction", {
-    apiId: testGraphQLApi.id,
-    dataSource: testDataSource.name,
-    name: "tf_example",
+const exampleFunction = new aws.appsync.Function("exampleFunction", {
+    apiId: exampleGraphQLApi.id,
+    dataSource: exampleDataSource.name,
+    name: "example",
     requestMappingTemplate: `{
     "version": "2018-05-29",
     "method": "GET",
