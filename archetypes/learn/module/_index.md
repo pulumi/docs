@@ -30,12 +30,6 @@ youll_learn:
     - Things
     - Whatnot
 
-# At least one author is required. The values in this list correspond with the `id`
-# properties of the team member files at /data/team/team. Create a file for yourself
-# if you don't already have one.
-authors:
-    - christian-nunciato
-
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - change-me
