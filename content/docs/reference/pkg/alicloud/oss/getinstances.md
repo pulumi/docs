@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        var instancesDs = Output.Create(AliCloud.Ots.GetInstances.InvokeAsync(new AliCloud.Ots.GetInstancesArgs
         {
             NameRegex = "sample-instance",
             OutputFile = "instances.txt",
@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -54,7 +54,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "sample-instance"
 		opt1 := "instances.txt"
-		instancesDs, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+		instancesDs, err := ots.GetInstances(ctx, &ots.GetInstancesArgs{
 			NameRegex:  &opt0,
 			OutputFile: &opt1,
 		}, nil)
@@ -74,7 +74,7 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-instances_ds = alicloud.oss.get_instances(name_regex="sample-instance",
+instances_ds = alicloud.ots.get_instances(name_regex="sample-instance",
     output_file="instances.txt")
 pulumi.export("firstInstanceId", instances_ds.instances[0].id)
 ```
@@ -87,7 +87,7 @@ pulumi.export("firstInstanceId", instances_ds.instances[0].id)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.oss.getInstances({
+const instancesDs = pulumi.output(alicloud.ots.getInstances({
     nameRegex: "sample-instance",
     outputFile: "instances.txt",
 }, { async: true }));
@@ -98,6 +98,7 @@ export const firstInstanceId = instancesDs.instances[0].id;
 {{% /example %}}
 
 {{% /examples %}}
+<p class="resource-deprecated">Deprecated: {{% md %}}alicloud.oss.getInstances has been deprecated in favor of alicloud.ots.getInstances{{% /md %}}</p>
 
 
 ## Using GetInstances {#using}
@@ -181,7 +182,7 @@ The following arguments are supported:
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.oss.getInstances({
+const instancesDs = pulumi.output(alicloud.ots.getInstances({
     tags: {
         tagKey1: "tagValue1",
         tagKey2: "tagValue2",
@@ -192,7 +193,7 @@ const instancesDs = pulumi.output(alicloud.oss.getInstances({
 import pulumi
 import pulumi_alicloud as alicloud
 
-instances_ds = alicloud.oss.get_instances(tags={
+instances_ds = alicloud.ots.get_instances(tags={
     "tagKey1": "tagValue1",
     "tagKey2": "tagValue2",
 })
@@ -205,7 +206,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        var instancesDs = Output.Create(AliCloud.Ots.GetInstances.InvokeAsync(new AliCloud.Ots.GetInstancesArgs
         {
             Tags = 
             {
@@ -221,13 +222,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+		_, err := ots.GetInstances(ctx, &ots.GetInstancesArgs{
 			Tags: map[string]interface{}{
 				"tagKey1": "tagValue1",
 				"tagKey2": "tagValue2",
@@ -294,7 +295,7 @@ func main() {
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.oss.getInstances({
+const instancesDs = pulumi.output(alicloud.ots.getInstances({
     tags: {
         tagKey1: "tagValue1",
         tagKey2: "tagValue2",
@@ -305,7 +306,7 @@ const instancesDs = pulumi.output(alicloud.oss.getInstances({
 import pulumi
 import pulumi_alicloud as alicloud
 
-instances_ds = alicloud.oss.get_instances(tags={
+instances_ds = alicloud.ots.get_instances(tags={
     "tagKey1": "tagValue1",
     "tagKey2": "tagValue2",
 })
@@ -318,7 +319,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        var instancesDs = Output.Create(AliCloud.Ots.GetInstances.InvokeAsync(new AliCloud.Ots.GetInstancesArgs
         {
             Tags = 
             {
@@ -334,13 +335,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+		_, err := ots.GetInstances(ctx, &ots.GetInstancesArgs{
 			Tags: map[string]interface{}{
 				"tagKey1": "tagValue1",
 				"tagKey2": "tagValue2",
@@ -407,7 +408,7 @@ func main() {
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.oss.getInstances({
+const instancesDs = pulumi.output(alicloud.ots.getInstances({
     tags: {
         tagKey1: "tagValue1",
         tagKey2: "tagValue2",
@@ -418,7 +419,7 @@ const instancesDs = pulumi.output(alicloud.oss.getInstances({
 import pulumi
 import pulumi_alicloud as alicloud
 
-instances_ds = alicloud.oss.get_instances(tags={
+instances_ds = alicloud.ots.get_instances(tags={
     "tagKey1": "tagValue1",
     "tagKey2": "tagValue2",
 })
@@ -431,7 +432,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        var instancesDs = Output.Create(AliCloud.Ots.GetInstances.InvokeAsync(new AliCloud.Ots.GetInstancesArgs
         {
             Tags = 
             {
@@ -447,13 +448,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+		_, err := ots.GetInstances(ctx, &ots.GetInstancesArgs{
 			Tags: map[string]interface{}{
 				"tagKey1": "tagValue1",
 				"tagKey2": "tagValue2",
@@ -520,7 +521,7 @@ func main() {
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.oss.getInstances({
+const instancesDs = pulumi.output(alicloud.ots.getInstances({
     tags: {
         tagKey1: "tagValue1",
         tagKey2: "tagValue2",
@@ -531,7 +532,7 @@ const instancesDs = pulumi.output(alicloud.oss.getInstances({
 import pulumi
 import pulumi_alicloud as alicloud
 
-instances_ds = alicloud.oss.get_instances(tags={
+instances_ds = alicloud.ots.get_instances(tags={
     "tagKey1": "tagValue1",
     "tagKey2": "tagValue2",
 })
@@ -544,7 +545,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        var instancesDs = Output.Create(AliCloud.Ots.GetInstances.InvokeAsync(new AliCloud.Ots.GetInstancesArgs
         {
             Tags = 
             {
@@ -560,13 +561,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+		_, err := ots.GetInstances(ctx, &ots.GetInstancesArgs{
 			Tags: map[string]interface{}{
 				"tagKey1": "tagValue1",
 				"tagKey2": "tagValue2",
@@ -1065,7 +1066,7 @@ The following output properties are available:
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.oss.getInstances({
+const instancesDs = pulumi.output(alicloud.ots.getInstances({
     tags: {
         tagKey1: "tagValue1",
         tagKey2: "tagValue2",
@@ -1076,7 +1077,7 @@ const instancesDs = pulumi.output(alicloud.oss.getInstances({
 import pulumi
 import pulumi_alicloud as alicloud
 
-instances_ds = alicloud.oss.get_instances(tags={
+instances_ds = alicloud.ots.get_instances(tags={
     "tagKey1": "tagValue1",
     "tagKey2": "tagValue2",
 })
@@ -1089,7 +1090,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        var instancesDs = Output.Create(AliCloud.Ots.GetInstances.InvokeAsync(new AliCloud.Ots.GetInstancesArgs
         {
             Tags = 
             {
@@ -1105,13 +1106,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+		_, err := ots.GetInstances(ctx, &ots.GetInstancesArgs{
 			Tags: map[string]interface{}{
 				"tagKey1": "tagValue1",
 				"tagKey2": "tagValue2",
@@ -1267,7 +1268,7 @@ func main() {
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.oss.getInstances({
+const instancesDs = pulumi.output(alicloud.ots.getInstances({
     tags: {
         tagKey1: "tagValue1",
         tagKey2: "tagValue2",
@@ -1278,7 +1279,7 @@ const instancesDs = pulumi.output(alicloud.oss.getInstances({
 import pulumi
 import pulumi_alicloud as alicloud
 
-instances_ds = alicloud.oss.get_instances(tags={
+instances_ds = alicloud.ots.get_instances(tags={
     "tagKey1": "tagValue1",
     "tagKey2": "tagValue2",
 })
@@ -1291,7 +1292,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        var instancesDs = Output.Create(AliCloud.Ots.GetInstances.InvokeAsync(new AliCloud.Ots.GetInstancesArgs
         {
             Tags = 
             {
@@ -1307,13 +1308,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+		_, err := ots.GetInstances(ctx, &ots.GetInstancesArgs{
 			Tags: map[string]interface{}{
 				"tagKey1": "tagValue1",
 				"tagKey2": "tagValue2",
@@ -1469,7 +1470,7 @@ func main() {
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.oss.getInstances({
+const instancesDs = pulumi.output(alicloud.ots.getInstances({
     tags: {
         tagKey1: "tagValue1",
         tagKey2: "tagValue2",
@@ -1480,7 +1481,7 @@ const instancesDs = pulumi.output(alicloud.oss.getInstances({
 import pulumi
 import pulumi_alicloud as alicloud
 
-instances_ds = alicloud.oss.get_instances(tags={
+instances_ds = alicloud.ots.get_instances(tags={
     "tagKey1": "tagValue1",
     "tagKey2": "tagValue2",
 })
@@ -1493,7 +1494,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        var instancesDs = Output.Create(AliCloud.Ots.GetInstances.InvokeAsync(new AliCloud.Ots.GetInstancesArgs
         {
             Tags = 
             {
@@ -1509,13 +1510,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+		_, err := ots.GetInstances(ctx, &ots.GetInstancesArgs{
 			Tags: map[string]interface{}{
 				"tagKey1": "tagValue1",
 				"tagKey2": "tagValue2",
@@ -1671,7 +1672,7 @@ func main() {
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = pulumi.output(alicloud.oss.getInstances({
+const instancesDs = pulumi.output(alicloud.ots.getInstances({
     tags: {
         tagKey1: "tagValue1",
         tagKey2: "tagValue2",
@@ -1682,7 +1683,7 @@ const instancesDs = pulumi.output(alicloud.oss.getInstances({
 import pulumi
 import pulumi_alicloud as alicloud
 
-instances_ds = alicloud.oss.get_instances(tags={
+instances_ds = alicloud.ots.get_instances(tags={
     "tagKey1": "tagValue1",
     "tagKey2": "tagValue2",
 })
@@ -1695,7 +1696,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var instancesDs = Output.Create(AliCloud.Oss.GetInstances.InvokeAsync(new AliCloud.Oss.GetInstancesArgs
+        var instancesDs = Output.Create(AliCloud.Ots.GetInstances.InvokeAsync(new AliCloud.Ots.GetInstancesArgs
         {
             Tags = 
             {
@@ -1711,13 +1712,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := oss.GetInstances(ctx, &oss.GetInstancesArgs{
+		_, err := ots.GetInstances(ctx, &ots.GetInstancesArgs{
 			Tags: map[string]interface{}{
 				"tagKey1": "tagValue1",
 				"tagKey2": "tagValue2",

@@ -100,6 +100,7 @@ class MyStack : Stack
         {
             InstanceId = cen.Id,
             ChildInstanceId = vpc.Id,
+            ChildInstanceType = "VPC",
             ChildInstanceRegionId = "cn-hangzhou",
         }, new CustomResourceOptions
         {
@@ -233,6 +234,7 @@ func main() {
 		attach, err := cen.NewInstanceAttachment(ctx, "attach", &cen.InstanceAttachmentArgs{
 			InstanceId:            cen.ID(),
 			ChildInstanceId:       vpc.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
 			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
 		}, pulumi.DependsOn([]pulumi.Resource{
 			defaultSwitch,
@@ -311,6 +313,7 @@ cen = alicloud.cen.Instance("cen")
 attach = alicloud.cen.InstanceAttachment("attach",
     instance_id=cen.id,
     child_instance_id=vpc.id,
+    child_instance_type="VPC",
     child_instance_region_id="cn-hangzhou",
     opts=ResourceOptions(depends_on=[default_switch]))
 route = alicloud.vpc.RouteEntry("route",
@@ -385,6 +388,7 @@ const cen = new alicloud.cen.Instance("cen", {});
 const attach = new alicloud.cen.InstanceAttachment("attach", {
     instanceId: cen.id,
     childInstanceId: vpc.id,
+    childInstanceType: "VPC",
     childInstanceRegionId: "cn-hangzhou",
 }, {
     dependsOn: [defaultSwitch],

@@ -39,6 +39,7 @@ class MyStack : Stack
         {
             InstanceId = defaultInstance.Id,
             ChildInstanceId = "vbr-xxxxx",
+            ChildInstanceType = "VBR",
             ChildInstanceRegionId = "cn-hangzhou",
         });
         var defaultVbrHealthCheck = new AliCloud.Cen.VbrHealthCheck("defaultVbrHealthCheck", new AliCloud.Cen.VbrHealthCheckArgs
@@ -82,6 +83,7 @@ func main() {
 		defaultInstanceAttachment, err := cen.NewInstanceAttachment(ctx, "defaultInstanceAttachment", &cen.InstanceAttachmentArgs{
 			InstanceId:            defaultInstance.ID(),
 			ChildInstanceId:       pulumi.String("vbr-xxxxx"),
+			ChildInstanceType:     pulumi.String("VBR"),
 			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
 		})
 		if err != nil {
@@ -118,6 +120,7 @@ default_instance = alicloud.cen.Instance("defaultInstance")
 default_instance_attachment = alicloud.cen.InstanceAttachment("defaultInstanceAttachment",
     instance_id=default_instance.id,
     child_instance_id="vbr-xxxxx",
+    child_instance_type="VBR",
     child_instance_region_id="cn-hangzhou")
 default_vbr_health_check = alicloud.cen.VbrHealthCheck("defaultVbrHealthCheck",
     cen_id=default_instance.id,
@@ -143,6 +146,7 @@ const defaultInstance = new alicloud.cen.Instance("defaultInstance", {});
 const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("defaultInstanceAttachment", {
     instanceId: defaultInstance.id,
     childInstanceId: "vbr-xxxxx",
+    childInstanceType: "VBR",
     childInstanceRegionId: "cn-hangzhou",
 });
 const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("defaultVbrHealthCheck", {

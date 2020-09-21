@@ -76,12 +76,14 @@ class MyStack : Stack
         {
             InstanceId = cen.Id,
             ChildInstanceId = vpc1.Id,
+            ChildInstanceType = "VPC",
             ChildInstanceRegionId = "eu-central-1",
         });
         var vpcAttach2 = new AliCloud.Cen.InstanceAttachment("vpcAttach2", new AliCloud.Cen.InstanceAttachmentArgs
         {
             InstanceId = cen.Id,
             ChildInstanceId = vpc2.Id,
+            ChildInstanceType = "VPC",
             ChildInstanceRegionId = "cn-shanghai",
         });
         var foo = new AliCloud.Cen.BandwidthLimit("foo", new AliCloud.Cen.BandwidthLimitArgs
@@ -172,6 +174,7 @@ func main() {
 		vpcAttach1, err := cen.NewInstanceAttachment(ctx, "vpcAttach1", &cen.InstanceAttachmentArgs{
 			InstanceId:            cen.ID(),
 			ChildInstanceId:       vpc1.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
 			ChildInstanceRegionId: pulumi.String("eu-central-1"),
 		})
 		if err != nil {
@@ -180,6 +183,7 @@ func main() {
 		vpcAttach2, err := cen.NewInstanceAttachment(ctx, "vpcAttach2", &cen.InstanceAttachmentArgs{
 			InstanceId:            cen.ID(),
 			ChildInstanceId:       vpc2.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
 			ChildInstanceRegionId: pulumi.String("cn-shanghai"),
 		})
 		if err != nil {
@@ -236,10 +240,12 @@ bwp_attach = alicloud.cen.BandwidthPackageAttachment("bwpAttach",
 vpc_attach1 = alicloud.cen.InstanceAttachment("vpcAttach1",
     instance_id=cen.id,
     child_instance_id=vpc1.id,
+    child_instance_type="VPC",
     child_instance_region_id="eu-central-1")
 vpc_attach2 = alicloud.cen.InstanceAttachment("vpcAttach2",
     instance_id=cen.id,
     child_instance_id=vpc2.id,
+    child_instance_type="VPC",
     child_instance_region_id="cn-shanghai")
 foo = alicloud.cen.BandwidthLimit("foo",
     instance_id=cen.id,
@@ -288,11 +294,13 @@ const bwpAttach = new alicloud.cen.BandwidthPackageAttachment("bwpAttach", {
 const vpcAttach1 = new alicloud.cen.InstanceAttachment("vpcAttach1", {
     instanceId: cen.id,
     childInstanceId: vpc1.id,
+    childInstanceType: "VPC",
     childInstanceRegionId: "eu-central-1",
 });
 const vpcAttach2 = new alicloud.cen.InstanceAttachment("vpcAttach2", {
     instanceId: cen.id,
     childInstanceId: vpc2.id,
+    childInstanceType: "VPC",
     childInstanceRegionId: "cn-shanghai",
 });
 const foo = new alicloud.cen.BandwidthLimit("foo", {

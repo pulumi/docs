@@ -3,7 +3,7 @@ title: "Module marketplace"
 title_tag: "Module marketplace | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "marketplace"
 meta_desc: "Explore members of the marketplace module in the @pulumi/alicloud package."
-git_sha: "e05848fea3b8bad6ca0b4f5e8c073608d920ce30"
+git_sha: "8d1e8f0418deca55d857e8fff1890dce64ac8b09"
 block_external_search_index: true
 ---
 
@@ -39,14 +39,14 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Order" data-link-title="Order">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L7">
         Resource <strong>Order</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Order</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Order-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -60,7 +60,7 @@ Create a Order resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Order-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -71,14 +71,14 @@ Get an existing Order resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Order-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Order-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -89,7 +89,7 @@ Returns true if the given object is an instance of Order.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Order-components">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L38">property <b>components</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L38">property <b>components</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>components: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -97,7 +97,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Service providers customize additional components.
 
 <h4 class="pdoc-member-header" id="Order-couponId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L42">property <b>couponId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L42">property <b>couponId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>couponId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -105,7 +105,7 @@ Service providers customize additional components.
 The coupon id of the market product.
 
 <h4 class="pdoc-member-header" id="Order-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L46">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L46">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -113,7 +113,7 @@ The coupon id of the market product.
 The number of purchase cycles.
 
 <h4 class="pdoc-member-header" id="Order-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -122,7 +122,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Order-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L50">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L50">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -130,7 +130,7 @@ deployments and may be missing (undefined) during planning phases.
 The package version of the market product.
 
 <h4 class="pdoc-member-header" id="Order-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L54">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L54">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -138,7 +138,7 @@ The package version of the market product.
 Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="Order-pricingCycle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L58">property <b>pricingCycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L58">property <b>pricingCycle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pricingCycle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 The purchase cycle of the product, valid values are `Day`, `Month` and `Year`.
 
 <h4 class="pdoc-member-header" id="Order-productCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L62">property <b>productCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L62">property <b>productCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>productCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ The purchase cycle of the product, valid values are `Day`, `Month` and `Year`.
 The productCode of market place product.
 
 <h4 class="pdoc-member-header" id="Order-quantity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L66">property <b>quantity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L66">property <b>quantity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>quantity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ The productCode of market place product.
 The quantity of the market product will be purchased.
 
 <h4 class="pdoc-member-header" id="Order-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -173,7 +173,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getProduct" data-link-title="getProduct">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProduct.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProduct.ts#L29">
         Function <strong>getProduct</strong>
     </a>
 </h3>
@@ -202,7 +202,7 @@ export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].p
 ```
 
 <h3 class="pdoc-module-header" id="getProducts" data-link-title="getProducts">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L30">
         Function <strong>getProducts</strong>
     </a>
 </h3>
@@ -234,7 +234,7 @@ export const productCodes = defaultProducts.ids!;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetProductArgs" data-link-title="GetProductArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProduct.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProduct.ts#L46">
         interface <strong>GetProductArgs</strong>
     </a>
 </h3>
@@ -244,7 +244,7 @@ export const productCodes = defaultProducts.ids!;
 A collection of arguments for invoking getProduct.
 
 <h4 class="pdoc-member-header" id="GetProductArgs-availableRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProduct.ts#L50">property <b>availableRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProduct.ts#L50">property <b>availableRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableRegion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -252,7 +252,7 @@ A collection of arguments for invoking getProduct.
 A available region id used to filter market place Ecs images.
 
 <h4 class="pdoc-member-header" id="GetProductArgs-productCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProduct.ts#L54">property <b>productCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProduct.ts#L54">property <b>productCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -260,7 +260,7 @@ A available region id used to filter market place Ecs images.
 The product code of the market product.
 
 <h3 class="pdoc-module-header" id="GetProductResult" data-link-title="GetProductResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProduct.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProduct.ts#L60">
         interface <strong>GetProductResult</strong>
     </a>
 </h3>
@@ -270,12 +270,12 @@ The product code of the market product.
 A collection of values returned by getProduct.
 
 <h4 class="pdoc-member-header" id="GetProductResult-availableRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProduct.ts#L61">property <b>availableRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProduct.ts#L61">property <b>availableRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableRegion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProduct.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProduct.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -283,12 +283,12 @@ A collection of values returned by getProduct.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetProductResult-productCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProduct.ts#L66">property <b>productCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProduct.ts#L66">property <b>productCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductResult-products">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProduct.ts#L70">property <b>products</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProduct.ts#L70">property <b>products</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>products: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetProductProduct'>GetProductProduct</a>[];</code></pre>
@@ -296,7 +296,7 @@ The provider-assigned unique ID for this managed resource.
 A product. It contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetProductsArgs" data-link-title="GetProductsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L56">
         interface <strong>GetProductsArgs</strong>
     </a>
 </h3>
@@ -306,7 +306,7 @@ A product. It contains the following attributes:
 A collection of arguments for invoking getProducts.
 
 <h4 class="pdoc-member-header" id="GetProductsArgs-categoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L60">property <b>categoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L60">property <b>categoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categoryId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -314,7 +314,7 @@ A collection of arguments for invoking getProducts.
 The Category ID of products. For more information, see [DescribeProducts](https://help.aliyun.com/document_detail/89834.htm).
 
 <h4 class="pdoc-member-header" id="GetProductsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L64">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L64">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -322,7 +322,7 @@ The Category ID of products. For more information, see [DescribeProducts](https:
 A list of product code.
 
 <h4 class="pdoc-member-header" id="GetProductsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L68">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L68">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -330,12 +330,12 @@ A list of product code.
 A regex string to apply to the product name.
 
 <h4 class="pdoc-member-header" id="GetProductsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L69">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L69">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductsArgs-productType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L73">property <b>productType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L73">property <b>productType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -343,7 +343,7 @@ A regex string to apply to the product name.
 The type of products, Valid values: `APP`, `SERVICE`, `MIRROR`, `DOWNLOAD` and `API_SERVICE`.
 
 <h4 class="pdoc-member-header" id="GetProductsArgs-searchTerm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L77">property <b>searchTerm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L77">property <b>searchTerm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searchTerm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -351,7 +351,7 @@ The type of products, Valid values: `APP`, `SERVICE`, `MIRROR`, `DOWNLOAD` and `
 Search term in this query.
 
 <h4 class="pdoc-member-header" id="GetProductsArgs-sort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L81">property <b>sort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L81">property <b>sort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -359,7 +359,7 @@ Search term in this query.
 This field determines how to sort the filtered results, Valid values: `user_count-desc`, `created_on-desc`, `price-desc` and `score-desc`.
 
 <h4 class="pdoc-member-header" id="GetProductsArgs-suggestedPrice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L85">property <b>suggestedPrice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L85">property <b>suggestedPrice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suggestedPrice?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -367,7 +367,7 @@ This field determines how to sort the filtered results, Valid values: `user_coun
 The suggested price of the product.
 
 <h4 class="pdoc-member-header" id="GetProductsArgs-supplierId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L89">property <b>supplierId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L89">property <b>supplierId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supplierId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -375,7 +375,7 @@ The suggested price of the product.
 The supplier id of the product.
 
 <h4 class="pdoc-member-header" id="GetProductsArgs-supplierNameKeyword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L93">property <b>supplierNameKeyword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L93">property <b>supplierNameKeyword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supplierNameKeyword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -383,7 +383,7 @@ The supplier id of the product.
 The supplier name keyword of the product.
 
 <h3 class="pdoc-module-header" id="GetProductsResult" data-link-title="GetProductsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L99">
         interface <strong>GetProductsResult</strong>
     </a>
 </h3>
@@ -393,7 +393,7 @@ The supplier name keyword of the product.
 A collection of values returned by getProducts.
 
 <h4 class="pdoc-member-header" id="GetProductsResult-categoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L103">property <b>categoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L103">property <b>categoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categoryId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -401,7 +401,7 @@ A collection of values returned by getProducts.
 The category id of the product.
 
 <h4 class="pdoc-member-header" id="GetProductsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L107">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L107">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -409,7 +409,7 @@ The category id of the product.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetProductsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L111">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L111">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -417,22 +417,22 @@ The provider-assigned unique ID for this managed resource.
 A list of product codes.
 
 <h4 class="pdoc-member-header" id="GetProductsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L112">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L112">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L113">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L113">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductsResult-productType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L114">property <b>productType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L114">property <b>productType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductsResult-products">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L118">property <b>products</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L118">property <b>products</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>products: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetProductsProduct'>GetProductsProduct</a>[];</code></pre>
@@ -440,17 +440,17 @@ A list of product codes.
 A list of products. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetProductsResult-searchTerm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L119">property <b>searchTerm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L119">property <b>searchTerm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>searchTerm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductsResult-sort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L120">property <b>sort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L120">property <b>sort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductsResult-suggestedPrice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L124">property <b>suggestedPrice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L124">property <b>suggestedPrice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suggestedPrice?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -458,7 +458,7 @@ A list of products. Each element contains the following attributes:
 The suggested price of the product.
 
 <h4 class="pdoc-member-header" id="GetProductsResult-supplierId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L128">property <b>supplierId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L128">property <b>supplierId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supplierId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -466,12 +466,12 @@ The suggested price of the product.
 The supplier id of the product.
 
 <h4 class="pdoc-member-header" id="GetProductsResult-supplierNameKeyword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/getProducts.ts#L129">property <b>supplierNameKeyword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/getProducts.ts#L129">property <b>supplierNameKeyword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supplierNameKeyword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="OrderArgs" data-link-title="OrderArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L160">
         interface <strong>OrderArgs</strong>
     </a>
 </h3>
@@ -481,7 +481,7 @@ The supplier id of the product.
 The set of arguments for constructing a Order resource.
 
 <h4 class="pdoc-member-header" id="OrderArgs-components">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L164">property <b>components</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L164">property <b>components</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>components?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -489,7 +489,7 @@ The set of arguments for constructing a Order resource.
 Service providers customize additional components.
 
 <h4 class="pdoc-member-header" id="OrderArgs-couponId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L168">property <b>couponId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L168">property <b>couponId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>couponId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -497,7 +497,7 @@ Service providers customize additional components.
 The coupon id of the market product.
 
 <h4 class="pdoc-member-header" id="OrderArgs-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L172">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L172">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -505,7 +505,7 @@ The coupon id of the market product.
 The number of purchase cycles.
 
 <h4 class="pdoc-member-header" id="OrderArgs-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L176">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L176">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -513,7 +513,7 @@ The number of purchase cycles.
 The package version of the market product.
 
 <h4 class="pdoc-member-header" id="OrderArgs-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L180">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L180">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -521,7 +521,7 @@ The package version of the market product.
 Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="OrderArgs-pricingCycle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L184">property <b>pricingCycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L184">property <b>pricingCycle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pricingCycle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -529,7 +529,7 @@ Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 The purchase cycle of the product, valid values are `Day`, `Month` and `Year`.
 
 <h4 class="pdoc-member-header" id="OrderArgs-productCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L188">property <b>productCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L188">property <b>productCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -537,7 +537,7 @@ The purchase cycle of the product, valid values are `Day`, `Month` and `Year`.
 The productCode of market place product.
 
 <h4 class="pdoc-member-header" id="OrderArgs-quantity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L192">property <b>quantity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L192">property <b>quantity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quantity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -545,7 +545,7 @@ The productCode of market place product.
 The quantity of the market product will be purchased.
 
 <h3 class="pdoc-module-header" id="OrderState" data-link-title="OrderState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L122">
         interface <strong>OrderState</strong>
     </a>
 </h3>
@@ -555,7 +555,7 @@ The quantity of the market product will be purchased.
 Input properties used for looking up and filtering Order resources.
 
 <h4 class="pdoc-member-header" id="OrderState-components">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L126">property <b>components</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L126">property <b>components</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>components?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -563,7 +563,7 @@ Input properties used for looking up and filtering Order resources.
 Service providers customize additional components.
 
 <h4 class="pdoc-member-header" id="OrderState-couponId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L130">property <b>couponId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L130">property <b>couponId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>couponId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -571,7 +571,7 @@ Service providers customize additional components.
 The coupon id of the market product.
 
 <h4 class="pdoc-member-header" id="OrderState-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L134">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L134">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -579,7 +579,7 @@ The coupon id of the market product.
 The number of purchase cycles.
 
 <h4 class="pdoc-member-header" id="OrderState-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L138">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L138">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -587,7 +587,7 @@ The number of purchase cycles.
 The package version of the market product.
 
 <h4 class="pdoc-member-header" id="OrderState-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L142">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L142">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -595,7 +595,7 @@ The package version of the market product.
 Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="OrderState-pricingCycle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L146">property <b>pricingCycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L146">property <b>pricingCycle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pricingCycle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -603,7 +603,7 @@ Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 The purchase cycle of the product, valid values are `Day`, `Month` and `Year`.
 
 <h4 class="pdoc-member-header" id="OrderState-productCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L150">property <b>productCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L150">property <b>productCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -611,7 +611,7 @@ The purchase cycle of the product, valid values are `Day`, `Month` and `Year`.
 The productCode of market place product.
 
 <h4 class="pdoc-member-header" id="OrderState-quantity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/marketplace/order.ts#L154">property <b>quantity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/marketplace/order.ts#L154">property <b>quantity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quantity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

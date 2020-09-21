@@ -3,7 +3,7 @@ title: "Module rocketmq"
 title_tag: "Module rocketmq | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "rocketmq"
 meta_desc: "Explore members of the rocketmq module in the @pulumi/alicloud package."
-git_sha: "e05848fea3b8bad6ca0b4f5e8c073608d920ce30"
+git_sha: "8d1e8f0418deca55d857e8fff1890dce64ac8b09"
 block_external_search_index: true
 ---
 
@@ -72,7 +72,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Acl" data-link-title="Acl">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L27">
         Resource <strong>Acl</strong>
     </a>
 </h3>
@@ -99,7 +99,7 @@ const defaultAcl = new alicloud.rocketmq.Acl("default", {});
 ```
 
 <h4 class="pdoc-member-header" id="Acl-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -113,7 +113,7 @@ Create a Acl resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Acl-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -124,14 +124,14 @@ Get an existing Acl resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Acl-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Acl-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -142,7 +142,7 @@ Returns true if the given object is an instance of Acl.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Acl-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -151,7 +151,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Acl-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +159,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the ACL instance. The name can contain 2 to 128 characters including a-z, A-Z, 0-9, periods, underlines, and hyphens. The name must start with an English letter, but cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="Acl-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -168,7 +168,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AclRule" data-link-title="AclRule">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L39">
         Resource <strong>AclRule</strong>
     </a>
 </h3>
@@ -207,7 +207,7 @@ const defaultAclRule = new alicloud.rocketmq.AclRule("defaultAclRule", {
 ```
 
 <h4 class="pdoc-member-header" id="AclRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -221,7 +221,7 @@ Create a AclRule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AclRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -232,14 +232,14 @@ Get an existing AclRule resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AclRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AclRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -250,7 +250,7 @@ Returns true if the given object is an instance of AclRule.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AclRule-aclId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L70">property <b>aclId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L70">property <b>aclId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aclId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the ACL.
 
 <h4 class="pdoc-member-header" id="AclRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L74">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L74">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ The ID of the ACL.
 The description of the ACL rule. It must be 1 to 512 characters in length.
 
 <h4 class="pdoc-member-header" id="AclRule-destCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L78">property <b>destCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L78">property <b>destCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -274,7 +274,7 @@ The description of the ACL rule. It must be 1 to 512 characters in length.
 The destination address. It is an IPv4 address range in CIDR format. Default value: 0.0.0.0/0.
 
 <h4 class="pdoc-member-header" id="AclRule-destPortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L82">property <b>destPortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L82">property <b>destPortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destPortRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -282,7 +282,7 @@ The destination address. It is an IPv4 address range in CIDR format. Default val
 The range of the destination port. Valid value: 80/80.
 
 <h4 class="pdoc-member-header" id="AclRule-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L86">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L86">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -290,7 +290,7 @@ The range of the destination port. Valid value: 80/80.
 The direction of the ACL rule. Valid values: in|out.
 
 <h4 class="pdoc-member-header" id="AclRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -299,7 +299,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AclRule-ipProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L90">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L90">property <b>ipProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -307,7 +307,7 @@ deployments and may be missing (undefined) during planning phases.
 The protocol used by the ACL rule. The value is not case sensitive.
 
 <h4 class="pdoc-member-header" id="AclRule-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L94">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L94">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -315,7 +315,7 @@ The protocol used by the ACL rule. The value is not case sensitive.
 The policy used by the ACL rule. Valid values: accept|drop.
 
 <h4 class="pdoc-member-header" id="AclRule-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L98">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L98">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -323,7 +323,7 @@ The policy used by the ACL rule. Valid values: accept|drop.
 The priority of the ACL rule. Value range: 1 to 100.
 
 <h4 class="pdoc-member-header" id="AclRule-sourceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L102">property <b>sourceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L102">property <b>sourceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -331,7 +331,7 @@ The priority of the ACL rule. Value range: 1 to 100.
 The source address. It is an IPv4 address range in the CIDR format. Default value: 0.0.0.0/0.
 
 <h4 class="pdoc-member-header" id="AclRule-sourcePortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L106">property <b>sourcePortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L106">property <b>sourcePortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourcePortRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -339,7 +339,7 @@ The source address. It is an IPv4 address range in the CIDR format. Default valu
 The range of the source port. Valid value: 80/80.
 
 <h4 class="pdoc-member-header" id="AclRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -348,7 +348,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientUser" data-link-title="ClientUser">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L34">
         Resource <strong>ClientUser</strong>
     </a>
 </h3>
@@ -382,7 +382,7 @@ const defaultClientUser = new alicloud.rocketmq.ClientUser("default", {
 ```
 
 <h4 class="pdoc-member-header" id="ClientUser-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -396,7 +396,7 @@ Create a ClientUser resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientUser-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -407,14 +407,14 @@ Get an existing ClientUser resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientUser-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientUser-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -425,7 +425,7 @@ Returns true if the given object is an instance of ClientUser.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientUser-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L65">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L65">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The SAG APP bandwidth that the user can use. Unit: Kbit/s. Maximum value: 2000 Kbit/s.
 
 <h4 class="pdoc-member-header" id="ClientUser-clientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L69">property <b>clientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L69">property <b>clientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -441,7 +441,7 @@ The SAG APP bandwidth that the user can use. Unit: Kbit/s. Maximum value: 2000 K
 The IP address of the SAG APP. If you specify this parameter, the current account always uses the specified IP address.Note The IP address must be in the private CIDR block of the SAG client.If you do not specify this parameter, the system automatically allocates an IP address from the private CIDR block of the SAG client. In this case, each re-connection uses a different IP address.
 
 <h4 class="pdoc-member-header" id="ClientUser-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -450,17 +450,17 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientUser-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L70">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L70">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUser-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L71">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L71">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptionContext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUser-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L75">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L75">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ deployments and may be missing (undefined) during planning phases.
 The password used to log on to the SAG APP.Both the user name and the password must be specified. If you specify the user name, the password must be specified, too.
 
 <h4 class="pdoc-member-header" id="ClientUser-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L79">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L79">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sagId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ The password used to log on to the SAG APP.Both the user name and the password m
 The ID of the SAG instance created for the SAG APP.
 
 <h4 class="pdoc-member-header" id="ClientUser-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -485,7 +485,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ClientUser-userMail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L83">property <b>userMail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L83">property <b>userMail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userMail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ deployments.
 The email address of the user. The administrator uses this address to send the account information for logging on to the APP to the user.
 
 <h4 class="pdoc-member-header" id="ClientUser-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L87">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L87">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ The email address of the user. The administrator uses this address to send the a
 The user name. User names in the same SAG APP must be unique.Both the user name and the password must be specified. If you specify the user name, the password must be specified, too.
 
 <h3 class="pdoc-module-header" id="DnatEntry" data-link-title="DnatEntry">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L35">
         Resource <strong>DnatEntry</strong>
     </a>
 </h3>
@@ -536,7 +536,7 @@ const defaultDnatEntry = new alicloud.rocketmq.DnatEntry("default", {
 ```
 
 <h4 class="pdoc-member-header" id="DnatEntry-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -550,7 +550,7 @@ Create a DnatEntry resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DnatEntry-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -561,14 +561,14 @@ Get an existing DnatEntry resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DnatEntry-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DnatEntry-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -579,7 +579,7 @@ Returns true if the given object is an instance of DnatEntry.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DnatEntry-externalIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L66">property <b>externalIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L66">property <b>externalIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -587,7 +587,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The external public IP address.when "type" is "Internet",automatically identify the external ip.
 
 <h4 class="pdoc-member-header" id="DnatEntry-externalPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L70">property <b>externalPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L70">property <b>externalPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -595,7 +595,7 @@ The external public IP address.when "type" is "Internet",automatically identify 
 The public port.Value range: 1 to 65535 or "any".
 
 <h4 class="pdoc-member-header" id="DnatEntry-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -604,7 +604,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DnatEntry-internalIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L74">property <b>internalIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L74">property <b>internalIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internalIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -612,7 +612,7 @@ deployments and may be missing (undefined) during planning phases.
 The destination private IP address.
 
 <h4 class="pdoc-member-header" id="DnatEntry-internalPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L78">property <b>internalPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L78">property <b>internalPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internalPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -620,7 +620,7 @@ The destination private IP address.
 The destination private port.Value range: 1 to 65535 or "any".
 
 <h4 class="pdoc-member-header" id="DnatEntry-ipProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L82">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L82">property <b>ipProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -628,7 +628,7 @@ The destination private port.Value range: 1 to 65535 or "any".
 The protocol type. Valid values: TCP: Forwards packets of the TCP protocol. UDP: Forwards packets of the UDP protocol. Any: Forwards packets of all protocols.
 
 <h4 class="pdoc-member-header" id="DnatEntry-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L86">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L86">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sagId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +636,7 @@ The protocol type. Valid values: TCP: Forwards packets of the TCP protocol. UDP:
 The ID of the SAG instance.
 
 <h4 class="pdoc-member-header" id="DnatEntry-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L90">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L90">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ The ID of the SAG instance.
 The DNAT type. Valid values: Intranet: DNAT of private IP addresses. Internet: DNAT of public IP addresses
 
 <h4 class="pdoc-member-header" id="DnatEntry-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -653,7 +653,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L33">
         Resource <strong>Group</strong>
     </a>
 </h3>
@@ -686,7 +686,7 @@ const defaultGroup = new alicloud.rocketmq.Group("defaultGroup", {
 ```
 
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -700,7 +700,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -711,14 +711,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -729,7 +729,7 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L64">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L64">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -737,7 +737,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of the group. Two groups on a single instance cannot have the same name. A `groupId` starts with "GID_" or "GID-", and contains letters, numbers, hyphens (-), and underscores (_).
 
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -746,7 +746,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L68">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L68">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -754,7 +754,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the ONS Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="Group-readEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L72">property <b>readEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L72">property <b>readEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readEnable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ ID of the ONS Instance that owns the groups.
 This attribute is used to set the message reading enabled or disabled. It can only be set after the group is used by the client.
 
 <h4 class="pdoc-member-header" id="Group-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L76">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L76">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ This attribute is used to set the message reading enabled or disabled. It can on
 This attribute is a concise description of group. The length cannot exceed 256.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -779,7 +779,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L30">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -803,12 +803,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.rocketmq.Instance("example", {
+    instanceName: "tf-example-ons-instance",
     remark: "tf-example-ons-instance-remark",
 });
 ```
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -822,7 +823,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -833,14 +834,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -851,7 +852,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -859,8 +860,16 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
 
+<h4 class="pdoc-member-header" id="Instance-instanceName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L61">property <b>instanceName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Two instances on a single account in the same region cannot have the same name. The length must be 3 to 64 characters. Chinese characters, English letters digits and hyphen are allowed.
+
 <h4 class="pdoc-member-header" id="Instance-instanceStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L60">property <b>instanceStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L65">property <b>instanceStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -868,7 +877,7 @@ deployments and may be missing (undefined) during planning phases.
 The status of instance. 1 represents the platinum edition instance is in deployment. 2 represents the postpaid edition instance are overdue. 5 represents the postpaid or platinum edition instance is in service. 7 represents the platinum version instance is in upgrade and the service is available.
 
 <h4 class="pdoc-member-header" id="Instance-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L64">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L69">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -876,15 +885,19 @@ The status of instance. 1 represents the platinum edition instance is in deploym
 The edition of instance. 1 represents the postPaid edition, and 2 represents the platinum edition.
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L75">property <b>name</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.97.0. Use &#39;instance_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Two instances on a single account in the same region cannot have the same name. The length must be 3 to 64 characters. Chinese characters, English letters digits and hyphen are allowed.
+Replaced by `instanceName` after version 1.97.0.
 
 <h4 class="pdoc-member-header" id="Instance-releaseTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L72">property <b>releaseTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L79">property <b>releaseTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>releaseTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -892,15 +905,33 @@ Two instances on a single account in the same region cannot have the same name. 
 Platinum edition instance expiration time.
 
 <h4 class="pdoc-member-header" id="Instance-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L76">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L83">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 This attribute is a concise description of instance. The length cannot exceed 128.
 
+<h4 class="pdoc-member-header" id="Instance-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L87">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The status of instance. 1 represents the platinum edition instance is in deployment. 2 represents the postpaid edition instance are overdue. 5 represents the postpaid or platinum edition instance is in service. 7 represents the platinum version instance is in upgrade and the service is available.
+
+<h4 class="pdoc-member-header" id="Instance-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L93">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A mapping of tags to assign to the resource.
+- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
+- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -909,7 +940,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Qos" data-link-title="Qos">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L27">
         Resource <strong>Qos</strong>
     </a>
 </h3>
@@ -936,7 +967,7 @@ const defaultQos = new alicloud.rocketmq.Qos("default", {});
 ```
 
 <h4 class="pdoc-member-header" id="Qos-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -950,7 +981,7 @@ Create a Qos resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Qos-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -961,14 +992,14 @@ Get an existing Qos resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Qos-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Qos-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -979,7 +1010,7 @@ Returns true if the given object is an instance of Qos.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Qos-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -988,7 +1019,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Qos-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -996,7 +1027,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the QoS policy to be created. The name can contain 2 to 128 characters including a-z, A-Z, 0-9, periods, underlines, and hyphens. The name must start with an English letter, but cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="Qos-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1005,7 +1036,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="QosCar" data-link-title="QosCar">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L39">
         Resource <strong>QosCar</strong>
     </a>
 </h3>
@@ -1044,7 +1075,7 @@ const defaultQosCar = new alicloud.rocketmq.QosCar("defaultQosCar", {
 ```
 
 <h4 class="pdoc-member-header" id="QosCar-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -1058,7 +1089,7 @@ Create a QosCar resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="QosCar-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -1069,14 +1100,14 @@ Get an existing QosCar resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="QosCar-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="QosCar-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1087,7 +1118,7 @@ Returns true if the given object is an instance of QosCar.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="QosCar-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1095,7 +1126,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the QoS speed limiting rule.
 
 <h4 class="pdoc-member-header" id="QosCar-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1104,7 +1135,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="QosCar-limitType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L74">property <b>limitType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L74">property <b>limitType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>limitType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1112,7 +1143,7 @@ deployments and may be missing (undefined) during planning phases.
 The speed limiting method. Valid values: Absolute, Percent.
 
 <h4 class="pdoc-member-header" id="QosCar-maxBandwidthAbs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L78">property <b>maxBandwidthAbs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L78">property <b>maxBandwidthAbs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxBandwidthAbs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1120,7 +1151,7 @@ The speed limiting method. Valid values: Absolute, Percent.
 The maximum bandwidth allowed for the stream specified in the quintuple rule. This parameter is required when the value of the LimitType is Absolute.
 
 <h4 class="pdoc-member-header" id="QosCar-maxBandwidthPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L82">property <b>maxBandwidthPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L82">property <b>maxBandwidthPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxBandwidthPercent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1128,7 +1159,7 @@ The maximum bandwidth allowed for the stream specified in the quintuple rule. Th
 The maximum bandwidth percentage allowed for the stream specified in the quintuple rule. It is based on the maximum upstream bandwidth you set for the associated Smart Access Gateway (SAG) instance.This parameter is required when the value of the LimitType parameter is Percent.
 
 <h4 class="pdoc-member-header" id="QosCar-minBandwidthAbs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L86">property <b>minBandwidthAbs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L86">property <b>minBandwidthAbs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minBandwidthAbs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1136,7 +1167,7 @@ The maximum bandwidth percentage allowed for the stream specified in the quintup
 The minimum bandwidth allowed for the stream specified in the quintuple rule. This parameter is required when the value of the LimitType parameter is Absolute.
 
 <h4 class="pdoc-member-header" id="QosCar-minBandwidthPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L90">property <b>minBandwidthPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L90">property <b>minBandwidthPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minBandwidthPercent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1144,7 +1175,7 @@ The minimum bandwidth allowed for the stream specified in the quintuple rule. Th
 The minimum bandwidth percentage allowed for the stream specified in the quintuple rule. It is based on the maximum upstream bandwidth you set for the associated SAG instance.This parameter is required when the value of the LimitType parameter is Percent.
 
 <h4 class="pdoc-member-header" id="QosCar-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L94">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1152,7 +1183,7 @@ The minimum bandwidth percentage allowed for the stream specified in the quintup
 The name of the QoS speed limiting rule..
 
 <h4 class="pdoc-member-header" id="QosCar-percentSourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L98">property <b>percentSourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L98">property <b>percentSourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>percentSourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1160,7 +1191,7 @@ The name of the QoS speed limiting rule..
 The bandwidth type when the speed is limited based on percentage. Valid values: CcnBandwidth, InternetUpBandwidth.The default value is InternetUpBandwidth.
 
 <h4 class="pdoc-member-header" id="QosCar-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L102">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L102">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1168,7 +1199,7 @@ The bandwidth type when the speed is limited based on percentage. Valid values: 
 The priority of the specified stream.
 
 <h4 class="pdoc-member-header" id="QosCar-qosId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L106">property <b>qosId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L106">property <b>qosId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>qosId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1176,7 +1207,7 @@ The priority of the specified stream.
 The instance ID of the QoS.
 
 <h4 class="pdoc-member-header" id="QosCar-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1185,7 +1216,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="QosPolicy" data-link-title="QosPolicy">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L40">
         Resource <strong>QosPolicy</strong>
     </a>
 </h3>
@@ -1225,7 +1256,7 @@ const defaultQosPolicy = new alicloud.rocketmq.QosPolicy("defaultQosPolicy", {
 ```
 
 <h4 class="pdoc-member-header" id="QosPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -1239,7 +1270,7 @@ Create a QosPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="QosPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -1250,14 +1281,14 @@ Get an existing QosPolicy resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="QosPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="QosPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1268,7 +1299,7 @@ Returns true if the given object is an instance of QosPolicy.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="QosPolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L71">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L71">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1276,7 +1307,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the QoS policy.
 
 <h4 class="pdoc-member-header" id="QosPolicy-destCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L75">property <b>destCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L75">property <b>destCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1284,7 +1315,7 @@ The description of the QoS policy.
 The destination CIDR block.
 
 <h4 class="pdoc-member-header" id="QosPolicy-destPortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L79">property <b>destPortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L79">property <b>destPortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destPortRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1292,7 +1323,7 @@ The destination CIDR block.
 The destination port range.
 
 <h4 class="pdoc-member-header" id="QosPolicy-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L83">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L83">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1300,7 +1331,7 @@ The destination port range.
 The expiration time of the quintuple rule.
 
 <h4 class="pdoc-member-header" id="QosPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1309,7 +1340,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="QosPolicy-ipProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L87">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L87">property <b>ipProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1317,7 +1348,7 @@ deployments and may be missing (undefined) during planning phases.
 The transport layer protocol.
 
 <h4 class="pdoc-member-header" id="QosPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1325,7 +1356,7 @@ The transport layer protocol.
 The name of the QoS policy.
 
 <h4 class="pdoc-member-header" id="QosPolicy-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L95">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L95">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1333,7 +1364,7 @@ The name of the QoS policy.
 The priority of the quintuple rule. A smaller value indicates a higher priority. If the priorities of two quintuple rules are the same, the rule created earlier is applied first.Value range: 1 to 7.
 
 <h4 class="pdoc-member-header" id="QosPolicy-qosId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L99">property <b>qosId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L99">property <b>qosId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>qosId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1341,7 +1372,7 @@ The priority of the quintuple rule. A smaller value indicates a higher priority.
 The instance ID of the QoS policy to which the quintuple rule is created.
 
 <h4 class="pdoc-member-header" id="QosPolicy-sourceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L103">property <b>sourceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L103">property <b>sourceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1349,7 +1380,7 @@ The instance ID of the QoS policy to which the quintuple rule is created.
 The source CIDR block.
 
 <h4 class="pdoc-member-header" id="QosPolicy-sourcePortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L107">property <b>sourcePortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L107">property <b>sourcePortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourcePortRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1357,7 +1388,7 @@ The source CIDR block.
 The source port range of the transport layer.
 
 <h4 class="pdoc-member-header" id="QosPolicy-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L111">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L111">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1365,7 +1396,7 @@ The source port range of the transport layer.
 The time when the quintuple rule takes effect.
 
 <h4 class="pdoc-member-header" id="QosPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1374,7 +1405,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SnatEntry" data-link-title="SnatEntry">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L31">
         Resource <strong>SnatEntry</strong>
     </a>
 </h3>
@@ -1405,7 +1436,7 @@ const defaultSnatEntry = new alicloud.rocketmq.SnatEntry("default", {
 ```
 
 <h4 class="pdoc-member-header" id="SnatEntry-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -1419,7 +1450,7 @@ Create a SnatEntry resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SnatEntry-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -1430,14 +1461,14 @@ Get an existing SnatEntry resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SnatEntry-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SnatEntry-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1448,7 +1479,7 @@ Returns true if the given object is an instance of SnatEntry.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SnatEntry-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L62">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L62">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1456,7 +1487,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The destination CIDR block.
 
 <h4 class="pdoc-member-header" id="SnatEntry-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1465,7 +1496,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SnatEntry-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L66">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L66">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sagId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1473,7 +1504,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the SAG instance.
 
 <h4 class="pdoc-member-header" id="SnatEntry-snatIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L70">property <b>snatIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L70">property <b>snatIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snatIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1481,7 +1512,7 @@ The ID of the SAG instance.
 The public IP address.
 
 <h4 class="pdoc-member-header" id="SnatEntry-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1490,7 +1521,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Topic" data-link-title="Topic">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L34">
         Resource <strong>Topic</strong>
     </a>
 </h3>
@@ -1516,7 +1547,7 @@ const name = config.get("name") || "onsInstanceName";
 const topic = config.get("topic") || "onsTopicName";
 const defaultInstance = new alicloud.rocketmq.Instance("defaultInstance", {remark: "default_ons_instance_remark"});
 const defaultTopic = new alicloud.rocketmq.Topic("defaultTopic", {
-    topic: topic,
+    topicName: topic,
     instanceId: defaultInstance.id,
     messageType: 0,
     remark: "dafault_ons_topic_remark",
@@ -1524,7 +1555,7 @@ const defaultTopic = new alicloud.rocketmq.Topic("defaultTopic", {
 ```
 
 <h4 class="pdoc-member-header" id="Topic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -1538,7 +1569,7 @@ Create a Topic resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Topic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -1549,14 +1580,14 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Topic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Topic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1567,7 +1598,7 @@ Returns true if the given object is an instance of Topic.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Topic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1576,7 +1607,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Topic-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L65">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L65">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1584,7 +1615,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the ONS Instance that owns the topics.
 
 <h4 class="pdoc-member-header" id="Topic-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L69">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L69">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>messageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1592,7 +1623,7 @@ ID of the ONS Instance that owns the topics.
 The type of the message. Read [Ons Topic Create](https://www.alibabacloud.com/help/doc-detail/29591.html) for further details.
 
 <h4 class="pdoc-member-header" id="Topic-perm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L73">property <b>perm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L73">property <b>perm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>perm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1600,23 +1631,45 @@ The type of the message. Read [Ons Topic Create](https://www.alibabacloud.com/he
 This attribute is used to set the read-write mode for the topic. Read [Request parameters](https://www.alibabacloud.com/help/doc-detail/56880.html) for further details.
 
 <h4 class="pdoc-member-header" id="Topic-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L77">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L77">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 This attribute is a concise description of topic. The length cannot exceed 128.
 
-<h4 class="pdoc-member-header" id="Topic-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L81">property <b>topic</b></a>
+<h4 class="pdoc-member-header" id="Topic-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L83">property <b>tags</b></a>
 </h4>
 
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A mapping of tags to assign to the resource.
+- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
+- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+
+<h4 class="pdoc-member-header" id="Topic-topic">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L89">property <b>topic</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;topic&#39; has been deprecated from version 1.97.0. Use &#39;topic_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'>public </span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Replaced by `topicName` after version 1.97.0.
+
+<h4 class="pdoc-member-header" id="Topic-topicName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L93">property <b>topicName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Name of the topic. Two topics on a single instance cannot have the same name and the name cannot start with 'GID' or 'CID'. The length cannot exceed 64 characters.
 
 <h4 class="pdoc-member-header" id="Topic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1627,7 +1680,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getGroups" data-link-title="getGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L41">
         Function <strong>getGroups</strong>
     </a>
 </h3>
@@ -1668,7 +1721,7 @@ export const firstGroupName = groupsDs.groups[0].groupId;
 ```
 
 <h3 class="pdoc-module-header" id="getInstances" data-link-title="getInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L35">
         Function <strong>getInstances</strong>
     </a>
 </h3>
@@ -1703,7 +1756,7 @@ export const firstInstanceId = instancesDs.instances[0].instanceId;
 ```
 
 <h3 class="pdoc-module-header" id="getTopics" data-link-title="getTopics">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L41">
         Function <strong>getTopics</strong>
     </a>
 </h3>
@@ -1725,29 +1778,28 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "onsInstanceName";
 const topic = config.get("topic") || "onsTopicDatasourceName";
-
-const defaultInstance = new alicloud.rocketmq.Instance("default", {
+const defaultInstance = new alicloud.rocketmq.Instance("defaultInstance", {
+    instanceName: name,
     remark: "default_ons_instance_remark",
 });
-const defaultTopic = new alicloud.rocketmq.Topic("default", {
+const defaultTopic = new alicloud.rocketmq.Topic("defaultTopic", {
+    topicName: topic,
     instanceId: defaultInstance.id,
     messageType: 0,
     remark: "dafault_ons_topic_remark",
-    topic: topic,
 });
 const topicsDs = defaultTopic.instanceId.apply(instanceId => alicloud.rocketmq.getTopics({
     instanceId: instanceId,
     nameRegex: topic,
     outputFile: "topics.txt",
-}, { async: true }));
-
-export const firstTopicName = topicsDs.topics[0].topic;
+}));
+export const firstTopicName = topicsDs.topics[0].topicName;
 ```
 
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AclArgs" data-link-title="AclArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L101">
         interface <strong>AclArgs</strong>
     </a>
 </h3>
@@ -1757,7 +1809,7 @@ export const firstTopicName = topicsDs.topics[0].topic;
 The set of arguments for constructing a Acl resource.
 
 <h4 class="pdoc-member-header" id="AclArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L105">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1765,7 +1817,7 @@ The set of arguments for constructing a Acl resource.
 The name of the ACL instance. The name can contain 2 to 128 characters including a-z, A-Z, 0-9, periods, underlines, and hyphens. The name must start with an English letter, but cannot start with http:// or https://.
 
 <h3 class="pdoc-module-header" id="AclRuleArgs" data-link-title="AclRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L227">
         interface <strong>AclRuleArgs</strong>
     </a>
 </h3>
@@ -1775,7 +1827,7 @@ The name of the ACL instance. The name can contain 2 to 128 characters including
 The set of arguments for constructing a AclRule resource.
 
 <h4 class="pdoc-member-header" id="AclRuleArgs-aclId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L231">property <b>aclId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L231">property <b>aclId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1783,7 +1835,7 @@ The set of arguments for constructing a AclRule resource.
 The ID of the ACL.
 
 <h4 class="pdoc-member-header" id="AclRuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L235">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L235">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1791,7 +1843,7 @@ The ID of the ACL.
 The description of the ACL rule. It must be 1 to 512 characters in length.
 
 <h4 class="pdoc-member-header" id="AclRuleArgs-destCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L239">property <b>destCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L239">property <b>destCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1799,7 +1851,7 @@ The description of the ACL rule. It must be 1 to 512 characters in length.
 The destination address. It is an IPv4 address range in CIDR format. Default value: 0.0.0.0/0.
 
 <h4 class="pdoc-member-header" id="AclRuleArgs-destPortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L243">property <b>destPortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L243">property <b>destPortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destPortRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1807,7 +1859,7 @@ The destination address. It is an IPv4 address range in CIDR format. Default val
 The range of the destination port. Valid value: 80/80.
 
 <h4 class="pdoc-member-header" id="AclRuleArgs-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L247">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L247">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1815,7 +1867,7 @@ The range of the destination port. Valid value: 80/80.
 The direction of the ACL rule. Valid values: in|out.
 
 <h4 class="pdoc-member-header" id="AclRuleArgs-ipProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L251">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L251">property <b>ipProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1823,7 +1875,7 @@ The direction of the ACL rule. Valid values: in|out.
 The protocol used by the ACL rule. The value is not case sensitive.
 
 <h4 class="pdoc-member-header" id="AclRuleArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L255">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L255">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1831,7 +1883,7 @@ The protocol used by the ACL rule. The value is not case sensitive.
 The policy used by the ACL rule. Valid values: accept|drop.
 
 <h4 class="pdoc-member-header" id="AclRuleArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L259">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L259">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1839,7 +1891,7 @@ The policy used by the ACL rule. Valid values: accept|drop.
 The priority of the ACL rule. Value range: 1 to 100.
 
 <h4 class="pdoc-member-header" id="AclRuleArgs-sourceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L263">property <b>sourceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L263">property <b>sourceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1847,7 +1899,7 @@ The priority of the ACL rule. Value range: 1 to 100.
 The source address. It is an IPv4 address range in the CIDR format. Default value: 0.0.0.0/0.
 
 <h4 class="pdoc-member-header" id="AclRuleArgs-sourcePortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L267">property <b>sourcePortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L267">property <b>sourcePortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourcePortRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1855,7 +1907,7 @@ The source address. It is an IPv4 address range in the CIDR format. Default valu
 The range of the source port. Valid value: 80/80.
 
 <h3 class="pdoc-module-header" id="AclRuleState" data-link-title="AclRuleState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L181">
         interface <strong>AclRuleState</strong>
     </a>
 </h3>
@@ -1865,7 +1917,7 @@ The range of the source port. Valid value: 80/80.
 Input properties used for looking up and filtering AclRule resources.
 
 <h4 class="pdoc-member-header" id="AclRuleState-aclId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L185">property <b>aclId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L185">property <b>aclId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1873,7 +1925,7 @@ Input properties used for looking up and filtering AclRule resources.
 The ID of the ACL.
 
 <h4 class="pdoc-member-header" id="AclRuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L189">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L189">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1881,7 +1933,7 @@ The ID of the ACL.
 The description of the ACL rule. It must be 1 to 512 characters in length.
 
 <h4 class="pdoc-member-header" id="AclRuleState-destCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L193">property <b>destCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L193">property <b>destCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1889,7 +1941,7 @@ The description of the ACL rule. It must be 1 to 512 characters in length.
 The destination address. It is an IPv4 address range in CIDR format. Default value: 0.0.0.0/0.
 
 <h4 class="pdoc-member-header" id="AclRuleState-destPortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L197">property <b>destPortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L197">property <b>destPortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destPortRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1897,7 +1949,7 @@ The destination address. It is an IPv4 address range in CIDR format. Default val
 The range of the destination port. Valid value: 80/80.
 
 <h4 class="pdoc-member-header" id="AclRuleState-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L201">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L201">property <b>direction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1905,7 +1957,7 @@ The range of the destination port. Valid value: 80/80.
 The direction of the ACL rule. Valid values: in|out.
 
 <h4 class="pdoc-member-header" id="AclRuleState-ipProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L205">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L205">property <b>ipProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1913,7 +1965,7 @@ The direction of the ACL rule. Valid values: in|out.
 The protocol used by the ACL rule. The value is not case sensitive.
 
 <h4 class="pdoc-member-header" id="AclRuleState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L209">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L209">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1921,7 +1973,7 @@ The protocol used by the ACL rule. The value is not case sensitive.
 The policy used by the ACL rule. Valid values: accept|drop.
 
 <h4 class="pdoc-member-header" id="AclRuleState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L213">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L213">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1929,7 +1981,7 @@ The policy used by the ACL rule. Valid values: accept|drop.
 The priority of the ACL rule. Value range: 1 to 100.
 
 <h4 class="pdoc-member-header" id="AclRuleState-sourceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L217">property <b>sourceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L217">property <b>sourceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1937,7 +1989,7 @@ The priority of the ACL rule. Value range: 1 to 100.
 The source address. It is an IPv4 address range in the CIDR format. Default value: 0.0.0.0/0.
 
 <h4 class="pdoc-member-header" id="AclRuleState-sourcePortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/aclRule.ts#L221">property <b>sourcePortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/aclRule.ts#L221">property <b>sourcePortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourcePortRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1945,7 +1997,7 @@ The source address. It is an IPv4 address range in the CIDR format. Default valu
 The range of the source port. Valid value: 80/80.
 
 <h3 class="pdoc-module-header" id="AclState" data-link-title="AclState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L91">
         interface <strong>AclState</strong>
     </a>
 </h3>
@@ -1955,7 +2007,7 @@ The range of the source port. Valid value: 80/80.
 Input properties used for looking up and filtering Acl resources.
 
 <h4 class="pdoc-member-header" id="AclState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/acl.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/acl.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1963,7 +2015,7 @@ Input properties used for looking up and filtering Acl resources.
 The name of the ACL instance. The name can contain 2 to 128 characters including a-z, A-Z, 0-9, periods, underlines, and hyphens. The name must start with an English letter, but cannot start with http:// or https://.
 
 <h3 class="pdoc-module-header" id="ClientUserArgs" data-link-title="ClientUserArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L175">
         interface <strong>ClientUserArgs</strong>
     </a>
 </h3>
@@ -1973,7 +2025,7 @@ The name of the ACL instance. The name can contain 2 to 128 characters including
 The set of arguments for constructing a ClientUser resource.
 
 <h4 class="pdoc-member-header" id="ClientUserArgs-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L179">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L179">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1981,7 +2033,7 @@ The set of arguments for constructing a ClientUser resource.
 The SAG APP bandwidth that the user can use. Unit: Kbit/s. Maximum value: 2000 Kbit/s.
 
 <h4 class="pdoc-member-header" id="ClientUserArgs-clientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L183">property <b>clientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L183">property <b>clientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1989,17 +2041,17 @@ The SAG APP bandwidth that the user can use. Unit: Kbit/s. Maximum value: 2000 K
 The IP address of the SAG APP. If you specify this parameter, the current account always uses the specified IP address.Note The IP address must be in the private CIDR block of the SAG client.If you do not specify this parameter, the system automatically allocates an IP address from the private CIDR block of the SAG client. In this case, each re-connection uses a different IP address.
 
 <h4 class="pdoc-member-header" id="ClientUserArgs-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L184">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L184">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserArgs-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L185">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L185">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L189">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L189">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2007,7 +2059,7 @@ The IP address of the SAG APP. If you specify this parameter, the current accoun
 The password used to log on to the SAG APP.Both the user name and the password must be specified. If you specify the user name, the password must be specified, too.
 
 <h4 class="pdoc-member-header" id="ClientUserArgs-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L193">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L193">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sagId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2015,7 +2067,7 @@ The password used to log on to the SAG APP.Both the user name and the password m
 The ID of the SAG instance created for the SAG APP.
 
 <h4 class="pdoc-member-header" id="ClientUserArgs-userMail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L197">property <b>userMail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L197">property <b>userMail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userMail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2023,7 +2075,7 @@ The ID of the SAG instance created for the SAG APP.
 The email address of the user. The administrator uses this address to send the account information for logging on to the APP to the user.
 
 <h4 class="pdoc-member-header" id="ClientUserArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L201">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L201">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2031,7 +2083,7 @@ The email address of the user. The administrator uses this address to send the a
 The user name. User names in the same SAG APP must be unique.Both the user name and the password must be specified. If you specify the user name, the password must be specified, too.
 
 <h3 class="pdoc-module-header" id="ClientUserState" data-link-title="ClientUserState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L143">
         interface <strong>ClientUserState</strong>
     </a>
 </h3>
@@ -2041,7 +2093,7 @@ The user name. User names in the same SAG APP must be unique.Both the user name 
 Input properties used for looking up and filtering ClientUser resources.
 
 <h4 class="pdoc-member-header" id="ClientUserState-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L147">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L147">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2049,7 +2101,7 @@ Input properties used for looking up and filtering ClientUser resources.
 The SAG APP bandwidth that the user can use. Unit: Kbit/s. Maximum value: 2000 Kbit/s.
 
 <h4 class="pdoc-member-header" id="ClientUserState-clientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L151">property <b>clientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L151">property <b>clientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2057,17 +2109,17 @@ The SAG APP bandwidth that the user can use. Unit: Kbit/s. Maximum value: 2000 K
 The IP address of the SAG APP. If you specify this parameter, the current account always uses the specified IP address.Note The IP address must be in the private CIDR block of the SAG client.If you do not specify this parameter, the system automatically allocates an IP address from the private CIDR block of the SAG client. In this case, each re-connection uses a different IP address.
 
 <h4 class="pdoc-member-header" id="ClientUserState-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L152">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L152">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserState-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L153">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L153">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L157">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L157">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2075,7 +2127,7 @@ The IP address of the SAG APP. If you specify this parameter, the current accoun
 The password used to log on to the SAG APP.Both the user name and the password must be specified. If you specify the user name, the password must be specified, too.
 
 <h4 class="pdoc-member-header" id="ClientUserState-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L161">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L161">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sagId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2083,7 +2135,7 @@ The password used to log on to the SAG APP.Both the user name and the password m
 The ID of the SAG instance created for the SAG APP.
 
 <h4 class="pdoc-member-header" id="ClientUserState-userMail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L165">property <b>userMail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L165">property <b>userMail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userMail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2091,7 +2143,7 @@ The ID of the SAG instance created for the SAG APP.
 The email address of the user. The administrator uses this address to send the account information for logging on to the APP to the user.
 
 <h4 class="pdoc-member-header" id="ClientUserState-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/clientUser.ts#L169">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/clientUser.ts#L169">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2099,7 +2151,7 @@ The email address of the user. The administrator uses this address to send the a
 The user name. User names in the same SAG APP must be unique.Both the user name and the password must be specified. If you specify the user name, the password must be specified, too.
 
 <h3 class="pdoc-module-header" id="DnatEntryArgs" data-link-title="DnatEntryArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L187">
         interface <strong>DnatEntryArgs</strong>
     </a>
 </h3>
@@ -2109,7 +2161,7 @@ The user name. User names in the same SAG APP must be unique.Both the user name 
 The set of arguments for constructing a DnatEntry resource.
 
 <h4 class="pdoc-member-header" id="DnatEntryArgs-externalIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L191">property <b>externalIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L191">property <b>externalIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2117,7 +2169,7 @@ The set of arguments for constructing a DnatEntry resource.
 The external public IP address.when "type" is "Internet",automatically identify the external ip.
 
 <h4 class="pdoc-member-header" id="DnatEntryArgs-externalPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L195">property <b>externalPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L195">property <b>externalPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2125,7 +2177,7 @@ The external public IP address.when "type" is "Internet",automatically identify 
 The public port.Value range: 1 to 65535 or "any".
 
 <h4 class="pdoc-member-header" id="DnatEntryArgs-internalIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L199">property <b>internalIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L199">property <b>internalIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internalIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2133,7 +2185,7 @@ The public port.Value range: 1 to 65535 or "any".
 The destination private IP address.
 
 <h4 class="pdoc-member-header" id="DnatEntryArgs-internalPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L203">property <b>internalPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L203">property <b>internalPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internalPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2141,7 +2193,7 @@ The destination private IP address.
 The destination private port.Value range: 1 to 65535 or "any".
 
 <h4 class="pdoc-member-header" id="DnatEntryArgs-ipProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L207">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L207">property <b>ipProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2149,7 +2201,7 @@ The destination private port.Value range: 1 to 65535 or "any".
 The protocol type. Valid values: TCP: Forwards packets of the TCP protocol. UDP: Forwards packets of the UDP protocol. Any: Forwards packets of all protocols.
 
 <h4 class="pdoc-member-header" id="DnatEntryArgs-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L211">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L211">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sagId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2157,7 +2209,7 @@ The protocol type. Valid values: TCP: Forwards packets of the TCP protocol. UDP:
 The ID of the SAG instance.
 
 <h4 class="pdoc-member-header" id="DnatEntryArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L215">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L215">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2165,7 +2217,7 @@ The ID of the SAG instance.
 The DNAT type. Valid values: Intranet: DNAT of private IP addresses. Internet: DNAT of public IP addresses
 
 <h3 class="pdoc-module-header" id="DnatEntryState" data-link-title="DnatEntryState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L153">
         interface <strong>DnatEntryState</strong>
     </a>
 </h3>
@@ -2175,7 +2227,7 @@ The DNAT type. Valid values: Intranet: DNAT of private IP addresses. Internet: D
 Input properties used for looking up and filtering DnatEntry resources.
 
 <h4 class="pdoc-member-header" id="DnatEntryState-externalIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L157">property <b>externalIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L157">property <b>externalIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2183,7 +2235,7 @@ Input properties used for looking up and filtering DnatEntry resources.
 The external public IP address.when "type" is "Internet",automatically identify the external ip.
 
 <h4 class="pdoc-member-header" id="DnatEntryState-externalPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L161">property <b>externalPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L161">property <b>externalPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2191,7 +2243,7 @@ The external public IP address.when "type" is "Internet",automatically identify 
 The public port.Value range: 1 to 65535 or "any".
 
 <h4 class="pdoc-member-header" id="DnatEntryState-internalIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L165">property <b>internalIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L165">property <b>internalIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internalIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2199,7 +2251,7 @@ The public port.Value range: 1 to 65535 or "any".
 The destination private IP address.
 
 <h4 class="pdoc-member-header" id="DnatEntryState-internalPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L169">property <b>internalPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L169">property <b>internalPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internalPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2207,7 +2259,7 @@ The destination private IP address.
 The destination private port.Value range: 1 to 65535 or "any".
 
 <h4 class="pdoc-member-header" id="DnatEntryState-ipProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L173">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L173">property <b>ipProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2215,7 +2267,7 @@ The destination private port.Value range: 1 to 65535 or "any".
 The protocol type. Valid values: TCP: Forwards packets of the TCP protocol. UDP: Forwards packets of the UDP protocol. Any: Forwards packets of all protocols.
 
 <h4 class="pdoc-member-header" id="DnatEntryState-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L177">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L177">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sagId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2223,7 +2275,7 @@ The protocol type. Valid values: TCP: Forwards packets of the TCP protocol. UDP:
 The ID of the SAG instance.
 
 <h4 class="pdoc-member-header" id="DnatEntryState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/dnatEntry.ts#L181">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/dnatEntry.ts#L181">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2231,7 +2283,7 @@ The ID of the SAG instance.
 The DNAT type. Valid values: Intranet: DNAT of private IP addresses. Internet: DNAT of public IP addresses
 
 <h3 class="pdoc-module-header" id="GetGroupsArgs" data-link-title="GetGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L59">
         interface <strong>GetGroupsArgs</strong>
     </a>
 </h3>
@@ -2241,7 +2293,7 @@ The DNAT type. Valid values: Intranet: DNAT of private IP addresses. Internet: D
 A collection of arguments for invoking getGroups.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-groupIdRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L63">property <b>groupIdRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L63">property <b>groupIdRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupIdRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2249,7 +2301,7 @@ A collection of arguments for invoking getGroups.
 A regex string to filter results by the group name.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L67">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L67">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2257,12 +2309,12 @@ A regex string to filter results by the group name.
 ID of the ONS Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="GetGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L68">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L68">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetGroupsResult" data-link-title="GetGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L74">
         interface <strong>GetGroupsResult</strong>
     </a>
 </h3>
@@ -2272,12 +2324,12 @@ ID of the ONS Instance that owns the groups.
 A collection of values returned by getGroups.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-groupIdRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L75">property <b>groupIdRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L75">property <b>groupIdRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupIdRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L79">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L79">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetGroupsGroup'>GetGroupsGroup</a>[];</code></pre>
@@ -2285,7 +2337,7 @@ A collection of values returned by getGroups.
 A list of groups. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2293,7 +2345,7 @@ A list of groups. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L87">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L87">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2301,17 +2353,17 @@ The provider-assigned unique ID for this managed resource.
 A list of group names.
 
 <h4 class="pdoc-member-header" id="GetGroupsResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L88">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L88">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getGroups.ts#L89">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getGroups.ts#L89">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstancesArgs" data-link-title="GetInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L57">
         interface <strong>GetInstancesArgs</strong>
     </a>
 </h3>
@@ -2320,8 +2372,16 @@ A list of group names.
 
 A collection of arguments for invoking getInstances.
 
+<h4 class="pdoc-member-header" id="GetInstancesArgs-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L61">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+
+Default to `false`. Set it to true can output more details.
+
 <h4 class="pdoc-member-header" id="GetInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L58">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L65">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2329,7 +2389,7 @@ A collection of arguments for invoking getInstances.
 A list of instance IDs to filter results.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L62">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L69">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2337,12 +2397,28 @@ A list of instance IDs to filter results.
 A regex string to filter results by the instance name.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L63">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L70">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetInstancesArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L74">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
+
+The status of Ons instance. Valid values: `0` deploying, `2` arrears, `5` running, `7` upgrading.
+
+<h4 class="pdoc-member-header" id="GetInstancesArgs-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L78">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+
+A map of tags assigned to the Ons instance.
+
 <h3 class="pdoc-module-header" id="GetInstancesResult" data-link-title="GetInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L84">
         interface <strong>GetInstancesResult</strong>
     </a>
 </h3>
@@ -2351,8 +2427,13 @@ A regex string to filter results by the instance name.
 
 A collection of values returned by getInstances.
 
+<h4 class="pdoc-member-header" id="GetInstancesResult-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L85">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L89">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2360,7 +2441,7 @@ A collection of values returned by getInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L77">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L93">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2368,7 +2449,7 @@ The provider-assigned unique ID for this managed resource.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L81">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L97">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance'>GetInstancesInstance</a>[];</code></pre>
@@ -2376,12 +2457,12 @@ A list of instance IDs.
 A list of instances. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L82">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L98">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L86">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L102">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2389,12 +2470,28 @@ A list of instances. Each element contains the following attributes:
 A list of instance names.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getInstances.ts#L87">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L103">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetInstancesResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L107">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
+
+The status of the instance. Read [Fields in InstanceVO](https://www.alibabacloud.com/help/doc-detail/106351.html) for further details.
+
+<h4 class="pdoc-member-header" id="GetInstancesResult-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getInstances.ts#L111">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+
+A map of tags assigned to the Ons instance.
+
 <h3 class="pdoc-module-header" id="GetTopicsArgs" data-link-title="GetTopicsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L62">
         interface <strong>GetTopicsArgs</strong>
     </a>
 </h3>
@@ -2403,8 +2500,21 @@ A list of instance names.
 
 A collection of arguments for invoking getTopics.
 
+<h4 class="pdoc-member-header" id="GetTopicsArgs-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L63">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTopicsArgs-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L67">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+
+A list of topic IDs to filter results.
+
 <h4 class="pdoc-member-header" id="GetTopicsArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L64">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L71">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2412,7 +2522,7 @@ A collection of arguments for invoking getTopics.
 ID of the ONS Instance that owns the topics.
 
 <h4 class="pdoc-member-header" id="GetTopicsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L68">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L75">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2420,12 +2530,20 @@ ID of the ONS Instance that owns the topics.
 A regex string to filter results by the topic name.
 
 <h4 class="pdoc-member-header" id="GetTopicsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L69">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L76">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTopicsArgs-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L80">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+
+A map of tags assigned to the Ons instance.
+
 <h3 class="pdoc-module-header" id="GetTopicsResult" data-link-title="GetTopicsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L86">
         interface <strong>GetTopicsResult</strong>
     </a>
 </h3>
@@ -2434,26 +2552,36 @@ A regex string to filter results by the topic name.
 
 A collection of values returned by getTopics.
 
+<h4 class="pdoc-member-header" id="GetTopicsResult-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L87">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L91">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 The provider-assigned unique ID for this managed resource.
 
+<h4 class="pdoc-member-header" id="GetTopicsResult-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L92">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicsResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L80">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L93">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L81">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L94">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L85">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L98">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2461,12 +2589,20 @@ The provider-assigned unique ID for this managed resource.
 A list of topic names.
 
 <h4 class="pdoc-member-header" id="GetTopicsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L86">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L99">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetTopicsResult-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L103">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+
+A map of tags assigned to the Ons instance.
+
 <h4 class="pdoc-member-header" id="GetTopicsResult-topics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/getTopics.ts#L90">property <b>topics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/getTopics.ts#L107">property <b>topics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topics: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTopicsTopic'>GetTopicsTopic</a>[];</code></pre>
@@ -2474,7 +2610,7 @@ A list of topic names.
 A list of topics. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L143">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -2484,7 +2620,7 @@ A list of topics. Each element contains the following attributes:
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L147">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L147">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2492,7 +2628,7 @@ The set of arguments for constructing a Group resource.
 Name of the group. Two groups on a single instance cannot have the same name. A `groupId` starts with "GID_" or "GID-", and contains letters, numbers, hyphens (-), and underscores (_).
 
 <h4 class="pdoc-member-header" id="GroupArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L151">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L151">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2500,7 +2636,7 @@ Name of the group. Two groups on a single instance cannot have the same name. A 
 ID of the ONS Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="GroupArgs-readEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L155">property <b>readEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L155">property <b>readEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readEnable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2508,7 +2644,7 @@ ID of the ONS Instance that owns the groups.
 This attribute is used to set the message reading enabled or disabled. It can only be set after the group is used by the client.
 
 <h4 class="pdoc-member-header" id="GroupArgs-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L159">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L159">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2516,7 +2652,7 @@ This attribute is used to set the message reading enabled or disabled. It can on
 This attribute is a concise description of group. The length cannot exceed 256.
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L121">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -2526,7 +2662,7 @@ This attribute is a concise description of group. The length cannot exceed 256.
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L125">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L125">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2534,7 +2670,7 @@ Input properties used for looking up and filtering Group resources.
 Name of the group. Two groups on a single instance cannot have the same name. A `groupId` starts with "GID_" or "GID-", and contains letters, numbers, hyphens (-), and underscores (_).
 
 <h4 class="pdoc-member-header" id="GroupState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L129">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L129">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2542,7 +2678,7 @@ Name of the group. Two groups on a single instance cannot have the same name. A 
 ID of the ONS Instance that owns the groups.
 
 <h4 class="pdoc-member-header" id="GroupState-readEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L133">property <b>readEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L133">property <b>readEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readEnable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2550,7 +2686,7 @@ ID of the ONS Instance that owns the groups.
 This attribute is used to set the message reading enabled or disabled. It can only be set after the group is used by the client.
 
 <h4 class="pdoc-member-header" id="GroupState-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/group.ts#L137">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/group.ts#L137">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2558,7 +2694,7 @@ This attribute is used to set the message reading enabled or disabled. It can on
 This attribute is a concise description of group. The length cannot exceed 256.
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L182">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -2567,24 +2703,46 @@ This attribute is a concise description of group. The length cannot exceed 256.
 
 The set of arguments for constructing a Instance resource.
 
-<h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L147">property <b>name</b></a>
+<h4 class="pdoc-member-header" id="InstanceArgs-instanceName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L186">property <b>instanceName</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Two instances on a single account in the same region cannot have the same name. The length must be 3 to 64 characters. Chinese characters, English letters digits and hyphen are allowed.
 
+<h4 class="pdoc-member-header" id="InstanceArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L192">property <b>name</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.97.0. Use &#39;instance_name&#39; instead.
+</div>
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Replaced by `instanceName` after version 1.97.0.
+
 <h4 class="pdoc-member-header" id="InstanceArgs-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L151">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L196">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 This attribute is a concise description of instance. The length cannot exceed 128.
 
+<h4 class="pdoc-member-header" id="InstanceArgs-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L202">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+
+A mapping of tags to assign to the resource.
+- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
+- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L140">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -2593,8 +2751,16 @@ This attribute is a concise description of instance. The length cannot exceed 12
 
 Input properties used for looking up and filtering Instance resources.
 
+<h4 class="pdoc-member-header" id="InstanceState-instanceName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L144">property <b>instanceName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>instanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Two instances on a single account in the same region cannot have the same name. The length must be 3 to 64 characters. Chinese characters, English letters digits and hyphen are allowed.
+
 <h4 class="pdoc-member-header" id="InstanceState-instanceStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L121">property <b>instanceStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L148">property <b>instanceStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2602,7 +2768,7 @@ Input properties used for looking up and filtering Instance resources.
 The status of instance. 1 represents the platinum edition instance is in deployment. 2 represents the postpaid edition instance are overdue. 5 represents the postpaid or platinum edition instance is in service. 7 represents the platinum version instance is in upgrade and the service is available.
 
 <h4 class="pdoc-member-header" id="InstanceState-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L125">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L152">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2610,15 +2776,19 @@ The status of instance. 1 represents the platinum edition instance is in deploym
 The edition of instance. 1 represents the postPaid edition, and 2 represents the platinum edition.
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L158">property <b>name</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.97.0. Use &#39;instance_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Two instances on a single account in the same region cannot have the same name. The length must be 3 to 64 characters. Chinese characters, English letters digits and hyphen are allowed.
+Replaced by `instanceName` after version 1.97.0.
 
 <h4 class="pdoc-member-header" id="InstanceState-releaseTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L133">property <b>releaseTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L162">property <b>releaseTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2626,15 +2796,33 @@ Two instances on a single account in the same region cannot have the same name. 
 Platinum edition instance expiration time.
 
 <h4 class="pdoc-member-header" id="InstanceState-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/instance.ts#L137">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L166">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 This attribute is a concise description of instance. The length cannot exceed 128.
 
+<h4 class="pdoc-member-header" id="InstanceState-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L170">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The status of instance. 1 represents the platinum edition instance is in deployment. 2 represents the postpaid edition instance are overdue. 5 represents the postpaid or platinum edition instance is in service. 7 represents the platinum version instance is in upgrade and the service is available.
+
+<h4 class="pdoc-member-header" id="InstanceState-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/instance.ts#L176">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+
+A mapping of tags to assign to the resource.
+- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
+- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+
 <h3 class="pdoc-module-header" id="QosArgs" data-link-title="QosArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L101">
         interface <strong>QosArgs</strong>
     </a>
 </h3>
@@ -2644,7 +2832,7 @@ This attribute is a concise description of instance. The length cannot exceed 12
 The set of arguments for constructing a Qos resource.
 
 <h4 class="pdoc-member-header" id="QosArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L105">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2652,7 +2840,7 @@ The set of arguments for constructing a Qos resource.
 The name of the QoS policy to be created. The name can contain 2 to 128 characters including a-z, A-Z, 0-9, periods, underlines, and hyphens. The name must start with an English letter, but cannot start with http:// or https://.
 
 <h3 class="pdoc-module-header" id="QosCarArgs" data-link-title="QosCarArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L212">
         interface <strong>QosCarArgs</strong>
     </a>
 </h3>
@@ -2662,7 +2850,7 @@ The name of the QoS policy to be created. The name can contain 2 to 128 characte
 The set of arguments for constructing a QosCar resource.
 
 <h4 class="pdoc-member-header" id="QosCarArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L216">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L216">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2670,7 +2858,7 @@ The set of arguments for constructing a QosCar resource.
 The description of the QoS speed limiting rule.
 
 <h4 class="pdoc-member-header" id="QosCarArgs-limitType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L220">property <b>limitType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L220">property <b>limitType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limitType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2678,7 +2866,7 @@ The description of the QoS speed limiting rule.
 The speed limiting method. Valid values: Absolute, Percent.
 
 <h4 class="pdoc-member-header" id="QosCarArgs-maxBandwidthAbs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L224">property <b>maxBandwidthAbs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L224">property <b>maxBandwidthAbs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxBandwidthAbs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2686,7 +2874,7 @@ The speed limiting method. Valid values: Absolute, Percent.
 The maximum bandwidth allowed for the stream specified in the quintuple rule. This parameter is required when the value of the LimitType is Absolute.
 
 <h4 class="pdoc-member-header" id="QosCarArgs-maxBandwidthPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L228">property <b>maxBandwidthPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L228">property <b>maxBandwidthPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxBandwidthPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2694,7 +2882,7 @@ The maximum bandwidth allowed for the stream specified in the quintuple rule. Th
 The maximum bandwidth percentage allowed for the stream specified in the quintuple rule. It is based on the maximum upstream bandwidth you set for the associated Smart Access Gateway (SAG) instance.This parameter is required when the value of the LimitType parameter is Percent.
 
 <h4 class="pdoc-member-header" id="QosCarArgs-minBandwidthAbs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L232">property <b>minBandwidthAbs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L232">property <b>minBandwidthAbs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minBandwidthAbs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2702,7 +2890,7 @@ The maximum bandwidth percentage allowed for the stream specified in the quintup
 The minimum bandwidth allowed for the stream specified in the quintuple rule. This parameter is required when the value of the LimitType parameter is Absolute.
 
 <h4 class="pdoc-member-header" id="QosCarArgs-minBandwidthPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L236">property <b>minBandwidthPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L236">property <b>minBandwidthPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minBandwidthPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2710,7 +2898,7 @@ The minimum bandwidth allowed for the stream specified in the quintuple rule. Th
 The minimum bandwidth percentage allowed for the stream specified in the quintuple rule. It is based on the maximum upstream bandwidth you set for the associated SAG instance.This parameter is required when the value of the LimitType parameter is Percent.
 
 <h4 class="pdoc-member-header" id="QosCarArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L240">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L240">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2718,7 +2906,7 @@ The minimum bandwidth percentage allowed for the stream specified in the quintup
 The name of the QoS speed limiting rule..
 
 <h4 class="pdoc-member-header" id="QosCarArgs-percentSourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L244">property <b>percentSourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L244">property <b>percentSourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>percentSourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2726,7 +2914,7 @@ The name of the QoS speed limiting rule..
 The bandwidth type when the speed is limited based on percentage. Valid values: CcnBandwidth, InternetUpBandwidth.The default value is InternetUpBandwidth.
 
 <h4 class="pdoc-member-header" id="QosCarArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L248">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L248">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2734,7 +2922,7 @@ The bandwidth type when the speed is limited based on percentage. Valid values: 
 The priority of the specified stream.
 
 <h4 class="pdoc-member-header" id="QosCarArgs-qosId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L252">property <b>qosId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L252">property <b>qosId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qosId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2742,7 +2930,7 @@ The priority of the specified stream.
 The instance ID of the QoS.
 
 <h3 class="pdoc-module-header" id="QosCarState" data-link-title="QosCarState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L166">
         interface <strong>QosCarState</strong>
     </a>
 </h3>
@@ -2752,7 +2940,7 @@ The instance ID of the QoS.
 Input properties used for looking up and filtering QosCar resources.
 
 <h4 class="pdoc-member-header" id="QosCarState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L170">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L170">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2760,7 +2948,7 @@ Input properties used for looking up and filtering QosCar resources.
 The description of the QoS speed limiting rule.
 
 <h4 class="pdoc-member-header" id="QosCarState-limitType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L174">property <b>limitType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L174">property <b>limitType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limitType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2768,7 +2956,7 @@ The description of the QoS speed limiting rule.
 The speed limiting method. Valid values: Absolute, Percent.
 
 <h4 class="pdoc-member-header" id="QosCarState-maxBandwidthAbs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L178">property <b>maxBandwidthAbs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L178">property <b>maxBandwidthAbs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxBandwidthAbs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2776,7 +2964,7 @@ The speed limiting method. Valid values: Absolute, Percent.
 The maximum bandwidth allowed for the stream specified in the quintuple rule. This parameter is required when the value of the LimitType is Absolute.
 
 <h4 class="pdoc-member-header" id="QosCarState-maxBandwidthPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L182">property <b>maxBandwidthPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L182">property <b>maxBandwidthPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxBandwidthPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2784,7 +2972,7 @@ The maximum bandwidth allowed for the stream specified in the quintuple rule. Th
 The maximum bandwidth percentage allowed for the stream specified in the quintuple rule. It is based on the maximum upstream bandwidth you set for the associated Smart Access Gateway (SAG) instance.This parameter is required when the value of the LimitType parameter is Percent.
 
 <h4 class="pdoc-member-header" id="QosCarState-minBandwidthAbs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L186">property <b>minBandwidthAbs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L186">property <b>minBandwidthAbs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minBandwidthAbs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2792,7 +2980,7 @@ The maximum bandwidth percentage allowed for the stream specified in the quintup
 The minimum bandwidth allowed for the stream specified in the quintuple rule. This parameter is required when the value of the LimitType parameter is Absolute.
 
 <h4 class="pdoc-member-header" id="QosCarState-minBandwidthPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L190">property <b>minBandwidthPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L190">property <b>minBandwidthPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minBandwidthPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2800,7 +2988,7 @@ The minimum bandwidth allowed for the stream specified in the quintuple rule. Th
 The minimum bandwidth percentage allowed for the stream specified in the quintuple rule. It is based on the maximum upstream bandwidth you set for the associated SAG instance.This parameter is required when the value of the LimitType parameter is Percent.
 
 <h4 class="pdoc-member-header" id="QosCarState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2808,7 +2996,7 @@ The minimum bandwidth percentage allowed for the stream specified in the quintup
 The name of the QoS speed limiting rule..
 
 <h4 class="pdoc-member-header" id="QosCarState-percentSourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L198">property <b>percentSourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L198">property <b>percentSourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>percentSourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2816,7 +3004,7 @@ The name of the QoS speed limiting rule..
 The bandwidth type when the speed is limited based on percentage. Valid values: CcnBandwidth, InternetUpBandwidth.The default value is InternetUpBandwidth.
 
 <h4 class="pdoc-member-header" id="QosCarState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L202">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L202">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2824,7 +3012,7 @@ The bandwidth type when the speed is limited based on percentage. Valid values: 
 The priority of the specified stream.
 
 <h4 class="pdoc-member-header" id="QosCarState-qosId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosCar.ts#L206">property <b>qosId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosCar.ts#L206">property <b>qosId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qosId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2832,7 +3020,7 @@ The priority of the specified stream.
 The instance ID of the QoS.
 
 <h3 class="pdoc-module-header" id="QosPolicyArgs" data-link-title="QosPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L235">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L235">
         interface <strong>QosPolicyArgs</strong>
     </a>
 </h3>
@@ -2842,7 +3030,7 @@ The instance ID of the QoS.
 The set of arguments for constructing a QosPolicy resource.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L239">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L239">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2850,7 +3038,7 @@ The set of arguments for constructing a QosPolicy resource.
 The description of the QoS policy.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-destCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L243">property <b>destCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L243">property <b>destCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2858,7 +3046,7 @@ The description of the QoS policy.
 The destination CIDR block.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-destPortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L247">property <b>destPortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L247">property <b>destPortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destPortRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2866,7 +3054,7 @@ The destination CIDR block.
 The destination port range.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L251">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L251">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2874,7 +3062,7 @@ The destination port range.
 The expiration time of the quintuple rule.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-ipProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L255">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L255">property <b>ipProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2882,7 +3070,7 @@ The expiration time of the quintuple rule.
 The transport layer protocol.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L259">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L259">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2890,7 +3078,7 @@ The transport layer protocol.
 The name of the QoS policy.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L263">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L263">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2898,7 +3086,7 @@ The name of the QoS policy.
 The priority of the quintuple rule. A smaller value indicates a higher priority. If the priorities of two quintuple rules are the same, the rule created earlier is applied first.Value range: 1 to 7.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-qosId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L267">property <b>qosId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L267">property <b>qosId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qosId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2906,7 +3094,7 @@ The priority of the quintuple rule. A smaller value indicates a higher priority.
 The instance ID of the QoS policy to which the quintuple rule is created.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-sourceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L271">property <b>sourceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L271">property <b>sourceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2914,7 +3102,7 @@ The instance ID of the QoS policy to which the quintuple rule is created.
 The source CIDR block.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-sourcePortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L275">property <b>sourcePortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L275">property <b>sourcePortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourcePortRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2922,7 +3110,7 @@ The source CIDR block.
 The source port range of the transport layer.
 
 <h4 class="pdoc-member-header" id="QosPolicyArgs-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L279">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L279">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2930,7 +3118,7 @@ The source port range of the transport layer.
 The time when the quintuple rule takes effect.
 
 <h3 class="pdoc-module-header" id="QosPolicyState" data-link-title="QosPolicyState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L185">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L185">
         interface <strong>QosPolicyState</strong>
     </a>
 </h3>
@@ -2940,7 +3128,7 @@ The time when the quintuple rule takes effect.
 Input properties used for looking up and filtering QosPolicy resources.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L189">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L189">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2948,7 +3136,7 @@ Input properties used for looking up and filtering QosPolicy resources.
 The description of the QoS policy.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-destCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L193">property <b>destCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L193">property <b>destCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2956,7 +3144,7 @@ The description of the QoS policy.
 The destination CIDR block.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-destPortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L197">property <b>destPortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L197">property <b>destPortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destPortRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2964,7 +3152,7 @@ The destination CIDR block.
 The destination port range.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L201">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L201">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2972,7 +3160,7 @@ The destination port range.
 The expiration time of the quintuple rule.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-ipProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L205">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L205">property <b>ipProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2980,7 +3168,7 @@ The expiration time of the quintuple rule.
 The transport layer protocol.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L209">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L209">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2988,7 +3176,7 @@ The transport layer protocol.
 The name of the QoS policy.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L213">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L213">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2996,7 +3184,7 @@ The name of the QoS policy.
 The priority of the quintuple rule. A smaller value indicates a higher priority. If the priorities of two quintuple rules are the same, the rule created earlier is applied first.Value range: 1 to 7.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-qosId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L217">property <b>qosId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L217">property <b>qosId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qosId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3004,7 +3192,7 @@ The priority of the quintuple rule. A smaller value indicates a higher priority.
 The instance ID of the QoS policy to which the quintuple rule is created.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-sourceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L221">property <b>sourceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L221">property <b>sourceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3012,7 +3200,7 @@ The instance ID of the QoS policy to which the quintuple rule is created.
 The source CIDR block.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-sourcePortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L225">property <b>sourcePortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L225">property <b>sourcePortRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourcePortRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3020,7 +3208,7 @@ The source CIDR block.
 The source port range of the transport layer.
 
 <h4 class="pdoc-member-header" id="QosPolicyState-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qosPolicy.ts#L229">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qosPolicy.ts#L229">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3028,7 +3216,7 @@ The source port range of the transport layer.
 The time when the quintuple rule takes effect.
 
 <h3 class="pdoc-module-header" id="QosState" data-link-title="QosState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L91">
         interface <strong>QosState</strong>
     </a>
 </h3>
@@ -3038,7 +3226,7 @@ The time when the quintuple rule takes effect.
 Input properties used for looking up and filtering Qos resources.
 
 <h4 class="pdoc-member-header" id="QosState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/qos.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/qos.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3046,7 +3234,7 @@ Input properties used for looking up and filtering Qos resources.
 The name of the QoS policy to be created. The name can contain 2 to 128 characters including a-z, A-Z, 0-9, periods, underlines, and hyphens. The name must start with an English letter, but cannot start with http:// or https://.
 
 <h3 class="pdoc-module-header" id="SnatEntryArgs" data-link-title="SnatEntryArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L134">
         interface <strong>SnatEntryArgs</strong>
     </a>
 </h3>
@@ -3056,7 +3244,7 @@ The name of the QoS policy to be created. The name can contain 2 to 128 characte
 The set of arguments for constructing a SnatEntry resource.
 
 <h4 class="pdoc-member-header" id="SnatEntryArgs-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L138">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L138">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3064,7 +3252,7 @@ The set of arguments for constructing a SnatEntry resource.
 The destination CIDR block.
 
 <h4 class="pdoc-member-header" id="SnatEntryArgs-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L142">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L142">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sagId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3072,7 +3260,7 @@ The destination CIDR block.
 The ID of the SAG instance.
 
 <h4 class="pdoc-member-header" id="SnatEntryArgs-snatIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L146">property <b>snatIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L146">property <b>snatIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snatIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3080,7 +3268,7 @@ The ID of the SAG instance.
 The public IP address.
 
 <h3 class="pdoc-module-header" id="SnatEntryState" data-link-title="SnatEntryState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L116">
         interface <strong>SnatEntryState</strong>
     </a>
 </h3>
@@ -3090,7 +3278,7 @@ The public IP address.
 Input properties used for looking up and filtering SnatEntry resources.
 
 <h4 class="pdoc-member-header" id="SnatEntryState-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L120">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L120">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3098,7 +3286,7 @@ Input properties used for looking up and filtering SnatEntry resources.
 The destination CIDR block.
 
 <h4 class="pdoc-member-header" id="SnatEntryState-sagId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L124">property <b>sagId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L124">property <b>sagId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sagId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3106,7 +3294,7 @@ The destination CIDR block.
 The ID of the SAG instance.
 
 <h4 class="pdoc-member-header" id="SnatEntryState-snatIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/snatEntry.ts#L128">property <b>snatIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/snatEntry.ts#L128">property <b>snatIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snatIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3114,7 +3302,7 @@ The ID of the SAG instance.
 The public IP address.
 
 <h3 class="pdoc-module-header" id="TopicArgs" data-link-title="TopicArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L182">
         interface <strong>TopicArgs</strong>
     </a>
 </h3>
@@ -3124,7 +3312,7 @@ The public IP address.
 The set of arguments for constructing a Topic resource.
 
 <h4 class="pdoc-member-header" id="TopicArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L161">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L186">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3132,7 +3320,7 @@ The set of arguments for constructing a Topic resource.
 ID of the ONS Instance that owns the topics.
 
 <h4 class="pdoc-member-header" id="TopicArgs-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L165">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L190">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3140,7 +3328,7 @@ ID of the ONS Instance that owns the topics.
 The type of the message. Read [Ons Topic Create](https://www.alibabacloud.com/help/doc-detail/29591.html) for further details.
 
 <h4 class="pdoc-member-header" id="TopicArgs-perm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L169">property <b>perm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L194">property <b>perm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>perm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3148,23 +3336,45 @@ The type of the message. Read [Ons Topic Create](https://www.alibabacloud.com/he
 This attribute is used to set the read-write mode for the topic. Read [Request parameters](https://www.alibabacloud.com/help/doc-detail/56880.html) for further details.
 
 <h4 class="pdoc-member-header" id="TopicArgs-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L173">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L198">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 This attribute is a concise description of topic. The length cannot exceed 128.
 
-<h4 class="pdoc-member-header" id="TopicArgs-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L177">property <b>topic</b></a>
+<h4 class="pdoc-member-header" id="TopicArgs-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L204">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+
+A mapping of tags to assign to the resource.
+- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
+- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+
+<h4 class="pdoc-member-header" id="TopicArgs-topic">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L210">property <b>topic</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;topic&#39; has been deprecated from version 1.97.0. Use &#39;topic_name&#39; instead.
+</div>
+<pre class="highlight"><code><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Replaced by `topicName` after version 1.97.0.
+
+<h4 class="pdoc-member-header" id="TopicArgs-topicName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L214">property <b>topicName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Name of the topic. Two topics on a single instance cannot have the same name and the name cannot start with 'GID' or 'CID'. The length cannot exceed 64 characters.
 
 <h3 class="pdoc-module-header" id="TopicState" data-link-title="TopicState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L144">
         interface <strong>TopicState</strong>
     </a>
 </h3>
@@ -3174,7 +3384,7 @@ Name of the topic. Two topics on a single instance cannot have the same name and
 Input properties used for looking up and filtering Topic resources.
 
 <h4 class="pdoc-member-header" id="TopicState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L135">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L148">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3182,7 +3392,7 @@ Input properties used for looking up and filtering Topic resources.
 ID of the ONS Instance that owns the topics.
 
 <h4 class="pdoc-member-header" id="TopicState-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L139">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L152">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3190,7 +3400,7 @@ ID of the ONS Instance that owns the topics.
 The type of the message. Read [Ons Topic Create](https://www.alibabacloud.com/help/doc-detail/29591.html) for further details.
 
 <h4 class="pdoc-member-header" id="TopicState-perm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L143">property <b>perm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L156">property <b>perm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>perm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3198,18 +3408,40 @@ The type of the message. Read [Ons Topic Create](https://www.alibabacloud.com/he
 This attribute is used to set the read-write mode for the topic. Read [Request parameters](https://www.alibabacloud.com/help/doc-detail/56880.html) for further details.
 
 <h4 class="pdoc-member-header" id="TopicState-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L147">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L160">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 This attribute is a concise description of topic. The length cannot exceed 128.
 
-<h4 class="pdoc-member-header" id="TopicState-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/rocketmq/topic.ts#L151">property <b>topic</b></a>
+<h4 class="pdoc-member-header" id="TopicState-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L166">property <b>tags</b></a>
 </h4>
 
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+
+A mapping of tags to assign to the resource.
+- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
+- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+
+<h4 class="pdoc-member-header" id="TopicState-topic">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L172">property <b>topic</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;topic&#39; has been deprecated from version 1.97.0. Use &#39;topic_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Replaced by `topicName` after version 1.97.0.
+
+<h4 class="pdoc-member-header" id="TopicState-topicName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/rocketmq/topic.ts#L176">property <b>topicName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Name of the topic. Two topics on a single instance cannot have the same name and the name cannot start with 'GID' or 'CID'. The length cannot exceed 64 characters.
 

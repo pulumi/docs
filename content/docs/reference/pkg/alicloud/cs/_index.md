@@ -16,6 +16,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
     <li><a href="kubernetes" title="Kubernetes"><span class="symbol resource"></span>Kubernetes</a></li>
     <li><a href="kubernetesautoscaler" title="KubernetesAutoscaler"><span class="symbol resource"></span>KubernetesAutoscaler</a></li>
     <li><a href="managedkubernetes" title="ManagedKubernetes"><span class="symbol resource"></span>ManagedKubernetes</a></li>
+    <li><a href="nodepool" title="NodePool"><span class="symbol resource"></span>NodePool</a></li>
     <li><a href="registryenterprisenamespace" title="RegistryEnterpriseNamespace"><span class="symbol resource"></span>RegistryEnterpriseNamespace</a></li>
     <li><a href="registryenterpriserepo" title="RegistryEnterpriseRepo"><span class="symbol resource"></span>RegistryEnterpriseRepo</a></li>
     <li><a href="registryenterprisesyncrule" title="RegistryEnterpriseSyncRule"><span class="symbol resource"></span>RegistryEnterpriseSyncRule</a></li>
@@ -43,7 +44,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.17.0</dd>
+	<dd>2.18.0</dd>
 </dl>
 
 

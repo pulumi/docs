@@ -28,7 +28,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var tablesDs = Output.Create(AliCloud.Oss.GetTables.InvokeAsync(new AliCloud.Oss.GetTablesArgs
+        var tablesDs = Output.Create(AliCloud.Ots.GetTables.InvokeAsync(new AliCloud.Ots.GetTablesArgs
         {
             InstanceName = "sample-instance",
             NameRegex = "sample-table",
@@ -49,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -57,7 +57,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "sample-table"
 		opt1 := "tables.txt"
-		tablesDs, err := oss.GetTables(ctx, &oss.GetTablesArgs{
+		tablesDs, err := ots.GetTables(ctx, &ots.GetTablesArgs{
 			InstanceName: "sample-instance",
 			NameRegex:    &opt0,
 			OutputFile:   &opt1,
@@ -78,7 +78,7 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-tables_ds = alicloud.oss.get_tables(instance_name="sample-instance",
+tables_ds = alicloud.ots.get_tables(instance_name="sample-instance",
     name_regex="sample-table",
     output_file="tables.txt")
 pulumi.export("firstTableId", tables_ds.tables[0].id)
@@ -92,7 +92,7 @@ pulumi.export("firstTableId", tables_ds.tables[0].id)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const tablesDs = pulumi.output(alicloud.oss.getTables({
+const tablesDs = pulumi.output(alicloud.ots.getTables({
     instanceName: "sample-instance",
     nameRegex: "sample-table",
     outputFile: "tables.txt",
@@ -104,6 +104,7 @@ export const firstTableId = tablesDs.tables[0].id;
 {{% /example %}}
 
 {{% /examples %}}
+<p class="resource-deprecated">Deprecated: {{% md %}}alicloud.oss.getTables has been deprecated in favor of alicloud.ots.getTables{{% /md %}}</p>
 
 
 ## Using GetTables {#using}

@@ -44,6 +44,7 @@ class MyStack : Stack
         {
             InstanceId = defaultInstance.Id,
             ChildInstanceId = defaultNetwork.Id,
+            ChildInstanceType = "VPC",
             ChildInstanceRegionId = "cn-hangzhou",
         }, new CustomResourceOptions
         {
@@ -98,6 +99,7 @@ func main() {
 		defaultInstanceAttachment, err := cen.NewInstanceAttachment(ctx, "defaultInstanceAttachment", &cen.InstanceAttachmentArgs{
 			InstanceId:            defaultInstance.ID(),
 			ChildInstanceId:       defaultNetwork.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
 			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
 		}, pulumi.DependsOn([]pulumi.Resource{
 			defaultInstance,
@@ -135,6 +137,7 @@ default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/
 default_instance_attachment = alicloud.cen.InstanceAttachment("defaultInstanceAttachment",
     instance_id=default_instance.id,
     child_instance_id=default_network.id,
+    child_instance_type="VPC",
     child_instance_region_id="cn-hangzhou",
     opts=ResourceOptions(depends_on=[
             default_instance,
@@ -162,6 +165,7 @@ const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "1
 const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("defaultInstanceAttachment", {
     instanceId: defaultInstance.id,
     childInstanceId: defaultNetwork.id,
+    childInstanceType: "VPC",
     childInstanceRegionId: "cn-hangzhou",
 }, {
     dependsOn: [

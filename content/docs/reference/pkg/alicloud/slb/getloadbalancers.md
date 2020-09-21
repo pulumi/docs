@@ -26,6 +26,9 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var @default = new AliCloud.Slb.LoadBalancer("default", new AliCloud.Slb.LoadBalancerArgs
+        {
+        });
         var slbsDs = Output.Create(AliCloud.Slb.GetLoadBalancers.InvokeAsync(new AliCloud.Slb.GetLoadBalancersArgs
         {
             NameRegex = "sample_slb",
@@ -51,6 +54,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := slb.NewLoadBalancer(ctx, "_default", nil)
+		if err != nil {
+			return err
+		}
 		opt0 := "sample_slb"
 		slbsDs, err := slb.GetLoadBalancers(ctx, &slb.GetLoadBalancersArgs{
 			NameRegex: &opt0,
@@ -71,6 +78,7 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
+default = alicloud.slb.LoadBalancer("default")
 slbs_ds = alicloud.slb.get_load_balancers(name_regex="sample_slb")
 pulumi.export("firstSlbId", slbs_ds.slbs[0].id)
 ```
@@ -83,11 +91,11 @@ pulumi.export("firstSlbId", slbs_ds.slbs[0].id)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const slbsDs = pulumi.output(alicloud.slb.getLoadBalancers({
+const _default = new alicloud.slb.LoadBalancer("default", {});
+const slbsDs = alicloud.slb.getLoadBalancers({
     nameRegex: "sample_slb",
-}, { async: true }));
-
-export const firstSlbId = slbsDs.slbs[0].id;
+});
+export const firstSlbId = slbsDs.then(slbsDs => slbsDs.slbs[0].id);
 ```
 
 {{% /example %}}
