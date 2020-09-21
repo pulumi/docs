@@ -33,7 +33,7 @@ Install the Auth0 provider SDK:
 $ npm add @pulumi/auth0
 ```
 
-Create the Auth0 resources in index.ts as shown in the example below.
+Create the Auth0 resources in `index.ts` you created as shown in the example below.
 
 ## Configure the credentials
 
