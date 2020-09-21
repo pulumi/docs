@@ -27,7 +27,7 @@ meta_desc: "Explore the GetGlobalClusterConfig function of the MongoDB Atlas pac
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_global_cluster_config(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_namespaces</span><span class="p">:</span> <span class="nx">Optional[List[GetGlobalClusterConfigManagedNamespaceArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGlobalClusterConfigResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_global_cluster_config(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetGlobalClusterConfigManagedNamespaceArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGlobalClusterConfigResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -202,7 +202,7 @@ The following arguments are supported:
 <a href="#managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">List[Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">Sequence[Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd>
@@ -445,7 +445,7 @@ The following output properties are available:
 <a href="#managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">List[Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace]</a></span>
+        <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">Sequence[Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd>

@@ -200,7 +200,7 @@ const test = pulumi.all([testRole.projectId, testRole.roleName]).apply(([project
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_custom_db_role(</span><span class="nx">inherited_roles</span><span class="p">:</span> <span class="nx">Optional[List[GetCustomDbRoleInheritedRoleArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCustomDbRoleResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_custom_db_role(</span><span class="nx">inherited_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetCustomDbRoleInheritedRoleArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCustomDbRoleResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -372,7 +372,7 @@ The following arguments are supported:
 <a href="#inherited_roles_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbroleinheritedrole">List[Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcustomdbroleinheritedrole">Sequence[Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -576,7 +576,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbroleaction">List[Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Action]</a></span>
+        <span class="property-type"><a href="#getcustomdbroleaction">Sequence[Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -617,7 +617,7 @@ The following output properties are available:
 <a href="#inherited_roles_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbroleinheritedrole">List[Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role]</a></span>
+        <span class="property-type"><a href="#getcustomdbroleinheritedrole">Sequence[Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -756,7 +756,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbroleactionresource">List[Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcustomdbroleactionresource">Sequence[Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Required) Contains information on where the action is granted. Each object in the array either indicates a database and collection on which the action is granted, or indicates that the action is granted on the cluster resource.
 {{% /md %}}</dd>

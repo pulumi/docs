@@ -666,7 +666,7 @@ The following output properties are available:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#get509authenticationdatabaseusercertificate">List[Get509Authentication<wbr>Database<wbr>User<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#get509authenticationdatabaseusercertificate">Sequence[Get509Authentication<wbr>Database<wbr>User<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects where each details one unexpired database user certificate.
 {{% /md %}}</dd>
@@ -940,7 +940,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

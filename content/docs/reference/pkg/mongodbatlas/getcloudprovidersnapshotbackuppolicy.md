@@ -577,7 +577,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcloudprovidersnapshotbackuppolicypolicy">List[Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getcloudprovidersnapshotbackuppolicypolicy">Sequence[Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}A list of policy definitions for the cluster.
 * `policies.#.id` - Unique identifier of the backup policy.
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#reference_hour_of_day_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>hour_<wbr>of_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23 representing which hour of the day that Atlas takes a snapshot.
 {{% /md %}}</dd>
@@ -610,7 +610,7 @@ The following output properties are available:
 <a href="#reference_minute_of_hour_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>minute_<wbr>of_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}UTC Minute of day between 0 and 59 representing which minute of the referenceHourOfDay that Atlas takes the snapshot.
 {{% /md %}}</dd>
@@ -621,7 +621,7 @@ The following output properties are available:
 <a href="#restore_window_days_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>window_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies a restore window in days for cloud backup to maintain.
 {{% /md %}}</dd>
@@ -764,7 +764,7 @@ The following output properties are available:
 <a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcloudprovidersnapshotbackuppolicypolicypolicyitem">List[Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcloudprovidersnapshotbackuppolicypolicypolicyitem">Sequence[Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -970,7 +970,7 @@ The following output properties are available:
 <a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1010,7 +1010,7 @@ The following output properties are available:
 <a href="#retention_value_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

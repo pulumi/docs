@@ -14,6 +14,93 @@ meta_desc: "Explore the GetProject function of the MongoDB Atlas package, includ
 
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Using project_id attribute to query
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testMongodbatlasProject = new mongodbatlas.Project("test", {
+    orgId: "<ORG_ID>",
+    teams: [
+        {
+            roleNames: ["GROUP_OWNER"],
+            teamId: "5e0fa8c99ccf641c722fe645",
+        },
+        {
+            roleNames: [
+                "GROUP_READ_ONLY",
+                "GROUP_DATA_ACCESS_READ_WRITE",
+            ],
+            teamId: "5e1dd7b4f2a30ba80a70cd4rw",
+        },
+    ],
+});
+const testProject = testMongodbatlasProject.id.apply(id => mongodbatlas.getProject({
+    projectId: id,
+}, { async: true }));
+```
+
+{{% /example %}}
+
+### Using name attribute to query
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testMongodbatlasProject = new mongodbatlas.Project("test", {
+    orgId: "<ORG_ID>",
+    teams: [
+        {
+            roleNames: ["GROUP_OWNER"],
+            teamId: "5e0fa8c99ccf641c722fe645",
+        },
+        {
+            roleNames: [
+                "GROUP_READ_ONLY",
+                "GROUP_DATA_ACCESS_READ_WRITE",
+            ],
+            teamId: "5e1dd7b4f2a30ba80a70cd4rw",
+        },
+    ],
+});
+const testProject = testMongodbatlasProject.name.apply(name => mongodbatlas.getProject({
+    name: name,
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetProject {#using}
@@ -462,7 +549,7 @@ The following are valid roles:
 <a href="#cluster_count_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -515,7 +602,7 @@ The following are valid roles:
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectteam">List[Get<wbr>Project<wbr>Team]</a></span>
+        <span class="property-type"><a href="#getprojectteam">Sequence[Get<wbr>Project<wbr>Team]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -658,7 +745,7 @@ The following are valid roles:
 <a href="#role_names_python" style="color: inherit; text-decoration: inherit;">role_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

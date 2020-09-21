@@ -22,7 +22,7 @@ meta_desc: "Explore the CloudProviderSnapshotBackupPolicy resource of the MongoD
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.CloudProviderSnapshotBackupPolicy">CloudProviderSnapshotBackupPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[CloudProviderSnapshotBackupPolicyPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reference_hour_of_day</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">reference_minute_of_hour</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">restore_window_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">update_snapshots</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.CloudProviderSnapshotBackupPolicy">CloudProviderSnapshotBackupPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[CloudProviderSnapshotBackupPolicyPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reference_hour_of_day</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">reference_minute_of_hour</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">restore_window_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">update_snapshots</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -466,7 +466,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">Sequence[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
@@ -489,7 +489,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 <a href="#reference_hour_of_day_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>hour_<wbr>of_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 <a href="#reference_minute_of_hour_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>minute_<wbr>of_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.
 {{% /md %}}</dd>
@@ -511,7 +511,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 <a href="#restore_window_days_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>window_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.
 {{% /md %}}</dd>
@@ -714,7 +714,7 @@ Get an existing CloudProviderSnapshotBackupPolicy resource's state with the give
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[CloudProviderSnapshotBackupPolicyPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reference_hour_of_day</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">reference_minute_of_hour</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">restore_window_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">update_snapshots</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> CloudProviderSnapshotBackupPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[CloudProviderSnapshotBackupPolicyPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reference_hour_of_day</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">reference_minute_of_hour</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">restore_window_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">update_snapshots</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> CloudProviderSnapshotBackupPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1188,7 +1188,7 @@ The following state arguments are supported:
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicy">Sequence[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
@@ -1211,7 +1211,7 @@ The following state arguments are supported:
 <a href="#state_reference_hour_of_day_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>hour_<wbr>of_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.
 {{% /md %}}</dd>
@@ -1222,7 +1222,7 @@ The following state arguments are supported:
 <a href="#state_reference_minute_of_hour_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>minute_<wbr>of_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.
 {{% /md %}}</dd>
@@ -1233,7 +1233,7 @@ The following state arguments are supported:
 <a href="#state_restore_window_days_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>window_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.
 {{% /md %}}</dd>
@@ -1379,7 +1379,7 @@ The following state arguments are supported:
 <a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">List[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">Sequence[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1585,7 +1585,7 @@ The following state arguments are supported:
 <a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1625,7 +1625,7 @@ The following state arguments are supported:
 <a href="#retention_value_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

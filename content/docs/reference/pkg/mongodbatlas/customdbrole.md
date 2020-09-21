@@ -528,7 +528,7 @@ const testRole = new mongodbatlas.CustomDbRole("test_role", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.CustomDbRole">CustomDbRole</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[CustomDbRoleActionArgs]]</span> = None<span class="p">, </span><span class="nx">inherited_roles</span><span class="p">:</span> <span class="nx">Optional[List[CustomDbRoleInheritedRoleArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.CustomDbRole">CustomDbRole</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomDbRoleActionArgs]]</span> = None<span class="p">, </span><span class="nx">inherited_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomDbRoleInheritedRoleArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -875,7 +875,7 @@ The CustomDbRole resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdbroleaction">List[Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customdbroleaction">Sequence[Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -885,7 +885,7 @@ The CustomDbRole resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#inherited_roles_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdbroleinheritedrole">List[Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customdbroleinheritedrole">Sequence[Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -988,7 +988,7 @@ Get an existing CustomDbRole resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[CustomDbRoleActionArgs]]</span> = None<span class="p">, </span><span class="nx">inherited_roles</span><span class="p">:</span> <span class="nx">Optional[List[CustomDbRoleInheritedRoleArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomDbRole</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomDbRoleActionArgs]]</span> = None<span class="p">, </span><span class="nx">inherited_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomDbRoleInheritedRoleArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomDbRole</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1255,7 +1255,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdbroleaction">List[Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customdbroleaction">Sequence[Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1265,7 +1265,7 @@ The following state arguments are supported:
 <a href="#state_inherited_roles_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdbroleinheritedrole">List[Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customdbroleinheritedrole">Sequence[Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1432,7 +1432,7 @@ The following state arguments are supported:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdbroleactionresource">List[Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customdbroleactionresource">Sequence[Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains information on where the action is granted. Each object in the array either indicates a database and collection on which the action is granted, or indicates that the action is granted on the cluster resource.
 {{% /md %}}</dd>

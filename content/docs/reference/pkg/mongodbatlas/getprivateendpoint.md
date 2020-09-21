@@ -14,6 +14,43 @@ meta_desc: "Explore the GetPrivateEndpoint function of the MongoDB Atlas package
 
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testMongodbatlasPrivateEndpoint = new mongodbatlas.PrivateEndpoint("test", {
+    projectId: "<PROJECT-ID>",
+    providerName: "AWS",
+    region: "us-east-1",
+});
+const testPrivateEndpoint = pulumi.all([testMongodbatlasPrivateEndpoint.privateLinkId, testMongodbatlasPrivateEndpoint.projectId]).apply(([privateLinkId, projectId]) => mongodbatlas.getPrivateEndpoint({
+    privateLinkId: privateLinkId,
+    projectId: projectId,
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetPrivateEndpoint {#using}
@@ -471,7 +508,7 @@ Returns one of the following values:
 <a href="#interface_endpoints_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
 {{% /md %}}</dd>

@@ -1636,7 +1636,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterlabel">List[Get<wbr>Cluster<wbr>Label]</a></span>
+        <span class="property-type"><a href="#getclusterlabel">Sequence[Get<wbr>Cluster<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1712,7 +1712,7 @@ The following output properties are available:
 <a href="#num_shards_python" style="color: inherit; text-decoration: inherit;">num_<wbr>shards</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone.
 {{% /md %}}</dd>
@@ -1788,7 +1788,7 @@ The following output properties are available:
 <a href="#provider_disk_iops_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>disk_<wbr>iops</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Indicates the maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected providerSettings.instanceSizeName and diskSizeGB.
 {{% /md %}}</dd>
@@ -1865,7 +1865,7 @@ The following output properties are available:
 <a href="#replication_factor_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
 {{% /md %}}</dd>
@@ -1876,7 +1876,7 @@ The following output properties are available:
 <a href="#replication_specs_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterreplicationspec">List[Get<wbr>Cluster<wbr>Replication<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#getclusterreplicationspec">Sequence[Get<wbr>Cluster<wbr>Replication<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
 {{% /md %}}</dd>
@@ -1887,7 +1887,7 @@ The following output properties are available:
 <a href="#snapshot_backup_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>backup_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersnapshotbackuppolicy">List[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getclustersnapshotbackuppolicy">Sequence[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
 {{% /md %}}</dd>
@@ -2675,7 +2675,7 @@ The following output properties are available:
 <a href="#num_shards_python" style="color: inherit; text-decoration: inherit;">num_<wbr>shards</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone.
 {{% /md %}}</dd>
@@ -2686,7 +2686,7 @@ The following output properties are available:
 <a href="#regions_configs_python" style="color: inherit; text-decoration: inherit;">regions_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusterreplicationspecregionsconfig">List[Get<wbr>Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclusterreplicationspecregionsconfig">Sequence[Get<wbr>Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
 {{% /md %}}</dd>
@@ -2919,7 +2919,7 @@ The following output properties are available:
 <a href="#analytics_nodes_python" style="color: inherit; text-decoration: inherit;">analytics_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Indicates the number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary.
 {{% /md %}}</dd>
@@ -2930,7 +2930,7 @@ The following output properties are available:
 <a href="#electable_nodes_python" style="color: inherit; text-decoration: inherit;">electable_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of electable nodes for Atlas to deploy to the region.
 {{% /md %}}</dd>
@@ -2941,7 +2941,7 @@ The following output properties are available:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Election priority of the region. For regions with only read-only nodes, set this value to 0.
 {{% /md %}}</dd>
@@ -2952,7 +2952,7 @@ The following output properties are available:
 <a href="#read_only_nodes_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.
 {{% /md %}}</dd>
@@ -3290,7 +3290,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicy">List[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicy">Sequence[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3300,7 +3300,7 @@ The following output properties are available:
 <a href="#reference_hour_of_day_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>hour_<wbr>of_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3310,7 +3310,7 @@ The following output properties are available:
 <a href="#reference_minute_of_hour_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>minute_<wbr>of_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3320,7 +3320,7 @@ The following output properties are available:
 <a href="#restore_window_days_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>window_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3460,7 +3460,7 @@ The following output properties are available:
 <a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicypolicyitem">List[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersnapshotbackuppolicypolicypolicyitem">Sequence[Get<wbr>Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3669,7 +3669,7 @@ The following output properties are available:
 <a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3710,7 +3710,7 @@ The following output properties are available:
 <a href="#retention_value_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

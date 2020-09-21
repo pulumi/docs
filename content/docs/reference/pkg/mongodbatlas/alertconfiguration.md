@@ -213,7 +213,7 @@ const test = new mongodbatlas.AlertConfiguration("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.AlertConfiguration">AlertConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">matchers</span><span class="p">:</span> <span class="nx">Optional[List[AlertConfigurationMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">metric_threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationMetricThresholdArgs]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[List[AlertConfigurationNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationThresholdArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.AlertConfiguration">AlertConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertConfigurationMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">metric_threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationMetricThresholdArgs]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertConfigurationNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationThresholdArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -645,7 +645,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationnotification">List[Alert<wbr>Configuration<wbr>Notification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertconfigurationnotification">Sequence[Alert<wbr>Configuration<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -677,7 +677,7 @@ The AlertConfiguration resource accepts the following [input]({{< relref "/docs/
 <a href="#matchers_python" style="color: inherit; text-decoration: inherit;">matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmatcher">List[Alert<wbr>Configuration<wbr>Matcher<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertconfigurationmatcher">Sequence[Alert<wbr>Configuration<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -933,7 +933,7 @@ Get an existing AlertConfiguration resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">matchers</span><span class="p">:</span> <span class="nx">Optional[List[AlertConfigurationMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">metric_threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationMetricThresholdArgs]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[List[AlertConfigurationNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationThresholdArgs]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AlertConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertConfigurationMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">metric_threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationMetricThresholdArgs]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertConfigurationNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[AlertConfigurationThresholdArgs]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AlertConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1439,7 +1439,7 @@ The following state arguments are supported:
 <a href="#state_matchers_python" style="color: inherit; text-decoration: inherit;">matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationmatcher">List[Alert<wbr>Configuration<wbr>Matcher<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertconfigurationmatcher">Sequence[Alert<wbr>Configuration<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1459,7 +1459,7 @@ The following state arguments are supported:
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconfigurationnotification">List[Alert<wbr>Configuration<wbr>Notification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertconfigurationnotification">Sequence[Alert<wbr>Configuration<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2891,7 +2891,7 @@ Accepted values are:
 <a href="#delay_min_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait after an alert condition is detected before sending out the first notification.
 {{% /md %}}</dd>
@@ -2946,7 +2946,7 @@ Accepted values are:
 <a href="#interval_min_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved. The minimum value is 5.
 {{% /md %}}</dd>
@@ -3001,7 +3001,7 @@ Accepted values are:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -471,7 +471,7 @@ The following output properties are available:
 <a href="#results_python" style="color: inherit; text-decoration: inherit;">results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnetworkcontainersresult">List[Get<wbr>Network<wbr>Containers<wbr>Result]</a></span>
+        <span class="property-type"><a href="#getnetworkcontainersresult">Sequence[Get<wbr>Network<wbr>Containers<wbr>Result]</a></span>
     </dt>
     <dd>{{% md %}}A list where each represents a Network Peering Container.
 {{% /md %}}</dd>

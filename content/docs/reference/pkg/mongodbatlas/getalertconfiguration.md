@@ -14,6 +14,62 @@ meta_desc: "Explore the GetAlertConfiguration function of the MongoDB Atlas pack
 
 > **NOTE:** Groups and projects are synonymous terms. You may find **group_id** in the official documentation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testMongodbatlasAlertConfiguration = new mongodbatlas.AlertConfiguration("test", {
+    enabled: true,
+    eventType: "OUTSIDE_METRIC_THRESHOLD",
+    matchers: [{
+        fieldName: "HOSTNAME_AND_PORT",
+        operator: "EQUALS",
+        value: "SECONDARY",
+    }],
+    metricThreshold: {
+        metric_name: "ASSERT_REGULAR",
+        mode: "AVERAGE",
+        operator: "LESS_THAN",
+        threshold: 99,
+        units: "RAW",
+    },
+    notifications: [{
+        delayMin: 0,
+        emailEnabled: true,
+        intervalMin: 5,
+        smsEnabled: false,
+        typeName: "GROUP",
+    }],
+    projectId: "<PROJECT-ID>",
+});
+const testAlertConfiguration = pulumi.all([testMongodbatlasAlertConfiguration.alertConfigurationId, testMongodbatlasAlertConfiguration.projectId]).apply(([alertConfigurationId, projectId]) => mongodbatlas.getAlertConfiguration({
+    alertConfigurationId: alertConfigurationId,
+    projectId: projectId,
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAlertConfiguration {#using}
@@ -612,7 +668,7 @@ The following output properties are available:
 <a href="#matchers_python" style="color: inherit; text-decoration: inherit;">matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getalertconfigurationmatcher">List[Get<wbr>Alert<wbr>Configuration<wbr>Matcher]</a></span>
+        <span class="property-type"><a href="#getalertconfigurationmatcher">Sequence[Get<wbr>Alert<wbr>Configuration<wbr>Matcher]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -632,7 +688,7 @@ The following output properties are available:
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getalertconfigurationnotification">List[Get<wbr>Alert<wbr>Configuration<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#getalertconfigurationnotification">Sequence[Get<wbr>Alert<wbr>Configuration<wbr>Notification]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2091,7 +2147,7 @@ Accepted values are:
 <a href="#delay_min_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait after an alert condition is detected before sending out the first notification.
 {{% /md %}}</dd>
@@ -2146,7 +2202,7 @@ Accepted values are:
 <a href="#interval_min_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>min</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved. The minimum value is 5.
 {{% /md %}}</dd>
@@ -2292,7 +2348,7 @@ Accepted values are:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

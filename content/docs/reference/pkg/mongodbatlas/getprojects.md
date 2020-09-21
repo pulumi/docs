@@ -14,6 +14,54 @@ meta_desc: "Explore the GetProjects function of the MongoDB Atlas package, inclu
 
 > **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testMongodbatlasProject = new mongodbatlas.Project("test", {
+    orgId: "<ORG_ID>",
+    teams: [
+        {
+            roleNames: ["GROUP_OWNER"],
+            teamId: "5e0fa8c99ccf641c722fe645",
+        },
+        {
+            roleNames: [
+                "GROUP_READ_ONLY",
+                "GROUP_DATA_ACCESS_READ_WRITE",
+            ],
+            teamId: "5e1dd7b4f2a30ba80a70cd4rw",
+        },
+    ],
+});
+const testProject = pulumi.output(mongodbatlas.getProject({
+    itemsPerPage: 5,
+    pageNum: 1,
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetProjects {#using}
@@ -27,7 +75,7 @@ meta_desc: "Explore the GetProjects function of the MongoDB Atlas package, inclu
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_projects(</span><span class="nx">items_per_page</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">page_num</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_projects(</span><span class="nx">items_per_page</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">page_num</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -145,7 +193,7 @@ The following arguments are supported:
 <a href="#items_per_page_python" style="color: inherit; text-decoration: inherit;">items_<wbr>per_<wbr>page</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of items to return per page, up to a maximum of 500. Defaults to `100`.
 {{% /md %}}</dd>
@@ -156,7 +204,7 @@ The following arguments are supported:
 <a href="#page_num_python" style="color: inherit; text-decoration: inherit;">page_<wbr>num</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The page to return. Defaults to `1`.
 {{% /md %}}</dd>
@@ -372,7 +420,7 @@ The following output properties are available:
 <a href="#results_python" style="color: inherit; text-decoration: inherit;">results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsresult">List[Get<wbr>Projects<wbr>Result]</a></span>
+        <span class="property-type"><a href="#getprojectsresult">Sequence[Get<wbr>Projects<wbr>Result]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -382,7 +430,7 @@ The following output properties are available:
 <a href="#total_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -392,7 +440,7 @@ The following output properties are available:
 <a href="#items_per_page_python" style="color: inherit; text-decoration: inherit;">items_<wbr>per_<wbr>page</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -402,7 +450,7 @@ The following output properties are available:
 <a href="#page_num_python" style="color: inherit; text-decoration: inherit;">page_<wbr>num</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -686,7 +734,7 @@ The following are valid roles:
 <a href="#cluster_count_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -750,7 +798,7 @@ The following are valid roles:
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprojectsresultteam">List[Get<wbr>Projects<wbr>Result<wbr>Team<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getprojectsresultteam">Sequence[Get<wbr>Projects<wbr>Result<wbr>Team<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -866,7 +914,7 @@ The following are valid roles:
 <a href="#role_names_python" style="color: inherit; text-decoration: inherit;">role_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

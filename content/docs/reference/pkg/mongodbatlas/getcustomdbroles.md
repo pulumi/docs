@@ -424,7 +424,7 @@ The following output properties are available:
 <a href="#results_python" style="color: inherit; text-decoration: inherit;">results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresult">List[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result]</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresult">Sequence[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result]</a></span>
     </dt>
     <dd>{{% md %}}A list where each represents a custom db roles.
 {{% /md %}}</dd>
@@ -577,7 +577,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultaction">List[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultaction">Sequence[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -587,7 +587,7 @@ The following output properties are available:
 <a href="#inherited_roles_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultinheritedrole">List[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultinheritedrole">Sequence[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Inherited<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -730,7 +730,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcustomdbrolesresultactionresource">List[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcustomdbrolesresultactionresource">Sequence[Get<wbr>Custom<wbr>Db<wbr>Roles<wbr>Result<wbr>Action<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Required) Contains information on where the action is granted. Each object in the array either indicates a database and collection on which the action is granted, or indicates that the action is granted on the cluster resource.
 {{% /md %}}</dd>
