@@ -63,19 +63,4 @@ Explore the resources and functions of the media module in the Azure NextGen pac
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Media.html" title="Pulumi.AzureNextGen.Media">Pulumi.AzureNextGen.Media</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/media?tab=doc#" title="azure/media">azure/media</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/media/#" title="@pulumi/azure-nextgen/media">@pulumi/azure-nextgen/media</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/media" title="pulumi_azure_nextgen/media">pulumi_azure_nextgen/media</a></dd>
-
-</dl>
 

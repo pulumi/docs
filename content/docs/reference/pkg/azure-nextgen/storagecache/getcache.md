@@ -19,7 +19,7 @@ meta_desc: "Explore the GetCache function of the storagecache module, including 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCache<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/storagecache/#GetCacheArgs">GetCacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/storagecache/#GetCacheResult">GetCacheResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCache<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetCacheResult</span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetCache function of the storagecache module, including 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCache<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#LookupCacheArgs">LookupCacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#LookupCacheResult">LookupCacheResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCache<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupCacheResult</span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCache` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetCache function of the storagecache module, including 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCache </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Storagecache.GetCacheResult.html">GetCacheResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.GetCacheArgs.html">GetCacheArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx">GetCacheResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetCacheArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -807,16 +807,9 @@ The following output properties are available:
 
 
 <h4 id="cacheencryptionsettingsresponse">Cache<wbr>Encryption<wbr>Settings<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#CacheEncryptionSettingsResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#CacheEncryptionSettingsResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.Outputs.CacheEncryptionSettingsResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -893,16 +886,9 @@ The following output properties are available:
 
 
 <h4 id="cachehealthresponse">Cache<wbr>Health<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#CacheHealthResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#CacheHealthResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.Outputs.CacheHealthResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1019,16 +1005,9 @@ The following output properties are available:
 
 
 <h4 id="cacheidentityresponse">Cache<wbr>Identity<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#CacheIdentityResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#CacheIdentityResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.Outputs.CacheIdentityResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1185,16 +1164,9 @@ The following output properties are available:
 
 
 <h4 id="cachenetworksettingsresponse">Cache<wbr>Network<wbr>Settings<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#CacheNetworkSettingsResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#CacheNetworkSettingsResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.Outputs.CacheNetworkSettingsResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1311,16 +1283,9 @@ The following output properties are available:
 
 
 <h4 id="cacheresponsesku">Cache<wbr>Response<wbr>Sku</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#CacheResponseSku">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#CacheResponseSku">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.Outputs.CacheResponseSku.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1397,16 +1362,9 @@ The following output properties are available:
 
 
 <h4 id="cachesecuritysettingsresponse">Cache<wbr>Security<wbr>Settings<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#CacheSecuritySettingsResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#CacheSecuritySettingsResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.Outputs.CacheSecuritySettingsResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1483,16 +1441,9 @@ The following output properties are available:
 
 
 <h4 id="cacheupgradestatusresponse">Cache<wbr>Upgrade<wbr>Status<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#CacheUpgradeStatusResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#CacheUpgradeStatusResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.Outputs.CacheUpgradeStatusResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1729,16 +1680,9 @@ The following output properties are available:
 
 
 <h4 id="keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#KeyVaultKeyReferenceResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#KeyVaultKeyReferenceResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.Outputs.KeyVaultKeyReferenceResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1855,16 +1799,9 @@ The following output properties are available:
 
 
 <h4 id="keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#KeyVaultKeyReferenceResponseSourceVault">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#KeyVaultKeyReferenceResponseSourceVault">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.Outputs.KeyVaultKeyReferenceResponseSourceVault.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 

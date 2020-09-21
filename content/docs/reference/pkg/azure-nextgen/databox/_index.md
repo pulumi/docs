@@ -32,19 +32,4 @@ Explore the resources and functions of the databox module in the Azure NextGen p
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DataBox.html" title="Pulumi.AzureNextGen.DataBox">Pulumi.AzureNextGen.DataBox</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/databox?tab=doc#" title="azure/databox">azure/databox</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/databox/#" title="@pulumi/azure-nextgen/databox">@pulumi/azure-nextgen/databox</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/databox" title="pulumi_azure_nextgen/databox">pulumi_azure_nextgen/databox</a></dd>
-
-</dl>
 

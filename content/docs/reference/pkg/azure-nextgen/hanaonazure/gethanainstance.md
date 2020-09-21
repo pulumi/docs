@@ -19,7 +19,7 @@ meta_desc: "Explore the GetHanaInstance function of the hanaonazure module, incl
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getHanaInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/hanaonazure/#GetHanaInstanceArgs">GetHanaInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/hanaonazure/#GetHanaInstanceResult">GetHanaInstanceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getHanaInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetHanaInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetHanaInstanceResult</span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetHanaInstance function of the hanaonazure module, incl
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupHanaInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure?tab=doc#LookupHanaInstanceArgs">LookupHanaInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure?tab=doc#LookupHanaInstanceResult">LookupHanaInstanceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupHanaInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupHanaInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupHanaInstanceResult</span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupHanaInstance` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetHanaInstance function of the hanaonazure module, incl
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetHanaInstance </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Hanaonazure.GetHanaInstanceResult.html">GetHanaInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.HanaOnAzure.GetHanaInstanceArgs.html">GetHanaInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx">GetHanaInstanceResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetHanaInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -767,16 +767,9 @@ The following output properties are available:
 
 
 <h4 id="diskresponse">Disk<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#DiskResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure?tab=doc#DiskResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.HanaOnAzure.Outputs.DiskResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -933,16 +926,9 @@ The following output properties are available:
 
 
 <h4 id="hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#HardwareProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure?tab=doc#HardwareProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.HanaOnAzure.Outputs.HardwareProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1059,16 +1045,9 @@ The following output properties are available:
 
 
 <h4 id="ipaddressresponse">Ip<wbr>Address<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#IpAddressResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure?tab=doc#IpAddressResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.HanaOnAzure.Outputs.IpAddressResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1145,16 +1124,9 @@ The following output properties are available:
 
 
 <h4 id="networkprofileresponse">Network<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#NetworkProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure?tab=doc#NetworkProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.HanaOnAzure.Outputs.NetworkProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1271,16 +1243,9 @@ The following output properties are available:
 
 
 <h4 id="osprofileresponse">OSProfile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#OSProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure?tab=doc#OSProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.HanaOnAzure.Outputs.OSProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1477,16 +1442,9 @@ The following output properties are available:
 
 
 <h4 id="storageprofileresponse">Storage<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#StorageProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/hanaonazure?tab=doc#StorageProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.HanaOnAzure.Outputs.StorageProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 

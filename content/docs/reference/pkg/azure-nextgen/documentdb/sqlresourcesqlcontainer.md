@@ -301,19 +301,19 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/documentdb/#SqlResourceSqlContainer">SqlResourceSqlContainer</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/documentdb/#SqlResourceSqlContainerArgs">SqlResourceSqlContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SqlResourceSqlContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/documentdb/#pulumi_azure-nextgen.documentdb.SqlResourceSqlContainer">SqlResourceSqlContainer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Dict[CreateUpdateOptions]]</span> = None<span class="p">, </span><span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[Dict[SqlContainerResource]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Dict[CreateUpdateOptions]]</span> = None<span class="p">, </span><span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[Dict[SqlContainerResource]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#SqlResourceSqlContainer">NewSqlResourceSqlContainer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#SqlResourceSqlContainerArgs">SqlResourceSqlContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#SqlResourceSqlContainer">SqlResourceSqlContainer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlResourceSqlContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SqlResourceSqlContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlResourceSqlContainer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.SqlResourceSqlContainer.html">SqlResourceSqlContainer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.SqlResourceSqlContainerArgs.html">SqlResourceSqlContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlResourceSqlContainer</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SqlResourceSqlContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -334,7 +334,7 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/documentdb/#SqlResourceSqlContainerArgs">SqlResourceSqlContainerArgs</a></span>
+        <span class="property-type">SqlResourceSqlContainerArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -403,7 +403,7 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#SqlResourceSqlContainerArgs">SqlResourceSqlContainerArgs</a></span>
+        <span class="property-type">SqlResourceSqlContainerArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -442,7 +442,7 @@ const sqlResourceSqlContainer = new azure_nextgen.documentdb.latest.SqlResourceS
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.SqlResourceSqlContainerArgs.html">SqlResourceSqlContainerArgs</a></span>
+        <span class="property-type">SqlResourceSqlContainerArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -994,16 +994,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="autoscalesettings">Autoscale<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#AutoscaleSettings">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#AutoscaleSettingsArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.AutoscaleSettingsArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1080,16 +1073,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#AutoscaleSettingsResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#AutoscaleSettingsResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.AutoscaleSettingsResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1166,16 +1152,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="compositepath">Composite<wbr>Path</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#CompositePath">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#CompositePathArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.CompositePathArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1292,16 +1271,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="compositepathresponse">Composite<wbr>Path<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#CompositePathResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#CompositePathResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.CompositePathResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1418,16 +1390,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="conflictresolutionpolicy">Conflict<wbr>Resolution<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ConflictResolutionPolicy">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#ConflictResolutionPolicyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.ConflictResolutionPolicyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1584,16 +1549,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ConflictResolutionPolicyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#ConflictResolutionPolicyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.ConflictResolutionPolicyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1750,16 +1708,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerpartitionkey">Container<wbr>Partition<wbr>Key</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerPartitionKey">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#ContainerPartitionKeyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.ContainerPartitionKeyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1916,16 +1867,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerPartitionKeyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#ContainerPartitionKeyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.ContainerPartitionKeyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2082,16 +2026,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="createupdateoptions">Create<wbr>Update<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#CreateUpdateOptions">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#CreateUpdateOptionsArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.CreateUpdateOptionsArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2208,16 +2145,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="excludedpath">Excluded<wbr>Path</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ExcludedPath">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#ExcludedPathArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.ExcludedPathArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2294,16 +2224,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="excludedpathresponse">Excluded<wbr>Path<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ExcludedPathResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#ExcludedPathResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.ExcludedPathResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2380,16 +2303,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="includedpath">Included<wbr>Path</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#IncludedPath">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#IncludedPathArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.IncludedPathArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2506,16 +2422,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="includedpathresponse">Included<wbr>Path<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#IncludedPathResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#IncludedPathResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.IncludedPathResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2632,16 +2541,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="indexes">Indexes</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#Indexes">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#IndexesArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.IndexesArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2798,16 +2700,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="indexesresponse">Indexes<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#IndexesResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#IndexesResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.IndexesResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2964,16 +2859,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="indexingpolicy">Indexing<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#IndexingPolicy">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#IndexingPolicyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.IndexingPolicyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3250,16 +3138,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#IndexingPolicyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#IndexingPolicyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.IndexingPolicyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3536,16 +3417,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="spatialspec">Spatial<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#SpatialSpec">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#SpatialSpecArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.SpatialSpecArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3662,16 +3536,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="spatialspecresponse">Spatial<wbr>Spec<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#SpatialSpecResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#SpatialSpecResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.SpatialSpecResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3788,16 +3655,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="sqlcontainergetpropertiesresponseoptions">Sql<wbr>Container<wbr>Get<wbr>Properties<wbr>Response<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#SqlContainerGetPropertiesResponseOptions">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#SqlContainerGetPropertiesResponseOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.SqlContainerGetPropertiesResponseOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3914,16 +3774,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="sqlcontainergetpropertiesresponseresource">Sql<wbr>Container<wbr>Get<wbr>Properties<wbr>Response<wbr>Resource</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#SqlContainerGetPropertiesResponseResource">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#SqlContainerGetPropertiesResponseResourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.SqlContainerGetPropertiesResponseResource.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4360,16 +4213,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="sqlcontainerresource">Sql<wbr>Container<wbr>Resource</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#SqlContainerResource">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#SqlContainerResourceArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.SqlContainerResourceArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4686,16 +4532,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="uniquekey">Unique<wbr>Key</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#UniqueKey">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#UniqueKeyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.UniqueKeyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4772,16 +4611,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="uniquekeypolicy">Unique<wbr>Key<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#UniqueKeyPolicy">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#UniqueKeyPolicyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Inputs.UniqueKeyPolicyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4858,16 +4690,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#UniqueKeyPolicyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#UniqueKeyPolicyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.UniqueKeyPolicyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4944,16 +4769,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="uniquekeyresponse">Unique<wbr>Key<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#UniqueKeyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#UniqueKeyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.Outputs.UniqueKeyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 

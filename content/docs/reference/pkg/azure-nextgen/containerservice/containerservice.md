@@ -107,19 +107,19 @@ const containerService = new azure_nextgen.containerservice.latest.ContainerServ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/containerservice/#ContainerService">ContainerService</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/containerservice/#ContainerServiceArgs">ContainerServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContainerService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ContainerServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/containerservice/#pulumi_azure-nextgen.containerservice.ContainerService">ContainerService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[List[ContainerServiceAgentPoolProfile]]</span> = None<span class="p">, </span><span class="nx">container_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceCustomProfile]]</span> = None<span class="p">, </span><span class="nx">diagnostics_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceDiagnosticsProfile]]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceLinuxProfile]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceMasterProfile]]</span> = None<span class="p">, </span><span class="nx">orchestrator_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceOrchestratorProfile]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceServicePrincipalProfile]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceWindowsProfile]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContainerService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[List[ContainerServiceAgentPoolProfile]]</span> = None<span class="p">, </span><span class="nx">container_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceCustomProfile]]</span> = None<span class="p">, </span><span class="nx">diagnostics_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceDiagnosticsProfile]]</span> = None<span class="p">, </span><span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceLinuxProfile]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceMasterProfile]]</span> = None<span class="p">, </span><span class="nx">orchestrator_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceOrchestratorProfile]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceServicePrincipalProfile]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">windows_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ContainerServiceWindowsProfile]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerService">NewContainerService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceArgs">ContainerServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerService">ContainerService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainerService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ContainerServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.ContainerService.html">ContainerService</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.ContainerServiceArgs.html">ContainerServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContainerService</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ContainerServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -140,7 +140,7 @@ const containerService = new azure_nextgen.containerservice.latest.ContainerServ
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/containerservice/#ContainerServiceArgs">ContainerServiceArgs</a></span>
+        <span class="property-type">ContainerServiceArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -209,7 +209,7 @@ const containerService = new azure_nextgen.containerservice.latest.ContainerServ
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceArgs">ContainerServiceArgs</a></span>
+        <span class="property-type">ContainerServiceArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -248,7 +248,7 @@ const containerService = new azure_nextgen.containerservice.latest.ContainerServ
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.ContainerServiceArgs.html">ContainerServiceArgs</a></span>
+        <span class="property-type">ContainerServiceArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1000,16 +1000,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerserviceagentpoolprofile">Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceAgentPoolProfile">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceAgentPoolProfileArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceAgentPoolProfileArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1406,16 +1399,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerserviceagentpoolprofileresponse">Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceAgentPoolProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceAgentPoolProfileResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceAgentPoolProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1852,16 +1838,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicecustomprofile">Container<wbr>Service<wbr>Custom<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceCustomProfile">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceCustomProfileArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceCustomProfileArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1938,16 +1917,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicecustomprofileresponse">Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceCustomProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceCustomProfileResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceCustomProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2024,16 +1996,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicediagnosticsprofile">Container<wbr>Service<wbr>Diagnostics<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceDiagnosticsProfile">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceDiagnosticsProfileArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceDiagnosticsProfileArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2110,16 +2075,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicediagnosticsprofileresponse">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceDiagnosticsProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceDiagnosticsProfileResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceDiagnosticsProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2196,16 +2154,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicelinuxprofile">Container<wbr>Service<wbr>Linux<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceLinuxProfile">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceLinuxProfileArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceLinuxProfileArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2322,16 +2273,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceLinuxProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceLinuxProfileResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceLinuxProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2448,16 +2392,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicemasterprofile">Container<wbr>Service<wbr>Master<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceMasterProfile">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceMasterProfileArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceMasterProfileArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2774,16 +2711,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicemasterprofileresponse">Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceMasterProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceMasterProfileResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceMasterProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3140,16 +3070,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerserviceorchestratorprofile">Container<wbr>Service<wbr>Orchestrator<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceOrchestratorProfile">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceOrchestratorProfileArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceOrchestratorProfileArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3266,16 +3189,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceOrchestratorProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceOrchestratorProfileResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceOrchestratorProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3392,16 +3308,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerserviceserviceprincipalprofile">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceServicePrincipalProfile">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceServicePrincipalProfileArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceServicePrincipalProfileArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3558,16 +3467,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerserviceserviceprincipalprofileresponse">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceServicePrincipalProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceServicePrincipalProfileResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceServicePrincipalProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3724,16 +3626,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceSshConfiguration">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceSshConfigurationArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceSshConfigurationArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3810,16 +3705,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceSshConfigurationResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceSshConfigurationResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceSshConfigurationResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3896,16 +3784,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicesshpublickey">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceSshPublicKey">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceSshPublicKeyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceSshPublicKeyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3982,16 +3863,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceSshPublicKeyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceSshPublicKeyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceSshPublicKeyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4068,16 +3942,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicevmdiagnostics">Container<wbr>Service<wbr>VMDiagnostics</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceVMDiagnostics">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceVMDiagnosticsArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceVMDiagnosticsArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4154,16 +4021,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceVMDiagnosticsResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceVMDiagnosticsResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceVMDiagnosticsResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4280,16 +4140,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicewindowsprofile">Container<wbr>Service<wbr>Windows<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ContainerServiceWindowsProfile">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceWindowsProfileArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.ContainerServiceWindowsProfileArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4406,16 +4259,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="containerservicewindowsprofileresponse">Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ContainerServiceWindowsProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#ContainerServiceWindowsProfileResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.ContainerServiceWindowsProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4532,16 +4378,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="keyvaultsecretref">Key<wbr>Vault<wbr>Secret<wbr>Ref</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#KeyVaultSecretRef">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#KeyVaultSecretRefArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Inputs.KeyVaultSecretRefArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4698,16 +4537,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="keyvaultsecretrefresponse">Key<wbr>Vault<wbr>Secret<wbr>Ref<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#KeyVaultSecretRefResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#KeyVaultSecretRefResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.Outputs.KeyVaultSecretRefResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 

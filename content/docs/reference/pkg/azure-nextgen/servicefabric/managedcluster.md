@@ -488,19 +488,19 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/servicefabric/#ManagedCluster">ManagedCluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/servicefabric/#ManagedClusterArgs">ManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/servicefabric/#pulumi_azure-nextgen.servicefabric.ManagedCluster">ManagedCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[Dict[AzureActiveDirectory]]</span> = None<span class="p">, </span><span class="nx">client_connection_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">clients</span><span class="p">:</span> <span class="nx">Optional[List[ClientCertificate]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_upgrade_description</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterUpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">cluster_upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[List[SettingsSectionDescription]]</span> = None<span class="p">, </span><span class="nx">http_gateway_connection_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">load_balancing_rules</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancingRule]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[Dict[AzureActiveDirectory]]</span> = None<span class="p">, </span><span class="nx">client_connection_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">clients</span><span class="p">:</span> <span class="nx">Optional[List[ClientCertificate]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_upgrade_description</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterUpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">cluster_upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[List[SettingsSectionDescription]]</span> = None<span class="p">, </span><span class="nx">http_gateway_connection_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">load_balancing_rules</span><span class="p">:</span> <span class="nx">Optional[List[LoadBalancingRule]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[Sku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ManagedCluster">NewManagedCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ManagedClusterArgs">ManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ManagedCluster">ManagedCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.ManagedCluster.html">ManagedCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.ManagedClusterArgs.html">ManagedClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedCluster</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagedClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -521,7 +521,7 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/servicefabric/#ManagedClusterArgs">ManagedClusterArgs</a></span>
+        <span class="property-type">ManagedClusterArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -590,7 +590,7 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ManagedClusterArgs">ManagedClusterArgs</a></span>
+        <span class="property-type">ManagedClusterArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -629,7 +629,7 @@ const managedCluster = new azure_nextgen.servicefabric.v20200101preview.ManagedC
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.ManagedClusterArgs.html">ManagedClusterArgs</a></span>
+        <span class="property-type">ManagedClusterArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1845,16 +1845,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="applicationdeltahealthpolicy">Application<wbr>Delta<wbr>Health<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ApplicationDeltaHealthPolicy">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ApplicationDeltaHealthPolicyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.ApplicationDeltaHealthPolicyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1971,16 +1964,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="applicationdeltahealthpolicyresponse">Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ApplicationDeltaHealthPolicyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ApplicationDeltaHealthPolicyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.ApplicationDeltaHealthPolicyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2097,16 +2083,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="applicationhealthpolicy">Application<wbr>Health<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ApplicationHealthPolicy">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ApplicationHealthPolicyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.ApplicationHealthPolicyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2223,16 +2202,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="applicationhealthpolicyresponse">Application<wbr>Health<wbr>Policy<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ApplicationHealthPolicyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ApplicationHealthPolicyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.ApplicationHealthPolicyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2349,16 +2321,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="azureactivedirectory">Azure<wbr>Active<wbr>Directory</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#AzureActiveDirectory">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#AzureActiveDirectoryArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.AzureActiveDirectoryArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2515,16 +2480,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#AzureActiveDirectoryResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#AzureActiveDirectoryResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.AzureActiveDirectoryResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2681,16 +2639,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="clientcertificate">Client<wbr>Certificate</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ClientCertificate">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ClientCertificateArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.ClientCertificateArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2887,16 +2838,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="clientcertificateresponse">Client<wbr>Certificate<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ClientCertificateResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ClientCertificateResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.ClientCertificateResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3093,16 +3037,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="clusterhealthpolicy">Cluster<wbr>Health<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ClusterHealthPolicy">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ClusterHealthPolicyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.ClusterHealthPolicyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3315,16 +3252,9 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 
 
 <h4 id="clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ClusterHealthPolicyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ClusterHealthPolicyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.ClusterHealthPolicyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3537,16 +3467,9 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 
 
 <h4 id="clusterupgradedeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ClusterUpgradeDeltaHealthPolicy">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ClusterUpgradeDeltaHealthPolicyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.ClusterUpgradeDeltaHealthPolicyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3779,16 +3702,9 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 
 <h4 id="clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ClusterUpgradeDeltaHealthPolicyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ClusterUpgradeDeltaHealthPolicyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.ClusterUpgradeDeltaHealthPolicyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4021,16 +3937,9 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 
 <h4 id="clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ClusterUpgradePolicy">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ClusterUpgradePolicyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.ClusterUpgradePolicyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4427,16 +4336,9 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 
 <h4 id="clusterupgradepolicyresponse">Cluster<wbr>Upgrade<wbr>Policy<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ClusterUpgradePolicyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ClusterUpgradePolicyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.ClusterUpgradePolicyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4833,16 +4735,9 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 
 <h4 id="loadbalancingrule">Load<wbr>Balancing<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#LoadBalancingRule">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#LoadBalancingRuleArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.LoadBalancingRuleArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5079,16 +4974,9 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 
 <h4 id="loadbalancingruleresponse">Load<wbr>Balancing<wbr>Rule<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#LoadBalancingRuleResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#LoadBalancingRuleResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.LoadBalancingRuleResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5325,16 +5213,9 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 
 <h4 id="servicetypedeltahealthpolicy">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ServiceTypeDeltaHealthPolicy">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ServiceTypeDeltaHealthPolicyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.ServiceTypeDeltaHealthPolicyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5423,16 +5304,9 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 
 <h4 id="servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ServiceTypeDeltaHealthPolicyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ServiceTypeDeltaHealthPolicyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.ServiceTypeDeltaHealthPolicyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5521,16 +5395,9 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 
 <h4 id="servicetypehealthpolicy">Service<wbr>Type<wbr>Health<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ServiceTypeHealthPolicy">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ServiceTypeHealthPolicyArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.ServiceTypeHealthPolicyArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5611,16 +5478,9 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 
 <h4 id="servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ServiceTypeHealthPolicyResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#ServiceTypeHealthPolicyResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.ServiceTypeHealthPolicyResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5701,16 +5561,9 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 
 <h4 id="settingsparameterdescription">Settings<wbr>Parameter<wbr>Description</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#SettingsParameterDescription">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#SettingsParameterDescriptionArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.SettingsParameterDescriptionArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5827,16 +5680,9 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 
 <h4 id="settingsparameterdescriptionresponse">Settings<wbr>Parameter<wbr>Description<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#SettingsParameterDescriptionResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#SettingsParameterDescriptionResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.SettingsParameterDescriptionResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5953,16 +5799,9 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 
 <h4 id="settingssectiondescription">Settings<wbr>Section<wbr>Description</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#SettingsSectionDescription">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#SettingsSectionDescriptionArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.SettingsSectionDescriptionArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -6079,16 +5918,9 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 
 <h4 id="settingssectiondescriptionresponse">Settings<wbr>Section<wbr>Description<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#SettingsSectionDescriptionResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#SettingsSectionDescriptionResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.SettingsSectionDescriptionResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -6205,16 +6037,9 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 
 <h4 id="sku">Sku</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#Sku">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#SkuArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Inputs.SkuArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -6291,16 +6116,9 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#SkuResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#SkuResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.Outputs.SkuResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 

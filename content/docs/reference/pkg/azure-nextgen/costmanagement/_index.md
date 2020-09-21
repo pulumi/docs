@@ -49,19 +49,4 @@ Explore the resources and functions of the costmanagement module in the Azure Ne
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.CostManagement.html" title="Pulumi.AzureNextGen.CostManagement">Pulumi.AzureNextGen.CostManagement</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/costmanagement?tab=doc#" title="azure/costmanagement">azure/costmanagement</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/costmanagement/#" title="@pulumi/azure-nextgen/costmanagement">@pulumi/azure-nextgen/costmanagement</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/costmanagement" title="pulumi_azure_nextgen/costmanagement">pulumi_azure_nextgen/costmanagement</a></dd>
-
-</dl>
 

@@ -32,19 +32,4 @@ Explore the resources and functions of the powerbi module in the Azure NextGen p
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.PowerBI.html" title="Pulumi.AzureNextGen.PowerBI">Pulumi.AzureNextGen.PowerBI</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerbi?tab=doc#" title="azure/powerbi">azure/powerbi</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/powerbi/#" title="@pulumi/azure-nextgen/powerbi">@pulumi/azure-nextgen/powerbi</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/powerbi" title="pulumi_azure_nextgen/powerbi">pulumi_azure_nextgen/powerbi</a></dd>
-
-</dl>
 

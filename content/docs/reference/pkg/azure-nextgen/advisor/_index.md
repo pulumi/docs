@@ -31,19 +31,4 @@ Explore the resources and functions of the advisor module in the Azure NextGen p
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Advisor.html" title="Pulumi.AzureNextGen.Advisor">Pulumi.AzureNextGen.Advisor</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/advisor?tab=doc#" title="azure/advisor">azure/advisor</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/advisor/#" title="@pulumi/azure-nextgen/advisor">@pulumi/azure-nextgen/advisor</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/advisor" title="pulumi_azure_nextgen/advisor">pulumi_azure_nextgen/advisor</a></dd>
-
-</dl>
 

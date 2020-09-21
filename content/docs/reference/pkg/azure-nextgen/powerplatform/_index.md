@@ -33,19 +33,4 @@ Explore the resources and functions of the powerplatform module in the Azure Nex
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.PowerPlatform.html" title="Pulumi.AzureNextGen.PowerPlatform">Pulumi.AzureNextGen.PowerPlatform</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerplatform?tab=doc#" title="azure/powerplatform">azure/powerplatform</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/powerplatform/#" title="@pulumi/azure-nextgen/powerplatform">@pulumi/azure-nextgen/powerplatform</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/powerplatform" title="pulumi_azure_nextgen/powerplatform">pulumi_azure_nextgen/powerplatform</a></dd>
-
-</dl>
 

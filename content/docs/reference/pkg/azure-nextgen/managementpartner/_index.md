@@ -31,19 +31,4 @@ Explore the resources and functions of the managementpartner module in the Azure
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ManagementPartner.html" title="Pulumi.AzureNextGen.ManagementPartner">Pulumi.AzureNextGen.ManagementPartner</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managementpartner?tab=doc#" title="azure/managementpartner">azure/managementpartner</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/managementpartner/#" title="@pulumi/azure-nextgen/managementpartner">@pulumi/azure-nextgen/managementpartner</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/managementpartner" title="pulumi_azure_nextgen/managementpartner">pulumi_azure_nextgen/managementpartner</a></dd>
-
-</dl>
 

@@ -33,19 +33,4 @@ Explore the resources and functions of the certificateregistration module in the
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.CertificateRegistration.html" title="Pulumi.AzureNextGen.CertificateRegistration">Pulumi.AzureNextGen.CertificateRegistration</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/certificateregistration?tab=doc#" title="azure/certificateregistration">azure/certificateregistration</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/certificateregistration/#" title="@pulumi/azure-nextgen/certificateregistration">@pulumi/azure-nextgen/certificateregistration</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/certificateregistration" title="pulumi_azure_nextgen/certificateregistration">pulumi_azure_nextgen/certificateregistration</a></dd>
-
-</dl>
 

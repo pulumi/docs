@@ -49,19 +49,4 @@ Explore the resources and functions of the management module in the Azure NextGe
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Management.html" title="Pulumi.AzureNextGen.Management">Pulumi.AzureNextGen.Management</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/management?tab=doc#" title="azure/management">azure/management</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/management/#" title="@pulumi/azure-nextgen/management">@pulumi/azure-nextgen/management</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/management" title="pulumi_azure_nextgen/management">pulumi_azure_nextgen/management</a></dd>
-
-</dl>
 

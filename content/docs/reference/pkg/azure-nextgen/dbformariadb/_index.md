@@ -39,19 +39,4 @@ Explore the resources and functions of the dbformariadb module in the Azure Next
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMariaDB.html" title="Pulumi.AzureNextGen.DBforMariaDB">Pulumi.AzureNextGen.DBforMariaDB</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformariadb?tab=doc#" title="azure/dbformariadb">azure/dbformariadb</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/dbformariadb/#" title="@pulumi/azure-nextgen/dbformariadb">@pulumi/azure-nextgen/dbformariadb</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/dbformariadb" title="pulumi_azure_nextgen/dbformariadb">pulumi_azure_nextgen/dbformariadb</a></dd>
-
-</dl>
 

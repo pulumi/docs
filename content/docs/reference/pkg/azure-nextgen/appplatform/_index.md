@@ -42,19 +42,4 @@ Explore the resources and functions of the appplatform module in the Azure NextG
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.AppPlatform.html" title="Pulumi.AzureNextGen.AppPlatform">Pulumi.AzureNextGen.AppPlatform</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appplatform?tab=doc#" title="azure/appplatform">azure/appplatform</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/appplatform/#" title="@pulumi/azure-nextgen/appplatform">@pulumi/azure-nextgen/appplatform</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/appplatform" title="pulumi_azure_nextgen/appplatform">pulumi_azure_nextgen/appplatform</a></dd>
-
-</dl>
 

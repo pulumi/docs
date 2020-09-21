@@ -49,19 +49,4 @@ Explore the resources and functions of the authorization module in the Azure Nex
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Authorization.html" title="Pulumi.AzureNextGen.Authorization">Pulumi.AzureNextGen.Authorization</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/authorization?tab=doc#" title="azure/authorization">azure/authorization</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/authorization/#" title="@pulumi/azure-nextgen/authorization">@pulumi/azure-nextgen/authorization</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/authorization" title="pulumi_azure_nextgen/authorization">pulumi_azure_nextgen/authorization</a></dd>
-
-</dl>
 

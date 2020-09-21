@@ -50,19 +50,4 @@ Explore the resources and functions of the machinelearningservices module in the
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.MachineLearningServices.html" title="Pulumi.AzureNextGen.MachineLearningServices">Pulumi.AzureNextGen.MachineLearningServices</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningservices?tab=doc#" title="azure/machinelearningservices">azure/machinelearningservices</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/machinelearningservices/#" title="@pulumi/azure-nextgen/machinelearningservices">@pulumi/azure-nextgen/machinelearningservices</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/machinelearningservices" title="pulumi_azure_nextgen/machinelearningservices">pulumi_azure_nextgen/machinelearningservices</a></dd>
-
-</dl>
 

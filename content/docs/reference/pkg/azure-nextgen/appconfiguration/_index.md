@@ -34,19 +34,4 @@ Explore the resources and functions of the appconfiguration module in the Azure 
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.AppConfiguration.html" title="Pulumi.AzureNextGen.AppConfiguration">Pulumi.AzureNextGen.AppConfiguration</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/appconfiguration?tab=doc#" title="azure/appconfiguration">azure/appconfiguration</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/appconfiguration/#" title="@pulumi/azure-nextgen/appconfiguration">@pulumi/azure-nextgen/appconfiguration</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/appconfiguration" title="pulumi_azure_nextgen/appconfiguration">pulumi_azure_nextgen/appconfiguration</a></dd>
-
-</dl>
 

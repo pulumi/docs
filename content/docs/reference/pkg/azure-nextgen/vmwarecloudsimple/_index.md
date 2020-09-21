@@ -35,19 +35,4 @@ Explore the resources and functions of the vmwarecloudsimple module in the Azure
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VMwareCloudSimple.html" title="Pulumi.AzureNextGen.VMwareCloudSimple">Pulumi.AzureNextGen.VMwareCloudSimple</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/vmwarecloudsimple?tab=doc#" title="azure/vmwarecloudsimple">azure/vmwarecloudsimple</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/vmwarecloudsimple/#" title="@pulumi/azure-nextgen/vmwarecloudsimple">@pulumi/azure-nextgen/vmwarecloudsimple</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/vmwarecloudsimple" title="pulumi_azure_nextgen/vmwarecloudsimple">pulumi_azure_nextgen/vmwarecloudsimple</a></dd>
-
-</dl>
 

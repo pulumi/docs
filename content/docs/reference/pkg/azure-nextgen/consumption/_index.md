@@ -33,19 +33,4 @@ Explore the resources and functions of the consumption module in the Azure NextG
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Consumption.html" title="Pulumi.AzureNextGen.Consumption">Pulumi.AzureNextGen.Consumption</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/consumption?tab=doc#" title="azure/consumption">azure/consumption</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/consumption/#" title="@pulumi/azure-nextgen/consumption">@pulumi/azure-nextgen/consumption</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/consumption" title="pulumi_azure_nextgen/consumption">pulumi_azure_nextgen/consumption</a></dd>
-
-</dl>
 

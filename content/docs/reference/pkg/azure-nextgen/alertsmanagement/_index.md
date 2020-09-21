@@ -35,19 +35,4 @@ Explore the resources and functions of the alertsmanagement module in the Azure 
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.AlertsManagement.html" title="Pulumi.AzureNextGen.AlertsManagement">Pulumi.AzureNextGen.AlertsManagement</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/alertsmanagement?tab=doc#" title="azure/alertsmanagement">azure/alertsmanagement</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/alertsmanagement/#" title="@pulumi/azure-nextgen/alertsmanagement">@pulumi/azure-nextgen/alertsmanagement</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/alertsmanagement" title="pulumi_azure_nextgen/alertsmanagement">pulumi_azure_nextgen/alertsmanagement</a></dd>
-
-</dl>
 

@@ -66,19 +66,4 @@ Explore the resources and functions of the automation module in the Azure NextGe
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Automation.html" title="Pulumi.AzureNextGen.Automation">Pulumi.AzureNextGen.Automation</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation?tab=doc#" title="azure/automation">azure/automation</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/automation/#" title="@pulumi/azure-nextgen/automation">@pulumi/azure-nextgen/automation</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/automation" title="pulumi_azure_nextgen/automation">pulumi_azure_nextgen/automation</a></dd>
-
-</dl>
 

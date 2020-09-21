@@ -32,19 +32,4 @@ Explore the resources and functions of the kubernetes module in the Azure NextGe
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Kubernetes.html" title="Pulumi.AzureNextGen.Kubernetes">Pulumi.AzureNextGen.Kubernetes</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kubernetes?tab=doc#" title="azure/kubernetes">azure/kubernetes</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/kubernetes/#" title="@pulumi/azure-nextgen/kubernetes">@pulumi/azure-nextgen/kubernetes</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/kubernetes" title="pulumi_azure_nextgen/kubernetes">pulumi_azure_nextgen/kubernetes</a></dd>
-
-</dl>
 

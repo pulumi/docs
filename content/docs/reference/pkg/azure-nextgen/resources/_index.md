@@ -49,19 +49,4 @@ Explore the resources and functions of the resources module in the Azure NextGen
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Resources.html" title="Pulumi.AzureNextGen.Resources">Pulumi.AzureNextGen.Resources</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources?tab=doc#" title="azure/resources">azure/resources</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/resources/#" title="@pulumi/azure-nextgen/resources">@pulumi/azure-nextgen/resources</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/resources" title="pulumi_azure_nextgen/resources">pulumi_azure_nextgen/resources</a></dd>
-
-</dl>
 

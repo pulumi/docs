@@ -58,19 +58,4 @@ Explore the resources and functions of the operationalinsights module in the Azu
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.OperationalInsights.html" title="Pulumi.AzureNextGen.OperationalInsights">Pulumi.AzureNextGen.OperationalInsights</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationalinsights?tab=doc#" title="azure/operationalinsights">azure/operationalinsights</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/operationalinsights/#" title="@pulumi/azure-nextgen/operationalinsights">@pulumi/azure-nextgen/operationalinsights</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/operationalinsights" title="pulumi_azure_nextgen/operationalinsights">pulumi_azure_nextgen/operationalinsights</a></dd>
-
-</dl>
 

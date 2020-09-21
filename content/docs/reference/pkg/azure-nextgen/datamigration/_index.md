@@ -39,19 +39,4 @@ Explore the resources and functions of the datamigration module in the Azure Nex
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DataMigration.html" title="Pulumi.AzureNextGen.DataMigration">Pulumi.AzureNextGen.DataMigration</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datamigration?tab=doc#" title="azure/datamigration">azure/datamigration</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/datamigration/#" title="@pulumi/azure-nextgen/datamigration">@pulumi/azure-nextgen/datamigration</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/datamigration" title="pulumi_azure_nextgen/datamigration">pulumi_azure_nextgen/datamigration</a></dd>
-
-</dl>
 

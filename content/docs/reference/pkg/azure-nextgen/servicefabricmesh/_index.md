@@ -42,19 +42,4 @@ Explore the resources and functions of the servicefabricmesh module in the Azure
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabricMesh.html" title="Pulumi.AzureNextGen.ServiceFabricMesh">Pulumi.AzureNextGen.ServiceFabricMesh</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabricmesh?tab=doc#" title="azure/servicefabricmesh">azure/servicefabricmesh</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/servicefabricmesh/#" title="@pulumi/azure-nextgen/servicefabricmesh">@pulumi/azure-nextgen/servicefabricmesh</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/servicefabricmesh" title="pulumi_azure_nextgen/servicefabricmesh">pulumi_azure_nextgen/servicefabricmesh</a></dd>
-
-</dl>
 

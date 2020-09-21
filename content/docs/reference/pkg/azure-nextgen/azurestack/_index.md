@@ -34,19 +34,4 @@ Explore the resources and functions of the azurestack module in the Azure NextGe
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.AzureStack.html" title="Pulumi.AzureNextGen.AzureStack">Pulumi.AzureNextGen.AzureStack</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azurestack?tab=doc#" title="azure/azurestack">azure/azurestack</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/azurestack/#" title="@pulumi/azure-nextgen/azurestack">@pulumi/azure-nextgen/azurestack</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/azurestack" title="pulumi_azure_nextgen/azurestack">pulumi_azure_nextgen/azurestack</a></dd>
-
-</dl>
 

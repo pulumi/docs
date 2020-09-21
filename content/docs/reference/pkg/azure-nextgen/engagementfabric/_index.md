@@ -35,19 +35,4 @@ Explore the resources and functions of the engagementfabric module in the Azure 
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.EngagementFabric.html" title="Pulumi.AzureNextGen.EngagementFabric">Pulumi.AzureNextGen.EngagementFabric</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/engagementfabric?tab=doc#" title="azure/engagementfabric">azure/engagementfabric</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/engagementfabric/#" title="@pulumi/azure-nextgen/engagementfabric">@pulumi/azure-nextgen/engagementfabric</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/engagementfabric" title="pulumi_azure_nextgen/engagementfabric">pulumi_azure_nextgen/engagementfabric</a></dd>
-
-</dl>
 

@@ -41,19 +41,4 @@ Explore the resources and functions of the storagesync module in the Azure NextG
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageSync.html" title="Pulumi.AzureNextGen.StorageSync">Pulumi.AzureNextGen.StorageSync</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagesync?tab=doc#" title="azure/storagesync">azure/storagesync</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/storagesync/#" title="@pulumi/azure-nextgen/storagesync">@pulumi/azure-nextgen/storagesync</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/storagesync" title="pulumi_azure_nextgen/storagesync">pulumi_azure_nextgen/storagesync</a></dd>
-
-</dl>
 

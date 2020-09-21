@@ -65,19 +65,4 @@ Explore the resources and functions of the storsimple module in the Azure NextGe
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorSimple.html" title="Pulumi.AzureNextGen.StorSimple">Pulumi.AzureNextGen.StorSimple</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storsimple?tab=doc#" title="azure/storsimple">azure/storsimple</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/storsimple/#" title="@pulumi/azure-nextgen/storsimple">@pulumi/azure-nextgen/storsimple</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/storsimple" title="pulumi_azure_nextgen/storsimple">pulumi_azure_nextgen/storsimple</a></dd>
-
-</dl>
 

@@ -31,19 +31,4 @@ Explore the resources and functions of the containerinstance module in the Azure
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerInstance.html" title="Pulumi.AzureNextGen.ContainerInstance">Pulumi.AzureNextGen.ContainerInstance</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerinstance?tab=doc#" title="azure/containerinstance">azure/containerinstance</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/containerinstance/#" title="@pulumi/azure-nextgen/containerinstance">@pulumi/azure-nextgen/containerinstance</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/containerinstance" title="pulumi_azure_nextgen/containerinstance">pulumi_azure_nextgen/containerinstance</a></dd>
-
-</dl>
 

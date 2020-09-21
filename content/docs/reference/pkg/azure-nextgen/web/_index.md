@@ -145,19 +145,4 @@ Explore the resources and functions of the web module in the Azure NextGen packa
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Web.html" title="Pulumi.AzureNextGen.Web">Pulumi.AzureNextGen.Web</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/web?tab=doc#" title="azure/web">azure/web</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/web/#" title="@pulumi/azure-nextgen/web">@pulumi/azure-nextgen/web</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/web" title="pulumi_azure_nextgen/web">pulumi_azure_nextgen/web</a></dd>
-
-</dl>
 

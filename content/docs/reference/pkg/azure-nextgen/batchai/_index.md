@@ -42,19 +42,4 @@ Explore the resources and functions of the batchai module in the Azure NextGen p
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.BatchAI.html" title="Pulumi.AzureNextGen.BatchAI">Pulumi.AzureNextGen.BatchAI</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batchai?tab=doc#" title="azure/batchai">azure/batchai</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/batchai/#" title="@pulumi/azure-nextgen/batchai">@pulumi/azure-nextgen/batchai</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/batchai" title="pulumi_azure_nextgen/batchai">pulumi_azure_nextgen/batchai</a></dd>
-
-</dl>
 

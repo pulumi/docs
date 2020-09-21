@@ -35,19 +35,4 @@ Explore the resources and functions of the aadiam module in the Azure NextGen pa
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.AadIam.html" title="Pulumi.AzureNextGen.AadIam">Pulumi.AzureNextGen.AadIam</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aadiam?tab=doc#" title="azure/aadiam">azure/aadiam</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/aadiam/#" title="@pulumi/azure-nextgen/aadiam">@pulumi/azure-nextgen/aadiam</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/aadiam" title="pulumi_azure_nextgen/aadiam">pulumi_azure_nextgen/aadiam</a></dd>
-
-</dl>
 

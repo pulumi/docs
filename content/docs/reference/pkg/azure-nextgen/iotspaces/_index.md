@@ -31,19 +31,4 @@ Explore the resources and functions of the iotspaces module in the Azure NextGen
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.IoTSpaces.html" title="Pulumi.AzureNextGen.IoTSpaces">Pulumi.AzureNextGen.IoTSpaces</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/iotspaces?tab=doc#" title="azure/iotspaces">azure/iotspaces</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/iotspaces/#" title="@pulumi/azure-nextgen/iotspaces">@pulumi/azure-nextgen/iotspaces</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/iotspaces" title="pulumi_azure_nextgen/iotspaces">pulumi_azure_nextgen/iotspaces</a></dd>
-
-</dl>
 

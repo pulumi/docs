@@ -43,19 +43,4 @@ Explore the resources and functions of the dbformysql module in the Azure NextGe
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DBforMySQL.html" title="Pulumi.AzureNextGen.DBforMySQL">Pulumi.AzureNextGen.DBforMySQL</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/dbformysql?tab=doc#" title="azure/dbformysql">azure/dbformysql</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/dbformysql/#" title="@pulumi/azure-nextgen/dbformysql">@pulumi/azure-nextgen/dbformysql</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/dbformysql" title="pulumi_azure_nextgen/dbformysql">pulumi_azure_nextgen/dbformysql</a></dd>
-
-</dl>
 

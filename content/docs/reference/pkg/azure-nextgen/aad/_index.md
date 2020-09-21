@@ -33,19 +33,4 @@ Explore the resources and functions of the aad module in the Azure NextGen packa
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Aad.html" title="Pulumi.AzureNextGen.Aad">Pulumi.AzureNextGen.Aad</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/aad?tab=doc#" title="azure/aad">azure/aad</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/aad/#" title="@pulumi/azure-nextgen/aad">@pulumi/azure-nextgen/aad</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/aad" title="pulumi_azure_nextgen/aad">pulumi_azure_nextgen/aad</a></dd>
-
-</dl>
 

@@ -34,19 +34,4 @@ Explore the resources and functions of the cognitiveservices module in the Azure
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.CognitiveServices.html" title="Pulumi.AzureNextGen.CognitiveServices">Pulumi.AzureNextGen.CognitiveServices</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/cognitiveservices?tab=doc#" title="azure/cognitiveservices">azure/cognitiveservices</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/cognitiveservices/#" title="@pulumi/azure-nextgen/cognitiveservices">@pulumi/azure-nextgen/cognitiveservices</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/cognitiveservices" title="pulumi_azure_nextgen/cognitiveservices">pulumi_azure_nextgen/cognitiveservices</a></dd>
-
-</dl>
 

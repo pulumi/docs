@@ -41,19 +41,4 @@ Explore the resources and functions of the policyinsights module in the Azure Ne
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.PolicyInsights.html" title="Pulumi.AzureNextGen.PolicyInsights">Pulumi.AzureNextGen.PolicyInsights</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/policyinsights?tab=doc#" title="azure/policyinsights">azure/policyinsights</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/policyinsights/#" title="@pulumi/azure-nextgen/policyinsights">@pulumi/azure-nextgen/policyinsights</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/policyinsights" title="pulumi_azure_nextgen/policyinsights">pulumi_azure_nextgen/policyinsights</a></dd>
-
-</dl>
 

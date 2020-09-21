@@ -33,19 +33,4 @@ Explore the resources and functions of the visualstudio module in the Azure Next
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VisualStudio.html" title="Pulumi.AzureNextGen.VisualStudio">Pulumi.AzureNextGen.VisualStudio</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio?tab=doc#" title="azure/visualstudio">azure/visualstudio</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/visualstudio/#" title="@pulumi/azure-nextgen/visualstudio">@pulumi/azure-nextgen/visualstudio</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/visualstudio" title="pulumi_azure_nextgen/visualstudio">pulumi_azure_nextgen/visualstudio</a></dd>
-
-</dl>
 

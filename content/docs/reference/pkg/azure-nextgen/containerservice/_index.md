@@ -43,19 +43,4 @@ Explore the resources and functions of the containerservice module in the Azure 
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ContainerService.html" title="Pulumi.AzureNextGen.ContainerService">Pulumi.AzureNextGen.ContainerService</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice?tab=doc#" title="azure/containerservice">azure/containerservice</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/containerservice/#" title="@pulumi/azure-nextgen/containerservice">@pulumi/azure-nextgen/containerservice</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/containerservice" title="pulumi_azure_nextgen/containerservice">pulumi_azure_nextgen/containerservice</a></dd>
-
-</dl>
 

@@ -42,19 +42,4 @@ Explore the resources and functions of the streamanalytics module in the Azure N
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StreamAnalytics.html" title="Pulumi.AzureNextGen.StreamAnalytics">Pulumi.AzureNextGen.StreamAnalytics</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/streamanalytics?tab=doc#" title="azure/streamanalytics">azure/streamanalytics</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/streamanalytics/#" title="@pulumi/azure-nextgen/streamanalytics">@pulumi/azure-nextgen/streamanalytics</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/streamanalytics" title="pulumi_azure_nextgen/streamanalytics">pulumi_azure_nextgen/streamanalytics</a></dd>
-
-</dl>
 

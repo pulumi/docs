@@ -50,19 +50,4 @@ Explore the resources and functions of the synapse module in the Azure NextGen p
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Synapse.html" title="Pulumi.AzureNextGen.Synapse">Pulumi.AzureNextGen.Synapse</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse?tab=doc#" title="azure/synapse">azure/synapse</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/synapse/#" title="@pulumi/azure-nextgen/synapse">@pulumi/azure-nextgen/synapse</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/synapse" title="pulumi_azure_nextgen/synapse">pulumi_azure_nextgen/synapse</a></dd>
-
-</dl>
 

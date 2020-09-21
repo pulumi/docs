@@ -43,19 +43,4 @@ Explore the resources and functions of the servicefabric module in the Azure Nex
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ServiceFabric.html" title="Pulumi.AzureNextGen.ServiceFabric">Pulumi.AzureNextGen.ServiceFabric</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/servicefabric?tab=doc#" title="azure/servicefabric">azure/servicefabric</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/servicefabric/#" title="@pulumi/azure-nextgen/servicefabric">@pulumi/azure-nextgen/servicefabric</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/servicefabric" title="pulumi_azure_nextgen/servicefabric">pulumi_azure_nextgen/servicefabric</a></dd>
-
-</dl>
 

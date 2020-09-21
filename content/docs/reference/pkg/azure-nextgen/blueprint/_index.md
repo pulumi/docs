@@ -37,19 +37,4 @@ Explore the resources and functions of the blueprint module in the Azure NextGen
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Blueprint.html" title="Pulumi.AzureNextGen.Blueprint">Pulumi.AzureNextGen.Blueprint</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/blueprint?tab=doc#" title="azure/blueprint">azure/blueprint</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/blueprint/#" title="@pulumi/azure-nextgen/blueprint">@pulumi/azure-nextgen/blueprint</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/blueprint" title="pulumi_azure_nextgen/blueprint">pulumi_azure_nextgen/blueprint</a></dd>
-
-</dl>
 

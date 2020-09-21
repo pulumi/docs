@@ -39,19 +39,4 @@ Explore the resources and functions of the notificationhubs module in the Azure 
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.NotificationHubs.html" title="Pulumi.AzureNextGen.NotificationHubs">Pulumi.AzureNextGen.NotificationHubs</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notificationhubs?tab=doc#" title="azure/notificationhubs">azure/notificationhubs</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/notificationhubs/#" title="@pulumi/azure-nextgen/notificationhubs">@pulumi/azure-nextgen/notificationhubs</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/notificationhubs" title="pulumi_azure_nextgen/notificationhubs">pulumi_azure_nextgen/notificationhubs</a></dd>
-
-</dl>
 

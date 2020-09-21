@@ -32,19 +32,4 @@ Explore the resources and functions of the redhatopenshift module in the Azure N
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.RedHatOpenShift.html" title="Pulumi.AzureNextGen.RedHatOpenShift">Pulumi.AzureNextGen.RedHatOpenShift</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/redhatopenshift?tab=doc#" title="azure/redhatopenshift">azure/redhatopenshift</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/redhatopenshift/#" title="@pulumi/azure-nextgen/redhatopenshift">@pulumi/azure-nextgen/redhatopenshift</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/redhatopenshift" title="pulumi_azure_nextgen/redhatopenshift">pulumi_azure_nextgen/redhatopenshift</a></dd>
-
-</dl>
 

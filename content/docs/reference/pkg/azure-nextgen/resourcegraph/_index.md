@@ -31,19 +31,4 @@ Explore the resources and functions of the resourcegraph module in the Azure Nex
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ResourceGraph.html" title="Pulumi.AzureNextGen.ResourceGraph">Pulumi.AzureNextGen.ResourceGraph</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resourcegraph?tab=doc#" title="azure/resourcegraph">azure/resourcegraph</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/resourcegraph/#" title="@pulumi/azure-nextgen/resourcegraph">@pulumi/azure-nextgen/resourcegraph</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/resourcegraph" title="pulumi_azure_nextgen/resourcegraph">pulumi_azure_nextgen/resourcegraph</a></dd>
-
-</dl>
 

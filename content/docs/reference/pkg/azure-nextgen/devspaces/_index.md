@@ -32,19 +32,4 @@ Explore the resources and functions of the devspaces module in the Azure NextGen
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DevSpaces.html" title="Pulumi.AzureNextGen.DevSpaces">Pulumi.AzureNextGen.DevSpaces</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/devspaces?tab=doc#" title="azure/devspaces">azure/devspaces</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/devspaces/#" title="@pulumi/azure-nextgen/devspaces">@pulumi/azure-nextgen/devspaces</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/devspaces" title="pulumi_azure_nextgen/devspaces">pulumi_azure_nextgen/devspaces</a></dd>
-
-</dl>
 

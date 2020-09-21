@@ -36,19 +36,4 @@ Explore the resources and functions of the maps module in the Azure NextGen pack
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Maps.html" title="Pulumi.AzureNextGen.Maps">Pulumi.AzureNextGen.Maps</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/maps?tab=doc#" title="azure/maps">azure/maps</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/maps/#" title="@pulumi/azure-nextgen/maps">@pulumi/azure-nextgen/maps</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/maps" title="pulumi_azure_nextgen/maps">pulumi_azure_nextgen/maps</a></dd>
-
-</dl>
 

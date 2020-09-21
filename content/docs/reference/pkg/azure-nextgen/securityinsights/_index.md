@@ -53,19 +53,4 @@ Explore the resources and functions of the securityinsights module in the Azure 
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.SecurityInsights.html" title="Pulumi.AzureNextGen.SecurityInsights">Pulumi.AzureNextGen.SecurityInsights</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/securityinsights?tab=doc#" title="azure/securityinsights">azure/securityinsights</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/securityinsights/#" title="@pulumi/azure-nextgen/securityinsights">@pulumi/azure-nextgen/securityinsights</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/securityinsights" title="pulumi_azure_nextgen/securityinsights">pulumi_azure_nextgen/securityinsights</a></dd>
-
-</dl>
 

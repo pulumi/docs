@@ -31,19 +31,4 @@ Explore the resources and functions of the softwareplan module in the Azure Next
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.SoftwarePlan.html" title="Pulumi.AzureNextGen.SoftwarePlan">Pulumi.AzureNextGen.SoftwarePlan</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/softwareplan?tab=doc#" title="azure/softwareplan">azure/softwareplan</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/softwareplan/#" title="@pulumi/azure-nextgen/softwareplan">@pulumi/azure-nextgen/softwareplan</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/softwareplan" title="pulumi_azure_nextgen/softwareplan">pulumi_azure_nextgen/softwareplan</a></dd>
-
-</dl>
 

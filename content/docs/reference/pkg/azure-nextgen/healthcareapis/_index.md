@@ -31,19 +31,4 @@ Explore the resources and functions of the healthcareapis module in the Azure Ne
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.HealthcareApis.html" title="Pulumi.AzureNextGen.HealthcareApis">Pulumi.AzureNextGen.HealthcareApis</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/healthcareapis?tab=doc#" title="azure/healthcareapis">azure/healthcareapis</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/healthcareapis/#" title="@pulumi/azure-nextgen/healthcareapis">@pulumi/azure-nextgen/healthcareapis</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/healthcareapis" title="pulumi_azure_nextgen/healthcareapis">pulumi_azure_nextgen/healthcareapis</a></dd>
-
-</dl>
 

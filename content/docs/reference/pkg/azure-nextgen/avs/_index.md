@@ -38,19 +38,4 @@ Explore the resources and functions of the avs module in the Azure NextGen packa
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.AVS.html" title="Pulumi.AzureNextGen.AVS">Pulumi.AzureNextGen.AVS</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/avs?tab=doc#" title="azure/avs">azure/avs</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/avs/#" title="@pulumi/azure-nextgen/avs">@pulumi/azure-nextgen/avs</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/avs" title="pulumi_azure_nextgen/avs">pulumi_azure_nextgen/avs</a></dd>
-
-</dl>
 

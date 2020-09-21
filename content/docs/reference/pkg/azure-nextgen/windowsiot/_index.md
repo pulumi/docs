@@ -31,19 +31,4 @@ Explore the resources and functions of the windowsiot module in the Azure NextGe
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.WindowsIoT.html" title="Pulumi.AzureNextGen.WindowsIoT">Pulumi.AzureNextGen.WindowsIoT</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/windowsiot?tab=doc#" title="azure/windowsiot">azure/windowsiot</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/windowsiot/#" title="@pulumi/azure-nextgen/windowsiot">@pulumi/azure-nextgen/windowsiot</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/windowsiot" title="pulumi_azure_nextgen/windowsiot">pulumi_azure_nextgen/windowsiot</a></dd>
-
-</dl>
 

@@ -455,19 +455,19 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/virtualmachineimages/#VirtualMachineImageTemplate">VirtualMachineImageTemplate</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/virtualmachineimages/#VirtualMachineImageTemplateArgs">VirtualMachineImageTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualMachineImageTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure-nextgen/virtualmachineimages/#pulumi_azure-nextgen.virtualmachineimages.VirtualMachineImageTemplate">VirtualMachineImageTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">customize</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateFileCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplatePowerShellCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateRestartCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateShellCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateWindowsUpdateCustomizer, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">distribute</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateManagedImageDistributor, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateSharedImageDistributor, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateVhdDistributor, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateIdentity]]</span> = None<span class="p">, </span><span class="nx">image_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateManagedImageSource] | Dict[ImageTemplatePlatformImageSource] | Dict[ImageTemplateSharedImageVersionSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateVmProfile]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build_timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">customize</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateFileCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplatePowerShellCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateRestartCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateShellCustomizer, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateWindowsUpdateCustomizer, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">distribute</span><span class="p">:</span> <span class="nx">Optional[List[Union&lt;Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateManagedImageDistributor, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateSharedImageDistributor, Azure-Nextgen:Virtualmachineimages/Latest:ImageTemplateVhdDistributor, Default=&gt;]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateIdentity]]</span> = None<span class="p">, </span><span class="nx">image_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateManagedImageSource] | Dict[ImageTemplatePlatformImageSource] | Dict[ImageTemplateSharedImageVersionSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ImageTemplateVmProfile]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#VirtualMachineImageTemplate">NewVirtualMachineImageTemplate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#VirtualMachineImageTemplateArgs">VirtualMachineImageTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#VirtualMachineImageTemplate">VirtualMachineImageTemplate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineImageTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualMachineImageTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineImageTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.VirtualMachineImageTemplate.html">VirtualMachineImageTemplate</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.VirtualMachineImageTemplateArgs.html">VirtualMachineImageTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineImageTemplate</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualMachineImageTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -488,7 +488,7 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/virtualmachineimages/#VirtualMachineImageTemplateArgs">VirtualMachineImageTemplateArgs</a></span>
+        <span class="property-type">VirtualMachineImageTemplateArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -557,7 +557,7 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#VirtualMachineImageTemplateArgs">VirtualMachineImageTemplateArgs</a></span>
+        <span class="property-type">VirtualMachineImageTemplateArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -596,7 +596,7 @@ const virtualMachineImageTemplate = new azure_nextgen.virtualmachineimages.lates
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.VirtualMachineImageTemplateArgs.html">VirtualMachineImageTemplateArgs</a></span>
+        <span class="property-type">VirtualMachineImageTemplateArgs</span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1348,16 +1348,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatefilecustomizer">Image<wbr>Template<wbr>File<wbr>Customizer</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateFileCustomizer">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateFileCustomizerArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateFileCustomizerArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1554,16 +1547,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatefilecustomizerresponse">Image<wbr>Template<wbr>File<wbr>Customizer<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateFileCustomizerResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateFileCustomizerResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateFileCustomizerResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1760,16 +1746,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplateidentity">Image<wbr>Template<wbr>Identity</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateIdentity">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateIdentityArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateIdentityArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1846,16 +1825,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplateidentityresponse">Image<wbr>Template<wbr>Identity<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateIdentityResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateIdentityResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateIdentityResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -1972,16 +1944,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplateidentityresponseuserassignedidentities">Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateIdentityResponseUserAssignedIdentities">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateIdentityResponseUserAssignedIdentitiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateIdentityResponseUserAssignedIdentities.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2098,16 +2063,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatelastrunstatusresponse">Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateLastRunStatusResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateLastRunStatusResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateLastRunStatusResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2344,16 +2302,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatemanagedimagedistributor">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateManagedImageDistributor">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateManagedImageDistributorArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateManagedImageDistributorArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2550,16 +2501,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatemanagedimagedistributorresponse">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateManagedImageDistributorResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateManagedImageDistributorResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateManagedImageDistributorResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2756,16 +2700,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateManagedImageSource">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateManagedImageSourceArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateManagedImageSourceArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2842,16 +2779,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatemanagedimagesourceresponse">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateManagedImageSourceResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateManagedImageSourceResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateManagedImageSourceResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -2928,16 +2858,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplatePlatformImageSource">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplatePlatformImageSourceArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplatePlatformImageSourceArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3174,16 +3097,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplateplatformimagesourceresponse">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplatePlatformImageSourceResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplatePlatformImageSourceResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplatePlatformImageSourceResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3420,16 +3336,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatepowershellcustomizer">Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplatePowerShellCustomizer">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplatePowerShellCustomizerArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplatePowerShellCustomizerArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3706,16 +3615,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatepowershellcustomizerresponse">Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplatePowerShellCustomizerResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplatePowerShellCustomizerResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplatePowerShellCustomizerResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -3992,16 +3894,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplaterestartcustomizer">Image<wbr>Template<wbr>Restart<wbr>Customizer</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateRestartCustomizer">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateRestartCustomizerArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateRestartCustomizerArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4198,16 +4093,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplaterestartcustomizerresponse">Image<wbr>Template<wbr>Restart<wbr>Customizer<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateRestartCustomizerResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateRestartCustomizerResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateRestartCustomizerResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4404,16 +4292,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatesharedimagedistributor">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateSharedImageDistributor">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateSharedImageDistributorArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateSharedImageDistributorArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4690,16 +4571,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatesharedimagedistributorresponse">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateSharedImageDistributorResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateSharedImageDistributorResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateSharedImageDistributorResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -4976,16 +4850,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateSharedImageVersionSource">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateSharedImageVersionSourceArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateSharedImageVersionSourceArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5062,16 +4929,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatesharedimageversionsourceresponse">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateSharedImageVersionSourceResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateSharedImageVersionSourceResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateSharedImageVersionSourceResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5148,16 +5008,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplateshellcustomizer">Image<wbr>Template<wbr>Shell<wbr>Customizer</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateShellCustomizer">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateShellCustomizerArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateShellCustomizerArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5354,16 +5207,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplateshellcustomizerresponse">Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateShellCustomizerResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateShellCustomizerResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateShellCustomizerResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5560,16 +5406,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatevhddistributor">Image<wbr>Template<wbr>Vhd<wbr>Distributor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateVhdDistributor">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateVhdDistributorArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateVhdDistributorArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5686,16 +5525,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatevhddistributorresponse">Image<wbr>Template<wbr>Vhd<wbr>Distributor<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateVhdDistributorResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateVhdDistributorResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateVhdDistributorResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5812,16 +5644,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatevmprofile">Image<wbr>Template<wbr>Vm<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateVmProfile">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateVmProfileArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateVmProfileArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -5978,16 +5803,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatevmprofileresponse">Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateVmProfileResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateVmProfileResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateVmProfileResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -6144,16 +5962,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatewindowsupdatecustomizer">Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#ImageTemplateWindowsUpdateCustomizer">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateWindowsUpdateCustomizerArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.ImageTemplateWindowsUpdateCustomizerArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -6350,16 +6161,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="imagetemplatewindowsupdatecustomizerresponse">Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ImageTemplateWindowsUpdateCustomizerResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ImageTemplateWindowsUpdateCustomizerResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ImageTemplateWindowsUpdateCustomizerResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -6556,16 +6360,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#PlatformImagePurchasePlan">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#PlatformImagePurchasePlanArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.PlatformImagePurchasePlanArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -6722,16 +6519,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#PlatformImagePurchasePlanResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#PlatformImagePurchasePlanResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.PlatformImagePurchasePlanResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -6888,16 +6678,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="provisioningerrorresponse">Provisioning<wbr>Error<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#ProvisioningErrorResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#ProvisioningErrorResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.ProvisioningErrorResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -7014,16 +6797,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="virtualnetworkconfig">Virtual<wbr>Network<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/input/#VirtualNetworkConfig">input</a>   API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#VirtualNetworkConfigArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Inputs.VirtualNetworkConfigArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
+
+
 
 
 
@@ -7100,16 +6876,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/types/output/#VirtualNetworkConfigResponse">output</a> API doc for this type.
-{{% /choosable %}}
 
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/virtualmachineimages?tab=doc#VirtualNetworkConfigResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.VirtualMachineImages.Outputs.VirtualNetworkConfigResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
+
+
 
 
 

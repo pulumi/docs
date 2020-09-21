@@ -31,19 +31,4 @@ Explore the resources and functions of the marketplace module in the Azure NextG
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Marketplace.html" title="Pulumi.AzureNextGen.Marketplace">Pulumi.AzureNextGen.Marketplace</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/marketplace?tab=doc#" title="azure/marketplace">azure/marketplace</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/marketplace/#" title="@pulumi/azure-nextgen/marketplace">@pulumi/azure-nextgen/marketplace</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/marketplace" title="pulumi_azure_nextgen/marketplace">pulumi_azure_nextgen/marketplace</a></dd>
-
-</dl>
 

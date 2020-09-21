@@ -31,19 +31,4 @@ Explore the resources and functions of the azurestackhci module in the Azure Nex
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.AzureStackHCI.html" title="Pulumi.AzureNextGen.AzureStackHCI">Pulumi.AzureNextGen.AzureStackHCI</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azurestackhci?tab=doc#" title="azure/azurestackhci">azure/azurestackhci</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/azurestackhci/#" title="@pulumi/azure-nextgen/azurestackhci">@pulumi/azure-nextgen/azurestackhci</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/azurestackhci" title="pulumi_azure_nextgen/azurestackhci">pulumi_azure_nextgen/azurestackhci</a></dd>
-
-</dl>
 

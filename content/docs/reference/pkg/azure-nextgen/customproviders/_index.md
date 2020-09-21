@@ -33,19 +33,4 @@ Explore the resources and functions of the customproviders module in the Azure N
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.CustomProviders.html" title="Pulumi.AzureNextGen.CustomProviders">Pulumi.AzureNextGen.CustomProviders</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/customproviders?tab=doc#" title="azure/customproviders">azure/customproviders</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/customproviders/#" title="@pulumi/azure-nextgen/customproviders">@pulumi/azure-nextgen/customproviders</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/customproviders" title="pulumi_azure_nextgen/customproviders">pulumi_azure_nextgen/customproviders</a></dd>
-
-</dl>
 

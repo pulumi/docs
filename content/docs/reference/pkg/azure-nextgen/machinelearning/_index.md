@@ -36,19 +36,4 @@ Explore the resources and functions of the machinelearning module in the Azure N
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.MachineLearning.html" title="Pulumi.AzureNextGen.MachineLearning">Pulumi.AzureNextGen.MachineLearning</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearning?tab=doc#" title="azure/machinelearning">azure/machinelearning</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/machinelearning/#" title="@pulumi/azure-nextgen/machinelearning">@pulumi/azure-nextgen/machinelearning</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/machinelearning" title="pulumi_azure_nextgen/machinelearning">pulumi_azure_nextgen/machinelearning</a></dd>
-
-</dl>
 

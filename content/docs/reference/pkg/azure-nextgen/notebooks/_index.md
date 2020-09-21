@@ -32,19 +32,4 @@ Explore the resources and functions of the notebooks module in the Azure NextGen
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Notebooks.html" title="Pulumi.AzureNextGen.Notebooks">Pulumi.AzureNextGen.Notebooks</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/notebooks?tab=doc#" title="azure/notebooks">azure/notebooks</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/notebooks/#" title="@pulumi/azure-nextgen/notebooks">@pulumi/azure-nextgen/notebooks</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/notebooks" title="pulumi_azure_nextgen/notebooks">pulumi_azure_nextgen/notebooks</a></dd>
-
-</dl>
 

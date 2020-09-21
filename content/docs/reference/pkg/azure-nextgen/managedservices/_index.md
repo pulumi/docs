@@ -33,19 +33,4 @@ Explore the resources and functions of the managedservices module in the Azure N
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ManagedServices.html" title="Pulumi.AzureNextGen.ManagedServices">Pulumi.AzureNextGen.ManagedServices</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedservices?tab=doc#" title="azure/managedservices">azure/managedservices</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/managedservices/#" title="@pulumi/azure-nextgen/managedservices">@pulumi/azure-nextgen/managedservices</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/managedservices" title="pulumi_azure_nextgen/managedservices">pulumi_azure_nextgen/managedservices</a></dd>
-
-</dl>
 

@@ -37,19 +37,4 @@ Explore the resources and functions of the search module in the Azure NextGen pa
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Search.html" title="Pulumi.AzureNextGen.Search">Pulumi.AzureNextGen.Search</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/search?tab=doc#" title="azure/search">azure/search</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/search/#" title="@pulumi/azure-nextgen/search">@pulumi/azure-nextgen/search</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/search" title="pulumi_azure_nextgen/search">pulumi_azure_nextgen/search</a></dd>
-
-</dl>
 

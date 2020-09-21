@@ -46,19 +46,4 @@ Explore the resources and functions of the kusto module in the Azure NextGen pac
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.Kusto.html" title="Pulumi.AzureNextGen.Kusto">Pulumi.AzureNextGen.Kusto</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/kusto?tab=doc#" title="azure/kusto">azure/kusto</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/kusto/#" title="@pulumi/azure-nextgen/kusto">@pulumi/azure-nextgen/kusto</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/kusto" title="pulumi_azure_nextgen/kusto">pulumi_azure_nextgen/kusto</a></dd>
-
-</dl>
 

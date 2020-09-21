@@ -31,19 +31,4 @@ Explore the resources and functions of the azureactivedirectory module in the Az
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.AzureActiveDirectory.html" title="Pulumi.AzureNextGen.AzureActiveDirectory">Pulumi.AzureNextGen.AzureActiveDirectory</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/azureactivedirectory?tab=doc#" title="azure/azureactivedirectory">azure/azureactivedirectory</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/azureactivedirectory/#" title="@pulumi/azure-nextgen/azureactivedirectory">@pulumi/azure-nextgen/azureactivedirectory</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/azureactivedirectory" title="pulumi_azure_nextgen/azureactivedirectory">pulumi_azure_nextgen/azureactivedirectory</a></dd>
-
-</dl>
 

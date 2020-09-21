@@ -80,19 +80,4 @@ Explore the resources and functions of the documentdb module in the Azure NextGe
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.DocumentDB.html" title="Pulumi.AzureNextGen.DocumentDB">Pulumi.AzureNextGen.DocumentDB</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/documentdb?tab=doc#" title="azure/documentdb">azure/documentdb</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/documentdb/#" title="@pulumi/azure-nextgen/documentdb">@pulumi/azure-nextgen/documentdb</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/documentdb" title="pulumi_azure_nextgen/documentdb">pulumi_azure_nextgen/documentdb</a></dd>
-
-</dl>
 

@@ -35,19 +35,4 @@ Explore the resources and functions of the operationsmanagement module in the Az
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.OperationsManagement.html" title="Pulumi.AzureNextGen.OperationsManagement">Pulumi.AzureNextGen.OperationsManagement</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/operationsmanagement?tab=doc#" title="azure/operationsmanagement">azure/operationsmanagement</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/operationsmanagement/#" title="@pulumi/azure-nextgen/operationsmanagement">@pulumi/azure-nextgen/operationsmanagement</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/operationsmanagement" title="pulumi_azure_nextgen/operationsmanagement">pulumi_azure_nextgen/operationsmanagement</a></dd>
-
-</dl>
 

@@ -31,19 +31,4 @@ Explore the resources and functions of the powerbidedicated module in the Azure 
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.PowerBIDedicated.html" title="Pulumi.AzureNextGen.PowerBIDedicated">Pulumi.AzureNextGen.PowerBIDedicated</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/powerbidedicated?tab=doc#" title="azure/powerbidedicated">azure/powerbidedicated</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/powerbidedicated/#" title="@pulumi/azure-nextgen/powerbidedicated">@pulumi/azure-nextgen/powerbidedicated</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/powerbidedicated" title="pulumi_azure_nextgen/powerbidedicated">pulumi_azure_nextgen/powerbidedicated</a></dd>
-
-</dl>
 

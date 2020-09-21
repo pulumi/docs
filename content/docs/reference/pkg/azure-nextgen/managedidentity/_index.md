@@ -31,19 +31,4 @@ Explore the resources and functions of the managedidentity module in the Azure N
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.ManagedIdentity.html" title="Pulumi.AzureNextGen.ManagedIdentity">Pulumi.AzureNextGen.ManagedIdentity</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/managedidentity?tab=doc#" title="azure/managedidentity">azure/managedidentity</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/managedidentity/#" title="@pulumi/azure-nextgen/managedidentity">@pulumi/azure-nextgen/managedidentity</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/managedidentity" title="pulumi_azure_nextgen/managedidentity">pulumi_azure_nextgen/managedidentity</a></dd>
-
-</dl>
 

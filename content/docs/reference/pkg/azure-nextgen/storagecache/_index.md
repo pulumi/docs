@@ -33,19 +33,4 @@ Explore the resources and functions of the storagecache module in the Azure Next
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.StorageCache.html" title="Pulumi.AzureNextGen.StorageCache">Pulumi.AzureNextGen.StorageCache</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storagecache?tab=doc#" title="azure/storagecache">azure/storagecache</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/storagecache/#" title="@pulumi/azure-nextgen/storagecache">@pulumi/azure-nextgen/storagecache</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/storagecache" title="pulumi_azure_nextgen/storagecache">pulumi_azure_nextgen/storagecache</a></dd>
-
-</dl>
 

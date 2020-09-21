@@ -35,19 +35,4 @@ Explore the resources and functions of the machinelearningexperimentation module
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.MachineLearningExperimentation.html" title="Pulumi.AzureNextGen.MachineLearningExperimentation">Pulumi.AzureNextGen.MachineLearningExperimentation</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/machinelearningexperimentation?tab=doc#" title="azure/machinelearningexperimentation">azure/machinelearningexperimentation</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/machinelearningexperimentation/#" title="@pulumi/azure-nextgen/machinelearningexperimentation">@pulumi/azure-nextgen/machinelearningexperimentation</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/machinelearningexperimentation" title="pulumi_azure_nextgen/machinelearningexperimentation">pulumi_azure_nextgen/machinelearningexperimentation</a></dd>
-
-</dl>
 

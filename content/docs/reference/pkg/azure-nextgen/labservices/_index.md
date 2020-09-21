@@ -43,19 +43,4 @@ Explore the resources and functions of the labservices module in the Azure NextG
 
 
 
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureNextGen/Pulumi.AzureNextGen.LabServices.html" title="Pulumi.AzureNextGen.LabServices">Pulumi.AzureNextGen.LabServices</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/labservices?tab=doc#" title="azure/labservices">azure/labservices</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure-nextgen/labservices/#" title="@pulumi/azure-nextgen/labservices">@pulumi/azure-nextgen/labservices</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure_nextgen/labservices" title="pulumi_azure_nextgen/labservices">pulumi_azure_nextgen/labservices</a></dd>
-
-</dl>
 
