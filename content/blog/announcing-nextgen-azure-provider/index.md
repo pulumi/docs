@@ -1,7 +1,6 @@
 ---
 title: "Announcing Next Generation Pulumi Azure Provider"
 date: 2020-09-21
-draft: true
 meta_desc: "Next Generation Pulumi Azure Provider with 100% API Coverage and Same-Day Feature Support is now available in beta"
 meta_image: azure-nextgen.png
 authors:
@@ -30,7 +29,7 @@ If you can deploy a resource with ARM Templates, you can deploy it with the next
 
 ## Always Up-to-Date
 
-Distinctly, the new provider is designed to be always up-to-date with additions and changes to Azure APIs.
+Unlike the original Azure provider, which requires manual work to keep updated, the new provider is designed to be always up-to-date with additions and changes to Azure APIs.
 
 We generate Pulumi SDKs for `azure-nextgen` automatically from Azure API specifications published by Microsoft. An automated pipeline releases updated resources within hours after any current API specifications are merged. We publish daily updates via automated builds and cut minor SDK versions every two weeks.
 
@@ -42,7 +41,7 @@ Excited about a new service announced by Microsoft? Chances are it’s already i
 
 The Azure Resource Manager API is structured around Resource Providers&mdash;high-level groups like "storage", "compute", or "web". We map Resource Providers to top-level modules or namespaces in Pulumi SDKs.
 
-Each resource provider defines one or more API versions, for example, "2015-05-01", "2020-09-01", or "2020-08-01-preview". Every version of every ARM API is available in Pulumi SDKs, and each version has its module or namespace.
+Each resource provider defines one or more API versions, for example, "2015-05-01", "2020-09-01", or "2020-08-01-preview". Every version of every ARM API is available in Pulumi SDKs, and each version has its own module or namespace.
 
 ![API Versions in VS Code](vscode-versions.png)
 
@@ -181,7 +180,7 @@ API documentation is available at [Azure NextGen API Reference](/docs/reference/
 
 ## Integrated with Azure Ecosystem
 
-Relying on the shape of the Azure API, we can integrate the NextGen provider into the broader Azure ecosystem. Over the next weeks, we will release several capabilities to simplify the adoption of the new provider:
+Relying on the shape of the Azure API, we can integrate the NextGen provider into the broader Azure ecosystem. In the coming weeks, we will release several capabilities to simplify the adoption of the new provider:
 
 - Command-line and web-based tools to convert Azure Resource Manager Templates to Pulumi programs in the language of your choice
 - A flow to import an existing Azure Resource Group and all its resources to your Pulumi project
@@ -240,7 +239,9 @@ $ pulumi new azure-nextgen-go
 
 Several larger examples are available in the Pulumi Examples repo:
 
-- Web Applications with Azure AppService and Docker images: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-appservice-docker), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-appservice-docker), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-appservice-docker), [Go](https://github.com/pulumi/examples/tree/master/azure-nextgen-go-appservice-docker)
-- TODO: Add more
+- Web Applications with Azure App Service and Docker: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-appservice-docker), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-appservice-docker), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-appservice-docker), [Go](https://github.com/pulumi/examples/tree/master/azure-nextgen-go-appservice-docker)
+- Azure AKS cluster: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-aks), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-aks), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aks), [Go](https://github.com/pulumi/examples/tree/master/azure-nextgen-go-aks)
+- Web Application with Azure Container Instances: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-aci), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-aci), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aci), [Go](https://github.com/pulumi/examples/tree/master/azure-nextgen-go-aci)
+- Web Server Using Azure Virtual Machine: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-webserver), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-webserver)
 
 You can browse [API reference docs](https://www.pulumi.com/docs/reference/pkg/azure-nextgen/) with inline examples or explore the [Pulumi Azure NextGen SDKs](https://github.com/pulumi/pulumi-azure-nextgen) repository.
