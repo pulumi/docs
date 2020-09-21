@@ -18,6 +18,7 @@ Explore the resources and functions of the cfg module in the AWS package.
     <li><a href="organizationmanagedrule" title="OrganizationManagedRule"><span class="symbol resource"></span>OrganizationManagedRule</a></li>
     <li><a href="recorder" title="Recorder"><span class="symbol resource"></span>Recorder</a></li>
     <li><a href="recorderstatus" title="RecorderStatus"><span class="symbol resource"></span>RecorderStatus</a></li>
+    <li><a href="remediationconfiguration" title="RemediationConfiguration"><span class="symbol resource"></span>RemediationConfiguration</a></li>
     <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
 </ul>
 
@@ -30,7 +31,7 @@ Explore the resources and functions of the cfg module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 
 

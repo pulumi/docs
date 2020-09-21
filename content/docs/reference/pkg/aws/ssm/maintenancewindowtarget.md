@@ -141,10 +141,7 @@ const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
     resourceType: "RESOURCE_GROUP",
     targets: [{
         key: "resource-groups:ResourceTypeFilters",
-        values: [
-            "AWS::EC2::INSTANCE",
-            "AWS::EC2::VPC",
-        ],
+        values: ["AWS::EC2::Instance"],
     }],
 });
 ```
@@ -162,10 +159,7 @@ target1 = aws.ssm.MaintenanceWindowTarget("target1",
     resource_type="RESOURCE_GROUP",
     targets=[aws.ssm.MaintenanceWindowTargetTargetArgs(
         key="resource-groups:ResourceTypeFilters",
-        values=[
-            "AWS::EC2::INSTANCE",
-            "AWS::EC2::VPC",
-        ],
+        values=["AWS::EC2::Instance"],
     )])
 ```
 ```csharp
@@ -194,8 +188,7 @@ class MyStack : Stack
                     Key = "resource-groups:ResourceTypeFilters",
                     Values = 
                     {
-                        "AWS::EC2::INSTANCE",
-                        "AWS::EC2::VPC",
+                        "AWS::EC2::Instance",
                     },
                 },
             },
@@ -230,8 +223,7 @@ func main() {
 				&ssm.MaintenanceWindowTargetTargetArgs{
 					Key: pulumi.String("resource-groups:ResourceTypeFilters"),
 					Values: pulumi.StringArray{
-						pulumi.String("AWS::EC2::INSTANCE"),
-						pulumi.String("AWS::EC2::VPC"),
+						pulumi.String("AWS::EC2::Instance"),
 					},
 				},
 			},

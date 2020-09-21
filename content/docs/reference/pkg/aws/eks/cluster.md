@@ -47,6 +47,13 @@ class MyStack : Stack
             PolicyArn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
             Role = example.Name,
         });
+        // Optionally, enable Security Groups for Pods
+        // Reference: https://docs.aws.amazon.com/eks/latest/userguide/security-groups-for-pods.html
+        var example_AmazonEKSVPCResourceController = new Aws.Iam.RolePolicyAttachment("example-AmazonEKSVPCResourceController", new Aws.Iam.RolePolicyAttachmentArgs
+        {
+            PolicyArn = "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController",
+            Role = example.Name,
+        });
     }
 
 }
@@ -80,6 +87,13 @@ func main() {
 		if err != nil {
 			return err
 		}
+		_, err = iam.NewRolePolicyAttachment(ctx, "example_AmazonEKSVPCResourceController", &iam.RolePolicyAttachmentArgs{
+			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"),
+			Role:      example.Name,
+		})
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 }
@@ -108,6 +122,11 @@ example = aws.iam.Role("example", assume_role_policy="""{
 example__amazon_eks_cluster_policy = aws.iam.RolePolicyAttachment("example-AmazonEKSClusterPolicy",
     policy_arn="arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
     role=example.name)
+# Optionally, enable Security Groups for Pods
+# Reference: https://docs.aws.amazon.com/eks/latest/userguide/security-groups-for-pods.html
+example__amazon_eksvpc_resource_controller = aws.iam.RolePolicyAttachment("example-AmazonEKSVPCResourceController",
+    policy_arn="arn:aws:iam::aws:policy/AmazonEKSVPCResourceController",
+    role=example.name)
 ```
 
 {{% /example %}}
@@ -133,6 +152,12 @@ const example = new aws.iam.Role("example", {assumeRolePolicy: `{
 `});
 const example_AmazonEKSClusterPolicy = new aws.iam.RolePolicyAttachment("example-AmazonEKSClusterPolicy", {
     policyArn: "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+    role: example.name,
+});
+// Optionally, enable Security Groups for Pods
+// Reference: https://docs.aws.amazon.com/eks/latest/userguide/security-groups-for-pods.html
+const example_AmazonEKSVPCResourceController = new aws.iam.RolePolicyAttachment("example-AmazonEKSVPCResourceController", {
+    policyArn: "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController",
     role: example.name,
 });
 ```
