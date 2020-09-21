@@ -126,7 +126,7 @@ Let's look at other ways of interacting with the concrete value of an output. In
 export const subdomain = alb.hostname.apply(hostname => hostname.substring(0, indexOf(".")));
 ```
 
-You can use apply to print to the console or allocate resources inside of an apply, but it can be dangerous because the resource may not be created during a preview and apply will never execute.
+You can use `apply()` to print to the console, or allocate resources inside of an apply, but it can be dangerous because the resource may not be created during a preview and apply will never execute.
 
 Those are the basics, but before wrapping up, let's look at some convenient helper methods Pulumi offers for dealing with outputs.
 
