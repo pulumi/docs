@@ -1,4 +1,10 @@
 [[releases]]
+date= "21st September 2020"
+title = "Pulumi is the Industry's First Infrastructure as Code Platform with 100% Azure Support"
+summary = "Pulumi is the Industry’s First Multi-Cloud, Multi-Language Infrastructure as Code Platform with 100% Azure Support"
+url = "https://info.pulumi.com/press-release/pulumi-azure-provider"
+
+[[releases]]
 date = "3rd September 2020"
 title = "Pulumi Announces First Annual Cloud Engineering Summit"
 summary = "Cloud engineering leader Pulumi today announced the first annual Cloud Engineering Summit."
