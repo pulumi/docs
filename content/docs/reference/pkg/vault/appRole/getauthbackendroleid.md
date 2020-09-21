@@ -12,8 +12,6 @@ meta_desc: "Explore the GetAuthBackendRoleId function of the appRole module, inc
 
 Reads the Role ID of an AppRole from a Vault server.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -40,10 +38,34 @@ class MyStack : Stack
     public Output<string> Role_id { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vault/sdk/v2/go/vault/appRole"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "my-approle-backend"
+		role, err := appRole.GetAuthBackendRoleId(ctx, &appRole.GetAuthBackendRoleIdArgs{
+			Backend:  &opt0,
+			RoleName: "my-role",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("role-id", role.RoleId)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -55,9 +77,11 @@ role = vault.appRole.get_auth_backend_role_id(backend="my-approle-backend",
     role_name="my-role")
 pulumi.export("role-id", role.role_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
@@ -69,6 +93,7 @@ const role = pulumi.output(vault.appRole.getAuthBackendRoleId({
 
 export const role_id = role.roleId;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -85,7 +110,7 @@ export const role_id = role.roleId;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_auth_backend_role_id(</span>backend=None<span class="p">, </span>role_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_auth_backend_role_id(</span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAuthBackendRoleIdResult</code></pre></div>
 {{% /choosable %}}
 
 

@@ -22,7 +22,7 @@ meta_desc: "Explore the SecretBackendConnection resource of the database module,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/database/#SecretBackendConnection">SecretBackendConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_roles=None<span class="p">, </span>backend=None<span class="p">, </span>cassandra=None<span class="p">, </span>data=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>hana=None<span class="p">, </span>mongodb=None<span class="p">, </span>mssql=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_aurora=None<span class="p">, </span>mysql_legacy=None<span class="p">, </span>mysql_rds=None<span class="p">, </span>name=None<span class="p">, </span>oracle=None<span class="p">, </span>postgresql=None<span class="p">, </span>root_rotation_statements=None<span class="p">, </span>verify_connection=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/database/#pulumi_vault.database.SecretBackendConnection">SecretBackendConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionCassandra]]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionElasticsearch]]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionHana]]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMongodb]]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMongodbatlas]]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMssql]]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysql]]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlAurora]]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlLegacy]]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlRds]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionOracle]]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionPostgresql]]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,6 +274,17 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="mongodbatlas_csharp">
+<a href="#mongodbatlas_csharp" style="color: inherit; text-decoration: inherit;">Mongodbatlas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mssql_csharp">
 <a href="#mssql_csharp" style="color: inherit; text-decoration: inherit;">Mssql</a>
 </span> 
@@ -466,6 +477,17 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mongodbatlas_go">
+<a href="#mongodbatlas_go" style="color: inherit; text-decoration: inherit;">Mongodbatlas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
+    </dt>
+    <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -666,6 +688,17 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="mongodbatlas_nodejs">
+<a href="#mongodbatlas_nodejs" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
+    </dt>
+    <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="mssql_nodejs">
 <a href="#mssql_nodejs" style="color: inherit; text-decoration: inherit;">mssql</a>
 </span> 
@@ -858,6 +891,17 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mongodb]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mongodbatlas_python">
+<a href="#mongodbatlas_python" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas]</a></span>
+    </dt>
+    <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1069,7 +1113,8 @@ Get an existing SecretBackendConnection resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allowed_roles=None<span class="p">, </span>backend=None<span class="p">, </span>cassandra=None<span class="p">, </span>data=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>hana=None<span class="p">, </span>mongodb=None<span class="p">, </span>mssql=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_aurora=None<span class="p">, </span>mysql_legacy=None<span class="p">, </span>mysql_rds=None<span class="p">, </span>name=None<span class="p">, </span>oracle=None<span class="p">, </span>postgresql=None<span class="p">, </span>root_rotation_statements=None<span class="p">, </span>verify_connection=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionCassandra]]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionElasticsearch]]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionHana]]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMongodb]]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMongodbatlas]]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMssql]]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysql]]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlAurora]]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlLegacy]]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionMysqlRds]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionOracle]]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[Dict[SecretBackendConnectionPostgresql]]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SecretBackendConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1077,7 +1122,7 @@ Get an existing SecretBackendConnection resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.SecretBackendConnection.html">SecretBackendConnection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.SecretBackendConnectionState.html">SecretBackendConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.SecretBackendConnection.html">SecretBackendConnection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.SecretBackendConnectionState.html">SecretBackendConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1259,6 +1304,17 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mongodbatlas_csharp">
+<a href="#state_mongodbatlas_csharp" style="color: inherit; text-decoration: inherit;">Mongodbatlas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1459,6 +1515,17 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mongodbatlas_go">
+<a href="#state_mongodbatlas_go" style="color: inherit; text-decoration: inherit;">Mongodbatlas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
+    </dt>
+    <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mssql_go">
 <a href="#state_mssql_go" style="color: inherit; text-decoration: inherit;">Mssql</a>
 </span> 
@@ -1655,6 +1722,17 @@ connection.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mongodbatlas_nodejs">
+<a href="#state_mongodbatlas_nodejs" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
+    </dt>
+    <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mssql_nodejs">
 <a href="#state_mssql_nodejs" style="color: inherit; text-decoration: inherit;">mssql</a>
 </span> 
@@ -1847,6 +1925,17 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mongodb]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mongodbatlas_python">
+<a href="#state_mongodbatlas_python" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Dict[Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas]</a></span>
+    </dt>
+    <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2362,7 +2451,7 @@ part of the host.
 <a href="#connecttimeout_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds to use as a connection
 timeout.
@@ -2431,7 +2520,7 @@ chain.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default port to connect to if no port is specified as
 part of the host.
@@ -2443,7 +2532,7 @@ part of the host.
 <a href="#protocolversion_python" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The CQL protocol version to use.
 {{% /md %}}</dd>
@@ -2868,7 +2957,7 @@ for an example.
 <a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -2880,7 +2969,7 @@ a connection alive for.
 <a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -2892,7 +2981,7 @@ maintain.
 <a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3114,7 +3203,7 @@ for an example.
 <a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3126,7 +3215,7 @@ a connection alive for.
 <a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3138,11 +3227,177 @@ maintain.
 <a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMongodbatlas">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMongodbatlas">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMongodbatlasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendConnectionMongodbatlasOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMongodbatlasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMongodbatlas.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privatekey_csharp">
+<a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publickey_csharp">
+<a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privatekey_go">
+<a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publickey_go">
+<a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privatekey_nodejs">
+<a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="publickey_nodejs">
+<a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3360,7 +3615,7 @@ for an example.
 <a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3372,7 +3627,7 @@ a connection alive for.
 <a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3384,7 +3639,7 @@ maintain.
 <a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3606,7 +3861,7 @@ for an example.
 <a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3618,7 +3873,7 @@ a connection alive for.
 <a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3630,7 +3885,7 @@ maintain.
 <a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3852,7 +4107,7 @@ for an example.
 <a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3864,7 +4119,7 @@ a connection alive for.
 <a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3876,7 +4131,7 @@ maintain.
 <a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -4098,7 +4353,7 @@ for an example.
 <a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -4110,7 +4365,7 @@ a connection alive for.
 <a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -4122,7 +4377,7 @@ maintain.
 <a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -4344,7 +4599,7 @@ for an example.
 <a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -4356,7 +4611,7 @@ a connection alive for.
 <a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -4368,7 +4623,7 @@ maintain.
 <a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -4590,7 +4845,7 @@ for an example.
 <a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -4602,7 +4857,7 @@ a connection alive for.
 <a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -4614,7 +4869,7 @@ maintain.
 <a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -4836,7 +5091,7 @@ for an example.
 <a href="#maxconnectionlifetime_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -4848,7 +5103,7 @@ a connection alive for.
 <a href="#maxidleconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -4860,7 +5115,7 @@ maintain.
 <a href="#maxopenconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.

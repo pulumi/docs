@@ -11,7 +11,6 @@ meta_desc: "Explore the GetAuthBackend function of the Vault package, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -34,10 +33,31 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vault/sdk/v2/go/vault"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := vault.LookupAuthBackend(ctx, &vault.LookupAuthBackendArgs{
+			Path: "userpass",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -47,9 +67,11 @@ import pulumi_vault as vault
 
 example = vault.get_auth_backend(path="userpass")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
@@ -58,6 +80,7 @@ const example = pulumi.output(vault.getAuthBackend({
     path: "userpass",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -74,7 +97,7 @@ const example = pulumi.output(vault.getAuthBackend({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_auth_backend(</span>path=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_auth_backend(</span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAuthBackendResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -518,7 +541,7 @@ The following output properties are available:
 <a href="#default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default lease duration in seconds.
 {{% /md %}}</dd>
@@ -573,7 +596,7 @@ The following output properties are available:
 <a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum lease duration in seconds.
 {{% /md %}}</dd>

@@ -15,8 +15,38 @@ documentation](https://www.vaultproject.io/api-docs/auth/kubernetes#read-config)
 information.
 
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const config = pulumi.output(vault.kubernetes.getAuthBackendConfig({
+    backend: "my-kubernetes-backend",
+}, { async: true }));
+
+export const tokenReviewerJwt = config.tokenReviewerJwt;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAuthBackendConfig {#using}
@@ -30,7 +60,7 @@ information.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_auth_backend_config(</span>backend=None<span class="p">, </span>issuer=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_host=None<span class="p">, </span>pem_keys=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_auth_backend_config(</span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kubernetes_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kubernetes_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pem_keys</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAuthBackendConfigResult</code></pre></div>
 {{% /choosable %}}
 
 

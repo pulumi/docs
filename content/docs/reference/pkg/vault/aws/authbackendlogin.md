@@ -16,8 +16,96 @@ instance metadata. For more information, see the [Vault
 documentation](https://www.vaultproject.io/docs/auth/aws.html).
 
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+aws = vault.AuthBackend("aws", type="aws")
+example_auth_backend_client = vault.aws.AuthBackendClient("exampleAuthBackendClient",
+    access_key="123456789012",
+    backend=aws.path,
+    secret_key="AWSSECRETKEYGOESHERE")
+example_auth_backend_role = vault.aws.AuthBackendRole("exampleAuthBackendRole",
+    auth_type="ec2",
+    backend=aws.path,
+    bound_account_id="123456789012",
+    bound_ami_id="ami-8c1be5f6",
+    bound_iam_instance_profile_arn="arn:aws:iam::123456789012:instance-profile/MyProfile",
+    bound_subnet_id="vpc-133128f1",
+    bound_vpc_id="vpc-b61106d4",
+    max_ttl=120,
+    role="test-role",
+    token_policies=[
+        "default",
+        "dev",
+        "prod",
+    ],
+    ttl=60,
+    opts=ResourceOptions(depends_on=["vault_aws_auth_backend_client.example"]))
+example_auth_backend_login = vault.aws.AuthBackendLogin("exampleAuthBackendLogin",
+    backend=vault_auth_backend["example"]["path"],
+    identity="BASE64ENCODEDIDENTITYDOCUMENT",
+    role=example_auth_backend_role.role,
+    signature="BASE64ENCODEDSHA256IDENTITYDOCUMENTSIGNATURE")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const aws = new vault.AuthBackend("aws", {
+    type: "aws",
+});
+const exampleAuthBackendClient = new vault.aws.AuthBackendClient("example", {
+    accessKey: "123456789012",
+    backend: aws.path,
+    secretKey: "AWSSECRETKEYGOESHERE",
+});
+const exampleAuthBackendRole = new vault.aws.AuthBackendRole("example", {
+    authType: "ec2",
+    backend: aws.path,
+    boundAccountId: "123456789012",
+    boundAmiId: "ami-8c1be5f6",
+    boundIamInstanceProfileArn: "arn:aws:iam::123456789012:instance-profile/MyProfile",
+    boundSubnetId: "vpc-133128f1",
+    boundVpcId: "vpc-b61106d4",
+    maxTtl: 120,
+    role: "test-role",
+    tokenPolicies: [
+        "default",
+        "dev",
+        "prod",
+    ],
+    ttl: 60,
+}, { dependsOn: [exampleAuthBackendClient] });
+const exampleAuthBackendLogin = new vault.aws.AuthBackendLogin("example", {
+    backend: vault_auth_backend_example.path,
+    identity: "BASE64ENCODEDIDENTITYDOCUMENT",
+    role: exampleAuthBackendRole.role,
+    signature: "BASE64ENCODEDSHA256IDENTITYDOCUMENTSIGNATURE",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AuthBackendLogin Resource {#create}
@@ -29,7 +117,7 @@ documentation](https://www.vaultproject.io/docs/auth/aws.html).
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/aws/#AuthBackendLogin">AuthBackendLogin</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>iam_http_request_method=None<span class="p">, </span>iam_request_body=None<span class="p">, </span>iam_request_headers=None<span class="p">, </span>iam_request_url=None<span class="p">, </span>identity=None<span class="p">, </span>nonce=None<span class="p">, </span>pkcs7=None<span class="p">, </span>role=None<span class="p">, </span>signature=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/aws/#pulumi_vault.aws.AuthBackendLogin">AuthBackendLogin</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_http_request_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_headers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nonce</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pkcs7</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1106,7 +1194,7 @@ authentication used to generate this token.
 <a href="#lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
@@ -1176,7 +1264,8 @@ Get an existing AuthBackendLogin resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accessor=None<span class="p">, </span>auth_type=None<span class="p">, </span>backend=None<span class="p">, </span>client_token=None<span class="p">, </span>iam_http_request_method=None<span class="p">, </span>iam_request_body=None<span class="p">, </span>iam_request_headers=None<span class="p">, </span>iam_request_url=None<span class="p">, </span>identity=None<span class="p">, </span>lease_duration=None<span class="p">, </span>lease_start_time=None<span class="p">, </span>metadata=None<span class="p">, </span>nonce=None<span class="p">, </span>pkcs7=None<span class="p">, </span>policies=None<span class="p">, </span>renewable=None<span class="p">, </span>role=None<span class="p">, </span>signature=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_http_request_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_headers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lease_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">lease_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, Any]]</span> = None<span class="p">, </span><span class="nx">nonce</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pkcs7</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">renewable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AuthBackendLogin</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1184,7 +1273,7 @@ Get an existing AuthBackendLogin resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLogin.html">AuthBackendLogin</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLoginState.html">AuthBackendLoginState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLogin.html">AuthBackendLogin</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLoginState.html">AuthBackendLoginState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2064,7 +2153,7 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 <a href="#state_lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.

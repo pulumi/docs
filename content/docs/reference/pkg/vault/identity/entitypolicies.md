@@ -12,8 +12,6 @@ meta_desc: "Explore the EntityPolicies resource of the identity module, includin
 
 Manages policies for an Identity Entity for Vault. The [Identity secrets engine](https://www.vaultproject.io/docs/secrets/identity/index.html) is the identity management solution for Vault.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -46,10 +44,42 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vault/sdk/v2/go/vault/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		entity, err := identity.NewEntity(ctx, "entity", &identity.EntityArgs{
+			ExternalPolicies: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = identity.NewEntityPolicies(ctx, "policies", &identity.EntityPoliciesArgs{
+			Policies: pulumi.StringArray{
+				pulumi.String("default"),
+				pulumi.String("test"),
+			},
+			Exclusive: pulumi.Bool(true),
+			EntityId:  entity.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,9 +96,11 @@ policies = vault.identity.EntityPolicies("policies",
     exclusive=True,
     entity_id=entity.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
@@ -83,6 +115,7 @@ const policies = new vault.identity.EntityPolicies("policies", {
     entityId: entity.id,
 });
 ```
+
 {{% /example %}}
 
 ### Non-exclusive Policies
@@ -122,10 +155,52 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vault/sdk/v2/go/vault/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		entity, err := identity.NewEntity(ctx, "entity", &identity.EntityArgs{
+			ExternalPolicies: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = identity.NewEntityPolicies(ctx, "_default", &identity.EntityPoliciesArgs{
+			Policies: pulumi.StringArray{
+				pulumi.String("default"),
+				pulumi.String("test"),
+			},
+			Exclusive: pulumi.Bool(false),
+			EntityId:  entity.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = identity.NewEntityPolicies(ctx, "others", &identity.EntityPoliciesArgs{
+			Policies: pulumi.StringArray{
+				pulumi.String("others"),
+			},
+			Exclusive: pulumi.Bool(false),
+			EntityId:  entity.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -146,9 +221,11 @@ others = vault.identity.EntityPolicies("others",
     exclusive=False,
     entity_id=entity.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
@@ -168,6 +245,7 @@ const others = new vault.identity.EntityPolicies("others", {
     entityId: entity.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -182,7 +260,7 @@ const others = new vault.identity.EntityPolicies("others", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/identity/#EntityPolicies">EntityPolicies</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>entity_id=None<span class="p">, </span>exclusive=None<span class="p">, </span>policies=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/identity/#pulumi_vault.identity.EntityPolicies">EntityPolicies</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclusive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -649,7 +727,8 @@ Get an existing EntityPolicies resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>entity_id=None<span class="p">, </span>entity_name=None<span class="p">, </span>exclusive=None<span class="p">, </span>policies=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entity_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclusive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> EntityPolicies</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -657,7 +736,7 @@ Get an existing EntityPolicies resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.EntityPolicies.html">EntityPolicies</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.EntityPoliciesState.html">EntityPoliciesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.EntityPolicies.html">EntityPolicies</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.EntityPoliciesState.html">EntityPoliciesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}

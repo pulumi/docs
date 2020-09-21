@@ -24,7 +24,7 @@ meta_desc: "Explore the GetAccessCredentials function of the azure module, inclu
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_access_credentials(</span>backend=None<span class="p">, </span>max_cred_validation_seconds=None<span class="p">, </span>num_seconds_between_tests=None<span class="p">, </span>num_sequential_successes=None<span class="p">, </span>role=None<span class="p">, </span>validate_creds=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_access_credentials(</span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_cred_validation_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_seconds_between_tests</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_sequential_successes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validate_creds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccessCredentialsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -331,7 +331,7 @@ credentials from, with no leading or trailing `/`s.
 <a href="#max_cred_validation_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>cred_<wbr>validation_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If 'validate_creds' is true, 
 the number of seconds after which to give up validating credentials. Defaults
@@ -344,7 +344,7 @@ to 1,200 (20 minutes).
 <a href="#num_seconds_between_tests_python" style="color: inherit; text-decoration: inherit;">num_<wbr>seconds_<wbr>between_<wbr>tests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If 'validate_creds' is true, 
 the number of seconds to wait between each test of generated credentials.
@@ -357,7 +357,7 @@ Defaults to 7.
 <a href="#num_sequential_successes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>sequential_<wbr>successes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}If 'validate_creds' is true, 
 the number of sequential successes required to validate generated
@@ -879,7 +879,7 @@ generated with this data may fail to apply.
 <a href="#lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The duration of the secret lease, in seconds relative
 to the time the data was requested. Once this time has passed any plan
@@ -933,7 +933,7 @@ generated with this data may fail to apply.
 <a href="#max_cred_validation_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>cred_<wbr>validation_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -943,7 +943,7 @@ generated with this data may fail to apply.
 <a href="#num_seconds_between_tests_python" style="color: inherit; text-decoration: inherit;">num_<wbr>seconds_<wbr>between_<wbr>tests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -953,7 +953,7 @@ generated with this data may fail to apply.
 <a href="#num_sequential_successes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>sequential_<wbr>successes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

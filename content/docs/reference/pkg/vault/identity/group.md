@@ -14,8 +14,6 @@ Creates an Identity Group for Vault. The [Identity secrets engine](https://www.v
 
 A group can contain multiple entities as its members. A group can also have subgroups. Policies set on the group is granted to all members of the group. During request time, when the token's entity ID is being evaluated for the policies that it has access to; along with the policies on the entity itself, policies that are inherited due to group memberships are also granted.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -47,10 +45,38 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vault/sdk/v2/go/vault/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := identity.NewGroup(ctx, "internal", &identity.GroupArgs{
+			Metadata: pulumi.StringMap{
+				"version": pulumi.String("2"),
+			},
+			Policies: pulumi.StringArray{
+				pulumi.String("dev"),
+				pulumi.String("test"),
+			},
+			Type: pulumi.String("internal"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -68,9 +94,11 @@ internal = vault.identity.Group("internal",
     ],
     type="internal")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
@@ -86,6 +114,7 @@ const internal = new vault.identity.Group("internal", {
     type: "internal",
 });
 ```
+
 {{% /example %}}
 
 ### External Group
@@ -114,10 +143,37 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vault/sdk/v2/go/vault/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := identity.NewGroup(ctx, "group", &identity.GroupArgs{
+			Metadata: pulumi.StringMap{
+				"version": pulumi.String("1"),
+			},
+			Policies: pulumi.StringArray{
+				pulumi.String("test"),
+			},
+			Type: pulumi.String("external"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -132,9 +188,11 @@ group = vault.identity.Group("group",
     policies=["test"],
     type="external")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vault from "@pulumi/vault";
@@ -147,6 +205,7 @@ const group = new vault.identity.Group("group", {
     type: "external",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -161,7 +220,7 @@ const group = new vault.identity.Group("group", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/identity/#Group">Group</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>external_policies=None<span class="p">, </span>member_entity_ids=None<span class="p">, </span>member_group_ids=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>policies=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/identity/#pulumi_vault.identity.Group">Group</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">external_member_entity_ids</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">external_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">member_entity_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">member_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -335,13 +394,24 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalmemberentityids_csharp">
+<a href="#externalmemberentityids_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Member<wbr>Entity<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalpolicies_csharp">
 <a href="#externalpolicies_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -419,13 +489,24 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalmemberentityids_go">
+<a href="#externalmemberentityids_go" style="color: inherit; text-decoration: inherit;">External<wbr>Member<wbr>Entity<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalpolicies_go">
 <a href="#externalpolicies_go" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -503,13 +584,24 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalmemberentityids_nodejs">
+<a href="#externalmemberentityids_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Member<wbr>Entity<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalpolicies_nodejs">
 <a href="#externalpolicies_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Policies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -587,13 +679,24 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-optional"
             title="Optional">
+        <span id="external_member_entity_ids_python">
+<a href="#external_member_entity_ids_python" style="color: inherit; text-decoration: inherit;">external_<wbr>member_<wbr>entity_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="external_policies_python">
 <a href="#external_policies_python" style="color: inherit; text-decoration: inherit;">external_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -760,7 +863,8 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>external_policies=None<span class="p">, </span>member_entity_ids=None<span class="p">, </span>member_group_ids=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>policies=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">external_member_entity_ids</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">external_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">member_entity_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">member_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -768,7 +872,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.Group.html">Group</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.GroupState.html">GroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.Group.html">Group</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.GroupState.html">GroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -876,13 +980,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_externalmemberentityids_csharp">
+<a href="#state_externalmemberentityids_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Member<wbr>Entity<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_externalpolicies_csharp">
 <a href="#state_externalpolicies_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -960,13 +1075,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_externalmemberentityids_go">
+<a href="#state_externalmemberentityids_go" style="color: inherit; text-decoration: inherit;">External<wbr>Member<wbr>Entity<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_externalpolicies_go">
 <a href="#state_externalpolicies_go" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1044,13 +1170,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_externalmemberentityids_nodejs">
+<a href="#state_externalmemberentityids_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Member<wbr>Entity<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_externalpolicies_nodejs">
 <a href="#state_externalpolicies_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Policies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1128,13 +1265,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_external_member_entity_ids_python">
+<a href="#state_external_member_entity_ids_python" style="color: inherit; text-decoration: inherit;">external_<wbr>member_<wbr>entity_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_external_policies_python">
 <a href="#state_external_policies_python" style="color: inherit; text-decoration: inherit;">external_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies return from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
+    <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
