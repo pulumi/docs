@@ -30,7 +30,7 @@ $ pulumi new typescript
 Install the Auth0 provider SDK:
 
 ```bash
-$ npm add @pulumi/mysql
+$ npm add @pulumi/auth0
 ```
 
 Create the Auth0 resources in index.ts as shown in the example below.
