@@ -614,7 +614,7 @@ The following output properties are available:
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -644,7 +644,7 @@ The following output properties are available:
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -654,7 +654,7 @@ The following output properties are available:
 <a href="#network_out_python" style="color: inherit; text-decoration: inherit;">network_<wbr>out</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -674,7 +674,7 @@ The following output properties are available:
 <a href="#transfer_python" style="color: inherit; text-decoration: inherit;">transfer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -684,7 +684,7 @@ The following output properties are available:
 <a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1136,6 +1136,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
 </dl>
 

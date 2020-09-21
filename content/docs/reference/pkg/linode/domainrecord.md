@@ -136,7 +136,7 @@ const foobarDomainRecord = new linode.DomainRecord("foobar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.DomainRecord">DomainRecord</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">record_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.DomainRecord">DomainRecord</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">record_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -698,7 +698,7 @@ The DomainRecord resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to access.  *Changing `domain_id` forces the creation of a new Linode Domain Record.*.
 {{% /md %}}</dd>
@@ -742,7 +742,7 @@ The DomainRecord resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port this Record points to.
 {{% /md %}}</dd>
@@ -753,7 +753,7 @@ The DomainRecord resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the target host. Lower values are preferred.
 {{% /md %}}</dd>
@@ -797,7 +797,7 @@ The DomainRecord resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#ttl_sec_python" style="color: inherit; text-decoration: inherit;">ttl_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}'Time to Live' - the amount of time in seconds that this Domain's records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 {{% /md %}}</dd>
@@ -808,7 +808,7 @@ The DomainRecord resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative weight of this Record. Higher values are preferred.
 {{% /md %}}</dd>
@@ -912,7 +912,7 @@ Get an existing DomainRecord resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">record_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl_sec</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> DomainRecord</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">record_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> DomainRecord</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1416,7 +1416,7 @@ The following state arguments are supported:
 <a href="#state_domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to access.  *Changing `domain_id` forces the creation of a new Linode Domain Record.*.
 {{% /md %}}</dd>
@@ -1438,7 +1438,7 @@ The following state arguments are supported:
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port this Record points to.
 {{% /md %}}</dd>
@@ -1449,7 +1449,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the target host. Lower values are preferred.
 {{% /md %}}</dd>
@@ -1515,7 +1515,7 @@ The following state arguments are supported:
 <a href="#state_ttl_sec_python" style="color: inherit; text-decoration: inherit;">ttl_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}'Time to Live' - the amount of time in seconds that this Domain's records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 {{% /md %}}</dd>
@@ -1526,7 +1526,7 @@ The following state arguments are supported:
 <a href="#state_weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The relative weight of this Record. Higher values are preferred.
 {{% /md %}}</dd>
@@ -1551,6 +1551,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
 </dl>
 

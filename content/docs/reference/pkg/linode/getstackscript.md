@@ -61,11 +61,16 @@ This resource exports the following attributes:
 {{% example csharp %}}
 ```csharp
 using Pulumi;
+using Linode = Pulumi.Linode;
 
 class MyStack : Stack
 {
     public MyStack()
     {
+        var myStackscript = Output.Create(Linode.GetStackScript.InvokeAsync(new Linode.GetStackScriptArgs
+        {
+            Id = 355872,
+        }));
     }
 
 }
@@ -78,11 +83,18 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := linode.LookupStackScript(ctx, &linode.LookupStackScriptArgs{
+			Id: 355872,
+		}, nil)
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 }
@@ -93,6 +105,9 @@ func main() {
 {{% example python %}}
 ```python
 import pulumi
+import pulumi_linode as linode
+
+my_stackscript = linode.get_stack_script(id=355872)
 ```
 
 {{% /example %}}
@@ -101,6 +116,11 @@ import pulumi
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const myStackscript = pulumi.output(linode.getStackScript({
+    id: 355872,
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -119,7 +139,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_stack_script(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">user_defined_fields</span><span class="p">:</span> <span class="nx">Optional[List[GetStackScriptUserDefinedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetStackScriptResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_stack_script(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_defined_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetStackScriptUserDefinedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetStackScriptResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -236,7 +256,7 @@ The following arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The unique numeric ID of the StackScript to query.
 {{% /md %}}</dd>
@@ -247,7 +267,7 @@ The following arguments are supported:
 <a href="#user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getstackscriptuserdefinedfield">List[Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getstackscriptuserdefinedfield">Sequence[Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -728,7 +748,7 @@ The following output properties are available:
 <a href="#deployments_active_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>active</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -738,7 +758,7 @@ The following output properties are available:
 <a href="#deployments_total_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>total</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -758,7 +778,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -768,7 +788,7 @@ The following output properties are available:
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -828,7 +848,7 @@ The following output properties are available:
 <a href="#user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getstackscriptuserdefinedfield">List[Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field]</a></span>
+        <span class="property-type"><a href="#getstackscriptuserdefinedfield">Sequence[Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1162,6 +1182,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
 </dl>
 

@@ -226,7 +226,7 @@ const myFirewall = new linode.Firewall("myFirewall", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Firewall">Firewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[List[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[List[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Firewall">Firewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -623,7 +623,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#linodes_python" style="color: inherit; text-decoration: inherit;">linodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd>
@@ -645,7 +645,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#inbounds_python" style="color: inherit; text-decoration: inherit;">inbounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinbound">List[Firewall<wbr>Inbound<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallinbound">Sequence[Firewall<wbr>Inbound<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#outbounds_python" style="color: inherit; text-decoration: inherit;">outbounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutbound">List[Firewall<wbr>Outbound<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewalloutbound">Sequence[Firewall<wbr>Outbound<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what outbound network traffic is allowed.
 {{% /md %}}</dd>
@@ -678,7 +678,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -824,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldevice">List[Firewall<wbr>Device]</a></span>
+        <span class="property-type"><a href="#firewalldevice">Sequence[Firewall<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}The devices associated with this firewall.
 {{% /md %}}</dd>
@@ -870,7 +870,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[List[FirewallDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[List[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[List[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallInboundArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">outbounds</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallOutboundArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1275,7 +1275,7 @@ The following state arguments are supported:
 <a href="#state_devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldevice">List[Firewall<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewalldevice">Sequence[Firewall<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The devices associated with this firewall.
 {{% /md %}}</dd>
@@ -1297,7 +1297,7 @@ The following state arguments are supported:
 <a href="#state_inbounds_python" style="color: inherit; text-decoration: inherit;">inbounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinbound">List[Firewall<wbr>Inbound<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallinbound">Sequence[Firewall<wbr>Inbound<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what inbound network traffic is allowed.
 {{% /md %}}</dd>
@@ -1319,7 +1319,7 @@ The following state arguments are supported:
 <a href="#state_linodes_python" style="color: inherit; text-decoration: inherit;">linodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
     <dd>{{% md %}}A list of IDs of Linodes this Firewall should govern it's network traffic for.
 {{% /md %}}</dd>
@@ -1330,7 +1330,7 @@ The following state arguments are supported:
 <a href="#state_outbounds_python" style="color: inherit; text-decoration: inherit;">outbounds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutbound">List[Firewall<wbr>Outbound<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewalloutbound">Sequence[Firewall<wbr>Outbound<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A firewall rule that specifies what outbound network traffic is allowed.
 {{% /md %}}</dd>
@@ -1352,7 +1352,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -1579,7 +1579,7 @@ The following state arguments are supported:
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the underlying entity this device references (i.e. the Linode's ID).
 {{% /md %}}</dd>
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Firewall Device.
 {{% /md %}}</dd>
@@ -1660,7 +1660,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to whitelist all) this rule applies to.
+    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1700,7 +1700,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to whitelist all) this rule applies to.
+    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1740,7 +1740,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to whitelist all) this rule applies to.
+    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1778,9 +1778,9 @@ The following state arguments are supported:
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to whitelist all) this rule applies to.
+    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1789,7 +1789,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of ports and/or port ranges (i.e. "443" or "80-90").
 {{% /md %}}</dd>
@@ -1838,7 +1838,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to whitelist all) this rule applies to.
+    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1878,7 +1878,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to whitelist all) this rule applies to.
+    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1918,7 +1918,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to whitelist all) this rule applies to.
+    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1956,9 +1956,9 @@ The following state arguments are supported:
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to whitelist all) this rule applies to.
+    <dd>{{% md %}}A list of IP addresses, CIDR blocks, or `0.0.0.0/0` (to allow all) this rule applies to.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1967,7 +1967,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of ports and/or port ranges (i.e. "443" or "80-90").
 {{% /md %}}</dd>
@@ -2001,6 +2001,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
 </dl>
 

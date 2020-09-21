@@ -748,7 +748,7 @@ The following output properties are available:
 <a href="#axfr_ips_python" style="color: inherit; text-decoration: inherit;">axfr_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -768,7 +768,7 @@ The following output properties are available:
 <a href="#expire_sec_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -788,7 +788,7 @@ The following output properties are available:
 <a href="#master_ips_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -798,7 +798,7 @@ The following output properties are available:
 <a href="#refresh_sec_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -808,7 +808,7 @@ The following output properties are available:
 <a href="#retry_sec_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -838,7 +838,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -848,7 +848,7 @@ The following output properties are available:
 <a href="#ttl_sec_python" style="color: inherit; text-decoration: inherit;">ttl_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -900,6 +900,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
 </dl>
 

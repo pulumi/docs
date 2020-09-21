@@ -414,7 +414,7 @@ const web = new linode.Instance("web", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">, </span><span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[List[InstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">, </span><span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1288,7 +1288,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#authorized_keys_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -1299,7 +1299,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#authorized_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -1310,7 +1310,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -1343,7 +1343,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">List[Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfig">Sequence[Instance<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd>
@@ -1354,7 +1354,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">List[Instance<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancedisk">Sequence[Instance<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1430,7 +1430,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stackscript_id_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -1441,7 +1441,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#swap_size_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd>
@@ -1452,7 +1452,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -1824,7 +1824,7 @@ will be used for this field.
 <a href="#ipv4s_python" style="color: inherit; text-decoration: inherit;">ipv4s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single
 private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.
@@ -1894,7 +1894,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">, </span><span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[InstanceBackupsArgs]</span> = None<span class="p">, </span><span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[List[InstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[InstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv4s</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specs</span><span class="p">:</span> <span class="nx">Optional[InstanceSpecsArgs]</span> = None<span class="p">, </span><span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">, </span><span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[InstanceBackupsArgs]</span> = None<span class="p">, </span><span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv4s</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specs</span><span class="p">:</span> <span class="nx">Optional[InstanceSpecsArgs]</span> = None<span class="p">, </span><span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2936,7 +2936,7 @@ Instances in a region.
 <a href="#state_authorized_keys_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2947,7 +2947,7 @@ Instances in a region.
 <a href="#state_authorized_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -2958,7 +2958,7 @@ Instances in a region.
 <a href="#state_backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -3002,7 +3002,7 @@ Instances in a region.
 <a href="#state_configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">List[Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfig">Sequence[Instance<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd>
@@ -3013,7 +3013,7 @@ Instances in a region.
 <a href="#state_disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">List[Instance<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancedisk">Sequence[Instance<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3057,7 +3057,7 @@ will be used for this field.
 <a href="#state_ipv4s_python" style="color: inherit; text-decoration: inherit;">ipv4s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single
 private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.
@@ -3157,7 +3157,7 @@ Instances in a region.
 <a href="#state_stackscript_id_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -3179,7 +3179,7 @@ Instances in a region.
 <a href="#state_swap_size_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd>
@@ -3190,7 +3190,7 @@ Instances in a region.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -3427,7 +3427,7 @@ Instances in a region.
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3437,7 +3437,7 @@ Instances in a region.
 <a href="#io_python" style="color: inherit; text-decoration: inherit;">io</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3447,7 +3447,7 @@ Instances in a region.
 <a href="#network_in_python" style="color: inherit; text-decoration: inherit;">network_<wbr>in</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3457,7 +3457,7 @@ Instances in a region.
 <a href="#network_out_python" style="color: inherit; text-decoration: inherit;">network_<wbr>out</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3467,7 +3467,7 @@ Instances in a region.
 <a href="#transfer_quota_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>quota</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4127,7 +4127,7 @@ Instances in a region.
 <a href="#memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}- Defaults to the total RAM of the Linode
 {{% /md %}}</dd>
@@ -4686,7 +4686,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4708,7 +4708,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -4864,7 +4864,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -4886,7 +4886,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5042,7 +5042,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5064,7 +5064,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5220,7 +5220,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5242,7 +5242,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5398,7 +5398,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5420,7 +5420,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5576,7 +5576,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5598,7 +5598,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5754,7 +5754,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5776,7 +5776,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -5932,7 +5932,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
@@ -5954,7 +5954,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd>
@@ -6644,7 +6644,7 @@ Instances in a region.
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Disk in MB.
 {{% /md %}}</dd>
@@ -6655,7 +6655,7 @@ Instances in a region.
 <a href="#authorized_keys_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -6666,7 +6666,7 @@ Instances in a region.
 <a href="#authorized_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -6688,7 +6688,7 @@ Instances in a region.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the disk in the Linode API.
 {{% /md %}}</dd>
@@ -6742,7 +6742,7 @@ Instances in a region.
 <a href="#stackscript_id_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd>
@@ -6919,7 +6919,7 @@ Instances in a region.
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6929,7 +6929,7 @@ Instances in a region.
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6939,7 +6939,7 @@ Instances in a region.
 <a href="#transfer_python" style="color: inherit; text-decoration: inherit;">transfer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6949,7 +6949,7 @@ Instances in a region.
 <a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6971,6 +6971,6 @@ Instances in a region.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
 </dl>
 

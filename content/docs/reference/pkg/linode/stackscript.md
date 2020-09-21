@@ -227,7 +227,7 @@ const fooInstance = new linode.Instance("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.StackScript">StackScript</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rev_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_fields</span><span class="p">:</span> <span class="nx">Optional[List[StackScriptUserDefinedFieldArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.StackScript">StackScript</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rev_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[StackScriptUserDefinedFieldArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -671,7 +671,7 @@ parameters during deployment.
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
 {{% /md %}}</dd>
@@ -726,7 +726,7 @@ parameters during deployment.
 <a href="#user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">List[Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#stackscriptuserdefinedfield">Sequence[Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -1016,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployments_active_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>active</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
 {{% /md %}}</dd>
@@ -1027,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployments_total_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>total</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
 {{% /md %}}</dd>
@@ -1095,7 +1095,7 @@ Get an existing StackScript resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployments_active</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">deployments_total</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rev_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_fields</span><span class="p">:</span> <span class="nx">Optional[List[StackScriptUserDefinedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">user_gravatar_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> StackScript</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployments_active</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deployments_total</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rev_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[StackScriptUserDefinedFieldArgs]]</span> = None<span class="p">, </span><span class="nx">user_gravatar_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> StackScript</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1679,7 +1679,7 @@ parameters during deployment.
 <a href="#state_deployments_active_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>active</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Count of currently active, deployed Linodes created from this StackScript.
 {{% /md %}}</dd>
@@ -1690,7 +1690,7 @@ parameters during deployment.
 <a href="#state_deployments_total_python" style="color: inherit; text-decoration: inherit;">deployments_<wbr>total</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The total number of times this StackScript has been deployed.
 {{% /md %}}</dd>
@@ -1712,7 +1712,7 @@ parameters during deployment.
 <a href="#state_images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
 {{% /md %}}</dd>
@@ -1778,7 +1778,7 @@ parameters during deployment.
 <a href="#state_user_defined_fields_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackscriptuserdefinedfield">List[Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#stackscriptuserdefinedfield">Sequence[Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized
 parameters during deployment.
@@ -2122,6 +2122,6 @@ parameters during deployment.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
 </dl>
 

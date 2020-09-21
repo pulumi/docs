@@ -2125,6 +2125,232 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_linode.ObjectStorageObject">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">ObjectStorageObject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_control</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_base64</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_disposition</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_encoding</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_language</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website_redirect</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Linode Object Storage Object resource. This can be used to create, modify, and delete Linodes Object Storage Objects for Buckets.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="nb">object</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">ObjectStorageObject</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">cluster</span><span class="o">=</span><span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;my-object&quot;</span><span class="p">,</span>
+    <span class="n">secret_key</span><span class="o">=</span><span class="n">linode_object_storage_key</span><span class="p">[</span><span class="s2">&quot;my_key&quot;</span><span class="p">][</span><span class="s2">&quot;secret_key&quot;</span><span class="p">],</span>
+    <span class="n">access_key</span><span class="o">=</span><span class="n">linode_object_storage_key</span><span class="p">[</span><span class="s2">&quot;my_key&quot;</span><span class="p">][</span><span class="s2">&quot;access_key&quot;</span><span class="p">],</span>
+    <span class="n">content</span><span class="o">=</span><span class="s2">&quot;This is the content of the Object...&quot;</span><span class="p">,</span>
+    <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+    <span class="n">content_language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access key to authenticate with.</p></li>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The canned ACL to apply. Can be either <code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public-read</span></code> (defaults to <code class="docutils literal notranslate"><span class="pre">private</span></code>).</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put the object in.</p></li>
+<li><p><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster the bucket is in.</p></li>
+<li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
+<li><p><strong>content_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.</p></li>
+<li><p><strong>content_disposition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies presentational information for the object. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1">w3c content_disposition</a> for further information.</p></li>
+<li><p><strong>content_encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.</p></li>
+<li><p><strong>content_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The language the content is in e.g. en-US or en-GB.</p></li>
+<li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the object to be deleted regardless of any legal hold or object lock (defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – They name of the object once it is in the bucket.</p></li>
+<li><p><strong>pulumi.Input</strong><strong>[</strong><strong>str</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – A map of keys/values to provision metadata.</p></li>
+<li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret key to authenitcate with.</p></li>
+<li><p><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to a file that will be read and uploaded as raw bytes for the object content. The path must either be relative to the root module or absolute.</p></li>
+<li><p><strong>website_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a target URL for website redirect.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_control</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_base64</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_disposition</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_encoding</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_language</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website_redirect</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_linode.object_storage_object.ObjectStorageObject<a class="headerlink" href="#pulumi_linode.ObjectStorageObject.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ObjectStorageObject resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access key to authenticate with.</p></li>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The canned ACL to apply. Can be either <code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public-read</span></code> (defaults to <code class="docutils literal notranslate"><span class="pre">private</span></code>).</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put the object in.</p></li>
+<li><p><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p>
+</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster the bucket is in.</p></li>
+<li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
+<li><p><strong>content_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.</p></li>
+<li><p><strong>content_disposition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies presentational information for the object. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1">w3c content_disposition</a> for further information.</p>
+</p></li>
+<li><p><strong>content_encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.</p>
+</p></li>
+<li><p><strong>content_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The language the content is in e.g. en-US or en-GB.</p></li>
+<li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the object to be deleted regardless of any legal hold or object lock (defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – They name of the object once it is in the bucket.</p></li>
+<li><p><strong>pulumi.Input</strong><strong>[</strong><strong>str</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – A map of keys/values to provision metadata.</p></li>
+<li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret key to authenitcate with.</p></li>
+<li><p><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to a file that will be read and uploaded as raw bytes for the object content. The path must either be relative to the root module or absolute.</p></li>
+<li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique version ID value for the object.</p></li>
+<li><p><strong>website_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a target URL for website redirect.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.access_key">
+<em class="property">property </em><code class="sig-name descname">access_key</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The access key to authenticate with.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.acl">
+<em class="property">property </em><code class="sig-name descname">acl</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.acl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The canned ACL to apply. Can be either <code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public-read</span></code> (defaults to <code class="docutils literal notranslate"><span class="pre">private</span></code>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.bucket">
+<em class="property">property </em><code class="sig-name descname">bucket</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.bucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the bucket to put the object in.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.cache_control">
+<em class="property">property </em><code class="sig-name descname">cache_control</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.cache_control" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.cluster">
+<em class="property">property </em><code class="sig-name descname">cluster</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cluster the bucket is in.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.content">
+<em class="property">property </em><code class="sig-name descname">content</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.content_base64">
+<em class="property">property </em><code class="sig-name descname">content_base64</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.content_base64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.content_disposition">
+<em class="property">property </em><code class="sig-name descname">content_disposition</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.content_disposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies presentational information for the object. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1">w3c content_disposition</a> for further information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.content_encoding">
+<em class="property">property </em><code class="sig-name descname">content_encoding</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.content_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.content_language">
+<em class="property">property </em><code class="sig-name descname">content_language</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.content_language" title="Permalink to this definition">¶</a></dt>
+<dd><p>The language the content is in e.g. en-US or en-GB.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.content_type">
+<em class="property">property </em><code class="sig-name descname">content_type</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.content_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.force_destroy">
+<em class="property">property </em><code class="sig-name descname">force_destroy</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.force_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow the object to be deleted regardless of any legal hold or object lock (defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.key">
+<em class="property">property </em><code class="sig-name descname">key</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>They name of the object once it is in the bucket.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.metadata">
+<em class="property">property </em><code class="sig-name descname">metadata</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of keys/values to provision metadata.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.secret_key">
+<em class="property">property </em><code class="sig-name descname">secret_key</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.secret_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secret key to authenitcate with.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.source">
+<em class="property">property </em><code class="sig-name descname">source</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to a file that will be read and uploaded as raw bytes for the object content. The path must either be relative to the root module or absolute.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.version_id">
+<em class="property">property </em><code class="sig-name descname">version_id</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.version_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unique version ID value for the object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.website_redirect">
+<em class="property">property </em><code class="sig-name descname">website_redirect</code><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.website_redirect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a target URL for website redirect.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.ObjectStorageObject.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageObject.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_linode.Provider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_version</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ua_prefix</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the linode package. By default, resources use package-wide configuration
@@ -2605,7 +2831,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>expiry</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When this token will expire. Personal Access Tokens cannot be renewed, so after this time the token will be completely unusable and a new token will need to be generated. Tokens may be created with ‘null’ as their expiry and will never expire unless revoked.</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A label for the Token.</p></li>
-<li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id22"><span class="problematic" id="id23">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p></li>
+<li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id28"><span class="problematic" id="id29">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2623,7 +2849,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time this token was created.</p></li>
 <li><p><strong>expiry</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When this token will expire. Personal Access Tokens cannot be renewed, so after this time the token will be completely unusable and a new token will need to be generated. Tokens may be created with ‘null’ as their expiry and will never expire unless revoked.</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A label for the Token.</p></li>
-<li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id24"><span class="problematic" id="id25">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p></li>
+<li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id30"><span class="problematic" id="id31">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p></li>
 <li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token used to access the API.</p></li>
 </ul>
 </dd>
@@ -2651,7 +2877,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_linode.Token.scopes">
 <em class="property">property </em><code class="sig-name descname">scopes</code><a class="headerlink" href="#pulumi_linode.Token.scopes" title="Permalink to this definition">¶</a></dt>
-<dd><p>The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id26"><span class="problematic" id="id27">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p>
+<dd><p>The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id32"><span class="problematic" id="id33">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2747,7 +2973,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The label of the Linode Volume</p></li>
-<li><p><strong>linode_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of a Linode Instance where the the Volume should be attached.</p></li>
+<li><p><strong>linode_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of a Linode Instance where the Volume should be attached.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where this volume will be deployed.  Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc.  <em>Changing ``region`` forces the creation of a new Linode Volume.</em>.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of the Volume in GB.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags applied to this object. Tags are for organizational purposes only.</p></li>
@@ -2768,7 +2994,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>filesystem_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full filesystem path for the Volume based on the Volume’s label. Path is /dev/disk/by-id/scsi-0Linode<em>Volume</em> +
 Volume label.</p></li>
 <li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The label of the Linode Volume</p></li>
-<li><p><strong>linode_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of a Linode Instance where the the Volume should be attached.</p></li>
+<li><p><strong>linode_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of a Linode Instance where the Volume should be attached.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where this volume will be deployed.  Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc.  <em>Changing ``region`` forces the creation of a new Linode Volume.</em>.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of the Volume in GB.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the volume, indicating the current readiness state.</p></li>
@@ -2794,7 +3020,7 @@ Volume label.</p>
 <dl class="py method">
 <dt id="pulumi_linode.Volume.linode_id">
 <em class="property">property </em><code class="sig-name descname">linode_id</code><a class="headerlink" href="#pulumi_linode.Volume.linode_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of a Linode Instance where the the Volume should be attached.</p>
+<dd><p>The ID of a Linode Instance where the Volume should be attached.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2863,7 +3089,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.get_account">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_linode.get_account.AwaitableGetAccountResult<a class="headerlink" href="#pulumi_linode.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Linode account.</p>
-<p>This data source should not be used in conjuction with the <code class="docutils literal notranslate"><span class="pre">LINODE_DEBUG</span></code> option.  See the <a class="reference external" href="https://www.terraform.io/docs/providers/linode/index.html#debugging">debugging notes</a> for more details.</p>
+<p>This data source should not be used in conjuction with the <code class="docutils literal notranslate"><span class="pre">LINODE_DEBUG</span></code> option.  See the <a class="reference external" href="https://www.terraform.io/providers/linode/linode/latest/docs#debugging">debugging notes</a> for more details.</p>
 <p>The following example shows how one might use this data source to access account details.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
@@ -3158,6 +3384,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides details about a specific Linode StackScript.</p>
 <p>The following example shows how one might use this data source to access information about a Linode StackScript.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_linode</span> <span class="k">as</span> <span class="nn">linode</span>
+
+<span class="n">my_stackscript</span> <span class="o">=</span> <span class="n">linode</span><span class="o">.</span><span class="n">get_stack_script</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">355872</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This resource exports the following attributes:</p>

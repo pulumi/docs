@@ -136,7 +136,7 @@ const my_cluster = new linode.LkeCluster("my-cluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.LkeCluster">LkeCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">k8s_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pools</span><span class="p">:</span> <span class="nx">Optional[List[LkeClusterPoolArgs]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.LkeCluster">LkeCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">k8s_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[LkeClusterPoolArgs]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -522,7 +522,7 @@ The LkeCluster resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#pools_python" style="color: inherit; text-decoration: inherit;">pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lkeclusterpool">List[Lke<wbr>Cluster<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lkeclusterpool">Sequence[Lke<wbr>Cluster<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional nested attributes:
 {{% /md %}}</dd>
@@ -544,7 +544,7 @@ The LkeCluster resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -723,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_endpoints_python" style="color: inherit; text-decoration: inherit;">api_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for the Kubernetes API server.
 {{% /md %}}</dd>
@@ -780,7 +780,7 @@ Get an existing LkeCluster resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">k8s_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kubeconfig</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pools</span><span class="p">:</span> <span class="nx">Optional[List[LkeClusterPoolArgs]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> LkeCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">k8s_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kubeconfig</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[LkeClusterPoolArgs]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> LkeCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1185,7 +1185,7 @@ The following state arguments are supported:
 <a href="#state_api_endpoints_python" style="color: inherit; text-decoration: inherit;">api_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for the Kubernetes API server.
 {{% /md %}}</dd>
@@ -1229,7 +1229,7 @@ The following state arguments are supported:
 <a href="#state_pools_python" style="color: inherit; text-decoration: inherit;">pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lkeclusterpool">List[Lke<wbr>Cluster<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lkeclusterpool">Sequence[Lke<wbr>Cluster<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional nested attributes:
 {{% /md %}}</dd>
@@ -1262,7 +1262,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of tags applied to the Kubernetes cluster. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -1456,7 +1456,7 @@ The following state arguments are supported:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Node Pool.
 {{% /md %}}</dd>
@@ -1478,7 +1478,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the node.
 {{% /md %}}</dd>
@@ -1489,7 +1489,7 @@ The following state arguments are supported:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lkeclusterpoolnode">List[Lke<wbr>Cluster<wbr>Pool<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lkeclusterpoolnode">Sequence[Lke<wbr>Cluster<wbr>Pool<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1655,7 +1655,7 @@ The following state arguments are supported:
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the underlying Linode instance.
 {{% /md %}}</dd>
@@ -1689,6 +1689,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
 </dl>
 
