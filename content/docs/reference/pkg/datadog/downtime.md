@@ -201,7 +201,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.Downtime">Downtime</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">monitor_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">recurrence</span><span class="p">:</span> <span class="nx">Optional[DowntimeRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">start_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.Downtime">Downtime</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitor_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">recurrence</span><span class="p">:</span> <span class="nx">Optional[DowntimeRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -381,7 +381,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
+    <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -392,7 +392,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime is active now.
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -403,7 +403,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime was disabled.
+    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -414,7 +414,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to end the downtime.
+    <dd>{{% md %}}Optionally specify an end date when this downtime should expire
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -425,8 +425,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to end the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -436,7 +435,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this downtime.
+    <dd>{{% md %}}An optional message to provide when creating the downtime, can include notification handles
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -447,7 +446,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
+    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -458,7 +457,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of monitor tags to match. The resulting downtime applies to monitors that match **all** provided monitor tags. This option conflicts with `monitor_id` as it will match all monitors that match these tags.
+    <dd>{{% md %}}A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -469,7 +468,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#downtimerecurrence">Downtime<wbr>Recurrence<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A dictionary to configure the downtime to be recurring.
+    <dd>{{% md %}}Optional recurring schedule for this downtime
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -480,7 +479,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to start the downtime.
+    <dd>{{% md %}}Specify when this downtime should start
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -491,8 +490,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to start the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -502,7 +500,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone for the downtime, default UTC. It must be a valid IANA Time Zone.
+    <dd>{{% md %}}The timezone for the downtime, default UTC
 {{% /md %}}</dd>
 
 </dl>
@@ -520,7 +518,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
+    <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -531,7 +529,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime is active now.
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -542,7 +540,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime was disabled.
+    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -553,7 +551,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to end the downtime.
+    <dd>{{% md %}}Optionally specify an end date when this downtime should expire
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -564,8 +562,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to end the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -575,7 +572,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this downtime.
+    <dd>{{% md %}}An optional message to provide when creating the downtime, can include notification handles
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -586,7 +583,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
+    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -597,7 +594,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of monitor tags to match. The resulting downtime applies to monitors that match **all** provided monitor tags. This option conflicts with `monitor_id` as it will match all monitors that match these tags.
+    <dd>{{% md %}}A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -608,7 +605,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#downtimerecurrence">Downtime<wbr>Recurrence</a></span>
     </dt>
-    <dd>{{% md %}}A dictionary to configure the downtime to be recurring.
+    <dd>{{% md %}}Optional recurring schedule for this downtime
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -619,7 +616,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to start the downtime.
+    <dd>{{% md %}}Specify when this downtime should start
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -630,8 +627,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to start the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -641,7 +637,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone for the downtime, default UTC. It must be a valid IANA Time Zone.
+    <dd>{{% md %}}The timezone for the downtime, default UTC
 {{% /md %}}</dd>
 
 </dl>
@@ -659,7 +655,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
+    <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,7 +666,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime is active now.
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -681,7 +677,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime was disabled.
+    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -692,7 +688,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to end the downtime.
+    <dd>{{% md %}}Optionally specify an end date when this downtime should expire
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -703,8 +699,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to end the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -714,7 +709,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this downtime.
+    <dd>{{% md %}}An optional message to provide when creating the downtime, can include notification handles
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -725,7 +720,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
+    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -736,7 +731,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of monitor tags to match. The resulting downtime applies to monitors that match **all** provided monitor tags. This option conflicts with `monitor_id` as it will match all monitors that match these tags.
+    <dd>{{% md %}}A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -747,7 +742,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#downtimerecurrence">Downtime<wbr>Recurrence</a></span>
     </dt>
-    <dd>{{% md %}}A dictionary to configure the downtime to be recurring.
+    <dd>{{% md %}}Optional recurring schedule for this downtime
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -758,7 +753,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to start the downtime.
+    <dd>{{% md %}}Specify when this downtime should start
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -769,8 +764,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to start the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -780,7 +774,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone for the downtime, default UTC. It must be a valid IANA Time Zone.
+    <dd>{{% md %}}The timezone for the downtime, default UTC
 {{% /md %}}</dd>
 
 </dl>
@@ -796,9 +790,9 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
+    <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -809,7 +803,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime is active now.
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -820,7 +814,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime was disabled.
+    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -829,9 +823,9 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to end the downtime.
+    <dd>{{% md %}}Optionally specify an end date when this downtime should expire
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -842,8 +836,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to end the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -853,7 +846,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this downtime.
+    <dd>{{% md %}}An optional message to provide when creating the downtime, can include notification handles
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -862,9 +855,9 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#monitor_id_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
+    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -873,9 +866,9 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#monitor_tags_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of monitor tags to match. The resulting downtime applies to monitors that match **all** provided monitor tags. This option conflicts with `monitor_id` as it will match all monitors that match these tags.
+    <dd>{{% md %}}A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -886,7 +879,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#downtimerecurrence">Downtime<wbr>Recurrence<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A dictionary to configure the downtime to be recurring.
+    <dd>{{% md %}}Optional recurring schedule for this downtime
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -895,9 +888,9 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to start the downtime.
+    <dd>{{% md %}}Specify when this downtime should start
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -908,8 +901,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to start the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -919,7 +911,7 @@ The Downtime resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The timezone for the downtime, default UTC. It must be a valid IANA Time Zone.
+    <dd>{{% md %}}The timezone for the downtime, default UTC
 {{% /md %}}</dd>
 
 </dl>
@@ -1021,7 +1013,7 @@ Get an existing Downtime resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">monitor_tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">recurrence</span><span class="p">:</span> <span class="nx">Optional[DowntimeRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">start_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Downtime</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitor_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">recurrence</span><span class="p">:</span> <span class="nx">Optional[DowntimeRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Downtime</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1143,7 +1135,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime is active now.
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1154,7 +1146,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime was disabled.
+    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1165,7 +1157,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to end the downtime.
+    <dd>{{% md %}}Optionally specify an end date when this downtime should expire
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1176,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to end the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1187,7 +1178,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this downtime.
+    <dd>{{% md %}}An optional message to provide when creating the downtime, can include notification handles
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1198,7 +1189,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
+    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1209,7 +1200,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of monitor tags to match. The resulting downtime applies to monitors that match **all** provided monitor tags. This option conflicts with `monitor_id` as it will match all monitors that match these tags.
+    <dd>{{% md %}}A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1220,7 +1211,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#downtimerecurrence">Downtime<wbr>Recurrence<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A dictionary to configure the downtime to be recurring.
+    <dd>{{% md %}}Optional recurring schedule for this downtime
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1231,7 +1222,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
+    <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1242,7 +1233,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to start the downtime.
+    <dd>{{% md %}}Specify when this downtime should start
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1253,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to start the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1264,7 +1254,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone for the downtime, default UTC. It must be a valid IANA Time Zone.
+    <dd>{{% md %}}The timezone for the downtime, default UTC
 {{% /md %}}</dd>
 
 </dl>
@@ -1282,7 +1272,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime is active now.
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1293,7 +1283,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime was disabled.
+    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1304,7 +1294,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to end the downtime.
+    <dd>{{% md %}}Optionally specify an end date when this downtime should expire
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1315,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to end the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1326,7 +1315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this downtime.
+    <dd>{{% md %}}An optional message to provide when creating the downtime, can include notification handles
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1337,7 +1326,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
+    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1348,7 +1337,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of monitor tags to match. The resulting downtime applies to monitors that match **all** provided monitor tags. This option conflicts with `monitor_id` as it will match all monitors that match these tags.
+    <dd>{{% md %}}A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1359,7 +1348,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#downtimerecurrence">Downtime<wbr>Recurrence</a></span>
     </dt>
-    <dd>{{% md %}}A dictionary to configure the downtime to be recurring.
+    <dd>{{% md %}}Optional recurring schedule for this downtime
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1370,7 +1359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
+    <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1381,7 +1370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to start the downtime.
+    <dd>{{% md %}}Specify when this downtime should start
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1392,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to start the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1403,7 +1391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone for the downtime, default UTC. It must be a valid IANA Time Zone.
+    <dd>{{% md %}}The timezone for the downtime, default UTC
 {{% /md %}}</dd>
 
 </dl>
@@ -1421,7 +1409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime is active now.
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1432,7 +1420,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime was disabled.
+    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1443,7 +1431,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to end the downtime.
+    <dd>{{% md %}}Optionally specify an end date when this downtime should expire
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1454,8 +1442,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to end the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1465,7 +1452,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this downtime.
+    <dd>{{% md %}}An optional message to provide when creating the downtime, can include notification handles
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1476,7 +1463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
+    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1487,7 +1474,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of monitor tags to match. The resulting downtime applies to monitors that match **all** provided monitor tags. This option conflicts with `monitor_id` as it will match all monitors that match these tags.
+    <dd>{{% md %}}A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1498,7 +1485,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#downtimerecurrence">Downtime<wbr>Recurrence</a></span>
     </dt>
-    <dd>{{% md %}}A dictionary to configure the downtime to be recurring.
+    <dd>{{% md %}}Optional recurring schedule for this downtime
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1509,7 +1496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
+    <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1520,7 +1507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to start the downtime.
+    <dd>{{% md %}}Specify when this downtime should start
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1531,8 +1518,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to start the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1542,7 +1528,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The timezone for the downtime, default UTC. It must be a valid IANA Time Zone.
+    <dd>{{% md %}}The timezone for the downtime, default UTC
 {{% /md %}}</dd>
 
 </dl>
@@ -1560,7 +1546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime is active now.
+    <dd>{{% md %}}When true indicates this downtime is being actively applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1571,7 +1557,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the downtime was disabled.
+    <dd>{{% md %}}When true indicates this downtime is not being applied
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1580,9 +1566,9 @@ The following state arguments are supported:
 <a href="#state_end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to end the downtime.
+    <dd>{{% md %}}Optionally specify an end date when this downtime should expire
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1593,8 +1579,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to end the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1604,7 +1589,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this downtime.
+    <dd>{{% md %}}An optional message to provide when creating the downtime, can include notification handles
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1613,9 +1598,9 @@ The following state arguments are supported:
 <a href="#state_monitor_id_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Reference to which monitor this downtime is applied. When scheduling downtime for a given monitor, datadog changes `silenced` property of the monitor to match the `end` POSIX timestamp. **Note:** this will effectively change the `silenced` attribute of the referenced monitor. If that monitor is also tracked by this provider and you don't want it to be unmuted on the next `pulumi up`, see `silencing-by-hand-and-by-downtimes` in the monitor resource documentation. This option also conflicts with `monitor_tags` use none or one or the other.
+    <dd>{{% md %}}When specified, this downtime will only apply to this monitor
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1624,9 +1609,9 @@ The following state arguments are supported:
 <a href="#state_monitor_tags_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of monitor tags to match. The resulting downtime applies to monitors that match **all** provided monitor tags. This option conflicts with `monitor_id` as it will match all monitors that match these tags.
+    <dd>{{% md %}}A list of monitor tags (up to 25), i.e. tags that are applied directly to monitors to which the downtime applies
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1637,7 +1622,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#downtimerecurrence">Downtime<wbr>Recurrence<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A dictionary to configure the downtime to be recurring.
+    <dd>{{% md %}}Optional recurring schedule for this downtime
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1646,9 +1631,9 @@ The following state arguments are supported:
 <a href="#state_scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The scope(s) to which the downtime applies, e.g. host:app2. Provide multiple scopes as a comma-separated list, e.g. env:dev,env:prod. The resulting downtime applies to sources that matches ALL provided scopes (i.e. env:dev AND env:prod), NOT any of them.
+    <dd>{{% md %}}specify the group scope to which this downtime applies. For everything use '*'
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1657,9 +1642,9 @@ The following state arguments are supported:
 <a href="#state_start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}POSIX timestamp to start the downtime.
+    <dd>{{% md %}}Specify when this downtime should start
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1670,8 +1655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}String representing date and time to start the downtime in RFC3339 format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1681,7 +1665,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The timezone for the downtime, default UTC. It must be a valid IANA Time Zone.
+    <dd>{{% md %}}The timezone for the downtime, default UTC
 {{% /md %}}</dd>
 
 </dl>
@@ -1719,25 +1703,33 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="period_csharp">
-<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}How often to repeat as an integer. For example to repeat every 3 days, select a type of days and a period of 3.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}days, weeks, months, or years
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_csharp">
+<a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rrule_csharp">
+<a href="#rrule_csharp" style="color: inherit; text-decoration: inherit;">Rrule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1747,8 +1739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The date at which the recurrence should end as a POSIX timestamp. `until_occurrences` and `until_date` are mutually exclusive.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1758,8 +1749,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}How many times the downtime will be rescheduled. `until_occurrences` and `until_date` are mutually exclusive.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1769,8 +1759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of week days to repeat on. Choose from: Mon, Tue, Wed, Thu, Fri, Sat or Sun. Only applicable when type is weeks. First letter must be capitalized.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1781,25 +1770,33 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="period_go">
-<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}How often to repeat as an integer. For example to repeat every 3 days, select a type of days and a period of 3.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}days, weeks, months, or years
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_go">
+<a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rrule_go">
+<a href="#rrule_go" style="color: inherit; text-decoration: inherit;">Rrule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1809,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The date at which the recurrence should end as a POSIX timestamp. `until_occurrences` and `until_date` are mutually exclusive.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1820,8 +1816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}How many times the downtime will be rescheduled. `until_occurrences` and `until_date` are mutually exclusive.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1831,8 +1826,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of week days to repeat on. Choose from: Mon, Tue, Wed, Thu, Fri, Sat or Sun. Only applicable when type is weeks. First letter must be capitalized.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1843,25 +1837,33 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="period_nodejs">
-<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}How often to repeat as an integer. For example to repeat every 3 days, select a type of days and a period of 3.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}days, weeks, months, or years
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_nodejs">
+<a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rrule_nodejs">
+<a href="#rrule_nodejs" style="color: inherit; text-decoration: inherit;">rrule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1871,8 +1873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The date at which the recurrence should end as a POSIX timestamp. `until_occurrences` and `until_date` are mutually exclusive.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1882,8 +1883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}How many times the downtime will be rescheduled. `until_occurrences` and `until_date` are mutually exclusive.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1893,8 +1893,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of week days to repeat on. Choose from: Mon, Tue, Wed, Thu, Fri, Sat or Sun. Only applicable when type is weeks. First letter must be capitalized.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1905,25 +1904,33 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="period_python">
-<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}How often to repeat as an integer. For example to repeat every 3 days, select a type of days and a period of 3.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}days, weeks, months, or years
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_python">
+<a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rrule_python">
+<a href="#rrule_python" style="color: inherit; text-decoration: inherit;">rrule</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1931,10 +1938,9 @@ The following state arguments are supported:
 <a href="#until_date_python" style="color: inherit; text-decoration: inherit;">until_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The date at which the recurrence should end as a POSIX timestamp. `until_occurrences` and `until_date` are mutually exclusive.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1942,10 +1948,9 @@ The following state arguments are supported:
 <a href="#until_occurrences_python" style="color: inherit; text-decoration: inherit;">until_<wbr>occurrences</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}How many times the downtime will be rescheduled. `until_occurrences` and `until_date` are mutually exclusive.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1953,10 +1958,9 @@ The following state arguments are supported:
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of week days to repeat on. Choose from: Mon, Tue, Wed, Thu, Fri, Sat or Sun. Only applicable when type is weeks. First letter must be capitalized.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

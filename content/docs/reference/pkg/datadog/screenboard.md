@@ -14,6 +14,1328 @@ Provides a Datadog screenboard resource. This can be used to create and manage D
 
 > **Note:** This resource is outdated. Use the new `datadog.Dashboard` resource instead.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new Datadog screenboard
+        var acceptanceTest = new Datadog.ScreenBoard("acceptanceTest", new Datadog.ScreenBoardArgs
+        {
+            Title = "Test Screenboard",
+            ReadOnly = true,
+            TemplateVariables = 
+            {
+                new Datadog.Inputs.ScreenBoardTemplateVariableArgs
+                {
+                    Name = "varname 1",
+                    Prefix = "pod_name",
+                    Default = "*",
+                },
+                new Datadog.Inputs.ScreenBoardTemplateVariableArgs
+                {
+                    Name = "varname 2",
+                    Prefix = "service_name",
+                    Default = "autoscaling",
+                },
+            },
+            Widgets = 
+            {
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "free_text",
+                    X = 5,
+                    Y = 5,
+                    Text = "test text",
+                    TextAlign = "right",
+                    FontSize = "36",
+                    Color = "#ffc0cb",
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "timeseries",
+                    X = 25,
+                    Y = 5,
+                    Title = "graph title terraform",
+                    TitleSize = 16,
+                    TitleAlign = "right",
+                    Legend = true,
+                    LegendSize = "16",
+                    Time = 
+                    {
+                        { "live_span", "1d" },
+                    },
+                    TileDeves = 
+                    {
+                        new Datadog.Inputs.ScreenBoardWidgetTileDefArgs
+                        {
+                            Viz = "timeseries",
+                            Requests = 
+                            {
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefRequestArgs
+                                {
+                                    Q = "avg:system.cpu.user{*}",
+                                    Type = "line",
+                                    Style = 
+                                    {
+                                        { "palette", "purple" },
+                                        { "type", "dashed" },
+                                        { "width", "thin" },
+                                    },
+                                    MetadataJson = JsonSerializer.Serialize(new Dictionary<string, object?>
+                                    {
+                                        { "avg:system.cpu.user{*}", new Dictionary<string, object?>
+                                        {
+                                            { "alias", "CPU Usage" },
+                                        } },
+                                    }),
+                                },
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefRequestArgs
+                                {
+                                    LogQuery = new Datadog.Inputs.ScreenBoardWidgetTileDefRequestLogQueryArgs
+                                    {
+                                        Index = "mcnulty",
+                                        Compute = new Datadog.Inputs.ScreenBoardWidgetTileDefRequestLogQueryComputeArgs
+                                        {
+                                            Aggregation = "avg",
+                                            Facet = "@duration",
+                                            Interval = "5000",
+                                        },
+                                        Search = new Datadog.Inputs.ScreenBoardWidgetTileDefRequestLogQuerySearchArgs
+                                        {
+                                            Query = "status:info",
+                                        },
+                                        GroupBies = 
+                                        {
+                                            new Datadog.Inputs.ScreenBoardWidgetTileDefRequestLogQueryGroupByArgs
+                                            {
+                                                Facet = "host",
+                                                Limit = 10,
+                                                Sort = new Datadog.Inputs.ScreenBoardWidgetTileDefRequestLogQueryGroupBySortArgs
+                                                {
+                                                    Aggregation = "avg",
+                                                    Order = "desc",
+                                                    Facet = "@duration",
+                                                },
+                                            },
+                                        },
+                                    },
+                                    Type = "area",
+                                },
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefRequestArgs
+                                {
+                                    ApmQuery = new Datadog.Inputs.ScreenBoardWidgetTileDefRequestApmQueryArgs
+                                    {
+                                        Index = "apm-search",
+                                        Compute = new Datadog.Inputs.ScreenBoardWidgetTileDefRequestApmQueryComputeArgs
+                                        {
+                                            Aggregation = "avg",
+                                            Facet = "@duration",
+                                            Interval = "5000",
+                                        },
+                                        Search = new Datadog.Inputs.ScreenBoardWidgetTileDefRequestApmQuerySearchArgs
+                                        {
+                                            Query = "type:web",
+                                        },
+                                        GroupBies = 
+                                        {
+                                            new Datadog.Inputs.ScreenBoardWidgetTileDefRequestApmQueryGroupByArgs
+                                            {
+                                                Facet = "resource_name",
+                                                Limit = 50,
+                                                Sort = new Datadog.Inputs.ScreenBoardWidgetTileDefRequestApmQueryGroupBySortArgs
+                                                {
+                                                    Aggregation = "avg",
+                                                    Order = "desc",
+                                                    Facet = "@string_query.interval",
+                                                },
+                                            },
+                                        },
+                                    },
+                                    Type = "bars",
+                                },
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefRequestArgs
+                                {
+                                    ProcessQuery = new Datadog.Inputs.ScreenBoardWidgetTileDefRequestProcessQueryArgs
+                                    {
+                                        Metric = "process.stat.cpu.total_pct",
+                                        SearchBy = "error",
+                                        FilterBies = 
+                                        {
+                                            "active",
+                                        },
+                                        Limit = 50,
+                                    },
+                                    Type = "area",
+                                },
+                            },
+                            Markers = 
+                            {
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefMarkerArgs
+                                {
+                                    Label = "test marker",
+                                    Type = "error dashed",
+                                    Value = "y < 6",
+                                },
+                            },
+                            Events = 
+                            {
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefEventArgs
+                                {
+                                    Q = "test event",
+                                },
+                            },
+                        },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "query_value",
+                    X = 45,
+                    Y = 25,
+                    Title = "query value title terraform",
+                    TitleSize = 20,
+                    TitleAlign = "center",
+                    Legend = true,
+                    LegendSize = "16",
+                    TileDeves = 
+                    {
+                        new Datadog.Inputs.ScreenBoardWidgetTileDefArgs
+                        {
+                            Viz = "query_value",
+                            Requests = 
+                            {
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefRequestArgs
+                                {
+                                    Q = "avg:system.cpu.user{*}",
+                                    Type = "line",
+                                    Style = 
+                                    {
+                                        { "palette", "purple" },
+                                        { "type", "dashed" },
+                                        { "width", "thin" },
+                                    },
+                                    ConditionalFormats = 
+                                    {
+                                        new Datadog.Inputs.ScreenBoardWidgetTileDefRequestConditionalFormatArgs
+                                        {
+                                            Comparator = ">",
+                                            Value = "1",
+                                            Palette = "white_on_red",
+                                        },
+                                        new Datadog.Inputs.ScreenBoardWidgetTileDefRequestConditionalFormatArgs
+                                        {
+                                            Comparator = ">=",
+                                            Value = "2",
+                                            Palette = "white_on_yellow",
+                                        },
+                                    },
+                                    Aggregator = "max",
+                                },
+                            },
+                            CustomUnit = "%",
+                            Autoscale = false,
+                            Precision = "6",
+                            TextAlign = "right",
+                        },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "toplist",
+                    X = 65,
+                    Y = 5,
+                    Title = "toplist title terraform",
+                    Legend = true,
+                    LegendSize = "auto",
+                    Time = 
+                    {
+                        { "live_span", "1d" },
+                    },
+                    TileDeves = 
+                    {
+                        new Datadog.Inputs.ScreenBoardWidgetTileDefArgs
+                        {
+                            Viz = "toplist",
+                            Requests = 
+                            {
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefRequestArgs
+                                {
+                                    Q = "top(avg:system.load.1{*} by {host}, 10, 'mean', 'desc')",
+                                    Style = 
+                                    {
+                                        { "palette", "purple" },
+                                        { "type", "dashed" },
+                                        { "width", "thin" },
+                                    },
+                                    ConditionalFormats = 
+                                    {
+                                        new Datadog.Inputs.ScreenBoardWidgetTileDefRequestConditionalFormatArgs
+                                        {
+                                            Comparator = ">",
+                                            Value = "4",
+                                            Palette = "white_on_green",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "change",
+                    X = 85,
+                    Y = 5,
+                    Title = "change title terraform",
+                    TileDeves = 
+                    {
+                        new Datadog.Inputs.ScreenBoardWidgetTileDefArgs
+                        {
+                            Viz = "change",
+                            Requests = 
+                            {
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefRequestArgs
+                                {
+                                    Q = "min:system.load.1{*} by {host}",
+                                    CompareTo = "week_before",
+                                    ChangeType = "relative",
+                                    OrderBy = "present",
+                                    OrderDir = "asc",
+                                    ExtraCol = "",
+                                    IncreaseGood = false,
+                                },
+                            },
+                        },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "event_timeline",
+                    X = 105,
+                    Y = 5,
+                    Title = "event_timeline title terraform",
+                    Query = "status:error",
+                    Time = 
+                    {
+                        { "live_span", "1d" },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "event_stream",
+                    X = 115,
+                    Y = 5,
+                    Title = "event_stream title terraform",
+                    Query = "*",
+                    EventSize = "l",
+                    Time = 
+                    {
+                        { "live_span", "4h" },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "image",
+                    X = 145,
+                    Y = 5,
+                    Title = "image title terraform",
+                    Sizing = "fit",
+                    Margin = "large",
+                    Url = "https://datadog-prod.imgix.net/img/dd_logo_70x75.png",
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "note",
+                    X = 165,
+                    Y = 5,
+                    Bgcolor = "pink",
+                    TextAlign = "right",
+                    FontSize = "36",
+                    Tick = true,
+                    TickEdge = "bottom",
+                    TickPos = "50%",
+                    Html = "<b>test note</b>",
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "alert_graph",
+                    X = 185,
+                    Y = 5,
+                    Title = "alert graph title terraform",
+                    AlertId = 123456,
+                    VizType = "toplist",
+                    Time = 
+                    {
+                        { "live_span", "15m" },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "alert_value",
+                    X = 205,
+                    Y = 5,
+                    Title = "alert value title terraform",
+                    AlertId = 123456,
+                    TextSize = "fill_height",
+                    TextAlign = "right",
+                    Precision = "*",
+                    Unit = "b",
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "iframe",
+                    X = 225,
+                    Y = 5,
+                    Url = "https://www.datadoghq.org",
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "check_status",
+                    X = 245,
+                    Y = 5,
+                    Title = "test title",
+                    TitleAlign = "left",
+                    Grouping = "check",
+                    Check = "aws.ecs.agent_connected",
+                    Tags = 
+                    {
+                        "*",
+                    },
+                    Group = "cluster:test",
+                    Time = 
+                    {
+                        { "live_span", "30m" },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "trace_service",
+                    X = 265,
+                    Y = 5,
+                    Env = "testEnv",
+                    ServiceService = "",
+                    ServiceName = "",
+                    SizeVersion = "large",
+                    LayoutVersion = "three_column",
+                    MustShowHits = true,
+                    MustShowErrors = true,
+                    MustShowLatency = true,
+                    MustShowBreakdown = true,
+                    MustShowDistribution = true,
+                    MustShowResourceList = true,
+                    Time = 
+                    {
+                        { "live_span", "30m" },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "hostmap",
+                    X = 285,
+                    Y = 5,
+                    Query = "avg:system.load.1{*} by {host}",
+                    TileDeves = 
+                    {
+                        new Datadog.Inputs.ScreenBoardWidgetTileDefArgs
+                        {
+                            Viz = "hostmap",
+                            NodeType = "container",
+                            Scopes = 
+                            {
+                                "datacenter:test",
+                            },
+                            Groups = 
+                            {
+                                "pod_name",
+                            },
+                            NoGroupHosts = false,
+                            NoMetricHosts = false,
+                            Requests = 
+                            {
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefRequestArgs
+                                {
+                                    Q = "max:process.stat.container.io.wbps{datacenter:test} by {host}",
+                                    Type = "fill",
+                                },
+                            },
+                            Style = 
+                            {
+                                { "palette", "hostmap_blues" },
+                                { "palette_flip", true },
+                                { "fill_min", 20 },
+                                { "fill_max", 300 },
+                            },
+                        },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "manage_status",
+                    X = 305,
+                    Y = 5,
+                    SummaryType = "monitors",
+                    DisplayFormat = "countsAndList",
+                    ColorPreference = "background",
+                    HideZeroCounts = true,
+                    ShowLastTriggered = false,
+                    ManageStatusShowTitle = false,
+                    ManageStatusTitleText = "test title",
+                    ManageStatusTitleSize = "20",
+                    ManageStatusTitleAlign = "right",
+                    Params = 
+                    {
+                        { "sort", "status,asc" },
+                        { "text", "status:alert" },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "log_stream",
+                    X = 325,
+                    Y = 5,
+                    Query = "source:kubernetes",
+                    Columns = "[\"column1\",\"column2\",\"column3\"]",
+                    Logset = "1234",
+                    Time = 
+                    {
+                        { "live_span", "1h" },
+                    },
+                },
+                new Datadog.Inputs.ScreenBoardWidgetArgs
+                {
+                    Type = "process",
+                    X = 365,
+                    Y = 5,
+                    TileDeves = 
+                    {
+                        new Datadog.Inputs.ScreenBoardWidgetTileDefArgs
+                        {
+                            Viz = "process",
+                            Requests = 
+                            {
+                                new Datadog.Inputs.ScreenBoardWidgetTileDefRequestArgs
+                                {
+                                    QueryType = "process",
+                                    Metric = "process.stat.cpu.total_pct",
+                                    TextFilter = "",
+                                    TagFilters = {},
+                                    Limit = 200,
+                                    Style = 
+                                    {
+                                        { "palette", "dog_classic_area" },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import json
+import pulumi_datadog as datadog
+
+# Create a new Datadog screenboard
+acceptance_test = datadog.ScreenBoard("acceptanceTest",
+    title="Test Screenboard",
+    read_only=True,
+    template_variables=[
+        datadog.ScreenBoardTemplateVariableArgs(
+            name="varname 1",
+            prefix="pod_name",
+            default="*",
+        ),
+        datadog.ScreenBoardTemplateVariableArgs(
+            name="varname 2",
+            prefix="service_name",
+            default="autoscaling",
+        ),
+    ],
+    widgets=[
+        datadog.ScreenBoardWidgetArgs(
+            type="free_text",
+            x=5,
+            y=5,
+            text="test text",
+            text_align="right",
+            font_size="36",
+            color="#ffc0cb",
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="timeseries",
+            x=25,
+            y=5,
+            title="graph title terraform",
+            title_size=16,
+            title_align="right",
+            legend=True,
+            legend_size="16",
+            time={
+                "live_span": "1d",
+            },
+            tile_deves=[datadog.ScreenBoardWidgetTileDefArgs(
+                viz="timeseries",
+                requests=[
+                    datadog.ScreenBoardWidgetTileDefRequestArgs(
+                        q="avg:system.cpu.user{*}",
+                        type="line",
+                        style={
+                            "palette": "purple",
+                            "type": "dashed",
+                            "width": "thin",
+                        },
+                        metadata_json=json.dumps({
+                            "avg:system.cpu.user{*}": {
+                                "alias": "CPU Usage",
+                            },
+                        }),
+                    ),
+                    datadog.ScreenBoardWidgetTileDefRequestArgs(
+                        log_query=datadog.ScreenBoardWidgetTileDefRequestLogQueryArgs(
+                            index="mcnulty",
+                            compute=datadog.ScreenBoardWidgetTileDefRequestLogQueryComputeArgs(
+                                aggregation="avg",
+                                facet="@duration",
+                                interval="5000",
+                            ),
+                            search=datadog.ScreenBoardWidgetTileDefRequestLogQuerySearchArgs(
+                                query="status:info",
+                            ),
+                            group_bies=[datadog.ScreenBoardWidgetTileDefRequestLogQueryGroupByArgs(
+                                facet="host",
+                                limit=10,
+                                sort=datadog.ScreenBoardWidgetTileDefRequestLogQueryGroupBySortArgs(
+                                    aggregation="avg",
+                                    order="desc",
+                                    facet="@duration",
+                                ),
+                            )],
+                        ),
+                        type="area",
+                    ),
+                    datadog.ScreenBoardWidgetTileDefRequestArgs(
+                        apm_query=datadog.ScreenBoardWidgetTileDefRequestApmQueryArgs(
+                            index="apm-search",
+                            compute=datadog.ScreenBoardWidgetTileDefRequestApmQueryComputeArgs(
+                                aggregation="avg",
+                                facet="@duration",
+                                interval="5000",
+                            ),
+                            search=datadog.ScreenBoardWidgetTileDefRequestApmQuerySearchArgs(
+                                query="type:web",
+                            ),
+                            group_bies=[datadog.ScreenBoardWidgetTileDefRequestApmQueryGroupByArgs(
+                                facet="resource_name",
+                                limit=50,
+                                sort=datadog.ScreenBoardWidgetTileDefRequestApmQueryGroupBySortArgs(
+                                    aggregation="avg",
+                                    order="desc",
+                                    facet="@string_query.interval",
+                                ),
+                            )],
+                        ),
+                        type="bars",
+                    ),
+                    datadog.ScreenBoardWidgetTileDefRequestArgs(
+                        process_query=datadog.ScreenBoardWidgetTileDefRequestProcessQueryArgs(
+                            metric="process.stat.cpu.total_pct",
+                            search_by="error",
+                            filter_bies=["active"],
+                            limit=50,
+                        ),
+                        type="area",
+                    ),
+                ],
+                markers=[datadog.ScreenBoardWidgetTileDefMarkerArgs(
+                    label="test marker",
+                    type="error dashed",
+                    value="y < 6",
+                )],
+                events=[datadog.ScreenBoardWidgetTileDefEventArgs(
+                    q="test event",
+                )],
+            )],
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="query_value",
+            x=45,
+            y=25,
+            title="query value title terraform",
+            title_size=20,
+            title_align="center",
+            legend=True,
+            legend_size="16",
+            tile_deves=[datadog.ScreenBoardWidgetTileDefArgs(
+                viz="query_value",
+                requests=[datadog.ScreenBoardWidgetTileDefRequestArgs(
+                    q="avg:system.cpu.user{*}",
+                    type="line",
+                    style={
+                        "palette": "purple",
+                        "type": "dashed",
+                        "width": "thin",
+                    },
+                    conditional_formats=[
+                        datadog.ScreenBoardWidgetTileDefRequestConditionalFormatArgs(
+                            comparator=">",
+                            value="1",
+                            palette="white_on_red",
+                        ),
+                        datadog.ScreenBoardWidgetTileDefRequestConditionalFormatArgs(
+                            comparator=">=",
+                            value="2",
+                            palette="white_on_yellow",
+                        ),
+                    ],
+                    aggregator="max",
+                )],
+                custom_unit="%",
+                autoscale=False,
+                precision="6",
+                text_align="right",
+            )],
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="toplist",
+            x=65,
+            y=5,
+            title="toplist title terraform",
+            legend=True,
+            legend_size="auto",
+            time={
+                "live_span": "1d",
+            },
+            tile_deves=[datadog.ScreenBoardWidgetTileDefArgs(
+                viz="toplist",
+                requests=[datadog.ScreenBoardWidgetTileDefRequestArgs(
+                    q="top(avg:system.load.1{*} by {host}, 10, 'mean', 'desc')",
+                    style={
+                        "palette": "purple",
+                        "type": "dashed",
+                        "width": "thin",
+                    },
+                    conditional_formats=[datadog.ScreenBoardWidgetTileDefRequestConditionalFormatArgs(
+                        comparator=">",
+                        value="4",
+                        palette="white_on_green",
+                    )],
+                )],
+            )],
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="change",
+            x=85,
+            y=5,
+            title="change title terraform",
+            tile_deves=[datadog.ScreenBoardWidgetTileDefArgs(
+                viz="change",
+                requests=[datadog.ScreenBoardWidgetTileDefRequestArgs(
+                    q="min:system.load.1{*} by {host}",
+                    compare_to="week_before",
+                    change_type="relative",
+                    order_by="present",
+                    order_dir="asc",
+                    extra_col="",
+                    increase_good=False,
+                )],
+            )],
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="event_timeline",
+            x=105,
+            y=5,
+            title="event_timeline title terraform",
+            query="status:error",
+            time={
+                "live_span": "1d",
+            },
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="event_stream",
+            x=115,
+            y=5,
+            title="event_stream title terraform",
+            query="*",
+            event_size="l",
+            time={
+                "live_span": "4h",
+            },
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="image",
+            x=145,
+            y=5,
+            title="image title terraform",
+            sizing="fit",
+            margin="large",
+            url="https://datadog-prod.imgix.net/img/dd_logo_70x75.png",
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="note",
+            x=165,
+            y=5,
+            bgcolor="pink",
+            text_align="right",
+            font_size="36",
+            tick=True,
+            tick_edge="bottom",
+            tick_pos="50%",
+            html="<b>test note</b>",
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="alert_graph",
+            x=185,
+            y=5,
+            title="alert graph title terraform",
+            alert_id=123456,
+            viz_type="toplist",
+            time={
+                "live_span": "15m",
+            },
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="alert_value",
+            x=205,
+            y=5,
+            title="alert value title terraform",
+            alert_id=123456,
+            text_size="fill_height",
+            text_align="right",
+            precision="*",
+            unit="b",
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="iframe",
+            x=225,
+            y=5,
+            url="https://www.datadoghq.org",
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="check_status",
+            x=245,
+            y=5,
+            title="test title",
+            title_align="left",
+            grouping="check",
+            check="aws.ecs.agent_connected",
+            tags=["*"],
+            group="cluster:test",
+            time={
+                "live_span": "30m",
+            },
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="trace_service",
+            x=265,
+            y=5,
+            env="testEnv",
+            service_service="",
+            service_name="",
+            size_version="large",
+            layout_version="three_column",
+            must_show_hits=True,
+            must_show_errors=True,
+            must_show_latency=True,
+            must_show_breakdown=True,
+            must_show_distribution=True,
+            must_show_resource_list=True,
+            time={
+                "live_span": "30m",
+            },
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="hostmap",
+            x=285,
+            y=5,
+            query="avg:system.load.1{*} by {host}",
+            tile_deves=[datadog.ScreenBoardWidgetTileDefArgs(
+                viz="hostmap",
+                node_type="container",
+                scopes=["datacenter:test"],
+                groups=["pod_name"],
+                no_group_hosts=False,
+                no_metric_hosts=False,
+                requests=[datadog.ScreenBoardWidgetTileDefRequestArgs(
+                    q="max:process.stat.container.io.wbps{datacenter:test} by {host}",
+                    type="fill",
+                )],
+                style={
+                    "palette": "hostmap_blues",
+                    "palette_flip": True,
+                    "fill_min": 20,
+                    "fill_max": 300,
+                },
+            )],
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="manage_status",
+            x=305,
+            y=5,
+            summary_type="monitors",
+            display_format="countsAndList",
+            color_preference="background",
+            hide_zero_counts=True,
+            show_last_triggered=False,
+            manage_status_show_title=False,
+            manage_status_title_text="test title",
+            manage_status_title_size="20",
+            manage_status_title_align="right",
+            params={
+                "sort": "status,asc",
+                "text": "status:alert",
+            },
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="log_stream",
+            x=325,
+            y=5,
+            query="source:kubernetes",
+            columns="[\"column1\",\"column2\",\"column3\"]",
+            logset="1234",
+            time={
+                "live_span": "1h",
+            },
+        ),
+        datadog.ScreenBoardWidgetArgs(
+            type="process",
+            x=365,
+            y=5,
+            tile_deves=[datadog.ScreenBoardWidgetTileDefArgs(
+                viz="process",
+                requests=[datadog.ScreenBoardWidgetTileDefRequestArgs(
+                    query_type="process",
+                    metric="process.stat.cpu.total_pct",
+                    text_filter="",
+                    tag_filters=[],
+                    limit=200,
+                    style={
+                        "palette": "dog_classic_area",
+                    },
+                )],
+            )],
+        ),
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as datadog from "@pulumi/datadog";
+
+// Create a new Datadog screenboard
+const acceptanceTest = new datadog.ScreenBoard("acceptanceTest", {
+    title: "Test Screenboard",
+    readOnly: true,
+    templateVariables: [
+        {
+            name: "varname 1",
+            prefix: "pod_name",
+            "default": "*",
+        },
+        {
+            name: "varname 2",
+            prefix: "service_name",
+            "default": "autoscaling",
+        },
+    ],
+    widgets: [
+        {
+            type: "free_text",
+            x: 5,
+            y: 5,
+            text: "test text",
+            textAlign: "right",
+            fontSize: "36",
+            color: "#ffc0cb",
+        },
+        {
+            type: "timeseries",
+            x: 25,
+            y: 5,
+            title: "graph title terraform",
+            titleSize: 16,
+            titleAlign: "right",
+            legend: true,
+            legendSize: 16,
+            time: {
+                live_span: "1d",
+            },
+            tileDeves: [{
+                viz: "timeseries",
+                requests: [
+                    {
+                        q: "avg:system.cpu.user{*}",
+                        type: "line",
+                        style: {
+                            palette: "purple",
+                            type: "dashed",
+                            width: "thin",
+                        },
+                        metadataJson: JSON.stringify({
+                            "avg:system.cpu.user{*}": {
+                                alias: "CPU Usage",
+                            },
+                        }),
+                    },
+                    {
+                        logQuery: {
+                            index: "mcnulty",
+                            compute: {
+                                aggregation: "avg",
+                                facet: "@duration",
+                                interval: 5000,
+                            },
+                            search: {
+                                query: "status:info",
+                            },
+                            groupBies: [{
+                                facet: "host",
+                                limit: 10,
+                                sort: {
+                                    aggregation: "avg",
+                                    order: "desc",
+                                    facet: "@duration",
+                                },
+                            }],
+                        },
+                        type: "area",
+                    },
+                    {
+                        apmQuery: {
+                            index: "apm-search",
+                            compute: {
+                                aggregation: "avg",
+                                facet: "@duration",
+                                interval: 5000,
+                            },
+                            search: {
+                                query: "type:web",
+                            },
+                            groupBies: [{
+                                facet: "resource_name",
+                                limit: 50,
+                                sort: {
+                                    aggregation: "avg",
+                                    order: "desc",
+                                    facet: "@string_query.interval",
+                                },
+                            }],
+                        },
+                        type: "bars",
+                    },
+                    {
+                        processQuery: {
+                            metric: "process.stat.cpu.total_pct",
+                            searchBy: "error",
+                            filterBies: ["active"],
+                            limit: 50,
+                        },
+                        type: "area",
+                    },
+                ],
+                markers: [{
+                    label: "test marker",
+                    type: "error dashed",
+                    value: "y < 6",
+                }],
+                events: [{
+                    q: "test event",
+                }],
+            }],
+        },
+        {
+            type: "query_value",
+            x: 45,
+            y: 25,
+            title: "query value title terraform",
+            titleSize: 20,
+            titleAlign: "center",
+            legend: true,
+            legendSize: 16,
+            tileDeves: [{
+                viz: "query_value",
+                requests: [{
+                    q: "avg:system.cpu.user{*}",
+                    type: "line",
+                    style: {
+                        palette: "purple",
+                        type: "dashed",
+                        width: "thin",
+                    },
+                    conditionalFormats: [
+                        {
+                            comparator: ">",
+                            value: "1",
+                            palette: "white_on_red",
+                        },
+                        {
+                            comparator: ">=",
+                            value: "2",
+                            palette: "white_on_yellow",
+                        },
+                    ],
+                    aggregator: "max",
+                }],
+                customUnit: "%",
+                autoscale: false,
+                precision: "6",
+                textAlign: "right",
+            }],
+        },
+        {
+            type: "toplist",
+            x: 65,
+            y: 5,
+            title: "toplist title terraform",
+            legend: true,
+            legendSize: "auto",
+            time: {
+                live_span: "1d",
+            },
+            tileDeves: [{
+                viz: "toplist",
+                requests: [{
+                    q: "top(avg:system.load.1{*} by {host}, 10, 'mean', 'desc')",
+                    style: {
+                        palette: "purple",
+                        type: "dashed",
+                        width: "thin",
+                    },
+                    conditionalFormats: [{
+                        comparator: ">",
+                        value: "4",
+                        palette: "white_on_green",
+                    }],
+                }],
+            }],
+        },
+        {
+            type: "change",
+            x: 85,
+            y: 5,
+            title: "change title terraform",
+            tileDeves: [{
+                viz: "change",
+                requests: [{
+                    q: "min:system.load.1{*} by {host}",
+                    compareTo: "week_before",
+                    changeType: "relative",
+                    orderBy: "present",
+                    orderDir: "asc",
+                    extraCol: "",
+                    increaseGood: false,
+                }],
+            }],
+        },
+        {
+            type: "event_timeline",
+            x: 105,
+            y: 5,
+            title: "event_timeline title terraform",
+            query: "status:error",
+            time: {
+                live_span: "1d",
+            },
+        },
+        {
+            type: "event_stream",
+            x: 115,
+            y: 5,
+            title: "event_stream title terraform",
+            query: "*",
+            eventSize: "l",
+            time: {
+                live_span: "4h",
+            },
+        },
+        {
+            type: "image",
+            x: 145,
+            y: 5,
+            title: "image title terraform",
+            sizing: "fit",
+            margin: "large",
+            url: "https://datadog-prod.imgix.net/img/dd_logo_70x75.png",
+        },
+        {
+            type: "note",
+            x: 165,
+            y: 5,
+            bgcolor: "pink",
+            textAlign: "right",
+            fontSize: "36",
+            tick: true,
+            tickEdge: "bottom",
+            tickPos: `50%`,
+            html: "<b>test note</b>",
+        },
+        {
+            type: "alert_graph",
+            x: 185,
+            y: 5,
+            title: "alert graph title terraform",
+            alertId: "123456",
+            vizType: "toplist",
+            time: {
+                live_span: "15m",
+            },
+        },
+        {
+            type: "alert_value",
+            x: 205,
+            y: 5,
+            title: "alert value title terraform",
+            alertId: "123456",
+            textSize: "fill_height",
+            textAlign: "right",
+            precision: "*",
+            unit: "b",
+        },
+        {
+            type: "iframe",
+            x: 225,
+            y: 5,
+            url: "https://www.datadoghq.org",
+        },
+        {
+            type: "check_status",
+            x: 245,
+            y: 5,
+            title: "test title",
+            titleAlign: "left",
+            grouping: "check",
+            check: "aws.ecs.agent_connected",
+            tags: ["*"],
+            group: "cluster:test",
+            time: {
+                live_span: "30m",
+            },
+        },
+        {
+            type: "trace_service",
+            x: 265,
+            y: 5,
+            env: "testEnv",
+            serviceService: "",
+            serviceName: "",
+            sizeVersion: "large",
+            layoutVersion: "three_column",
+            mustShowHits: true,
+            mustShowErrors: true,
+            mustShowLatency: true,
+            mustShowBreakdown: true,
+            mustShowDistribution: true,
+            mustShowResourceList: true,
+            time: {
+                live_span: "30m",
+            },
+        },
+        {
+            type: "hostmap",
+            x: 285,
+            y: 5,
+            query: "avg:system.load.1{*} by {host}",
+            tileDeves: [{
+                viz: "hostmap",
+                nodeType: "container",
+                scopes: ["datacenter:test"],
+                groups: ["pod_name"],
+                noGroupHosts: false,
+                noMetricHosts: false,
+                requests: [{
+                    q: "max:process.stat.container.io.wbps{datacenter:test} by {host}",
+                    type: "fill",
+                }],
+                style: {
+                    palette: "hostmap_blues",
+                    palette_flip: true,
+                    fill_min: 20,
+                    fill_max: 300,
+                },
+            }],
+        },
+        {
+            type: "manage_status",
+            x: 305,
+            y: 5,
+            summaryType: "monitors",
+            displayFormat: "countsAndList",
+            colorPreference: "background",
+            hideZeroCounts: true,
+            showLastTriggered: false,
+            manageStatusShowTitle: false,
+            manageStatusTitleText: "test title",
+            manageStatusTitleSize: "20",
+            manageStatusTitleAlign: "right",
+            params: {
+                sort: "status,asc",
+                text: "status:alert",
+            },
+        },
+        {
+            type: "log_stream",
+            x: 325,
+            y: 5,
+            query: "source:kubernetes",
+            columns: "[\"column1\",\"column2\",\"column3\"]",
+            logset: "1234",
+            time: {
+                live_span: "1h",
+            },
+        },
+        {
+            type: "process",
+            x: 365,
+            y: 5,
+            tileDeves: [{
+                viz: "process",
+                requests: [{
+                    queryType: "process",
+                    metric: "process.stat.cpu.total_pct",
+                    textFilter: "",
+                    tagFilters: [],
+                    limit: 200,
+                    style: {
+                        palette: "dog_classic_area",
+                    },
+                }],
+            }],
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ScreenBoard Resource {#create}
@@ -25,7 +1347,7 @@ Provides a Datadog screenboard resource. This can be used to create and manage D
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.ScreenBoard">ScreenBoard</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[List[ScreenBoardTemplateVariableArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[List[ScreenBoardWidgetArgs]]</span> = None<span class="p">, </span><span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.ScreenBoard">ScreenBoard</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardTemplateVariableArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardWidgetArgs]]</span> = None<span class="p">, </span><span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -205,7 +1527,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the screenboard.
+    <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -216,7 +1538,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidget">List&lt;Screen<wbr>Board<wbr>Widget<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a widget. The structure of this block is described below. Multiple widget blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -227,7 +1549,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's height.
+    <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -238,8 +1560,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}The read-only status of the screenboard. Default is false.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -249,7 +1570,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the screenboard is shared or not. Default is false.
+    <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -260,7 +1581,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardtemplatevariable">List&lt;Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -271,7 +1592,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's width.
+    <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd>
 
 </dl>
@@ -289,7 +1610,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the screenboard.
+    <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -300,7 +1621,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidget">[]Screen<wbr>Board<wbr>Widget</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a widget. The structure of this block is described below. Multiple widget blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -311,7 +1632,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's height.
+    <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -322,8 +1643,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}The read-only status of the screenboard. Default is false.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -333,7 +1653,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the screenboard is shared or not. Default is false.
+    <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -344,7 +1664,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardtemplatevariable">[]Screen<wbr>Board<wbr>Template<wbr>Variable</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -355,7 +1675,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's width.
+    <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd>
 
 </dl>
@@ -373,7 +1693,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the screenboard.
+    <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -384,7 +1704,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidget">Screen<wbr>Board<wbr>Widget[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a widget. The structure of this block is described below. Multiple widget blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -395,7 +1715,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's height.
+    <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -406,8 +1726,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}The read-only status of the screenboard. Default is false.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -417,7 +1736,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether the screenboard is shared or not. Default is false.
+    <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -428,7 +1747,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardtemplatevariable">Screen<wbr>Board<wbr>Template<wbr>Variable[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -439,7 +1758,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's width.
+    <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd>
 
 </dl>
@@ -457,7 +1776,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the screenboard.
+    <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -466,9 +1785,9 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidget">List[Screen<wbr>Board<wbr>Widget<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidget">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a widget. The structure of this block is described below. Multiple widget blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -479,7 +1798,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's height.
+    <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -490,8 +1809,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}The read-only status of the screenboard. Default is false.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -501,7 +1819,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the screenboard is shared or not. Default is false.
+    <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -510,9 +1828,9 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#template_variables_python" style="color: inherit; text-decoration: inherit;">template_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardtemplatevariable">List[Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardtemplatevariable">Sequence[Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -523,7 +1841,7 @@ The ScreenBoard resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's width.
+    <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd>
 
 </dl>
@@ -625,7 +1943,7 @@ Get an existing ScreenBoard resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[List[ScreenBoardTemplateVariableArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[List[ScreenBoardWidgetArgs]]</span> = None<span class="p">, </span><span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ScreenBoard</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">height</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardTemplateVariableArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">widgets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScreenBoardWidgetArgs]]</span> = None<span class="p">, </span><span class="nx">width</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ScreenBoard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -747,7 +2065,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's height.
+    <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -758,8 +2076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}The read-only status of the screenboard. Default is false.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -769,7 +2086,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the screenboard is shared or not. Default is false.
+    <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -780,7 +2097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardtemplatevariable">List&lt;Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -791,7 +2108,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the screenboard.
+    <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -802,7 +2119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidget">List&lt;Screen<wbr>Board<wbr>Widget<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a widget. The structure of this block is described below. Multiple widget blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -813,7 +2130,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's width.
+    <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd>
 
 </dl>
@@ -831,7 +2148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's height.
+    <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -842,8 +2159,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}The read-only status of the screenboard. Default is false.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -853,7 +2169,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the screenboard is shared or not. Default is false.
+    <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -864,7 +2180,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardtemplatevariable">[]Screen<wbr>Board<wbr>Template<wbr>Variable</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -875,7 +2191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the screenboard.
+    <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -886,7 +2202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidget">[]Screen<wbr>Board<wbr>Widget</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a widget. The structure of this block is described below. Multiple widget blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -897,7 +2213,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's width.
+    <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd>
 
 </dl>
@@ -915,7 +2231,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's height.
+    <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -926,8 +2242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}The read-only status of the screenboard. Default is false.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -937,7 +2252,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether the screenboard is shared or not. Default is false.
+    <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -948,7 +2263,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardtemplatevariable">Screen<wbr>Board<wbr>Template<wbr>Variable[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -959,7 +2274,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the screenboard.
+    <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -970,7 +2285,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidget">Screen<wbr>Board<wbr>Widget[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a widget. The structure of this block is described below. Multiple widget blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -981,7 +2296,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's width.
+    <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd>
 
 </dl>
@@ -999,7 +2314,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's height.
+    <dd>{{% md %}}Height of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1010,8 +2325,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}The read-only status of the screenboard. Default is false.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1021,7 +2335,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the screenboard is shared or not. Default is false.
+    <dd>{{% md %}}Whether the screenboard is shared or not
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1030,9 +2344,9 @@ The following state arguments are supported:
 <a href="#state_template_variables_python" style="color: inherit; text-decoration: inherit;">template_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardtemplatevariable">List[Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardtemplatevariable">Sequence[Screen<wbr>Board<wbr>Template<wbr>Variable<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a template variable. The structure of this block is described below. Multiple template_variable blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of template variables for using Dashboard templating.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1043,7 +2357,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the screenboard.
+    <dd>{{% md %}}Name of the screenboard
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1052,9 +2366,9 @@ The following state arguments are supported:
 <a href="#state_widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidget">List[Screen<wbr>Board<wbr>Widget<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidget">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing a widget. The structure of this block is described below. Multiple widget blocks are allowed within a datadog.ScreenBoard resource.
+    <dd>{{% md %}}A list of widget definitions.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1065,7 +2379,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The screenboard's width.
+    <dd>{{% md %}}Width of the screenboard
 {{% /md %}}</dd>
 
 </dl>
@@ -1109,8 +2423,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The variable name. Can be referenced as \$name in `graph` `request` `q` query strings.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1120,8 +2433,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The default tag. Default: "\*" (match all).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1131,8 +2443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The tag group. Default: no tag group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1149,8 +2460,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The variable name. Can be referenced as \$name in `graph` `request` `q` query strings.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1160,8 +2470,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default tag. Default: "\*" (match all).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1171,8 +2480,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tag group. Default: no tag group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1189,8 +2497,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The variable name. Can be referenced as \$name in `graph` `request` `q` query strings.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1200,8 +2507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The default tag. Default: "\*" (match all).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1211,8 +2517,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tag group. Default: no tag group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1229,8 +2534,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The variable name. Can be referenced as \$name in `graph` `request` `q` query strings.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1240,8 +2544,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The default tag. Default: "\*" (match all).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1251,8 +2554,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The tag group. Default: no tag group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1287,8 +2589,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Choose the type of representation to use for this query. For widgets of type "timeseries" and "query_value", use one of "line", "bars" or "area". For widgets of type "hostmap", use "fill" or "size".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1298,8 +2599,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The position of the widget on the x (horizontal) axis. Should be greater or equal to 0.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1309,8 +2609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The position of the widget on the y (vertical) axis. Should be greater or equal to 0.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1320,8 +2619,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the monitor used by the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1331,8 +2629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether the widget is refreshed automatically.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1342,8 +2639,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The color of the background of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1353,8 +2649,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The check to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1364,8 +2659,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The color of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1375,8 +2669,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to colorize text or background. One of "text", "background".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1386,8 +2679,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Stringified list of columns to use. Example: `"[\"column1\",\"column2\",\"column3\"]"`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1397,8 +2689,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The display setting to use. One of "counts", "list", or "countsAndList".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1408,8 +2699,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The environment to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1419,8 +2709,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the events in the widget. Either "s" (small, title only) or "l" (large, full event).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1430,8 +2719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1441,8 +2729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The list of tags to group nodes by.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1452,8 +2739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}When grouping = "cluster", indicates a list of tags to use for grouping.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1463,8 +2749,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Either "check" or "cluster", depending on whether the widget should use a single check or a cluster of checks.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1474,8 +2759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The height of the widget. Default is 15.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1485,8 +2769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to hide empty categories.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1496,8 +2779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The content of the widget. HTML tags supported.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1507,8 +2789,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The number of columns to use when displaying values. One of "one_column", "two_column", "three_column".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1518,8 +2799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display a legend in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1529,8 +2809,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the legend displayed in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1540,8 +2819,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the logset to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1551,8 +2829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show a title.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1562,8 +2839,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the widget's title. One of "left", "center", or "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1573,8 +2849,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget's title.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1584,8 +2859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The title of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1595,8 +2869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The margins to use around the image. Either "small" or "large".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1616,8 +2889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display breakdown.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1627,8 +2899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display distribution.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1638,8 +2909,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display errors.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1649,8 +2919,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display hits.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1660,8 +2929,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display latency.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1671,8 +2939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display resources.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1682,8 +2949,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Nested block describing the monitors to display. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1693,8 +2959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The precision to use when displaying the tile.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1704,8 +2969,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1725,8 +2989,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1736,8 +2999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The trace service to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1747,8 +3009,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show when monitors/groups last triggered.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1758,8 +3019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget. One of "small", "medium", "large".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1769,8 +3029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The preferred method to adapt the dimensions of the image to those of the widget. One of "center" (center the image in the tile), "zoom" (zoom the image to cover the whole tile) or "fit" (fit the image dimensions to those of the tile).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1780,8 +3039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The monitor summary type to use. One of "monitors", "groups", or "combined". Defaults to "monitors".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1791,8 +3049,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of tags to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1802,8 +3059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use to get monitors. Example: "status:alert".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1813,8 +3069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the text.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1824,8 +3079,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1835,8 +3089,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether a tick should be displayed on the border of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1846,8 +3099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}When tick = true, string indicating on which side of the widget the tick should be displayed. One of "bottom", "top", "left", "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1857,8 +3109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}When tick = true, string with a percent sign indicating the position of the tick. Example: use tick_pos = "50%" for centered alignment.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1868,8 +3119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledef">List&lt;Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the content to display in the widget. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1879,8 +3129,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Nested block describing the timeframe to use when displaying the widget. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1900,8 +3149,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The title of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1911,8 +3159,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the widget's title. One of "left", "center", or "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1922,8 +3169,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget's title. Default is 16.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1933,8 +3179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unit for the value displayed in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1944,8 +3189,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The URL to use as a data source for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1955,8 +3199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of visualization to use when displaying the widget. Either "timeseries" or "toplist".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1966,8 +3209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The width of the widget. Default is 50.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1984,8 +3226,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Choose the type of representation to use for this query. For widgets of type "timeseries" and "query_value", use one of "line", "bars" or "area". For widgets of type "hostmap", use "fill" or "size".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1995,8 +3236,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The position of the widget on the x (horizontal) axis. Should be greater or equal to 0.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2006,8 +3246,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The position of the widget on the y (vertical) axis. Should be greater or equal to 0.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2017,8 +3256,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the monitor used by the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2028,8 +3266,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether the widget is refreshed automatically.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2039,8 +3276,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The color of the background of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2050,8 +3286,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The check to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2061,8 +3296,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The color of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2072,8 +3306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to colorize text or background. One of "text", "background".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2083,8 +3316,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Stringified list of columns to use. Example: `"[\"column1\",\"column2\",\"column3\"]"`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2094,8 +3326,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The display setting to use. One of "counts", "list", or "countsAndList".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2105,8 +3336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The environment to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2116,8 +3346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the events in the widget. Either "s" (small, title only) or "l" (large, full event).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2127,8 +3356,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2138,8 +3366,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The list of tags to group nodes by.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2149,8 +3376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}When grouping = "cluster", indicates a list of tags to use for grouping.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2160,8 +3386,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Either "check" or "cluster", depending on whether the widget should use a single check or a cluster of checks.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2171,8 +3396,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The height of the widget. Default is 15.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2182,8 +3406,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to hide empty categories.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2193,8 +3416,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The content of the widget. HTML tags supported.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2204,8 +3426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The number of columns to use when displaying values. One of "one_column", "two_column", "three_column".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2215,8 +3436,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display a legend in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2226,8 +3446,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the legend displayed in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2237,8 +3456,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the logset to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2248,8 +3466,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show a title.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2259,8 +3476,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the widget's title. One of "left", "center", or "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2270,8 +3486,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget's title.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2281,8 +3496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The title of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2292,8 +3506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The margins to use around the image. Either "small" or "large".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2313,8 +3526,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display breakdown.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2324,8 +3536,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display distribution.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2335,8 +3546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display errors.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2346,8 +3556,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display hits.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2357,8 +3566,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display latency.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2368,8 +3576,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display resources.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2379,8 +3586,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Nested block describing the monitors to display. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2390,8 +3596,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The precision to use when displaying the tile.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2401,8 +3606,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2422,8 +3626,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2433,8 +3636,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The trace service to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2444,8 +3646,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show when monitors/groups last triggered.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2455,8 +3656,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget. One of "small", "medium", "large".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2466,8 +3666,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The preferred method to adapt the dimensions of the image to those of the widget. One of "center" (center the image in the tile), "zoom" (zoom the image to cover the whole tile) or "fit" (fit the image dimensions to those of the tile).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2477,8 +3676,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The monitor summary type to use. One of "monitors", "groups", or "combined". Defaults to "monitors".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2488,8 +3686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of tags to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2499,8 +3696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use to get monitors. Example: "status:alert".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2510,8 +3706,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the text.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2521,8 +3716,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2532,8 +3726,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether a tick should be displayed on the border of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2543,8 +3736,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}When tick = true, string indicating on which side of the widget the tick should be displayed. One of "bottom", "top", "left", "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2554,8 +3746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}When tick = true, string with a percent sign indicating the position of the tick. Example: use tick_pos = "50%" for centered alignment.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2565,8 +3756,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledef">[]Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the content to display in the widget. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2576,8 +3766,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Nested block describing the timeframe to use when displaying the widget. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2597,8 +3786,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The title of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2608,8 +3796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the widget's title. One of "left", "center", or "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2619,8 +3806,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget's title. Default is 16.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2630,8 +3816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unit for the value displayed in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2641,8 +3826,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URL to use as a data source for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2652,8 +3836,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of visualization to use when displaying the widget. Either "timeseries" or "toplist".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2663,8 +3846,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The width of the widget. Default is 50.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2681,8 +3863,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Choose the type of representation to use for this query. For widgets of type "timeseries" and "query_value", use one of "line", "bars" or "area". For widgets of type "hostmap", use "fill" or "size".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2692,8 +3873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The position of the widget on the x (horizontal) axis. Should be greater or equal to 0.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2703,8 +3883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The position of the widget on the y (vertical) axis. Should be greater or equal to 0.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2714,8 +3893,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the monitor used by the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2725,8 +3903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether the widget is refreshed automatically.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2736,8 +3913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The color of the background of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2747,8 +3923,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The check to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2758,8 +3933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The color of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2769,8 +3943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to colorize text or background. One of "text", "background".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2780,8 +3953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Stringified list of columns to use. Example: `"[\"column1\",\"column2\",\"column3\"]"`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2791,8 +3963,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The display setting to use. One of "counts", "list", or "countsAndList".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2802,8 +3973,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The environment to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2813,8 +3983,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the events in the widget. Either "s" (small, title only) or "l" (large, full event).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2824,8 +3993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2835,8 +4003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The list of tags to group nodes by.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2846,8 +4013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}When grouping = "cluster", indicates a list of tags to use for grouping.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2857,8 +4023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Either "check" or "cluster", depending on whether the widget should use a single check or a cluster of checks.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2868,8 +4033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The height of the widget. Default is 15.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2879,8 +4043,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to hide empty categories.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2890,8 +4053,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The content of the widget. HTML tags supported.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2901,8 +4063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The number of columns to use when displaying values. One of "one_column", "two_column", "three_column".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2912,8 +4073,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display a legend in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2923,8 +4083,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the legend displayed in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2934,8 +4093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the logset to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2945,8 +4103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show a title.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2956,8 +4113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the widget's title. One of "left", "center", or "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2967,8 +4123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget's title.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2978,8 +4133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The title of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2989,8 +4143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The margins to use around the image. Either "small" or "large".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3010,8 +4163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display breakdown.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3021,8 +4173,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display distribution.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3032,8 +4183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display errors.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3043,8 +4193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display hits.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3054,8 +4203,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display latency.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3065,8 +4213,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display resources.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3076,8 +4223,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Nested block describing the monitors to display. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3087,8 +4233,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The precision to use when displaying the tile.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3098,8 +4243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3119,8 +4263,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3130,8 +4273,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The trace service to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3141,8 +4283,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show when monitors/groups last triggered.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3152,8 +4293,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget. One of "small", "medium", "large".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3163,8 +4303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The preferred method to adapt the dimensions of the image to those of the widget. One of "center" (center the image in the tile), "zoom" (zoom the image to cover the whole tile) or "fit" (fit the image dimensions to those of the tile).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3174,8 +4313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The monitor summary type to use. One of "monitors", "groups", or "combined". Defaults to "monitors".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3185,8 +4323,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of tags to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3196,8 +4333,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use to get monitors. Example: "status:alert".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3207,8 +4343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the text.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3218,8 +4353,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3229,8 +4363,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether a tick should be displayed on the border of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3240,8 +4373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}When tick = true, string indicating on which side of the widget the tick should be displayed. One of "bottom", "top", "left", "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3251,8 +4383,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}When tick = true, string with a percent sign indicating the position of the tick. Example: use tick_pos = "50%" for centered alignment.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3262,8 +4393,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledef">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the content to display in the widget. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3273,8 +4403,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Nested block describing the timeframe to use when displaying the widget. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3294,8 +4423,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The title of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3305,8 +4433,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the widget's title. One of "left", "center", or "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3316,8 +4443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget's title. Default is 16.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3327,8 +4453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unit for the value displayed in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3338,8 +4463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The URL to use as a data source for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3349,8 +4473,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of visualization to use when displaying the widget. Either "timeseries" or "toplist".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3360,8 +4483,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The width of the widget. Default is 50.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3378,8 +4500,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Choose the type of representation to use for this query. For widgets of type "timeseries" and "query_value", use one of "line", "bars" or "area". For widgets of type "hostmap", use "fill" or "size".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3387,10 +4508,9 @@ The following state arguments are supported:
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The position of the widget on the x (horizontal) axis. Should be greater or equal to 0.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3398,10 +4518,9 @@ The following state arguments are supported:
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The position of the widget on the y (vertical) axis. Should be greater or equal to 0.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3409,10 +4528,9 @@ The following state arguments are supported:
 <a href="#alert_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The ID of the monitor used by the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3422,8 +4540,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether the widget is refreshed automatically.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3433,8 +4550,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The color of the background of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3444,8 +4560,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The check to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3455,8 +4570,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The color of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3466,8 +4580,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether to colorize text or background. One of "text", "background".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3477,8 +4590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Stringified list of columns to use. Example: `"[\"column1\",\"column2\",\"column3\"]"`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3488,8 +4600,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The display setting to use. One of "counts", "list", or "countsAndList".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3499,8 +4610,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The environment to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3510,8 +4620,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The size of the events in the widget. Either "s" (small, title only) or "l" (large, full event).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3521,8 +4630,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The size of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3532,8 +4640,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The list of tags to group nodes by.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3541,10 +4648,9 @@ The following state arguments are supported:
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}When grouping = "cluster", indicates a list of tags to use for grouping.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3554,8 +4660,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Either "check" or "cluster", depending on whether the widget should use a single check or a cluster of checks.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3563,10 +4668,9 @@ The following state arguments are supported:
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The height of the widget. Default is 15.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3576,8 +4680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to hide empty categories.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3587,8 +4690,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The content of the widget. HTML tags supported.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3598,8 +4700,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The number of columns to use when displaying values. One of "one_column", "two_column", "three_column".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3609,8 +4710,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display a legend in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3620,8 +4720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The size of the legend displayed in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3631,8 +4730,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of the logset to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3642,8 +4740,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show a title.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3653,8 +4750,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the widget's title. One of "left", "center", or "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3664,8 +4760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget's title.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3675,8 +4770,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The title of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3686,8 +4780,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The margins to use around the image. Either "small" or "large".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3707,8 +4800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display breakdown.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3718,8 +4810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display distribution.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3729,8 +4820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display errors.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3740,8 +4830,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display hits.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3751,8 +4840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display latency.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3762,8 +4850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to display resources.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3773,8 +4860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Nested block describing the monitors to display. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3784,8 +4870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The precision to use when displaying the tile.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3795,8 +4880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3804,7 +4888,7 @@ The following state arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgetrule">List[Screen<wbr>Board<wbr>Widget<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgetrule">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3816,8 +4900,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3827,8 +4910,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The trace service to use.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3838,8 +4920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show when monitors/groups last triggered.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3849,8 +4930,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget. One of "small", "medium", "large".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3860,8 +4940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The preferred method to adapt the dimensions of the image to those of the widget. One of "center" (center the image in the tile), "zoom" (zoom the image to cover the whole tile) or "fit" (fit the image dimensions to those of the tile).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3871,8 +4950,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The monitor summary type to use. One of "monitors", "groups", or "combined". Defaults to "monitors".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3880,10 +4958,9 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of tags to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3893,8 +4970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The query to use to get monitors. Example: "status:alert".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3904,8 +4980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the text.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3915,8 +4990,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The size of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3926,8 +5000,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether a tick should be displayed on the border of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3937,8 +5010,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}When tick = true, string indicating on which side of the widget the tick should be displayed. One of "bottom", "top", "left", "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3948,8 +5020,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}When tick = true, string with a percent sign indicating the position of the tick. Example: use tick_pos = "50%" for centered alignment.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3957,10 +5028,9 @@ The following state arguments are supported:
 <a href="#tile_deves_python" style="color: inherit; text-decoration: inherit;">tile_<wbr>deves</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledef">List[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledef">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the content to display in the widget. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3970,8 +5040,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Nested block describing the timeframe to use when displaying the widget. The structure of this block is described below. At most one such block should be present in a given widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3979,7 +5048,7 @@ The following state arguments are supported:
 <a href="#timeframes_python" style="color: inherit; text-decoration: inherit;">timeframes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3991,8 +5060,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The title of the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4002,8 +5070,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the widget's title. One of "left", "center", or "right".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4011,10 +5078,9 @@ The following state arguments are supported:
 <a href="#title_size_python" style="color: inherit; text-decoration: inherit;">title_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The size of the widget's title. Default is 16.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4024,8 +5090,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unit for the value displayed in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4035,8 +5100,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The URL to use as a data source for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4046,8 +5110,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of visualization to use when displaying the widget. Either "timeseries" or "toplist".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4055,10 +5118,9 @@ The following state arguments are supported:
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The width of the widget. Default is 50.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4093,8 +5155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The color of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4131,8 +5192,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The color of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4169,8 +5229,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The color of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4207,8 +5266,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The color of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4263,8 +5321,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequest">List&lt;Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the request to use when displaying the widget. The structure of this block is described below. Multiple request blocks are allowed within a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4274,8 +5331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Should be the same as the widget's type. One of "timeseries", "query_value", "hostmap", "change", "toplist", "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4285,8 +5341,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to automatically scale the tile.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4296,8 +5351,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unit for the value displayed in the widget
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4307,8 +5361,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefevent">List&lt;Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the event overlays to use when displaying the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4318,8 +5371,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The check group to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4329,8 +5381,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefmarker">List&lt;Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the marker to use when displaying the widget. The structure of this block is described below. Multiple marker blocks are allowed within a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4340,8 +5391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show ungrouped nodes.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4351,8 +5401,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show nodes with no metrics.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4362,8 +5411,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of node used. Either "host" or "container".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4373,8 +5421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The precision to use when displaying the value. Use "\*" for maximum precision.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4384,8 +5431,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of tags to filter nodes by.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4395,8 +5441,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Nested block describing how to display the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4406,8 +5451,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4424,8 +5468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequest">[]Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the request to use when displaying the widget. The structure of this block is described below. Multiple request blocks are allowed within a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4435,8 +5478,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Should be the same as the widget's type. One of "timeseries", "query_value", "hostmap", "change", "toplist", "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4446,8 +5488,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to automatically scale the tile.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4457,8 +5498,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unit for the value displayed in the widget
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4468,8 +5508,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefevent">[]Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the event overlays to use when displaying the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4479,8 +5518,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The check group to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4490,8 +5528,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefmarker">[]Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the marker to use when displaying the widget. The structure of this block is described below. Multiple marker blocks are allowed within a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4501,8 +5538,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show ungrouped nodes.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4512,8 +5548,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show nodes with no metrics.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4523,8 +5558,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of node used. Either "host" or "container".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4534,8 +5568,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The precision to use when displaying the value. Use "\*" for maximum precision.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4545,8 +5578,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The list of tags to filter nodes by.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4556,8 +5588,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Nested block describing how to display the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4567,8 +5598,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4585,8 +5615,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequest">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the request to use when displaying the widget. The structure of this block is described below. Multiple request blocks are allowed within a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4596,8 +5625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Should be the same as the widget's type. One of "timeseries", "query_value", "hostmap", "change", "toplist", "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4607,8 +5635,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to automatically scale the tile.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4618,8 +5645,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unit for the value displayed in the widget
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4629,8 +5655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefevent">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the event overlays to use when displaying the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4640,8 +5665,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The check group to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4651,8 +5675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefmarker">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the marker to use when displaying the widget. The structure of this block is described below. Multiple marker blocks are allowed within a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4662,8 +5685,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show ungrouped nodes.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4673,8 +5695,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show nodes with no metrics.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4684,8 +5705,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of node used. Either "host" or "container".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4695,8 +5715,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The precision to use when displaying the value. Use "\*" for maximum precision.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4706,8 +5725,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of tags to filter nodes by.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4717,8 +5735,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Nested block describing how to display the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4728,8 +5745,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4744,10 +5760,9 @@ The following state arguments are supported:
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequest">List[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequest">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the request to use when displaying the widget. The structure of this block is described below. Multiple request blocks are allowed within a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4757,8 +5772,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Should be the same as the widget's type. One of "timeseries", "query_value", "hostmap", "change", "toplist", "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4768,8 +5782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to automatically scale the tile.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4779,8 +5792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unit for the value displayed in the widget
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4788,10 +5800,9 @@ The following state arguments are supported:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefevent">List[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefevent">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Event<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the event overlays to use when displaying the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4799,10 +5810,9 @@ The following state arguments are supported:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The check group to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4810,10 +5820,9 @@ The following state arguments are supported:
 <a href="#markers_python" style="color: inherit; text-decoration: inherit;">markers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefmarker">List[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefmarker">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Marker<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block describing the marker to use when displaying the widget. The structure of this block is described below. Multiple marker blocks are allowed within a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4823,8 +5832,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show ungrouped nodes.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4834,8 +5842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to show nodes with no metrics.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4845,8 +5852,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of node used. Either "host" or "container".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4856,8 +5862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The precision to use when displaying the value. Use "\*" for maximum precision.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4865,10 +5870,9 @@ The following state arguments are supported:
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The list of tags to filter nodes by.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4878,8 +5882,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Nested block describing how to display the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4889,8 +5892,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The alignment of the text in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4925,8 +5927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The search query for event overlays.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4943,8 +5944,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The search query for event overlays.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4961,8 +5961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The search query for event overlays.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -4979,8 +5978,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The search query for event overlays.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5015,8 +6013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the widget. One of "free_text", "timeseries", "query_value", "toplist", "change", "event_timeline", "event_stream", "image", "note", "alert_graph", "alert_value", "iframe", "check_status", "trace_service", "hostmap", "manage_status", "log_stream", or "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5026,8 +6023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Mathematical expression describing the marker. Examples: "y > 1", "-5 < y < 0", "y = 19".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5037,8 +6033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A label for the line or range.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5055,8 +6050,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the widget. One of "free_text", "timeseries", "query_value", "toplist", "change", "event_timeline", "event_stream", "image", "note", "alert_graph", "alert_value", "iframe", "check_status", "trace_service", "hostmap", "manage_status", "log_stream", or "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5066,8 +6060,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Mathematical expression describing the marker. Examples: "y > 1", "-5 < y < 0", "y = 19".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5077,8 +6070,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A label for the line or range.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5095,8 +6087,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the widget. One of "free_text", "timeseries", "query_value", "toplist", "change", "event_timeline", "event_stream", "image", "note", "alert_graph", "alert_value", "iframe", "check_status", "trace_service", "hostmap", "manage_status", "log_stream", or "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5106,8 +6097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Mathematical expression describing the marker. Examples: "y > 1", "-5 < y < 0", "y = 19".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5117,8 +6107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A label for the line or range.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5135,8 +6124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the widget. One of "free_text", "timeseries", "query_value", "toplist", "change", "event_timeline", "event_stream", "image", "note", "alert_graph", "alert_value", "iframe", "check_status", "trace_service", "hostmap", "manage_status", "log_stream", or "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5146,8 +6134,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Mathematical expression describing the marker. Examples: "y > 1", "-5 < y < 0", "y = 19".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5157,8 +6144,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A label for the line or range.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5193,8 +6179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The aggregator to use for time aggregation. One of "avg", "min", "max", "sum", "last".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5204,8 +6189,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The APM query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5215,8 +6199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to show absolute or relative change. One of "absolute", "relative".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5226,8 +6209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Choose from when to compare current data to. One of "hour_before", "day_before", "week_before" or "month_before".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5237,8 +6219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">List&lt;Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to customize the style if certain conditions are met. Currently only applies to `Query Value` and `Top List` type graphs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5248,8 +6229,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}If set to "present", displays current value. Can be left empty otherwise.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5259,8 +6239,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether an increase in the value is good (thus displayed in green) or not (thus displayed in red).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5270,8 +6249,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5281,8 +6259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The log query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5292,8 +6269,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5303,8 +6279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The metric you want to use for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5314,8 +6289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}One of "change", "name", "present" (present value) or "past" (past value).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5325,8 +6299,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Either "asc" (ascending) or "desc" (descending).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5336,8 +6309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestprocessquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The process query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5347,8 +6319,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The search query for event overlays.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5358,8 +6329,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Use "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5369,8 +6339,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Nested block describing how to display the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5380,8 +6349,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Tags to use for filtering.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5391,8 +6359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The search query for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5402,8 +6369,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the widget. One of "free_text", "timeseries", "query_value", "toplist", "change", "event_timeline", "event_stream", "image", "note", "alert_graph", "alert_value", "iframe", "check_status", "trace_service", "hostmap", "manage_status", "log_stream", or "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5420,8 +6386,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The aggregator to use for time aggregation. One of "avg", "min", "max", "sum", "last".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5431,8 +6396,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}The APM query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5442,8 +6406,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to show absolute or relative change. One of "absolute", "relative".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5453,8 +6416,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Choose from when to compare current data to. One of "hour_before", "day_before", "week_before" or "month_before".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5464,8 +6426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">[]Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to customize the style if certain conditions are met. Currently only applies to `Query Value` and `Top List` type graphs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5475,8 +6436,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}If set to "present", displays current value. Can be left empty otherwise.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5486,8 +6446,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether an increase in the value is good (thus displayed in green) or not (thus displayed in red).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5497,8 +6456,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5508,8 +6466,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}The log query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5519,8 +6476,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5530,8 +6486,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The metric you want to use for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5541,8 +6496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}One of "change", "name", "present" (present value) or "past" (past value).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5552,8 +6506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Either "asc" (ascending) or "desc" (descending).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5563,8 +6516,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestprocessquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}The process query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5574,8 +6526,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The search query for event overlays.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5585,8 +6536,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Use "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5596,8 +6546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Nested block describing how to display the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5607,8 +6556,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Tags to use for filtering.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5618,8 +6566,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The search query for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5629,8 +6576,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the widget. One of "free_text", "timeseries", "query_value", "toplist", "change", "event_timeline", "event_stream", "image", "note", "alert_graph", "alert_value", "iframe", "check_status", "trace_service", "hostmap", "manage_status", "log_stream", or "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5647,8 +6593,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The aggregator to use for time aggregation. One of "avg", "min", "max", "sum", "last".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5658,8 +6603,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}The APM query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5669,8 +6613,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether to show absolute or relative change. One of "absolute", "relative".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5680,8 +6623,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Choose from when to compare current data to. One of "hour_before", "day_before", "week_before" or "month_before".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5691,8 +6633,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format[]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to customize the style if certain conditions are met. Currently only applies to `Query Value` and `Top List` type graphs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5702,8 +6643,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}If set to "present", displays current value. Can be left empty otherwise.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5713,8 +6653,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether an increase in the value is good (thus displayed in green) or not (thus displayed in red).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5724,8 +6663,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5735,8 +6673,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}The log query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5746,8 +6683,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5757,8 +6693,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The metric you want to use for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5768,8 +6703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}One of "change", "name", "present" (present value) or "past" (past value).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5779,8 +6713,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Either "asc" (ascending) or "desc" (descending).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5790,8 +6723,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestprocessquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}The process query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5801,8 +6733,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The search query for event overlays.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5812,8 +6743,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Use "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5823,8 +6753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Nested block describing how to display the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5834,8 +6763,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Tags to use for filtering.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5845,8 +6773,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The search query for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5856,8 +6783,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the widget. One of "free_text", "timeseries", "query_value", "toplist", "change", "event_timeline", "event_stream", "image", "note", "alert_graph", "alert_value", "iframe", "check_status", "trace_service", "hostmap", "manage_status", "log_stream", or "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5874,8 +6800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The aggregator to use for time aggregation. One of "avg", "min", "max", "sum", "last".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5885,8 +6810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The APM query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5896,8 +6820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether to show absolute or relative change. One of "absolute", "relative".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5907,8 +6830,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Choose from when to compare current data to. One of "hour_before", "day_before", "week_before" or "month_before".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5916,10 +6838,9 @@ The following state arguments are supported:
 <a href="#conditional_formats_python" style="color: inherit; text-decoration: inherit;">conditional_<wbr>formats</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">List[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestconditionalformat">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Conditional<wbr>Format<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to customize the style if certain conditions are met. Currently only applies to `Query Value` and `Top List` type graphs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5929,8 +6850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}If set to "present", displays current value. Can be left empty otherwise.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5940,8 +6860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether an increase in the value is good (thus displayed in green) or not (thus displayed in red).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5949,10 +6868,9 @@ The following state arguments are supported:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5962,8 +6880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The log query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5973,8 +6890,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A JSON blob representing mapping of query expressions to alias names. Note that the query expressions in `metadata_json` will be ignored if they're not present in the query. For example:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5984,8 +6900,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The metric you want to use for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5995,8 +6910,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}One of "change", "name", "present" (present value) or "past" (past value).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6006,8 +6920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Either "asc" (ascending) or "desc" (descending).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6017,8 +6930,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestprocessquery">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Process<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The process query to use in the widget. The structure of this block is described below.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6028,8 +6940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The search query for event overlays.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6039,8 +6950,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Use "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6050,8 +6960,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Nested block describing how to display the widget. The structure of this block is described below. At most one such block should be present in a given tile_def block.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6059,10 +6968,9 @@ The following state arguments are supported:
 <a href="#tag_filters_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Tags to use for filtering.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6072,8 +6980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The search query for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6083,8 +6990,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the widget. One of "free_text", "timeseries", "query_value", "toplist", "change", "event_timeline", "event_stream", "image", "note", "alert_graph", "alert_value", "iframe", "check_status", "trace_service", "hostmap", "manage_status", "log_stream", or "process".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6119,8 +7025,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6140,8 +7045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">List&lt;Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6151,8 +7055,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}. One nested block is allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6169,8 +7072,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</a></span>
     </dt>
-    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6190,8 +7092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">[]Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By</a></span>
     </dt>
-    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6201,8 +7102,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</a></span>
     </dt>
-    <dd>{{% md %}}. One nested block is allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6219,8 +7119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute</a></span>
     </dt>
-    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6240,8 +7139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By[]</a></span>
     </dt>
-    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6251,8 +7149,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search</a></span>
     </dt>
-    <dd>{{% md %}}. One nested block is allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6269,8 +7166,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Compute<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6288,10 +7184,9 @@ The following state arguments are supported:
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">List[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupby">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}. Multiple nested blocks are allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6301,8 +7196,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Search<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}. One nested block is allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6513,8 +7407,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6524,8 +7417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The method to use to sort monitors. Example: "status,asc".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6552,8 +7444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6563,8 +7454,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}The method to use to sort monitors. Example: "status,asc".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6591,8 +7481,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6602,8 +7491,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}The method to use to sort monitors. Example: "status,asc".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6628,10 +7516,9 @@ The following state arguments are supported:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6641,8 +7528,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestapmquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Apm<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The method to use to sort monitors. Example: "status,asc".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6843,8 +7729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6861,8 +7746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6879,8 +7763,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6897,8 +7780,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -6933,8 +7815,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Comparison operator. Example: ">", "<".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6944,8 +7825,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Custom color (e.g., #205081).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6965,8 +7845,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to invert color scheme.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6976,8 +7855,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Color scheme to be used if the condition is met. One of: "red_on_white", "white_on_red", "yellow_on_white", "white_on_yellow", "green_on_white", "white_on_green", "gray_on_white", "white_on_gray", "custom_text", "custom_bg", "custom_image".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6987,8 +7865,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Value that is the threshold for the conditional format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7005,8 +7882,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Comparison operator. Example: ">", "<".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7016,8 +7892,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Custom color (e.g., #205081).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7037,8 +7912,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to invert color scheme.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7048,8 +7922,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Color scheme to be used if the condition is met. One of: "red_on_white", "white_on_red", "yellow_on_white", "white_on_yellow", "green_on_white", "white_on_green", "gray_on_white", "white_on_gray", "custom_text", "custom_bg", "custom_image".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7059,8 +7932,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Value that is the threshold for the conditional format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7077,8 +7949,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Comparison operator. Example: ">", "<".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7088,8 +7959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Custom color (e.g., #205081).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7109,8 +7979,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to invert color scheme.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7120,8 +7989,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Color scheme to be used if the condition is met. One of: "red_on_white", "white_on_red", "yellow_on_white", "white_on_yellow", "green_on_white", "white_on_green", "gray_on_white", "white_on_gray", "custom_text", "custom_bg", "custom_image".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7131,8 +7999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Value that is the threshold for the conditional format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7149,8 +8016,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Comparison operator. Example: ">", "<".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7160,8 +8026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Custom color (e.g., #205081).
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7181,8 +8046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean indicating whether to invert color scheme.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7192,8 +8056,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Color scheme to be used if the condition is met. One of: "red_on_white", "white_on_red", "yellow_on_white", "white_on_yellow", "green_on_white", "white_on_green", "gray_on_white", "white_on_gray", "custom_text", "custom_bg", "custom_image".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7203,8 +8066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Value that is the threshold for the conditional format.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7239,8 +8101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7260,8 +8121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">List&lt;Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}When grouping = "cluster", indicates a list of tags to use for grouping.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7271,8 +8131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}. One nested block is allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7289,8 +8148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</a></span>
     </dt>
-    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7310,8 +8168,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">[]Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By</a></span>
     </dt>
-    <dd>{{% md %}}When grouping = "cluster", indicates a list of tags to use for grouping.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7321,8 +8178,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search</a></span>
     </dt>
-    <dd>{{% md %}}. One nested block is allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7339,8 +8195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute</a></span>
     </dt>
-    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7360,8 +8215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By[]</a></span>
     </dt>
-    <dd>{{% md %}}When grouping = "cluster", indicates a list of tags to use for grouping.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7371,8 +8225,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search</a></span>
     </dt>
-    <dd>{{% md %}}. One nested block is allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7389,8 +8242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerycompute">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Compute<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}. Exactly one nested block is required with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7408,10 +8260,9 @@ The following state arguments are supported:
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">List[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Args]</a></span>
+        <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupby">Sequence[Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}When grouping = "cluster", indicates a list of tags to use for grouping.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7421,8 +8272,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerysearch">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Search<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}. One nested block is allowed with the following structure:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7633,8 +8483,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7644,8 +8493,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The method to use to sort monitors. Example: "status,asc".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7672,8 +8520,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7683,8 +8530,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}The method to use to sort monitors. Example: "status,asc".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7711,8 +8557,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7722,8 +8567,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}The method to use to sort monitors. Example: "status,asc".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7748,10 +8592,9 @@ The following state arguments are supported:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7761,8 +8604,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#screenboardwidgettiledefrequestlogquerygroupbysort">Screen<wbr>Board<wbr>Widget<wbr>Tile<wbr>Def<wbr>Request<wbr>Log<wbr>Query<wbr>Group<wbr>By<wbr>Sort<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The method to use to sort monitors. Example: "status,asc".
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7963,8 +8805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7981,8 +8822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -7999,8 +8839,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8017,8 +8856,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The query to use in the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8053,8 +8891,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The metric you want to use for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8074,8 +8911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8102,8 +8938,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The metric you want to use for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8123,8 +8958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8151,8 +8985,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The metric you want to use for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8172,8 +9005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8200,8 +9032,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The metric you want to use for the widget.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8209,7 +9040,7 @@ The following state arguments are supported:
 <a href="#filter_bies_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>bies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8219,10 +9050,9 @@ The following state arguments are supported:
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Integer indicating the number of hosts to limit to.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

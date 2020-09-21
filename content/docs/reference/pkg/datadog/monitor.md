@@ -15,8 +15,8 @@ Provides a Datadog monitor resource. This can be used to create and manage Datad
 
 There are two ways how to silence a single monitor:
 
-* Mute it by hand
-* Create a Downtime
+- Mute it by hand
+- Create a Downtime
 
 Both of these actions add a new value to the `silenced` map. This can be problematic if the `silenced` attribute doesn't contain them in your application, as they would be removed on next `pulumi up` invocation. In order to prevent that from happening, you can add following to your monitor:
 
@@ -53,13 +53,11 @@ func main() {
 
 The above will make sure that any changes to the `silenced` attribute are ignored.
 
-This issue doesn't apply to multi-monitor downtimes (those that don't contain `monitor_id`), as these don't influence contents of the `silenced` attribute.
+This issue doesn't apply to multi-monitor downtimes (those that don't contain `monitor_id` ), as these don't influence contents of the `silenced` attribute.
 
 ## Composite Monitors
 
-You can compose monitors of all types in order to define more specific alert conditions (see the [doc](https://docs.datadoghq.com/monitors/monitor_types/composite/)).
-You just need to reuse the ID of your `datadog.Monitor` resources.
-You can also compose any monitor with a `datadog.SyntheticsTest` by passing the computed `monitor_id` attribute in the query.
+You can compose monitors of all types in order to define more specific alert conditions (see the [doc](https://docs.datadoghq.com/monitors/monitor_types/composite/)). You just need to reuse the ID of your `datadog.Monitor` resources. You can also compose any monitor with a `datadog.SyntheticsTest` by passing the computed `monitor_id` attribute in the query.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -297,7 +295,7 @@ const foo = new datadog.Monitor("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.Monitor">Monitor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_logs_sample</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">escalation_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_host_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">no_data_timeframe</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">notify_audit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_no_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renotify_interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">require_full_window</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">silenced</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">threshold_windows</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdWindowsArgs]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">timeout_h</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.Monitor">Monitor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_logs_sample</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">escalation_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_host_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">no_data_timeframe</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">notify_audit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_no_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renotify_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">require_full_window</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">silenced</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">threshold_windows</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdWindowsArgs]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">timeout_h</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -477,9 +475,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this monitor.
-Email notifications can be sent to specific users by using the same '@username' notation as events.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -489,8 +485,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog monitor
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -500,9 +495,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and
-the syntax is different depending on the monitor `type`, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for details. **Warning:** `pulumi preview` won't perform any validation of the query contents.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -512,14 +505,7 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) page. The available options are below. **Note**: The monitor type cannot be changed after a monitor is created.
-* `metric alert`
-* `service check`
-* `event alert`
-* `query alert`
-* `composite`
-* `log alert`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -530,7 +516,6 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.
-triggering tags into the title. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -541,9 +526,7 @@ triggering tags into the title. Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with a re-notification. Supports the '@username'
-notification allowed elsewhere.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -554,9 +537,6 @@ notification allowed elsewhere.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,8 +581,6 @@ metrics to ensure the monitor will always have data during evaluation.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
-applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to 300.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -614,7 +592,6 @@ results. Should be a non negative integer. Defaults to 300.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.
-We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -626,7 +603,6 @@ We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes fo
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor.
-Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -638,7 +614,6 @@ Defaults to false.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults
-to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -650,7 +625,6 @@ to false.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify
-on the current status. It will only re-notify if it's not resolved.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -662,8 +636,6 @@ on the current status. It will only re-notify if it's not resolved.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated.
-We highly recommend you set this to False for sparse metrics, otherwise some evaluations will be skipped.
-Default: True for "on average", "at all times" and "in total" aggregation. False otherwise.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -696,7 +668,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
+    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are required for, anomaly monitors.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -707,75 +679,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}* Metric alerts:
-A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
-Example usage:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-**Warning:** the `critical` threshold value must match the one contained in the `query` argument. The `threshold` from the previous example is valid along with a query like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 90` but
-along with something like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 95` would make the Datadog API return a HTTP error 400, complaining "The value provided for parameter 'query' is invalid".
-* Service checks:
-A dictionary of thresholds by status. Because service checks can have multiple thresholds, we don't define them directly in the query.
-Default values:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -786,7 +690,17 @@ func main() {
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve
-from a triggered state. Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validate_csharp">
+<a href="#validate_csharp" style="color: inherit; text-decoration: inherit;">Validate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, skip the validation call done during `plan` .
 {{% /md %}}</dd>
 
 </dl>
@@ -804,9 +718,7 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this monitor.
-Email notifications can be sent to specific users by using the same '@username' notation as events.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -816,8 +728,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog monitor
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -827,9 +738,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and
-the syntax is different depending on the monitor `type`, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for details. **Warning:** `pulumi preview` won't perform any validation of the query contents.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -839,14 +748,7 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) page. The available options are below. **Note**: The monitor type cannot be changed after a monitor is created.
-* `metric alert`
-* `service check`
-* `event alert`
-* `query alert`
-* `composite`
-* `log alert`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -857,7 +759,6 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.
-triggering tags into the title. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -868,9 +769,7 @@ triggering tags into the title. Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with a re-notification. Supports the '@username'
-notification allowed elsewhere.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -881,9 +780,6 @@ notification allowed elsewhere.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -928,8 +824,6 @@ metrics to ensure the monitor will always have data during evaluation.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
-applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to 300.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -941,7 +835,6 @@ results. Should be a non negative integer. Defaults to 300.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.
-We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -953,7 +846,6 @@ We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes fo
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor.
-Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -965,7 +857,6 @@ Defaults to false.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults
-to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -977,7 +868,6 @@ to false.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify
-on the current status. It will only re-notify if it's not resolved.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -989,8 +879,6 @@ on the current status. It will only re-notify if it's not resolved.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated.
-We highly recommend you set this to False for sparse metrics, otherwise some evaluations will be skipped.
-Default: True for "on average", "at all times" and "in total" aggregation. False otherwise.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1023,7 +911,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
+    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are required for, anomaly monitors.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1034,75 +922,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}* Metric alerts:
-A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
-Example usage:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-**Warning:** the `critical` threshold value must match the one contained in the `query` argument. The `threshold` from the previous example is valid along with a query like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 90` but
-along with something like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 95` would make the Datadog API return a HTTP error 400, complaining "The value provided for parameter 'query' is invalid".
-* Service checks:
-A dictionary of thresholds by status. Because service checks can have multiple thresholds, we don't define them directly in the query.
-Default values:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1113,7 +933,17 @@ func main() {
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve
-from a triggered state. Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validate_go">
+<a href="#validate_go" style="color: inherit; text-decoration: inherit;">Validate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, skip the validation call done during `plan` .
 {{% /md %}}</dd>
 
 </dl>
@@ -1131,9 +961,7 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this monitor.
-Email notifications can be sent to specific users by using the same '@username' notation as events.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1143,8 +971,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog monitor
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1154,9 +981,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and
-the syntax is different depending on the monitor `type`, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for details. **Warning:** `pulumi preview` won't perform any validation of the query contents.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1166,14 +991,7 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) page. The available options are below. **Note**: The monitor type cannot be changed after a monitor is created.
-* `metric alert`
-* `service check`
-* `event alert`
-* `query alert`
-* `composite`
-* `log alert`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1184,7 +1002,6 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.
-triggering tags into the title. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1195,9 +1012,7 @@ triggering tags into the title. Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with a re-notification. Supports the '@username'
-notification allowed elsewhere.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1208,9 +1023,6 @@ notification allowed elsewhere.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1255,8 +1067,6 @@ metrics to ensure the monitor will always have data during evaluation.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
-applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to 300.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1268,7 +1078,6 @@ results. Should be a non negative integer. Defaults to 300.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.
-We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1280,7 +1089,6 @@ We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes fo
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor.
-Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1292,7 +1100,6 @@ Defaults to false.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults
-to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1304,7 +1111,6 @@ to false.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify
-on the current status. It will only re-notify if it's not resolved.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1316,8 +1122,6 @@ on the current status. It will only re-notify if it's not resolved.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated.
-We highly recommend you set this to False for sparse metrics, otherwise some evaluations will be skipped.
-Default: True for "on average", "at all times" and "in total" aggregation. False otherwise.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1350,7 +1154,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
+    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are required for, anomaly monitors.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1361,75 +1165,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}* Metric alerts:
-A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
-Example usage:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-**Warning:** the `critical` threshold value must match the one contained in the `query` argument. The `threshold` from the previous example is valid along with a query like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 90` but
-along with something like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 95` would make the Datadog API return a HTTP error 400, complaining "The value provided for parameter 'query' is invalid".
-* Service checks:
-A dictionary of thresholds by status. Because service checks can have multiple thresholds, we don't define them directly in the query.
-Default values:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1440,7 +1176,17 @@ func main() {
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve
-from a triggered state. Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validate_nodejs">
+<a href="#validate_nodejs" style="color: inherit; text-decoration: inherit;">validate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, skip the validation call done during `plan` .
 {{% /md %}}</dd>
 
 </dl>
@@ -1458,9 +1204,7 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this monitor.
-Email notifications can be sent to specific users by using the same '@username' notation as events.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1470,8 +1214,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog monitor
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1481,9 +1224,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and
-the syntax is different depending on the monitor `type`, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for details. **Warning:** `pulumi preview` won't perform any validation of the query contents.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1493,14 +1234,7 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) page. The available options are below. **Note**: The monitor type cannot be changed after a monitor is created.
-* `metric alert`
-* `service check`
-* `event alert`
-* `query alert`
-* `composite`
-* `log alert`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1511,7 +1245,6 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.
-triggering tags into the title. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1522,9 +1255,7 @@ triggering tags into the title. Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with a re-notification. Supports the '@username'
-notification allowed elsewhere.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1532,12 +1263,9 @@ notification allowed elsewhere.
 <a href="#evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1579,11 +1307,9 @@ metrics to ensure the monitor will always have data during evaluation.
 <a href="#new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
-applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to 300.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1592,10 +1318,9 @@ results. Should be a non negative integer. Defaults to 300.
 <a href="#no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.
-We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1607,7 +1332,6 @@ We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes fo
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor.
-Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1619,7 +1343,6 @@ Defaults to false.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults
-to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1628,10 +1351,9 @@ to false.
 <a href="#renotify_interval_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify
-on the current status. It will only re-notify if it's not resolved.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1643,8 +1365,6 @@ on the current status. It will only re-notify if it's not resolved.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated.
-We highly recommend you set this to False for sparse metrics, otherwise some evaluations will be skipped.
-Default: True for "on average", "at all times" and "in total" aggregation. False otherwise.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -1664,7 +1384,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
 {{% /md %}}</dd>
@@ -1677,7 +1397,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
+    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are required for, anomaly monitors.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1688,75 +1408,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}* Metric alerts:
-A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
-Example usage:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-**Warning:** the `critical` threshold value must match the one contained in the `query` argument. The `threshold` from the previous example is valid along with a query like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 90` but
-along with something like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 95` would make the Datadog API return a HTTP error 400, complaining "The value provided for parameter 'query' is invalid".
-* Service checks:
-A dictionary of thresholds by status. Because service checks can have multiple thresholds, we don't define them directly in the query.
-Default values:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1764,10 +1416,20 @@ func main() {
 <a href="#timeout_h_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>h</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve
-from a triggered state. Defaults to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="validate_python">
+<a href="#validate_python" style="color: inherit; text-decoration: inherit;">validate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, skip the validation call done during `plan` .
 {{% /md %}}</dd>
 
 </dl>
@@ -1869,7 +1531,7 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_logs_sample</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">escalation_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_host_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">no_data_timeframe</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">notify_audit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_no_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renotify_interval</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">require_full_window</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">silenced</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">threshold_windows</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdWindowsArgs]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">timeout_h</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Monitor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_logs_sample</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">escalation_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_host_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">no_data_timeframe</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">notify_audit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_no_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">renotify_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">require_full_window</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">silenced</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">threshold_windows</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdWindowsArgs]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[MonitorThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">timeout_h</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Monitor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1992,7 +1654,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.
-triggering tags into the title. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2003,9 +1664,7 @@ triggering tags into the title. Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with a re-notification. Supports the '@username'
-notification allowed elsewhere.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2016,9 +1675,6 @@ notification allowed elsewhere.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2062,9 +1718,7 @@ metrics to ensure the monitor will always have data during evaluation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this monitor.
-Email notifications can be sent to specific users by using the same '@username' notation as events.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2074,8 +1728,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog monitor
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2086,8 +1739,6 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
-applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to 300.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2099,7 +1750,6 @@ results. Should be a non negative integer. Defaults to 300.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.
-We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2111,7 +1761,6 @@ We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes fo
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor.
-Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2123,7 +1772,6 @@ Defaults to false.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults
-to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2134,9 +1782,7 @@ to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and
-the syntax is different depending on the monitor `type`, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for details. **Warning:** `pulumi preview` won't perform any validation of the query contents.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2147,7 +1793,6 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify
-on the current status. It will only re-notify if it's not resolved.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2159,8 +1804,6 @@ on the current status. It will only re-notify if it's not resolved.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated.
-We highly recommend you set this to False for sparse metrics, otherwise some evaluations will be skipped.
-Default: True for "on average", "at all times" and "in total" aggregation. False otherwise.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -2193,7 +1836,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
+    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are required for, anomaly monitors.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2204,75 +1847,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}* Metric alerts:
-A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
-Example usage:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-**Warning:** the `critical` threshold value must match the one contained in the `query` argument. The `threshold` from the previous example is valid along with a query like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 90` but
-along with something like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 95` would make the Datadog API return a HTTP error 400, complaining "The value provided for parameter 'query' is invalid".
-* Service checks:
-A dictionary of thresholds by status. Because service checks can have multiple thresholds, we don't define them directly in the query.
-Default values:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2283,7 +1858,6 @@ func main() {
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve
-from a triggered state. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2294,13 +1868,17 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) page. The available options are below. **Note**: The monitor type cannot be changed after a monitor is created.
-* `metric alert`
-* `service check`
-* `event alert`
-* `query alert`
-* `composite`
-* `log alert`
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_validate_csharp">
+<a href="#state_validate_csharp" style="color: inherit; text-decoration: inherit;">Validate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, skip the validation call done during `plan` .
 {{% /md %}}</dd>
 
 </dl>
@@ -2319,7 +1897,6 @@ from a triggered state. Defaults to false.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.
-triggering tags into the title. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2330,9 +1907,7 @@ triggering tags into the title. Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with a re-notification. Supports the '@username'
-notification allowed elsewhere.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2343,9 +1918,6 @@ notification allowed elsewhere.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2389,9 +1961,7 @@ metrics to ensure the monitor will always have data during evaluation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this monitor.
-Email notifications can be sent to specific users by using the same '@username' notation as events.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2401,8 +1971,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog monitor
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2413,8 +1982,6 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
-applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to 300.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2426,7 +1993,6 @@ results. Should be a non negative integer. Defaults to 300.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.
-We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2438,7 +2004,6 @@ We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes fo
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor.
-Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2450,7 +2015,6 @@ Defaults to false.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults
-to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2461,9 +2025,7 @@ to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and
-the syntax is different depending on the monitor `type`, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for details. **Warning:** `pulumi preview` won't perform any validation of the query contents.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2474,7 +2036,6 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify
-on the current status. It will only re-notify if it's not resolved.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2486,8 +2047,6 @@ on the current status. It will only re-notify if it's not resolved.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated.
-We highly recommend you set this to False for sparse metrics, otherwise some evaluations will be skipped.
-Default: True for "on average", "at all times" and "in total" aggregation. False otherwise.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -2520,7 +2079,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
+    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are required for, anomaly monitors.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2531,75 +2090,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}* Metric alerts:
-A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
-Example usage:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-**Warning:** the `critical` threshold value must match the one contained in the `query` argument. The `threshold` from the previous example is valid along with a query like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 90` but
-along with something like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 95` would make the Datadog API return a HTTP error 400, complaining "The value provided for parameter 'query' is invalid".
-* Service checks:
-A dictionary of thresholds by status. Because service checks can have multiple thresholds, we don't define them directly in the query.
-Default values:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2610,7 +2101,6 @@ func main() {
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve
-from a triggered state. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2621,13 +2111,17 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) page. The available options are below. **Note**: The monitor type cannot be changed after a monitor is created.
-* `metric alert`
-* `service check`
-* `event alert`
-* `query alert`
-* `composite`
-* `log alert`
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_validate_go">
+<a href="#state_validate_go" style="color: inherit; text-decoration: inherit;">Validate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, skip the validation call done during `plan` .
 {{% /md %}}</dd>
 
 </dl>
@@ -2646,7 +2140,6 @@ from a triggered state. Defaults to false.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.
-triggering tags into the title. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2657,9 +2150,7 @@ triggering tags into the title. Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with a re-notification. Supports the '@username'
-notification allowed elsewhere.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2670,9 +2161,6 @@ notification allowed elsewhere.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2716,9 +2204,7 @@ metrics to ensure the monitor will always have data during evaluation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this monitor.
-Email notifications can be sent to specific users by using the same '@username' notation as events.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2728,8 +2214,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog monitor
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2740,8 +2225,6 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
-applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to 300.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2753,7 +2236,6 @@ results. Should be a non negative integer. Defaults to 300.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.
-We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2765,7 +2247,6 @@ We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes fo
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor.
-Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2777,7 +2258,6 @@ Defaults to false.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults
-to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2788,9 +2268,7 @@ to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and
-the syntax is different depending on the monitor `type`, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for details. **Warning:** `pulumi preview` won't perform any validation of the query contents.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2801,7 +2279,6 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify
-on the current status. It will only re-notify if it's not resolved.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2813,8 +2290,6 @@ on the current status. It will only re-notify if it's not resolved.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated.
-We highly recommend you set this to False for sparse metrics, otherwise some evaluations will be skipped.
-Default: True for "on average", "at all times" and "in total" aggregation. False otherwise.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -2847,7 +2322,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
+    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are required for, anomaly monitors.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2858,75 +2333,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}* Metric alerts:
-A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
-Example usage:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-**Warning:** the `critical` threshold value must match the one contained in the `query` argument. The `threshold` from the previous example is valid along with a query like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 90` but
-along with something like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 95` would make the Datadog API return a HTTP error 400, complaining "The value provided for parameter 'query' is invalid".
-* Service checks:
-A dictionary of thresholds by status. Because service checks can have multiple thresholds, we don't define them directly in the query.
-Default values:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2937,7 +2344,6 @@ func main() {
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve
-from a triggered state. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2948,13 +2354,17 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) page. The available options are below. **Note**: The monitor type cannot be changed after a monitor is created.
-* `metric alert`
-* `service check`
-* `event alert`
-* `query alert`
-* `composite`
-* `log alert`
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_validate_nodejs">
+<a href="#state_validate_nodejs" style="color: inherit; text-decoration: inherit;">validate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, skip the validation call done during `plan` .
 {{% /md %}}</dd>
 
 </dl>
@@ -2973,7 +2383,6 @@ from a triggered state. Defaults to false.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.
-triggering tags into the title. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2984,9 +2393,7 @@ triggering tags into the title. Defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with a re-notification. Supports the '@username'
-notification allowed elsewhere.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2994,12 +2401,9 @@ notification allowed elsewhere.
 <a href="#state_evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to delay evaluation, as a non-negative integer.
-For example, if the value is set to 300 (5min), the timeframe is set to last_5m and the time is 7:00,
-the monitor will evaluate data from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled
-metrics to ensure the monitor will always have data during evaluation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3043,9 +2447,7 @@ metrics to ensure the monitor will always have data during evaluation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A message to include with notifications for this monitor.
-Email notifications can be sent to specific users by using the same '@username' notation as events.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3055,8 +2457,7 @@ Email notifications can be sent to specific users by using the same '@username' 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog monitor
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3064,11 +2465,9 @@ Email notifications can be sent to specific users by using the same '@username' 
 <a href="#state_new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and
-applications to fully start before starting the evaluation of monitor
-results. Should be a non negative integer. Defaults to 300.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3077,10 +2476,9 @@ results. Should be a non negative integer. Defaults to 300.
 <a href="#state_no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.
-We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3092,7 +2490,6 @@ We recommend at least 2x the monitor timeframe for metric alerts or 2 minutes fo
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor.
-Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3104,7 +2501,6 @@ Defaults to false.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults
-to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3115,9 +2511,7 @@ to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and
-the syntax is different depending on the monitor `type`, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for details. **Warning:** `pulumi preview` won't perform any validation of the query contents.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3125,10 +2519,9 @@ the syntax is different depending on the monitor `type`, please see the [API Ref
 <a href="#state_renotify_interval_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify
-on the current status. It will only re-notify if it's not resolved.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3140,8 +2533,6 @@ on the current status. It will only re-notify if it's not resolved.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated.
-We highly recommend you set this to False for sparse metrics, otherwise some evaluations will be skipped.
-Default: True for "on average", "at all times" and "in total" aggregation. False otherwise.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
@@ -3161,7 +2552,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
 {{% /md %}}</dd>
@@ -3174,7 +2565,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are required for, anomaly monitors.
+    <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are required for, anomaly monitors.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3185,75 +2576,7 @@ Default: True for "on average", "at all times" and "in total" aggregation. False
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}* Metric alerts:
-A dictionary of thresholds by threshold type. Currently we have four threshold types for metric alerts: critical, critical recovery, warning, and warning recovery. Critical is defined in the query, but can also be specified in this option. Warning and recovery thresholds can only be specified using the thresholds option.
-Example usage:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-**Warning:** the `critical` threshold value must match the one contained in the `query` argument. The `threshold` from the previous example is valid along with a query like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 90` but
-along with something like `avg(last_1h):avg:system.disk.in_use{role:sqlserver} by {host} > 95` would make the Datadog API return a HTTP error 400, complaining "The value provided for parameter 'query' is invalid".
-* Service checks:
-A dictionary of thresholds by status. Because service checks can have multiple thresholds, we don't define them directly in the query.
-Default values:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3261,10 +2584,9 @@ func main() {
 <a href="#state_timeout_h_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>h</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve
-from a triggered state. Defaults to false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3275,13 +2597,17 @@ from a triggered state. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) page. The available options are below. **Note**: The monitor type cannot be changed after a monitor is created.
-* `metric alert`
-* `service check`
-* `event alert`
-* `query alert`
-* `composite`
-* `log alert`
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_validate_python">
+<a href="#state_validate_python" style="color: inherit; text-decoration: inherit;">validate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to false, skip the validation call done during `plan` .
 {{% /md %}}</dd>
 
 </dl>
