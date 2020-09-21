@@ -1,15 +1,17 @@
 ---
-title: "Pulumi Auth0"
+title: "Managing Authentication at Credijusto with the Pulumi Auth0 Provider"
 date: 2020-09-22
 draft: true
 meta_desc: " Simplifying authentication to APIs with the Pulumi Auth0 provider"
 meta_image: credijusto.png
 authors:
-    - sophia-parafina
+    - fernando-carletti
 tags:
     - auth0
     - Credijusto
 ---
+
+*Guest author Lead Devops Engineer Fernando Carletti, writes about using the Pulumi Auth0 provider to manage resources at Credijusto.*
 
 Auth0 allows you to simplify your authentication process. The [Auth0 Provider]({{< relref "/docs/reference/pkg/auth0" >}}) allows you to manage the Auth0 resources, managing Applications, Databases, Social Connections, APIs, and other resources. Here at [Credijusto](https://credijusto.com) we use it manage authentication from the front-end through all the APIs that serve that request, leveraging the complexity of the authentication to Auth0.
 
