@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceAccount"
-title_tag: "Resource ServiceAccount | Package wavefront"
-meta_desc: "Explore the ServiceAccount resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Service Account Resource. This allows service accounts to be created, updated, and deleted."
+title_tag: "Resource ServiceAccount | Package Wavefront"
+meta_desc: "Explore the ServiceAccount resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Service Account Resource. This allows service accounts to be created, updated, and deleted."
 ---
 
 

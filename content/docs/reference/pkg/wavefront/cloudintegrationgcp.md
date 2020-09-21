@@ -1,8 +1,8 @@
 
 ---
 title: "CloudIntegrationGcp"
-title_tag: "Resource CloudIntegrationGcp | Package wavefront"
-meta_desc: "Explore the CloudIntegrationGcp resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for GCP. This allows GCP cloud integrations to be created,"
+title_tag: "Resource CloudIntegrationGcp | Package Wavefront"
+meta_desc: "Explore the CloudIntegrationGcp resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for GCP. This allows GCP cloud integrations to be created,"
 ---
 
 

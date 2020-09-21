@@ -1,8 +1,8 @@
 
 ---
 title: "CloudIntegrationAzureActivityLog"
-title_tag: "Resource CloudIntegrationAzureActivityLog | Package wavefront"
-meta_desc: "Explore the CloudIntegrationAzureActivityLog resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for Azure Activity Logs. This allows azure activity log cloud integrations to be created,"
+title_tag: "Resource CloudIntegrationAzureActivityLog | Package Wavefront"
+meta_desc: "Explore the CloudIntegrationAzureActivityLog resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for Azure Activity Logs. This allows azure activity log cloud integrations to be created,"
 ---
 
 

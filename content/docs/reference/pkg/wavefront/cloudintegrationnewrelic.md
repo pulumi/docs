@@ -1,8 +1,8 @@
 
 ---
 title: "CloudIntegrationNewRelic"
-title_tag: "Resource CloudIntegrationNewRelic | Package wavefront"
-meta_desc: "Explore the CloudIntegrationNewRelic resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for NewRelic. This allows NewRelic cloud integrations to be created,"
+title_tag: "Resource CloudIntegrationNewRelic | Package Wavefront"
+meta_desc: "Explore the CloudIntegrationNewRelic resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for NewRelic. This allows NewRelic cloud integrations to be created,"
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package wavefront"
-meta_desc: "Explore the Provider resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the wavefront package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package Wavefront"
+meta_desc: "Explore the Provider resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the wavefront package. By default, resources use package-wide configuration"
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "GetDefaultUserGroup"
-title_tag: "Function GetDefaultUserGroup | Package wavefront"
-meta_desc: "Explore the GetDefaultUserGroup function of the wavefront package, including examples, input properties, output properties, and supporting types. Use this data source to get the Group ID of the `Everyone` group in Wavefront. "
+title_tag: "Function GetDefaultUserGroup | Package Wavefront"
+meta_desc: "Explore the GetDefaultUserGroup function of the Wavefront package, including examples, input properties, output properties, and supporting types. Use this data source to get the Group ID of the `Everyone` group in Wavefront. "
 ---
 
 
