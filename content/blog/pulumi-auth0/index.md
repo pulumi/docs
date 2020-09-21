@@ -1,5 +1,5 @@
 ---
-title: "Managing Authentication at Credijusto with the Pulumi Auth0 Provider"
+title: "Credijusto Manages Authentication with Auth0 and Pulumi"
 date: 2020-09-22
 draft: true
 meta_desc: " Simplifying authentication to APIs with the Pulumi Auth0 provider"
