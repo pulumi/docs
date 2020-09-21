@@ -142,7 +142,7 @@ In another case, we may want to use concrete values from multiple outputs. We co
 export const url = pulumi.all([alb.hostname, alb.port]).apply( ( [hostname, port]) =>  `http://${hostname}:${port}` );
 ```
 
-String concatenation is so commonplace that Pulumi offers a helper function for it. The `interpolate` function allows you to reference outputs without calling apply or all on any of
+String concatenation is so commonplace that Pulumi offers a helper function for it. The `interpolate` function allows you to reference outputs without calling apply or all on any of them.
 
 ``` typescript
 export const url = pulumi.interpolate`http://${alb.hostname}:${alb.port}`;
