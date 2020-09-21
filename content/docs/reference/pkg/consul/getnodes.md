@@ -28,7 +28,7 @@ nodes from a different WAN-attached Consul datacenter.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_nodes(</span><span class="nx">query_options</span><span class="p">:</span> <span class="nx">Optional[List[GetNodesQueryOptionArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNodesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_nodes(</span><span class="nx">query_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetNodesQueryOptionArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNodesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -113,7 +113,7 @@ The following arguments are supported:
 <a href="#query_options_python" style="color: inherit; text-decoration: inherit;">query_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodesqueryoption">List[Get<wbr>Nodes<wbr>Query<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getnodesqueryoption">Sequence[Get<wbr>Nodes<wbr>Query<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See below.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ per-node attributes is detailed below.
 <a href="#node_ids_python" style="color: inherit; text-decoration: inherit;">node_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the Consul node IDs.
 {{% /md %}}</dd>
@@ -396,7 +396,7 @@ per-node attributes is detailed below.
 <a href="#node_names_python" style="color: inherit; text-decoration: inherit;">node_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of the Consul node names.
 {{% /md %}}</dd>
@@ -407,7 +407,7 @@ per-node attributes is detailed below.
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodesnode">List[Get<wbr>Nodes<wbr>Node]</a></span>
+        <span class="property-type"><a href="#getnodesnode">Sequence[Get<wbr>Nodes<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes and details about each Consul agent.  The list of
 per-node attributes is detailed below.
@@ -419,7 +419,7 @@ per-node attributes is detailed below.
 <a href="#query_options_python" style="color: inherit; text-decoration: inherit;">query_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodesqueryoption">List[Get<wbr>Nodes<wbr>Query<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getnodesqueryoption">Sequence[Get<wbr>Nodes<wbr>Query<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1120,7 +1120,7 @@ provider but may be overriden if necessary.
 <a href="#wait_index_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Index number used to enable blocking quereis.
 {{% /md %}}</dd>
@@ -1155,6 +1155,6 @@ to return.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 

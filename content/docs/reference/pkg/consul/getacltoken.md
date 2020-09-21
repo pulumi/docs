@@ -109,7 +109,7 @@ export const consulAclPolicies = test.policies!;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_acl_token(</span><span class="nx">accessor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[List[GetAclTokenPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAclTokenResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_acl_token(</span><span class="nx">accessor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetAclTokenPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAclTokenResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -375,7 +375,7 @@ an `id` and a `name` attribute.
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getacltokenpolicy">List[Get<wbr>Acl<wbr>Token<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getacltokenpolicy">Sequence[Get<wbr>Acl<wbr>Token<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has
 an `id` and a `name` attribute.
@@ -676,7 +676,7 @@ an `id` and a `name` attribute.
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getacltokenpolicy">List[Get<wbr>Acl<wbr>Token<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getacltokenpolicy">Sequence[Get<wbr>Acl<wbr>Token<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}A list of policies associated with the ACL token. Each entry has
 an `id` and a `name` attribute.
@@ -832,6 +832,6 @@ an `id` and a `name` attribute.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 

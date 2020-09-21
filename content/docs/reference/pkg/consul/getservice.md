@@ -32,7 +32,7 @@ source, which provides a summary of the current Consul services.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_options</span><span class="p">:</span> <span class="nx">Optional[List[GetServiceQueryOptionArgs]]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetServiceQueryOptionArgs]]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -303,7 +303,7 @@ and https://www.consul.io/api-docs/catalog#filtering-1.
 <a href="#query_options_python" style="color: inherit; text-decoration: inherit;">query_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicequeryoption">List[Get<wbr>Service<wbr>Query<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicequeryoption">Sequence[Get<wbr>Service<wbr>Query<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See below.
 {{% /md %}}</dd>
@@ -620,7 +620,7 @@ each individual node.  The list of per-node attributes is detailed below.
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceservice">List[Get<wbr>Service<wbr>Service]</a></span>
+        <span class="property-type"><a href="#getserviceservice">Sequence[Get<wbr>Service<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes and details about each endpoint advertising a
 service.  Each element in the list is a map of attributes that correspond to
@@ -654,7 +654,7 @@ each individual node.  The list of per-node attributes is detailed below.
 <a href="#query_options_python" style="color: inherit; text-decoration: inherit;">query_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicequeryoption">List[Get<wbr>Service<wbr>Query<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getservicequeryoption">Sequence[Get<wbr>Service<wbr>Query<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1128,7 +1128,7 @@ provider but may be overriden if necessary.
 <a href="#wait_index_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Index number used to enable blocking quereis.
 {{% /md %}}</dd>
@@ -1843,7 +1843,7 @@ data tag information, if any.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1865,6 +1865,6 @@ data tag information, if any.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 

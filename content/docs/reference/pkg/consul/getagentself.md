@@ -2549,7 +2549,7 @@ of telemetry configuration.
 <a href="#bootstrap_expect_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>expect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2707,7 +2707,7 @@ of telemetry configuration.
 <a href="#dns_recursors_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>recursors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2867,7 +2867,7 @@ of telemetry configuration.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, float]</span>
+        <span class="property-type">Mapping[str, int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2877,7 +2877,7 @@ of telemetry configuration.
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2937,7 +2937,7 @@ of telemetry configuration.
 <a href="#retry_join_wans_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>join_<wbr>wans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2947,7 +2947,7 @@ of telemetry configuration.
 <a href="#retry_joins_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>joins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2957,7 +2957,7 @@ of telemetry configuration.
 <a href="#retry_max_attempts_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>max_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2967,7 +2967,7 @@ of telemetry configuration.
 <a href="#retry_max_attempts_wan_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>max_<wbr>attempts_<wbr>wan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3027,7 +3027,7 @@ of telemetry configuration.
 <a href="#start_join_wans_python" style="color: inherit; text-decoration: inherit;">start_<wbr>join_<wbr>wans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3037,7 +3037,7 @@ of telemetry configuration.
 <a href="#start_joins_python" style="color: inherit; text-decoration: inherit;">start_<wbr>joins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3222,6 +3222,6 @@ of telemetry configuration.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 

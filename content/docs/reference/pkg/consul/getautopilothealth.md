@@ -412,7 +412,7 @@ available information.
 <a href="#failure_tolerance_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>tolerance</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of redundant healthy servers that could fail
 without causing an outage
@@ -447,7 +447,7 @@ configuration
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getautopilothealthserver">List[Get<wbr>Autopilot<wbr>Health<wbr>Server]</a></span>
+        <span class="property-type"><a href="#getautopilothealthserver">Sequence[Get<wbr>Autopilot<wbr>Health<wbr>Server]</a></span>
     </dt>
     <dd>{{% md %}}A list of server health information. See below for details on the
 available information.
@@ -972,7 +972,7 @@ the leader
 <a href="#last_index_python" style="color: inherit; text-decoration: inherit;">last_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The index of the server's last committed Raft log entry
 {{% /md %}}</dd>
@@ -983,7 +983,7 @@ the leader
 <a href="#last_term_python" style="color: inherit; text-decoration: inherit;">last_<wbr>term</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The server's last known Raft leader term
 {{% /md %}}</dd>
@@ -1073,6 +1073,6 @@ state
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 
