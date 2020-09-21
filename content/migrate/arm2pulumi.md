@@ -12,6 +12,6 @@ form:
 <div class="md:w-1/2 md:mr-2">
 
 <h3>Coming Soon</h3>
-<p>Arm2pulumi is on its way, come back on Thursday, September 24th for the launch!</p>
+<p>Arm2pulumi is on its way. Watch this page for updates!</p>
 
 </div>
