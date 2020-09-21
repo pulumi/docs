@@ -3,7 +3,7 @@ title: "Module codepipeline"
 title_tag: "Module codepipeline | Package @pulumi/aws | Node.js SDK"
 linktitle: "codepipeline"
 meta_desc: "Explore members of the codepipeline module in the @pulumi/aws package."
-git_sha: "3d3072ac52d05fe557c01f4a7c7669b120df0b37"
+git_sha: "375fcb47b10c41d5c9decd0e09a09141dec6aba4"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Pipeline" data-link-title="Pipeline">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L130">
         Resource <strong>Pipeline</strong>
     </a>
 </h3>
@@ -161,7 +161,7 @@ const codepipelinePolicy = new aws.iam.RolePolicy("codepipelinePolicy", {
 ```
 
 <h4 class="pdoc-member-header" id="Pipeline-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L181"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L181"> <b>constructor</b></a>
 </h4>
 
 
@@ -175,7 +175,7 @@ Create a Pipeline resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Pipeline-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L140">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L140">method <b>get</b></a>
 </h4>
 
 
@@ -186,14 +186,14 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Pipeline-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L130">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L130">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Pipeline-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L151">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L151">method <b>isInstance</b></a>
 </h4>
 
 
@@ -204,7 +204,7 @@ Returns true if the given object is an instance of Pipeline.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Pipeline-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L161">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L161">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The codepipeline ARN.
 
 <h4 class="pdoc-member-header" id="Pipeline-artifactStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L165">property <b>artifactStore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L165">property <b>artifactStore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>artifactStore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineArtifactStore'>PipelineArtifactStore</a>&gt;;</code></pre>
@@ -220,7 +220,7 @@ The codepipeline ARN.
 One or more artifactStore blocks. Artifact stores are documented below.
 
 <h4 class="pdoc-member-header" id="Pipeline-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L130">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L130">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -229,7 +229,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Pipeline-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L169">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L169">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the pipeline.
 
 <h4 class="pdoc-member-header" id="Pipeline-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L173">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L173">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ The name of the pipeline.
 A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 
 <h4 class="pdoc-member-header" id="Pipeline-stages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L177">property <b>stages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L177">property <b>stages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineStage'>PipelineStage</a>[]&gt;;</code></pre>
@@ -253,7 +253,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
 A stage block. Stages are documented below.
 
 <h4 class="pdoc-member-header" id="Pipeline-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L181">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L181">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ A stage block. Stages are documented below.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Pipeline-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L130">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L130">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -270,7 +270,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Webhook" data-link-title="Webhook">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L88">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L88">
         Resource <strong>Webhook</strong>
     </a>
 </h3>
@@ -356,7 +356,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
 ```
 
 <h4 class="pdoc-member-header" id="Webhook-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L147"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L147"> <b>constructor</b></a>
 </h4>
 
 
@@ -370,7 +370,7 @@ Create a Webhook resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Webhook-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L98">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L98">method <b>get</b></a>
 </h4>
 
 
@@ -381,14 +381,14 @@ Get an existing Webhook resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Webhook-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L88">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L88">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Webhook-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L109">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L109">method <b>isInstance</b></a>
 </h4>
 
 
@@ -399,7 +399,7 @@ Returns true if the given object is an instance of Webhook.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Webhook-authentication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L119">property <b>authentication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L119">property <b>authentication</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 
 <h4 class="pdoc-member-header" id="Webhook-authenticationConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L123">property <b>authenticationConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L123">property <b>authenticationConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authenticationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookAuthenticationConfiguration'>WebhookAuthenticationConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
 An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 
 <h4 class="pdoc-member-header" id="Webhook-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L127">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L127">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookFilter'>WebhookFilter</a>[]&gt;;</code></pre>
@@ -423,7 +423,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
 One or more `filter` blocks. Filter blocks are documented below.
 
 <h4 class="pdoc-member-header" id="Webhook-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L88">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -432,7 +432,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Webhook-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -440,7 +440,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the webhook.
 
 <h4 class="pdoc-member-header" id="Webhook-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L135">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L135">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ The name of the webhook.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Webhook-targetAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L139">property <b>targetAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L139">property <b>targetAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -456,7 +456,7 @@ A map of tags to assign to the resource.
 The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 
 <h4 class="pdoc-member-header" id="Webhook-targetPipeline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L143">property <b>targetPipeline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L143">property <b>targetPipeline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetPipeline: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -464,7 +464,7 @@ The name of the action in a pipeline you want to connect to the webhook. The act
 The name of the pipeline.
 
 <h4 class="pdoc-member-header" id="Webhook-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L147">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L147">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -472,7 +472,7 @@ The name of the pipeline.
 The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 
 <h4 class="pdoc-member-header" id="Webhook-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L88">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L88">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -484,7 +484,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="PipelineArgs" data-link-title="PipelineArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L263">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L263">
         interface <strong>PipelineArgs</strong>
     </a>
 </h3>
@@ -494,7 +494,7 @@ deployments.
 The set of arguments for constructing a Pipeline resource.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-artifactStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L267">property <b>artifactStore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L267">property <b>artifactStore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>artifactStore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineArtifactStore'>PipelineArtifactStore</a>&gt;;</code></pre>
@@ -502,7 +502,7 @@ The set of arguments for constructing a Pipeline resource.
 One or more artifactStore blocks. Artifact stores are documented below.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L271">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L271">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ One or more artifactStore blocks. Artifact stores are documented below.
 The name of the pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L275">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L275">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ The name of the pipeline.
 A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-stages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L279">property <b>stages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L279">property <b>stages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineStage'>PipelineStage</a>&gt;[]&gt;;</code></pre>
@@ -526,7 +526,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
 A stage block. Stages are documented below.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L283">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L283">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -534,7 +534,7 @@ A stage block. Stages are documented below.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="PipelineState" data-link-title="PipelineState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L233">
         interface <strong>PipelineState</strong>
     </a>
 </h3>
@@ -544,7 +544,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering Pipeline resources.
 
 <h4 class="pdoc-member-header" id="PipelineState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L237">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L237">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -552,7 +552,7 @@ Input properties used for looking up and filtering Pipeline resources.
 The codepipeline ARN.
 
 <h4 class="pdoc-member-header" id="PipelineState-artifactStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L241">property <b>artifactStore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L241">property <b>artifactStore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>artifactStore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineArtifactStore'>PipelineArtifactStore</a>&gt;;</code></pre>
@@ -560,7 +560,7 @@ The codepipeline ARN.
 One or more artifactStore blocks. Artifact stores are documented below.
 
 <h4 class="pdoc-member-header" id="PipelineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L245">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L245">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +568,7 @@ One or more artifactStore blocks. Artifact stores are documented below.
 The name of the pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L249">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L249">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ The name of the pipeline.
 A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 
 <h4 class="pdoc-member-header" id="PipelineState-stages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L253">property <b>stages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L253">property <b>stages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineStage'>PipelineStage</a>&gt;[]&gt;;</code></pre>
@@ -584,7 +584,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
 A stage block. Stages are documented below.
 
 <h4 class="pdoc-member-header" id="PipelineState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/pipeline.ts#L257">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/pipeline.ts#L257">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -592,7 +592,7 @@ A stage block. Stages are documented below.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="WebhookArgs" data-link-title="WebhookArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L244">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L244">
         interface <strong>WebhookArgs</strong>
     </a>
 </h3>
@@ -602,7 +602,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a Webhook resource.
 
 <h4 class="pdoc-member-header" id="WebhookArgs-authentication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L248">property <b>authentication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L248">property <b>authentication</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -610,7 +610,7 @@ The set of arguments for constructing a Webhook resource.
 The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 
 <h4 class="pdoc-member-header" id="WebhookArgs-authenticationConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L252">property <b>authenticationConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L252">property <b>authenticationConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookAuthenticationConfiguration'>WebhookAuthenticationConfiguration</a>&gt;;</code></pre>
@@ -618,7 +618,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
 An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 
 <h4 class="pdoc-member-header" id="WebhookArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L256">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L256">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilter'>WebhookFilter</a>&gt;[]&gt;;</code></pre>
@@ -626,7 +626,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
 One or more `filter` blocks. Filter blocks are documented below.
 
 <h4 class="pdoc-member-header" id="WebhookArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L260">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L260">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,7 +634,7 @@ One or more `filter` blocks. Filter blocks are documented below.
 The name of the webhook.
 
 <h4 class="pdoc-member-header" id="WebhookArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L264">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L264">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -642,7 +642,7 @@ The name of the webhook.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="WebhookArgs-targetAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L268">property <b>targetAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L268">property <b>targetAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -650,7 +650,7 @@ A map of tags to assign to the resource.
 The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 
 <h4 class="pdoc-member-header" id="WebhookArgs-targetPipeline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L272">property <b>targetPipeline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L272">property <b>targetPipeline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetPipeline: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -658,7 +658,7 @@ The name of the action in a pipeline you want to connect to the webhook. The act
 The name of the pipeline.
 
 <h3 class="pdoc-module-header" id="WebhookState" data-link-title="WebhookState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L206">
         interface <strong>WebhookState</strong>
     </a>
 </h3>
@@ -668,7 +668,7 @@ The name of the pipeline.
 Input properties used for looking up and filtering Webhook resources.
 
 <h4 class="pdoc-member-header" id="WebhookState-authentication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L210">property <b>authentication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L210">property <b>authentication</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -676,7 +676,7 @@ Input properties used for looking up and filtering Webhook resources.
 The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 
 <h4 class="pdoc-member-header" id="WebhookState-authenticationConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L214">property <b>authenticationConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L214">property <b>authenticationConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookAuthenticationConfiguration'>WebhookAuthenticationConfiguration</a>&gt;;</code></pre>
@@ -684,7 +684,7 @@ The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICA
 An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 
 <h4 class="pdoc-member-header" id="WebhookState-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L218">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L218">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilter'>WebhookFilter</a>&gt;[]&gt;;</code></pre>
@@ -692,7 +692,7 @@ An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented
 One or more `filter` blocks. Filter blocks are documented below.
 
 <h4 class="pdoc-member-header" id="WebhookState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L222">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L222">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ One or more `filter` blocks. Filter blocks are documented below.
 The name of the webhook.
 
 <h4 class="pdoc-member-header" id="WebhookState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L226">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L226">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -708,7 +708,7 @@ The name of the webhook.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="WebhookState-targetAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L230">property <b>targetAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L230">property <b>targetAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -716,7 +716,7 @@ A map of tags to assign to the resource.
 The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 
 <h4 class="pdoc-member-header" id="WebhookState-targetPipeline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L234">property <b>targetPipeline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L234">property <b>targetPipeline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetPipeline?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ The name of the action in a pipeline you want to connect to the webhook. The act
 The name of the pipeline.
 
 <h4 class="pdoc-member-header" id="WebhookState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3d3072ac52d05fe557c01f4a7c7669b120df0b37/sdk/nodejs/codepipeline/webhook.ts#L238">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/codepipeline/webhook.ts#L238">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
