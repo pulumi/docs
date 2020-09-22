@@ -912,7 +912,7 @@ The following output properties are available:
 <a href="#additional_locations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceadditionallocation">List[Get<wbr>Service<wbr>Additional<wbr>Location]</a></span>
+        <span class="property-type"><a href="#getserviceadditionallocation">Sequence[Get<wbr>Service<wbr>Additional<wbr>Location]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below
 {{% /md %}}</dd>
@@ -956,7 +956,7 @@ The following output properties are available:
 <a href="#hostname_configurations_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfiguration">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfiguration">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -978,7 +978,7 @@ The following output properties are available:
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceidentity">List[Get<wbr>Service<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getserviceidentity">Sequence[Get<wbr>Service<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -1044,7 +1044,7 @@ The following output properties are available:
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -1292,7 +1292,7 @@ The following output properties are available:
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -1514,7 +1514,7 @@ The following output properties are available:
 <a href="#developer_portals_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationdeveloperportal">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationdeveloperportal">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
 {{% /md %}}</dd>
@@ -1525,7 +1525,7 @@ The following output properties are available:
 <a href="#managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationmanagement">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationmanagement">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd>
@@ -1536,7 +1536,7 @@ The following output properties are available:
 <a href="#portals_python" style="color: inherit; text-decoration: inherit;">portals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationportal">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationportal">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd>
@@ -1547,7 +1547,7 @@ The following output properties are available:
 <a href="#proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationproxy">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationproxy">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd>
@@ -1558,7 +1558,7 @@ The following output properties are available:
 <a href="#scms_python" style="color: inherit; text-decoration: inherit;">scms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationscm">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationscm">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd>
@@ -2681,7 +2681,7 @@ The following output properties are available:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
 {{% /md %}}</dd>

@@ -458,7 +458,7 @@ The following output properties are available:
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualmachineidentity">List[Get<wbr>Virtual<wbr>Machine<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getvirtualmachineidentity">Sequence[Get<wbr>Virtual<wbr>Machine<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd>
@@ -683,7 +683,7 @@ The following output properties are available:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of User Managed Identity ID's which are assigned to the Virtual Machine.
 {{% /md %}}</dd>

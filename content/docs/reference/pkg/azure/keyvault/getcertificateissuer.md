@@ -545,7 +545,7 @@ The following output properties are available:
 <a href="#admins_python" style="color: inherit; text-decoration: inherit;">admins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificateissueradmin">List[Get<wbr>Certificate<wbr>Issuer<wbr>Admin]</a></span>
+        <span class="property-type"><a href="#getcertificateissueradmin">Sequence[Get<wbr>Certificate<wbr>Issuer<wbr>Admin]</a></span>
     </dt>
     <dd>{{% md %}}A list of `admin` blocks as defined below.
 {{% /md %}}</dd>

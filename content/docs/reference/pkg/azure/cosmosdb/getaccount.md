@@ -1038,7 +1038,7 @@ The following output properties are available:
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountcapability">List[Get<wbr>Account<wbr>Capability]</a></span>
+        <span class="property-type"><a href="#getaccountcapability">Sequence[Get<wbr>Account<wbr>Capability]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities enabled on this Cosmos DB account.
 {{% /md %}}</dd>
@@ -1049,7 +1049,7 @@ The following output properties are available:
 <a href="#consistency_policies_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountconsistencypolicy">List[Get<wbr>Account<wbr>Consistency<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getaccountconsistencypolicy">Sequence[Get<wbr>Account<wbr>Consistency<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1103,7 +1103,7 @@ The following output properties are available:
 <a href="#geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountgeolocation">List[Get<wbr>Account<wbr>Geo<wbr>Location]</a></span>
+        <span class="property-type"><a href="#getaccountgeolocation">Sequence[Get<wbr>Account<wbr>Geo<wbr>Location]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1211,7 +1211,7 @@ The following output properties are available:
 <a href="#read_endpoints_python" style="color: inherit; text-decoration: inherit;">read_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
@@ -1265,7 +1265,7 @@ The following output properties are available:
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountvirtualnetworkrule">List[Get<wbr>Account<wbr>Virtual<wbr>Network<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getaccountvirtualnetworkrule">Sequence[Get<wbr>Account<wbr>Virtual<wbr>Network<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Subnets that are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
@@ -1276,7 +1276,7 @@ The following output properties are available:
 <a href="#write_endpoints_python" style="color: inherit; text-decoration: inherit;">write_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
@@ -1539,7 +1539,7 @@ The following output properties are available:
 <a href="#max_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of staleness (in seconds) tolerated when the consistency level is Bounded Staleness.
 {{% /md %}}</dd>
@@ -1550,7 +1550,7 @@ The following output properties are available:
 <a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of stale requests tolerated when the consistency level is Bounded Staleness.
 {{% /md %}}</dd>
@@ -1703,7 +1703,7 @@ The following output properties are available:
 <a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -1170,7 +1170,7 @@ The following output properties are available:
 <a href="#addon_profiles_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofile">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofile">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as documented below.
 {{% /md %}}</dd>
@@ -1181,7 +1181,7 @@ The following output properties are available:
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofile">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofile">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}An `agent_pool_profile` block as documented below.
 {{% /md %}}</dd>
@@ -1192,7 +1192,7 @@ The following output properties are available:
 <a href="#api_server_authorized_ip_ranges_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>authorized_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the primaries.
 {{% /md %}}</dd>
@@ -1247,7 +1247,7 @@ The following output properties are available:
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteridentity">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteridentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as documented below.
 {{% /md %}}</dd>
@@ -1269,7 +1269,7 @@ The following output properties are available:
 <a href="#kube_admin_configs_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>admin_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd>
@@ -1291,7 +1291,7 @@ The following output properties are available:
 <a href="#kube_configs_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterkubeconfig">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterkubeconfig">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd>
@@ -1302,7 +1302,7 @@ The following output properties are available:
 <a href="#kubelet_identities_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}A `kubelet_identity` block as documented below.
 {{% /md %}}</dd>
@@ -1324,7 +1324,7 @@ The following output properties are available:
 <a href="#linux_profiles_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterlinuxprofile">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterlinuxprofile">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as documented below.
 {{% /md %}}</dd>
@@ -1357,7 +1357,7 @@ The following output properties are available:
 <a href="#network_profiles_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusternetworkprofile">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusternetworkprofile">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as documented below.
 {{% /md %}}</dd>
@@ -1421,7 +1421,7 @@ The following output properties are available:
 <a href="#role_based_access_controls_python" style="color: inherit; text-decoration: inherit;">role_<wbr>based_<wbr>access_<wbr>controls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrol">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrol">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control]</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block as documented below.
 {{% /md %}}</dd>
@@ -1432,7 +1432,7 @@ The following output properties are available:
 <a href="#service_principals_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterserviceprincipal">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterserviceprincipal">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal]</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
 {{% /md %}}</dd>
@@ -1454,7 +1454,7 @@ The following output properties are available:
 <a href="#windows_profiles_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterwindowsprofile">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterwindowsprofile">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as documented below.
 {{% /md %}}</dd>
@@ -1649,7 +1649,7 @@ The following output properties are available:
 <a href="#azure_policies_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
 {{% /md %}}</dd>
@@ -1660,7 +1660,7 @@ The following output properties are available:
 <a href="#http_application_routings_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
 {{% /md %}}</dd>
@@ -1671,7 +1671,7 @@ The following output properties are available:
 <a href="#kube_dashboards_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>dashboards</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
 {{% /md %}}</dd>
@@ -1682,7 +1682,7 @@ The following output properties are available:
 <a href="#oms_agents_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agents</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
 {{% /md %}}</dd>
@@ -2174,7 +2174,7 @@ The following output properties are available:
 <a href="#oms_agent_identities_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agent_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd>
@@ -2964,7 +2964,7 @@ The following output properties are available:
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The availability zones used for the nodes.
 {{% /md %}}</dd>
@@ -2975,7 +2975,7 @@ The following output properties are available:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of Agents (VM's) in the Pool.
 {{% /md %}}</dd>
@@ -3007,7 +3007,7 @@ The following output properties are available:
 <a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes for auto-scaling
 {{% /md %}}</dd>
@@ -3018,7 +3018,7 @@ The following output properties are available:
 <a href="#max_pods_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent.
 {{% /md %}}</dd>
@@ -3029,7 +3029,7 @@ The following output properties are available:
 <a href="#min_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes for auto-scaling
 {{% /md %}}</dd>
@@ -3061,7 +3061,7 @@ The following output properties are available:
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
 {{% /md %}}</dd>
@@ -3083,7 +3083,7 @@ The following output properties are available:
 <a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Agent VM's Operating System Disk in GB.
 {{% /md %}}</dd>
@@ -4248,7 +4248,7 @@ The following output properties are available:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
 {{% /md %}}</dd>
@@ -4811,7 +4811,7 @@ The following output properties are available:
 <a href="#azure_active_directories_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">List[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
 {{% /md %}}</dd>
@@ -5044,7 +5044,7 @@ The following output properties are available:
 <a href="#admin_group_object_ids_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of Object IDs of Azure Active Directory Groups which have Admin Role on the Cluster (when using a Managed integration).
 {{% /md %}}</dd>

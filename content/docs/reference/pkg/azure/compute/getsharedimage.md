@@ -840,7 +840,7 @@ The following output properties are available:
 <a href="#identifiers_python" style="color: inherit; text-decoration: inherit;">identifiers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsharedimageidentifier">List[Get<wbr>Shared<wbr>Image<wbr>Identifier]</a></span>
+        <span class="property-type"><a href="#getsharedimageidentifier">Sequence[Get<wbr>Shared<wbr>Image<wbr>Identifier]</a></span>
     </dt>
     <dd>{{% md %}}An `identifier` block as defined below.
 {{% /md %}}</dd>

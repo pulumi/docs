@@ -427,7 +427,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActionGroup">ActionGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupEmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupLogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupSmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupVoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupWebhookReceiverArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActionGroup">ActionGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupEmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupLogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupSmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupVoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupWebhookReceiverArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1143,7 +1143,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">List[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">Sequence[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1154,7 +1154,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Sequence[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1165,7 +1165,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1176,7 +1176,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1187,7 +1187,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">List[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">Sequence[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1209,7 +1209,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">List[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">Sequence[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1220,7 +1220,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">List[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">Sequence[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1242,7 +1242,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">List[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">Sequence[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1264,7 +1264,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">List[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">Sequence[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1275,7 +1275,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">List[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">Sequence[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1379,7 +1379,7 @@ Get an existing ActionGroup resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupAzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupEmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupLogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupSmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupVoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[List[ActionGroupWebhookReceiverArgs]]</span> = None<span class="p">) -&gt;</span> ActionGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupAzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupEmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupLogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupSmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupVoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActionGroupWebhookReceiverArgs]]</span> = None<span class="p">) -&gt;</span> ActionGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2015,7 +2015,7 @@ The following state arguments are supported:
 <a href="#state_arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">List[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">Sequence[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2026,7 +2026,7 @@ The following state arguments are supported:
 <a href="#state_automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Sequence[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2037,7 +2037,7 @@ The following state arguments are supported:
 <a href="#state_azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2048,7 +2048,7 @@ The following state arguments are supported:
 <a href="#state_azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2059,7 +2059,7 @@ The following state arguments are supported:
 <a href="#state_email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">List[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">Sequence[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2081,7 +2081,7 @@ The following state arguments are supported:
 <a href="#state_itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">List[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">Sequence[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2092,7 +2092,7 @@ The following state arguments are supported:
 <a href="#state_logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">List[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">Sequence[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2136,7 +2136,7 @@ The following state arguments are supported:
 <a href="#state_sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">List[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">Sequence[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2158,7 +2158,7 @@ The following state arguments are supported:
 <a href="#state_voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">List[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">Sequence[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -2169,7 +2169,7 @@ The following state arguments are supported:
 <a href="#state_webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">List[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">Sequence[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd>

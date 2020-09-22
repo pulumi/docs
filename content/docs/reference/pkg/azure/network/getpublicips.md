@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpublicipspublicip">List[Get<wbr>Public<wbr>IPs<wbr>Public<wbr>Ip]</a></span>
+        <span class="property-type"><a href="#getpublicipspublicip">Sequence[Get<wbr>Public<wbr>IPs<wbr>Public<wbr>Ip]</a></span>
     </dt>
     <dd>{{% md %}}A List of `public_ips` blocks as defined below filtered by the criteria above.
 {{% /md %}}</dd>

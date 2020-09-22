@@ -26,6 +26,7 @@ Explore the resources and functions of the servicebus module in the Azure packag
 <ul class="api">
     <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
     <li><a href="getnamespaceauthorizationrule" title="GetNamespaceAuthorizationRule"><span class="symbol function"></span>GetNamespaceAuthorizationRule</a></li>
+    <li><a href="getqueueauthorizationrule" title="GetQueueAuthorizationRule"><span class="symbol function"></span>GetQueueAuthorizationRule</a></li>
     <li><a href="gettopicauthorizationrule" title="GetTopicAuthorizationRule"><span class="symbol function"></span>GetTopicAuthorizationRule</a></li>
 </ul>
 
@@ -38,7 +39,7 @@ Explore the resources and functions of the servicebus module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.20.1</dd>
+	<dd>3.22.0</dd>
 </dl>
 
 

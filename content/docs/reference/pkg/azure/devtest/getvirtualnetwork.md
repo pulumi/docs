@@ -561,7 +561,7 @@ The following output properties are available:
 <a href="#allowed_subnets_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>subnets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualnetworkallowedsubnet">List[Get<wbr>Virtual<wbr>Network<wbr>Allowed<wbr>Subnet]</a></span>
+        <span class="property-type"><a href="#getvirtualnetworkallowedsubnet">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Allowed<wbr>Subnet]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets enabled for the virtual network as defined below.
 {{% /md %}}</dd>
@@ -613,7 +613,7 @@ The following output properties are available:
 <a href="#subnet_overrides_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualnetworksubnetoverride">List[Get<wbr>Virtual<wbr>Network<wbr>Subnet<wbr>Override]</a></span>
+        <span class="property-type"><a href="#getvirtualnetworksubnetoverride">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Subnet<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}The list of permission overrides for the subnets as defined below.
 {{% /md %}}</dd>

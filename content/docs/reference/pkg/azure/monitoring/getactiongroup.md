@@ -783,7 +783,7 @@ The following output properties are available:
 <a href="#arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getactiongrouparmrolereceiver">List[Get<wbr>Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#getactiongrouparmrolereceiver">Sequence[Get<wbr>Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -794,7 +794,7 @@ The following output properties are available:
 <a href="#automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getactiongroupautomationrunbookreceiver">List[Get<wbr>Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#getactiongroupautomationrunbookreceiver">Sequence[Get<wbr>Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -805,7 +805,7 @@ The following output properties are available:
 <a href="#azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getactiongroupazureapppushreceiver">List[Get<wbr>Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#getactiongroupazureapppushreceiver">Sequence[Get<wbr>Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -816,7 +816,7 @@ The following output properties are available:
 <a href="#azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getactiongroupazurefunctionreceiver">List[Get<wbr>Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#getactiongroupazurefunctionreceiver">Sequence[Get<wbr>Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -827,7 +827,7 @@ The following output properties are available:
 <a href="#email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getactiongroupemailreceiver">List[Get<wbr>Action<wbr>Group<wbr>Email<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#getactiongroupemailreceiver">Sequence[Get<wbr>Action<wbr>Group<wbr>Email<wbr>Receiver]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -860,7 +860,7 @@ The following output properties are available:
 <a href="#itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getactiongroupitsmreceiver">List[Get<wbr>Action<wbr>Group<wbr>Itsm<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#getactiongroupitsmreceiver">Sequence[Get<wbr>Action<wbr>Group<wbr>Itsm<wbr>Receiver]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -871,7 +871,7 @@ The following output properties are available:
 <a href="#logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getactiongrouplogicappreceiver">List[Get<wbr>Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#getactiongrouplogicappreceiver">Sequence[Get<wbr>Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The following output properties are available:
 <a href="#sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getactiongroupsmsreceiver">List[Get<wbr>Action<wbr>Group<wbr>Sms<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#getactiongroupsmsreceiver">Sequence[Get<wbr>Action<wbr>Group<wbr>Sms<wbr>Receiver]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -925,7 +925,7 @@ The following output properties are available:
 <a href="#voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getactiongroupvoicereceiver">List[Get<wbr>Action<wbr>Group<wbr>Voice<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#getactiongroupvoicereceiver">Sequence[Get<wbr>Action<wbr>Group<wbr>Voice<wbr>Receiver]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ The following output properties are available:
 <a href="#webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getactiongroupwebhookreceiver">List[Get<wbr>Action<wbr>Group<wbr>Webhook<wbr>Receiver]</a></span>
+        <span class="property-type"><a href="#getactiongroupwebhookreceiver">Sequence[Get<wbr>Action<wbr>Group<wbr>Webhook<wbr>Receiver]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd>

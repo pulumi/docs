@@ -714,7 +714,7 @@ The following output properties are available:
 <a href="#policy_definition_references_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitionreference">List[Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitionreference">Sequence[Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

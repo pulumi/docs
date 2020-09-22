@@ -923,7 +923,7 @@ The following output properties are available:
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappserviceconnectionstring">List[Get<wbr>App<wbr>Service<wbr>Connection<wbr>String]</a></span>
+        <span class="property-type"><a href="#getappserviceconnectionstring">Sequence[Get<wbr>App<wbr>Service<wbr>Connection<wbr>String]</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd>
@@ -1032,7 +1032,7 @@ The following output properties are available:
 <a href="#site_configs_python" style="color: inherit; text-decoration: inherit;">site_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesiteconfig">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getappservicesiteconfig">Sequence[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
 {{% /md %}}</dd>
@@ -1043,7 +1043,7 @@ The following output properties are available:
 <a href="#site_credentials_python" style="color: inherit; text-decoration: inherit;">site_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesitecredential">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#getappservicesitecredential">Sequence[Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1053,7 +1053,7 @@ The following output properties are available:
 <a href="#source_controls_python" style="color: inherit; text-decoration: inherit;">source_<wbr>controls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesourcecontrol">List[Get<wbr>App<wbr>Service<wbr>Source<wbr>Control]</a></span>
+        <span class="property-type"><a href="#getappservicesourcecontrol">Sequence[Get<wbr>App<wbr>Service<wbr>Source<wbr>Control]</a></span>
     </dt>
     <dd>{{% md %}}A `source_control` block as defined below.
 {{% /md %}}</dd>
@@ -2185,7 +2185,7 @@ The following output properties are available:
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesiteconfigcor">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getappservicesiteconfigcor">Sequence[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined above.
 {{% /md %}}</dd>
@@ -2196,7 +2196,7 @@ The following output properties are available:
 <a href="#default_documents_python" style="color: inherit; text-decoration: inherit;">default_<wbr>documents</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The ordering of default documents to load, if an address isn't specified.
 {{% /md %}}</dd>
@@ -2251,7 +2251,7 @@ The following output properties are available:
 <a href="#ip_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesiteconfigiprestriction">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getappservicesiteconfigiprestriction">Sequence[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
 {{% /md %}}</dd>
@@ -2383,7 +2383,7 @@ The following output properties are available:
 <a href="#scm_ip_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappservicesiteconfigscmiprestriction">List[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getappservicesiteconfigscmiprestriction">Sequence[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm_ip_restriction` blocks as defined above.
 {{% /md %}}</dd>
@@ -2561,7 +2561,7 @@ The following output properties are available:
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of origins which are able to make cross-origin calls.
 {{% /md %}}</dd>
@@ -2857,7 +2857,7 @@ The following output properties are available:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
 {{% /md %}}</dd>
@@ -3163,7 +3163,7 @@ The following output properties are available:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
 {{% /md %}}</dd>

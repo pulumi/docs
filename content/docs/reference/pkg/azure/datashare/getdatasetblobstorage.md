@@ -628,7 +628,7 @@ The following output properties are available:
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatasetblobstoragestorageaccount">List[Get<wbr>Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#getdatasetblobstoragestorageaccount">Sequence[Get<wbr>Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account` block as defined below.
 {{% /md %}}</dd>

@@ -286,6 +286,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="internalipaddress_csharp">
+<a href="#internalipaddress_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -307,6 +318,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="outboundipaddresses_csharp">
+<a href="#outboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="pricingtier_csharp">
 <a href="#pricingtier_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
 </span> 
@@ -325,6 +347,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="serviceipaddress_csharp">
+<a href="#serviceipaddress_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -368,6 +401,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="internalipaddress_go">
+<a href="#internalipaddress_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span> 
@@ -389,6 +433,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="outboundipaddresses_go">
+<a href="#outboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="pricingtier_go">
 <a href="#pricingtier_go" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
 </span> 
@@ -407,6 +462,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="serviceipaddress_go">
+<a href="#serviceipaddress_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -450,6 +516,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="internalipaddress_nodejs">
+<a href="#internalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span> 
@@ -471,6 +548,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="outboundipaddresses_nodejs">
+<a href="#outboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="pricingtier_nodejs">
 <a href="#pricingtier_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Tier</a>
 </span> 
@@ -489,6 +577,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="serviceipaddress_nodejs">
+<a href="#serviceipaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -514,7 +613,7 @@ The following output properties are available:
 <a href="#front_end_scale_factor_python" style="color: inherit; text-decoration: inherit;">front_<wbr>end_<wbr>scale_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of app instances per App Service Environment Front End
 {{% /md %}}</dd>
@@ -528,6 +627,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="internal_ip_address_python">
+<a href="#internal_ip_address_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -553,6 +663,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="outbound_ip_addresses_python">
+<a href="#outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="pricing_tier_python">
 <a href="#pricing_tier_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>tier</a>
 </span> 
@@ -571,6 +692,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="service_ip_address_python">
+<a href="#service_ip_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

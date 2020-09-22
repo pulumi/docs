@@ -35,6 +35,7 @@ Explore the resources and functions of the appservice module in the Azure packag
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getcertificateorder" title="GetCertificateOrder"><span class="symbol function"></span>GetCertificateOrder</a></li>
     <li><a href="getfunctionapp" title="GetFunctionApp"><span class="symbol function"></span>GetFunctionApp</a></li>
+    <li><a href="getfunctionapphostkeys" title="GetFunctionAppHostKeys"><span class="symbol function"></span>GetFunctionAppHostKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -46,7 +47,7 @@ Explore the resources and functions of the appservice module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.20.1</dd>
+	<dd>3.22.0</dd>
 </dl>
 
 

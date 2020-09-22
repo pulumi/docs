@@ -842,7 +842,7 @@ The following output properties are available:
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsharedimageversiontargetregion">List[Get<wbr>Shared<wbr>Image<wbr>Version<wbr>Target<wbr>Region]</a></span>
+        <span class="property-type"><a href="#getsharedimageversiontargetregion">Sequence[Get<wbr>Shared<wbr>Image<wbr>Version<wbr>Target<wbr>Region]</a></span>
     </dt>
     <dd>{{% md %}}One or more `target_region` blocks as documented below.
 {{% /md %}}</dd>
@@ -1015,7 +1015,7 @@ The following output properties are available:
 <a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region.
 {{% /md %}}</dd>

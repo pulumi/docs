@@ -594,7 +594,7 @@ The following output properties are available:
 <a href="#apns_credentials_python" style="color: inherit; text-decoration: inherit;">apns_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gethubapnscredential">List[Get<wbr>Hub<wbr>Apns<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#gethubapnscredential">Sequence[Get<wbr>Hub<wbr>Apns<wbr>Credential]</a></span>
     </dt>
     <dd>{{% md %}}A `apns_credential` block as defined below.
 {{% /md %}}</dd>
@@ -605,7 +605,7 @@ The following output properties are available:
 <a href="#gcm_credentials_python" style="color: inherit; text-decoration: inherit;">gcm_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gethubgcmcredential">List[Get<wbr>Hub<wbr>Gcm<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#gethubgcmcredential">Sequence[Get<wbr>Hub<wbr>Gcm<wbr>Credential]</a></span>
     </dt>
     <dd>{{% md %}}A `gcm_credential` block as defined below.
 {{% /md %}}</dd>

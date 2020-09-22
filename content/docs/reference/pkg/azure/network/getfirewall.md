@@ -488,7 +488,7 @@ The following output properties are available:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfirewallipconfiguration">List[Get<wbr>Firewall<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getfirewallipconfiguration">Sequence[Get<wbr>Firewall<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A `ip_configuration` block as defined below.
 {{% /md %}}</dd>

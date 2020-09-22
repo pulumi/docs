@@ -838,7 +838,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledqueryrulesalertaction">List[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Action]</a></span>
+        <span class="property-type"><a href="#getscheduledqueryrulesalertaction">Sequence[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}An `action` block as defined below.
 {{% /md %}}</dd>
@@ -849,7 +849,7 @@ The following output properties are available:
 <a href="#authorized_resource_ids_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>resource_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of Resource IDs referred into query.
 {{% /md %}}</dd>
@@ -893,7 +893,7 @@ The following output properties are available:
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Frequency at which rule condition should be evaluated.
 {{% /md %}}</dd>
@@ -966,7 +966,7 @@ The following output properties are available:
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Severity of the alert.
 {{% /md %}}</dd>
@@ -987,7 +987,7 @@ The following output properties are available:
 <a href="#throttling_python" style="color: inherit; text-decoration: inherit;">throttling</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time for which alerts should be throttled or suppressed.
 {{% /md %}}</dd>
@@ -998,7 +998,7 @@ The following output properties are available:
 <a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Time window for which data needs to be fetched for query.
 {{% /md %}}</dd>
@@ -1009,7 +1009,7 @@ The following output properties are available:
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledqueryrulesalerttrigger">List[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#getscheduledqueryrulesalerttrigger">Sequence[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger]</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd>
@@ -1171,7 +1171,7 @@ The following output properties are available:
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of action group reference resource IDs.
 {{% /md %}}</dd>
@@ -1346,7 +1346,7 @@ The following output properties are available:
 <a href="#metric_triggers_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledqueryrulesalerttriggermetrictrigger">List[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getscheduledqueryrulesalerttriggermetrictrigger">Sequence[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

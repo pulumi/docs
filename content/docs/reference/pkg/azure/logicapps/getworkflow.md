@@ -758,7 +758,7 @@ The following output properties are available:
 <a href="#connector_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of connector.
 {{% /md %}}</dd>
@@ -769,7 +769,7 @@ The following output properties are available:
 <a href="#connector_outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>outbound_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
 {{% /md %}}</dd>
@@ -855,7 +855,7 @@ The following output properties are available:
 <a href="#workflow_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of workflow.
 {{% /md %}}</dd>
@@ -866,7 +866,7 @@ The following output properties are available:
 <a href="#workflow_outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>outbound_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
 {{% /md %}}</dd>

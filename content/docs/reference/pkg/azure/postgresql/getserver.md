@@ -648,7 +648,7 @@ The following output properties are available:
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserveridentity">List[Get<wbr>Server<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getserveridentity">Sequence[Get<wbr>Server<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>

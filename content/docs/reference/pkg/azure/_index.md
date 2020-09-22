@@ -21,6 +21,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="appinsights/" title="appinsights"><span class="symbol module"></span>appinsights</a></li>
     <li><a href="appplatform/" title="appplatform"><span class="symbol module"></span>appplatform</a></li>
     <li><a href="appservice/" title="appservice"><span class="symbol module"></span>appservice</a></li>
+    <li><a href="attestation/" title="attestation"><span class="symbol module"></span>attestation</a></li>
     <li><a href="authorization/" title="authorization"><span class="symbol module"></span>authorization</a></li>
     <li><a href="automation/" title="automation"><span class="symbol module"></span>automation</a></li>
     <li><a href="backup/" title="backup"><span class="symbol module"></span>backup</a></li>
@@ -55,6 +56,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="keyvault/" title="keyvault"><span class="symbol module"></span>keyvault</a></li>
     <li><a href="kusto/" title="kusto"><span class="symbol module"></span>kusto</a></li>
     <li><a href="lb/" title="lb"><span class="symbol module"></span>lb</a></li>
+    <li><a href="lighthouse/" title="lighthouse"><span class="symbol module"></span>lighthouse</a></li>
     <li><a href="loganalytics/" title="loganalytics"><span class="symbol module"></span>loganalytics</a></li>
     <li><a href="logicapps/" title="logicapps"><span class="symbol module"></span>logicapps</a></li>
     <li><a href="machinelearning/" title="machinelearning"><span class="symbol module"></span>machinelearning</a></li>
@@ -115,7 +117,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.20.1</dd>
+	<dd>3.22.0</dd>
 </dl>
 
 
