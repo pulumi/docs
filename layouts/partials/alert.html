@@ -1,9 +1,19 @@
+{{ $text := "Come join Pulumi for the industry's first Cloud Engineering Summit! October 7&ndash;8." }}
+{{ $url := relref . "/azure" }}
+{{ $color := "blue"}}
+
+{{ if .IsHome }}
+    {{ $text = "Join us for the industry's first-ever Cloud Engineering Summit! October 7&ndash;8." }}
+    {{ $url = "https://cloudengineeringsummit.com/?utm_campaign=summit&utm_source=pulumi.com&utm_medium=top-banner" }}
+    {{ $color = "orange"}}
+{{ end }}
+
 <div class="mx-auto mb-12">
     <div class="inline-block">
-        <a href="{{ relref . "/azure" }}" class="block p-2 bg-purple-400 hover:bg-purple-300 transition-all items-center text-purple-100 leading-none rounded-full flex md:inline-flex shadow-xl">
-            <span class="alert-chicklet flex rounded-full bg-blue-700 border-4 border-blue-600 uppercase text-white px-2 py-1 text-xs font-bold mr-2">New!</span>
+        <a href="{{ $url }}" class="block p-2 bg-purple-400 hover:bg-purple-300 transition-all items-center text-purple-100 leading-none rounded-full flex md:inline-flex shadow-xl">
+            <span class="alert-chicklet flex rounded-full bg-{{ $color }}-700 border-4 border-{{ $color }}-600 uppercase text-white px-2 py-1 text-xs font-bold mr-2">New!</span>
             <span class="alert-content text-left flex-auto text-white text-sm md:text-base leading-normal">
-                Next generation Azure provider with 100% coverage for ARM! Learn More
+                {{ $text | safeHTML }}
             </span>
             <i class="fill-current fas fa-chevron-right text-xs opacity-75 ml-2 mr-1"></i>
         </a>
