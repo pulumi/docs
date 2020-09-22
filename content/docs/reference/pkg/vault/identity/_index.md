@@ -16,6 +16,7 @@ Explore the resources and functions of the identity module in the Vault package.
     <li><a href="entitypolicies" title="EntityPolicies"><span class="symbol resource"></span>EntityPolicies</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupalias" title="GroupAlias"><span class="symbol resource"></span>GroupAlias</a></li>
+    <li><a href="groupmemberentityids" title="GroupMemberEntityIds"><span class="symbol resource"></span>GroupMemberEntityIds</a></li>
     <li><a href="grouppolicies" title="GroupPolicies"><span class="symbol resource"></span>GroupPolicies</a></li>
     <li><a href="oidc" title="Oidc"><span class="symbol resource"></span>Oidc</a></li>
     <li><a href="oidckey" title="OidcKey"><span class="symbol resource"></span>OidcKey</a></li>
@@ -38,7 +39,7 @@ Explore the resources and functions of the identity module in the Vault package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 

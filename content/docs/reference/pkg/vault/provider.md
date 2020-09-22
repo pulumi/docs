@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/vault/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>add_address_to_env=None<span class="p">, </span>address=None<span class="p">, </span>auth_logins=None<span class="p">, </span>ca_cert_dir=None<span class="p">, </span>ca_cert_file=None<span class="p">, </span>client_auths=None<span class="p">, </span>headers=None<span class="p">, </span>max_lease_ttl_seconds=None<span class="p">, </span>max_retries=None<span class="p">, </span>namespace=None<span class="p">, </span>skip_tls_verify=None<span class="p">, </span>token=None<span class="p">, </span>token_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/#pulumi_vault.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_address_to_env</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_logins</span><span class="p">:</span> <span class="nx">Optional[List[ProviderAuthLogin]]</span> = None<span class="p">, </span><span class="nx">ca_cert_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ca_cert_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_auths</span><span class="p">:</span> <span class="nx">Optional[List[ProviderClientAuth]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[List[ProviderHeader]]</span> = None<span class="p">, </span><span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_tls_verify</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -731,7 +731,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum TTL for secret leases requested by this provider
 {{% /md %}}</dd>
@@ -742,7 +742,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of retries when a 5xx error code is encountered.
 {{% /md %}}</dd>

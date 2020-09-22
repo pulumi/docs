@@ -30,7 +30,7 @@ Explore the resources and functions of the appRole module in the Vault package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 
@@ -41,10 +41,10 @@ Explore the resources and functions of the appRole module in the Vault package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AppRole.html" title="Pulumi.Vault.AppRole">Pulumi.Vault.AppRole</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/appRole?tab=doc#" title="vault/appRole">vault/appRole</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/approle?tab=doc#" title="vault/approle">vault/approle</a></dd>
 
     <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/appRole/#" title="@pulumi/vault/appRole">@pulumi/vault/appRole</a></dd>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/appRole/#" title="@pulumi/vault/approle">@pulumi/vault/approle</a></dd>
 
     <dt>Python</dt>
     <dd><a href="/docs/reference/pkg/python/pulumi_vault/approle" title="pulumi_vault/approle">pulumi_vault/approle</a></dd>

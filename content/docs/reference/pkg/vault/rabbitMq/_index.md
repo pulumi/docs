@@ -24,7 +24,7 @@ Explore the resources and functions of the rabbitMq module in the Vault package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 
@@ -35,10 +35,10 @@ Explore the resources and functions of the rabbitMq module in the Vault package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.RabbitMQ.html" title="Pulumi.Vault.RabbitMQ">Pulumi.Vault.RabbitMQ</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/rabbitMq?tab=doc#" title="vault/rabbitMq">vault/rabbitMq</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/rabbitmq?tab=doc#" title="vault/rabbitmq">vault/rabbitmq</a></dd>
 
     <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/rabbitMq/#" title="@pulumi/vault/rabbitMq">@pulumi/vault/rabbitMq</a></dd>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/rabbitMq/#" title="@pulumi/vault/rabbitmq">@pulumi/vault/rabbitmq</a></dd>
 
     <dt>Python</dt>
     <dd><a href="/docs/reference/pkg/python/pulumi_vault/rabbitmq" title="pulumi_vault/rabbitmq">pulumi_vault/rabbitmq</a></dd>

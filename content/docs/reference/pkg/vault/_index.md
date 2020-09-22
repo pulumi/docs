@@ -32,6 +32,7 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="rabbitmq/" title="rabbitMq"><span class="symbol module"></span>rabbitMq</a></li>
     <li><a href="ssh/" title="ssh"><span class="symbol module"></span>ssh</a></li>
     <li><a href="tokenauth/" title="tokenauth"><span class="symbol module"></span>tokenauth</a></li>
+    <li><a href="transform/" title="transform"><span class="symbol module"></span>transform</a></li>
     <li><a href="transit/" title="transit"><span class="symbol module"></span>transit</a></li>
 </ul>
 
@@ -46,6 +47,7 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="quotaratelimit" title="QuotaRateLimit"><span class="symbol resource"></span>QuotaRateLimit</a></li>
     <li><a href="rgppolicy" title="RgpPolicy"><span class="symbol resource"></span>RgpPolicy</a></li>
     <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
 </ul>
@@ -65,7 +67,7 @@ A Pulumi package for creating and managing vault cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.4.0</dd>
 </dl>
 
 

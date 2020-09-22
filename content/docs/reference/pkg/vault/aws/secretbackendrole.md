@@ -22,7 +22,7 @@ meta_desc: "Explore the SecretBackendRole resource of the aws module, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/aws/#SecretBackendRole">SecretBackendRole</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>credential_type=None<span class="p">, </span>default_sts_ttl=None<span class="p">, </span>max_sts_ttl=None<span class="p">, </span>name=None<span class="p">, </span>policy_arns=None<span class="p">, </span>policy_document=None<span class="p">, </span>role_arns=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/aws/#pulumi_vault.aws.SecretBackendRole">SecretBackendRole</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credential_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_sts_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">max_sts_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">policy_document</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -236,6 +236,22 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
+        <span id="iamgroups_csharp">
+<a href="#iamgroups_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IAM group names. IAM users generated
+against this vault role will be added to these IAM Groups. For a credential
+type of `assumed_role` or `federation_token`, the policies sent to the
+corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
+policies from each group in `iam_groups` combined with the `policy_document`
+and `policy_arns` parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxststtl_csharp">
 <a href="#maxststtl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Sts<wbr>Ttl</a>
 </span> 
@@ -349,6 +365,22 @@ When a TTL is not specified when STS credentials are requested,
 and a default TTL is specified on the role,
 then this default TTL will be used. Valid only when `credential_type` is one of
 `assumed_role` or `federation_token`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iamgroups_go">
+<a href="#iamgroups_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IAM group names. IAM users generated
+against this vault role will be added to these IAM Groups. For a credential
+type of `assumed_role` or `federation_token`, the policies sent to the
+corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
+policies from each group in `iam_groups` combined with the `policy_document`
+and `policy_arns` parameters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -470,6 +502,22 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
+        <span id="iamgroups_nodejs">
+<a href="#iamgroups_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IAM group names. IAM users generated
+against this vault role will be added to these IAM Groups. For a credential
+type of `assumed_role` or `federation_token`, the policies sent to the
+corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
+policies from each group in `iam_groups` combined with the `policy_document`
+and `policy_arns` parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxststtl_nodejs">
 <a href="#maxststtl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Sts<wbr>Ttl</a>
 </span> 
@@ -576,7 +624,7 @@ retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`,
 <a href="#default_sts_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sts_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default TTL in seconds for STS credentials.
 When a TTL is not specified when STS credentials are requested,
@@ -587,11 +635,27 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
+        <span id="iam_groups_python">
+<a href="#iam_groups_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IAM group names. IAM users generated
+against this vault role will be added to these IAM Groups. For a credential
+type of `assumed_role` or `federation_token`, the policies sent to the
+corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
+policies from each group in `iam_groups` combined with the `policy_document`
+and `policy_arns` parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="max_sts_ttl_python">
 <a href="#max_sts_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>sts_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
 (credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
@@ -753,7 +817,8 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backend=None<span class="p">, </span>credential_type=None<span class="p">, </span>default_sts_ttl=None<span class="p">, </span>max_sts_ttl=None<span class="p">, </span>name=None<span class="p">, </span>policy_arns=None<span class="p">, </span>policy_document=None<span class="p">, </span>role_arns=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credential_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_sts_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">max_sts_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">policy_document</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arns</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> SecretBackendRole</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -761,7 +826,7 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.SecretBackendRole.html">SecretBackendRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.SecretBackendRoleState.html">SecretBackendRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.SecretBackendRole.html">SecretBackendRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.SecretBackendRoleState.html">SecretBackendRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -909,6 +974,22 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_iamgroups_csharp">
+<a href="#state_iamgroups_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IAM group names. IAM users generated
+against this vault role will be added to these IAM Groups. For a credential
+type of `assumed_role` or `federation_token`, the policies sent to the
+corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
+policies from each group in `iam_groups` combined with the `policy_document`
+and `policy_arns` parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_maxststtl_csharp">
 <a href="#state_maxststtl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Sts<wbr>Ttl</a>
 </span> 
@@ -1022,6 +1103,22 @@ When a TTL is not specified when STS credentials are requested,
 and a default TTL is specified on the role,
 then this default TTL will be used. Valid only when `credential_type` is one of
 `assumed_role` or `federation_token`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_iamgroups_go">
+<a href="#state_iamgroups_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IAM group names. IAM users generated
+against this vault role will be added to these IAM Groups. For a credential
+type of `assumed_role` or `federation_token`, the policies sent to the
+corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
+policies from each group in `iam_groups` combined with the `policy_document`
+and `policy_arns` parameters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1143,6 +1240,22 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_iamgroups_nodejs">
+<a href="#state_iamgroups_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IAM group names. IAM users generated
+against this vault role will be added to these IAM Groups. For a credential
+type of `assumed_role` or `federation_token`, the policies sent to the
+corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
+policies from each group in `iam_groups` combined with the `policy_document`
+and `policy_arns` parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_maxststtl_nodejs">
 <a href="#state_maxststtl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Sts<wbr>Ttl</a>
 </span> 
@@ -1249,7 +1362,7 @@ retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`,
 <a href="#state_default_sts_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sts_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default TTL in seconds for STS credentials.
 When a TTL is not specified when STS credentials are requested,
@@ -1260,11 +1373,27 @@ then this default TTL will be used. Valid only when `credential_type` is one of
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_iam_groups_python">
+<a href="#state_iam_groups_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IAM group names. IAM users generated
+against this vault role will be added to these IAM Groups. For a credential
+type of `assumed_role` or `federation_token`, the policies sent to the
+corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the
+policies from each group in `iam_groups` combined with the `policy_document`
+and `policy_arns` parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_max_sts_ttl_python">
 <a href="#state_max_sts_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>sts_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
 (credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
