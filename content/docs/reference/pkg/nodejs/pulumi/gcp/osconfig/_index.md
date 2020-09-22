@@ -3,7 +3,7 @@ title: "Module osconfig"
 title_tag: "Module osconfig | Package @pulumi/gcp | Node.js SDK"
 linktitle: "osconfig"
 meta_desc: "Explore members of the osconfig module in the @pulumi/gcp package."
-git_sha: "aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9"
+git_sha: "fc3da3c5794a45df688a785c73dd9311acde14c6"
 block_external_search_index: true
 ---
 
@@ -33,14 +33,27 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="GuestPolicies" data-link-title="GuestPolicies">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L22">
         Resource <strong>GuestPolicies</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>GuestPolicies</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+An OS Config resource representing a guest configuration policy. These policies represent
+the desired state for VM instance guest environments including packages to install or remove,
+package repository configurations, and software to install.
+
+To get more information about GuestPolicies, see:
+
+* [API documentation](https://cloud.google.com/compute/docs/osconfig/rest)
+* How-to Guides
+    * [Official Documentation](https://cloud.google.com/compute/docs/os-config-management)
+
+#### Example Usage
+
 <h4 class="pdoc-member-header" id="GuestPolicies-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -54,7 +67,7 @@ Create a GuestPolicies resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -65,14 +78,14 @@ Get an existing GuestPolicies resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GuestPolicies-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -83,7 +96,7 @@ Returns true if the given object is an instance of GuestPolicies.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-assignment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L47">property <b>assignment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L60">property <b>assignment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assignment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GuestPoliciesAssignment'>GuestPoliciesAssignment</a>&gt;;</code></pre>
@@ -98,7 +111,7 @@ For more information, see how the service
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L52">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L65">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -107,7 +120,7 @@ Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, ac
 "2014-10-02T15:01:23.045123456Z".
 
 <h4 class="pdoc-member-header" id="GuestPolicies-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L56">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -115,7 +128,7 @@ Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, ac
 Description of the guest policy. Length of the description is limited to 1024 characters.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L60">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L73">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -123,7 +136,7 @@ Description of the guest policy. Length of the description is limited to 1024 ch
 The etag for this guest policy. If this is provided on update, it must match the server's etag.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-guestPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L69">property <b>guestPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L82">property <b>guestPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>guestPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -136,7 +149,7 @@ The logical name of the guest policy in the project with the following restricti
 * Must be unique within the project.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -145,7 +158,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -156,7 +169,7 @@ This means that requests to create multiple recipes with the same name and versi
 could potentially have conflicting assignments.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-packageRepositories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L83">property <b>packageRepositories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L96">property <b>packageRepositories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageRepositories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GuestPoliciesPackageRepository'>GuestPoliciesPackageRepository</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -167,7 +180,7 @@ Package repositories are only configured if the corresponding package manager(s)
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-packages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L88">property <b>packages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L101">property <b>packages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GuestPoliciesPackage'>GuestPoliciesPackage</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -176,7 +189,7 @@ The software packages to be managed by this policy.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L93">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L106">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -185,7 +198,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-recipes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L98">property <b>recipes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L111">property <b>recipes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recipes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GuestPoliciesRecipe'>GuestPoliciesRecipe</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -194,7 +207,7 @@ A list of Recipes to install on the VM instance.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPolicies-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L103">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L116">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -203,7 +216,7 @@ Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" forma
 "2014-10-02T15:01:23.045123456Z".
 
 <h4 class="pdoc-member-header" id="GuestPolicies-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -212,7 +225,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PatchDeployment" data-link-title="PatchDeployment">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L21">
         Resource <strong>PatchDeployment</strong>
     </a>
 </h3>
@@ -231,7 +244,7 @@ To get more information about PatchDeployment, see:
 #### Example Usage
 
 <h4 class="pdoc-member-header" id="PatchDeployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -245,7 +258,7 @@ Create a PatchDeployment resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -256,14 +269,14 @@ Get an existing PatchDeployment resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PatchDeployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -274,7 +287,7 @@ Returns true if the given object is an instance of PatchDeployment.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L53">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L53">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -283,7 +296,7 @@ Time the patch deployment was created. Timestamp is in RFC3339 text format. A ti
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 <h4 class="pdoc-member-header" id="PatchDeployment-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L57">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L57">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -291,7 +304,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 Description of the patch deployment. Length of the description is limited to 1024 characters.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L62">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L62">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -300,7 +313,7 @@ Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 
 <h4 class="pdoc-member-header" id="PatchDeployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -309,7 +322,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-instanceFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L67">property <b>instanceFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L67">property <b>instanceFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PatchDeploymentInstanceFilter'>PatchDeploymentInstanceFilter</a>&gt;;</code></pre>
@@ -318,7 +331,7 @@ VM instances to patch.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-lastExecuteTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L73">property <b>lastExecuteTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L73">property <b>lastExecuteTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastExecuteTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -328,7 +341,7 @@ The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 <h4 class="pdoc-member-header" id="PatchDeployment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -337,7 +350,7 @@ Unique name for the patch deployment resource in a project. The patch deployment
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-oneTimeSchedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L83">property <b>oneTimeSchedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L83">property <b>oneTimeSchedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oneTimeSchedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PatchDeploymentOneTimeSchedule'>PatchDeploymentOneTimeSchedule</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -346,7 +359,7 @@ Schedule a one-time execution.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-patchConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L88">property <b>patchConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L88">property <b>patchConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>patchConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PatchDeploymentPatchConfig'>PatchDeploymentPatchConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -355,7 +368,7 @@ Patch configuration that is applied.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-patchDeploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L97">property <b>patchDeploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L97">property <b>patchDeploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>patchDeploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -368,7 +381,7 @@ A name for the patch deployment in the project. When creating a name the followi
 * Must be unique within the project.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L102">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L102">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -377,7 +390,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-recurringSchedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L107">property <b>recurringSchedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L107">property <b>recurringSchedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurringSchedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PatchDeploymentRecurringSchedule'>PatchDeploymentRecurringSchedule</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -386,7 +399,7 @@ Schedule recurring executions.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-rollout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L112">property <b>rollout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L112">property <b>rollout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rollout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PatchDeploymentRollout'>PatchDeploymentRollout</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -395,7 +408,7 @@ Rollout strategy of the patch job.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeployment-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L117">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L117">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -404,7 +417,7 @@ Time the patch deployment was last updated. Timestamp is in RFC3339 text format.
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 <h4 class="pdoc-member-header" id="PatchDeployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -416,7 +429,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GuestPoliciesArgs" data-link-title="GuestPoliciesArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L235">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L248">
         interface <strong>GuestPoliciesArgs</strong>
     </a>
 </h3>
@@ -426,7 +439,7 @@ deployments.
 The set of arguments for constructing a GuestPolicies resource.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesArgs-assignment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L246">property <b>assignment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L259">property <b>assignment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GuestPoliciesAssignment'>GuestPoliciesAssignment</a>&gt;;</code></pre>
@@ -441,7 +454,7 @@ For more information, see how the service
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L250">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L263">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -449,7 +462,7 @@ Structure is documented below.
 Description of the guest policy. Length of the description is limited to 1024 characters.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesArgs-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L254">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L267">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -457,7 +470,7 @@ Description of the guest policy. Length of the description is limited to 1024 ch
 The etag for this guest policy. If this is provided on update, it must match the server's etag.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesArgs-guestPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L263">property <b>guestPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L276">property <b>guestPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>guestPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -470,7 +483,7 @@ The logical name of the guest policy in the project with the following restricti
 * Must be unique within the project.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesArgs-packageRepositories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L270">property <b>packageRepositories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L283">property <b>packageRepositories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageRepositories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GuestPoliciesPackageRepository'>GuestPoliciesPackageRepository</a>&gt;[]&gt;;</code></pre>
@@ -481,7 +494,7 @@ Package repositories are only configured if the corresponding package manager(s)
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesArgs-packages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L275">property <b>packages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L288">property <b>packages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GuestPoliciesPackage'>GuestPoliciesPackage</a>&gt;[]&gt;;</code></pre>
@@ -490,7 +503,7 @@ The software packages to be managed by this policy.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L280">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L293">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -499,7 +512,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesArgs-recipes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L285">property <b>recipes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L298">property <b>recipes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GuestPoliciesRecipe'>GuestPoliciesRecipe</a>&gt;[]&gt;;</code></pre>
@@ -508,7 +521,7 @@ A list of Recipes to install on the VM instance.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="GuestPoliciesState" data-link-title="GuestPoliciesState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L175">
         interface <strong>GuestPoliciesState</strong>
     </a>
 </h3>
@@ -518,7 +531,7 @@ Structure is documented below.
 Input properties used for looking up and filtering GuestPolicies resources.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-assignment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L173">property <b>assignment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L186">property <b>assignment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GuestPoliciesAssignment'>GuestPoliciesAssignment</a>&gt;;</code></pre>
@@ -533,7 +546,7 @@ For more information, see how the service
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L178">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L191">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +555,7 @@ Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, ac
 "2014-10-02T15:01:23.045123456Z".
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L182">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L195">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +563,7 @@ Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, ac
 Description of the guest policy. Length of the description is limited to 1024 characters.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L186">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L199">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -558,7 +571,7 @@ Description of the guest policy. Length of the description is limited to 1024 ch
 The etag for this guest policy. If this is provided on update, it must match the server's etag.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-guestPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L195">property <b>guestPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L208">property <b>guestPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>guestPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -571,7 +584,7 @@ The logical name of the guest policy in the project with the following restricti
 * Must be unique within the project.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L202">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +595,7 @@ This means that requests to create multiple recipes with the same name and versi
 could potentially have conflicting assignments.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-packageRepositories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L209">property <b>packageRepositories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L222">property <b>packageRepositories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageRepositories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GuestPoliciesPackageRepository'>GuestPoliciesPackageRepository</a>&gt;[]&gt;;</code></pre>
@@ -593,7 +606,7 @@ Package repositories are only configured if the corresponding package manager(s)
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-packages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L214">property <b>packages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L227">property <b>packages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GuestPoliciesPackage'>GuestPoliciesPackage</a>&gt;[]&gt;;</code></pre>
@@ -602,7 +615,7 @@ The software packages to be managed by this policy.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L219">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L232">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -611,7 +624,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-recipes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L224">property <b>recipes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L237">property <b>recipes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GuestPoliciesRecipe'>GuestPoliciesRecipe</a>&gt;[]&gt;;</code></pre>
@@ -620,7 +633,7 @@ A list of Recipes to install on the VM instance.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GuestPoliciesState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/guestPolicies.ts#L229">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/guestPolicies.ts#L242">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -629,7 +642,7 @@ Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" forma
 "2014-10-02T15:01:23.045123456Z".
 
 <h3 class="pdoc-module-header" id="PatchDeploymentArgs" data-link-title="PatchDeploymentArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L255">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L255">
         interface <strong>PatchDeploymentArgs</strong>
     </a>
 </h3>
@@ -639,7 +652,7 @@ Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" forma
 The set of arguments for constructing a PatchDeployment resource.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L259">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L259">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -647,7 +660,7 @@ The set of arguments for constructing a PatchDeployment resource.
 Description of the patch deployment. Length of the description is limited to 1024 characters.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentArgs-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L264">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L264">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -656,7 +669,7 @@ Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 
 <h4 class="pdoc-member-header" id="PatchDeploymentArgs-instanceFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L269">property <b>instanceFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L269">property <b>instanceFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentInstanceFilter'>PatchDeploymentInstanceFilter</a>&gt;;</code></pre>
@@ -665,7 +678,7 @@ VM instances to patch.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentArgs-oneTimeSchedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L274">property <b>oneTimeSchedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L274">property <b>oneTimeSchedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oneTimeSchedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentOneTimeSchedule'>PatchDeploymentOneTimeSchedule</a>&gt;;</code></pre>
@@ -674,7 +687,7 @@ Schedule a one-time execution.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentArgs-patchConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L279">property <b>patchConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L279">property <b>patchConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>patchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentPatchConfig'>PatchDeploymentPatchConfig</a>&gt;;</code></pre>
@@ -683,7 +696,7 @@ Patch configuration that is applied.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentArgs-patchDeploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L288">property <b>patchDeploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L288">property <b>patchDeploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>patchDeploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -696,7 +709,7 @@ A name for the patch deployment in the project. When creating a name the followi
 * Must be unique within the project.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L293">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L293">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -705,7 +718,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentArgs-recurringSchedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L298">property <b>recurringSchedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L298">property <b>recurringSchedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurringSchedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentRecurringSchedule'>PatchDeploymentRecurringSchedule</a>&gt;;</code></pre>
@@ -714,7 +727,7 @@ Schedule recurring executions.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentArgs-rollout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L303">property <b>rollout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L303">property <b>rollout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rollout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentRollout'>PatchDeploymentRollout</a>&gt;;</code></pre>
@@ -723,7 +736,7 @@ Rollout strategy of the patch job.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="PatchDeploymentState" data-link-title="PatchDeploymentState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L180">
         interface <strong>PatchDeploymentState</strong>
     </a>
 </h3>
@@ -733,7 +746,7 @@ Structure is documented below.
 Input properties used for looking up and filtering PatchDeployment resources.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L185">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L185">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -742,7 +755,7 @@ Time the patch deployment was created. Timestamp is in RFC3339 text format. A ti
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L189">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L189">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -750,7 +763,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 Description of the patch deployment. Length of the description is limited to 1024 characters.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L194">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L194">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -759,7 +772,7 @@ Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-instanceFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L199">property <b>instanceFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L199">property <b>instanceFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentInstanceFilter'>PatchDeploymentInstanceFilter</a>&gt;;</code></pre>
@@ -768,7 +781,7 @@ VM instances to patch.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-lastExecuteTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L205">property <b>lastExecuteTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L205">property <b>lastExecuteTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastExecuteTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -778,7 +791,7 @@ The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L210">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -787,7 +800,7 @@ Unique name for the patch deployment resource in a project. The patch deployment
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-oneTimeSchedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L215">property <b>oneTimeSchedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L215">property <b>oneTimeSchedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oneTimeSchedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentOneTimeSchedule'>PatchDeploymentOneTimeSchedule</a>&gt;;</code></pre>
@@ -796,7 +809,7 @@ Schedule a one-time execution.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-patchConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L220">property <b>patchConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L220">property <b>patchConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>patchConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentPatchConfig'>PatchDeploymentPatchConfig</a>&gt;;</code></pre>
@@ -805,7 +818,7 @@ Patch configuration that is applied.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-patchDeploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L229">property <b>patchDeploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L229">property <b>patchDeploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>patchDeploymentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -818,7 +831,7 @@ A name for the patch deployment in the project. When creating a name the followi
 * Must be unique within the project.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L234">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L234">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -827,7 +840,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-recurringSchedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L239">property <b>recurringSchedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L239">property <b>recurringSchedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurringSchedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentRecurringSchedule'>PatchDeploymentRecurringSchedule</a>&gt;;</code></pre>
@@ -836,7 +849,7 @@ Schedule recurring executions.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-rollout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L244">property <b>rollout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L244">property <b>rollout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rollout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PatchDeploymentRollout'>PatchDeploymentRollout</a>&gt;;</code></pre>
@@ -845,7 +858,7 @@ Rollout strategy of the patch job.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PatchDeploymentState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aae8bf4538c912c07bfaca00ebbeea3f6d2e9ee9/sdk/nodejs/osconfig/patchDeployment.ts#L249">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/fc3da3c5794a45df688a785c73dd9311acde14c6/sdk/nodejs/osconfig/patchDeployment.ts#L249">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

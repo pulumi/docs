@@ -1044,7 +1044,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1109,7 +1110,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1157,7 +1159,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1222,7 +1225,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1270,7 +1274,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1335,7 +1340,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1383,7 +1389,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1448,7 +1455,8 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

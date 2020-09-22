@@ -228,8 +228,13 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
-Changing this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource. WARNING: Resizing your node pool manually
+may change this value in your existing cluster, which will trigger destruction
+and recreation on the next provider run (to rectify the discrepancy).  If you don't
+need this value, don't set it.  If you do need it, you can use a lifecycle block to
+ignore subsqeuent changes to this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -411,8 +416,13 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
-Changing this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource. WARNING: Resizing your node pool manually
+may change this value in your existing cluster, which will trigger destruction
+and recreation on the next provider run (to rectify the discrepancy).  If you don't
+need this value, don't set it.  If you do need it, you can use a lifecycle block to
+ignore subsqeuent changes to this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -594,8 +604,13 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
-Changing this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource. WARNING: Resizing your node pool manually
+may change this value in your existing cluster, which will trigger destruction
+and recreation on the next provider run (to rectify the discrepancy).  If you don't
+need this value, don't set it.  If you do need it, you can use a lifecycle block to
+ignore subsqeuent changes to this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -777,8 +792,13 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
-Changing this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource. WARNING: Resizing your node pool manually
+may change this value in your existing cluster, which will trigger destruction
+and recreation on the next provider run (to rectify the discrepancy).  If you don't
+need this value, don't set it.  If you do need it, you can use a lifecycle block to
+ignore subsqeuent changes to this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1210,8 +1230,13 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
-Changing this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource. WARNING: Resizing your node pool manually
+may change this value in your existing cluster, which will trigger destruction
+and recreation on the next provider run (to rectify the discrepancy).  If you don't
+need this value, don't set it.  If you do need it, you can use a lifecycle block to
+ignore subsqeuent changes to this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1404,8 +1429,13 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
-Changing this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource. WARNING: Resizing your node pool manually
+may change this value in your existing cluster, which will trigger destruction
+and recreation on the next provider run (to rectify the discrepancy).  If you don't
+need this value, don't set it.  If you do need it, you can use a lifecycle block to
+ignore subsqeuent changes to this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1598,8 +1628,13 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
-Changing this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource. WARNING: Resizing your node pool manually
+may change this value in your existing cluster, which will trigger destruction
+and recreation on the next provider run (to rectify the discrepancy).  If you don't
+need this value, don't set it.  If you do need it, you can use a lifecycle block to
+ignore subsqeuent changes to this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1792,8 +1827,13 @@ the size of the node pool to the current cluster usage. Structure is documented 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone.
-Changing this will force recreation of the resource.
+    <dd>{{% md %}}The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource. WARNING: Resizing your node pool manually
+may change this value in your existing cluster, which will trigger destruction
+and recreation on the next provider run (to rectify the discrepancy).  If you don't
+need this value, don't set it.  If you do need it, you can use a lifecycle block to
+ignore subsqeuent changes to this field.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -263,7 +263,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
+    <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
 Structure is documented below.
 {{% /md %}}</dd>
@@ -301,8 +301,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -839,7 +838,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
+    <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
 Structure is documented below.
 {{% /md %}}</dd>
@@ -877,8 +876,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}})
-[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1415,7 +1413,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
+    <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
 Structure is documented below.
 {{% /md %}}</dd>
@@ -1453,8 +1451,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}})
-[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1991,7 +1988,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
+    <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
 Structure is documented below.
 {{% /md %}}</dd>
@@ -2029,8 +2026,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3153,7 +3149,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
+    <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
 Structure is documented below.
 {{% /md %}}</dd>
@@ -3191,8 +3187,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3824,7 +3819,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
+    <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
 Structure is documented below.
 {{% /md %}}</dd>
@@ -3862,8 +3857,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}})
-[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4495,7 +4489,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
+    <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
 Structure is documented below.
 {{% /md %}}</dd>
@@ -4533,8 +4527,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}})
-[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5166,7 +5159,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) Configuration for
+    <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
 Structure is documented below.
 {{% /md %}}</dd>
@@ -5204,8 +5197,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
+    <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5809,9 +5801,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}.
-The status of the CloudRun addon. It is disabled by default.
-Set `disabled = false` to enable.
+    <dd>{{% md %}}. Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5935,9 +5925,7 @@ Defaults to disabled; set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}.
-The status of the CloudRun addon. It is disabled by default.
-Set `disabled = false` to enable.
+    <dd>{{% md %}}. Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6061,9 +6049,7 @@ Defaults to disabled; set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}.
-The status of the CloudRun addon. It is disabled by default.
-Set `disabled = false` to enable.
+    <dd>{{% md %}}. Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6187,9 +6173,7 @@ Defaults to disabled; set `disabled = false` to enable.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}.
-The status of the CloudRun addon. It is disabled by default.
-Set `disabled = false` to enable.
+    <dd>{{% md %}}. Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6335,6 +6319,18 @@ Defaults to disabled; set `disabled = false` to enable.
 cluster. It is disabled by default. Set `disabled = false` to enable.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancertype_csharp">
+<a href="#loadbalancertype_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The load balancer type of CloudRun ingress service. It is external load balancer by default.
+Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6352,6 +6348,18 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancertype_go">
+<a href="#loadbalancertype_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The load balancer type of CloudRun ingress service. It is external load balancer by default.
+Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
 {{% /md %}}</dd>
 
 </dl>
@@ -6373,6 +6381,18 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 cluster. It is disabled by default. Set `disabled = false` to enable.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancertype_nodejs">
+<a href="#loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The load balancer type of CloudRun ingress service. It is external load balancer by default.
+Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -6390,6 +6410,18 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="load_balancer_type_python">
+<a href="#load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The load balancer type of CloudRun ingress service. It is external load balancer by default.
+Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
 {{% /md %}}</dd>
 
 </dl>
@@ -9824,8 +9856,7 @@ will delete and recreate all nodes in the node pool.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -9849,8 +9880,7 @@ reserved by Kubernetes Core components and cannot be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
 Structure is documented below.
 {{% /md %}}</dd>
@@ -10091,8 +10121,7 @@ will delete and recreate all nodes in the node pool.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}})
-Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -10116,8 +10145,7 @@ reserved by Kubernetes Core components and cannot be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}})
-Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
 Structure is documented below.
 {{% /md %}}</dd>
@@ -10358,8 +10386,7 @@ will delete and recreate all nodes in the node pool.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}})
-Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -10383,8 +10410,7 @@ reserved by Kubernetes Core components and cannot be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}})
-Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
 Structure is documented below.
 {{% /md %}}</dd>
@@ -10625,8 +10651,7 @@ will delete and recreate all nodes in the node pool.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -10650,8 +10675,7 @@ reserved by Kubernetes Core components and cannot be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
 Structure is documented below.
 {{% /md %}}</dd>
@@ -12714,8 +12738,7 @@ will delete and recreate all nodes in the node pool.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -12739,8 +12762,7 @@ reserved by Kubernetes Core components and cannot be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
 Structure is documented below.
 {{% /md %}}</dd>
@@ -12981,8 +13003,7 @@ will delete and recreate all nodes in the node pool.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}})
-Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -13006,8 +13027,7 @@ reserved by Kubernetes Core components and cannot be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}})
-Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
 Structure is documented below.
 {{% /md %}}</dd>
@@ -13248,8 +13268,7 @@ will delete and recreate all nodes in the node pool.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}})
-Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -13273,8 +13292,7 @@ reserved by Kubernetes Core components and cannot be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}})
-Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
 Structure is documented below.
 {{% /md %}}</dd>
@@ -13515,8 +13533,7 @@ will delete and recreate all nodes in the node pool.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -13540,8 +13557,7 @@ reserved by Kubernetes Core components and cannot be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}})
-Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+    <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
 Structure is documented below.
 {{% /md %}}</dd>
@@ -14939,7 +14955,10 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Controls cluster master global
+access settings. If unset, the provider will no longer manage this field and will
+not modify the previously-set value. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -15034,7 +15053,10 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Controls cluster master global
+access settings. If unset, the provider will no longer manage this field and will
+not modify the previously-set value. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -15129,7 +15151,10 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Controls cluster master global
+access settings. If unset, the provider will no longer manage this field and will
+not modify the previously-set value. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -15224,7 +15249,10 @@ endpoint via private networking.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Controls cluster master global
+access settings. If unset, the provider will no longer manage this field and will
+not modify the previously-set value. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
