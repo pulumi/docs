@@ -179,7 +179,7 @@ const testCloudProviderSnapshotRestoreJobs = pulumi.all([testCloudProviderSnapsh
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cloud_provider_snapshot_restore_jobs(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">items_per_page</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">page_num</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCloudProviderSnapshotRestoreJobsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cloud_provider_snapshot_restore_jobs(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">items_per_page</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">page_num</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCloudProviderSnapshotRestoreJobsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -385,7 +385,7 @@ The following arguments are supported:
 <a href="#items_per_page_python" style="color: inherit; text-decoration: inherit;">items_<wbr>per_<wbr>page</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of items to return per page, up to a maximum of 500. Defaults to `100`.
 {{% /md %}}</dd>
@@ -396,7 +396,7 @@ The following arguments are supported:
 <a href="#page_num_python" style="color: inherit; text-decoration: inherit;">page_<wbr>num</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The page to return. Defaults to `1`.
 {{% /md %}}</dd>
@@ -695,7 +695,7 @@ The following output properties are available:
 <a href="#results_python" style="color: inherit; text-decoration: inherit;">results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcloudprovidersnapshotrestorejobsresult">List[Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Jobs<wbr>Result]</a></span>
+        <span class="property-type"><a href="#getcloudprovidersnapshotrestorejobsresult">Sequence[Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Jobs<wbr>Result]</a></span>
     </dt>
     <dd>{{% md %}}Includes cloudProviderSnapshotRestoreJob object for each item detailed in the results array section.
 {{% /md %}}</dd>
@@ -706,7 +706,7 @@ The following output properties are available:
 <a href="#total_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -716,7 +716,7 @@ The following output properties are available:
 <a href="#items_per_page_python" style="color: inherit; text-decoration: inherit;">items_<wbr>per_<wbr>page</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -726,7 +726,7 @@ The following output properties are available:
 <a href="#page_num_python" style="color: inherit; text-decoration: inherit;">page_<wbr>num</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1304,7 +1304,7 @@ The following output properties are available:
 <a href="#delivery_urls_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more URLs for the compressed snapshot files for manual download. Only visible if deliveryType is download.
 {{% /md %}}</dd>
@@ -1359,7 +1359,7 @@ The following output properties are available:
 <a href="#oplog_inc_python" style="color: inherit; text-decoration: inherit;">oplog_<wbr>inc</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1369,7 +1369,7 @@ The following output properties are available:
 <a href="#oplog_ts_python" style="color: inherit; text-decoration: inherit;">oplog_<wbr>ts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1379,7 +1379,7 @@ The following output properties are available:
 <a href="#point_in_time_utc_seconds_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>utc_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

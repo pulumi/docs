@@ -14,6 +14,55 @@ meta_desc: "Explore the GetCloudProviderSnapshotRestoreJob function of the Mongo
 
 > **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testCloudProviderSnapshot = new mongodbatlas.CloudProviderSnapshot("test", {
+    clusterName: "MyCluster",
+    description: "MyDescription",
+    projectId: "5cf5a45a9ccf6400e60981b6",
+    retentionInDays: 1,
+});
+const testMongodbatlasCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapshotRestoreJob("test", {
+    clusterName: "MyCluster",
+    deliveryType: {
+        automated: true,
+        target_cluster_name: "MyCluster",
+        target_project_id: "5cf5a45a9ccf6400e60981b6",
+    },
+    projectId: "5cf5a45a9ccf6400e60981b6",
+    snapshotId: testCloudProviderSnapshot.id,
+});
+const testCloudProviderSnapshotRestoreJob = pulumi.all([testMongodbatlasCloudProviderSnapshotRestoreJob.clusterName, testMongodbatlasCloudProviderSnapshotRestoreJob.id, testMongodbatlasCloudProviderSnapshotRestoreJob.projectId]).apply(([clusterName, id, projectId]) => mongodbatlas.getCloudProviderSnapshotRestoreJob({
+    clusterName: clusterName,
+    jobId: id,
+    projectId: projectId,
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetCloudProviderSnapshotRestoreJob {#using}
@@ -870,7 +919,7 @@ The following output properties are available:
 <a href="#delivery_urls_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more URLs for the compressed snapshot files for manual download. Only visible if deliveryType is download.
 {{% /md %}}</dd>
@@ -935,7 +984,7 @@ The following output properties are available:
 <a href="#oplog_inc_python" style="color: inherit; text-decoration: inherit;">oplog_<wbr>inc</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -945,7 +994,7 @@ The following output properties are available:
 <a href="#oplog_ts_python" style="color: inherit; text-decoration: inherit;">oplog_<wbr>ts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -955,7 +1004,7 @@ The following output properties are available:
 <a href="#point_in_time_utc_seconds_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>utc_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

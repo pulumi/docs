@@ -14,6 +14,35 @@ meta_desc: "Explore the GetMaintenanceWindow function of the MongoDB Atlas packa
 
 > **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
+## Examples Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testMongodbatlasMaintenanceWindow = new mongodbatlas.MaintenanceWindow("test", {
+    dayOfWeek: 3,
+    hourOfDay: 4,
+    projectId: "<your-project-id>",
+});
+const testMaintenanceWindow = testMongodbatlasMaintenanceWindow.id.apply(id => mongodbatlas.getMaintenanceWindow({
+    projectId: id,
+}, { async: true }));
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testMongodbatlasMaintenanceWindow = new mongodbatlas.MaintenanceWindow("test", {
+    projectId: "<your-project-id>",
+    startAsap: true,
+});
+const testMaintenanceWindow = testMongodbatlasMaintenanceWindow.id.apply(id => mongodbatlas.getMaintenanceWindow({
+    projectId: id,
+}, { async: true }));
+```
+
 
 
 ## Using GetMaintenanceWindow {#using}
@@ -361,7 +390,7 @@ The following output properties are available:
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Day of the week when you would like the maintenance window to start as a 1-based integer: S=1, M=2, T=3, W=4, T=5, F=6, S=7.
 {{% /md %}}</dd>
@@ -372,7 +401,7 @@ The following output properties are available:
 <a href="#hour_of_day_python" style="color: inherit; text-decoration: inherit;">hour_<wbr>of_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Hour of the day when you would like the maintenance window to start. This parameter uses the 24-hour clock, where midnight is 0, noon is 12  (Time zone is UTC).
 {{% /md %}}</dd>
@@ -394,7 +423,7 @@ The following output properties are available:
 <a href="#number_of_deferrals_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>deferrals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of times the current maintenance event for this project has been deferred, you can set a maximum of 2 deferrals.
 {{% /md %}}</dd>

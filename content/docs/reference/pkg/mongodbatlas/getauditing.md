@@ -14,6 +14,43 @@ meta_desc: "Explore the GetAuditing function of the MongoDB Atlas package, inclu
 
 > **NOTE:** Groups and projects are synonymous terms. You may find **group_id** in the official documentation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testMongodbatlasAuditing = new mongodbatlas.Auditing("test", {
+    auditAuthorizationSuccess: false,
+    auditFilter: "{ 'atype': 'authenticate', 'param': {   'user': 'auditAdmin',   'db': 'admin',   'mechanism': 'SCRAM-SHA-1' }}",
+    enabled: true,
+    projectId: "<project-id>",
+});
+const testAuditing = testMongodbatlasAuditing.id.apply(id => mongodbatlas.getAuditing({
+    projectId: id,
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAuditing {#using}

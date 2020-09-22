@@ -328,6 +328,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="scopes_csharp">
+<a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseuserscope">List&lt;Get<wbr>Database<wbr>User<wbr>Scope&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of clusters and Atlas Data Lakes that this user has access to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
 </span> 
@@ -426,6 +437,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getdatabaseuserrole">[]Get<wbr>Database<wbr>User<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="scopes_go">
+<a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseuserscope">[]Get<wbr>Database<wbr>User<wbr>Scope</a></span>
+    </dt>
+    <dd>{{% md %}}Array of clusters and Atlas Data Lakes that this user has access to.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -532,6 +554,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="scopes_nodejs">
+<a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseuserscope">Get<wbr>Database<wbr>User<wbr>Scope[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of clusters and Atlas Data Lakes that this user has access to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span> 
@@ -607,7 +640,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseuserlabel">List[Get<wbr>Database<wbr>User<wbr>Label]</a></span>
+        <span class="property-type"><a href="#getdatabaseuserlabel">Sequence[Get<wbr>Database<wbr>User<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -627,9 +660,20 @@ The following output properties are available:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdatabaseuserrole">List[Get<wbr>Database<wbr>User<wbr>Role]</a></span>
+        <span class="property-type"><a href="#getdatabaseuserrole">Sequence[Get<wbr>Database<wbr>User<wbr>Role]</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="scopes_python">
+<a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseuserscope">Sequence[Get<wbr>Database<wbr>User<wbr>Scope]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of clusters and Atlas Data Lakes that this user has access to.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -987,6 +1031,140 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getdatabaseuserscope">Get<wbr>Database<wbr>User<wbr>Scope</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetDatabaseUserScope">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetDatabaseUserScope">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetDatabaseUserScope.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the role to grant.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resource that the user has access to. Valid values are: `CLUSTER` and `DATA_LAKE`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the role to grant.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resource that the user has access to. Valid values are: `CLUSTER` and `DATA_LAKE`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the role to grant.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resource that the user has access to. Valid values are: `CLUSTER` and `DATA_LAKE`
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the role to grant.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of resource that the user has access to. Valid values are: `CLUSTER` and `DATA_LAKE`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
