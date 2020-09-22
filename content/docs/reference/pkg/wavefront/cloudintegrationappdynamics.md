@@ -1,8 +1,8 @@
 
 ---
 title: "CloudIntegrationAppDynamics"
-title_tag: "Resource CloudIntegrationAppDynamics | Package wavefront"
-meta_desc: "Explore the CloudIntegrationAppDynamics resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for App Dynamics. This allows app dynamics cloud integrations to be created, "
+title_tag: "Resource CloudIntegrationAppDynamics | Package Wavefront"
+meta_desc: "Explore the CloudIntegrationAppDynamics resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for App Dynamics. This allows app dynamics cloud integrations to be created, "
 ---
 
 

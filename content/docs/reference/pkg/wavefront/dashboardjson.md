@@ -1,8 +1,8 @@
 
 ---
 title: "DashboardJson"
-title_tag: "Resource DashboardJson | Package wavefront"
-meta_desc: "Explore the DashboardJson resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Dashboard JSON resource.  This allows dashboards to be created, updated, and deleted."
+title_tag: "Resource DashboardJson | Package Wavefront"
+meta_desc: "Explore the DashboardJson resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Dashboard JSON resource.  This allows dashboards to be created, updated, and deleted."
 ---
 
 

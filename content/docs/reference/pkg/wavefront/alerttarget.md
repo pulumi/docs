@@ -1,8 +1,8 @@
 
 ---
 title: "AlertTarget"
-title_tag: "Resource AlertTarget | Package wavefront"
-meta_desc: "Explore the AlertTarget resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a wavefront Alert Target resource. This allows alert targets to created, updated, and deleted."
+title_tag: "Resource AlertTarget | Package Wavefront"
+meta_desc: "Explore the AlertTarget resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a wavefront Alert Target resource. This allows alert targets to created, updated, and deleted."
 ---
 
 

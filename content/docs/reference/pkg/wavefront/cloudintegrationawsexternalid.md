@@ -1,8 +1,8 @@
 
 ---
 title: "CloudIntegrationAwsExternalId"
-title_tag: "Resource CloudIntegrationAwsExternalId | Package wavefront"
-meta_desc: "Explore the CloudIntegrationAwsExternalId resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides an External ID for use in AWS IAM Roles.  This allows External IDs to be created and deleted."
+title_tag: "Resource CloudIntegrationAwsExternalId | Package Wavefront"
+meta_desc: "Explore the CloudIntegrationAwsExternalId resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides an External ID for use in AWS IAM Roles.  This allows External IDs to be created and deleted."
 ---
 
 

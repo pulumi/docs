@@ -1,8 +1,8 @@
 
 ---
 title: "CloudIntegrationAzure"
-title_tag: "Resource CloudIntegrationAzure | Package wavefront"
-meta_desc: "Explore the CloudIntegrationAzure resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for Azure. This allows azure cloud integrations to be created,"
+title_tag: "Resource CloudIntegrationAzure | Package Wavefront"
+meta_desc: "Explore the CloudIntegrationAzure resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for Azure. This allows azure cloud integrations to be created,"
 ---
 
 

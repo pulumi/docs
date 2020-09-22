@@ -1,8 +1,8 @@
 
 ---
 title: "CloudIntegrationEc2"
-title_tag: "Resource CloudIntegrationEc2 | Package wavefront"
-meta_desc: "Explore the CloudIntegrationEc2 resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for EC2. This allows EC2 cloud integrations to be created,"
+title_tag: "Resource CloudIntegrationEc2 | Package Wavefront"
+meta_desc: "Explore the CloudIntegrationEc2 resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for EC2. This allows EC2 cloud integrations to be created,"
 ---
 
 

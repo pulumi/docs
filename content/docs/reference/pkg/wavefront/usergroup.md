@@ -1,8 +1,8 @@
 
 ---
 title: "UserGroup"
-title_tag: "Resource UserGroup | Package wavefront"
-meta_desc: "Explore the UserGroup resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront User Group Resource. This allows user groups to be created, updated, and deleted."
+title_tag: "Resource UserGroup | Package Wavefront"
+meta_desc: "Explore the UserGroup resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront User Group Resource. This allows user groups to be created, updated, and deleted."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "CloudIntegrationCloudWatch"
-title_tag: "Resource CloudIntegrationCloudWatch | Package wavefront"
-meta_desc: "Explore the CloudIntegrationCloudWatch resource of the wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for CloudTrail. This allows CloudTrail cloud integrations to be created,"
+title_tag: "Resource CloudIntegrationCloudWatch | Package Wavefront"
+meta_desc: "Explore the CloudIntegrationCloudWatch resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for CloudTrail. This allows CloudTrail cloud integrations to be created,"
 ---
 
 
