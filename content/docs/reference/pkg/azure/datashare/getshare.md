@@ -591,7 +591,7 @@ The following output properties are available:
 <a href="#snapshot_schedules_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsharesnapshotschedule">List[Get<wbr>Share<wbr>Snapshot<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#getsharesnapshotschedule">Sequence[Get<wbr>Share<wbr>Snapshot<wbr>Schedule]</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot_schedule` block as defined below.
 {{% /md %}}</dd>

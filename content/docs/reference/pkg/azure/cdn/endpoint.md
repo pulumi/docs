@@ -163,7 +163,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cdn/#pulumi_azure.cdn.Endpoint">Endpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[List[EndpointDeliveryRuleArgs]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[List[EndpointGeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[EndpointOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cdn/#pulumi_azure.cdn.Endpoint">Endpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointDeliveryRuleArgs]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -956,7 +956,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">List[Endpoint<wbr>Origin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointorigin">Sequence[Endpoint<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#content_types_to_compresses_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
 {{% /md %}}</dd>
@@ -1000,7 +1000,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#delivery_rules_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -1011,7 +1011,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geo_filters_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">List[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">Sequence[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd>
@@ -1291,7 +1291,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[List[EndpointDeliveryRuleArgs]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[List[EndpointGeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[List[EndpointOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointDeliveryRuleArgs]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2059,7 +2059,7 @@ The following state arguments are supported:
 <a href="#state_content_types_to_compresses_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
 {{% /md %}}</dd>
@@ -2070,7 +2070,7 @@ The following state arguments are supported:
 <a href="#state_delivery_rules_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -2081,7 +2081,7 @@ The following state arguments are supported:
 <a href="#state_geo_filters_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">List[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">Sequence[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd>
@@ -2202,7 +2202,7 @@ The following state arguments are supported:
 <a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">List[Endpoint<wbr>Origin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointorigin">Sequence[Endpoint<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd>
@@ -3059,7 +3059,7 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The order used for this rule, which must be larger than 1.
 {{% /md %}}</dd>
@@ -3092,7 +3092,7 @@ The following state arguments are supported:
 <a href="#cookies_conditions_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
 {{% /md %}}</dd>
@@ -3114,7 +3114,7 @@ The following state arguments are supported:
 <a href="#http_version_conditions_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
 {{% /md %}}</dd>
@@ -3125,7 +3125,7 @@ The following state arguments are supported:
 <a href="#modify_request_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>request_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd>
@@ -3136,7 +3136,7 @@ The following state arguments are supported:
 <a href="#modify_response_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>response_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd>
@@ -3147,7 +3147,7 @@ The following state arguments are supported:
 <a href="#post_arg_conditions_python" style="color: inherit; text-decoration: inherit;">post_<wbr>arg_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
 {{% /md %}}</dd>
@@ -3158,7 +3158,7 @@ The following state arguments are supported:
 <a href="#query_string_conditions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
 {{% /md %}}</dd>
@@ -3169,7 +3169,7 @@ The following state arguments are supported:
 <a href="#remote_address_conditions_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
 {{% /md %}}</dd>
@@ -3180,7 +3180,7 @@ The following state arguments are supported:
 <a href="#request_body_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
 {{% /md %}}</dd>
@@ -3191,7 +3191,7 @@ The following state arguments are supported:
 <a href="#request_header_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
 {{% /md %}}</dd>
@@ -3224,7 +3224,7 @@ The following state arguments are supported:
 <a href="#request_uri_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>uri_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
 {{% /md %}}</dd>
@@ -3235,7 +3235,7 @@ The following state arguments are supported:
 <a href="#url_file_extension_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>file_<wbr>extension_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
 {{% /md %}}</dd>
@@ -3246,7 +3246,7 @@ The following state arguments are supported:
 <a href="#url_file_name_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>file_<wbr>name_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
 {{% /md %}}</dd>
@@ -3257,7 +3257,7 @@ The following state arguments are supported:
 <a href="#url_path_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">List[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
 {{% /md %}}</dd>
@@ -3769,7 +3769,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of values for the cookie.
 {{% /md %}}</dd>
@@ -3813,7 +3813,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd>
@@ -3969,7 +3969,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `Desktop` and `Mobile`.
 {{% /md %}}</dd>
@@ -4147,7 +4147,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `0.9`, `1.0`, `1.1` and `2.0`.
 {{% /md %}}</dd>
@@ -4747,7 +4747,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of string values.
 {{% /md %}}</dd>
@@ -4791,7 +4791,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd>
@@ -4980,7 +4980,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of string values.
 {{% /md %}}</dd>
@@ -5013,7 +5013,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd>
@@ -5169,7 +5169,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of string values. For `GeoMatch` `operator` this should be a list of country codes (e.g. `US` or `DE`). List of IP address if `operator` equals to `IPMatch`.
 {{% /md %}}</dd>
@@ -5380,7 +5380,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of string values.
 {{% /md %}}</dd>
@@ -5413,7 +5413,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd>
@@ -5635,7 +5635,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of header values.
 {{% /md %}}</dd>
@@ -5679,7 +5679,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd>
@@ -5835,7 +5835,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `POST` and `PUT`.
 {{% /md %}}</dd>
@@ -6013,7 +6013,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `HTTP` and `HTTPS`.
 {{% /md %}}</dd>
@@ -6224,7 +6224,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of string values.
 {{% /md %}}</dd>
@@ -6257,7 +6257,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd>
@@ -6446,7 +6446,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of string values.
 {{% /md %}}</dd>
@@ -6479,7 +6479,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd>
@@ -6668,7 +6668,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of string values.
 {{% /md %}}</dd>
@@ -6701,7 +6701,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd>
@@ -6890,7 +6890,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of string values.
 {{% /md %}}</dd>
@@ -6923,7 +6923,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd>
@@ -7578,7 +7578,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A List of two letter country codes (e.g. `US`, `GB`) to be associated with this Geo Filter.
 {{% /md %}}</dd>
@@ -7866,7 +7866,7 @@ The following state arguments are supported:
 <a href="#modify_request_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>request_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">List[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Sequence[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd>
@@ -7877,7 +7877,7 @@ The following state arguments are supported:
 <a href="#modify_response_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>response_<wbr>header_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">List[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Sequence[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd>
@@ -9222,7 +9222,7 @@ The following state arguments are supported:
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP port of the origin. Defaults to `80`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -9233,7 +9233,7 @@ The following state arguments are supported:
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS port of the origin. Defaults to `443`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>

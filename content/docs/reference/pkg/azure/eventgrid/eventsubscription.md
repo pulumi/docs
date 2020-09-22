@@ -180,7 +180,7 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventgrid/#pulumi_azure.eventgrid.EventSubscription">EventSubscription</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">, </span><span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionHybridConnectionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionSubjectFilterArgs]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventgrid/#pulumi_azure.eventgrid.EventSubscription">EventSubscription</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">, </span><span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionHybridConnectionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionSubjectFilterArgs]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1138,7 +1138,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
 {{% /md %}}</dd>
@@ -1149,7 +1149,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
 {{% /md %}}</dd>
@@ -1352,7 +1352,7 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">, </span><span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionHybridConnectionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionSubjectFilterArgs]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">) -&gt;</span> EventSubscription</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">, </span><span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionHybridConnectionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionSubjectFilterArgs]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">) -&gt;</span> EventSubscription</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2241,7 +2241,7 @@ The following state arguments are supported:
 <a href="#state_included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
 {{% /md %}}</dd>
@@ -2252,7 +2252,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
 {{% /md %}}</dd>
@@ -2823,7 +2823,7 @@ The following state arguments are supported:
 <a href="#bool_equals_python" style="color: inherit; text-decoration: inherit;">bool_<wbr>equals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
 {{% /md %}}</dd>
@@ -2834,7 +2834,7 @@ The following state arguments are supported:
 <a href="#number_greater_than_or_equals_python" style="color: inherit; text-decoration: inherit;">number_<wbr>greater_<wbr>than_<wbr>or_<wbr>equals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd>
@@ -2845,7 +2845,7 @@ The following state arguments are supported:
 <a href="#number_greater_thans_python" style="color: inherit; text-decoration: inherit;">number_<wbr>greater_<wbr>thans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd>
@@ -2856,7 +2856,7 @@ The following state arguments are supported:
 <a href="#number_ins_python" style="color: inherit; text-decoration: inherit;">number_<wbr>ins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd>
@@ -2867,7 +2867,7 @@ The following state arguments are supported:
 <a href="#number_less_than_or_equals_python" style="color: inherit; text-decoration: inherit;">number_<wbr>less_<wbr>than_<wbr>or_<wbr>equals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd>
@@ -2878,7 +2878,7 @@ The following state arguments are supported:
 <a href="#number_less_thans_python" style="color: inherit; text-decoration: inherit;">number_<wbr>less_<wbr>thans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd>
@@ -2889,7 +2889,7 @@ The following state arguments are supported:
 <a href="#number_not_ins_python" style="color: inherit; text-decoration: inherit;">number_<wbr>not_<wbr>ins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd>
@@ -2900,7 +2900,7 @@ The following state arguments are supported:
 <a href="#string_begins_withs_python" style="color: inherit; text-decoration: inherit;">string_<wbr>begins_<wbr>withs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd>
@@ -2911,7 +2911,7 @@ The following state arguments are supported:
 <a href="#string_contains_python" style="color: inherit; text-decoration: inherit;">string_<wbr>contains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd>
@@ -2922,7 +2922,7 @@ The following state arguments are supported:
 <a href="#string_ends_withs_python" style="color: inherit; text-decoration: inherit;">string_<wbr>ends_<wbr>withs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd>
@@ -2933,7 +2933,7 @@ The following state arguments are supported:
 <a href="#string_ins_python" style="color: inherit; text-decoration: inherit;">string_<wbr>ins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd>
@@ -2944,7 +2944,7 @@ The following state arguments are supported:
 <a href="#string_not_ins_python" style="color: inherit; text-decoration: inherit;">string_<wbr>not_<wbr>ins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">List[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd>
@@ -3480,7 +3480,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd>
@@ -3882,7 +3882,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd>
@@ -4016,7 +4016,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd>
@@ -4150,7 +4150,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd>
@@ -4284,7 +4284,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd>
@@ -4418,7 +4418,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd>
@@ -4552,7 +4552,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd>
@@ -4719,7 +4719,7 @@ The following state arguments are supported:
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
 {{% /md %}}</dd>
@@ -4730,7 +4730,7 @@ The following state arguments are supported:
 <a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
 {{% /md %}}</dd>
@@ -5033,7 +5033,7 @@ The following state arguments are supported:
 <a href="#event_time_to_live_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>to_<wbr>live</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
 {{% /md %}}</dd>
@@ -5044,7 +5044,7 @@ The following state arguments are supported:
 <a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of delivery retry attempts for events.
 {{% /md %}}</dd>
@@ -5789,7 +5789,7 @@ The following state arguments are supported:
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
 {{% /md %}}</dd>
@@ -5800,7 +5800,7 @@ The following state arguments are supported:
 <a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
 {{% /md %}}</dd>

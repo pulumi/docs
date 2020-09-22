@@ -1002,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_dns_configs_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>dns_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointcustomdnsconfig">List[Endpoint<wbr>Custom<wbr>Dns<wbr>Config]</a></span>
+        <span class="property-type"><a href="#endpointcustomdnsconfig">Sequence[Endpoint<wbr>Custom<wbr>Dns<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_dns_zone_configs_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivatednszoneconfig">List[Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config]</a></span>
+        <span class="property-type"><a href="#endpointprivatednszoneconfig">Sequence[Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1046,7 +1046,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_dns_configs</span><span class="p">:</span> <span class="nx">Optional[List[EndpointCustomDnsConfigArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_configs</span><span class="p">:</span> <span class="nx">Optional[List[EndpointPrivateDnsZoneConfigArgs]]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_group</span><span class="p">:</span> <span class="nx">Optional[EndpointPrivateDnsZoneGroupArgs]</span> = None<span class="p">, </span><span class="nx">private_service_connection</span><span class="p">:</span> <span class="nx">Optional[EndpointPrivateServiceConnectionArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_dns_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointCustomDnsConfigArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointPrivateDnsZoneConfigArgs]]</span> = None<span class="p">, </span><span class="nx">private_dns_zone_group</span><span class="p">:</span> <span class="nx">Optional[EndpointPrivateDnsZoneGroupArgs]</span> = None<span class="p">, </span><span class="nx">private_service_connection</span><span class="p">:</span> <span class="nx">Optional[EndpointPrivateServiceConnectionArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1478,7 +1478,7 @@ The following state arguments are supported:
 <a href="#state_custom_dns_configs_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>dns_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointcustomdnsconfig">List[Endpoint<wbr>Custom<wbr>Dns<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointcustomdnsconfig">Sequence[Endpoint<wbr>Custom<wbr>Dns<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1510,7 +1510,7 @@ The following state arguments are supported:
 <a href="#state_private_dns_zone_configs_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivatednszoneconfig">List[Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointprivatednszoneconfig">Sequence[Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1706,7 +1706,7 @@ The following state arguments are supported:
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of all IP Addresses that map to the `private_dns_zone` fqdn.
 {{% /md %}}</dd>
@@ -1928,7 +1928,7 @@ The following state arguments are supported:
 <a href="#record_sets_python" style="color: inherit; text-decoration: inherit;">record_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivatednszoneconfigrecordset">List[Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Record<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointprivatednszoneconfigrecordset">Sequence[Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Record<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `record_sets` block as defined below.
 {{% /md %}}</dd>
@@ -2161,7 +2161,7 @@ The following state arguments are supported:
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of all IP Addresses that map to the `private_dns_zone` fqdn.
 {{% /md %}}</dd>
@@ -2183,7 +2183,7 @@ The following state arguments are supported:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The time to live for each connection to the `private_dns_zone`.
 {{% /md %}}</dd>
@@ -2361,7 +2361,7 @@ The following state arguments are supported:
 <a href="#private_dns_zone_ids_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of Private DNS Zones to include within the `private_dns_zone_group`.
 {{% /md %}}</dd>
@@ -2682,7 +2682,7 @@ The following state arguments are supported:
 <a href="#subresource_names_python" style="color: inherit; text-decoration: inherit;">subresource_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of subresource names which the Private Endpoint is able to connect to. `subresource_names` corresponds to `group_id`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>

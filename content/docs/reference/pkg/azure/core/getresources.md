@@ -518,7 +518,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getresourcesresource">List[Get<wbr>Resources<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#getresourcesresource">Sequence[Get<wbr>Resources<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource` blocks as defined below.
 {{% /md %}}</dd>

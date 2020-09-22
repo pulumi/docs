@@ -610,7 +610,7 @@ The following output properties are available:
 <a href="#authorized_resource_ids_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>resource_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -620,7 +620,7 @@ The following output properties are available:
 <a href="#criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledqueryruleslogcriteria">List[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#getscheduledqueryruleslogcriteria">Sequence[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria]</a></span>
     </dt>
     <dd>{{% md %}}A `criteria` block as defined below.
 {{% /md %}}</dd>
@@ -834,7 +834,7 @@ The following output properties are available:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledqueryruleslogcriteriadimension">List[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getscheduledqueryruleslogcriteriadimension">Sequence[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `dimension` block as defined below.
 {{% /md %}}</dd>
@@ -1023,7 +1023,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension values.
 {{% /md %}}</dd>

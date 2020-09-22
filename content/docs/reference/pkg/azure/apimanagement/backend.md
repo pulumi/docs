@@ -1709,7 +1709,7 @@ The following state arguments are supported:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of client certificate thumbprints to present to the backend host. The certificates must exist within the API Management Service.
 {{% /md %}}</dd>
@@ -2276,7 +2276,7 @@ The following state arguments are supported:
 <a href="#management_endpoints_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of cluster management endpoints.
 {{% /md %}}</dd>
@@ -2287,7 +2287,7 @@ The following state arguments are supported:
 <a href="#max_partition_resolution_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>partition_<wbr>resolution_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of retries when attempting resolve the partition.
 {{% /md %}}</dd>
@@ -2298,7 +2298,7 @@ The following state arguments are supported:
 <a href="#server_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>thumbprints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of thumbprints of the server certificates of the Service Fabric cluster.
 {{% /md %}}</dd>
@@ -2309,7 +2309,7 @@ The following state arguments are supported:
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterserverx509name">List[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterserverx509name">Sequence[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_x509_name` blocks as documented below.
 {{% /md %}}</dd>

@@ -169,7 +169,7 @@ const exampleApiOperation = new azure.apimanagement.ApiOperation("exampleApiOper
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.ApiOperation">ApiOperation</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[ApiOperationRequestArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responses</span><span class="p">:</span> <span class="nx">Optional[List[ApiOperationResponseArgs]]</span> = None<span class="p">, </span><span class="nx">template_parameters</span><span class="p">:</span> <span class="nx">Optional[List[ApiOperationTemplateParameterArgs]]</span> = None<span class="p">, </span><span class="nx">url_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.ApiOperation">ApiOperation</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[ApiOperationRequestArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiOperationResponseArgs]]</span> = None<span class="p">, </span><span class="nx">template_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiOperationTemplateParameterArgs]]</span> = None<span class="p">, </span><span class="nx">url_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -830,7 +830,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#responses_python" style="color: inherit; text-decoration: inherit;">responses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">List[Api<wbr>Operation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationresponse">Sequence[Api<wbr>Operation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#template_parameters_python" style="color: inherit; text-decoration: inherit;">template_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">List[Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">Sequence[Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd>
@@ -945,7 +945,7 @@ Get an existing ApiOperation resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[ApiOperationRequestArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responses</span><span class="p">:</span> <span class="nx">Optional[List[ApiOperationResponseArgs]]</span> = None<span class="p">, </span><span class="nx">template_parameters</span><span class="p">:</span> <span class="nx">Optional[List[ApiOperationTemplateParameterArgs]]</span> = None<span class="p">, </span><span class="nx">url_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApiOperation</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[ApiOperationRequestArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiOperationResponseArgs]]</span> = None<span class="p">, </span><span class="nx">template_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiOperationTemplateParameterArgs]]</span> = None<span class="p">, </span><span class="nx">url_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApiOperation</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1537,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_responses_python" style="color: inherit; text-decoration: inherit;">responses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">List[Api<wbr>Operation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationresponse">Sequence[Api<wbr>Operation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd>
@@ -1548,7 +1548,7 @@ The following state arguments are supported:
 <a href="#state_template_parameters_python" style="color: inherit; text-decoration: inherit;">template_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">List[Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">Sequence[Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd>
@@ -1767,7 +1767,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestheader">List[Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationrequestheader">Sequence[Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd>
@@ -1778,7 +1778,7 @@ The following state arguments are supported:
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestqueryparameter">List[Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationrequestqueryparameter">Sequence[Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `query_parameter` blocks as defined above.
 {{% /md %}}</dd>
@@ -1789,7 +1789,7 @@ The following state arguments are supported:
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentation">List[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentation">Sequence[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd>
@@ -2099,7 +2099,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd>
@@ -2409,7 +2409,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Query Parameter.
 {{% /md %}}</dd>
@@ -2642,7 +2642,7 @@ The following state arguments are supported:
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">List[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">Sequence[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd>
@@ -2985,7 +2985,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd>
@@ -3174,7 +3174,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status Code.
 {{% /md %}}</dd>
@@ -3196,7 +3196,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponseheader">List[Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationresponseheader">Sequence[Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd>
@@ -3207,7 +3207,7 @@ The following state arguments are supported:
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentation">List[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentation">Sequence[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd>
@@ -3517,7 +3517,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd>
@@ -3750,7 +3750,7 @@ The following state arguments are supported:
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">List[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">Sequence[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd>
@@ -4093,7 +4093,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd>
@@ -4403,7 +4403,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Template Parameter.
 {{% /md %}}</dd>

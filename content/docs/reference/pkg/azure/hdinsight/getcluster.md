@@ -778,7 +778,7 @@ The following output properties are available:
 <a href="#gateways_python" style="color: inherit; text-decoration: inherit;">gateways</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustergateway">List[Get<wbr>Cluster<wbr>Gateway]</a></span>
+        <span class="property-type"><a href="#getclustergateway">Sequence[Get<wbr>Cluster<wbr>Gateway]</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>

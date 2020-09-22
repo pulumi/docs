@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#max_size_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max data size of the elastic pool in bytes.
 {{% /md %}}</dd>
@@ -791,7 +791,7 @@ The following output properties are available:
 <a href="#per_db_max_capacity_python" style="color: inherit; text-decoration: inherit;">per_<wbr>db_<wbr>max_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum capacity any one database can consume.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ The following output properties are available:
 <a href="#per_db_min_capacity_python" style="color: inherit; text-decoration: inherit;">per_<wbr>db_<wbr>min_<wbr>capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum capacity all databases are guaranteed.
 {{% /md %}}</dd>

@@ -486,7 +486,7 @@ The following output properties are available:
 <a href="#config_server_git_settings_python" style="color: inherit; text-decoration: inherit;">config_<wbr>server_<wbr>git_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsetting">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsetting">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
 {{% /md %}}</dd>
@@ -801,7 +801,7 @@ The following output properties are available:
 <a href="#http_basic_auths_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettinghttpbasicauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettinghttpbasicauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd>
@@ -823,7 +823,7 @@ The following output properties are available:
 <a href="#repositories_python" style="color: inherit; text-decoration: inherit;">repositories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepository">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepository">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
 {{% /md %}}</dd>
@@ -834,7 +834,7 @@ The following output properties are available:
 <a href="#search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings used to search subdirectories of the Git repository.
 {{% /md %}}</dd>
@@ -845,7 +845,7 @@ The following output properties are available:
 <a href="#ssh_auths_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingsshauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingsshauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd>
@@ -1278,7 +1278,7 @@ The following output properties are available:
 <a href="#http_basic_auths_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositoryhttpbasicauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd>
@@ -1311,7 +1311,7 @@ The following output properties are available:
 <a href="#patterns_python" style="color: inherit; text-decoration: inherit;">patterns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings used to match an application name. For each pattern, use the `{application}/{profile}` format with wildcards.
 {{% /md %}}</dd>
@@ -1322,7 +1322,7 @@ The following output properties are available:
 <a href="#search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings used to search subdirectories of the Git repository.
 {{% /md %}}</dd>
@@ -1333,7 +1333,7 @@ The following output properties are available:
 <a href="#ssh_auths_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auths</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositorysshauth">List[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getspringcloudserviceconfigservergitsettingrepositorysshauth">Sequence[Get<wbr>Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd>

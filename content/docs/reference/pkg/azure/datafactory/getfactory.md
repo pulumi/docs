@@ -552,7 +552,7 @@ The following output properties are available:
 <a href="#github_configurations_python" style="color: inherit; text-decoration: inherit;">github_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfactorygithubconfiguration">List[Get<wbr>Factory<wbr>Github<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getfactorygithubconfiguration">Sequence[Get<wbr>Factory<wbr>Github<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -574,7 +574,7 @@ The following output properties are available:
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfactoryidentity">List[Get<wbr>Factory<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getfactoryidentity">Sequence[Get<wbr>Factory<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ The following output properties are available:
 <a href="#vsts_configurations_python" style="color: inherit; text-decoration: inherit;">vsts_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getfactoryvstsconfiguration">List[Get<wbr>Factory<wbr>Vsts<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getfactoryvstsconfiguration">Sequence[Get<wbr>Factory<wbr>Vsts<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A `vsts_configuration` block as defined below.
 {{% /md %}}</dd>

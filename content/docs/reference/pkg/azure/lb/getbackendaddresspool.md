@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#backend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendaddresspoolbackendipconfiguration">List[Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getbackendaddresspoolbackendipconfiguration">Sequence[Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.
 {{% /md %}}</dd>

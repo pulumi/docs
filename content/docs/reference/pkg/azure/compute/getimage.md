@@ -701,7 +701,7 @@ The following output properties are available:
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimagedatadisk">List[Get<wbr>Image<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#getimagedatadisk">Sequence[Get<wbr>Image<wbr>Data<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}a collection of `data_disk` blocks as defined below.
 {{% /md %}}</dd>
@@ -734,7 +734,7 @@ The following output properties are available:
 <a href="#os_disks_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getimageosdisk">List[Get<wbr>Image<wbr>Os<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#getimageosdisk">Sequence[Get<wbr>Image<wbr>Os<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}a `os_disk` block as defined below.
 {{% /md %}}</dd>
@@ -1047,7 +1047,7 @@ The following output properties are available:
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the logical unit number of the data disk.
 {{% /md %}}</dd>
@@ -1069,7 +1069,7 @@ The following output properties are available:
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the size of this Data Disk in GB.
 {{% /md %}}</dd>
@@ -1379,7 +1379,7 @@ The following output properties are available:
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}the size of this Data Disk in GB.
 {{% /md %}}</dd>

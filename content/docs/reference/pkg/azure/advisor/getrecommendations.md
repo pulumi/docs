@@ -126,7 +126,7 @@ export const recommendations = example.then(example => example.recommendations);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_recommendations(</span><span class="nx">filter_by_categories</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">filter_by_resource_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRecommendationsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_recommendations(</span><span class="nx">filter_by_categories</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">filter_by_resource_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRecommendationsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -244,7 +244,7 @@ The following arguments are supported:
 <a href="#filter_by_categories_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>by_<wbr>categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of categories in which the Advisor Recommendations will be listed. Possible values are `HighAvailability`, `Security`, `Performance`, `Cost` and `OperationalExcellence`.
 {{% /md %}}</dd>
@@ -255,7 +255,7 @@ The following arguments are supported:
 <a href="#filter_by_resource_groups_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>by_<wbr>resource_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of resource groups about which the Advisor Recommendations will be listed.
 {{% /md %}}</dd>
@@ -444,7 +444,7 @@ The following output properties are available:
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrecommendationsrecommendation">List[Get<wbr>Recommendations<wbr>Recommendation]</a></span>
+        <span class="property-type"><a href="#getrecommendationsrecommendation">Sequence[Get<wbr>Recommendations<wbr>Recommendation]</a></span>
     </dt>
     <dd>{{% md %}}One or more `recommendations` blocks as defined below.
 {{% /md %}}</dd>
@@ -455,7 +455,7 @@ The following output properties are available:
 <a href="#filter_by_categories_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>by_<wbr>categories</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -465,7 +465,7 @@ The following output properties are available:
 <a href="#filter_by_resource_groups_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>by_<wbr>resource_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -901,7 +901,7 @@ The following output properties are available:
 <a href="#suppression_names_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Advisor Suppression names of the Advisor Recommendation.
 {{% /md %}}</dd>

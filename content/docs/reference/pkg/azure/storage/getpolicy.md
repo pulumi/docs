@@ -361,7 +361,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyrule">List[Get<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getpolicyrule">Sequence[Get<wbr>Policy<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd>
@@ -566,7 +566,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleaction">List[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicyruleaction">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyrulefilter">List[Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicyrulefilter">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd>
@@ -722,7 +722,7 @@ The following output properties are available:
 <a href="#base_blobs_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleactionbaseblob">List[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicyruleactionbaseblob">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ The following output properties are available:
 <a href="#snapshots_python" style="color: inherit; text-decoration: inherit;">snapshots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleactionsnapshot">List[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicyruleactionsnapshot">Sequence[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ The following output properties are available:
 <a href="#delete_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to delete the blob.
 {{% /md %}}</dd>
@@ -900,7 +900,7 @@ The following output properties are available:
 <a href="#tier_to_archive_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier.
 {{% /md %}}</dd>
@@ -911,7 +911,7 @@ The following output properties are available:
 <a href="#tier_to_cool_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier.
 {{% /md %}}</dd>
@@ -1001,7 +1001,7 @@ The following output properties are available:
 <a href="#delete_after_days_since_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>creation_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after create to delete the snaphot.
 {{% /md %}}</dd>
@@ -1124,7 +1124,7 @@ The following output properties are available:
 <a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Only `blockBlob` is supported.
 {{% /md %}}</dd>
@@ -1135,7 +1135,7 @@ The following output properties are available:
 <a href="#prefix_matches_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
 {{% /md %}}</dd>

@@ -662,7 +662,7 @@ The following output properties are available:
 <a href="#auto_approval_subscription_ids_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>approval_<wbr>subscription_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of subscription(s) globally unique identifiers that will be auto approved to use the private link service.
 {{% /md %}}</dd>
@@ -695,7 +695,7 @@ The following output properties are available:
 <a href="#load_balancer_frontend_ip_configuration_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>frontend_<wbr>ip_<wbr>configuration_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of Standard Load Balancer(SLB) resource IDs. The Private Link service is tied to the frontend IP address of a SLB. All traffic destined for the private link service will reach the frontend of the SLB. You can configure SLB rules to direct this traffic to appropriate backend pools where your applications are running.
 {{% /md %}}</dd>
@@ -728,7 +728,7 @@ The following output properties are available:
 <a href="#nat_ip_configurations_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicenatipconfiguration">List[Get<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getservicenatipconfiguration">Sequence[Get<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}The `nat_ip_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -760,7 +760,7 @@ The following output properties are available:
 <a href="#visibility_subscription_ids_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>subscription_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of subscription(s) globally unique identifiers(GUID) that will be able to see the private link service.
 {{% /md %}}</dd>

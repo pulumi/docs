@@ -725,7 +725,7 @@ The following output properties are available:
 <a href="#max_size_gb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>gb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max size of the database in gigabytes.
 {{% /md %}}</dd>
@@ -746,7 +746,7 @@ The following output properties are available:
 <a href="#read_replica_count_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed.
 {{% /md %}}</dd>

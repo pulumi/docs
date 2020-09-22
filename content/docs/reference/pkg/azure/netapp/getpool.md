@@ -604,7 +604,7 @@ The following output properties are available:
 <a href="#size_in_tb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>tb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Provisioned size of the pool in TB.
 {{% /md %}}</dd>

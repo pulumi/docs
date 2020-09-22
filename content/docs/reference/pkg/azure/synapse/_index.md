@@ -13,6 +13,7 @@ Explore the resources and functions of the synapse module in the Azure package.
 <ul class="api">
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
     <li><a href="sparkpool" title="SparkPool"><span class="symbol resource"></span>SparkPool</a></li>
+    <li><a href="sqlpool" title="SqlPool"><span class="symbol resource"></span>SqlPool</a></li>
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
@@ -30,7 +31,7 @@ Explore the resources and functions of the synapse module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.20.1</dd>
+	<dd>3.22.0</dd>
 </dl>
 
 

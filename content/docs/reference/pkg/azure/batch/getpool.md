@@ -106,7 +106,7 @@ const example = pulumi.output(azure.batch.getPool({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pool(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[List[GetPoolCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[GetPoolNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[GetPoolStartTaskArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPoolResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pool(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPoolCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[GetPoolNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[GetPoolStartTaskArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPoolResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -384,7 +384,7 @@ The following arguments are supported:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">List[Get<wbr>Pool<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolcertificate">Sequence[Get<wbr>Pool<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd>
@@ -984,7 +984,7 @@ The following output properties are available:
 <a href="#auto_scales_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scales</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolautoscale">List[Get<wbr>Pool<wbr>Auto<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#getpoolautoscale">Sequence[Get<wbr>Pool<wbr>Auto<wbr>Scale]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
 {{% /md %}}</dd>
@@ -995,7 +995,7 @@ The following output properties are available:
 <a href="#container_configurations_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcontainerconfiguration">List[Get<wbr>Pool<wbr>Container<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getpoolcontainerconfiguration">Sequence[Get<wbr>Pool<wbr>Container<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
 {{% /md %}}</dd>
@@ -1016,7 +1016,7 @@ The following output properties are available:
 <a href="#fixed_scales_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>scales</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolfixedscale">List[Get<wbr>Pool<wbr>Fixed<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#getpoolfixedscale">Sequence[Get<wbr>Pool<wbr>Fixed<wbr>Scale]</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd>
@@ -1038,7 +1038,7 @@ The following output properties are available:
 <a href="#max_tasks_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tasks_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
 {{% /md %}}</dd>
@@ -1101,7 +1101,7 @@ The following output properties are available:
 <a href="#storage_image_references_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>references</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstorageimagereference">List[Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#getpoolstorageimagereference">Sequence[Get<wbr>Pool<wbr>Storage<wbr>Image<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}The reference of the storage image used by the nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -1123,7 +1123,7 @@ The following output properties are available:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">List[Get<wbr>Pool<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#getpoolcertificate">Sequence[Get<wbr>Pool<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd>
@@ -1496,7 +1496,7 @@ The following output properties are available:
 <a href="#visibilities_python" style="color: inherit; text-decoration: inherit;">visibilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
 {{% /md %}}</dd>
@@ -1652,7 +1652,7 @@ The following output properties are available:
 <a href="#container_image_names_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
 {{% /md %}}</dd>
@@ -1663,7 +1663,7 @@ The following output properties are available:
 <a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">List[Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolcontainerconfigurationcontainerregistry">Sequence[Get<wbr>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
 {{% /md %}}</dd>
@@ -2019,7 +2019,7 @@ The following output properties are available:
 <a href="#target_dedicated_nodes_python" style="color: inherit; text-decoration: inherit;">target_<wbr>dedicated_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -2030,7 +2030,7 @@ The following output properties are available:
 <a href="#target_low_priority_nodes_python" style="color: inherit; text-decoration: inherit;">target_<wbr>low_<wbr>priority_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -2386,7 +2386,7 @@ The following output properties are available:
 <a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port number on the compute node.
 {{% /md %}}</dd>
@@ -2419,7 +2419,7 @@ The following output properties are available:
 <a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List[Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Sequence[Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of network security group rules that are applied to the endpoint.
 {{% /md %}}</dd>
@@ -2597,7 +2597,7 @@ The following output properties are available:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The priority for this rule.
 {{% /md %}}</dd>
@@ -2874,7 +2874,7 @@ The following output properties are available:
 <a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskresourcefile">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskresourcefile">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
 {{% /md %}}</dd>
@@ -2885,7 +2885,7 @@ The following output properties are available:
 <a href="#user_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskuseridentity">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentity">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -2907,7 +2907,7 @@ The following output properties are available:
 <a href="#max_task_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>task_<wbr>retry_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of retry count.
 {{% /md %}}</dd>
@@ -3351,7 +3351,7 @@ The following output properties are available:
 <a href="#auto_users_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">List[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpoolstarttaskuseridentityautouser">Sequence[Get<wbr>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd>

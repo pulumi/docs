@@ -24,6 +24,7 @@ Explore the resources and functions of the lb module in the Azure package.
 <ul class="api">
     <li><a href="getbackendaddresspool" title="GetBackendAddressPool"><span class="symbol function"></span>GetBackendAddressPool</a></li>
     <li><a href="getlb" title="GetLB"><span class="symbol function"></span>GetLB</a></li>
+    <li><a href="getlbrule" title="GetLBRule"><span class="symbol function"></span>GetLBRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,7 +36,7 @@ Explore the resources and functions of the lb module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.20.1</dd>
+	<dd>3.22.0</dd>
 </dl>
 
 

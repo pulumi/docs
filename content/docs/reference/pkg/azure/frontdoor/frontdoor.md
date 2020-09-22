@@ -309,7 +309,7 @@ const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.Frontdoor">Frontdoor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.Frontdoor">Frontdoor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -934,7 +934,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pool_health_probes_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd>
@@ -945,7 +945,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pool_load_balancings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd>
@@ -956,7 +956,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd>
@@ -978,7 +978,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">List[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">Sequence[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -1000,7 +1000,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">List[Frontdoor<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">Sequence[Frontdoor<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd>
@@ -1011,7 +1011,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pools_send_receive_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools_<wbr>send_<wbr>receive_<wbr>timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between `0` - `240`. Defaults to `60`.
 {{% /md %}}</dd>
@@ -1257,7 +1257,7 @@ Get an existing Frontdoor resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">header_frontdoor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Frontdoor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">header_frontdoor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Frontdoor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1890,7 +1890,7 @@ The following state arguments are supported:
 <a href="#state_backend_pool_health_probes_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd>
@@ -1901,7 +1901,7 @@ The following state arguments are supported:
 <a href="#state_backend_pool_load_balancings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd>
@@ -1912,7 +1912,7 @@ The following state arguments are supported:
 <a href="#state_backend_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd>
@@ -1923,7 +1923,7 @@ The following state arguments are supported:
 <a href="#state_backend_pools_send_receive_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools_<wbr>send_<wbr>receive_<wbr>timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between `0` - `240`. Defaults to `60`.
 {{% /md %}}</dd>
@@ -1967,7 +1967,7 @@ The following state arguments are supported:
 <a href="#state_frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">List[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">Sequence[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -2032,7 +2032,7 @@ The following state arguments are supported:
 <a href="#state_routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">List[Frontdoor<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">Sequence[Frontdoor<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd>
@@ -2273,7 +2273,7 @@ The following state arguments are supported:
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolbackend">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolbackend">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend` block as defined below.
 {{% /md %}}</dd>
@@ -2627,7 +2627,7 @@ The following state arguments are supported:
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP TCP port number. Possible values are between `1` - `65535`.
 {{% /md %}}</dd>
@@ -2638,7 +2638,7 @@ The following state arguments are supported:
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS TCP port number. Possible values are between `1` - `65535`.
 {{% /md %}}</dd>
@@ -2660,7 +2660,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy. Defaults to `1`.
 {{% /md %}}</dd>
@@ -2671,7 +2671,7 @@ The following state arguments are supported:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Weight of this endpoint for load balancing purposes. Defaults to `50`.
 {{% /md %}}</dd>
@@ -2992,7 +2992,7 @@ The following state arguments are supported:
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between each Health Probe. Defaults to `120`.
 {{% /md %}}</dd>
@@ -3258,7 +3258,7 @@ The following state arguments are supported:
 <a href="#additional_latency_milliseconds_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>latency_<wbr>milliseconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The additional latency in milliseconds for probes to fall into the lowest latency bucket. Defaults to `0`.
 {{% /md %}}</dd>
@@ -3280,7 +3280,7 @@ The following state arguments are supported:
 <a href="#sample_size_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of samples to consider for load balancing decisions. Defaults to `4`.
 {{% /md %}}</dd>
@@ -3291,7 +3291,7 @@ The following state arguments are supported:
 <a href="#successful_samples_required_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>samples_<wbr>required</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of samples within the sample period that must succeed. Defaults to `2`.
 {{% /md %}}</dd>
@@ -3678,7 +3678,7 @@ The following state arguments are supported:
 <a href="#session_affinity_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>ttl_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The TTL to use in seconds for session affinity, if applicable. Defaults to `0`.
 {{% /md %}}</dd>
@@ -4364,7 +4364,7 @@ The following state arguments are supported:
 <a href="#accepted_protocols_python" style="color: inherit; text-decoration: inherit;">accepted_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Protocol schemes to match for the Backend Routing Rule. Defaults to `Http`.
 {{% /md %}}</dd>
@@ -4375,7 +4375,7 @@ The following state arguments are supported:
 <a href="#frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The names of the `frontend_endpoint` blocks whithin this resource to associate with this `routing_rule`.
 {{% /md %}}</dd>
@@ -4397,7 +4397,7 @@ The following state arguments are supported:
 <a href="#patterns_to_matches_python" style="color: inherit; text-decoration: inherit;">patterns_<wbr>to_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The route patterns for the Backend Routing Rule. Defaults to `/*`.
 {{% /md %}}</dd>

@@ -657,7 +657,7 @@ The following output properties are available:
 <a href="#access_policy_object_ids_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policy_<wbr>object_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -667,7 +667,7 @@ The following output properties are available:
 <a href="#authentication_configurations_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getserviceauthenticationconfiguration">List[Get<wbr>Service<wbr>Authentication<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getserviceauthenticationconfiguration">Sequence[Get<wbr>Service<wbr>Authentication<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}An `authentication_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -678,7 +678,7 @@ The following output properties are available:
 <a href="#cors_configurations_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicecorsconfiguration">List[Get<wbr>Service<wbr>Cors<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getservicecorsconfiguration">Sequence[Get<wbr>Service<wbr>Cors<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -689,7 +689,7 @@ The following output properties are available:
 <a href="#cosmosdb_throughput_python" style="color: inherit; text-decoration: inherit;">cosmosdb_<wbr>throughput</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1169,7 +1169,7 @@ The following output properties are available:
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of headers to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1180,7 +1180,7 @@ The following output properties are available:
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The methods to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1191,7 +1191,7 @@ The following output properties are available:
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1202,7 +1202,7 @@ The following output properties are available:
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The max age to be allowed via CORS.
 {{% /md %}}</dd>

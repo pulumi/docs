@@ -483,7 +483,7 @@ The following output properties are available:
 <a href="#private_service_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>service_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getendpointconnectionprivateserviceconnection">List[Get<wbr>Endpoint<wbr>Connection<wbr>Private<wbr>Service<wbr>Connection]</a></span>
+        <span class="property-type"><a href="#getendpointconnectionprivateserviceconnection">Sequence[Get<wbr>Endpoint<wbr>Connection<wbr>Private<wbr>Service<wbr>Connection]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

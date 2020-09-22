@@ -620,7 +620,7 @@ The following output properties are available:
 <a href="#peerings_python" style="color: inherit; text-decoration: inherit;">peerings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getexpressroutecircuitpeering">List[Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering]</a></span>
+        <span class="property-type"><a href="#getexpressroutecircuitpeering">Sequence[Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering]</a></span>
     </dt>
     <dd>{{% md %}}A `peerings` block for the ExpressRoute circuit as documented below
 {{% /md %}}</dd>
@@ -652,7 +652,7 @@ The following output properties are available:
 <a href="#service_provider_properties_python" style="color: inherit; text-decoration: inherit;">service_<wbr>provider_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getexpressroutecircuitserviceproviderproperty">List[Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Service<wbr>Provider<wbr>Property]</a></span>
+        <span class="property-type"><a href="#getexpressroutecircuitserviceproviderproperty">Sequence[Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Service<wbr>Provider<wbr>Property]</a></span>
     </dt>
     <dd>{{% md %}}A `service_provider_properties` block for the ExpressRoute circuit as documented below
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ The following output properties are available:
 <a href="#azure_asn_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN for Azure.
 {{% /md %}}</dd>
@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd>
@@ -1034,7 +1034,7 @@ The following output properties are available:
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
 {{% /md %}}</dd>
@@ -1190,7 +1190,7 @@ The following output properties are available:
 <a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the ExpressRoute circuit.
 {{% /md %}}</dd>

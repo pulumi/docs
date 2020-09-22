@@ -1022,7 +1022,7 @@ The following output properties are available:
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of protocols the operations in this API can be invoked.
 {{% /md %}}</dd>
@@ -1075,7 +1075,7 @@ The following output properties are available:
 <a href="#subscription_key_parameter_names_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>key_<wbr>parameter_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapisubscriptionkeyparametername">List[Get<wbr>Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Name]</a></span>
+        <span class="property-type"><a href="#getapisubscriptionkeyparametername">Sequence[Get<wbr>Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Name]</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
 {{% /md %}}</dd>

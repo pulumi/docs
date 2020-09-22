@@ -777,7 +777,7 @@ The following output properties are available:
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyvaultaccesspolicy">List[Get<wbr>Key<wbr>Vault<wbr>Access<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getkeyvaultaccesspolicy">Sequence[Get<wbr>Key<wbr>Vault<wbr>Access<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}One or more `access_policy` blocks as defined below.
 {{% /md %}}</dd>
@@ -853,7 +853,7 @@ The following output properties are available:
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyvaultnetworkacl">List[Get<wbr>Key<wbr>Vault<wbr>Network<wbr>Acl]</a></span>
+        <span class="property-type"><a href="#getkeyvaultnetworkacl">Sequence[Get<wbr>Key<wbr>Vault<wbr>Network<wbr>Acl]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1233,7 +1233,7 @@ The following output properties are available:
 <a href="#certificate_permissions_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of certificate permissions applicable to this Access Policy.
 {{% /md %}}</dd>
@@ -1244,7 +1244,7 @@ The following output properties are available:
 <a href="#key_permissions_python" style="color: inherit; text-decoration: inherit;">key_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of key permissions applicable to this Access Policy.
 {{% /md %}}</dd>
@@ -1266,7 +1266,7 @@ The following output properties are available:
 <a href="#secret_permissions_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of secret permissions applicable to this Access Policy.
 {{% /md %}}</dd>
@@ -1277,7 +1277,7 @@ The following output properties are available:
 <a href="#storage_permissions_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of storage permissions applicable to this Access Policy.
 {{% /md %}}</dd>
@@ -1485,7 +1485,7 @@ The following output properties are available:
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1495,7 +1495,7 @@ The following output properties are available:
 <a href="#virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

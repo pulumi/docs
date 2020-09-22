@@ -207,7 +207,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VpnServerConfiguration">VpnServerConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[List[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[List[VpnServerConfigurationClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[List[VpnServerConfigurationClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusServerArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VpnServerConfiguration">VpnServerConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusServerArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -791,7 +791,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#azure_active_directory_authentications_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>authentications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>revoked_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -813,7 +813,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -879,7 +879,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpn_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd>
@@ -983,7 +983,7 @@ Get an existing VpnServerConfiguration resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[List[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[List[VpnServerConfigurationClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[List[VpnServerConfigurationClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusServerArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> VpnServerConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusServerArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> VpnServerConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1487,7 +1487,7 @@ The following state arguments are supported:
 <a href="#state_azure_active_directory_authentications_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>authentications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd>
@@ -1498,7 +1498,7 @@ The following state arguments are supported:
 <a href="#state_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>revoked_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1509,7 +1509,7 @@ The following state arguments are supported:
 <a href="#state_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1597,7 +1597,7 @@ The following state arguments are supported:
 <a href="#state_vpn_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd>
@@ -2438,7 +2438,7 @@ The following state arguments are supported:
 <a href="#sa_data_size_kilobytes_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kilobytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd>
@@ -2449,7 +2449,7 @@ The following state arguments are supported:
 <a href="#sa_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>lifetime_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd>
@@ -2660,7 +2660,7 @@ The following state arguments are supported:
 <a href="#server_root_certificates_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -2671,7 +2671,7 @@ The following state arguments are supported:
 <a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd>

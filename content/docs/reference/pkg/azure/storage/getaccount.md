@@ -1909,7 +1909,7 @@ for more information.
 <a href="#custom_domains_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountcustomdomain">List[Get<wbr>Account<wbr>Custom<wbr>Domain]</a></span>
+        <span class="property-type"><a href="#getaccountcustomdomain">Sequence[Get<wbr>Account<wbr>Custom<wbr>Domain]</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
 {{% /md %}}</dd>

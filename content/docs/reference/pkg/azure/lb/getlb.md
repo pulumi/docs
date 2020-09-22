@@ -583,7 +583,7 @@ The following output properties are available:
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlbfrontendipconfiguration">List[Get<wbr>LBFrontend<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getlbfrontendipconfiguration">Sequence[Get<wbr>LBFrontend<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A `frontend_ip_configuration` block as documented below.
 {{% /md %}}</dd>
@@ -638,7 +638,7 @@ The following output properties are available:
 <a href="#private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of private IP address assigned to the load balancer in `frontend_ip_configuration` blocks, if any.
 {{% /md %}}</dd>
@@ -1074,7 +1074,7 @@ The following output properties are available:
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in.
 {{% /md %}}</dd>

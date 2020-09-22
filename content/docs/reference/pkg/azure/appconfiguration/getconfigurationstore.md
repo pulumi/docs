@@ -691,7 +691,7 @@ The following output properties are available:
 <a href="#primary_read_keys_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>read_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconfigurationstoreprimaryreadkey">List[Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getconfigurationstoreprimaryreadkey">Sequence[Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A `primary_read_key` block as defined below containing the primary read access key.
 {{% /md %}}</dd>
@@ -702,7 +702,7 @@ The following output properties are available:
 <a href="#primary_write_keys_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>write_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconfigurationstoreprimarywritekey">List[Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getconfigurationstoreprimarywritekey">Sequence[Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A `primary_write_key` block as defined below containing the primary write access key.
 {{% /md %}}</dd>
@@ -723,7 +723,7 @@ The following output properties are available:
 <a href="#secondary_read_keys_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>read_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconfigurationstoresecondaryreadkey">List[Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getconfigurationstoresecondaryreadkey">Sequence[Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_read_key` block as defined below containing the secondary read access key.
 {{% /md %}}</dd>
@@ -734,7 +734,7 @@ The following output properties are available:
 <a href="#secondary_write_keys_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>write_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconfigurationstoresecondarywritekey">List[Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getconfigurationstoresecondarywritekey">Sequence[Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_write_key` block as defined below containing the secondary write access key.
 {{% /md %}}</dd>

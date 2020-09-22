@@ -648,7 +648,7 @@ The following output properties are available:
 <a href="#certificate_policies_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicy">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicy">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd>
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#issuer_parameters_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd>
@@ -960,7 +960,7 @@ The following output properties are available:
 <a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd>
@@ -971,7 +971,7 @@ The following output properties are available:
 <a href="#secret_properties_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd>
@@ -982,7 +982,7 @@ The following output properties are available:
 <a href="#x509_certificate_properties_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ The following output properties are available:
 <a href="#lifetime_actions_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd>
@@ -1283,7 +1283,7 @@ The following output properties are available:
 <a href="#key_size_python" style="color: inherit; text-decoration: inherit;">key_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate.
 {{% /md %}}</dd>
@@ -1428,7 +1428,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd>
@@ -1439,7 +1439,7 @@ The following output properties are available:
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd>
@@ -1652,7 +1652,7 @@ The following output properties are available:
 <a href="#days_before_expiry_python" style="color: inherit; text-decoration: inherit;">days_<wbr>before_<wbr>expiry</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run.
 {{% /md %}}</dd>
@@ -1663,7 +1663,7 @@ The following output properties are available:
 <a href="#lifetime_percentage_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run.
 {{% /md %}}</dd>
@@ -1975,7 +1975,7 @@ The following output properties are available:
 <a href="#extended_key_usages_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages.
 {{% /md %}}</dd>
@@ -1986,7 +1986,7 @@ The following output properties are available:
 <a href="#key_usages_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usages</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key.
 {{% /md %}}</dd>
@@ -2008,7 +2008,7 @@ The following output properties are available:
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd>
@@ -2019,7 +2019,7 @@ The following output properties are available:
 <a href="#validity_in_months_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>in_<wbr>months</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months.
 {{% /md %}}</dd>
@@ -2175,7 +2175,7 @@ The following output properties are available:
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate.
 {{% /md %}}</dd>
@@ -2186,7 +2186,7 @@ The following output properties are available:
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate.
 {{% /md %}}</dd>
@@ -2197,7 +2197,7 @@ The following output properties are available:
 <a href="#upns_python" style="color: inherit; text-decoration: inherit;">upns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate.
 {{% /md %}}</dd>

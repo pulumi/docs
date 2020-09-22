@@ -803,7 +803,7 @@ for this Virtual Network Gateway.
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualnetworkgatewaybgpsetting">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewaybgpsetting">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -861,7 +861,7 @@ for this Virtual Network Gateway.
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualnetworkgatewayipconfiguration">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewayipconfiguration">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
 {{% /md %}}</dd>
@@ -937,7 +937,7 @@ for this Virtual Network Gateway.
 <a href="#vpn_client_configurations_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfiguration">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfiguration">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which is documented below.
 {{% /md %}}</dd>
@@ -1119,7 +1119,7 @@ on the on-premises VPN devices.
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) to use as part of the BGP.
 {{% /md %}}</dd>
@@ -1130,7 +1130,7 @@ on the on-premises VPN devices.
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering.
@@ -1418,6 +1418,46 @@ network can contain at most a single Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
+        <span id="aadaudience_csharp">
+<a href="#aadaudience_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client id of the Azure VPN application.
+See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aadissuer_csharp">
+<a href="#aadissuer_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The STS url for your tenant
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aadtenant_csharp">
+<a href="#aadtenant_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}AzureAD Tenant URL
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="addressspaces_csharp">
 <a href="#addressspaces_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
 </span> 
@@ -1438,7 +1478,8 @@ in CIDR notation.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
-This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1450,7 +1491,8 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
-This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1463,6 +1505,8 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1476,6 +1520,8 @@ are defined below.
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1499,6 +1545,46 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
+        <span id="aadaudience_go">
+<a href="#aadaudience_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client id of the Azure VPN application.
+See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aadissuer_go">
+<a href="#aadissuer_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The STS url for your tenant
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aadtenant_go">
+<a href="#aadtenant_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}AzureAD Tenant URL
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="addressspaces_go">
 <a href="#addressspaces_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
 </span> 
@@ -1519,7 +1605,8 @@ in CIDR notation.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
-This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1531,7 +1618,8 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
-This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1544,6 +1632,8 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1557,6 +1647,8 @@ are defined below.
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1580,6 +1672,46 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
+        <span id="aadaudience_nodejs">
+<a href="#aadaudience_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The client id of the Azure VPN application.
+See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aadissuer_nodejs">
+<a href="#aadissuer_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The STS url for your tenant
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aadtenant_nodejs">
+<a href="#aadtenant_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}AzureAD Tenant URL
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="addressspaces_nodejs">
 <a href="#addressspaces_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Spaces</a>
 </span> 
@@ -1600,7 +1732,8 @@ in CIDR notation.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
-This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1612,7 +1745,8 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
-This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1625,6 +1759,8 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1638,6 +1774,8 @@ are defined below.
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1661,11 +1799,51 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
+        <span id="aad_audience_python">
+<a href="#aad_audience_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>audience</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The client id of the Azure VPN application.
+See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aad_issuer_python">
+<a href="#aad_issuer_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>issuer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The STS url for your tenant
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="aad_tenant_python">
+<a href="#aad_tenant_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}AzureAD Tenant URL
+This setting is incompatible with the use of
+`root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="address_spaces_python">
 <a href="#address_spaces_python" style="color: inherit; text-decoration: inherit;">address_<wbr>spaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The address space out of which ip addresses for
 vpn clients will be taken. You can provide more than one address space, e.g.
@@ -1681,7 +1859,8 @@ in CIDR notation.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
-This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1693,7 +1872,8 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
-This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1702,10 +1882,12 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 <a href="#revoked_certificates_python" style="color: inherit; text-decoration: inherit;">revoked_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrevokedcertificate">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1714,11 +1896,13 @@ are defined below.
 <a href="#root_certificates_python" style="color: inherit; text-decoration: inherit;">root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrootcertificate">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrootcertificate">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
+This setting is incompatible with the use of
+`aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1727,7 +1911,7 @@ used by the VPN clients to connect to the gateway.
 <a href="#vpn_client_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the protocols supported by the vpn client.
 The supported values are `SSTP`, `IkeV2` and `OpenVPN`.

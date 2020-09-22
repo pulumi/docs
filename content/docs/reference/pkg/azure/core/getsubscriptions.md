@@ -421,7 +421,7 @@ The following output properties are available:
 <a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsubscriptionssubscription">List[Get<wbr>Subscriptions<wbr>Subscription]</a></span>
+        <span class="property-type"><a href="#getsubscriptionssubscription">Sequence[Get<wbr>Subscriptions<wbr>Subscription]</a></span>
     </dt>
     <dd>{{% md %}}One or more `subscription` blocks as defined below.
 {{% /md %}}</dd>
