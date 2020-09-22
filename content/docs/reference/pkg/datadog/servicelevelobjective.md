@@ -158,6 +158,7 @@ foo = datadog.ServiceLevelObjective("foo",
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as datadog from "@pulumi/datadog";
@@ -196,6 +197,132 @@ const foo = new datadog.ServiceLevelObjective("foo", {
 
 {{% /example %}}
 
+### Monitor-Based SLO
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Datadog = Pulumi.Datadog;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Create a new Datadog service level objective
+        var bar = new Datadog.ServiceLevelObjective("bar", new Datadog.ServiceLevelObjectiveArgs
+        {
+            Description = "My custom monitor SLO",
+            MonitorIds = 
+            {
+                1,
+                2,
+                3,
+            },
+            Name = "Example Monitor SLO",
+            Tags = 
+            {
+                "foo:bar",
+                "baz",
+            },
+            Thresholds = 
+            {
+                new Datadog.Inputs.ServiceLevelObjectiveThresholdArgs
+                {
+                    Target = 99.9,
+                    Timeframe = "7d",
+                    Warning = 99.99,
+                },
+                new Datadog.Inputs.ServiceLevelObjectiveThresholdArgs
+                {
+                    Target = 99.9,
+                    Timeframe = "30d",
+                    Warning = 99.99,
+                },
+            },
+            Type = "monitor",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_datadog as datadog
+
+# Create a new Datadog service level objective
+bar = datadog.ServiceLevelObjective("bar",
+    description="My custom monitor SLO",
+    monitor_ids=[
+        1,
+        2,
+        3,
+    ],
+    name="Example Monitor SLO",
+    tags=[
+        "foo:bar",
+        "baz",
+    ],
+    thresholds=[
+        datadog.ServiceLevelObjectiveThresholdArgs(
+            target=99.9,
+            timeframe="7d",
+            warning=99.99,
+        ),
+        datadog.ServiceLevelObjectiveThresholdArgs(
+            target=99.9,
+            timeframe="30d",
+            warning=99.99,
+        ),
+    ],
+    type="monitor")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as datadog from "@pulumi/datadog";
+
+// Create a new Datadog service level objective
+const bar = new datadog.ServiceLevelObjective("bar", {
+    description: "My custom monitor SLO",
+    monitorIds: [
+        1,
+        2,
+        3,
+    ],
+    name: "Example Monitor SLO",
+    tags: [
+        "foo:bar",
+        "baz",
+    ],
+    thresholds: [
+        {
+            target: 99.9,
+            timeframe: "7d",
+            warning: 99.99,
+        },
+        {
+            target: 99.9,
+            timeframe: "30d",
+            warning: 99.99,
+        },
+    ],
+    type: "monitor",
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -208,7 +335,7 @@ const foo = new datadog.ServiceLevelObjective("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.ServiceLevelObjective">ServiceLevelObjective</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">monitor_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[ServiceLevelObjectiveQueryArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[List[ServiceLevelObjectiveThresholdArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.ServiceLevelObjective">ServiceLevelObjective</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">monitor_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[ServiceLevelObjectiveQueryArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLevelObjectiveThresholdArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -388,8 +515,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -399,8 +525,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">List&lt;Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}- A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -410,10 +535,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `metric`
-* `monitor`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -423,8 +545,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -434,7 +555,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A custom set of groups from the monitor(s) for which to use as the SLI instead of all the groups.
+    <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -445,7 +566,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of numeric monitor IDs for which to use as SLIs. Their tags will be auto-imported into `monitor_tags` field in the API resource.
+    <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -456,7 +577,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
+    <dd>{{% md %}}The metric query of good / total events
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,6 +589,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
+- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -485,8 +607,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -496,8 +617,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">[]Service<wbr>Level<wbr>Objective<wbr>Threshold</a></span>
     </dt>
-    <dd>{{% md %}}- A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -507,10 +627,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `metric`
-* `monitor`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -520,8 +637,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -531,7 +647,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A custom set of groups from the monitor(s) for which to use as the SLI instead of all the groups.
+    <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -542,7 +658,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}A list of numeric monitor IDs for which to use as SLIs. Their tags will be auto-imported into `monitor_tags` field in the API resource.
+    <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -553,7 +669,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
+    <dd>{{% md %}}The metric query of good / total events
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -565,6 +681,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
+- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -582,8 +699,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -593,8 +709,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">Service<wbr>Level<wbr>Objective<wbr>Threshold[]</a></span>
     </dt>
-    <dd>{{% md %}}- A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -604,10 +719,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `metric`
-* `monitor`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -617,8 +729,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -628,7 +739,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A custom set of groups from the monitor(s) for which to use as the SLI instead of all the groups.
+    <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -639,7 +750,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of numeric monitor IDs for which to use as SLIs. Their tags will be auto-imported into `monitor_tags` field in the API resource.
+    <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -650,7 +761,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
+    <dd>{{% md %}}The metric query of good / total events
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -662,6 +773,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
+- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -679,8 +791,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -688,10 +799,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelevelobjectivethreshold">List[Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicelevelobjectivethreshold">Sequence[Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}- A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -701,10 +811,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `metric`
-* `monitor`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -714,8 +821,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -723,9 +829,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A custom set of groups from the monitor(s) for which to use as the SLI instead of all the groups.
+    <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -734,9 +840,9 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
-    <dd>{{% md %}}A list of numeric monitor IDs for which to use as SLIs. Their tags will be auto-imported into `monitor_tags` field in the API resource.
+    <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -747,7 +853,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
+    <dd>{{% md %}}The metric query of good / total events
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -756,9 +862,10 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
+- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
 </dl>
@@ -860,7 +967,7 @@ Get an existing ServiceLevelObjective resource's state with the given name, ID, 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">monitor_ids</span><span class="p">:</span> <span class="nx">Optional[List[float]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[ServiceLevelObjectiveQueryArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[List[ServiceLevelObjectiveThresholdArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceLevelObjective</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">monitor_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[ServiceLevelObjectiveQueryArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">thresholds</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLevelObjectiveThresholdArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceLevelObjective</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -982,8 +1089,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -993,7 +1099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A custom set of groups from the monitor(s) for which to use as the SLI instead of all the groups.
+    <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1004,7 +1110,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of numeric monitor IDs for which to use as SLIs. Their tags will be auto-imported into `monitor_tags` field in the API resource.
+    <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1015,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1026,7 +1131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
+    <dd>{{% md %}}The metric query of good / total events
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1038,6 +1143,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
+- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1048,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">List&lt;Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}- A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1059,10 +1164,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `metric`
-* `monitor`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1079,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1090,7 +1191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A custom set of groups from the monitor(s) for which to use as the SLI instead of all the groups.
+    <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1101,7 +1202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}A list of numeric monitor IDs for which to use as SLIs. Their tags will be auto-imported into `monitor_tags` field in the API resource.
+    <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1112,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1123,7 +1223,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
+    <dd>{{% md %}}The metric query of good / total events
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1135,6 +1235,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
+- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1145,8 +1246,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">[]Service<wbr>Level<wbr>Objective<wbr>Threshold</a></span>
     </dt>
-    <dd>{{% md %}}- A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1156,10 +1256,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `metric`
-* `monitor`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1176,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1187,7 +1283,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A custom set of groups from the monitor(s) for which to use as the SLI instead of all the groups.
+    <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1198,7 +1294,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of numeric monitor IDs for which to use as SLIs. Their tags will be auto-imported into `monitor_tags` field in the API resource.
+    <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1209,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1220,7 +1315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
+    <dd>{{% md %}}The metric query of good / total events
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1232,6 +1327,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
+- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1242,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivethreshold">Service<wbr>Level<wbr>Objective<wbr>Threshold[]</a></span>
     </dt>
-    <dd>{{% md %}}- A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1253,10 +1348,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `metric`
-* `monitor`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1273,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A description of this service level objective.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1282,9 +1373,9 @@ The following state arguments are supported:
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A custom set of groups from the monitor(s) for which to use as the SLI instead of all the groups.
+    <dd>{{% md %}}A static set of groups to filter monitor-based SLOs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1293,9 +1384,9 @@ The following state arguments are supported:
 <a href="#state_monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[float]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
-    <dd>{{% md %}}A list of numeric monitor IDs for which to use as SLIs. Their tags will be auto-imported into `monitor_tags` field in the API resource.
+    <dd>{{% md %}}A static set of monitor IDs to use as part of the SLO
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1306,8 +1397,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of Datadog service level objective
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1317,7 +1407,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicelevelobjectivequery">Service<wbr>Level<wbr>Objective<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The metric query configuration to use for the SLI. This is a dictionary and requires both the `numerator` and `denominator` fields which should be `count` metrics using the `sum` aggregator.
+    <dd>{{% md %}}The metric query of good / total events
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1326,9 +1416,10 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
+- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1337,10 +1428,9 @@ The following state arguments are supported:
 <a href="#state_thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelevelobjectivethreshold">List[Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicelevelobjectivethreshold">Sequence[Service<wbr>Level<wbr>Objective<wbr>Threshold<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}- A list of thresholds and targets that define the service level objectives from the provided SLIs.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1350,10 +1440,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of the service level objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `metric`
-* `monitor`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1396,9 +1483,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}the sum of the `total` events
-* Example Usage:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1408,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}the sum of all the `good` events
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1426,9 +1510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}the sum of the `total` events
-* Example Usage:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1438,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}the sum of all the `good` events
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1456,9 +1537,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}the sum of the `total` events
-* Example Usage:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1468,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}the sum of all the `good` events
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1486,9 +1564,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}the sum of the `total` events
-* Example Usage:
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1498,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}the sum of all the `good` events
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1534,8 +1609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}the objective's target `[0,100]`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1546,9 +1620,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `7d`
-* `30d`
-* `90d`
+- `7d`
+- `30d`
+- `90d`
+- `target`: (Required) the objective's target `[0,100]`
+- `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+- `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
+- `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1559,8 +1637,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1570,8 +1647,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}the objective's warning value `[0,100]`. This must be `> target` value.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1581,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1599,8 +1674,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}the objective's target `[0,100]`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1611,9 +1685,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `7d`
-* `30d`
-* `90d`
+- `7d`
+- `30d`
+- `90d`
+- `target`: (Required) the objective's target `[0,100]`
+- `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+- `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
+- `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1624,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1635,8 +1712,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}the objective's warning value `[0,100]`. This must be `> target` value.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1646,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1664,8 +1739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}the objective's target `[0,100]`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1676,9 +1750,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `7d`
-* `30d`
-* `90d`
+- `7d`
+- `30d`
+- `90d`
+- `target`: (Required) the objective's target `[0,100]`
+- `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+- `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
+- `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1689,8 +1767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1700,8 +1777,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}the objective's warning value `[0,100]`. This must be `> target` value.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1711,8 +1787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1729,8 +1804,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}the objective's target `[0,100]`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1741,9 +1815,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-* `7d`
-* `30d`
-* `90d`
+- `7d`
+- `30d`
+- `90d`
+- `target`: (Required) the objective's target `[0,100]`
+- `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+- `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
+- `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1754,8 +1832,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1765,8 +1842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}the objective's warning value `[0,100]`. This must be `> target` value.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1776,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

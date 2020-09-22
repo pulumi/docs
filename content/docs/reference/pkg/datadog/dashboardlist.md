@@ -337,7 +337,7 @@ const newList = new datadog.DashboardList("new_list", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.DashboardList">DashboardList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dash_items</span><span class="p">:</span> <span class="nx">Optional[List[DashboardListDashItemArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.DashboardList">DashboardList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dash_items</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardListDashItemArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -517,7 +517,7 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of this Dashboard List.
+    <dd>{{% md %}}The name of the Dashboard List
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -528,7 +528,7 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">List&lt;Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An individual dashboard object to add to this Dashboard List. If present, must contain the following:
+    <dd>{{% md %}}A set of dashbaord items that belong to this list
 {{% /md %}}</dd>
 
 </dl>
@@ -546,7 +546,7 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of this Dashboard List.
+    <dd>{{% md %}}The name of the Dashboard List
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -557,7 +557,7 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">[]Dashboard<wbr>List<wbr>Dash<wbr>Item</a></span>
     </dt>
-    <dd>{{% md %}}An individual dashboard object to add to this Dashboard List. If present, must contain the following:
+    <dd>{{% md %}}A set of dashbaord items that belong to this list
 {{% /md %}}</dd>
 
 </dl>
@@ -575,7 +575,7 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of this Dashboard List.
+    <dd>{{% md %}}The name of the Dashboard List
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -586,7 +586,7 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">Dashboard<wbr>List<wbr>Dash<wbr>Item[]</a></span>
     </dt>
-    <dd>{{% md %}}An individual dashboard object to add to this Dashboard List. If present, must contain the following:
+    <dd>{{% md %}}A set of dashbaord items that belong to this list
 {{% /md %}}</dd>
 
 </dl>
@@ -604,7 +604,7 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of this Dashboard List.
+    <dd>{{% md %}}The name of the Dashboard List
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -613,9 +613,9 @@ The DashboardList resource accepts the following [input]({{< relref "/docs/intro
 <a href="#dash_items_python" style="color: inherit; text-decoration: inherit;">dash_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardlistdashitem">List[Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardlistdashitem">Sequence[Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An individual dashboard object to add to this Dashboard List. If present, must contain the following:
+    <dd>{{% md %}}A set of dashbaord items that belong to this list
 {{% /md %}}</dd>
 
 </dl>
@@ -717,7 +717,7 @@ Get an existing DashboardList resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dash_items</span><span class="p">:</span> <span class="nx">Optional[List[DashboardListDashItemArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DashboardList</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dash_items</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardListDashItemArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DashboardList</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -839,7 +839,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">List&lt;Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An individual dashboard object to add to this Dashboard List. If present, must contain the following:
+    <dd>{{% md %}}A set of dashbaord items that belong to this list
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -850,7 +850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of this Dashboard List.
+    <dd>{{% md %}}The name of the Dashboard List
 {{% /md %}}</dd>
 
 </dl>
@@ -868,7 +868,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">[]Dashboard<wbr>List<wbr>Dash<wbr>Item</a></span>
     </dt>
-    <dd>{{% md %}}An individual dashboard object to add to this Dashboard List. If present, must contain the following:
+    <dd>{{% md %}}A set of dashbaord items that belong to this list
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -879,7 +879,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of this Dashboard List.
+    <dd>{{% md %}}The name of the Dashboard List
 {{% /md %}}</dd>
 
 </dl>
@@ -897,7 +897,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlistdashitem">Dashboard<wbr>List<wbr>Dash<wbr>Item[]</a></span>
     </dt>
-    <dd>{{% md %}}An individual dashboard object to add to this Dashboard List. If present, must contain the following:
+    <dd>{{% md %}}A set of dashbaord items that belong to this list
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -908,7 +908,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of this Dashboard List.
+    <dd>{{% md %}}The name of the Dashboard List
 {{% /md %}}</dd>
 
 </dl>
@@ -924,9 +924,9 @@ The following state arguments are supported:
 <a href="#state_dash_items_python" style="color: inherit; text-decoration: inherit;">dash_<wbr>items</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardlistdashitem">List[Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardlistdashitem">Sequence[Dashboard<wbr>List<wbr>Dash<wbr>Item<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An individual dashboard object to add to this Dashboard List. If present, must contain the following:
+    <dd>{{% md %}}A set of dashbaord items that belong to this list
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -937,7 +937,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of this Dashboard List.
+    <dd>{{% md %}}The name of the Dashboard List
 {{% /md %}}</dd>
 
 </dl>
@@ -981,8 +981,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of this dashboard.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -992,8 +991,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of this dashboard. Available options are: `custom_timeboard`, `custom_screenboard`, `integration_screenboard`, `integration_timeboard`, and `host_timeboard`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1010,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of this dashboard.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1021,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of this dashboard. Available options are: `custom_timeboard`, `custom_screenboard`, `integration_screenboard`, `integration_timeboard`, and `host_timeboard`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1039,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ID of this dashboard.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1050,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of this dashboard. Available options are: `custom_timeboard`, `custom_screenboard`, `integration_screenboard`, `integration_timeboard`, and `host_timeboard`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1068,8 +1062,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ID of this dashboard.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1079,8 +1072,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of this dashboard. Available options are: `custom_timeboard`, `custom_screenboard`, `integration_screenboard`, `integration_timeboard`, and `host_timeboard`
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
