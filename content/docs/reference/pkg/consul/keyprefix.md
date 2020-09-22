@@ -22,7 +22,7 @@ meta_desc: "Explore the KeyPrefix resource of the Consul package, including exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.KeyPrefix">KeyPrefix</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subkey_collection</span><span class="p">:</span> <span class="nx">Optional[List[KeyPrefixSubkeyCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">subkeys</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_consul/#pulumi_consul.KeyPrefix">KeyPrefix</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subkey_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyPrefixSubkeyCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">subkeys</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -479,7 +479,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#subkey_collection_python" style="color: inherit; text-decoration: inherit;">subkey_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">List[Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyprefixsubkeycollection">Sequence[Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A subkey to add. Supported values documented below.
 Multiple blocks supported.
@@ -610,7 +610,7 @@ Get an existing KeyPrefix resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subkey_collection</span><span class="p">:</span> <span class="nx">Optional[List[KeyPrefixSubkeyCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">subkeys</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyPrefix</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subkey_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyPrefixSubkeyCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">subkeys</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyPrefix</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1009,7 +1009,7 @@ end with a slash, to manage a "folder" of keys.
 <a href="#state_subkey_collection_python" style="color: inherit; text-decoration: inherit;">subkey_<wbr>collection</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">List[Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyprefixsubkeycollection">Sequence[Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A subkey to add. Supported values documented below.
 Multiple blocks supported.
@@ -1229,7 +1229,7 @@ to attach to the key (defaults to 0).
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
 to attach to the key (defaults to 0).
@@ -1253,6 +1253,6 @@ to attach to the key (defaults to 0).
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 

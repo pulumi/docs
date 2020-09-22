@@ -24,7 +24,7 @@ meta_desc: "Explore the GetCatalogNodes function of the Consul package, includin
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_catalog_nodes(</span><span class="nx">query_options</span><span class="p">:</span> <span class="nx">Optional[List[GetCatalogNodesQueryOptionArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCatalogNodesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_catalog_nodes(</span><span class="nx">query_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetCatalogNodesQueryOptionArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCatalogNodesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -106,7 +106,7 @@ The following arguments are supported:
 <a href="#query_options_python" style="color: inherit; text-decoration: inherit;">query_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalognodesqueryoption">List[Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcatalognodesqueryoption">Sequence[Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -361,7 +361,7 @@ The following output properties are available:
 <a href="#node_ids_python" style="color: inherit; text-decoration: inherit;">node_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -371,7 +371,7 @@ The following output properties are available:
 <a href="#node_names_python" style="color: inherit; text-decoration: inherit;">node_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -381,7 +381,7 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalognodesnode">List[Get<wbr>Catalog<wbr>Nodes<wbr>Node]</a></span>
+        <span class="property-type"><a href="#getcatalognodesnode">Sequence[Get<wbr>Catalog<wbr>Nodes<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -391,7 +391,7 @@ The following output properties are available:
 <a href="#query_options_python" style="color: inherit; text-decoration: inherit;">query_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalognodesqueryoption">List[Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getcatalognodesqueryoption">Sequence[Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#wait_index_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1031,6 +1031,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 

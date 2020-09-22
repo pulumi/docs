@@ -886,7 +886,7 @@ passing state.
 <a href="#results_python" style="color: inherit; text-decoration: inherit;">results</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresult">List[Get<wbr>Service<wbr>Health<wbr>Result]</a></span>
+        <span class="property-type"><a href="#getservicehealthresult">Sequence[Get<wbr>Service<wbr>Health<wbr>Result]</a></span>
     </dt>
     <dd>{{% md %}}A list of entries and details about each endpoint advertising a
 service.  Each element in the list has three attributes: `node`, `service` and
@@ -1122,7 +1122,7 @@ passing state.
 <a href="#checks_python" style="color: inherit; text-decoration: inherit;">checks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultcheck">List[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehealthresultcheck">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1132,7 +1132,7 @@ passing state.
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultnode">List[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehealthresultnode">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
 {{% /md %}}</dd>
@@ -1143,7 +1143,7 @@ passing state.
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresultservice">List[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehealthresultservice">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1573,7 +1573,7 @@ passing state.
 <a href="#service_tags_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this health-check.
 {{% /md %}}</dd>
@@ -2189,7 +2189,7 @@ passing state.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port of this instance.
 {{% /md %}}</dd>
@@ -2200,7 +2200,7 @@ passing state.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this instance.
 {{% /md %}}</dd>
@@ -2223,6 +2223,6 @@ passing state.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 

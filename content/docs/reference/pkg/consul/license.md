@@ -418,17 +418,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="flags_csharp">
-<a href="#flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The metadata attached to the license.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -552,17 +541,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="flags_go">
-<a href="#flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The metadata attached to the license.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -694,17 +672,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="flags_nodejs">
-<a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The metadata attached to the license.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -825,20 +792,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="flags_python">
-<a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The metadata attached to the license.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -923,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of warning messages regarding the license validity.
 {{% /md %}}</dd>
@@ -948,7 +904,7 @@ Get an existing License resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">flags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">installation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">issue_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> License</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datacenter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">installation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">issue_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> License</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1120,17 +1076,6 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_flags_csharp">
-<a href="#state_flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The metadata attached to the license.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_installationid_csharp">
 <a href="#state_installationid_csharp" style="color: inherit; text-decoration: inherit;">Installation<wbr>Id</a>
 </span> 
@@ -1256,17 +1201,6 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_flags_go">
-<a href="#state_flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The metadata attached to the license.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1411,17 +1345,6 @@ agent's default datacenter and the datacenter in the provider setup.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_flags_nodejs">
-<a href="#state_flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The metadata attached to the license.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_installationid_nodejs">
 <a href="#state_installationid_nodejs" style="color: inherit; text-decoration: inherit;">installation<wbr>Id</a>
 </span> 
@@ -1555,20 +1478,9 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_flags_python">
-<a href="#state_flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The metadata attached to the license.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1654,7 +1566,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#state_warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of warning messages regarding the license validity.
 {{% /md %}}</dd>
@@ -1679,6 +1591,6 @@ agent's default datacenter and the datacenter in the provider setup.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 

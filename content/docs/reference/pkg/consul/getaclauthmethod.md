@@ -743,7 +743,7 @@ displaying information about this auth method.
 <a href="#namespace_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaclauthmethodnamespacerule">List[Get<wbr>Acl<wbr>Auth<wbr>Method<wbr>Namespace<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getaclauthmethodnamespacerule">Sequence[Get<wbr>Acl<wbr>Auth<wbr>Method<wbr>Namespace<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}(Enterprise Only) A set of rules that control which
 namespace tokens created via this auth method will be created within
@@ -932,6 +932,6 @@ be either 'local' or 'global'.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 

@@ -445,7 +445,7 @@ The following output properties are available:
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnetworkareamembersmember">List[Get<wbr>Network<wbr>Area<wbr>Members<wbr>Member]</a></span>
+        <span class="property-type"><a href="#getnetworkareamembersmember">Sequence[Get<wbr>Network<wbr>Area<wbr>Members<wbr>Member]</a></span>
     </dt>
     <dd>{{% md %}}The list of Consul servers in this network area
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The server RPC port the node.
 {{% /md %}}</dd>
@@ -947,7 +947,7 @@ agent's default datacenter and the datacenter in the provider setup.
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The protocol version being spoken by the node.
 {{% /md %}}</dd>
@@ -970,7 +970,7 @@ in network areas.
 <a href="#rtt_python" style="color: inherit; text-decoration: inherit;">rtt</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}An estimated network round trip time from the server answering the
 query to the given server, in nanoseconds. This is computed using network
@@ -1009,6 +1009,6 @@ probe this server over its server RPC interface.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 </dl>
 

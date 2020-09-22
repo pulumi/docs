@@ -67,9 +67,9 @@ A Pulumi package for creating and managing consul resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 
