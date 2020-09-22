@@ -25,6 +25,7 @@ A Pulumi package for creating and managing linode cloud resources.
     <li><a href="nodebalancernode" title="NodeBalancerNode"><span class="symbol resource"></span>NodeBalancerNode</a></li>
     <li><a href="objectstoragebucket" title="ObjectStorageBucket"><span class="symbol resource"></span>ObjectStorageBucket</a></li>
     <li><a href="objectstoragekey" title="ObjectStorageKey"><span class="symbol resource"></span>ObjectStorageKey</a></li>
+    <li><a href="objectstorageobject" title="ObjectStorageObject"><span class="symbol resource"></span>ObjectStorageObject</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="rdns" title="Rdns"><span class="symbol resource"></span>Rdns</a></li>
     <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
@@ -57,9 +58,9 @@ A Pulumi package for creating and managing linode cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>2.6.0</dd>
 </dl>
 
 
