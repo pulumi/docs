@@ -100,6 +100,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="subnetworkiambinding" title="SubnetworkIAMBinding"><span class="symbol resource"></span>SubnetworkIAMBinding</a></li>
     <li><a href="subnetworkiammember" title="SubnetworkIAMMember"><span class="symbol resource"></span>SubnetworkIAMMember</a></li>
     <li><a href="subnetworkiampolicy" title="SubnetworkIAMPolicy"><span class="symbol resource"></span>SubnetworkIAMPolicy</a></li>
+    <li><a href="targetgrpcproxy" title="TargetGrpcProxy"><span class="symbol resource"></span>TargetGrpcProxy</a></li>
     <li><a href="targethttpproxy" title="TargetHttpProxy"><span class="symbol resource"></span>TargetHttpProxy</a></li>
     <li><a href="targethttpsproxy" title="TargetHttpsProxy"><span class="symbol resource"></span>TargetHttpsProxy</a></li>
     <li><a href="targetinstance" title="TargetInstance"><span class="symbol resource"></span>TargetInstance</a></li>
@@ -130,6 +131,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="getnetworkendpointgroup" title="GetNetworkEndpointGroup"><span class="symbol function"></span>GetNetworkEndpointGroup</a></li>
     <li><a href="getnodetypes" title="GetNodeTypes"><span class="symbol function"></span>GetNodeTypes</a></li>
     <li><a href="getregioninstancegroup" title="GetRegionInstanceGroup"><span class="symbol function"></span>GetRegionInstanceGroup</a></li>
+    <li><a href="getregionsslcertificate" title="GetRegionSslCertificate"><span class="symbol function"></span>GetRegionSslCertificate</a></li>
     <li><a href="getregions" title="GetRegions"><span class="symbol function"></span>GetRegions</a></li>
     <li><a href="getresourcepolicy" title="GetResourcePolicy"><span class="symbol function"></span>GetResourcePolicy</a></li>
     <li><a href="getrouter" title="GetRouter"><span class="symbol function"></span>GetRouter</a></li>
@@ -148,7 +150,7 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.24.0</dd>
+	<dd>3.25.0</dd>
 </dl>
 
 

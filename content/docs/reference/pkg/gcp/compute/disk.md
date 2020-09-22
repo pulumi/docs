@@ -332,9 +332,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
-the resource policy, as resource policies can not be updated more than one at a time. Use
-['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+~>**NOTE** This value does not support updating the
+resource policy, as resource policies can not be updated more than
+one at a time. Use
+`gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
@@ -544,9 +546,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
-the resource policy, as resource policies can not be updated more than one at a time. Use
-['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+~>**NOTE** This value does not support updating the
+resource policy, as resource policies can not be updated more than
+one at a time. Use
+`gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
@@ -756,9 +760,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
-the resource policy, as resource policies can not be updated more than one at a time. Use
-['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+~>**NOTE** This value does not support updating the
+resource policy, as resource policies can not be updated more than
+one at a time. Use
+`gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
@@ -968,9 +974,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
-the resource policy, as resource policies can not be updated more than one at a time. Use
-['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+~>**NOTE** This value does not support updating the
+resource policy, as resource policies can not be updated more than
+one at a time. Use
+`gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
@@ -1798,9 +1806,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
-the resource policy, as resource policies can not be updated more than one at a time. Use
-['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+~>**NOTE** This value does not support updating the
+resource policy, as resource policies can not be updated more than
+one at a time. Use
+`gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
@@ -2102,9 +2112,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
-the resource policy, as resource policies can not be updated more than one at a time. Use
-['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+~>**NOTE** This value does not support updating the
+resource policy, as resource policies can not be updated more than
+one at a time. Use
+`gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
@@ -2406,9 +2418,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
-the resource policy, as resource policies can not be updated more than one at a time. Use
-['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+~>**NOTE** This value does not support updating the
+resource policy, as resource policies can not be updated more than
+one at a time. Use
+`gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 
@@ -2710,9 +2724,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. ~>**NOTE** This value does not support updating
-the resource policy, as resource policies can not be updated more than one at a time. Use
-['google_compute_disk_resource_policy_attachment'](https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html)
+    <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.
+~>**NOTE** This value does not support updating the
+resource policy, as resource policies can not be updated more than
+one at a time. Use
+`gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
 {{% /md %}}</dd>
 

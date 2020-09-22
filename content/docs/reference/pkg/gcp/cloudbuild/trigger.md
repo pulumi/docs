@@ -304,8 +304,8 @@ a build.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -468,8 +468,8 @@ a build.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -632,8 +632,8 @@ a build.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -796,8 +796,8 @@ a build.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1265,8 +1265,8 @@ a build.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1451,8 +1451,8 @@ a build.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1637,8 +1637,8 @@ a build.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1823,8 +1823,8 @@ a build.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1935,6 +1935,18 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="artifacts_csharp">
+<a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="images_csharp">
 <a href="#images_csharp" style="color: inherit; text-decoration: inherit;">Images</a>
 </span> 
@@ -1942,9 +1954,9 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
-The images are pushed using the builder service account's credentials.
+The images will be pushed using the builder service account's credentials.
 The digests of the pushed images will be stored in the Build resource's results field.
-If any of the images fail to be pushed, the build status is marked FAILURE.
+If any of the images fail to be pushed, the build is marked FAILURE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1957,6 +1969,18 @@ If any of the images fail to be pushed, the build status is marked FAILURE.
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs should be written.
 Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_csharp">
+<a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Special options for this build.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2055,6 +2079,18 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="artifacts_go">
+<a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts</a></span>
+    </dt>
+    <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="images_go">
 <a href="#images_go" style="color: inherit; text-decoration: inherit;">Images</a>
 </span> 
@@ -2062,9 +2098,9 @@ Structure is documented below.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
-The images are pushed using the builder service account's credentials.
+The images will be pushed using the builder service account's credentials.
 The digests of the pushed images will be stored in the Build resource's results field.
-If any of the images fail to be pushed, the build status is marked FAILURE.
+If any of the images fail to be pushed, the build is marked FAILURE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2077,6 +2113,18 @@ If any of the images fail to be pushed, the build status is marked FAILURE.
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs should be written.
 Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_go">
+<a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Special options for this build.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2175,6 +2223,18 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="artifacts_nodejs">
+<a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts</a></span>
+    </dt>
+    <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="images_nodejs">
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
@@ -2182,9 +2242,9 @@ Structure is documented below.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
-The images are pushed using the builder service account's credentials.
+The images will be pushed using the builder service account's credentials.
 The digests of the pushed images will be stored in the Build resource's results field.
-If any of the images fail to be pushed, the build status is marked FAILURE.
+If any of the images fail to be pushed, the build is marked FAILURE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2197,6 +2257,18 @@ If any of the images fail to be pushed, the build status is marked FAILURE.
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs should be written.
 Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_nodejs">
+<a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Special options for this build.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2295,6 +2367,18 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="artifacts_python">
+<a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="images_python">
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span> 
@@ -2302,9 +2386,9 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
-The images are pushed using the builder service account's credentials.
+The images will be pushed using the builder service account's credentials.
 The digests of the pushed images will be stored in the Build resource's results field.
-If any of the images fail to be pushed, the build status is marked FAILURE.
+If any of the images fail to be pushed, the build is marked FAILURE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2317,6 +2401,18 @@ If any of the images fail to be pushed, the build status is marked FAILURE.
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs should be written.
 Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="options_python">
+<a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Special options for this build.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2401,6 +2497,1340 @@ completes or the build itself times out.
 
 
 
+<h4 id="triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildArtifacts">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildArtifacts">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildArtifactsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildArtifacts.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="images_csharp">
+<a href="#images_csharp" style="color: inherit; text-decoration: inherit;">Images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
+The images will be pushed using the builder service account's credentials.
+The digests of the pushed images will be stored in the Build resource's results field.
+If any of the images fail to be pushed, the build is marked FAILURE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="objects_csharp">
+<a href="#objects_csharp" style="color: inherit; text-decoration: inherit;">Objects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
+Files in the workspace matching specified paths globs will be uploaded to the
+Cloud Storage location using the builder service account's credentials.
+The location and generation of the uploaded objects will be stored in the Build resource's results field.
+If any objects fail to be pushed, the build is marked FAILURE.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="images_go">
+<a href="#images_go" style="color: inherit; text-decoration: inherit;">Images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
+The images will be pushed using the builder service account's credentials.
+The digests of the pushed images will be stored in the Build resource's results field.
+If any of the images fail to be pushed, the build is marked FAILURE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="objects_go">
+<a href="#objects_go" style="color: inherit; text-decoration: inherit;">Objects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects</a></span>
+    </dt>
+    <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
+Files in the workspace matching specified paths globs will be uploaded to the
+Cloud Storage location using the builder service account's credentials.
+The location and generation of the uploaded objects will be stored in the Build resource's results field.
+If any objects fail to be pushed, the build is marked FAILURE.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="images_nodejs">
+<a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
+The images will be pushed using the builder service account's credentials.
+The digests of the pushed images will be stored in the Build resource's results field.
+If any of the images fail to be pushed, the build is marked FAILURE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="objects_nodejs">
+<a href="#objects_nodejs" style="color: inherit; text-decoration: inherit;">objects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects</a></span>
+    </dt>
+    <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
+Files in the workspace matching specified paths globs will be uploaded to the
+Cloud Storage location using the builder service account's credentials.
+The location and generation of the uploaded objects will be stored in the Build resource's results field.
+If any objects fail to be pushed, the build is marked FAILURE.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="images_python">
+<a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
+The images will be pushed using the builder service account's credentials.
+The digests of the pushed images will be stored in the Build resource's results field.
+If any of the images fail to be pushed, the build is marked FAILURE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="objects_python">
+<a href="#objects_python" style="color: inherit; text-decoration: inherit;">objects</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
+Files in the workspace matching specified paths globs will be uploaded to the
+Cloud Storage location using the builder service account's credentials.
+The location and generation of the uploaded objects will be stored in the Build resource's results field.
+If any objects fail to be pushed, the build is marked FAILURE.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildArtifactsObjects">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildArtifactsObjects">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildArtifactsObjectsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildArtifactsObjects.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
+this location as a prefix.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="paths_csharp">
+<a href="#paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Path globs used to match files in the build's workspace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timing_csharp">
+<a href="#timing_csharp" style="color: inherit; text-decoration: inherit;">Timing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}-
+Output only. Stores timing information for pushing all artifact objects.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
+this location as a prefix.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="paths_go">
+<a href="#paths_go" style="color: inherit; text-decoration: inherit;">Paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Path globs used to match files in the build's workspace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timing_go">
+<a href="#timing_go" style="color: inherit; text-decoration: inherit;">Timing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing</a></span>
+    </dt>
+    <dd>{{% md %}}-
+Output only. Stores timing information for pushing all artifact objects.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
+this location as a prefix.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="paths_nodejs">
+<a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Path globs used to match files in the build's workspace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timing_nodejs">
+<a href="#timing_nodejs" style="color: inherit; text-decoration: inherit;">timing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing</a></span>
+    </dt>
+    <dd>{{% md %}}-
+Output only. Stores timing information for pushing all artifact objects.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
+Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
+this location as a prefix.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="paths_python">
+<a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Path globs used to match files in the build's workspace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timing_python">
+<a href="#timing_python" style="color: inherit; text-decoration: inherit;">timing</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}-
+Output only. Stores timing information for pushing all artifact objects.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildArtifactsObjectsTiming">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildArtifactsObjectsTiming">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsTimingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildArtifactsObjectsTimingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildArtifactsObjectsTimingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildArtifactsObjectsTiming.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_csharp">
+<a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}End of time span.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Start of time span.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_go">
+<a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}End of time span.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Start of time span.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_nodejs">
+<a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}End of time span.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Start of time span.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}End of time span.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Start of time span.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="triggerbuildoptions">Trigger<wbr>Build<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_csharp">
+<a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
+some of the space will be used by the operating system and build utilities.
+Also note that this is the minimum disk size that will be allocated for the build --
+the build may run with a larger disk than requested. At present, the maximum disk size
+is 1000GB; builds that request more than the maximum are rejected with an error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamicsubstitutions_csharp">
+<a href="#dynamicsubstitutions_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify whether or not to apply bash style string operations to the substitutions.
+NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="envs_csharp">
+<a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
+in this build. If a variable is defined in both globally and in a build step,
+the variable will use the build step value.
+The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logstreamingoption_csharp">
+<a href="#logstreamingoption_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Streaming<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.
+Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logging_csharp">
+<a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.
+Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="machinetype_csharp">
+<a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Compute Engine machine type on which to run the build.
+Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, and `N1_HIGHCPU_32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestedverifyoption_csharp">
+<a href="#requestedverifyoption_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Verify<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Requested verifiability options.
+Possible values are `NOT_VERIFIED` and `VERIFIED`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretenvs_csharp">
+<a href="#secretenvs_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Envs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceprovenancehashes_csharp">
+<a href="#sourceprovenancehashes_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Provenance<wbr>Hashes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Requested hash for SourceProvenance.
+Each value may be one of `NONE`, `SHA256`, and `MD5`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutionoption_csharp">
+<a href="#substitutionoption_csharp" style="color: inherit; text-decoration: inherit;">Substitution<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks.
+NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden
+in the build configuration file.
+Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumes_csharp">
+<a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildoptionsvolume">List&lt;Trigger<wbr>Build<wbr>Options<wbr>Volume<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Global list of volumes to mount for ALL build steps
+Each volume is created as an empty volume prior to starting the build process.
+Upon completion of the build, volumes and their contents are discarded. Global
+volume names and paths cannot conflict with the volumes defined a build step.
+Using a global volume in a build with only one step is not valid as it is indicative
+of a build request with an incorrect configuration.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workerpool_csharp">
+<a href="#workerpool_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
+This field is experimental.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_go">
+<a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
+some of the space will be used by the operating system and build utilities.
+Also note that this is the minimum disk size that will be allocated for the build --
+the build may run with a larger disk than requested. At present, the maximum disk size
+is 1000GB; builds that request more than the maximum are rejected with an error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamicsubstitutions_go">
+<a href="#dynamicsubstitutions_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify whether or not to apply bash style string operations to the substitutions.
+NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="envs_go">
+<a href="#envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
+in this build. If a variable is defined in both globally and in a build step,
+the variable will use the build step value.
+The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logstreamingoption_go">
+<a href="#logstreamingoption_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Streaming<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.
+Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logging_go">
+<a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.
+Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="machinetype_go">
+<a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Compute Engine machine type on which to run the build.
+Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, and `N1_HIGHCPU_32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestedverifyoption_go">
+<a href="#requestedverifyoption_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Verify<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Requested verifiability options.
+Possible values are `NOT_VERIFIED` and `VERIFIED`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretenvs_go">
+<a href="#secretenvs_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Envs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceprovenancehashes_go">
+<a href="#sourceprovenancehashes_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Provenance<wbr>Hashes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Requested hash for SourceProvenance.
+Each value may be one of `NONE`, `SHA256`, and `MD5`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutionoption_go">
+<a href="#substitutionoption_go" style="color: inherit; text-decoration: inherit;">Substitution<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks.
+NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden
+in the build configuration file.
+Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumes_go">
+<a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildoptionsvolume">[]Trigger<wbr>Build<wbr>Options<wbr>Volume</a></span>
+    </dt>
+    <dd>{{% md %}}Global list of volumes to mount for ALL build steps
+Each volume is created as an empty volume prior to starting the build process.
+Upon completion of the build, volumes and their contents are discarded. Global
+volume names and paths cannot conflict with the volumes defined a build step.
+Using a global volume in a build with only one step is not valid as it is indicative
+of a build request with an incorrect configuration.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workerpool_go">
+<a href="#workerpool_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
+This field is experimental.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disksizegb_nodejs">
+<a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
+some of the space will be used by the operating system and build utilities.
+Also note that this is the minimum disk size that will be allocated for the build --
+the build may run with a larger disk than requested. At present, the maximum disk size
+is 1000GB; builds that request more than the maximum are rejected with an error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamicsubstitutions_nodejs">
+<a href="#dynamicsubstitutions_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify whether or not to apply bash style string operations to the substitutions.
+NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="envs_nodejs">
+<a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
+in this build. If a variable is defined in both globally and in a build step,
+the variable will use the build step value.
+The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logstreamingoption_nodejs">
+<a href="#logstreamingoption_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Streaming<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.
+Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logging_nodejs">
+<a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.
+Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="machinetype_nodejs">
+<a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Compute Engine machine type on which to run the build.
+Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, and `N1_HIGHCPU_32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestedverifyoption_nodejs">
+<a href="#requestedverifyoption_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Verify<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Requested verifiability options.
+Possible values are `NOT_VERIFIED` and `VERIFIED`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretenvs_nodejs">
+<a href="#secretenvs_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Envs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceprovenancehashes_nodejs">
+<a href="#sourceprovenancehashes_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Provenance<wbr>Hashes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Requested hash for SourceProvenance.
+Each value may be one of `NONE`, `SHA256`, and `MD5`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutionoption_nodejs">
+<a href="#substitutionoption_nodejs" style="color: inherit; text-decoration: inherit;">substitution<wbr>Option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks.
+NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden
+in the build configuration file.
+Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumes_nodejs">
+<a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildoptionsvolume">Trigger<wbr>Build<wbr>Options<wbr>Volume[]</a></span>
+    </dt>
+    <dd>{{% md %}}Global list of volumes to mount for ALL build steps
+Each volume is created as an empty volume prior to starting the build process.
+Upon completion of the build, volumes and their contents are discarded. Global
+volume names and paths cannot conflict with the volumes defined a build step.
+Using a global volume in a build with only one step is not valid as it is indicative
+of a build request with an incorrect configuration.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workerpool_nodejs">
+<a href="#workerpool_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
+This field is experimental.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
+some of the space will be used by the operating system and build utilities.
+Also note that this is the minimum disk size that will be allocated for the build --
+the build may run with a larger disk than requested. At present, the maximum disk size
+is 1000GB; builds that request more than the maximum are rejected with an error.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_substitutions_python">
+<a href="#dynamic_substitutions_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify whether or not to apply bash style string operations to the substitutions.
+NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="envs_python">
+<a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
+in this build. If a variable is defined in both globally and in a build step,
+the variable will use the build step value.
+The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_streaming_option_python">
+<a href="#log_streaming_option_python" style="color: inherit; text-decoration: inherit;">log_<wbr>streaming_<wbr>option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.
+Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logging_python">
+<a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.
+Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="machine_type_python">
+<a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Compute Engine machine type on which to run the build.
+Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, and `N1_HIGHCPU_32`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requested_verify_option_python">
+<a href="#requested_verify_option_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>verify_<wbr>option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Requested verifiability options.
+Possible values are `NOT_VERIFIED` and `VERIFIED`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_envs_python">
+<a href="#secret_envs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>envs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_provenance_hashes_python">
+<a href="#source_provenance_hashes_python" style="color: inherit; text-decoration: inherit;">source_<wbr>provenance_<wbr>hashes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Requested hash for SourceProvenance.
+Each value may be one of `NONE`, `SHA256`, and `MD5`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitution_option_python">
+<a href="#substitution_option_python" style="color: inherit; text-decoration: inherit;">substitution_<wbr>option</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks.
+NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden
+in the build configuration file.
+Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumes_python">
+<a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildoptionsvolume">Sequence[Trigger<wbr>Build<wbr>Options<wbr>Volume<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Global list of volumes to mount for ALL build steps
+Each volume is created as an empty volume prior to starting the build process.
+Upon completion of the build, volumes and their contents are discarded. Global
+volume names and paths cannot conflict with the volumes defined a build step.
+Using a global volume in a build with only one step is not valid as it is indicative
+of a build request with an incorrect configuration.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="worker_pool_python">
+<a href="#worker_pool_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
+This field is experimental.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="triggerbuildoptionsvolume">Trigger<wbr>Build<wbr>Options<wbr>Volume</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildOptionsVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildOptionsVolume">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildOptionsVolumeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildOptionsVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildOptionsVolume.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path at which to mount the volume.
+Paths must be absolute and cannot conflict with other volume paths on the same
+build step or with certain reserved volume paths.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path at which to mount the volume.
+Paths must be absolute and cannot conflict with other volume paths on the same
+build step or with certain reserved volume paths.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path at which to mount the volume.
+Paths must be absolute and cannot conflict with other volume paths on the same
+build step or with certain reserved volume paths.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the volume to mount.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path at which to mount the volume.
+Paths must be absolute and cannot conflict with other volume paths on the same
+build step or with certain reserved volume paths.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="triggerbuildsecret">Trigger<wbr>Build<wbr>Secret</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildSecret">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildSecret">output</a> API doc for this type.
@@ -2438,10 +3868,9 @@ completes or the build itself times out.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of environment variables which are encrypted using
-a Cloud Key
-Management Service crypto key. These values must be specified in
-the build's `Secret`.
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
 {{% /md %}}</dd>
 
 </dl>
@@ -2470,10 +3899,9 @@ the build's `Secret`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A list of environment variables which are encrypted using
-a Cloud Key
-Management Service crypto key. These values must be specified in
-the build's `Secret`.
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
 {{% /md %}}</dd>
 
 </dl>
@@ -2502,10 +3930,9 @@ the build's `Secret`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A list of environment variables which are encrypted using
-a Cloud Key
-Management Service crypto key. These values must be specified in
-the build's `Secret`.
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
 {{% /md %}}</dd>
 
 </dl>
@@ -2534,10 +3961,9 @@ the build's `Secret`.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A list of environment variables which are encrypted using
-a Cloud Key
-Management Service crypto key. These values must be specified in
-the build's `Secret`.
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
 {{% /md %}}</dd>
 
 </dl>
@@ -3352,8 +4778,8 @@ If the generation is omitted, the latest generation will be used
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3411,10 +4837,10 @@ If unset, the image's default entrypoint is used
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of environment variable definitions to be used when
-running a step.
-The elements are of the form "KEY=VALUE" for the environment variable
-"KEY" being given the value "VALUE".
+    <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
+in this build. If a variable is defined in both globally and in a build step,
+the variable will use the build step value.
+The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3437,10 +4863,9 @@ reference this build step as a dependency.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of environment variables which are encrypted using
-a Cloud Key
-Management Service crypto key. These values must be specified in
-the build's `Secret`.
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3465,8 +4890,9 @@ completes or the build itself times out.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Output only. Stores timing information for executing this
-build step.
+    <dd>{{% md %}}-
+Output only. Stores timing information for pushing all artifact objects.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3477,12 +4903,12 @@ build step.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstepvolume">List&lt;Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of volumes to mount into the build step.
-Each volume is created as an empty volume prior to execution of the
-build step. Upon completion of the build, volumes and their contents
-are discarded.
-Using a named volume in only one step is not valid as it is
-indicative of a build request with an incorrect configuration.
+    <dd>{{% md %}}Global list of volumes to mount for ALL build steps
+Each volume is created as an empty volume prior to starting the build process.
+Upon completion of the build, volumes and their contents are discarded. Global
+volume names and paths cannot conflict with the volumes defined a build step.
+Using a global volume in a build with only one step is not valid as it is indicative
+of a build request with an incorrect configuration.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -3517,8 +4943,8 @@ have completed successfully.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3576,10 +5002,10 @@ If unset, the image's default entrypoint is used
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of environment variable definitions to be used when
-running a step.
-The elements are of the form "KEY=VALUE" for the environment variable
-"KEY" being given the value "VALUE".
+    <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
+in this build. If a variable is defined in both globally and in a build step,
+the variable will use the build step value.
+The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3602,10 +5028,9 @@ reference this build step as a dependency.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of environment variables which are encrypted using
-a Cloud Key
-Management Service crypto key. These values must be specified in
-the build's `Secret`.
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3630,8 +5055,9 @@ completes or the build itself times out.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Output only. Stores timing information for executing this
-build step.
+    <dd>{{% md %}}-
+Output only. Stores timing information for pushing all artifact objects.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3642,12 +5068,12 @@ build step.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstepvolume">[]Trigger<wbr>Build<wbr>Step<wbr>Volume</a></span>
     </dt>
-    <dd>{{% md %}}List of volumes to mount into the build step.
-Each volume is created as an empty volume prior to execution of the
-build step. Upon completion of the build, volumes and their contents
-are discarded.
-Using a named volume in only one step is not valid as it is
-indicative of a build request with an incorrect configuration.
+    <dd>{{% md %}}Global list of volumes to mount for ALL build steps
+Each volume is created as an empty volume prior to starting the build process.
+Upon completion of the build, volumes and their contents are discarded. Global
+volume names and paths cannot conflict with the volumes defined a build step.
+Using a global volume in a build with only one step is not valid as it is indicative
+of a build request with an incorrect configuration.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -3682,8 +5108,8 @@ have completed successfully.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3741,10 +5167,10 @@ If unset, the image's default entrypoint is used
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of environment variable definitions to be used when
-running a step.
-The elements are of the form "KEY=VALUE" for the environment variable
-"KEY" being given the value "VALUE".
+    <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
+in this build. If a variable is defined in both globally and in a build step,
+the variable will use the build step value.
+The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3767,10 +5193,9 @@ reference this build step as a dependency.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of environment variables which are encrypted using
-a Cloud Key
-Management Service crypto key. These values must be specified in
-the build's `Secret`.
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3795,8 +5220,9 @@ completes or the build itself times out.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Output only. Stores timing information for executing this
-build step.
+    <dd>{{% md %}}-
+Output only. Stores timing information for pushing all artifact objects.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3807,12 +5233,12 @@ build step.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstepvolume">Trigger<wbr>Build<wbr>Step<wbr>Volume[]</a></span>
     </dt>
-    <dd>{{% md %}}List of volumes to mount into the build step.
-Each volume is created as an empty volume prior to execution of the
-build step. Upon completion of the build, volumes and their contents
-are discarded.
-Using a named volume in only one step is not valid as it is
-indicative of a build request with an incorrect configuration.
+    <dd>{{% md %}}Global list of volumes to mount for ALL build steps
+Each volume is created as an empty volume prior to starting the build process.
+Upon completion of the build, volumes and their contents are discarded. Global
+volume names and paths cannot conflict with the volumes defined a build step.
+Using a global volume in a build with only one step is not valid as it is indicative
+of a build request with an incorrect configuration.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -3847,8 +5273,8 @@ have completed successfully.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3906,10 +5332,10 @@ If unset, the image's default entrypoint is used
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of environment variable definitions to be used when
-running a step.
-The elements are of the form "KEY=VALUE" for the environment variable
-"KEY" being given the value "VALUE".
+    <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
+in this build. If a variable is defined in both globally and in a build step,
+the variable will use the build step value.
+The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3932,10 +5358,9 @@ reference this build step as a dependency.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of environment variables which are encrypted using
-a Cloud Key
-Management Service crypto key. These values must be specified in
-the build's `Secret`.
+    <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
+Service crypto key. These values must be specified in the build's Secret. These variables
+will be available to all build steps in this build.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3960,8 +5385,9 @@ completes or the build itself times out.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Output only. Stores timing information for executing this
-build step.
+    <dd>{{% md %}}-
+Output only. Stores timing information for pushing all artifact objects.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3972,12 +5398,12 @@ build step.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstepvolume">Sequence[Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of volumes to mount into the build step.
-Each volume is created as an empty volume prior to execution of the
-build step. Upon completion of the build, volumes and their contents
-are discarded.
-Using a named volume in only one step is not valid as it is
-indicative of a build request with an incorrect configuration.
+    <dd>{{% md %}}Global list of volumes to mount for ALL build steps
+Each volume is created as an empty volume prior to starting the build process.
+Upon completion of the build, volumes and their contents are discarded. Global
+volume names and paths cannot conflict with the volumes defined a build step.
+Using a global volume in a build with only one step is not valid as it is indicative
+of a build request with an incorrect configuration.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -4030,8 +5456,8 @@ have completed successfully.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4043,8 +5469,8 @@ Docker volumes. Each named volume must be used by at least two build steps.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume.
-Paths must be absolute and cannot conflict with other volume paths on
-the same build step or with certain reserved volume paths.
+Paths must be absolute and cannot conflict with other volume paths on the same
+build step or with certain reserved volume paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -4063,8 +5489,8 @@ the same build step or with certain reserved volume paths.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4076,8 +5502,8 @@ Docker volumes. Each named volume must be used by at least two build steps.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume.
-Paths must be absolute and cannot conflict with other volume paths on
-the same build step or with certain reserved volume paths.
+Paths must be absolute and cannot conflict with other volume paths on the same
+build step or with certain reserved volume paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -4096,8 +5522,8 @@ the same build step or with certain reserved volume paths.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4109,8 +5535,8 @@ Docker volumes. Each named volume must be used by at least two build steps.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume.
-Paths must be absolute and cannot conflict with other volume paths on
-the same build step or with certain reserved volume paths.
+Paths must be absolute and cannot conflict with other volume paths on the same
+build step or with certain reserved volume paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -4129,8 +5555,8 @@ the same build step or with certain reserved volume paths.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4142,8 +5568,8 @@ Docker volumes. Each named volume must be used by at least two build steps.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume.
-Paths must be absolute and cannot conflict with other volume paths on
-the same build step or with certain reserved volume paths.
+Paths must be absolute and cannot conflict with other volume paths on the same
+build step or with certain reserved volume paths.
 {{% /md %}}</dd>
 
 </dl>
@@ -4180,8 +5606,8 @@ the same build step or with certain reserved volume paths.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4236,8 +5662,8 @@ Structure is documented below.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4292,8 +5718,8 @@ Structure is documented below.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4348,8 +5774,8 @@ Structure is documented below.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
-Volume names must be unique per build step and must be valid names for
-Docker volumes. Each named volume must be used by at least two build steps.
+Volume names must be unique per build step and must be valid names for Docker volumes.
+Each named volume must be used by at least two build steps.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

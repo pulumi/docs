@@ -985,6 +985,8 @@ Defaults to `global`.
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
+Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+only be removed by setting `policy_uri = ""`, rather than removing the whole block.
 Structure defined below.
 {{% /md %}}</dd>
 
@@ -1151,6 +1153,8 @@ in a cluster.. Structure defined below.
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
+Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+only be removed by setting `policy_uri = ""`, rather than removing the whole block.
 Structure defined below.
 {{% /md %}}</dd>
 
@@ -1317,6 +1321,8 @@ in a cluster.. Structure defined below.
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
+Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+only be removed by setting `policy_uri = ""`, rather than removing the whole block.
 Structure defined below.
 {{% /md %}}</dd>
 
@@ -1483,6 +1489,8 @@ in a cluster.. Structure defined below.
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
+Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+only be removed by setting `policy_uri = ""`, rather than removing the whole block.
 Structure defined below.
 {{% /md %}}</dd>
 

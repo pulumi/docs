@@ -1383,7 +1383,10 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
+and outages due to abrupt scale-in events
+Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1498,7 +1501,10 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
+and outages due to abrupt scale-in events
+Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1613,7 +1619,10 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
+and outages due to abrupt scale-in events
+Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1728,7 +1737,10 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
+and outages due to abrupt scale-in events
+Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

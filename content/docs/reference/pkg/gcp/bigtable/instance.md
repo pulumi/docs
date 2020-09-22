@@ -232,8 +232,8 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span> 
@@ -241,7 +241,11 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
-{{% /md %}}</dd>
+It is recommended to leave this field unspecified since the distinction between `"DEVELOPMENT"` and `"PRODUCTION"` instances is going away,
+and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
+`"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
+is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -319,8 +323,8 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span> 
@@ -328,7 +332,11 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
-{{% /md %}}</dd>
+It is recommended to leave this field unspecified since the distinction between `"DEVELOPMENT"` and `"PRODUCTION"` instances is going away,
+and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
+`"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
+is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -406,8 +414,8 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span> 
@@ -415,7 +423,11 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
-{{% /md %}}</dd>
+It is recommended to leave this field unspecified since the distinction between `"DEVELOPMENT"` and `"PRODUCTION"` instances is going away,
+and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
+`"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
+is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -493,8 +505,8 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span> 
@@ -502,7 +514,11 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
-{{% /md %}}</dd>
+It is recommended to leave this field unspecified since the distinction between `"DEVELOPMENT"` and `"PRODUCTION"` instances is going away,
+and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
+`"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
+is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -786,8 +802,8 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instancetype_csharp">
 <a href="#state_instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span> 
@@ -795,7 +811,11 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
-{{% /md %}}</dd>
+It is recommended to leave this field unspecified since the distinction between `"DEVELOPMENT"` and `"PRODUCTION"` instances is going away,
+and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
+`"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
+is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -873,8 +893,8 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instancetype_go">
 <a href="#state_instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span> 
@@ -882,7 +902,11 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
-{{% /md %}}</dd>
+It is recommended to leave this field unspecified since the distinction between `"DEVELOPMENT"` and `"PRODUCTION"` instances is going away,
+and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
+`"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
+is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -960,8 +984,8 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instancetype_nodejs">
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span> 
@@ -969,7 +993,11 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
-{{% /md %}}</dd>
+It is recommended to leave this field unspecified since the distinction between `"DEVELOPMENT"` and `"PRODUCTION"` instances is going away,
+and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
+`"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
+is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1047,8 +1075,8 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instance_type_python">
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span> 
@@ -1056,7 +1084,11 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
-{{% /md %}}</dd>
+It is recommended to leave this field unspecified since the distinction between `"DEVELOPMENT"` and `"PRODUCTION"` instances is going away,
+and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
+`"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
+is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

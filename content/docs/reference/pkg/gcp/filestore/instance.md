@@ -1450,7 +1450,9 @@ for the standard tier, or 2560 GiB for the premium tier.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefilesharesnfsexportoption">List&lt;Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
+Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1490,7 +1492,9 @@ for the standard tier, or 2560 GiB for the premium tier.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefilesharesnfsexportoption">[]Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
+Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1530,7 +1534,9 @@ for the standard tier, or 2560 GiB for the premium tier.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefilesharesnfsexportoption">Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
+Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1570,7 +1576,9 @@ for the standard tier, or 2560 GiB for the premium tier.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancefilesharesnfsexportoption">Sequence[Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
+Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -23,7 +23,7 @@ Explore the resources and functions of the resourcemanager module in the GCP pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.24.0</dd>
+	<dd>3.25.0</dd>
 </dl>
 
 

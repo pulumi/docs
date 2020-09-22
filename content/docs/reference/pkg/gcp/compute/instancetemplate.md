@@ -2968,8 +2968,10 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching
-this disk.
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
+and the request will fail if you attempt to attach a persistent disk in any other format
+than SCSI. Local SSDs can use either NVME or SCSI.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3007,7 +3009,7 @@ read-write mode.
     </dt>
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
-> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+> **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3024,7 +3026,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
-> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+> **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3137,8 +3139,10 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching
-this disk.
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
+and the request will fail if you attempt to attach a persistent disk in any other format
+than SCSI. Local SSDs can use either NVME or SCSI.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3176,7 +3180,7 @@ read-write mode.
     </dt>
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
-> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+> **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3193,7 +3197,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
-> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+> **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3306,8 +3310,10 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching
-this disk.
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
+and the request will fail if you attempt to attach a persistent disk in any other format
+than SCSI. Local SSDs can use either NVME or SCSI.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3345,7 +3351,7 @@ read-write mode.
     </dt>
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
-> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+> **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3362,7 +3368,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
-> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+> **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3475,8 +3481,10 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching
-this disk.
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
+and the request will fail if you attempt to attach a persistent disk in any other format
+than SCSI. Local SSDs can use either NVME or SCSI.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3514,7 +3522,7 @@ read-write mode.
     </dt>
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
-> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+> **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3531,7 +3539,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
-> **Note:** Either `source` or `source_image` is **required** when creating a new instance except for when creating a local SSD. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
+> **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
