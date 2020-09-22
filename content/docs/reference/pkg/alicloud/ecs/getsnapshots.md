@@ -21,32 +21,21 @@ The following arguments are supported:
 
 * `instance_id` - (Optional) The specified instance ID.
 * `disk_id` - (Optional) The specified disk ID.
-* `encrypted` - (Optional) Queries the encrypted snapshots. Optional values:
-  * true: Encrypted snapshots.
-  * false: No encryption attribute limit.
-  
-  Default value: false.
+* `encrypted` - (Optional) Queries the encrypted snapshots. Optional values: `true`: Encrypted snapshots. `false`: No encryption attribute limit. Default value: `false`.
 * `ids` - (Optional)  A list of snapshot IDs.
 * `name_regex` - (Optional) A regex string to filter results by snapshot name.
-* `status` - (Optional) The specified snapshot status.
-  * The snapshot status. Optional values:
+* `status` - (Optional) The specified snapshot status. Default value: `all`. Optional values:
   * progressing: The snapshots are being created.
   * accomplished: The snapshots are ready to use.
   * failed: The snapshot creation failed.
   * all: All status.
-  
-  Default value: all.
-
-* `type` - (Optional) The snapshot category. Optional values:
+* `type` - (Optional) The snapshot category. Default value: `all`. Optional values:
   * auto: Auto snapshots.
   * user: Manual snapshots.
   * all: Auto and manual snapshots.
-  
-  Default value: all.
 * `source_disk_type` - (Optional) The type of source disk:
   * System: The snapshots are created for system disks.
   * Data: The snapshots are created for data disks.
-
 * `usage` - (Optional) The usage of the snapshot:
   * image: The snapshots are used to create custom images.
   * disk: The snapshots are used to CreateDisk.
@@ -246,9 +235,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -259,10 +246,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -294,11 +278,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
 {{% /md %}}</dd>
 
 </dl>
@@ -378,9 +358,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -391,10 +369,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,11 +401,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
 {{% /md %}}</dd>
 
 </dl>
@@ -510,9 +481,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -523,10 +492,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -558,11 +524,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
 {{% /md %}}</dd>
 
 </dl>
@@ -642,9 +604,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -655,10 +615,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -690,11 +647,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
 {{% /md %}}</dd>
 
 </dl>
@@ -820,9 +773,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -833,10 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -868,11 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
 {{% /md %}}</dd>
 
 </dl>
@@ -985,9 +929,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -998,10 +940,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1033,11 +972,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1150,9 +1085,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1163,10 +1096,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1198,11 +1128,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1315,9 +1241,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1328,10 +1252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1363,11 +1284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1530,9 +1447,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1543,10 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1557,11 +1469,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the snapshot.
 {{% /md %}}</dd>
 
 </dl>
@@ -1700,9 +1619,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1713,10 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1727,11 +1641,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the snapshot.
 {{% /md %}}</dd>
 
 </dl>
@@ -1870,9 +1791,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1883,10 +1802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1897,11 +1813,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the snapshot.
 {{% /md %}}</dd>
 
 </dl>
@@ -2040,9 +1963,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Source disk attribute. Value range:
-* System
-* Data
+    <dd>{{% md %}}Source disk attribute. Value range: `System`,`Data`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2053,10 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot status. Value range:
-* progressing
-* accomplished
-* failed
+    <dd>{{% md %}}The snapshot status. Value range: `progressing`, `accomplished` and `failed`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2067,11 +1985,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range:
-* image
-* disk
-* image_disk
-* none
+    <dd>{{% md %}}Whether the snapshots are used to create resources or not. Value range: `image`, `disk`, `image_disk` and `none`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the snapshot.
 {{% /md %}}</dd>
 
 </dl>

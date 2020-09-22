@@ -24,6 +24,7 @@ Explore the resources and functions of the nas module in the AliCloud package.
     <li><a href="getfilesystems" title="GetFileSystems"><span class="symbol function"></span>GetFileSystems</a></li>
     <li><a href="getmounttargets" title="GetMountTargets"><span class="symbol function"></span>GetMountTargets</a></li>
     <li><a href="getprotocols" title="GetProtocols"><span class="symbol function"></span>GetProtocols</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,7 +36,7 @@ Explore the resources and functions of the nas module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.17.0</dd>
+	<dd>2.18.0</dd>
 </dl>
 
 

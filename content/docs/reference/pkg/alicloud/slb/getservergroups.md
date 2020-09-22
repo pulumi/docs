@@ -26,9 +26,34 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sampleDs = Output.Create(AliCloud.Slb.GetServerGroups.InvokeAsync(new AliCloud.Slb.GetServerGroupsArgs
+        var config = new Config();
+        var name = config.Get("name") ?? "slbservergroups";
+        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
         {
-            LoadBalancerId = alicloud_slb.Sample_slb.Id,
+            AvailableDiskCategory = "cloud_efficiency",
+            AvailableResourceCreation = "VSwitch",
+        }));
+        var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/16",
+        });
+        var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
+        {
+            VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/16",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+        });
+        var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer("defaultLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
+        {
+            VswitchId = defaultSwitch.Id,
+        });
+        var defaultServerGroup = new AliCloud.Slb.ServerGroup("defaultServerGroup", new AliCloud.Slb.ServerGroupArgs
+        {
+            LoadBalancerId = defaultLoadBalancer.Id,
+        });
+        var sampleDs = defaultLoadBalancer.Id.Apply(id => AliCloud.Slb.GetServerGroups.InvokeAsync(new AliCloud.Slb.GetServerGroupsArgs
+        {
+            LoadBalancerId = id,
         }));
         this.FirstSlbServerGroupId = sampleDs.Apply(sampleDs => sampleDs.SlbServerGroups[0].Id);
     }
@@ -45,19 +70,52 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		sampleDs, err := slb.GetServerGroups(ctx, &slb.GetServerGroupsArgs{
-			LoadBalancerId: alicloud_slb.Sample_slb.Id,
+		opt0 := "cloud_efficiency"
+		opt1 := "VSwitch"
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableDiskCategory:     &opt0,
+			AvailableResourceCreation: &opt1,
 		}, nil)
 		if err != nil {
 			return err
 		}
-		ctx.Export("firstSlbServerGroupId", sampleDs.SlbServerGroups[0].Id)
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/16"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		defaultLoadBalancer, err := slb.NewLoadBalancer(ctx, "defaultLoadBalancer", &slb.LoadBalancerArgs{
+			VswitchId: defaultSwitch.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = slb.NewServerGroup(ctx, "defaultServerGroup", &slb.ServerGroupArgs{
+			LoadBalancerId: defaultLoadBalancer.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstSlbServerGroupId", sampleDs.ApplyT(func(sampleDs slb.GetServerGroupsResult) (string, error) {
+			return sampleDs.SlbServerGroups[0].Id, nil
+		}).(pulumi.StringOutput))
 		return nil
 	})
 }
@@ -70,7 +128,20 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-sample_ds = alicloud.slb.get_server_groups(load_balancer_id=alicloud_slb["sample_slb"]["id"])
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "slbservergroups"
+default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
+    available_resource_creation="VSwitch")
+default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
+default_switch = alicloud.vpc.Switch("defaultSwitch",
+    vpc_id=default_network.id,
+    cidr_block="172.16.0.0/16",
+    availability_zone=default_zones.zones[0].id)
+default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer", vswitch_id=default_switch.id)
+default_server_group = alicloud.slb.ServerGroup("defaultServerGroup", load_balancer_id=default_load_balancer.id)
+sample_ds = default_load_balancer.id.apply(lambda id: alicloud.slb.get_server_groups(load_balancer_id=id))
 pulumi.export("firstSlbServerGroupId", sample_ds.slb_server_groups[0].id)
 ```
 
@@ -82,10 +153,23 @@ pulumi.export("firstSlbServerGroupId", sample_ds.slb_server_groups[0].id)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getServerGroups({
+const config = new pulumi.Config();
+const name = config.get("name") || "slbservergroups";
+const defaultZones = alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
+    vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/16",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+});
+const defaultLoadBalancer = new alicloud.slb.LoadBalancer("defaultLoadBalancer", {vswitchId: defaultSwitch.id});
+const defaultServerGroup = new alicloud.slb.ServerGroup("defaultServerGroup", {loadBalancerId: defaultLoadBalancer.id});
+const sampleDs = defaultLoadBalancer.id.apply(id => alicloud.slb.getServerGroups({
     loadBalancerId: id,
-}, { async: true }));
-
+}));
 export const firstSlbServerGroupId = sampleDs.slbServerGroups[0].id;
 ```
 

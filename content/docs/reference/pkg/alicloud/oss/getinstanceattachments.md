@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var attachmentsDs = Output.Create(AliCloud.Oss.GetInstanceAttachments.InvokeAsync(new AliCloud.Oss.GetInstanceAttachmentsArgs
+        var attachmentsDs = Output.Create(AliCloud.Ots.GetInstanceAttachments.InvokeAsync(new AliCloud.Ots.GetInstanceAttachmentsArgs
         {
             InstanceName = "sample-instance",
             NameRegex = "testvpc",
@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ots"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -55,7 +55,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "testvpc"
 		opt1 := "attachments.txt"
-		attachmentsDs, err := oss.GetInstanceAttachments(ctx, &oss.GetInstanceAttachmentsArgs{
+		attachmentsDs, err := ots.GetInstanceAttachments(ctx, &ots.GetInstanceAttachmentsArgs{
 			InstanceName: "sample-instance",
 			NameRegex:    &opt0,
 			OutputFile:   &opt1,
@@ -76,7 +76,7 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-attachments_ds = alicloud.oss.get_instance_attachments(instance_name="sample-instance",
+attachments_ds = alicloud.ots.get_instance_attachments(instance_name="sample-instance",
     name_regex="testvpc",
     output_file="attachments.txt")
 pulumi.export("firstOtsAttachmentId", attachments_ds.attachments[0].id)
@@ -90,7 +90,7 @@ pulumi.export("firstOtsAttachmentId", attachments_ds.attachments[0].id)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const attachmentsDs = pulumi.output(alicloud.oss.getInstanceAttachments({
+const attachmentsDs = pulumi.output(alicloud.ots.getInstanceAttachments({
     instanceName: "sample-instance",
     nameRegex: "testvpc",
     outputFile: "attachments.txt",
@@ -102,6 +102,7 @@ export const firstOtsAttachmentId = attachmentsDs.attachments[0].id;
 {{% /example %}}
 
 {{% /examples %}}
+<p class="resource-deprecated">Deprecated: {{% md %}}alicloud.oss.getInstanceAttachments has been deprecated in favor of alicloud.ots.getInstanceAttachments{{% /md %}}</p>
 
 
 ## Using GetInstanceAttachments {#using}

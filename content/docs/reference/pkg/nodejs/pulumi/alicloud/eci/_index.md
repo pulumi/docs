@@ -3,7 +3,7 @@ title: "Module eci"
 title_tag: "Module eci | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "eci"
 meta_desc: "Explore members of the eci module in the @pulumi/alicloud package."
-git_sha: "e05848fea3b8bad6ca0b4f5e8c073608d920ce30"
+git_sha: "8d1e8f0418deca55d857e8fff1890dce64ac8b09"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ImageCache" data-link-title="ImageCache">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L33">
         Resource <strong>ImageCache</strong>
     </a>
 </h3>
@@ -70,7 +70,7 @@ const example = new alicloud.eci.ImageCache("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ImageCache-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Create a ImageCache resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ImageCache-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -95,14 +95,14 @@ Get an existing ImageCache resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ImageCache-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ImageCache-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -113,7 +113,7 @@ Returns true if the given object is an instance of ImageCache.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ImageCache-containerGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L65">property <b>containerGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L65">property <b>containerGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -122,7 +122,7 @@ The ID of the container group job that is used to create the image cache.
 * `status` -The status of the image cache.
 
 <h4 class="pdoc-member-header" id="ImageCache-eipInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L69">property <b>eipInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L69">property <b>eipInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eipInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -130,7 +130,7 @@ The ID of the container group job that is used to create the image cache.
 The instance ID of the Elastic IP Address (EIP). If you want to pull images from the Internet, you must specify an EIP to make sure that the container group can access the Internet. You can also configure the network address translation (NAT) gateway. We recommend that you configure the NAT gateway for the Internet access. Refer to [Public Network Access Method](https://help.aliyun.com/document_detail/99146.html)
 
 <h4 class="pdoc-member-header" id="ImageCache-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -139,7 +139,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ImageCache-imageCacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L73">property <b>imageCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L73">property <b>imageCacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageCacheName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -147,7 +147,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the image cache.
 
 <h4 class="pdoc-member-header" id="ImageCache-imageCacheSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L77">property <b>imageCacheSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L77">property <b>imageCacheSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageCacheSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ The name of the image cache.
 The size of the image cache. Default to `20`. Unit: GiB.
 
 <h4 class="pdoc-member-header" id="ImageCache-imageRegistryCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L81">property <b>imageRegistryCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L81">property <b>imageRegistryCredentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageRegistryCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ImageCacheImageRegistryCredential'>ImageCacheImageRegistryCredential</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -163,7 +163,7 @@ The size of the image cache. Default to `20`. Unit: GiB.
 The Image Registry parameters about the image to be cached.
 
 <h4 class="pdoc-member-header" id="ImageCache-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L85">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L85">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>images: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -171,7 +171,7 @@ The Image Registry parameters about the image to be cached.
 The images to be cached. The image name must be versioned.
 
 <h4 class="pdoc-member-header" id="ImageCache-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L89">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L89">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -179,7 +179,7 @@ The images to be cached. The image name must be versioned.
 The ID of the resource group.
 
 <h4 class="pdoc-member-header" id="ImageCache-retentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L93">property <b>retentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L93">property <b>retentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -187,7 +187,7 @@ The ID of the resource group.
 The retention days of the image cache. Once the image cache expires, it will be cleared. By default, the image cache never expires. Note: The image cache that fails to be created is retained for only one day.
 
 <h4 class="pdoc-member-header" id="ImageCache-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L97">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L97">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -195,12 +195,12 @@ The retention days of the image cache. Once the image cache expires, it will be 
 The ID of the security group. You do not need to specify the same security group as the container group.
 
 <h4 class="pdoc-member-header" id="ImageCache-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L98">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L98">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ImageCache-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -209,7 +209,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ImageCache-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L102">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L102">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ deployments.
 The ID of the VSwitch. You do not need to specify the same VSwitch as the container group.
 
 <h4 class="pdoc-member-header" id="ImageCache-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L106">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L106">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -225,14 +225,14 @@ The ID of the VSwitch. You do not need to specify the same VSwitch as the contai
 The zone id to cache image.
 
 <h3 class="pdoc-module-header" id="OpenApiImageCache" data-link-title="OpenApiImageCache">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L9">
         Resource <strong>OpenApiImageCache</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>OpenApiImageCache</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L48"> <b>constructor</b></a>
 </h4>
 
 
@@ -246,7 +246,7 @@ Create a OpenApiImageCache resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OpenApiImageCache-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -257,14 +257,14 @@ Get an existing OpenApiImageCache resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OpenApiImageCache-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OpenApiImageCache-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -275,17 +275,17 @@ Returns true if the given object is an instance of OpenApiImageCache.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OpenApiImageCache-containerGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L37">property <b>containerGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L37">property <b>containerGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-eipInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L38">property <b>eipInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L38">property <b>eipInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eipInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -294,47 +294,47 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OpenApiImageCache-imageCacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L39">property <b>imageCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L39">property <b>imageCacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageCacheName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-imageCacheSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L40">property <b>imageCacheSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L40">property <b>imageCacheSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageCacheSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-imageRegistryCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L41">property <b>imageRegistryCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L41">property <b>imageRegistryCredentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageRegistryCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#OpenApiImageCacheImageRegistryCredential'>OpenApiImageCacheImageRegistryCredential</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L42">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L42">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>images: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L43">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L43">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-retentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L44">property <b>retentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L44">property <b>retentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L45">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L45">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L46">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L46">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -343,19 +343,19 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="OpenApiImageCache-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L47">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L47">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCache-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L48">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L48">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getImageCaches" data-link-title="getImageCaches">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L14">
         Function <strong>getImageCaches</strong>
     </a>
 </h3>
@@ -371,7 +371,7 @@ Provides a collection of ECI Image Cache to the specified filters.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetImageCachesArgs" data-link-title="GetImageCachesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L37">
         interface <strong>GetImageCachesArgs</strong>
     </a>
 </h3>
@@ -381,7 +381,7 @@ Provides a collection of ECI Image Cache to the specified filters.
 A collection of arguments for invoking getImageCaches.
 
 <h4 class="pdoc-member-header" id="GetImageCachesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L41">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L41">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -389,7 +389,7 @@ A collection of arguments for invoking getImageCaches.
 A list ids of ECI Image Cache.
 
 <h4 class="pdoc-member-header" id="GetImageCachesArgs-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L45">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L45">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -397,7 +397,7 @@ A list ids of ECI Image Cache.
 Find the mirror cache containing it according to the image name.
 
 <h4 class="pdoc-member-header" id="GetImageCachesArgs-imageCacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L49">property <b>imageCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L49">property <b>imageCacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCacheName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -405,7 +405,7 @@ Find the mirror cache containing it according to the image name.
 The name of ECI Image Cache.
 
 <h4 class="pdoc-member-header" id="GetImageCachesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L53">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L53">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -413,12 +413,12 @@ The name of ECI Image Cache.
 A regex string to filter results by the image cache name.
 
 <h4 class="pdoc-member-header" id="GetImageCachesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L54">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L54">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageCachesArgs-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L58">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L58">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -426,7 +426,7 @@ A regex string to filter results by the image cache name.
 The id of snapshot.
 
 <h4 class="pdoc-member-header" id="GetImageCachesArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L62">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L62">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -434,7 +434,7 @@ The id of snapshot.
 The status of ECI Image Cache.
 
 <h3 class="pdoc-module-header" id="GetImageCachesResult" data-link-title="GetImageCachesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L68">
         interface <strong>GetImageCachesResult</strong>
     </a>
 </h3>
@@ -444,7 +444,7 @@ The status of ECI Image Cache.
 A collection of values returned by getImageCaches.
 
 <h4 class="pdoc-member-header" id="GetImageCachesResult-caches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L72">property <b>caches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L72">property <b>caches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caches: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetImageCachesCach'>GetImageCachesCach</a>[];</code></pre>
@@ -452,7 +452,7 @@ A collection of values returned by getImageCaches.
 A list of caches. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetImageCachesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -460,7 +460,7 @@ A list of caches. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetImageCachesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L80">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L80">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -468,12 +468,12 @@ The provider-assigned unique ID for this managed resource.
 A list ids of ECI Image Cache.
 
 <h4 class="pdoc-member-header" id="GetImageCachesResult-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L81">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L81">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageCachesResult-imageCacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L85">property <b>imageCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L85">property <b>imageCacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCacheName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -481,12 +481,12 @@ A list ids of ECI Image Cache.
 The name of the ECI Image Cache.
 
 <h4 class="pdoc-member-header" id="GetImageCachesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L86">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L86">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageCachesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L90">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L90">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -494,12 +494,12 @@ The name of the ECI Image Cache.
 A list of ECI Image Cache names.
 
 <h4 class="pdoc-member-header" id="GetImageCachesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L91">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L91">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageCachesResult-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L95">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L95">property <b>snapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -507,7 +507,7 @@ A list of ECI Image Cache names.
 The id of snapshot.
 
 <h4 class="pdoc-member-header" id="GetImageCachesResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/getImageCaches.ts#L99">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/getImageCaches.ts#L99">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -515,7 +515,7 @@ The id of snapshot.
 The status of ECI Image Cache.
 
 <h3 class="pdoc-module-header" id="ImageCacheArgs" data-link-title="ImageCacheArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L225">
         interface <strong>ImageCacheArgs</strong>
     </a>
 </h3>
@@ -525,7 +525,7 @@ The status of ECI Image Cache.
 The set of arguments for constructing a ImageCache resource.
 
 <h4 class="pdoc-member-header" id="ImageCacheArgs-eipInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L229">property <b>eipInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L229">property <b>eipInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eipInstanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ The set of arguments for constructing a ImageCache resource.
 The instance ID of the Elastic IP Address (EIP). If you want to pull images from the Internet, you must specify an EIP to make sure that the container group can access the Internet. You can also configure the network address translation (NAT) gateway. We recommend that you configure the NAT gateway for the Internet access. Refer to [Public Network Access Method](https://help.aliyun.com/document_detail/99146.html)
 
 <h4 class="pdoc-member-header" id="ImageCacheArgs-imageCacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L233">property <b>imageCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L233">property <b>imageCacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCacheName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ The instance ID of the Elastic IP Address (EIP). If you want to pull images from
 The name of the image cache.
 
 <h4 class="pdoc-member-header" id="ImageCacheArgs-imageCacheSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L237">property <b>imageCacheSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L237">property <b>imageCacheSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCacheSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -549,7 +549,7 @@ The name of the image cache.
 The size of the image cache. Default to `20`. Unit: GiB.
 
 <h4 class="pdoc-member-header" id="ImageCacheArgs-imageRegistryCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L241">property <b>imageRegistryCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L241">property <b>imageRegistryCredentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ImageCacheImageRegistryCredential'>ImageCacheImageRegistryCredential</a>&gt;[]&gt;;</code></pre>
@@ -557,7 +557,7 @@ The size of the image cache. Default to `20`. Unit: GiB.
 The Image Registry parameters about the image to be cached.
 
 <h4 class="pdoc-member-header" id="ImageCacheArgs-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L245">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L245">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>images: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -565,7 +565,7 @@ The Image Registry parameters about the image to be cached.
 The images to be cached. The image name must be versioned.
 
 <h4 class="pdoc-member-header" id="ImageCacheArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L249">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L249">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -573,7 +573,7 @@ The images to be cached. The image name must be versioned.
 The ID of the resource group.
 
 <h4 class="pdoc-member-header" id="ImageCacheArgs-retentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L253">property <b>retentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L253">property <b>retentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -581,7 +581,7 @@ The ID of the resource group.
 The retention days of the image cache. Once the image cache expires, it will be cleared. By default, the image cache never expires. Note: The image cache that fails to be created is retained for only one day.
 
 <h4 class="pdoc-member-header" id="ImageCacheArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L257">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L257">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -589,7 +589,7 @@ The retention days of the image cache. Once the image cache expires, it will be 
 The ID of the security group. You do not need to specify the same security group as the container group.
 
 <h4 class="pdoc-member-header" id="ImageCacheArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L261">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L261">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -597,7 +597,7 @@ The ID of the security group. You do not need to specify the same security group
 The ID of the VSwitch. You do not need to specify the same VSwitch as the container group.
 
 <h4 class="pdoc-member-header" id="ImageCacheArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L265">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L265">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -605,7 +605,7 @@ The ID of the VSwitch. You do not need to specify the same VSwitch as the contai
 The zone id to cache image.
 
 <h3 class="pdoc-module-header" id="ImageCacheState" data-link-title="ImageCacheState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L173">
         interface <strong>ImageCacheState</strong>
     </a>
 </h3>
@@ -615,7 +615,7 @@ The zone id to cache image.
 Input properties used for looking up and filtering ImageCache resources.
 
 <h4 class="pdoc-member-header" id="ImageCacheState-containerGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L178">property <b>containerGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L178">property <b>containerGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -624,7 +624,7 @@ The ID of the container group job that is used to create the image cache.
 * `status` -The status of the image cache.
 
 <h4 class="pdoc-member-header" id="ImageCacheState-eipInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L182">property <b>eipInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L182">property <b>eipInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eipInstanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +632,7 @@ The ID of the container group job that is used to create the image cache.
 The instance ID of the Elastic IP Address (EIP). If you want to pull images from the Internet, you must specify an EIP to make sure that the container group can access the Internet. You can also configure the network address translation (NAT) gateway. We recommend that you configure the NAT gateway for the Internet access. Refer to [Public Network Access Method](https://help.aliyun.com/document_detail/99146.html)
 
 <h4 class="pdoc-member-header" id="ImageCacheState-imageCacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L186">property <b>imageCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L186">property <b>imageCacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCacheName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -640,7 +640,7 @@ The instance ID of the Elastic IP Address (EIP). If you want to pull images from
 The name of the image cache.
 
 <h4 class="pdoc-member-header" id="ImageCacheState-imageCacheSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L190">property <b>imageCacheSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L190">property <b>imageCacheSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCacheSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ The name of the image cache.
 The size of the image cache. Default to `20`. Unit: GiB.
 
 <h4 class="pdoc-member-header" id="ImageCacheState-imageRegistryCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L194">property <b>imageRegistryCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L194">property <b>imageRegistryCredentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ImageCacheImageRegistryCredential'>ImageCacheImageRegistryCredential</a>&gt;[]&gt;;</code></pre>
@@ -656,7 +656,7 @@ The size of the image cache. Default to `20`. Unit: GiB.
 The Image Registry parameters about the image to be cached.
 
 <h4 class="pdoc-member-header" id="ImageCacheState-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L198">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L198">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>images?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -664,7 +664,7 @@ The Image Registry parameters about the image to be cached.
 The images to be cached. The image name must be versioned.
 
 <h4 class="pdoc-member-header" id="ImageCacheState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L202">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L202">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -672,7 +672,7 @@ The images to be cached. The image name must be versioned.
 The ID of the resource group.
 
 <h4 class="pdoc-member-header" id="ImageCacheState-retentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L206">property <b>retentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L206">property <b>retentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -680,7 +680,7 @@ The ID of the resource group.
 The retention days of the image cache. Once the image cache expires, it will be cleared. By default, the image cache never expires. Note: The image cache that fails to be created is retained for only one day.
 
 <h4 class="pdoc-member-header" id="ImageCacheState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L210">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L210">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -688,12 +688,12 @@ The retention days of the image cache. Once the image cache expires, it will be 
 The ID of the security group. You do not need to specify the same security group as the container group.
 
 <h4 class="pdoc-member-header" id="ImageCacheState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L211">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L211">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ImageCacheState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L215">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L215">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -701,7 +701,7 @@ The ID of the security group. You do not need to specify the same security group
 The ID of the VSwitch. You do not need to specify the same VSwitch as the container group.
 
 <h4 class="pdoc-member-header" id="ImageCacheState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/imageCache.ts#L219">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/imageCache.ts#L219">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ The ID of the VSwitch. You do not need to specify the same VSwitch as the contai
 The zone id to cache image.
 
 <h3 class="pdoc-module-header" id="OpenApiImageCacheArgs" data-link-title="OpenApiImageCacheArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L133">
         interface <strong>OpenApiImageCacheArgs</strong>
     </a>
 </h3>
@@ -719,57 +719,57 @@ The zone id to cache image.
 The set of arguments for constructing a OpenApiImageCache resource.
 
 <h4 class="pdoc-member-header" id="OpenApiImageCacheArgs-eipInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L134">property <b>eipInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L134">property <b>eipInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eipInstanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheArgs-imageCacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L135">property <b>imageCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L135">property <b>imageCacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCacheName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheArgs-imageCacheSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L136">property <b>imageCacheSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L136">property <b>imageCacheSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCacheSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheArgs-imageRegistryCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L137">property <b>imageRegistryCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L137">property <b>imageRegistryCredentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#OpenApiImageCacheImageRegistryCredential'>OpenApiImageCacheImageRegistryCredential</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheArgs-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L138">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L138">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>images: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L139">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L139">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheArgs-retentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L140">property <b>retentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L140">property <b>retentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L141">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L141">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L142">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L142">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L143">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L143">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="OpenApiImageCacheState" data-link-title="OpenApiImageCacheState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L115">
         interface <strong>OpenApiImageCacheState</strong>
     </a>
 </h3>
@@ -779,62 +779,62 @@ The set of arguments for constructing a OpenApiImageCache resource.
 Input properties used for looking up and filtering OpenApiImageCache resources.
 
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-containerGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L116">property <b>containerGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L116">property <b>containerGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-eipInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L117">property <b>eipInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L117">property <b>eipInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eipInstanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-imageCacheName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L118">property <b>imageCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L118">property <b>imageCacheName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCacheName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-imageCacheSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L119">property <b>imageCacheSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L119">property <b>imageCacheSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCacheSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-imageRegistryCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L120">property <b>imageRegistryCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L120">property <b>imageRegistryCredentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#OpenApiImageCacheImageRegistryCredential'>OpenApiImageCacheImageRegistryCredential</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L121">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L121">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>images?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L122">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L122">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-retentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L123">property <b>retentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L123">property <b>retentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L124">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L124">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L125">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L125">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L126">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L126">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OpenApiImageCacheState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/eci/openApiImageCache.ts#L127">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/eci/openApiImageCache.ts#L127">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

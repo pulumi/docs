@@ -686,39 +686,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="createtime_csharp">
-<a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Application's creation time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckurl_csharp">
-<a href="#healthcheckurl_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Url</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The URL for health checking of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancecount_csharp">
-<a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="regionid_csharp">
 <a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
 </span> 
@@ -726,50 +693,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the namespace the application belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="runninginstancecount_csharp">
-<a href="#runninginstancecount_csharp" style="color: inherit; text-decoration: inherit;">Running<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of running instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbid_csharp">
-<a href="#slbid_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the SLB instance that is going to be bound.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbip_csharp">
-<a href="#slbip_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The IP address that is allocated to the bound SLB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbport_csharp">
-<a href="#slbport_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The port of intranet SLB.
 {{% /md %}}</dd>
 
 </dl>
@@ -847,39 +770,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="createtime_go">
-<a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Application's creation time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckurl_go">
-<a href="#healthcheckurl_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Url</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The URL for health checking of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancecount_go">
-<a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="regionid_go">
 <a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
 </span> 
@@ -887,50 +777,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the namespace the application belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="runninginstancecount_go">
-<a href="#runninginstancecount_go" style="color: inherit; text-decoration: inherit;">Running<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of running instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbid_go">
-<a href="#slbid_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the SLB instance that is going to be bound.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbip_go">
-<a href="#slbip_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The IP address that is allocated to the bound SLB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbport_go">
-<a href="#slbport_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The port of intranet SLB.
 {{% /md %}}</dd>
 
 </dl>
@@ -1008,39 +854,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="createtime_nodejs">
-<a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Application's creation time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckurl_nodejs">
-<a href="#healthcheckurl_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Url</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The URL for health checking of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancecount_nodejs">
-<a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Number of instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="regionid_nodejs">
 <a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
 </span> 
@@ -1048,50 +861,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the namespace the application belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="runninginstancecount_nodejs">
-<a href="#runninginstancecount_nodejs" style="color: inherit; text-decoration: inherit;">running<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Number of running instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbid_nodejs">
-<a href="#slbid_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the SLB instance that is going to be bound.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbip_nodejs">
-<a href="#slbip_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The IP address that is allocated to the bound SLB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbport_nodejs">
-<a href="#slbport_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The port of intranet SLB.
 {{% /md %}}</dd>
 
 </dl>
@@ -1169,39 +938,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="create_time_python">
-<a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Application's creation time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="health_check_url_python">
-<a href="#health_check_url_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>url</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The URL for health checking of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instance_count_python">
-<a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="region_id_python">
 <a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span> 
@@ -1209,50 +945,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the namespace the application belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="running_instance_count_python">
-<a href="#running_instance_count_python" style="color: inherit; text-decoration: inherit;">running_<wbr>instance_<wbr>count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of running instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slb_id_python">
-<a href="#slb_id_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the SLB instance that is going to be bound.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slb_ip_python">
-<a href="#slb_ip_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The IP address that is allocated to the bound SLB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slb_port_python">
-<a href="#slb_port_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}The port of intranet SLB.
 {{% /md %}}</dd>
 
 </dl>

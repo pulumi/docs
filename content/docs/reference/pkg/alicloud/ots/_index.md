@@ -16,6 +16,14 @@ Explore the resources and functions of the ots module in the AliCloud package.
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getinstanceattachments" title="GetInstanceAttachments"><span class="symbol function"></span>GetInstanceAttachments</a></li>
+    <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="gettables" title="GetTables"><span class="symbol function"></span>GetTables</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -25,7 +33,7 @@ Explore the resources and functions of the ots module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.17.0</dd>
+	<dd>2.18.0</dd>
 </dl>
 
 

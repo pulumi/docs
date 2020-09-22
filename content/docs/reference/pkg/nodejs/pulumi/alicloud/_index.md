@@ -3,7 +3,7 @@ title: "Package @pulumi/alicloud"
 title_tag: "Package @pulumi/alicloud | Node.js SDK"
 linktitle: "@pulumi/alicloud"
 meta_desc: "Explore members of the @pulumi/alicloud package."
-git_sha: "e05848fea3b8bad6ca0b4f5e8c073608d920ce30"
+git_sha: "8d1e8f0418deca55d857e8fff1890dce64ac8b09"
 block_external_search_index: true
 ---
 
@@ -130,7 +130,7 @@ import * as alicloud from "@pulumi/alicloud";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L15">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -143,7 +143,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L28"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L28"> <b>constructor</b></a>
 </h4>
 
 
@@ -157,14 +157,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L15">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L15">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L23">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L23">method <b>isInstance</b></a>
 </h4>
 
 
@@ -175,14 +175,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L15">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L15">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L15">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L15">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -191,7 +191,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L15">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L15">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -202,7 +202,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccount" data-link-title="getAccount">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getAccount.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getAccount.ts#L23">
         Function <strong>getAccount</strong>
     </a>
 </h3>
@@ -225,7 +225,7 @@ export const currentAccountId = current.id;
 ```
 
 <h3 class="pdoc-module-header" id="getCallerIdentity" data-link-title="getCallerIdentity">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getCallerIdentity.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getCallerIdentity.ts#L25">
         Function <strong>getCallerIdentity</strong>
     </a>
 </h3>
@@ -250,7 +250,7 @@ export const currentUserArn = current.id;
 ```
 
 <h3 class="pdoc-module-header" id="getFileCrc64Checksum" data-link-title="getFileCrc64Checksum">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getFileCrc64Checksum.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getFileCrc64Checksum.ts#L27">
         Function <strong>getFileCrc64Checksum</strong>
     </a>
 </h3>
@@ -277,7 +277,7 @@ export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
 ```
 
 <h3 class="pdoc-module-header" id="getRegions" data-link-title="getRegions">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L25">
         Function <strong>getRegions</strong>
     </a>
 </h3>
@@ -302,7 +302,7 @@ export const currentRegionId = currentRegionDs.regions[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getZones" data-link-title="getZones">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L31">
         Function <strong>getZones</strong>
     </a>
 </h3>
@@ -335,7 +335,7 @@ const instance = new alicloud.ecs.Instance("instance", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetAccountResult" data-link-title="GetAccountResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getAccount.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getAccount.ts#L38">
         interface <strong>GetAccountResult</strong>
     </a>
 </h3>
@@ -345,7 +345,7 @@ const instance = new alicloud.ecs.Instance("instance", {
 A collection of values returned by getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getAccount.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getAccount.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -353,7 +353,7 @@ A collection of values returned by getAccount.
 Account ID (e.g. "1239306421830812"). It can be used to construct an ARN.
 
 <h3 class="pdoc-module-header" id="GetCallerIdentityResult" data-link-title="GetCallerIdentityResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getCallerIdentity.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getCallerIdentity.ts#L40">
         interface <strong>GetCallerIdentityResult</strong>
     </a>
 </h3>
@@ -363,7 +363,7 @@ Account ID (e.g. "1239306421830812"). It can be used to construct an ARN.
 A collection of values returned by getCallerIdentity.
 
 <h4 class="pdoc-member-header" id="GetCallerIdentityResult-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getCallerIdentity.ts#L44">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getCallerIdentity.ts#L44">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -371,7 +371,7 @@ A collection of values returned by getCallerIdentity.
 Account ID.
 
 <h4 class="pdoc-member-header" id="GetCallerIdentityResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getCallerIdentity.ts#L48">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getCallerIdentity.ts#L48">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -379,7 +379,7 @@ Account ID.
 The Alibaba Cloud Resource Name (ARN) of the user making the call.
 
 <h4 class="pdoc-member-header" id="GetCallerIdentityResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getCallerIdentity.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getCallerIdentity.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -387,7 +387,7 @@ The Alibaba Cloud Resource Name (ARN) of the user making the call.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCallerIdentityResult-identityType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getCallerIdentity.ts#L56">property <b>identityType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getCallerIdentity.ts#L56">property <b>identityType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -395,7 +395,7 @@ The provider-assigned unique ID for this managed resource.
 The type of the princiapal. RAMUser for users.
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -404,7 +404,7 @@ The type of the princiapal. RAMUser for users.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -413,7 +413,7 @@ The type of the princiapal. RAMUser for users.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -422,7 +422,7 @@ The type of the princiapal. RAMUser for users.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetFileCrc64ChecksumArgs" data-link-title="GetFileCrc64ChecksumArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getFileCrc64Checksum.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getFileCrc64Checksum.ts#L44">
         interface <strong>GetFileCrc64ChecksumArgs</strong>
     </a>
 </h3>
@@ -432,7 +432,7 @@ The type of the princiapal. RAMUser for users.
 A collection of arguments for invoking getFileCrc64Checksum.
 
 <h4 class="pdoc-member-header" id="GetFileCrc64ChecksumArgs-filename">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getFileCrc64Checksum.ts#L48">property <b>filename</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getFileCrc64Checksum.ts#L48">property <b>filename</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filename: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -440,12 +440,12 @@ A collection of arguments for invoking getFileCrc64Checksum.
 The name of the file to be computed crc64 checksum.
 
 <h4 class="pdoc-member-header" id="GetFileCrc64ChecksumArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getFileCrc64Checksum.ts#L49">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getFileCrc64Checksum.ts#L49">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetFileCrc64ChecksumResult" data-link-title="GetFileCrc64ChecksumResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getFileCrc64Checksum.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getFileCrc64Checksum.ts#L55">
         interface <strong>GetFileCrc64ChecksumResult</strong>
     </a>
 </h3>
@@ -455,7 +455,7 @@ The name of the file to be computed crc64 checksum.
 A collection of values returned by getFileCrc64Checksum.
 
 <h4 class="pdoc-member-header" id="GetFileCrc64ChecksumResult-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getFileCrc64Checksum.ts#L59">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getFileCrc64Checksum.ts#L59">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -463,12 +463,12 @@ A collection of values returned by getFileCrc64Checksum.
 the file checksum of crc64.
 
 <h4 class="pdoc-member-header" id="GetFileCrc64ChecksumResult-filename">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getFileCrc64Checksum.ts#L60">property <b>filename</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getFileCrc64Checksum.ts#L60">property <b>filename</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filename: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFileCrc64ChecksumResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getFileCrc64Checksum.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getFileCrc64Checksum.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -476,12 +476,12 @@ the file checksum of crc64.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetFileCrc64ChecksumResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getFileCrc64Checksum.ts#L65">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getFileCrc64Checksum.ts#L65">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegionsArgs" data-link-title="GetRegionsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L44">
         interface <strong>GetRegionsArgs</strong>
     </a>
 </h3>
@@ -491,7 +491,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getRegions.
 
 <h4 class="pdoc-member-header" id="GetRegionsArgs-current">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L48">property <b>current</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L48">property <b>current</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>current?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -499,7 +499,7 @@ A collection of arguments for invoking getRegions.
 Set to true to match only the region configured in the provider.
 
 <h4 class="pdoc-member-header" id="GetRegionsArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -507,12 +507,12 @@ Set to true to match only the region configured in the provider.
 The name of the region to select, such as `eu-central-1`.
 
 <h4 class="pdoc-member-header" id="GetRegionsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L53">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L53">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegionsResult" data-link-title="GetRegionsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L59">
         interface <strong>GetRegionsResult</strong>
     </a>
 </h3>
@@ -522,12 +522,12 @@ The name of the region to select, such as `eu-central-1`.
 A collection of values returned by getRegions.
 
 <h4 class="pdoc-member-header" id="GetRegionsResult-current">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L60">property <b>current</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L60">property <b>current</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>current: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -535,7 +535,7 @@ A collection of values returned by getRegions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegionsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L68">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L68">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -543,17 +543,17 @@ The provider-assigned unique ID for this managed resource.
 A list of region IDs.
 
 <h4 class="pdoc-member-header" id="GetRegionsResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegionsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L70">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L70">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegionsResult-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getRegions.ts#L74">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getRegions.ts#L74">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRegionsRegion'>GetRegionsRegion</a>[];</code></pre>
@@ -561,7 +561,7 @@ A list of region IDs.
 A list of regions. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -570,7 +570,7 @@ A list of regions. Each element contains the following attributes:
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetZonesArgs" data-link-title="GetZonesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L58">
         interface <strong>GetZonesArgs</strong>
     </a>
 </h3>
@@ -580,7 +580,7 @@ A list of regions. Each element contains the following attributes:
 A collection of arguments for invoking getZones.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-availableDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L62">property <b>availableDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L62">property <b>availableDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableDiskCategory?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -588,7 +588,7 @@ A collection of arguments for invoking getZones.
 Filter the results by a specific disk category. Can be either `cloud`, `cloudEfficiency`, `cloudSsd`, `ephemeralSsd`.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-availableInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L66">property <b>availableInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L66">property <b>availableInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableInstanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -596,7 +596,7 @@ Filter the results by a specific disk category. Can be either `cloud`, `cloudEff
 Filter the results by a specific instance type.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-availableResourceCreation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L71">property <b>availableResourceCreation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L71">property <b>availableResourceCreation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableResourceCreation?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -605,7 +605,7 @@ Filter the results by a specific resource type.
 Valid values: `Instance`, `Disk`, `VSwitch`, `Rds`, `KVStore`, `FunctionCompute`, `Elasticsearch`, `Slb`.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-availableSlbAddressIpVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L76">property <b>availableSlbAddressIpVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L76">property <b>availableSlbAddressIpVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableSlbAddressIpVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -614,7 +614,7 @@ Filter the results by a slb instance address version. Can be either `ipv4`, or `
 > **NOTE:** The disk category `cloud` has been outdated and can only be used by non-I/O Optimized ECS instances. Many availability zones don't support it. It is recommended to use `cloudEfficiency` or `cloudSsd`.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-availableSlbAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L80">property <b>availableSlbAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L80">property <b>availableSlbAddressType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableSlbAddressType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -622,7 +622,7 @@ Filter the results by a slb instance address version. Can be either `ipv4`, or `
 Filter the results by a slb instance address type. Can be either `Vpc`, `classicInternet` or `classicIntranet`
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L84">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L84">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -630,7 +630,7 @@ Filter the results by a slb instance address type. Can be either `Vpc`, `classic
 Default to false and only output `id` in the `zones` block. Set it to true can output more details.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L88">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L88">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -638,7 +638,7 @@ Default to false and only output `id` in the `zones` block. Set it to true can o
 Filter the results by a specific ECS instance charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-multi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L92">property <b>multi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L92">property <b>multi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -646,7 +646,7 @@ Filter the results by a specific ECS instance charge type. Valid values: `PrePai
 Indicate whether the zones can be used in a multi AZ configuration. Default to `false`. Multi AZ is usually used to launch RDS instances.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-networkType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L96">property <b>networkType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L96">property <b>networkType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -654,12 +654,12 @@ Indicate whether the zones can be used in a multi AZ configuration. Default to `
 Filter the results by a specific network type. Valid values: `Classic` and `Vpc`.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L97">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L97">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesArgs-spotStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L101">property <b>spotStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L101">property <b>spotStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotStrategy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -667,7 +667,7 @@ Filter the results by a specific network type. Valid values: `Classic` and `Vpc`
 - (Optional) Filter the results by a specific ECS spot type. Valid values: `NoSpot`, `SpotWithPriceLimit` and `SpotAsPriceGo`. Default to `NoSpot`.
 
 <h3 class="pdoc-module-header" id="GetZonesResult" data-link-title="GetZonesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L107">
         interface <strong>GetZonesResult</strong>
     </a>
 </h3>
@@ -677,17 +677,17 @@ Filter the results by a specific network type. Valid values: `Classic` and `Vpc`
 A collection of values returned by getZones.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-availableDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L108">property <b>availableDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L108">property <b>availableDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableDiskCategory?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-availableInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L109">property <b>availableInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L109">property <b>availableInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableInstanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-availableResourceCreation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L113">property <b>availableResourceCreation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L113">property <b>availableResourceCreation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableResourceCreation?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -695,22 +695,22 @@ A collection of values returned by getZones.
 Type of resources that can be created.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-availableSlbAddressIpVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L114">property <b>availableSlbAddressIpVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L114">property <b>availableSlbAddressIpVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableSlbAddressIpVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-availableSlbAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L115">property <b>availableSlbAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L115">property <b>availableSlbAddressType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableSlbAddressType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L116">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L116">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L120">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L120">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -718,7 +718,7 @@ Type of resources that can be created.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L124">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L124">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -726,32 +726,32 @@ The provider-assigned unique ID for this managed resource.
 A list of zone IDs.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-instanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L125">property <b>instanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L125">property <b>instanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceChargeType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-multi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L126">property <b>multi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L126">property <b>multi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multi?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-networkType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L127">property <b>networkType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L127">property <b>networkType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L128">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L128">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-spotStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L129">property <b>spotStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L129">property <b>spotStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotStrategy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/getZones.ts#L133">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/getZones.ts#L133">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZonesZone'>GetZonesZone</a>[];</code></pre>
@@ -759,7 +759,7 @@ A list of zone IDs.
 A list of availability zones. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L73">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -769,7 +769,7 @@ A list of availability zones. Each element contains the following attributes:
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L78">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L78">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ The access key for API operations. You can retrieve this from the 'Security Mana
 console.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L83">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L83">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -787,12 +787,12 @@ The account ID for some service API operations. You can retrieve this from the '
 Alibaba Cloud console.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-assumeRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L84">property <b>assumeRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L84">property <b>assumeRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assumeRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ProviderAssumeRole'>ProviderAssumeRole</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-configurationSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L88">property <b>configurationSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L88">property <b>configurationSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -800,7 +800,7 @@ Alibaba Cloud console.
 Use this to mark a terraform configuration file source.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-ecsRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L93">property <b>ecsRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L93">property <b>ecsRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ecsRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -809,12 +809,12 @@ The RAM Role Name attached on a ECS instance for API operations. You can retriev
 of the Alibaba Cloud console.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L94">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L94">property <b>endpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ProviderEndpoint'>ProviderEndpoint</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-fc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L98">property <b>fc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L98">property <b>fc</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -823,7 +823,7 @@ Field &#39;fc&#39; has been deprecated from provider version 1.28.0. New field &
 </div>
 <pre class="highlight"><code><span class='kd'></span>fc?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-logEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L102">property <b>logEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L102">property <b>logEndpoint</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -832,7 +832,7 @@ Field &#39;log_endpoint&#39; has been deprecated from provider version 1.28.0. N
 </div>
 <pre class="highlight"><code><span class='kd'></span>logEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-mnsEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L106">property <b>mnsEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L106">property <b>mnsEndpoint</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -841,7 +841,7 @@ Field &#39;mns_endpoint&#39; has been deprecated from provider version 1.28.0. N
 </div>
 <pre class="highlight"><code><span class='kd'></span>mnsEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-otsInstanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L110">property <b>otsInstanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L110">property <b>otsInstanceName</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -850,7 +850,7 @@ Field &#39;ots_instance_name&#39; has been deprecated from provider version 1.10
 </div>
 <pre class="highlight"><code><span class='kd'></span>otsInstanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L114">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L114">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -858,12 +858,12 @@ Field &#39;ots_instance_name&#39; has been deprecated from provider version 1.10
 The profile for API operations. If not set, the default profile created with `aliyun configure` will be used.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L115">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L115">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L119">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L119">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -871,7 +871,7 @@ The profile for API operations. If not set, the default profile created with `al
 The region where Alibaba Cloud operations will take place. Examples are cn-beijing, cn-hangzhou, eu-central-1, etc.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L124">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L124">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ The secret key for API operations. You can retrieve this from the 'Security Mana
 console.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-securityToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L128">property <b>securityToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L128">property <b>securityToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -888,7 +888,7 @@ console.
 security token. A security token is only required if you are using Security Token Service.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-sharedCredentialsFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L132">property <b>sharedCredentialsFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L132">property <b>sharedCredentialsFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedCredentialsFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -896,7 +896,7 @@ security token. A security token is only required if you are using Security Toke
 The path to the shared credentials file. If not set this defaults to ~/.aliyun/config.json
 
 <h4 class="pdoc-member-header" id="ProviderArgs-skipRegionValidation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/e05848fea3b8bad6ca0b4f5e8c073608d920ce30/sdk/nodejs/provider.ts#L137">property <b>skipRegionValidation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8d1e8f0418deca55d857e8fff1890dce64ac8b09/sdk/nodejs/provider.ts#L137">property <b>skipRegionValidation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipRegionValidation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

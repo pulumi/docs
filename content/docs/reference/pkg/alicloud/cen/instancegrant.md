@@ -67,6 +67,7 @@ class MyStack : Stack
         {
             InstanceId = cen.Id,
             ChildInstanceId = vpc.Id,
+            ChildInstanceType = "VPC",
             ChildInstanceRegionId = "cn-qingdao",
             ChildInstanceOwnerId = "uid1",
         }, new CustomResourceOptions
@@ -132,8 +133,9 @@ func main() {
 		_, err = cen.NewInstanceAttachment(ctx, "fooInstanceAttachment", &cen.InstanceAttachmentArgs{
 			InstanceId:            cen.ID(),
 			ChildInstanceId:       vpc.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
 			ChildInstanceRegionId: pulumi.String("cn-qingdao"),
-			ChildInstanceOwnerId:  pulumi.String("uid1"),
+			ChildInstanceOwnerId:  pulumi.Int("uid1"),
 		}, pulumi.Provider(alicloud.Account2), pulumi.DependsOn([]pulumi.Resource{
 			fooInstanceGrant,
 		}))
@@ -175,6 +177,7 @@ foo_instance_grant = alicloud.cen.InstanceGrant("fooInstanceGrant",
 foo_instance_attachment = alicloud.cen.InstanceAttachment("fooInstanceAttachment",
     instance_id=cen.id,
     child_instance_id=vpc.id,
+    child_instance_type="VPC",
     child_instance_region_id="cn-qingdao",
     child_instance_owner_id="uid1",
     opts=ResourceOptions(provider=alicloud["account2"],
@@ -216,6 +219,7 @@ const fooInstanceGrant = new alicloud.cen.InstanceGrant("fooInstanceGrant", {
 const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("fooInstanceAttachment", {
     instanceId: cen.id,
     childInstanceId: vpc.id,
+    childInstanceType: "VPC",
     childInstanceRegionId: "cn-qingdao",
     childInstanceOwnerId: "uid1",
 }, {

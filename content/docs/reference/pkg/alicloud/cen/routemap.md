@@ -62,12 +62,14 @@ class MyStack : Stack
         {
             InstanceId = defaultInstance.Id,
             ChildInstanceId = vpc00.Id,
+            ChildInstanceType = "VPC",
             ChildInstanceRegionId = "cn-hangzhou",
         });
         var default01 = new AliCloud.Cen.InstanceAttachment("default01", new AliCloud.Cen.InstanceAttachmentArgs
         {
             InstanceId = defaultInstance.Id,
             ChildInstanceId = vpc01.Id,
+            ChildInstanceType = "VPC",
             ChildInstanceRegionId = "cn-shanghai",
         });
         var defaultRouteMap = new AliCloud.Cen.RouteMap("defaultRouteMap", new AliCloud.Cen.RouteMapArgs
@@ -197,6 +199,7 @@ func main() {
 		default00, err := cen.NewInstanceAttachment(ctx, "default00", &cen.InstanceAttachmentArgs{
 			InstanceId:            defaultInstance.ID(),
 			ChildInstanceId:       vpc00.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
 			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
 		})
 		if err != nil {
@@ -205,6 +208,7 @@ func main() {
 		default01, err := cen.NewInstanceAttachment(ctx, "default01", &cen.InstanceAttachmentArgs{
 			InstanceId:            defaultInstance.ID(),
 			ChildInstanceId:       vpc01.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
 			ChildInstanceRegionId: pulumi.String("cn-shanghai"),
 		})
 		if err != nil {
@@ -295,10 +299,12 @@ opts=ResourceOptions(provider=alicloud["vpc01_region"]))
 default00 = alicloud.cen.InstanceAttachment("default00",
     instance_id=default_instance.id,
     child_instance_id=vpc00.id,
+    child_instance_type="VPC",
     child_instance_region_id="cn-hangzhou")
 default01 = alicloud.cen.InstanceAttachment("default01",
     instance_id=default_instance.id,
     child_instance_id=vpc01.id,
+    child_instance_type="VPC",
     child_instance_region_id="cn-shanghai")
 default_route_map = alicloud.cen.RouteMap("defaultRouteMap",
     cen_region_id="cn-hangzhou",
@@ -355,11 +361,13 @@ const vpc01 = new alicloud.vpc.Network("vpc01", {cidrBlock: "172.16.0.0/12"}, {
 const default00 = new alicloud.cen.InstanceAttachment("default00", {
     instanceId: defaultInstance.id,
     childInstanceId: vpc00.id,
+    childInstanceType: "VPC",
     childInstanceRegionId: "cn-hangzhou",
 });
 const default01 = new alicloud.cen.InstanceAttachment("default01", {
     instanceId: defaultInstance.id,
     childInstanceId: vpc01.id,
+    childInstanceType: "VPC",
     childInstanceRegionId: "cn-shanghai",
 });
 const defaultRouteMap = new alicloud.cen.RouteMap("defaultRouteMap", {
