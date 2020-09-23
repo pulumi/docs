@@ -266,10 +266,14 @@ You can find the full code of the components, the sample program, and steps to r
 
 ## Conclusion
 
-As of October 2019, the KEDA project is still in the experimental phase and should not be used for any production applications. Also, if the managed version of Azure Functions suits your needs, you should probably stick to that service. It requires less effort, provides high-level primitives, and enables unlimited elastic scaling.
+If your company is betting on Kubernetes as the standard application platform and you see
+high value in event-driven fine-grained applications, KEDA might be an exciting option for
+the future.  As of March 31, 2020, Kubernetes Event-driven Autoscaling (KEDA) has joined
+the CNCF as an official sandbox project.
 
-However, if your company is betting on Kubernetes as the standard application platform, but you still see high value in event-driven fine-grained applications, KEDA might be an exciting option for the future.
-
-Pulumi is a great tool to get a sample KEDA application running quickly and effortlessly. It combines Docker image creation, Kubernetes cluster provisioning, Helm chart installation, and KEDA deployment in the single program written in a familiar general-purpose language.
+Pulumi is a great tool to get your KEDA application running quickly and effortlessly.  You
+can combine Docker image creation, Kubernetes cluster provisioning, Helm chart
+installation, and KEDA deployment in a single program, written in your favorite
+general-purpose language.
 
 Get started with [Azure Kubernetes Service (AKS) Cluster and Azure Functions with KEDA](https://github.com/pulumi/examples/tree/master/azure-ts-aks-keda).
