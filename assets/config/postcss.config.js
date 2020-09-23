@@ -64,7 +64,7 @@ module.exports = {
             whitelist: ["supported-cicd-platforms", ":not", ":target", "md:max-w-lg", "blink", "typing", "char", "resource-deprecated", "btn-scroll-top"],
 
             // Whitelist custom parent selectors and their children.
-            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/],
+            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/, /^bg-/],
             whitelistPatternsChildren: [
                 /^hs-/,
                 /^highlight$/,

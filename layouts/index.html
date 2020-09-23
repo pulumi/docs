@@ -12,15 +12,27 @@
                 <p class="mt-2">
                     {{ .Params.subhead | markdownify }}
                 </p>
-                <div class="md:absolute inline-block" style="top: -4rem; right: -14rem;">
-                    <img class="w-48" src="/images/mascot/pulumipus.svg" alt="Pulumi mascot">
+                <div class="md:absolute inline-block" style="top: -5.4rem; right: -14rem;">
+                    <a href="https://cloudengineeringsummit.com/?utm_campaign=summit&utm_source=pulumi.com&utm_medium=home-page-hero"
+                            target="_blank" rel="noopener noreferrer" title="Attend the Cloud Engineering Summit">
+                        <img class="w-48" src="/images/cloud-eng-summit.svg" alt="Cloud Engineering Summit">
+                    </a>
                 </div>
             </div>
 
-            <div class="mt-8">
-                <a href="{{ relref . "/docs/get-started" }}" class="btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg" title="Create your first project with Pulumi">
-                    Get Started
-                </a>
+            <div class="mt-4">
+                <div class="inline-flex mx-auto flex-col md:flex-row justify-center">
+                    <a href="{{ relref . "/docs/get-started" }}"
+                            class="my-2 md:my-0 md:mx-2 btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg"
+                            title="Create your first project with Pulumi">
+                        Get Started
+                    </a>
+                    <a href="https://cloudengineeringsummit.com/?utm_campaign=summit&utm_source=pulumi.com&utm_medium=home-page-hero"
+                            target="_blank" rel="noopener noreferrer" class="my-2 md:my-0 md:mx-2 btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg"
+                            title="Attend the Cloud Engineering Summit">
+                        Attend the Summit
+                    </a>
+                </div>
             </div>
             <div class="mt-8 text-sm text-purple-100">
                 Pulumi is <a class="text-white hover:underline" href="{{ relref . "/pricing#community-edition" }}">free</a>
