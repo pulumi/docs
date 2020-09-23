@@ -11,9 +11,9 @@ menu:
 
 If your team has already provisioned infrastructure using Azure Resource Manager (ARM) Templates, and you'd like to adopt Pulumi, you have three primary strategies you can take:
 
-* [**Coexist**](#referencing-deployment-outputs) with resources provisioned by ARM by referencing deployment outputs.
+* [**Coexist**](#referencing-stack-outputs) with resources provisioned by ARM by referencing deployment outputs.
 * [**Import**]({{< relref "import" >}}) existing resources into Pulumi in the usual way.
-* [**Convert**](#converting-deployments-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
+* [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
 
 ## Referencing Stack Outputs
 
