@@ -22,7 +22,7 @@ meta_desc: "Explore the ServiceIntegrationEndpoint resource of the Aiven package
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ServiceIntegrationEndpoint">ServiceIntegrationEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ServiceIntegrationEndpoint">ServiceIntegrationEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">jolokia_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointJolokiaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointSignalfxUserConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -240,6 +240,17 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalawscloudwatchlogsuserconfig_csharp">
+<a href="#externalawscloudwatchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalelasticsearchlogsuserconfig_csharp">
 <a href="#externalelasticsearchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span> 
@@ -247,6 +258,39 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalgooglecloudlogginguserconfig_csharp">
+<a href="#externalgooglecloudlogginguserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalkafkauserconfig_csharp">
+<a href="#externalkafkauserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Kafka<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external Kafka specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jolokiauserconfig_csharp">
+<a href="#jolokiauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,6 +313,17 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxuserconfig_csharp">
+<a href="#signalfxuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd>
 
 </dl>
@@ -324,6 +379,17 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalawscloudwatchlogsuserconfig_go">
+<a href="#externalawscloudwatchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalelasticsearchlogsuserconfig_go">
 <a href="#externalelasticsearchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span> 
@@ -331,6 +397,39 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalgooglecloudlogginguserconfig_go">
+<a href="#externalgooglecloudlogginguserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalkafkauserconfig_go">
+<a href="#externalkafkauserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Kafka<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external Kafka specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jolokiauserconfig_go">
+<a href="#jolokiauserconfig_go" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,6 +452,17 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxuserconfig_go">
+<a href="#signalfxuserconfig_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd>
 
 </dl>
@@ -408,6 +518,17 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
 
     <dt class="property-optional"
             title="Optional">
+        <span id="externalawscloudwatchlogsuserconfig_nodejs">
+<a href="#externalawscloudwatchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="externalelasticsearchlogsuserconfig_nodejs">
 <a href="#externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span> 
@@ -415,6 +536,39 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalgooglecloudlogginguserconfig_nodejs">
+<a href="#externalgooglecloudlogginguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalkafkauserconfig_nodejs">
+<a href="#externalkafkauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Kafka<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external Kafka specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jolokiauserconfig_nodejs">
+<a href="#jolokiauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">jolokia<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -437,6 +591,17 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxuserconfig_nodejs">
+<a href="#signalfxuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd>
 
 </dl>
@@ -492,6 +657,17 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
 
     <dt class="property-optional"
             title="Optional">
+        <span id="external_aws_cloudwatch_logs_user_config_python">
+<a href="#external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="external_elasticsearch_logs_user_config_python">
 <a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span> 
@@ -499,6 +675,39 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_google_cloud_logging_user_config_python">
+<a href="#external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_kafka_user_config_python">
+<a href="#external_kafka_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>kafka_<wbr>user_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external Kafka specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jolokia_user_config_python">
+<a href="#jolokia_user_config_python" style="color: inherit; text-decoration: inherit;">jolokia_<wbr>user_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -521,6 +730,17 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfx_user_config_python">
+<a href="#signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd>
 
 </dl>
@@ -666,7 +886,7 @@ Get an existing ServiceIntegrationEndpoint resource's state with the given name,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">) -&gt;</span> ServiceIntegrationEndpoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">jolokia_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointJolokiaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointSignalfxUserConfigArgs]</span> = None<span class="p">) -&gt;</span> ServiceIntegrationEndpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -826,6 +1046,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_externalawscloudwatchlogsuserconfig_csharp">
+<a href="#state_externalawscloudwatchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_externalelasticsearchlogsuserconfig_csharp">
 <a href="#state_externalelasticsearchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span> 
@@ -833,6 +1064,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalgooglecloudlogginguserconfig_csharp">
+<a href="#state_externalgooglecloudlogginguserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalkafkauserconfig_csharp">
+<a href="#state_externalkafkauserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Kafka<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external Kafka specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_jolokiauserconfig_csharp">
+<a href="#state_jolokiauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -866,6 +1130,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signalfxuserconfig_csharp">
+<a href="#state_signalfxuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd>
 
 </dl>
@@ -921,6 +1196,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_externalawscloudwatchlogsuserconfig_go">
+<a href="#state_externalawscloudwatchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_externalelasticsearchlogsuserconfig_go">
 <a href="#state_externalelasticsearchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span> 
@@ -928,6 +1214,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalgooglecloudlogginguserconfig_go">
+<a href="#state_externalgooglecloudlogginguserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalkafkauserconfig_go">
+<a href="#state_externalkafkauserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Kafka<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external Kafka specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_jolokiauserconfig_go">
+<a href="#state_jolokiauserconfig_go" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -961,6 +1280,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signalfxuserconfig_go">
+<a href="#state_signalfxuserconfig_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd>
 
 </dl>
@@ -1016,6 +1346,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_externalawscloudwatchlogsuserconfig_nodejs">
+<a href="#state_externalawscloudwatchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_externalelasticsearchlogsuserconfig_nodejs">
 <a href="#state_externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span> 
@@ -1023,6 +1364,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalgooglecloudlogginguserconfig_nodejs">
+<a href="#state_externalgooglecloudlogginguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalkafkauserconfig_nodejs">
+<a href="#state_externalkafkauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Kafka<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}external Kafka specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_jolokiauserconfig_nodejs">
+<a href="#state_jolokiauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">jolokia<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1056,6 +1430,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signalfxuserconfig_nodejs">
+<a href="#state_signalfxuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>User<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd>
 
 </dl>
@@ -1111,6 +1496,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_external_aws_cloudwatch_logs_user_config_python">
+<a href="#state_external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_external_elasticsearch_logs_user_config_python">
 <a href="#state_external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span> 
@@ -1118,6 +1514,39 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_external_google_cloud_logging_user_config_python">
+<a href="#state_external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_external_kafka_user_config_python">
+<a href="#state_external_kafka_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>kafka_<wbr>user_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}external Kafka specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_jolokia_user_config_python">
+<a href="#state_jolokia_user_config_python" style="color: inherit; text-decoration: inherit;">jolokia_<wbr>user_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1151,6 +1580,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_signalfx_user_config_python">
+<a href="#state_signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd>
 
 </dl>
@@ -1361,6 +1801,212 @@ The following state arguments are supported:
             title="Optional">
         <span id="site_python">
 <a href="#site_python" style="color: inherit; text-decoration: inherit;">site</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey_csharp">
+<a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggroupname_csharp">
+<a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretkey_csharp">
+<a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey_go">
+<a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggroupname_go">
+<a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretkey_go">
+<a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesskey_nodejs">
+<a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loggroupname_nodejs">
+<a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretkey_nodejs">
+<a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_group_name_python">
+<a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_key_python">
+<a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1607,6 +2253,544 @@ The following state arguments are supported:
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logid_csharp">
+<a href="#logid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountcredentials_csharp">
+<a href="#serviceaccountcredentials_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logid_go">
+<a href="#logid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountcredentials_go">
+<a href="#serviceaccountcredentials_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logid_nodejs">
+<a href="#logid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountcredentials_nodejs">
+<a href="#serviceaccountcredentials_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_id_python">
+<a href="#log_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_account_credentials_python">
+<a href="#service_account_credentials_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationEndpointExternalKafkaUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationEndpointExternalKafkaUserConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationEndpointExternalKafkaUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationEndpointExternalKafkaUserConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationEndpointExternalKafkaUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationEndpointExternalKafkaUserConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootstrapservers_csharp">
+<a href="#bootstrapservers_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityprotocol_csharp">
+<a href="#securityprotocol_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslcacert_csharp">
+<a href="#sslcacert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Ca<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslclientcert_csharp">
+<a href="#sslclientcert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslclientkey_csharp">
+<a href="#sslclientkey_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootstrapservers_go">
+<a href="#bootstrapservers_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityprotocol_go">
+<a href="#securityprotocol_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslcacert_go">
+<a href="#sslcacert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Ca<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslclientcert_go">
+<a href="#sslclientcert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslclientkey_go">
+<a href="#sslclientkey_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootstrapservers_nodejs">
+<a href="#bootstrapservers_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityprotocol_nodejs">
+<a href="#securityprotocol_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslcacert_nodejs">
+<a href="#sslcacert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ca<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslclientcert_nodejs">
+<a href="#sslclientcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslclientkey_nodejs">
+<a href="#sslclientkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootstrap_servers_python">
+<a href="#bootstrap_servers_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>servers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_protocol_python">
+<a href="#security_protocol_python" style="color: inherit; text-decoration: inherit;">security_<wbr>protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_ca_cert_python">
+<a href="#ssl_ca_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ca_<wbr>cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_client_cert_python">
+<a href="#ssl_client_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>cert</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_client_key_python">
+<a href="#ssl_client_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationEndpointJolokiaUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationEndpointJolokiaUserConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationEndpointJolokiaUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationEndpointJolokiaUserConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationEndpointJolokiaUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationEndpointJolokiaUserConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthpassword_csharp">
+<a href="#basicauthpassword_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthusername_csharp">
+<a href="#basicauthusername_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthpassword_go">
+<a href="#basicauthpassword_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthusername_go">
+<a href="#basicauthusername_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthpassword_nodejs">
+<a href="#basicauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthusername_nodejs">
+<a href="#basicauthusername_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basic_auth_password_python">
+<a href="#basic_auth_password_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basic_auth_username_python">
+<a href="#basic_auth_username_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2139,6 +3323,172 @@ The following state arguments are supported:
             title="Optional">
         <span id="tls_python">
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceIntegrationEndpointSignalfxUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceIntegrationEndpointSignalfxUserConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationEndpointSignalfxUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationEndpointSignalfxUserConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationEndpointSignalfxUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationEndpointSignalfxUserConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledmetrics_csharp">
+<a href="#enabledmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Metrics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxapikey_csharp">
+<a href="#signalfxapikey_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Api<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxrealm_csharp">
+<a href="#signalfxrealm_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Realm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledmetrics_go">
+<a href="#enabledmetrics_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Metrics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxapikey_go">
+<a href="#signalfxapikey_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Api<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxrealm_go">
+<a href="#signalfxrealm_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Realm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledmetrics_nodejs">
+<a href="#enabledmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Metrics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxapikey_nodejs">
+<a href="#signalfxapikey_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>Api<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfxrealm_nodejs">
+<a href="#signalfxrealm_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>Realm</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_metrics_python">
+<a href="#enabled_metrics_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>metrics</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfx_api_key_python">
+<a href="#signalfx_api_key_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>api_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signalfx_realm_python">
+<a href="#signalfx_realm_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>realm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

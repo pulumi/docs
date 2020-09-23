@@ -2076,6 +2076,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="recoverybasebackupname_csharp">
+<a href="#recoverybasebackupname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="redislfudecaytime_csharp">
 <a href="#redislfudecaytime_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Lfu<wbr>Decay<wbr>Time</a>
 </span> 
@@ -2188,6 +2198,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getredisredisuserconfigpublicaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recoverybasebackupname_go">
+<a href="#recoverybasebackupname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2310,6 +2330,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="recoverybasebackupname_nodejs">
+<a href="#recoverybasebackupname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Basebackup<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="redislfudecaytime_nodejs">
 <a href="#redislfudecaytime_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Lfu<wbr>Decay<wbr>Time</a>
 </span> 
@@ -2422,6 +2452,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getredisredisuserconfigpublicaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recovery_basebackup_name_python">
+<a href="#recovery_basebackup_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>basebackup_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
