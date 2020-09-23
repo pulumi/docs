@@ -44,7 +44,7 @@ $ pulumi stack init
 Enter a stack name: wordpress-dev
 ```
 
-Preview the deployment of the application and the perform the deployment:
+Preview the deployment of the application and then perform the deployment:
 
 ```sh
 pulumi up
