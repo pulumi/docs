@@ -1,11 +1,25 @@
+{{ $name := "cloud-engineering-summit" }}
+{{ $summary := "Come join Pulumi for the industry's first Cloud Engineering Summit! October 7&ndash;8." }}
+{{ $url := "https://cloudengineeringsummit.com/?utm_campaign=summit&utm_source=pulumi.com&utm_medium=top-banner" }}
+{{ $label := "Save Your Spot"}}
+{{ $external := true }}
+
+{{ if .IsHome }}
+    {{ $name = "azure-nextgen" }}
+    {{ $summary = "Next generation Azure provider with 100% coverage for ARM!" }}
+    {{ $url = relref . "/azure" }}
+    {{ $label = "Learn More"}}
+    {{ $external = false }}
+{{ end }}
+
 {{/* When a banner is dismissed, its `name` property is recorded in localStorage to
 prevent it from being shown again, so be sure to name new banners uniquely to prevent them
 from being suppressed. */}}
-<pulumi-banner name="cloud-engineering-summit" dismissible>
+<pulumi-banner name="{{ $name }}" dismissible>
     <div class="content">
-        <span class="summary">Come join Pulumi for the industry's first Cloud Engineering Summit! October 7&ndash;8.</span>
+        <span class="summary">{{ $summary | safeHTML }}</span>
         <span class="cta">
-            <a href="https://cloudengineeringsummit.com/?utm_campaign=summit&utm_source=pulumi.com&utm_medium=top-banner" target="_blank" rel="noopener noreferrer">Save Your Spot</a>
+            <a href="{{ $url }}" {{ if $external }} target="_blank" rel="noopener noreferrer" {{ end }}>{{ $label | safeHTML }}</a>
         </span>
     </div>
 </pulumi-banner>

@@ -34,10 +34,9 @@ export class Banner {
         this.store.mapDispatchToProps(this, { dismissBanner });
 
         this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
-
             return {
                 // Banners are visible if they have a name and haven't been dismissed.
-                visible: !!this.name && !state.banners.dismissed.find(b => b.name),
+                visible: !!this.name && !state.banners.dismissed.find(b => b.name === this.name),
             }
         });
     }
