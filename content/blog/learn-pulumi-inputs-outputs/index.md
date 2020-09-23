@@ -1,6 +1,6 @@
 ---
 title: "Learn Pulumi: Inputs and Outputs"
-date: 2020-09-11T08:29:28-05:00
+date: 2020-09-24
 meta_desc: "Learn how inputs and outputs are key to building infrastructure with code."
 meta_image: learn_pulumi.png
 authors:
@@ -16,7 +16,7 @@ This article is about resource inputs and outputs, what they are, why we have th
 
 ## Inputs
 
-When you create a resource, you pass arguments to its constructor. They are called the inputs and they can be
+When you create a resource, you pass arguments to its constructor. They are called the inputs, and they can be:
 
 - concrete values (like strings, numbers, and booleans), arrays, or other structures
 - asynchronous values or
@@ -24,7 +24,7 @@ When you create a resource, you pass arguments to its constructor. They are call
 
 ## Outputs
 
-Cloud resources take time to create, for example, creating one or more virtual machines can take several minutes. After a resource is created, you can access any of its properties, which are called outputs. If you've written a web application, you might be familiar with the concept of [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). A Promise is a proxy object for a value that's not known when the Promise is created. It lets an asynchronous method return a value like a synchronous method so that the program can execute without having to wait for a value.
+Cloud resources take time to create. For example, creating one or more virtual machines can take several minutes. After a resource is created, you can access any of its properties, which are called outputs. If you've written a web application, you might be familiar with the concept of [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). A Promise is a proxy object for a value that's not known when the Promise is created. It lets an asynchronous method return a value like a synchronous method so that the program can execute without having to wait for a value.
 
 Outputs are similar to Promises but are not the same. Outputs resolve to values once they're known, just like Promises. Unlike Promises, outputs also represent the dependency on the source of the value, which is how Pulumi creates a dependency graph of resources.
 
@@ -32,9 +32,9 @@ Pulumi lets you see how resources change with [preview]({{< relref "docs/referen
 
 ## A Web Application Example
 
-Let's look at some code. This example is built on AWS but the same principles apply to other cloud providers. The example deploys two web servers behind a load balancer.
+Let's look at some code. This example is built on AWS, but the same principles apply to other cloud providers. The example deploys two web servers behind a load balancer.
 
-The first thing to notice is that the code is wrapped in an [`async ()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) function. The reason for this is that we create a [Virtual Private Cloud (VPC)](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) which defines a virtual network for our application.  The VPC's public subnets are outputs that connect to the load balancer.
+The first thing to notice is that the code is wrapped in an [`async ()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) function. The reason for this is that we create a [Virtual Private Cloud (VPC)](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html), which defines a virtual network for our application.  The VPC's public subnets are outputs that connect to the load balancer.
 
 We use an AWS provided [default VPC](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html#default-vpc-components). The default VPC includes a default security group that allows ingress. However, we must create a security group to control egress from the VPC so that the web servers can respond.
 
@@ -66,7 +66,7 @@ In this part of the code, the [application load balancer (ALB)](https://docs.aws
     const publicIps: pulumi.Output<string>[] = [];
 ```
 
-We also call `await` to return the public subnets as an output, because we need that information before creating the virtual machines. It's important to remember you can't access the values of outputs directly. Later, we'll review other functions to manage the value of an output.
+We also call `await` to return the public subnets as an output, because we need them before creating the virtual machines. It's important to remember you can't access the values of outputs directly. Later, we'll review other functions to manage the value of an output.
 
 ```typescript
     const subnets = await vpc.publicSubnets;
@@ -104,9 +104,9 @@ The most common way to use an output is to pass it to another resource as an inp
 };
 ```
 
-The last lined exports the hostname and the public IP addresses of the virtual machines as outputs. Pulumi can capture values and make them available to the project stack. This includes the command line, in the [Pulumi console](https://app.pulumi.com/), and even among stacks in your project.
+The last line exports the hostname and the public IP addresses of the virtual machines as outputs. Pulumi can capture values and make them available to the project stack. This includes the command line, in the [Pulumi console](https://app.pulumi.com/), and even among stacks in your project.
 
-The following script uses the `endpoint` output to call our webserver application.
+The following script uses the `endpoint` output to call our web server application.
 
 ```bash
 for i in {1..5}; do curl http://$(pulumi stack output endpoint); done
@@ -124,7 +124,7 @@ export const subdomain = listener.endpoint.hostname.apply(hostname => hostname.s
 
 In addition to `apply`,  Pulumi offers other convenient helper methods for managing outputs.
 
-If you want to call a method on a string, a number, or the underlying value, Pulumi offers a convenient way of accessing the members directly, even though it's an output. For example, we ca call the function to uppercase a string.
+If you want to call a method on a string, a number, or the underlying value, Pulumi offers a convenient way of accessing the members directly, even though it's an output. For example, we can call the function to uppercase a string.
 
 ```typescript
 export const upperHostname = listener.endpoint.hostname.toString().toUpperCase();
@@ -136,7 +136,7 @@ In another case, we may want to use concrete values from multiple outputs. We co
 export const url = pulumi.all([listener.endpoint.hostname, listener.endpoint.port]).apply( ( [hostname, port]) =>  `http://${hostname}:${port}` );
 ```
 
-In addition, Pulumi has a string concatenation helper function because concatenation is frequently used. The `interpolate` function can reference outputs without calling apply or all on any of them.
+Also, Pulumi has a string concatenation helper function because concatenation is frequently used. The `interpolate` function can reference outputs without calling apply or all on any of them.
 
 ``` typescript
 export const url = pulumi.interpolate`http://${listener.endpoint.hostname}:${listener.endpoint.port}`;
