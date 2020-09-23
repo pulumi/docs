@@ -46,13 +46,7 @@ brew uninstall hugo
 Install Hugo v0.55.4:
 
 ```bash
-brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/cf3219506fd28f7133041b74761e8025418435a3/Formula/hugo.rb
-```
-
-To prevent brew from upgrading Hugo:
-
-```bash
-brew pin hugo
+brew install pulumi/tap/hugo@0.55.4
 ```
 
 ##### Install Go
