@@ -34,6 +34,7 @@ class MyStack : Stack
         // Create a cen vbr HealrhCheck resource and use it.
         var defaultInstance = new AliCloud.Cen.Instance("defaultInstance", new AliCloud.Cen.InstanceArgs
         {
+            CenInstanceName = "test_name",
         });
         var defaultInstanceAttachment = new AliCloud.Cen.InstanceAttachment("defaultInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
         {
@@ -76,7 +77,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		defaultInstance, err := cen.NewInstance(ctx, "defaultInstance", nil)
+		defaultInstance, err := cen.NewInstance(ctx, "defaultInstance", &cen.InstanceArgs{
+			CenInstanceName: pulumi.String("test_name"),
+		})
 		if err != nil {
 			return err
 		}
@@ -116,7 +119,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 # Create a cen vbr HealrhCheck resource and use it.
-default_instance = alicloud.cen.Instance("defaultInstance")
+default_instance = alicloud.cen.Instance("defaultInstance", cen_instance_name="test_name")
 default_instance_attachment = alicloud.cen.InstanceAttachment("defaultInstanceAttachment",
     instance_id=default_instance.id,
     child_instance_id="vbr-xxxxx",
@@ -142,7 +145,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Create a cen vbr HealrhCheck resource and use it.
-const defaultInstance = new alicloud.cen.Instance("defaultInstance", {});
+const defaultInstance = new alicloud.cen.Instance("defaultInstance", {cenInstanceName: "test_name"});
 const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("defaultInstanceAttachment", {
     instanceId: defaultInstance.id,
     childInstanceId: "vbr-xxxxx",
