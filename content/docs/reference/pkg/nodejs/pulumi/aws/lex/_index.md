@@ -3,7 +3,7 @@ title: "Module lex"
 title_tag: "Module lex | Package @pulumi/aws | Node.js SDK"
 linktitle: "lex"
 meta_desc: "Explore members of the lex module in the @pulumi/aws package."
-git_sha: "375fcb47b10c41d5c9decd0e09a09141dec6aba4"
+git_sha: "666638557408d978cfe3b6ef8de5bd64ccda6273"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SlotType" data-link-title="SlotType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L42">
         Resource <strong>SlotType</strong>
     </a>
 </h3>
@@ -76,7 +76,7 @@ const flowerTypes = new aws.lex.SlotType("flower_types", {
 ```
 
 <h4 class="pdoc-member-header" id="SlotType-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L113"> <b>constructor</b></a>
 </h4>
 
 
@@ -90,7 +90,7 @@ Create a SlotType resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SlotType-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -101,14 +101,14 @@ Get an existing SlotType resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SlotType-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SlotType-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -119,7 +119,7 @@ Returns true if the given object is an instance of SlotType.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SlotType-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L74">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L74">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checksum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ Checksum identifying the version of the slot type that was created. The checksum
 not included as an argument because the resource will add it automatically when updating the slot type.
 
 <h4 class="pdoc-member-header" id="SlotType-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L79">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L79">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -137,7 +137,7 @@ Determines if a new slot type version is created when the initial resource is cr
 update. Defaults to true.
 
 <h4 class="pdoc-member-header" id="SlotType-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L83">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L83">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ update. Defaults to true.
 The date when the slot type version was created.
 
 <h4 class="pdoc-member-header" id="SlotType-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L87">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L87">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ The date when the slot type version was created.
 A description of the slot type.
 
 <h4 class="pdoc-member-header" id="SlotType-enumerationValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L94">property <b>enumerationValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L94">property <b>enumerationValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enumerationValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SlotTypeEnumerationValue'>SlotTypeEnumerationValue</a>[]&gt;;</code></pre>
@@ -164,7 +164,7 @@ train the machine learning model about the values that it resolves for a slot. A
 documented under enumeration_value.
 
 <h4 class="pdoc-member-header" id="SlotType-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -173,7 +173,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SlotType-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L98">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L98">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -181,7 +181,7 @@ deployments and may be missing (undefined) during planning phases.
 The date when the `$LATEST` version of this slot type was updated.
 
 <h4 class="pdoc-member-header" id="SlotType-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ The date when the `$LATEST` version of this slot type was updated.
 The name of the slot type. The name is not case sensitive.
 
 <h4 class="pdoc-member-header" id="SlotType-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -198,7 +198,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SlotType-valueSelectionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L109">property <b>valueSelectionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L109">property <b>valueSelectionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueSelectionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ value is similar to the slot value. `TOP_RESOLUTION` returns the first value in 
 if there is a resolution list for the slot, otherwise null is returned.
 
 <h4 class="pdoc-member-header" id="SlotType-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L113">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L113">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -219,7 +219,7 @@ The version of the slot type.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getSlotType" data-link-title="getSlotType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L24">
         Function <strong>getSlotType</strong>
     </a>
 </h3>
@@ -245,7 +245,7 @@ const flowerTypes = pulumi.output(aws.lex.getSlotType({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetSlotTypeArgs" data-link-title="GetSlotTypeArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L41">
         interface <strong>GetSlotTypeArgs</strong>
     </a>
 </h3>
@@ -255,7 +255,7 @@ const flowerTypes = pulumi.output(aws.lex.getSlotType({
 A collection of arguments for invoking getSlotType.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -263,7 +263,7 @@ A collection of arguments for invoking getSlotType.
 The name of the slot type. The name is case sensitive.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L49">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L49">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -271,7 +271,7 @@ The name of the slot type. The name is case sensitive.
 The version of the slot type.
 
 <h3 class="pdoc-module-header" id="GetSlotTypeResult" data-link-title="GetSlotTypeResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L55">
         interface <strong>GetSlotTypeResult</strong>
     </a>
 </h3>
@@ -281,7 +281,7 @@ The version of the slot type.
 A collection of values returned by getSlotType.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L60">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L60">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -290,7 +290,7 @@ Checksum identifying the version of the slot type that was created. The checksum
 not included as an argument because the resource will add it automatically when updating the slot type.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L64">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L64">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -298,7 +298,7 @@ not included as an argument because the resource will add it automatically when 
 The date when the slot type version was created.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L68">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L68">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -306,7 +306,7 @@ The date when the slot type version was created.
 A description of the slot type.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-enumerationValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L74">property <b>enumerationValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L74">property <b>enumerationValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enumerationValues: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSlotTypeEnumerationValue'>GetSlotTypeEnumerationValue</a>[];</code></pre>
@@ -316,7 +316,7 @@ the slot type can take. Each value can have a set of synonyms, which are additio
 train the machine learning model about the values that it resolves for a slot.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -324,7 +324,7 @@ train the machine learning model about the values that it resolves for a slot.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L82">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L82">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -332,7 +332,7 @@ The provider-assigned unique ID for this managed resource.
 The date when the $LATEST version of this slot type was updated.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -340,7 +340,7 @@ The date when the $LATEST version of this slot type was updated.
 The name of the slot type. The name is not case sensitive.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-valueSelectionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L93">property <b>valueSelectionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L93">property <b>valueSelectionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSelectionStrategy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -351,7 +351,7 @@ value is similar to the slot value. `TOP_RESOLUTION` returns the first value in 
 if there is a resolution list for the slot, otherwise null is returned.
 
 <h4 class="pdoc-member-header" id="GetSlotTypeResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/getSlotType.ts#L97">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/getSlotType.ts#L97">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -359,7 +359,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 The version of the slot type.
 
 <h3 class="pdoc-module-header" id="SlotTypeArgs" data-link-title="SlotTypeArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L215">
         interface <strong>SlotTypeArgs</strong>
     </a>
 </h3>
@@ -369,7 +369,7 @@ The version of the slot type.
 The set of arguments for constructing a SlotType resource.
 
 <h4 class="pdoc-member-header" id="SlotTypeArgs-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L220">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L220">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -378,7 +378,7 @@ Determines if a new slot type version is created when the initial resource is cr
 update. Defaults to true.
 
 <h4 class="pdoc-member-header" id="SlotTypeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L224">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L224">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ update. Defaults to true.
 A description of the slot type.
 
 <h4 class="pdoc-member-header" id="SlotTypeArgs-enumerationValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L231">property <b>enumerationValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L231">property <b>enumerationValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enumerationValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SlotTypeEnumerationValue'>SlotTypeEnumerationValue</a>&gt;[]&gt;;</code></pre>
@@ -397,7 +397,7 @@ train the machine learning model about the values that it resolves for a slot. A
 documented under enumeration_value.
 
 <h4 class="pdoc-member-header" id="SlotTypeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L235">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L235">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ documented under enumeration_value.
 The name of the slot type. The name is not case sensitive.
 
 <h4 class="pdoc-member-header" id="SlotTypeArgs-valueSelectionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L242">property <b>valueSelectionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L242">property <b>valueSelectionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSelectionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -416,7 +416,7 @@ value is similar to the slot value. `TOP_RESOLUTION` returns the first value in 
 if there is a resolution list for the slot, otherwise null is returned.
 
 <h3 class="pdoc-module-header" id="SlotTypeState" data-link-title="SlotTypeState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L165">
         interface <strong>SlotTypeState</strong>
     </a>
 </h3>
@@ -426,7 +426,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 Input properties used for looking up and filtering SlotType resources.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L170">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L170">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -435,7 +435,7 @@ Checksum identifying the version of the slot type that was created. The checksum
 not included as an argument because the resource will add it automatically when updating the slot type.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-createVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L175">property <b>createVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L175">property <b>createVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -444,7 +444,7 @@ Determines if a new slot type version is created when the initial resource is cr
 update. Defaults to true.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L179">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L179">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -452,7 +452,7 @@ update. Defaults to true.
 The date when the slot type version was created.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L183">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L183">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -460,7 +460,7 @@ The date when the slot type version was created.
 A description of the slot type.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-enumerationValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L190">property <b>enumerationValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L190">property <b>enumerationValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enumerationValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SlotTypeEnumerationValue'>SlotTypeEnumerationValue</a>&gt;[]&gt;;</code></pre>
@@ -471,7 +471,7 @@ train the machine learning model about the values that it resolves for a slot. A
 documented under enumeration_value.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-lastUpdatedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L194">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L194">property <b>lastUpdatedDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ documented under enumeration_value.
 The date when the `$LATEST` version of this slot type was updated.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L198">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L198">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -487,7 +487,7 @@ The date when the `$LATEST` version of this slot type was updated.
 The name of the slot type. The name is not case sensitive.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-valueSelectionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L205">property <b>valueSelectionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L205">property <b>valueSelectionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSelectionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -498,7 +498,7 @@ value is similar to the slot value. `TOP_RESOLUTION` returns the first value in 
 if there is a resolution list for the slot, otherwise null is returned.
 
 <h4 class="pdoc-member-header" id="SlotTypeState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/375fcb47b10c41d5c9decd0e09a09141dec6aba4/sdk/nodejs/lex/slotType.ts#L209">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/666638557408d978cfe3b6ef8de5bd64ccda6273/sdk/nodejs/lex/slotType.ts#L209">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

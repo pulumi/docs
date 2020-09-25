@@ -28,16 +28,13 @@ class MyStack : Stack
     {
         var test = Output.Create(Aws.Neptune.GetOrderableDbInstance.InvokeAsync(new Aws.Neptune.GetOrderableDbInstanceArgs
         {
-            Engine = "neptune",
             EngineVersion = "1.0.3.0",
-            LicenseModel = "amazon-license",
             PreferredInstanceClasses = 
             {
                 "db.r5.large",
                 "db.r4.large",
                 "db.t3.medium",
             },
-            StorageType = "aurora",
         }));
     }
 
@@ -58,17 +55,13 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "1.0.3.0"
-		opt1 := "amazon-license"
 		_, err := neptune.GetOrderableDbInstance(ctx, &neptune.GetOrderableDbInstanceArgs{
-			Engine:        "neptune",
 			EngineVersion: &opt0,
-			LicenseModel:  &opt1,
 			PreferredInstanceClasses: []string{
 				"db.r5.large",
 				"db.r4.large",
 				"db.t3.medium",
 			},
-			StorageType: "aurora",
 		}, nil)
 		if err != nil {
 			return err
@@ -85,15 +78,12 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-test = aws.neptune.get_orderable_db_instance(engine="neptune",
-    engine_version="1.0.3.0",
-    license_model="amazon-license",
+test = aws.neptune.get_orderable_db_instance(engine_version="1.0.3.0",
     preferred_instance_classes=[
         "db.r5.large",
         "db.r4.large",
         "db.t3.medium",
-    ],
-    storage_type="aurora")
+    ])
 ```
 
 {{% /example %}}
@@ -105,15 +95,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const test = pulumi.output(aws.neptune.getOrderableDbInstance({
-    engine: "neptune",
     engineVersion: "1.0.3.0",
-    licenseModel: "amazon-license",
     preferredInstanceClasses: [
         "db.r5.large",
         "db.r4.large",
         "db.t3.medium",
     ],
-    storageType: "aurora",
 }, { async: true }));
 ```
 
@@ -158,15 +145,15 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}DB engine. Engine values include `neptune`.
+    <dd>{{% md %}}DB engine. (Default: `neptune`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -199,7 +186,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}License model. For example, `amazon-license`.
+    <dd>{{% md %}}License model. (Default: `amazon-license`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -221,7 +208,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
+    <dd>{{% md %}}Enable to show only VPC offerings.
 {{% /md %}}</dd>
 
 </dl>
@@ -231,15 +218,15 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}DB engine. Engine values include `neptune`.
+    <dd>{{% md %}}DB engine. (Default: `neptune`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -272,7 +259,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}License model. For example, `amazon-license`.
+    <dd>{{% md %}}License model. (Default: `amazon-license`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -294,7 +281,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
+    <dd>{{% md %}}Enable to show only VPC offerings.
 {{% /md %}}</dd>
 
 </dl>
@@ -304,15 +291,15 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}DB engine. Engine values include `neptune`.
+    <dd>{{% md %}}DB engine. (Default: `neptune`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -345,7 +332,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}License model. For example, `amazon-license`.
+    <dd>{{% md %}}License model. (Default: `amazon-license`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -367,7 +354,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
+    <dd>{{% md %}}Enable to show only VPC offerings.
 {{% /md %}}</dd>
 
 </dl>
@@ -377,15 +364,15 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}DB engine. Engine values include `neptune`.
+    <dd>{{% md %}}DB engine. (Default: `neptune`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -418,7 +405,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}License model. For example, `amazon-license`.
+    <dd>{{% md %}}License model. (Default: `amazon-license`)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -440,7 +427,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
+    <dd>{{% md %}}Enable to show only VPC offerings.
 {{% /md %}}</dd>
 
 </dl>
@@ -476,16 +463,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="engine_csharp">
-<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
 </span> 
@@ -509,16 +486,6 @@ The following output properties are available:
             title="">
         <span id="instanceclass_csharp">
 <a href="#instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="licensemodel_csharp">
-<a href="#licensemodel_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -691,6 +658,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="engine_csharp">
+<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="licensemodel_csharp">
+<a href="#licensemodel_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="preferredinstanceclasses_csharp">
 <a href="#preferredinstanceclasses_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Instance<wbr>Classes</a>
 </span> 
@@ -719,16 +706,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="engine_go">
-<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
 </span> 
@@ -752,16 +729,6 @@ The following output properties are available:
             title="">
         <span id="instanceclass_go">
 <a href="#instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="licensemodel_go">
-<a href="#licensemodel_go" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -934,6 +901,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="engine_go">
+<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="licensemodel_go">
+<a href="#licensemodel_go" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="preferredinstanceclasses_go">
 <a href="#preferredinstanceclasses_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Instance<wbr>Classes</a>
 </span> 
@@ -962,16 +949,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="engine_nodejs">
-<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
 </span> 
@@ -995,16 +972,6 @@ The following output properties are available:
             title="">
         <span id="instanceclass_nodejs">
 <a href="#instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="licensemodel_nodejs">
-<a href="#licensemodel_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Model</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1177,6 +1144,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="engine_nodejs">
+<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="licensemodel_nodejs">
+<a href="#licensemodel_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="preferredinstanceclasses_nodejs">
 <a href="#preferredinstanceclasses_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Instance<wbr>Classes</a>
 </span> 
@@ -1205,16 +1192,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="engine_python">
-<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
 </span> 
@@ -1238,16 +1215,6 @@ The following output properties are available:
             title="">
         <span id="instance_class_python">
 <a href="#instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="license_model_python">
-<a href="#license_model_python" style="color: inherit; text-decoration: inherit;">license_<wbr>model</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1415,6 +1382,26 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="engine_python">
+<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="license_model_python">
+<a href="#license_model_python" style="color: inherit; text-decoration: inherit;">license_<wbr>model</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
