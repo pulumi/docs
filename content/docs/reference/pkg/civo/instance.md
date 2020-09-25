@@ -1,8 +1,8 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Package civo"
-meta_desc: "Explore the Instance resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Instance resource. This can be used to create,"
+title_tag: "Resource Instance | Package Civo"
+meta_desc: "Explore the Instance resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Instance resource. This can be used to create,"
 ---
 
 

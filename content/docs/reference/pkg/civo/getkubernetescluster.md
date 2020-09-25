@@ -1,8 +1,8 @@
 
 ---
 title: "GetKubernetesCluster"
-title_tag: "Function GetKubernetesCluster | Package civo"
-meta_desc: "Explore the GetKubernetesCluster function of the civo package, including examples, input properties, output properties, and supporting types. Provides a Civo Kubernetes cluster data source."
+title_tag: "Function GetKubernetesCluster | Package Civo"
+meta_desc: "Explore the GetKubernetesCluster function of the Civo package, including examples, input properties, output properties, and supporting types. Provides a Civo Kubernetes cluster data source."
 ---
 
 

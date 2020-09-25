@@ -1,8 +1,8 @@
 
 ---
 title: "SshKey"
-title_tag: "Resource SshKey | Package civo"
-meta_desc: "Explore the SshKey resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo SSH key resource to allow you to manage SSH"
+title_tag: "Resource SshKey | Package Civo"
+meta_desc: "Explore the SshKey resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo SSH key resource to allow you to manage SSH"
 ---
 
 

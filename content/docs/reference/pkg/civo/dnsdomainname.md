@@ -1,8 +1,8 @@
 
 ---
 title: "DnsDomainName"
-title_tag: "Resource DnsDomainName | Package civo"
-meta_desc: "Explore the DnsDomainName resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo dns domain name resource."
+title_tag: "Resource DnsDomainName | Package Civo"
+meta_desc: "Explore the DnsDomainName resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo dns domain name resource."
 ---
 
 

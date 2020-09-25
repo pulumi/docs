@@ -1,8 +1,8 @@
 
 ---
 title: "Volume"
-title_tag: "Resource Volume | Package civo"
-meta_desc: "Explore the Volume resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo volume which can be attached to a Instance in order to provide expanded storage."
+title_tag: "Resource Volume | Package Civo"
+meta_desc: "Explore the Volume resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo volume which can be attached to a Instance in order to provide expanded storage."
 ---
 
 

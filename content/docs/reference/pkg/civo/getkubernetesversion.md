@@ -1,8 +1,8 @@
 
 ---
 title: "GetKubernetesVersion"
-title_tag: "Function GetKubernetesVersion | Package civo"
-meta_desc: "Explore the GetKubernetesVersion function of the civo package, including examples, input properties, output properties, and supporting types. Provides access to the available Civo Kubernetes Service versions, with the ability to filter the results."
+title_tag: "Function GetKubernetesVersion | Package Civo"
+meta_desc: "Explore the GetKubernetesVersion function of the Civo package, including examples, input properties, output properties, and supporting types. Provides access to the available Civo Kubernetes Service versions, with the ability to filter the results."
 ---
 
 

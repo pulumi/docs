@@ -1,8 +1,8 @@
 
 ---
 title: "Snapshot"
-title_tag: "Resource Snapshot | Package civo"
-meta_desc: "Explore the Snapshot resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource which can be used to create a snapshot from an existing Civo Instance."
+title_tag: "Resource Snapshot | Package Civo"
+meta_desc: "Explore the Snapshot resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource which can be used to create a snapshot from an existing Civo Instance."
 ---
 
 

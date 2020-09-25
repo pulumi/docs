@@ -1,8 +1,8 @@
 
 ---
 title: "GetInstance"
-title_tag: "Function GetInstance | Package civo"
-meta_desc: "Explore the GetInstance function of the civo package, including examples, input properties, output properties, and supporting types. "
+title_tag: "Function GetInstance | Package Civo"
+meta_desc: "Explore the GetInstance function of the Civo package, including examples, input properties, output properties, and supporting types. "
 ---
 
 

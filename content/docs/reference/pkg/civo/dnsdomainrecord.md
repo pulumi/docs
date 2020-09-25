@@ -1,8 +1,8 @@
 
 ---
 title: "DnsDomainRecord"
-title_tag: "Resource DnsDomainRecord | Package civo"
-meta_desc: "Explore the DnsDomainRecord resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo dns domain record resource."
+title_tag: "Resource DnsDomainRecord | Package Civo"
+meta_desc: "Explore the DnsDomainRecord resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo dns domain record resource."
 ---
 
 

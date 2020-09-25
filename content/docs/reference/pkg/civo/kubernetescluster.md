@@ -1,8 +1,8 @@
 
 ---
 title: "KubernetesCluster"
-title_tag: "Resource KubernetesCluster | Package civo"
-meta_desc: "Explore the KubernetesCluster resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource KubernetesCluster | Package Civo"
+meta_desc: "Explore the KubernetesCluster resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

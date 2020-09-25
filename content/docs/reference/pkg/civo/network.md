@@ -1,8 +1,8 @@
 
 ---
 title: "Network"
-title_tag: "Resource Network | Package civo"
-meta_desc: "Explore the Network resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Network resource. This can be used to create,"
+title_tag: "Resource Network | Package Civo"
+meta_desc: "Explore the Network resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Network resource. This can be used to create,"
 ---
 
 
