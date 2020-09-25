@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package civo"
-meta_desc: "Explore the Provider resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the civo package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package Civo"
+meta_desc: "Explore the Provider resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the civo package. By default, resources use package-wide configuration"
 ---
 
 

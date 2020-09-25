@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancer"
-title_tag: "Resource LoadBalancer | Package civo"
-meta_desc: "Explore the LoadBalancer resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource LoadBalancer | Package Civo"
+meta_desc: "Explore the LoadBalancer resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 

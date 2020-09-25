@@ -1,8 +1,8 @@
 
 ---
 title: "Firewall"
-title_tag: "Resource Firewall | Package civo"
-meta_desc: "Explore the Firewall resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Cloud Firewall resource. This can be used to create,"
+title_tag: "Resource Firewall | Package Civo"
+meta_desc: "Explore the Firewall resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Cloud Firewall resource. This can be used to create,"
 ---
 
 

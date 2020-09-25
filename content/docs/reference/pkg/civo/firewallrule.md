@@ -1,8 +1,8 @@
 
 ---
 title: "FirewallRule"
-title_tag: "Resource FirewallRule | Package civo"
-meta_desc: "Explore the FirewallRule resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Cloud Firewall Rule resource. "
+title_tag: "Resource FirewallRule | Package Civo"
+meta_desc: "Explore the FirewallRule resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Cloud Firewall Rule resource. "
 ---
 
 

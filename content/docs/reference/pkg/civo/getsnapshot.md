@@ -1,8 +1,8 @@
 
 ---
 title: "GetSnapshot"
-title_tag: "Function GetSnapshot | Package civo"
-meta_desc: "Explore the GetSnapshot function of the civo package, including examples, input properties, output properties, and supporting types. Snapshots are saved instances of a block storage volume. Use this data"
+title_tag: "Function GetSnapshot | Package Civo"
+meta_desc: "Explore the GetSnapshot function of the Civo package, including examples, input properties, output properties, and supporting types. Snapshots are saved instances of a block storage volume. Use this data"
 ---
 
 

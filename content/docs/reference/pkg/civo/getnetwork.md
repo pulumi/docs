@@ -1,8 +1,8 @@
 
 ---
 title: "GetNetwork"
-title_tag: "Function GetNetwork | Package civo"
-meta_desc: "Explore the GetNetwork function of the civo package, including examples, input properties, output properties, and supporting types. "
+title_tag: "Function GetNetwork | Package Civo"
+meta_desc: "Explore the GetNetwork function of the Civo package, including examples, input properties, output properties, and supporting types. "
 ---
 
 

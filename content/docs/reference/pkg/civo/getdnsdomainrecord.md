@@ -1,8 +1,8 @@
 
 ---
 title: "GetDnsDomainRecord"
-title_tag: "Function GetDnsDomainRecord | Package civo"
-meta_desc: "Explore the GetDnsDomainRecord function of the civo package, including examples, input properties, output properties, and supporting types. "
+title_tag: "Function GetDnsDomainRecord | Package Civo"
+meta_desc: "Explore the GetDnsDomainRecord function of the Civo package, including examples, input properties, output properties, and supporting types. "
 ---
 
 

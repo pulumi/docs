@@ -1,8 +1,8 @@
 
 ---
 title: "GetVolume"
-title_tag: "Function GetVolume | Package civo"
-meta_desc: "Explore the GetVolume function of the civo package, including examples, input properties, output properties, and supporting types. "
+title_tag: "Function GetVolume | Package Civo"
+meta_desc: "Explore the GetVolume function of the Civo package, including examples, input properties, output properties, and supporting types. "
 ---
 
 

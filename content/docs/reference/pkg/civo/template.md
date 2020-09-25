@@ -1,8 +1,8 @@
 
 ---
 title: "Template"
-title_tag: "Resource Template | Package civo"
-meta_desc: "Explore the Template resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Template resource."
+title_tag: "Resource Template | Package Civo"
+meta_desc: "Explore the Template resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Template resource."
 ---
 
 

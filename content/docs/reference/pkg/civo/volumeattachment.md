@@ -1,8 +1,8 @@
 
 ---
 title: "VolumeAttachment"
-title_tag: "Resource VolumeAttachment | Package civo"
-meta_desc: "Explore the VolumeAttachment resource of the civo package, including examples, input properties, output properties, lookup functions, and supporting types. Manages attaching a Volume to a Instance."
+title_tag: "Resource VolumeAttachment | Package Civo"
+meta_desc: "Explore the VolumeAttachment resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Manages attaching a Volume to a Instance."
 ---
 
 
