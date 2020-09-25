@@ -44,7 +44,8 @@ form:
     Canned Examples:
 </p>
 <select id="terraform-canned-example" class="text-gray-700 text-xs">
-    <option id="aks_cluster" selected> AKS Cluster </option>
+    <option id="storage_account" selected> Storage Account </option>
+    <option id="aks_cluster"> AKS Cluster </option>
     <option id="acr"> Azure Container Registry </option>
     <option id="sqldb"> SQL Database </option>
 </select>
