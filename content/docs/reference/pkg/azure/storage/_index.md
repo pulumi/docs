@@ -22,6 +22,7 @@ Explore the resources and functions of the storage module in the Azure package.
     <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
     <li><a href="sharedirectory" title="ShareDirectory"><span class="symbol resource"></span>ShareDirectory</a></li>
     <li><a href="sync" title="Sync"><span class="symbol resource"></span>Sync</a></li>
+    <li><a href="syncgroup" title="SyncGroup"><span class="symbol resource"></span>SyncGroup</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
     <li><a href="tableentity" title="TableEntity"><span class="symbol resource"></span>TableEntity</a></li>
     <li><a href="zipblob" title="ZipBlob"><span class="symbol resource"></span>ZipBlob</a></li>
@@ -35,6 +36,7 @@ Explore the resources and functions of the storage module in the Azure package.
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
     <li><a href="getstoragecontainer" title="GetStorageContainer"><span class="symbol function"></span>GetStorageContainer</a></li>
     <li><a href="getsync" title="GetSync"><span class="symbol function"></span>GetSync</a></li>
+    <li><a href="getsyncgroup" title="GetSyncGroup"><span class="symbol function"></span>GetSyncGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -46,7 +48,7 @@ Explore the resources and functions of the storage module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.22.0</dd>
+	<dd>3.23.0</dd>
 </dl>
 
 

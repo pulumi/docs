@@ -382,16 +382,15 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hubtovitualnetworktrafficallowed_csharp">
 <a href="#hubtovitualnetworktrafficallowed_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the Virtual Hub traffic allowed to transit via the Remote Virtual Network? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -401,7 +400,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -415,16 +414,15 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="vitualnetworktohubgatewaystrafficallowed_csharp">
 <a href="#vitualnetworktohubgatewaystrafficallowed_csharp" style="color: inherit; text-decoration: inherit;">Vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is Remote Virtual Network traffic allowed to transit the Hub's Virtual Network Gateway's? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -455,16 +453,15 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hubtovitualnetworktrafficallowed_go">
 <a href="#hubtovitualnetworktrafficallowed_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the Virtual Hub traffic allowed to transit via the Remote Virtual Network? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -474,7 +471,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -488,16 +485,15 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="vitualnetworktohubgatewaystrafficallowed_go">
 <a href="#vitualnetworktohubgatewaystrafficallowed_go" style="color: inherit; text-decoration: inherit;">Vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is Remote Virtual Network traffic allowed to transit the Hub's Virtual Network Gateway's? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -528,16 +524,15 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hubtovitualnetworktrafficallowed_nodejs">
 <a href="#hubtovitualnetworktrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Is the Virtual Hub traffic allowed to transit via the Remote Virtual Network? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -547,7 +542,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -561,16 +556,15 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="vitualnetworktohubgatewaystrafficallowed_nodejs">
 <a href="#vitualnetworktohubgatewaystrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Is Remote Virtual Network traffic allowed to transit the Hub's Virtual Network Gateway's? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -601,16 +595,15 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="hub_to_vitual_network_traffic_allowed_python">
 <a href="#hub_to_vitual_network_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>to_<wbr>vitual_<wbr>network_<wbr>traffic_<wbr>allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the Virtual Hub traffic allowed to transit via the Remote Virtual Network? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -620,7 +613,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -634,16 +627,15 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="vitual_network_to_hub_gateways_traffic_allowed_python">
 <a href="#vitual_network_to_hub_gateways_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">vitual_<wbr>network_<wbr>to_<wbr>hub_<wbr>gateways_<wbr>traffic_<wbr>allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is Remote Virtual Network traffic allowed to transit the Hub's Virtual Network Gateway's? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -858,16 +850,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hubtovitualnetworktrafficallowed_csharp">
 <a href="#state_hubtovitualnetworktrafficallowed_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the Virtual Hub traffic allowed to transit via the Remote Virtual Network? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -877,7 +868,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -913,16 +904,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vitualnetworktohubgatewaystrafficallowed_csharp">
 <a href="#state_vitualnetworktohubgatewaystrafficallowed_csharp" style="color: inherit; text-decoration: inherit;">Vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is Remote Virtual Network traffic allowed to transit the Hub's Virtual Network Gateway's? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -931,16 +921,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hubtovitualnetworktrafficallowed_go">
 <a href="#state_hubtovitualnetworktrafficallowed_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the Virtual Hub traffic allowed to transit via the Remote Virtual Network? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -950,7 +939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -986,16 +975,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vitualnetworktohubgatewaystrafficallowed_go">
 <a href="#state_vitualnetworktohubgatewaystrafficallowed_go" style="color: inherit; text-decoration: inherit;">Vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is Remote Virtual Network traffic allowed to transit the Hub's Virtual Network Gateway's? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1004,16 +992,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hubtovitualnetworktrafficallowed_nodejs">
 <a href="#state_hubtovitualnetworktrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Is the Virtual Hub traffic allowed to transit via the Remote Virtual Network? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1023,7 +1010,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,16 +1046,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vitualnetworktohubgatewaystrafficallowed_nodejs">
 <a href="#state_vitualnetworktohubgatewaystrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Is Remote Virtual Network traffic allowed to transit the Hub's Virtual Network Gateway's? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1077,16 +1063,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_hub_to_vitual_network_traffic_allowed_python">
 <a href="#state_hub_to_vitual_network_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>to_<wbr>vitual_<wbr>network_<wbr>traffic_<wbr>allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the Virtual Hub traffic allowed to transit via the Remote Virtual Network? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1096,7 +1081,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1132,16 +1117,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_vitual_network_to_hub_gateways_traffic_allowed_python">
 <a href="#state_vitual_network_to_hub_gateways_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">vitual_<wbr>network_<wbr>to_<wbr>hub_<wbr>gateways_<wbr>traffic_<wbr>allowed</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is Remote Virtual Network traffic allowed to transit the Hub's Virtual Network Gateway's? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}

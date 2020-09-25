@@ -308,16 +308,15 @@ The VirtualWan resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Boolean flag to specify whether branch to branch traffic is allowed. Defaults to `true`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="allowvnettovnettraffic_csharp">
 <a href="#allowvnettovnettraffic_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vnet<wbr>To<wbr>Vnet<wbr>Traffic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to specify whether VNet to VNet traffic is allowed. Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been removed from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -414,16 +413,15 @@ The VirtualWan resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Boolean flag to specify whether branch to branch traffic is allowed. Defaults to `true`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="allowvnettovnettraffic_go">
 <a href="#allowvnettovnettraffic_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vnet<wbr>To<wbr>Vnet<wbr>Traffic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to specify whether VNet to VNet traffic is allowed. Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been removed from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -520,16 +518,15 @@ The VirtualWan resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Boolean flag to specify whether branch to branch traffic is allowed. Defaults to `true`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="allowvnettovnettraffic_nodejs">
 <a href="#allowvnettovnettraffic_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Vnet<wbr>To<wbr>Vnet<wbr>Traffic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to specify whether VNet to VNet traffic is allowed. Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been removed from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -626,16 +623,15 @@ The VirtualWan resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Boolean flag to specify whether branch to branch traffic is allowed. Defaults to `true`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="allow_vnet_to_vnet_traffic_python">
 <a href="#allow_vnet_to_vnet_traffic_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>vnet_<wbr>to_<wbr>vnet_<wbr>traffic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to specify whether VNet to VNet traffic is allowed. Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been removed from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -927,16 +923,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean flag to specify whether branch to branch traffic is allowed. Defaults to `true`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_allowvnettovnettraffic_csharp">
 <a href="#state_allowvnettovnettraffic_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vnet<wbr>To<wbr>Vnet<wbr>Traffic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to specify whether VNet to VNet traffic is allowed. Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been removed from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1033,16 +1028,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean flag to specify whether branch to branch traffic is allowed. Defaults to `true`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_allowvnettovnettraffic_go">
 <a href="#state_allowvnettovnettraffic_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vnet<wbr>To<wbr>Vnet<wbr>Traffic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to specify whether VNet to VNet traffic is allowed. Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been removed from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1139,16 +1133,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean flag to specify whether branch to branch traffic is allowed. Defaults to `true`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_allowvnettovnettraffic_nodejs">
 <a href="#state_allowvnettovnettraffic_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Vnet<wbr>To<wbr>Vnet<wbr>Traffic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to specify whether VNet to VNet traffic is allowed. Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been removed from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1245,16 +1238,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean flag to specify whether branch to branch traffic is allowed. Defaults to `true`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_allow_vnet_to_vnet_traffic_python">
 <a href="#state_allow_vnet_to_vnet_traffic_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>vnet_<wbr>to_<wbr>vnet_<wbr>traffic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean flag to specify whether VNet to VNet traffic is allowed. Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been removed from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

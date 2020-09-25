@@ -33,6 +33,28 @@ class MyStack : Stack
             DatabaseName = azurerm_cosmosdb_sql_database.Example.Name,
             PartitionKeyPath = "/definition/id",
             Throughput = 400,
+            IndexingPolicy = new Azure.CosmosDB.Inputs.SqlContainerIndexingPolicyArgs
+            {
+                IndexingMode = "Consistent",
+                IncludedPaths = 
+                {
+                    new Azure.CosmosDB.Inputs.SqlContainerIndexingPolicyIncludedPathArgs
+                    {
+                        Path = "/*",
+                    },
+                    new Azure.CosmosDB.Inputs.SqlContainerIndexingPolicyIncludedPathArgs
+                    {
+                        Path = "/included/?",
+                    },
+                },
+                ExcludedPaths = 
+                {
+                    new Azure.CosmosDB.Inputs.SqlContainerIndexingPolicyExcludedPathArgs
+                    {
+                        Path = "/excluded/?",
+                    },
+                },
+            },
             UniqueKeys = 
             {
                 new Azure.CosmosDB.Inputs.SqlContainerUniqueKeyArgs
@@ -69,6 +91,22 @@ func main() {
 			DatabaseName:      pulumi.Any(azurerm_cosmosdb_sql_database.Example.Name),
 			PartitionKeyPath:  pulumi.String("/definition/id"),
 			Throughput:        pulumi.Int(400),
+			IndexingPolicy: &cosmosdb.SqlContainerIndexingPolicyArgs{
+				IndexingMode: pulumi.String("Consistent"),
+				IncludedPaths: cosmosdb.SqlContainerIndexingPolicyIncludedPathArray{
+					&cosmosdb.SqlContainerIndexingPolicyIncludedPathArgs{
+						Path: pulumi.String("/*"),
+					},
+					&cosmosdb.SqlContainerIndexingPolicyIncludedPathArgs{
+						Path: pulumi.String("/included/?"),
+					},
+				},
+				ExcludedPaths: cosmosdb.SqlContainerIndexingPolicyExcludedPathArray{
+					&cosmosdb.SqlContainerIndexingPolicyExcludedPathArgs{
+						Path: pulumi.String("/excluded/?"),
+					},
+				},
+			},
 			UniqueKeys: cosmosdb.SqlContainerUniqueKeyArray{
 				&cosmosdb.SqlContainerUniqueKeyArgs{
 					Paths: pulumi.StringArray{
@@ -99,6 +137,20 @@ example = azure.cosmosdb.SqlContainer("example",
     database_name=azurerm_cosmosdb_sql_database["example"]["name"],
     partition_key_path="/definition/id",
     throughput=400,
+    indexing_policy=azure.cosmosdb.SqlContainerIndexingPolicyArgs(
+        indexing_mode="Consistent",
+        included_paths=[
+            azure.cosmosdb.SqlContainerIndexingPolicyIncludedPathArgs(
+                path="/*",
+            ),
+            azure.cosmosdb.SqlContainerIndexingPolicyIncludedPathArgs(
+                path="/included/?",
+            ),
+        ],
+        excluded_paths=[azure.cosmosdb.SqlContainerIndexingPolicyExcludedPathArgs(
+            path="/excluded/?",
+        )],
+    ),
     unique_keys=[azure.cosmosdb.SqlContainerUniqueKeyArgs(
         paths=[
             "/definition/idlong",
@@ -121,6 +173,20 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     databaseName: azurerm_cosmosdb_sql_database.example.name,
     partitionKeyPath: "/definition/id",
     throughput: 400,
+    indexingPolicy: {
+        indexingMode: "Consistent",
+        includedPaths: [
+            {
+                path: "/*",
+            },
+            {
+                path: "/included/?",
+            },
+        ],
+        excludedPaths: [{
+            path: "/excluded/?",
+        }],
+    },
     uniqueKeys: [{
         paths: [
             "/definition/idlong",
@@ -144,7 +210,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.SqlContainer">SqlContainer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[SqlContainerAutoscaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[SqlContainerUniqueKeyArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.SqlContainer">SqlContainer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[SqlContainerAutoscaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">indexing_policy</span><span class="p">:</span> <span class="nx">Optional[SqlContainerIndexingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[SqlContainerUniqueKeyArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -372,6 +438,17 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="indexingpolicy_csharp">
+<a href="#indexingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `indexing_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -473,6 +550,17 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexingpolicy_go">
+<a href="#indexingpolicy_go" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}An `indexing_policy` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -582,6 +670,17 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="indexingpolicy_nodejs">
+<a href="#indexingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}An `indexing_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -683,6 +782,17 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexing_policy_python">
+<a href="#indexing_policy_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `indexing_policy` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -828,7 +938,7 @@ Get an existing SqlContainer resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[SqlContainerAutoscaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[SqlContainerUniqueKeyArgs]]</span> = None<span class="p">) -&gt;</span> SqlContainer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[SqlContainerAutoscaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">indexing_policy</span><span class="p">:</span> <span class="nx">Optional[SqlContainerIndexingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[SqlContainerUniqueKeyArgs]]</span> = None<span class="p">) -&gt;</span> SqlContainer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -987,6 +1097,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_indexingpolicy_csharp">
+<a href="#state_indexingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `indexing_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1088,6 +1209,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_indexingpolicy_go">
+<a href="#state_indexingpolicy_go" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}An `indexing_policy` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1197,6 +1329,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_indexingpolicy_nodejs">
+<a href="#state_indexingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}An `indexing_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1298,6 +1441,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_indexing_policy_python">
+<a href="#state_indexing_policy_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `indexing_policy` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1451,6 +1605,364 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum throughput of the SQL container (RU/s). Must be between `4,000` and `1,000,000`. Must be set in increments of `1,000`. Conflicts with `throughput`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerIndexingPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlContainerIndexingPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#SqlContainerIndexingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#SqlContainerIndexingPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.SqlContainerIndexingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.SqlContainerIndexingPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedpaths_csharp">
+<a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedpaths_csharp">
+<a href="#includedpaths_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexingmode_csharp">
+<a href="#indexingmode_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedpaths_go">
+<a href="#excludedpaths_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">[]Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedpaths_go">
+<a href="#includedpaths_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">[]Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexingmode_go">
+<a href="#indexingmode_go" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedpaths_nodejs">
+<a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedpaths_nodejs">
+<a href="#includedpaths_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexingmode_nodejs">
+<a href="#indexingmode_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excluded_paths_python">
+<a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="included_paths_python">
+<a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexing_mode_python">
+<a href="#indexing_mode_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sqlcontainerindexingpolicyexcludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerIndexingPolicyExcludedPath">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlContainerIndexingPolicyExcludedPath">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#SqlContainerIndexingPolicyExcludedPathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#SqlContainerIndexingPolicyExcludedPathOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.SqlContainerIndexingPolicyExcludedPathArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.SqlContainerIndexingPolicyExcludedPath.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path that is excluded from indexing.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path that is excluded from indexing.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path that is excluded from indexing.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path that is excluded from indexing.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sqlcontainerindexingpolicyincludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerIndexingPolicyIncludedPath">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlContainerIndexingPolicyIncludedPath">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#SqlContainerIndexingPolicyIncludedPathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#SqlContainerIndexingPolicyIncludedPathOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.SqlContainerIndexingPolicyIncludedPathArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.SqlContainerIndexingPolicyIncludedPath.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behavior applies to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behavior applies to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behavior applies to.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behavior applies to.
 {{% /md %}}</dd>
 
 </dl>

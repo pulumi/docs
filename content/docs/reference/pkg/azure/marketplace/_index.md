@@ -23,7 +23,7 @@ Explore the resources and functions of the marketplace module in the Azure packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.22.0</dd>
+	<dd>3.23.0</dd>
 </dl>
 
 

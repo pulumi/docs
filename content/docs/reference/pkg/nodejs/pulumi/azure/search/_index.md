@@ -3,7 +3,7 @@ title: "Module search"
 title_tag: "Module search | Package @pulumi/azure | Node.js SDK"
 linktitle: "search"
 meta_desc: "Explore members of the search module in the @pulumi/azure package."
-git_sha: "39438191f36b62d81a480ab3585878afe4b8a3a0"
+git_sha: "65929d23372bebb9669a668512d01db9b900bf1e"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L26">
         Resource <strong>Service</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ const exampleService = new azure.search.Service("exampleService", {
 ```
 
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -68,7 +68,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -79,14 +79,14 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -96,8 +96,16 @@ properties used to qualify the lookup.
 Returns true if the given object is an instance of Service.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
+<h4 class="pdoc-member-header" id="Service-allowedIps">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L57">property <b>allowedIps</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>allowedIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A list of IPv4 addresses that are allowed access to the search service endpoint.
+
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -106,7 +114,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L57">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L61">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -114,7 +122,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure Region where the Search Service should exist. Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -122,7 +130,7 @@ The Azure Region where the Search Service should exist. Changing this forces a n
 The Name which should be used for this Search Service. Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="Service-partitionCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L65">property <b>partitionCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L69">property <b>partitionCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>partitionCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -130,7 +138,7 @@ The Name which should be used for this Search Service. Changing this forces a ne
 The number of partitions which should be created.
 
 <h4 class="pdoc-member-header" id="Service-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L69">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L73">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -138,7 +146,7 @@ The number of partitions which should be created.
 The Primary Key used for Search Service Administration.
 
 <h4 class="pdoc-member-header" id="Service-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L73">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L77">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicNetworkAccessEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -146,7 +154,7 @@ The Primary Key used for Search Service Administration.
 Whether or not public network access is allowed for this resource. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Service-queryKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L77">property <b>queryKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L81">property <b>queryKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>queryKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceQueryKey'>ServiceQueryKey</a>[]&gt;;</code></pre>
@@ -154,7 +162,7 @@ Whether or not public network access is allowed for this resource. Defaults to `
 A `queryKeys` block as defined below.
 
 <h4 class="pdoc-member-header" id="Service-replicaCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L81">property <b>replicaCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L85">property <b>replicaCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicaCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -162,7 +170,7 @@ A `queryKeys` block as defined below.
 The number of replica's which should be created.
 
 <h4 class="pdoc-member-header" id="Service-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L89">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +178,7 @@ The number of replica's which should be created.
 The name of the Resource Group where the Search Service should exist. Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="Service-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L89">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L93">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +186,7 @@ The name of the Resource Group where the Search Service should exist. Changing t
 The Secondary Key used for Search Service Administration.
 
 <h4 class="pdoc-member-header" id="Service-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L93">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L97">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,7 +194,7 @@ The Secondary Key used for Search Service Administration.
 The SKU which should be used for this Search Service. Possible values are `basic`, `free`, `standard`, `standard2` and `standard3` Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="Service-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L97">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L101">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -194,7 +202,7 @@ The SKU which should be used for this Search Service. Possible values are `basic
 A mapping of tags which should be assigned to the Search Service.
 
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -206,7 +214,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L216">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
@@ -215,8 +223,16 @@ deployments.
 
 The set of arguments for constructing a Service resource.
 
+<h4 class="pdoc-member-header" id="ServiceArgs-allowedIps">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L220">property <b>allowedIps</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+A list of IPv4 addresses that are allowed access to the search service endpoint.
+
 <h4 class="pdoc-member-header" id="ServiceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L210">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L224">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -224,7 +240,7 @@ The set of arguments for constructing a Service resource.
 The Azure Region where the Search Service should exist. Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L214">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L228">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -232,7 +248,7 @@ The Azure Region where the Search Service should exist. Changing this forces a n
 The Name which should be used for this Search Service. Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-partitionCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L218">property <b>partitionCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L232">property <b>partitionCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partitionCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -240,7 +256,7 @@ The Name which should be used for this Search Service. Changing this forces a ne
 The number of partitions which should be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L222">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L236">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicNetworkAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -248,7 +264,7 @@ The number of partitions which should be created.
 Whether or not public network access is allowed for this resource. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-replicaCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L226">property <b>replicaCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L240">property <b>replicaCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -256,7 +272,7 @@ Whether or not public network access is allowed for this resource. Defaults to `
 The number of replica's which should be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L230">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L244">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -264,7 +280,7 @@ The number of replica's which should be created.
 The name of the Resource Group where the Search Service should exist. Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L234">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L248">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -272,7 +288,7 @@ The name of the Resource Group where the Search Service should exist. Changing t
 The SKU which should be used for this Search Service. Possible values are `basic`, `free`, `standard`, `standard2` and `standard3` Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L238">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L252">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -280,7 +296,7 @@ The SKU which should be used for this Search Service. Possible values are `basic
 A mapping of tags which should be assigned to the Search Service.
 
 <h3 class="pdoc-module-header" id="ServiceState" data-link-title="ServiceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L162">
         interface <strong>ServiceState</strong>
     </a>
 </h3>
@@ -289,8 +305,16 @@ A mapping of tags which should be assigned to the Search Service.
 
 Input properties used for looking up and filtering Service resources.
 
+<h4 class="pdoc-member-header" id="ServiceState-allowedIps">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L166">property <b>allowedIps</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+A list of IPv4 addresses that are allowed access to the search service endpoint.
+
 <h4 class="pdoc-member-header" id="ServiceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L160">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L170">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +322,7 @@ Input properties used for looking up and filtering Service resources.
 The Azure Region where the Search Service should exist. Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L174">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,7 +330,7 @@ The Azure Region where the Search Service should exist. Changing this forces a n
 The Name which should be used for this Search Service. Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-partitionCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L168">property <b>partitionCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L178">property <b>partitionCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partitionCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -314,7 +338,7 @@ The Name which should be used for this Search Service. Changing this forces a ne
 The number of partitions which should be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L172">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L182">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +346,7 @@ The number of partitions which should be created.
 The Primary Key used for Search Service Administration.
 
 <h4 class="pdoc-member-header" id="ServiceState-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L176">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L186">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicNetworkAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -330,7 +354,7 @@ The Primary Key used for Search Service Administration.
 Whether or not public network access is allowed for this resource. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ServiceState-queryKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L180">property <b>queryKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L190">property <b>queryKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceQueryKey'>ServiceQueryKey</a>&gt;[]&gt;;</code></pre>
@@ -338,7 +362,7 @@ Whether or not public network access is allowed for this resource. Defaults to `
 A `queryKeys` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-replicaCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L184">property <b>replicaCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L194">property <b>replicaCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -346,7 +370,7 @@ A `queryKeys` block as defined below.
 The number of replica's which should be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L188">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L198">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -354,7 +378,7 @@ The number of replica's which should be created.
 The name of the Resource Group where the Search Service should exist. Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L192">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L202">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -362,7 +386,7 @@ The name of the Resource Group where the Search Service should exist. Changing t
 The Secondary Key used for Search Service Administration.
 
 <h4 class="pdoc-member-header" id="ServiceState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L196">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L206">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -370,7 +394,7 @@ The Secondary Key used for Search Service Administration.
 The SKU which should be used for this Search Service. Possible values are `basic`, `free`, `standard`, `standard2` and `standard3` Changing this forces a new Search Service to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/search/service.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/search/service.ts#L210">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

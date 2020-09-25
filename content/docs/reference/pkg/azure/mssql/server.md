@@ -392,7 +392,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator login name for the new server. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The administrator's login name for the new server. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -425,7 +425,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
+    <dd>{{% md %}}This servers MS SQL version. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -531,7 +531,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator login name for the new server. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The administrator's login name for the new server. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -564,7 +564,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
+    <dd>{{% md %}}This servers MS SQL version. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,7 +670,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator login name for the new server. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The administrator's login name for the new server. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -703,7 +703,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
+    <dd>{{% md %}}This servers MS SQL version. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -809,7 +809,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The administrator login name for the new server. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The administrator's login name for the new server. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -842,7 +842,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
+    <dd>{{% md %}}This servers MS SQL version. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -972,6 +972,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="restorabledroppeddatabaseids_csharp">
+<a href="#restorabledroppeddatabaseids_csharp" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dropped restorable database IDs on the server.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -999,6 +1010,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="restorabledroppeddatabaseids_go">
+<a href="#restorabledroppeddatabaseids_go" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dropped restorable database IDs on the server.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1028,6 +1050,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="restorabledroppeddatabaseids_nodejs">
+<a href="#restorabledroppeddatabaseids_nodejs" style="color: inherit; text-decoration: inherit;">restorable<wbr>Dropped<wbr>Database<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dropped restorable database IDs on the server.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1056,6 +1089,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="restorable_dropped_database_ids_python">
+<a href="#restorable_dropped_database_ids_python" style="color: inherit; text-decoration: inherit;">restorable_<wbr>dropped_<wbr>database_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dropped restorable database IDs on the server.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1076,7 +1120,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azuread_administrator</span><span class="p">:</span> <span class="nx">Optional[ServerAzureadAdministratorArgs]</span> = None<span class="p">, </span><span class="nx">connection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[ServerExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">fully_qualified_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServerIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Server</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azuread_administrator</span><span class="p">:</span> <span class="nx">Optional[ServerAzureadAdministratorArgs]</span> = None<span class="p">, </span><span class="nx">connection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[ServerExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">fully_qualified_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServerIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restorable_dropped_database_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Server</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1198,7 +1242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator login name for the new server. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The administrator's login name for the new server. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1313,6 +1357,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_restorabledroppeddatabaseids_csharp">
+<a href="#state_restorabledroppeddatabaseids_csharp" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dropped restorable database IDs on the server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -1330,7 +1385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
+    <dd>{{% md %}}This servers MS SQL version. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 {{% /md %}}</dd>
 
 </dl>
@@ -1348,7 +1403,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator login name for the new server. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The administrator's login name for the new server. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1463,6 +1518,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_restorabledroppeddatabaseids_go">
+<a href="#state_restorabledroppeddatabaseids_go" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dropped restorable database IDs on the server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -1480,7 +1546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
+    <dd>{{% md %}}This servers MS SQL version. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 {{% /md %}}</dd>
 
 </dl>
@@ -1498,7 +1564,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The administrator login name for the new server. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The administrator's login name for the new server. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1613,6 +1679,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_restorabledroppeddatabaseids_nodejs">
+<a href="#state_restorabledroppeddatabaseids_nodejs" style="color: inherit; text-decoration: inherit;">restorable<wbr>Dropped<wbr>Database<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dropped restorable database IDs on the server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -1630,7 +1707,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
+    <dd>{{% md %}}This servers MS SQL version. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 {{% /md %}}</dd>
 
 </dl>
@@ -1648,7 +1725,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The administrator login name for the new server. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The administrator's login name for the new server. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1763,6 +1840,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_restorable_dropped_database_ids_python">
+<a href="#state_restorable_dropped_database_ids_python" style="color: inherit; text-decoration: inherit;">restorable_<wbr>dropped_<wbr>database_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of dropped restorable database IDs on the server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -1780,7 +1868,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
+    <dd>{{% md %}}This servers MS SQL version. Valid values are: 2.0 (for v11 server) and 12.0 (for v12 server).
 {{% /md %}}</dd>
 
 </dl>

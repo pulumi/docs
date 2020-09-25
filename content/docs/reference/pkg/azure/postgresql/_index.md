@@ -16,6 +16,7 @@ Explore the resources and functions of the postgresql module in the Azure packag
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
     <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
+    <li><a href="serverkey" title="ServerKey"><span class="symbol resource"></span>ServerKey</a></li>
     <li><a href="virtualnetworkrule" title="VirtualNetworkRule"><span class="symbol resource"></span>VirtualNetworkRule</a></li>
 </ul>
 
@@ -33,7 +34,7 @@ Explore the resources and functions of the postgresql module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.22.0</dd>
+	<dd>3.23.0</dd>
 </dl>
 
 

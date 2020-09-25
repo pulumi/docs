@@ -3,7 +3,7 @@ title: "Module databricks"
 title_tag: "Module databricks | Package @pulumi/azure | Node.js SDK"
 linktitle: "databricks"
 meta_desc: "Explore members of the databricks module in the @pulumi/azure package."
-git_sha: "39438191f36b62d81a480ab3585878afe4b8a3a0"
+git_sha: "65929d23372bebb9669a668512d01db9b900bf1e"
 block_external_search_index: true
 ---
 
@@ -20,9 +20,15 @@ block_external_search_index: true
     <li><a href="#Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
+<h3>Functions</h3>
+<ul class="api">
+    <li><a href="#getWorkspace"><span class="symbol function"></span>getWorkspace</a></li>
+</ul>
 
 <h3>Others</h3>
 <ul class="api">
+    <li><a href="#GetWorkspaceArgs"><span class="symbol api"></span>GetWorkspaceArgs</a></li>
+    <li><a href="#GetWorkspaceResult"><span class="symbol api"></span>GetWorkspaceResult</a></li>
     <li><a href="#WorkspaceArgs"><span class="symbol api"></span>WorkspaceArgs</a></li>
     <li><a href="#WorkspaceState"><span class="symbol api"></span>WorkspaceState</a></li>
 </ul>
@@ -30,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Workspace" data-link-title="Workspace">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L29">
         Resource <strong>Workspace</strong>
     </a>
 </h3>
@@ -57,7 +63,7 @@ const exampleWorkspace = new azure.databricks.Workspace("exampleWorkspace", {
 ```
 
 <h4 class="pdoc-member-header" id="Workspace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -71,7 +77,7 @@ Create a Workspace resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Workspace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -82,14 +88,14 @@ Get an existing Workspace resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Workspace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Workspace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -100,7 +106,7 @@ Returns true if the given object is an instance of Workspace.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Workspace-customParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L60">property <b>customParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L60">property <b>customParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WorkspaceCustomParameters'>WorkspaceCustomParameters</a>&gt;;</code></pre>
@@ -108,7 +114,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `customParameters` block as documented below.
 
 <h4 class="pdoc-member-header" id="Workspace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -117,7 +123,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Workspace-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L64">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L64">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -125,7 +131,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-managedResourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L68">property <b>managedResourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L68">property <b>managedResourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedResourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -133,7 +139,7 @@ Specifies the supported Azure location where the resource has to be created. Cha
 The ID of the Managed Resource Group created by the Databricks Workspace.
 
 <h4 class="pdoc-member-header" id="Workspace-managedResourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L72">property <b>managedResourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L72">property <b>managedResourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedResourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +147,7 @@ The ID of the Managed Resource Group created by the Databricks Workspace.
 The name of the resource group where Azure should place the managed Databricks resources. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -149,7 +155,7 @@ The name of the resource group where Azure should place the managed Databricks r
 Specifies the name of the Databricks Workspace resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L80">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L80">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -157,7 +163,7 @@ Specifies the name of the Databricks Workspace resource. Changing this forces a 
 The name of the Resource Group in which the Databricks Workspace should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L84">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L84">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -165,7 +171,7 @@ The name of the Resource Group in which the Databricks Workspace should exist. C
 The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Workspace-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L88">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L88">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -173,7 +179,7 @@ The `sku` to use for the Databricks Workspace. Possible values are `standard`, `
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Workspace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -182,7 +188,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Workspace-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L92">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L92">property <b>workspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -190,7 +196,7 @@ deployments.
 The unique identifier of the databricks workspace in Databricks control plane.
 
 <h4 class="pdoc-member-header" id="Workspace-workspaceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L96">property <b>workspaceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L96">property <b>workspaceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workspaceUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -198,10 +204,114 @@ The unique identifier of the databricks workspace in Databricks control plane.
 The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
 
 
+<h2 id="functions">Functions</h2>
+<h3 class="pdoc-module-header" id="getWorkspace" data-link-title="getWorkspace">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L25">
+        Function <strong>getWorkspace</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getWorkspace(args: <a href='#GetWorkspaceArgs'>GetWorkspaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetWorkspaceResult'>GetWorkspaceResult</a>&gt;</code></pre>
+
+
+Use this data source to access information about an existing Databricks workspace.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.databricks.getWorkspace({
+    name: "example-workspace",
+    resourceGroupName: "example-rg",
+});
+export const databricksWorkspaceId = example.then(example => example.workspaceId);
+```
+
 
 <h2 id="apis">Others</h2>
+<h3 class="pdoc-module-header" id="GetWorkspaceArgs" data-link-title="GetWorkspaceArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L42">
+        interface <strong>GetWorkspaceArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetWorkspaceArgs</span></code></pre>
+
+A collection of arguments for invoking getWorkspace.
+
+<h4 class="pdoc-member-header" id="GetWorkspaceArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L46">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of the Databricks Workspace.
+
+<h4 class="pdoc-member-header" id="GetWorkspaceArgs-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L50">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The Name of the Resource Group where the Databricks Workspace exists.
+
+<h3 class="pdoc-module-header" id="GetWorkspaceResult" data-link-title="GetWorkspaceResult">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L56">
+        interface <strong>GetWorkspaceResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetWorkspaceResult</span></code></pre>
+
+A collection of values returned by getWorkspace.
+
+<h4 class="pdoc-member-header" id="GetWorkspaceResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L60">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetWorkspaceResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L61">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetWorkspaceResult-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L62">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetWorkspaceResult-sku">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L66">property <b>sku</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+SKU of this Databricks Workspace.
+
+<h4 class="pdoc-member-header" id="GetWorkspaceResult-workspaceId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L70">property <b>workspaceId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>workspaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Unique ID of this Databricks Workspace in Databricks management plane.
+
+<h4 class="pdoc-member-header" id="GetWorkspaceResult-workspaceUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/getWorkspace.ts#L74">property <b>workspaceUrl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>workspaceUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+URL this Databricks Workspace is accessible on.
+
 <h3 class="pdoc-module-header" id="WorkspaceArgs" data-link-title="WorkspaceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L199">
         interface <strong>WorkspaceArgs</strong>
     </a>
 </h3>
@@ -211,7 +321,7 @@ The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabr
 The set of arguments for constructing a Workspace resource.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-customParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L203">property <b>customParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L203">property <b>customParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WorkspaceCustomParameters'>WorkspaceCustomParameters</a>&gt;;</code></pre>
@@ -219,7 +329,7 @@ The set of arguments for constructing a Workspace resource.
 A `customParameters` block as documented below.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L207">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L207">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -227,7 +337,7 @@ A `customParameters` block as documented below.
 Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-managedResourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L211">property <b>managedResourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L211">property <b>managedResourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedResourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -235,7 +345,7 @@ Specifies the supported Azure location where the resource has to be created. Cha
 The name of the resource group where Azure should place the managed Databricks resources. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -243,7 +353,7 @@ The name of the resource group where Azure should place the managed Databricks r
 Specifies the name of the Databricks Workspace resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L219">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L219">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -251,7 +361,7 @@ Specifies the name of the Databricks Workspace resource. Changing this forces a 
 The name of the Resource Group in which the Databricks Workspace should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L223">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L223">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -259,7 +369,7 @@ The name of the Resource Group in which the Databricks Workspace should exist. C
 The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L227">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L227">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -267,7 +377,7 @@ The `sku` to use for the Databricks Workspace. Possible values are `standard`, `
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="WorkspaceState" data-link-title="WorkspaceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L153">
         interface <strong>WorkspaceState</strong>
     </a>
 </h3>
@@ -277,7 +387,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Workspace resources.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-customParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L157">property <b>customParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L157">property <b>customParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WorkspaceCustomParameters'>WorkspaceCustomParameters</a>&gt;;</code></pre>
@@ -285,7 +395,7 @@ Input properties used for looking up and filtering Workspace resources.
 A `customParameters` block as documented below.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L161">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L161">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -293,7 +403,7 @@ A `customParameters` block as documented below.
 Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-managedResourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L165">property <b>managedResourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L165">property <b>managedResourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedResourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -301,7 +411,7 @@ Specifies the supported Azure location where the resource has to be created. Cha
 The ID of the Managed Resource Group created by the Databricks Workspace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-managedResourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L169">property <b>managedResourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L169">property <b>managedResourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedResourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -309,7 +419,7 @@ The ID of the Managed Resource Group created by the Databricks Workspace.
 The name of the resource group where Azure should place the managed Databricks resources. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L173">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L173">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -317,7 +427,7 @@ The name of the resource group where Azure should place the managed Databricks r
 Specifies the name of the Databricks Workspace resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L177">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L177">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +435,7 @@ Specifies the name of the Databricks Workspace resource. Changing this forces a 
 The name of the Resource Group in which the Databricks Workspace should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L181">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L181">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -333,7 +443,7 @@ The name of the Resource Group in which the Databricks Workspace should exist. C
 The `sku` to use for the Databricks Workspace. Possible values are `standard`, `premium`, or `trial`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L185">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L185">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -341,7 +451,7 @@ The `sku` to use for the Databricks Workspace. Possible values are `standard`, `
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L189">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L189">property <b>workspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -349,7 +459,7 @@ A mapping of tags to assign to the resource.
 The unique identifier of the databricks workspace in Databricks control plane.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-workspaceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/39438191f36b62d81a480ab3585878afe4b8a3a0/sdk/nodejs/databricks/workspace.ts#L193">property <b>workspaceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/65929d23372bebb9669a668512d01db9b900bf1e/sdk/nodejs/databricks/workspace.ts#L193">property <b>workspaceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

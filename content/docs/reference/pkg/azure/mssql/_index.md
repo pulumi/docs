@@ -26,6 +26,7 @@ Explore the resources and functions of the mssql module in the Azure package.
 <ul class="api">
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
     <li><a href="getelasticpool" title="GetElasticPool"><span class="symbol function"></span>GetElasticPool</a></li>
+    <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,7 +38,7 @@ Explore the resources and functions of the mssql module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.22.0</dd>
+	<dd>3.23.0</dd>
 </dl>
 
 

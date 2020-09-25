@@ -202,7 +202,7 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appplatform/#pulumi_azure.appplatform.SpringCloudService">SpringCloudService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appplatform/#pulumi_azure.appplatform.SpringCloudService">SpringCloudService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -420,6 +420,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="network_csharp">
+<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="skuname_csharp">
 <a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
 </span> 
@@ -500,6 +511,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_go">
+<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -588,6 +610,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="network_nodejs">
+<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="skuname_nodejs">
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span> 
@@ -668,6 +701,17 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_python">
+<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -802,7 +846,7 @@ Get an existing SpringCloudService resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">) -&gt;</span> SpringCloudService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">) -&gt;</span> SpringCloudService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -951,6 +995,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_network_csharp">
+<a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -1031,6 +1086,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_network_go">
+<a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1119,6 +1185,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_network_nodejs">
+<a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -1199,6 +1276,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_network_python">
+<a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2627,6 +2715,272 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceNetwork">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceNetworkOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceNetwork.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="appsubnetid_csharp">
+<a href="#appsubnetid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Subnet which should host the Spring Boot Applications deployed in this Spring Cloud Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidrranges_csharp">
+<a href="#cidrranges_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of (at least 3) CIDR ranges (at least /16) which are used to host the Spring Cloud infrastructure, which must not overlap with any existing CIDR ranges in the Subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serviceruntimesubnetid_csharp">
+<a href="#serviceruntimesubnetid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Subnet where the Service Runtime components of the Spring Cloud Service will exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appnetworkresourcegroup_csharp">
+<a href="#appnetworkresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceruntimenetworkresourcegroup_csharp">
+<a href="#serviceruntimenetworkresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="appsubnetid_go">
+<a href="#appsubnetid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Subnet which should host the Spring Boot Applications deployed in this Spring Cloud Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidrranges_go">
+<a href="#cidrranges_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of (at least 3) CIDR ranges (at least /16) which are used to host the Spring Cloud infrastructure, which must not overlap with any existing CIDR ranges in the Subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serviceruntimesubnetid_go">
+<a href="#serviceruntimesubnetid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Subnet where the Service Runtime components of the Spring Cloud Service will exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appnetworkresourcegroup_go">
+<a href="#appnetworkresourcegroup_go" style="color: inherit; text-decoration: inherit;">App<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceruntimenetworkresourcegroup_go">
+<a href="#serviceruntimenetworkresourcegroup_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="appsubnetid_nodejs">
+<a href="#appsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Subnet which should host the Spring Boot Applications deployed in this Spring Cloud Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidrranges_nodejs">
+<a href="#cidrranges_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of (at least 3) CIDR ranges (at least /16) which are used to host the Spring Cloud infrastructure, which must not overlap with any existing CIDR ranges in the Subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serviceruntimesubnetid_nodejs">
+<a href="#serviceruntimesubnetid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Subnet where the Service Runtime components of the Spring Cloud Service will exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appnetworkresourcegroup_nodejs">
+<a href="#appnetworkresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceruntimenetworkresourcegroup_nodejs">
+<a href="#serviceruntimenetworkresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="app_subnet_id_python">
+<a href="#app_subnet_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Subnet which should host the Spring Boot Applications deployed in this Spring Cloud Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidr_ranges_python">
+<a href="#cidr_ranges_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>ranges</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of (at least 3) CIDR ranges (at least /16) which are used to host the Spring Cloud infrastructure, which must not overlap with any existing CIDR ranges in the Subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_runtime_subnet_id_python">
+<a href="#service_runtime_subnet_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>runtime_<wbr>subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Subnet where the Service Runtime components of the Spring Cloud Service will exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="app_network_resource_group_python">
+<a href="#app_network_resource_group_python" style="color: inherit; text-decoration: inherit;">app_<wbr>network_<wbr>resource_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_runtime_network_resource_group_python">
+<a href="#service_runtime_network_resource_group_python" style="color: inherit; text-decoration: inherit;">service_<wbr>runtime_<wbr>network_<wbr>resource_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>

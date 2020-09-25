@@ -469,7 +469,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
+    <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -685,7 +685,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">[]Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
+    <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -901,7 +901,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint[]</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
+    <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1117,7 +1117,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">Sequence[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
+    <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1517,7 +1517,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">List&lt;Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
+    <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1744,7 +1744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">[]Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
+    <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1971,7 +1971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint[]</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
+    <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2198,7 +2198,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclientcertificatethumbprint">Sequence[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
+    <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
