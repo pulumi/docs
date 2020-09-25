@@ -44,9 +44,9 @@ function getCurrentLanguage() {
 var currentCodeFiles = {};
 
 function clearLanguageFiles(language) {
-    $("#pulumi-code-"+language+"-files").text("");
+    $("#pulumi-code-" + language + "-files").text("");
     $("#pulumi-code-download-icon").hide();
-    $("#pulumi-code-download-button").addClass([ "opacity-50", "cursor-not-allowed" ]);
+    $("#pulumi-code-download-button").addClass(["opacity-50", "cursor-not-allowed"]);
     currentCodeFiles = {};
 }
 
@@ -87,13 +87,13 @@ function addLanguageFile(language, fn, code) {
     addCopyButton($(`#${filediv}`));
 }
 
-var couldNotConvertError =`<div id="couldnt-convert-code" class="container mx-auto pt-8">
+var couldNotConvertError = `<div id="couldnt-convert-code" class="container mx-auto pt-8">
     <div class="text-center max-w-2xl mx-auto">
         <h3>Sorry, we couldn't convert your code.</h3><br>
         <p class="text-lg mt-0 mb-16">
             There may be a problem with the code you submitted, or it might use a feature the
             converter doesn't yet support. To work with an engineer to help with your evaluation, please
-            <a href="{{< relref "/about#contactus" >}})" class="link">contact us</a> or
+            <a href="/about#contact" class="link">contact us</a> or
             <a href="https://slack.pulumi.com" class="link">join our Community Slack</a>. We are here to help!
         </p>
     </div>
@@ -103,7 +103,7 @@ var couldNotConvertError =`<div id="couldnt-convert-code" class="container mx-au
 // Display the "could not convert" boilerplate.
 function displayCouldNotConvert(language) {
     clearLanguageFiles(language);
-    $("#pulumi-code-"+language+"-files").html(couldNotConvertError);
+    $("#pulumi-code-" + language + "-files").html(couldNotConvertError);
 }
 
 // Now set up our event handler for conversion.
@@ -137,27 +137,27 @@ function convertCode(language, inputKind) {
     // Read the input kind and verify that we've got what we need.
     let tfIk = inputKind || getCurrentInputKind();
     switch (tfIk) {
-    case "url":
-        if (tfUrl === "") {
-            $("#pulumi-errors").text("Error: Please enter a URL for the code to convert above, and then try again");
-            $("#pulumi-errors").show();
-            return;
-        }
-        break;
-    case "upload":
-        if (!tfUploadFiles || !tfUploadFiles.length) {
-            $("#pulumi-errors").text("Error: Please choose code files to upload above, and then try again");
-            $("#pulumi-errors").show();
-            return;
-        }
-        break;
-    default: // "code"
-        if (tfCode === "") {
-            $("#pulumi-errors").text("Error: Please enter the code to convert above, and then try again");
-            $("#pulumi-errors").show();
-            return;
-        }
-        break;
+        case "url":
+            if (tfUrl === "") {
+                $("#pulumi-errors").text("Error: Please enter a URL for the code to convert above, and then try again");
+                $("#pulumi-errors").show();
+                return;
+            }
+            break;
+        case "upload":
+            if (!tfUploadFiles || !tfUploadFiles.length) {
+                $("#pulumi-errors").text("Error: Please choose code files to upload above, and then try again");
+                $("#pulumi-errors").show();
+                return;
+            }
+            break;
+        default: // "code"
+            if (tfCode === "") {
+                $("#pulumi-errors").text("Error: Please enter the code to convert above, and then try again");
+                $("#pulumi-errors").show();
+                return;
+            }
+            break;
     }
 
     // Add some "waiting" touches.
@@ -167,7 +167,17 @@ function convertCode(language, inputKind) {
     addLanguageFile(languageTextbox, "…", "…");
 
     // Post to the endpoint and then, afterwards, add the result to the textbox.
-    var urlPath = window.location.pathname === "/kube2pulumi/" ? "convertKube" : "convert";
+    var urlPath = undefined
+    switch (window.location.pathname) {
+        case "/kube2pulumi/":
+            urlPath = "convertKube";
+            break;
+        case "/arm2pulumi/":
+            urlPath = "convertARM";
+            break;
+        case "/tf2pulumi/":
+            urlPath = "convert"
+    };
     let post = {
         url: `https://1qm03yusb2.execute-api.us-west-2.amazonaws.com/stage/${urlPath}`,
     };
@@ -185,17 +195,17 @@ function convertCode(language, inputKind) {
         post.url += "?language=" + language;
     } else {
         switch (tfIk) {
-        case "url":
-            post.data = JSON.stringify({ url: tfUrl, language: language });
-            break;
-        default: // "code"
-            post.data = JSON.stringify({ code: tfCode, language: language });
-            break;
+            case "url":
+                post.data = JSON.stringify({ url: tfUrl, language: language });
+                break;
+            default: // "code"
+                post.data = JSON.stringify({ code: tfCode, language: language });
+                break;
         }
         post.dataType = "json";
     }
     $.post(post)
-        .done(function(data) {
+        .done(function (data) {
             clearLanguageFiles(languageTextbox);
 
             if (data.files) {
@@ -207,7 +217,7 @@ function convertCode(language, inputKind) {
                     addLanguageFile(languageTextbox, fn, code);
                 }
                 $("#pulumi-code-download-icon").show();
-                $("#pulumi-code-download-button").removeClass([ "opacity-50", "cursor-not-allowed" ]);
+                $("#pulumi-code-download-button").removeClass(["opacity-50", "cursor-not-allowed"]);
             } else {
                 displayCouldNotConvert(languageTextbox);
             }
@@ -217,7 +227,7 @@ function convertCode(language, inputKind) {
                 $("#pulumi-warnings").show();
             }
         })
-        .fail(function(err) {
+        .fail(function (err) {
             let errorText = "An unspecified error occurred";
             if (err) {
                 if (err.responseText) {
@@ -237,7 +247,7 @@ function convertCode(language, inputKind) {
             $("#pulumi-errors").show();
             displayCouldNotConvert(languageTextbox);
         }).
-        always(function() {
+        always(function () {
             $(document.body).css({ "cursor": "default" });
             $("#terraform-code, #terraform-url").css({ "cursor": "text" });
             $("pulumi-chooser[type='language'] > ul > li > a").css({ "cursor": "pointer" });
@@ -245,14 +255,17 @@ function convertCode(language, inputKind) {
 }
 
 // downloadCode downloads the currently converted code, if available.
-function downloadCode() {
+function downloadCode(zipName) {
     let zip = new JSZip();
     for (let fn of Object.keys(currentCodeFiles)) {
         zip.file(fn, currentCodeFiles[fn]);
     }
-    zip.generateAsync({ type: "blob" }).then(function(content) {
+    zip.generateAsync({ type: "blob" }).then(function (content) {
         // Use FileSaver.js to save the file, triggering download in the user's browser.
-        saveAs(content, "kube2pulumi.zip");
+        if (zipName === undefined) {
+            zipName = "pulumi.zip";
+        }
+        saveAs(content, zipName);
     });
 }
 
@@ -405,8 +418,8 @@ rules:
       - watch
 `;
 
-case "aws_ec2":
-    return `${comment} This Terraform sample provisions an AWS EC2 instance running Ubuntu.
+        case "aws_ec2":
+            return `${comment} This Terraform sample provisions an AWS EC2 instance running Ubuntu.
 ${comment} Choose a language on the right hand side -- or try replacing it with your own!
 
 data "aws_ami" "ubuntu" {
@@ -435,8 +448,8 @@ Name = "HelloWorld"
 }
 `;
 
-    case "azure_vm":
-        return `${comment} This Terraform sample provisions an Azure Virtual Machine running Ubuntu.
+        case "azure_vm":
+            return `${comment} This Terraform sample provisions an Azure Virtual Machine running Ubuntu.
 ${comment} Choose a language on the right hand side -- or try replacing it with your own!
 
 resource "azurerm_resource_group" "example" {
@@ -494,8 +507,8 @@ version   = "latest"
 }
 `;
 
-    case "google_gke":
-        return `${comment} This Terraform sample provisions a Google Kubernetes Engine (GKE) cluster.
+        case "google_gke":
+            return `${comment} This Terraform sample provisions a Google Kubernetes Engine (GKE) cluster.
 ${comment} Choose a language on the right hand side -- or try replacing it with your own!
 
 resource "google_container_cluster" "primary" {
@@ -540,6 +553,274 @@ oauth_scopes = [
 }
 `;
 
+case "sqldb":
+return `
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "serverName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the SQL logical server."
+      }
+    },
+    "sqlDBName": {
+      "type": "string",
+      "defaultValue": "SampleDB",
+      "metadata": {
+        "description": "The name of the SQL Database."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Location for all resources."
+      }
+    },
+    "administratorLogin": {
+      "type": "string",
+      "metadata": {
+        "description": "The administrator username of the SQL logical server."
+      }
+    },
+    "administratorLoginPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "The administrator password of the SQL logical server."
+      }
+    }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Sql/servers",
+      "apiVersion": "2019-06-01-preview",
+      "name": "[parameters('serverName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "administratorLogin": "[parameters('administratorLogin')]",
+        "administratorLoginPassword": "[parameters('administratorLoginPassword')]"
+      },
+      "resources": [
+        {
+          "type": "databases",
+          "apiVersion": "2019-06-01-preview",
+          "name": "[parameters('sqlDBName')]",
+          "sku": {
+            "name": "Standard",
+            "tier": "Standard"
+          },
+          "serverName": "[parameters('serverName')]",
+          "location": "[parameters('location')]",
+          "dependsOn": [
+            "[resourceId('Microsoft.Sql/servers', concat(parameters('serverName')))]"
+          ]
+        }
+      ]
+    }
+  ]
+}
+`;
+case "acr":
+    return `
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "acrName": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 50,
+      "metadata": {
+        "description": "Name of your Azure Container Registry"
+      }
+    },
+    "acrAdminUserEnabled": {
+      "type": "bool",
+      "defaultValue": false,
+      "metadata": {
+        "description": "Enable admin user that have push / pull permission to the registry."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Location for all resources."
+      }
+    },
+    "acrSku": {
+      "type": "string",
+      "metadata": {
+        "description": "Tier of your Azure Container Registry."
+      },
+      "defaultValue": "Basic",
+      "allowedValues": [
+        "Basic",
+        "Standard",
+        "Premium"
+      ]
+    }
+  },
+  "resources": [
+    {
+      "name": "[parameters('acrName')]",
+      "type": "Microsoft.ContainerRegistry/registries",
+      "apiVersion": "2019-12-01-preview",
+      "location": "[parameters('location')]",
+      "comments": "Container registry for storing docker images",
+      "tags": {
+        "displayName": "Container Registry",
+        "container.registry": "[parameters('acrName')]"
+      },
+      "properties": {
+        "adminUserEnabled": "[parameters('acrAdminUserEnabled')]",
+        "sku": {
+          "name": "[parameters('acrSku')]"
+        },
+      }
+    }
+  ],
+  "outputs": {
+    "acrLoginServer": {
+      "value": "[reference(parameters('acrName'),'2019-12-01-preview').loginServer]",
+      "type": "string"
+    }
+  }
+}
+`;
+
+case "aks_cluster":
+    return `
+{
+"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+"contentVersion": "1.0.0.1",
+"parameters": {
+"clusterName": {
+    "type": "string",
+    "defaultValue":"aks101cluster",
+    "metadata": {
+        "description": "The name of the Managed Cluster resource."
+    }
+},
+"location": {
+    "type": "string",
+    "defaultValue": "[resourceGroup().location]",
+    "metadata": {
+        "description": "The location of the Managed Cluster resource."
+    }
+},
+"dnsPrefix": {
+    "type": "string",
+    "metadata": {
+        "description": "Optional DNS prefix to use with hosted Kubernetes API server FQDN."
+    }
+},
+"osDiskSizeGB": {
+    "type": "int",
+    "defaultValue": 0,
+    "metadata": {
+        "description": "Disk size (in GB) to provision for each of the agent pool nodes. This value ranges from 0 to 1023. Specifying 0 will apply the default disk size for that agentVMSize."
+    },
+    "minValue": 0,
+    "maxValue": 1023
+},
+"agentCount": {
+    "type": "int",
+    "defaultValue": 3,
+    "metadata": {
+        "description": "The number of nodes for the cluster."
+    },
+    "minValue": 1,
+    "maxValue": 50
+},
+"agentVMSize": {
+    "type": "string",
+    "defaultValue": "Standard_DS2_v2",
+    "metadata": {
+        "description": "The size of the Virtual Machine."
+    }
+},
+"linuxAdminUsername": {
+    "type": "string",
+    "metadata": {
+        "description": "User name for the Linux Virtual Machines."
+    }
+},
+"sshRSAPublicKey": {
+    "type": "string",
+    "metadata": {
+        "description": "Configure all linux machines with the SSH RSA public key string. Your key should include three parts, for example 'ssh-rsa AAAAB...snip...UcyupgH azureuser@linuxvm'"
+    }
+},
+"servicePrincipalClientId": {
+    "metadata": {
+        "description": "Client ID (used by cloudprovider)"
+    },
+    "type": "securestring"
+},
+"servicePrincipalClientSecret": {
+    "metadata": {
+        "description": "The Service Principal Client Secret."
+    },
+    "type": "securestring"
+},
+"osType": {
+    "type": "string",
+    "defaultValue": "Linux",
+    "allowedValues": [
+        "Linux"
+    ],
+    "metadata": {
+        "description": "The type of operating system."
+    }
+}        
+},
+"resources": [
+{
+    "apiVersion": "2020-03-01",
+    "type": "Microsoft.ContainerService/managedClusters",
+    "location": "[parameters('location')]",
+    "name": "[parameters('clusterName')]",
+    "properties": {
+        "dnsPrefix": "[parameters('dnsPrefix')]",
+        "agentPoolProfiles": [
+            {
+                "name": "agentpool",
+                "osDiskSizeGB": "[parameters('osDiskSizeGB')]",
+                "count": "[parameters('agentCount')]",
+                "vmSize": "[parameters('agentVMSize')]",
+                "osType": "[parameters('osType')]",
+                "storageProfile": "ManagedDisks"
+            }
+        ],
+        "linuxProfile": {
+            "adminUsername": "[parameters('linuxAdminUsername')]",
+            "ssh": {
+                "publicKeys": [
+                    {
+                        "keyData": "[parameters('sshRSAPublicKey')]"
+                    }
+                ]
+            }
+        },
+        "servicePrincipalProfile": {
+            "clientId": "[parameters('servicePrincipalClientId')]",
+            "Secret": "[parameters('servicePrincipalClientSecret')]"
+        }
+    }
+}
+],
+"outputs": {
+"controlPlaneFQDN": {
+    "type": "string",
+    "value": "[reference(parameters('clusterName')).fqdn]"
+}
+}
+}`;
+
         default:
             return "";
     }
@@ -561,9 +842,9 @@ function waitForElementToExist(selector, callback) {
     }, 500);
 }
 
-$(function() {
-    waitForElementToExist("pulumi-chooser[type='language'] > ul > li > a", function() {
-        var validPages = [ "/kube2pulumi/", "/tf2pulumi/" ];
+$(function () {
+    waitForElementToExist("pulumi-chooser[type='language'] > ul > li > a", function () {
+        var validPages = ["/kube2pulumi/", "/tf2pulumi/", "/arm2pulumi/"];
         var currentPath = window.location.pathname;
 
         // If this is not a *2pulumi page, return.
@@ -653,7 +934,7 @@ $(function() {
 
         // Hook up event handlers for the language choosers.
         $("pulumi-chooser[type='language'] > ul > li > a").each(function (i, e) {
-            $(e).click(function() {
+            $(e).click(function () {
                 // We need to check that the inputKind has been properly set and if it
                 // has not, let's set the value to "code" and update the handler. If the
                 // inputKind is defined we will "reset" the value by using jQuery to click
