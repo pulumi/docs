@@ -27,7 +27,7 @@ on their documentation site for guidance.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.ServiceCompute">ServiceCompute</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeDomainArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeGcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeHealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeHttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[ServiceComputePackageArgs]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputePapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeS3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSyslogArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.ServiceCompute">ServiceCompute</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeDomainArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeGcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeHealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeHttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[ServiceComputePackageArgs]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputePapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeS3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSyslogArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1432,7 +1432,7 @@ Defined below.
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedomain">List[Service<wbr>Compute<wbr>Domain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputedomain">Sequence[Service<wbr>Compute<wbr>Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
@@ -1465,7 +1465,7 @@ Defined below.
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebackend">List[Service<wbr>Compute<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputebackend">Sequence[Service<wbr>Compute<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -1478,7 +1478,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebigquerylogging">List[Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputebigquerylogging">Sequence[Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -1490,7 +1490,7 @@ Defined below.
 <a href="#blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeblobstoragelogging">List[Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeblobstoragelogging">Sequence[Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -1525,7 +1525,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputegcslogging">List[Service<wbr>Compute<wbr>Gcslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputegcslogging">Sequence[Service<wbr>Compute<wbr>Gcslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -1537,7 +1537,7 @@ Defined below.
 <a href="#healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehealthcheck">List[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputehealthcheck">Sequence[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd>
@@ -1548,7 +1548,7 @@ Defined below.
 <a href="#httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehttpslogging">List[Service<wbr>Compute<wbr>Httpslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputehttpslogging">Sequence[Service<wbr>Compute<wbr>Httpslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -1560,7 +1560,7 @@ Defined below.
 <a href="#logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogentry">List[Service<wbr>Compute<wbr>Logentry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogentry">Sequence[Service<wbr>Compute<wbr>Logentry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -1572,7 +1572,7 @@ Defined below.
 <a href="#logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingcloudfile">List[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingcloudfile">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -1584,7 +1584,7 @@ Defined below.
 <a href="#logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdatadog">List[Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdatadog">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -1596,7 +1596,7 @@ Defined below.
 <a href="#logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">List[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -1608,7 +1608,7 @@ Defined below.
 <a href="#logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">List[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -1620,7 +1620,7 @@ Defined below.
 <a href="#logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingftp">List[Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingftp">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -1632,7 +1632,7 @@ Defined below.
 <a href="#logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">List[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -1644,7 +1644,7 @@ Defined below.
 <a href="#logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingheroku">List[Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingheroku">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -1656,7 +1656,7 @@ Defined below.
 <a href="#logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginghoneycomb">List[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginghoneycomb">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -1668,7 +1668,7 @@ Defined below.
 <a href="#logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkafka">List[Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkafka">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -1680,7 +1680,7 @@ Defined below.
 <a href="#logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingloggly">List[Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingloggly">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -1692,7 +1692,7 @@ Defined below.
 <a href="#logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginglogshuttle">List[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginglogshuttle">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -1704,7 +1704,7 @@ Defined below.
 <a href="#logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingnewrelic">List[Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingnewrelic">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -1716,7 +1716,7 @@ Defined below.
 <a href="#logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingopenstack">List[Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingopenstack">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -1728,7 +1728,7 @@ Defined below.
 <a href="#logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingscalyr">List[Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingscalyr">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -1740,7 +1740,7 @@ Defined below.
 <a href="#logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingsftp">List[Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingsftp">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -1763,7 +1763,7 @@ Defined below.
 <a href="#papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepapertrail">List[Service<wbr>Compute<wbr>Papertrail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputepapertrail">Sequence[Service<wbr>Compute<wbr>Papertrail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -1775,7 +1775,7 @@ Defined below.
 <a href="#s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputes3logging">List[Service<wbr>Compute<wbr>S3logging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputes3logging">Sequence[Service<wbr>Compute<wbr>S3logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -1787,7 +1787,7 @@ Defined below.
 <a href="#splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesplunk">List[Service<wbr>Compute<wbr>Splunk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesplunk">Sequence[Service<wbr>Compute<wbr>Splunk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -1799,7 +1799,7 @@ Defined below.
 <a href="#sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesumologic">List[Service<wbr>Compute<wbr>Sumologic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesumologic">Sequence[Service<wbr>Compute<wbr>Sumologic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -1811,7 +1811,7 @@ Defined below.
 <a href="#syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesyslog">List[Service<wbr>Compute<wbr>Syslog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesyslog">Sequence[Service<wbr>Compute<wbr>Syslog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -1966,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_version_python" style="color: inherit; text-decoration: inherit;">active_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
 {{% /md %}}</dd>
@@ -1977,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloned_version_python" style="color: inherit; text-decoration: inherit;">cloned_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2011,7 +2011,7 @@ Get an existing ServiceCompute resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeBlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeDomainArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeGcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeHealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeHttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeLoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[ServiceComputePackageArgs]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputePapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeS3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[List[ServiceComputeSyslogArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceCompute</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeDomainArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeGcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeHealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeHttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[ServiceComputePackageArgs]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputePapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeS3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSyslogArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceCompute</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3432,7 +3432,7 @@ Defined below.
 <a href="#state_active_version_python" style="color: inherit; text-decoration: inherit;">active_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
 {{% /md %}}</dd>
@@ -3443,7 +3443,7 @@ Defined below.
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebackend">List[Service<wbr>Compute<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputebackend">Sequence[Service<wbr>Compute<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -3456,7 +3456,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#state_bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebigquerylogging">List[Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputebigquerylogging">Sequence[Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -3468,7 +3468,7 @@ Defined below.
 <a href="#state_blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeblobstoragelogging">List[Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeblobstoragelogging">Sequence[Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -3480,7 +3480,7 @@ Defined below.
 <a href="#state_cloned_version_python" style="color: inherit; text-decoration: inherit;">cloned_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3501,7 +3501,7 @@ Defined below.
 <a href="#state_domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedomain">List[Service<wbr>Compute<wbr>Domain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputedomain">Sequence[Service<wbr>Compute<wbr>Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd>
@@ -3524,7 +3524,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#state_gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputegcslogging">List[Service<wbr>Compute<wbr>Gcslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputegcslogging">Sequence[Service<wbr>Compute<wbr>Gcslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -3536,7 +3536,7 @@ Defined below.
 <a href="#state_healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehealthcheck">List[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputehealthcheck">Sequence[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd>
@@ -3547,7 +3547,7 @@ Defined below.
 <a href="#state_httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehttpslogging">List[Service<wbr>Compute<wbr>Httpslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputehttpslogging">Sequence[Service<wbr>Compute<wbr>Httpslogging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -3559,7 +3559,7 @@ Defined below.
 <a href="#state_logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogentry">List[Service<wbr>Compute<wbr>Logentry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogentry">Sequence[Service<wbr>Compute<wbr>Logentry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -3571,7 +3571,7 @@ Defined below.
 <a href="#state_logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingcloudfile">List[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingcloudfile">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -3583,7 +3583,7 @@ Defined below.
 <a href="#state_logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdatadog">List[Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdatadog">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -3595,7 +3595,7 @@ Defined below.
 <a href="#state_logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">List[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -3607,7 +3607,7 @@ Defined below.
 <a href="#state_logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">List[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -3619,7 +3619,7 @@ Defined below.
 <a href="#state_logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingftp">List[Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingftp">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -3631,7 +3631,7 @@ Defined below.
 <a href="#state_logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">List[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -3643,7 +3643,7 @@ Defined below.
 <a href="#state_logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingheroku">List[Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingheroku">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -3655,7 +3655,7 @@ Defined below.
 <a href="#state_logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginghoneycomb">List[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginghoneycomb">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -3667,7 +3667,7 @@ Defined below.
 <a href="#state_logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkafka">List[Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkafka">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -3679,7 +3679,7 @@ Defined below.
 <a href="#state_logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingloggly">List[Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingloggly">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -3691,7 +3691,7 @@ Defined below.
 <a href="#state_logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginglogshuttle">List[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginglogshuttle">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -3703,7 +3703,7 @@ Defined below.
 <a href="#state_logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingnewrelic">List[Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingnewrelic">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -3715,7 +3715,7 @@ Defined below.
 <a href="#state_logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingopenstack">List[Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingopenstack">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -3727,7 +3727,7 @@ Defined below.
 <a href="#state_logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingscalyr">List[Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingscalyr">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -3739,7 +3739,7 @@ Defined below.
 <a href="#state_logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingsftp">List[Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingsftp">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -3773,7 +3773,7 @@ Defined below.
 <a href="#state_papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepapertrail">List[Service<wbr>Compute<wbr>Papertrail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputepapertrail">Sequence[Service<wbr>Compute<wbr>Papertrail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -3785,7 +3785,7 @@ Defined below.
 <a href="#state_s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputes3logging">List[Service<wbr>Compute<wbr>S3logging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputes3logging">Sequence[Service<wbr>Compute<wbr>S3logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -3797,7 +3797,7 @@ Defined below.
 <a href="#state_splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesplunk">List[Service<wbr>Compute<wbr>Splunk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesplunk">Sequence[Service<wbr>Compute<wbr>Splunk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -3809,7 +3809,7 @@ Defined below.
 <a href="#state_sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesumologic">List[Service<wbr>Compute<wbr>Sumologic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesumologic">Sequence[Service<wbr>Compute<wbr>Sumologic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -3821,7 +3821,7 @@ Defined below.
 <a href="#state_syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesyslog">List[Service<wbr>Compute<wbr>Syslog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesyslog">Sequence[Service<wbr>Compute<wbr>Syslog<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -4737,7 +4737,7 @@ Default `true`.
 <a href="#between_bytes_timeout_python" style="color: inherit; text-decoration: inherit;">between_<wbr>bytes_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long to wait between bytes in milliseconds. Default `10000`.
 {{% /md %}}</dd>
@@ -4748,7 +4748,7 @@ Default `true`.
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long to wait for a timeout in milliseconds.
 Default `1000`
@@ -4760,7 +4760,7 @@ Default `1000`
 <a href="#error_threshold_python" style="color: inherit; text-decoration: inherit;">error_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of errors to allow before the Backend is marked as down. Default `0`.
 {{% /md %}}</dd>
@@ -4771,7 +4771,7 @@ Default `1000`
 <a href="#first_byte_timeout_python" style="color: inherit; text-decoration: inherit;">first_<wbr>byte_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How long to wait for the first bytes in milliseconds. Default `15000`.
 {{% /md %}}</dd>
@@ -4793,7 +4793,7 @@ Default `1000`
 <a href="#max_conn_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conn</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of connections for this Backend.
 Default `200`.
@@ -4838,7 +4838,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd>
@@ -4959,7 +4959,7 @@ Default `200`.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
 {{% /md %}}</dd>
@@ -5002,6 +5002,17 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -5024,28 +5035,6 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="table_csharp">
-<a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of your BigQuery table.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="email_csharp">
-<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
 </span> 
@@ -5053,6 +5042,17 @@ Default `200`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_csharp">
+<a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of your BigQuery table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5085,6 +5085,17 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -5107,28 +5118,6 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="table_go">
-<a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of your BigQuery table.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="email_go">
-<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
 </span> 
@@ -5136,6 +5125,17 @@ Default `200`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_go">
+<a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of your BigQuery table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5168,6 +5168,17 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -5190,28 +5201,6 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="table_nodejs">
-<a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of your BigQuery table.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="email_nodejs">
-<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span> 
@@ -5219,6 +5208,17 @@ Default `200`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_nodejs">
+<a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of your BigQuery table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5251,6 +5251,17 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -5273,28 +5284,6 @@ Default `200`.
 
     <dt class="property-required"
             title="Required">
-        <span id="table_python">
-<a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of your BigQuery table.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="email_python">
-<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span> 
@@ -5302,6 +5291,17 @@ Default `200`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Your DigitalOcean Spaces account secret key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="table_python">
+<a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of your BigQuery table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5740,7 +5740,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd>
@@ -5773,7 +5773,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
@@ -6316,7 +6316,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd>
@@ -6349,7 +6349,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
@@ -6824,7 +6824,7 @@ Default `200`.
 <a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How often to run the Healthcheck in milliseconds. Default `5000`.
 {{% /md %}}</dd>
@@ -6835,7 +6835,7 @@ Default `200`.
 <a href="#expected_response_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The status code expected from the host. Default `200`.
 {{% /md %}}</dd>
@@ -6857,7 +6857,7 @@ Default `200`.
 <a href="#initial_python" style="color: inherit; text-decoration: inherit;">initial</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`.
 {{% /md %}}</dd>
@@ -6879,7 +6879,7 @@ Default `200`.
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How many Healthchecks must succeed to be considered healthy. Default `3`.
 {{% /md %}}</dd>
@@ -6890,7 +6890,7 @@ Default `200`.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds. Default `500`.
 {{% /md %}}</dd>
@@ -6901,7 +6901,7 @@ Default `200`.
 <a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
 {{% /md %}}</dd>
@@ -7508,7 +7508,7 @@ Default `200`.
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd>
@@ -7519,7 +7519,7 @@ Default `200`.
 <a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd>
@@ -7774,7 +7774,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd>
@@ -8249,7 +8249,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd>
@@ -8282,7 +8282,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
@@ -8968,7 +8968,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd>
@@ -9001,7 +9001,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
@@ -9531,7 +9531,7 @@ Default `200`.
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd>
@@ -9542,7 +9542,7 @@ Default `200`.
 <a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd>
@@ -10072,7 +10072,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd>
@@ -10094,7 +10094,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
@@ -10105,7 +10105,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd>
@@ -12156,7 +12156,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd>
@@ -12189,7 +12189,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
@@ -12930,7 +12930,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd>
@@ -12963,7 +12963,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
@@ -12974,7 +12974,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd>
@@ -13315,7 +13315,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd>
@@ -13879,7 +13879,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd>
@@ -13912,7 +13912,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd>
@@ -14857,7 +14857,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd>
@@ -14946,6 +14946,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
+	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).</dd>
 </dl>
 
