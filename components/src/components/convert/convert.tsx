@@ -1,9 +1,14 @@
 import { Component, Element, h, Prop, State } from '@stencil/core';
 import { awsEC2Ubuntu } from "./examples/tf";
 
+// import monaco from "monaco-editor";
+
 interface CannedExample {
     [key: string]: string;
 }
+
+export type ConvertKind = "tf" | "k8s" | "arm";
+export type EditorLanguage = "hcl" | "json" | "yaml";
 
 @Component({
     tag: "pulumi-convert",
@@ -13,7 +18,7 @@ interface CannedExample {
 export class Convert {
 
     @Prop()
-    kind: "tf" | "k8s" | "crd" | "arm";
+    kind: ConvertKind;
 
     @Prop()
     endpoint: string;
@@ -30,43 +35,39 @@ export class Convert {
     }
 
     componentDidLoad() {
+        console.log(Date.now());
+
         if (this.kind === "tf") {
-            this.setInput(this.tf.awsEC2Ubuntu);
+            this.prepareEditors(this.tf.awsEC2Ubuntu);
+            // this.setInput(this.tf.awsEC2Ubuntu);
             this.submit();
         }
     }
 
-    private get inputEl() {
-        return (this.el.querySelector("#code-input") as HTMLTextAreaElement);
+    inputEditor: any;
+    outputEditor: any;
+
+    private get inputEditorEl() {
+        return (this.el.querySelector("#editor-input") as HTMLElement);
     }
 
-    private get outputEl() {
-        return (this.el.querySelector("#code-output") as HTMLTextAreaElement);
+    private get outputEditorEl() {
+        return (this.el.querySelector("#editor-output") as HTMLElement);
     }
-
-    // private get inputLangEl() {
-    //     return (this.el.querySelector("#code-input-language") as HTMLTextAreaElement);
-    // }
 
     private get outputLangEl() {
         return (this.el.querySelector("#code-output-language") as HTMLTextAreaElement);
     }
 
-    private setInput(value: string) {
-        this.inputEl.value = value;
-    }
-
     private setOutput(_filename: string, value: string) {
-        this.outputEl.value = value;
+        this.outputEditor.setValue(value);
     }
 
     private async fetchResult(code: string, language: string) {
         this.fetching = true;
 
-        // Endpoint will need to handle the selected kind -- tf, etc. (Right now, it's all tf.)
-
         try {
-            const response = await fetch(`${this.endpoint}`, {
+            const response = await fetch(`${this.endpoint}/${this.endpointPath}`, {
                 method: "POST",
                 mode: "cors",
                 body: JSON.stringify({
@@ -91,8 +92,80 @@ export class Convert {
         this.fetching = false;
     }
 
+    private prepareEditors(code: string) {
+        const monaco = window["monaco"];
+
+        if (!monaco) {
+            console.log("This component requires Monaco editor.");
+            return;
+        }
+
+        /**
+         * Input editor.
+         */
+
+        this.inputEditor = monaco.editor.create(
+            this.inputEditorEl,
+            {
+                theme: "vc",
+                roundedSelection: true,
+                lineNumbers: "off",
+                minimap: {
+                    enabled: false,
+                },
+
+                language: this.inputEditorLanguage,
+                value: code,
+            },
+        );
+
+        this.inputEditor.onDidChangeModelContent(() => {
+            this.submit();
+        });
+
+        /**
+         * Output editor.
+         */
+
+        this.outputEditor = monaco.editor.create(
+            this.outputEditorEl,
+            {
+                theme: "vc",
+                roundedSelection: true,
+                lineNumbers: "off",
+                minimap: {
+                    enabled: false,
+                },
+                readOnly: true,
+                language: this.outputLangEl.value,
+            },
+        );
+    }
+
     private submit() {
-        this.fetchResult(this.inputEl.value, this.outputLangEl.value);
+        this.fetchResult(this.inputEditor.getValue(), this.outputLangEl.value);
+    }
+
+    private get inputEditorLanguage(): EditorLanguage | undefined {
+        switch (this.kind) {
+            case "tf":
+                return "hcl";
+            case "k8s":
+                return "yaml";
+            case "arm":
+                return "json";
+        }
+    }
+
+    private get endpointPath(): string {
+        switch (this.kind) {
+            case "tf":
+                return "convert";
+            case "arm":
+                return "convertARM";
+            case "k8s":
+                return "convertKube";
+        }
     }
 
     render() {
@@ -113,15 +186,9 @@ export class Convert {
                         <option value="csharp">C#</option>
                     </select>
                 </p>
-                <div>
-                    <div>
-                        <textarea id="code-input"></textarea>
-                        <button onClick={this.submit.bind(this)}>Submit</button>
-                    </div>
-                    <textarea id="code-output"></textarea>
-                </div>
-                <div>
-
+                <div id="editors">
+                    <div id="editor-input"></div>
+                    <div id="editor-output"></div>
                 </div>
             </div>
         );

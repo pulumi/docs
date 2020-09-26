@@ -18,6 +18,9 @@ import {
   ChooserOptionStyle,
   ChooserType as ChooserType1,
 } from './components/chooser/chooser';
+import {
+  ConvertKind,
+} from './components/convert/convert';
 
 export namespace Components {
   interface PulumiBanner {
@@ -41,7 +44,7 @@ export namespace Components {
   }
   interface PulumiConvert {
     'endpoint': string;
-    'kind': "tf" | "k8s" | "crd" | "arm";
+    'kind': ConvertKind;
   }
   interface PulumiExample {}
   interface PulumiExamples {}
@@ -144,7 +147,7 @@ declare namespace LocalJSX {
   }
   interface PulumiConvert {
     'endpoint'?: string;
-    'kind'?: "tf" | "k8s" | "crd" | "arm";
+    'kind'?: ConvertKind;
   }
   interface PulumiExample {}
   interface PulumiExamples {}

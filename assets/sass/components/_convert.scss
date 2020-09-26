@@ -1,14 +1,12 @@
 pulumi-convert {
 
-    #code-input, #code-output {
-        @apply bg-white w-full rounded h-64 my-8 p-4;
+    #editors {
+        @apply flex;
     }
 
-    select {
-        @apply p-2 rounded mx-2;
-    }
-
-    button {
-        @apply btn;
+    #editor-input, #editor-output {
+        width: 800px !important;
+        height: 600px !important;
+        border: 1px solid grey !important;
     }
 }

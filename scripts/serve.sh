@@ -16,6 +16,9 @@ export JS_BUNDLE="static/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 export REL_CSS_BUNDLE="/css/styles.${ASSET_BUNDLE_ID}.css"
 export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 
+# URL to the Pulumi conversion service.
+export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production url)}"
+
 watch_hugo() {
     hugo server --buildDrafts --buildFuture --renderToDisk
 }
@@ -45,6 +48,9 @@ yarn run --silent node-sass assets/sass/styles.scss | yarn run --silent postcss 
 
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
+
+printf "Vendoring scripts...\n\n"
+make vendor
 
 printf "Building web components...\n\n"
 make build_components

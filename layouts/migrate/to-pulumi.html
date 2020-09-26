@@ -1,3 +1,7 @@
+{{ define "page-scripts" }}
+    {{ partial "monaco-scripts" . }}
+{{ end}}
+
 {{ define "hero" }}
     <header class="header-hero">
         <div class="header-hero-items container mx-auto">
@@ -51,9 +55,11 @@
         </div>
     </header>
     <section class="mx-auto">
+
         <div class="rounded bg-gray-200 text-black p-16 w-full mx-auto">
-            <pulumi-convert kind="tf" endpoint="https://1qm03yusb2.execute-api.us-west-2.amazonaws.com/stage/convert"></pulumi-convert>
+            <pulumi-convert kind="tf" endpoint="{{ getenv "PULUMI_CONVERT_URL" }}"></pulumi-convert>
         </div>
+
     </section>
 {{ end }}
 
