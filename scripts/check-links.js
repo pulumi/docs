@@ -174,7 +174,11 @@ function onPage(error, pageURL, brokenLinks) {
         }
         else {
             addLink(pageURL, pageURL, error.message, brokenLinks);
+            logLink(pageURL, pageURL, error.message);
         }
+    }
+    else if (process.env.DEBUG) {
+        logLink(pageURL, pageURL, "PAGE_OK");
     }
 }
 
@@ -258,12 +262,22 @@ function getDefaultExcludedKeywords() {
 
 // Filters out transient errors that needn't fail a link-check run.
 function excludeAcceptable(links) {
-    return links
+    return (links
+
         // Ignore GitHub 429s (rate-limited). We should really be handling these more
         // intelligently, but we can come back to that in a follow up.
         .filter(b => !(b.reason === "HTTP_429" && b.destination.match(/github.com/)))
+
         // Ignore remote disconnects.
         .filter(b => b.reason !== "ERRNO_ECONNRESET")
+
+        // Ignore complaints about MIME types. BLC currently hard-codes an expectation of
+        // type text/html, which causes it to fail on direct links to images, PDFs, and
+        // other media.
+        // https://github.com/stevenvachon/broken-link-checker/issues/65
+        // https://github.com/stevenvachon/broken-link-checker/blob/43770535ad7b84cadec9dc54c5140694389e33dc/lib/internal/streamHTML.js#L36-L39
+        .filter(b => !b.reason.startsWith(`Expected type "text/html"`))
+    );
 }
 
 // Posts a message to the designated Slack channel.
