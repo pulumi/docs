@@ -33,6 +33,7 @@ Explore the resources and functions of the rds module in the AWS package.
 <ul class="api">
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
     <li><a href="getclustersnapshot" title="GetClusterSnapshot"><span class="symbol function"></span>GetClusterSnapshot</a></li>
+    <li><a href="getengineversion" title="GetEngineVersion"><span class="symbol function"></span>GetEngineVersion</a></li>
     <li><a href="geteventcategories" title="GetEventCategories"><span class="symbol function"></span>GetEventCategories</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
     <li><a href="getorderabledbinstance" title="GetOrderableDbInstance"><span class="symbol function"></span>GetOrderableDbInstance</a></li>
@@ -49,7 +50,7 @@ Explore the resources and functions of the rds module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 
 

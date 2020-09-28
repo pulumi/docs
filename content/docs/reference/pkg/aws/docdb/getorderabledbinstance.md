@@ -56,12 +56,13 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "3.6.0"
-		opt1 := "na"
+		opt0 := "docdb"
+		opt1 := "3.6.0"
+		opt2 := "na"
 		_, err := docdb.GetOrderableDbInstance(ctx, &docdb.GetOrderableDbInstanceArgs{
-			Engine:        "docdb",
-			EngineVersion: &opt0,
-			LicenseModel:  &opt1,
+			Engine:        &opt0,
+			EngineVersion: &opt1,
+			LicenseModel:  &opt2,
 			PreferredInstanceClasses: []string{
 				"db.r5.large",
 				"db.r4.large",
@@ -154,15 +155,15 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}DB engine. Engine values include `docdb`.
+    <dd>{{% md %}}DB engine. Default: `docdb`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -173,7 +174,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Version of the DB engine. For example, `3.6.0`.
+    <dd>{{% md %}}Version of the DB engine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -184,7 +185,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}DB instance class. Examples of classes are `db.r5.12xlarge`, `db.r5.24xlarge`, `db.r5.2xlarge`, `db.r5.4xlarge`, `db.r5.large`, `db.r5.xlarge`, and `db.t3.medium`.
+    <dd>{{% md %}}DB instance class. Examples of classes are `db.r5.12xlarge`, `db.r5.24xlarge`, `db.r5.2xlarge`, `db.r5.4xlarge`, `db.r5.large`, `db.r5.xlarge`, and `db.t3.medium`. (Conflicts with `preferred_instance_classes`.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -195,7 +196,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}License model. Examples of license models are `general-public-license`, `na`, `bring-your-own-license`, and `amazon-license`.
+    <dd>{{% md %}}License model. Default: `na`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -206,7 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Ordered list of preferred DocumentDB DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
+    <dd>{{% md %}}Ordered list of preferred DocumentDB DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. (Conflicts with `instance_class`.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -217,7 +218,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
+    <dd>{{% md %}}Enable to show only VPC.
 {{% /md %}}</dd>
 
 </dl>
@@ -227,15 +228,15 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}DB engine. Engine values include `docdb`.
+    <dd>{{% md %}}DB engine. Default: `docdb`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -246,7 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Version of the DB engine. For example, `3.6.0`.
+    <dd>{{% md %}}Version of the DB engine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -257,7 +258,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}DB instance class. Examples of classes are `db.r5.12xlarge`, `db.r5.24xlarge`, `db.r5.2xlarge`, `db.r5.4xlarge`, `db.r5.large`, `db.r5.xlarge`, and `db.t3.medium`.
+    <dd>{{% md %}}DB instance class. Examples of classes are `db.r5.12xlarge`, `db.r5.24xlarge`, `db.r5.2xlarge`, `db.r5.4xlarge`, `db.r5.large`, `db.r5.xlarge`, and `db.t3.medium`. (Conflicts with `preferred_instance_classes`.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -268,7 +269,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}License model. Examples of license models are `general-public-license`, `na`, `bring-your-own-license`, and `amazon-license`.
+    <dd>{{% md %}}License model. Default: `na`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -279,7 +280,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Ordered list of preferred DocumentDB DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
+    <dd>{{% md %}}Ordered list of preferred DocumentDB DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. (Conflicts with `instance_class`.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -290,7 +291,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
+    <dd>{{% md %}}Enable to show only VPC.
 {{% /md %}}</dd>
 
 </dl>
@@ -300,15 +301,15 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}DB engine. Engine values include `docdb`.
+    <dd>{{% md %}}DB engine. Default: `docdb`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -319,7 +320,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Version of the DB engine. For example, `3.6.0`.
+    <dd>{{% md %}}Version of the DB engine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -330,7 +331,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}DB instance class. Examples of classes are `db.r5.12xlarge`, `db.r5.24xlarge`, `db.r5.2xlarge`, `db.r5.4xlarge`, `db.r5.large`, `db.r5.xlarge`, and `db.t3.medium`.
+    <dd>{{% md %}}DB instance class. Examples of classes are `db.r5.12xlarge`, `db.r5.24xlarge`, `db.r5.2xlarge`, `db.r5.4xlarge`, `db.r5.large`, `db.r5.xlarge`, and `db.t3.medium`. (Conflicts with `preferred_instance_classes`.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -341,7 +342,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}License model. Examples of license models are `general-public-license`, `na`, `bring-your-own-license`, and `amazon-license`.
+    <dd>{{% md %}}License model. Default: `na`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -352,7 +353,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Ordered list of preferred DocumentDB DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
+    <dd>{{% md %}}Ordered list of preferred DocumentDB DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. (Conflicts with `instance_class`.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -363,7 +364,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
+    <dd>{{% md %}}Enable to show only VPC.
 {{% /md %}}</dd>
 
 </dl>
@@ -373,15 +374,15 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}DB engine. Engine values include `docdb`.
+    <dd>{{% md %}}DB engine. Default: `docdb`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -392,7 +393,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Version of the DB engine. For example, `3.6.0`.
+    <dd>{{% md %}}Version of the DB engine.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -403,7 +404,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}DB instance class. Examples of classes are `db.r5.12xlarge`, `db.r5.24xlarge`, `db.r5.2xlarge`, `db.r5.4xlarge`, `db.r5.large`, `db.r5.xlarge`, and `db.t3.medium`.
+    <dd>{{% md %}}DB instance class. Examples of classes are `db.r5.12xlarge`, `db.r5.24xlarge`, `db.r5.2xlarge`, `db.r5.4xlarge`, `db.r5.large`, `db.r5.xlarge`, and `db.t3.medium`. (Conflicts with `preferred_instance_classes`.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -414,7 +415,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}License model. Examples of license models are `general-public-license`, `na`, `bring-your-own-license`, and `amazon-license`.
+    <dd>{{% md %}}License model. Default: `na`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -425,7 +426,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Ordered list of preferred DocumentDB DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
+    <dd>{{% md %}}Ordered list of preferred DocumentDB DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. (Conflicts with `instance_class`.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -436,7 +437,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
+    <dd>{{% md %}}Enable to show only VPC.
 {{% /md %}}</dd>
 
 </dl>
@@ -472,16 +473,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="engine_csharp">
-<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
 </span> 
@@ -513,8 +504,18 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="licensemodel_csharp">
-<a href="#licensemodel_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
+        <span id="vpc_csharp">
+<a href="#vpc_csharp" style="color: inherit; text-decoration: inherit;">Vpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="engine_csharp">
+<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -523,11 +524,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="vpc_csharp">
-<a href="#vpc_csharp" style="color: inherit; text-decoration: inherit;">Vpc</a>
+        <span id="licensemodel_csharp">
+<a href="#licensemodel_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -558,16 +559,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Availability zones where the instance is available.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="engine_go">
-<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -602,8 +593,18 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="licensemodel_go">
-<a href="#licensemodel_go" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
+        <span id="vpc_go">
+<a href="#vpc_go" style="color: inherit; text-decoration: inherit;">Vpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="engine_go">
+<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -612,11 +613,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="vpc_go">
-<a href="#vpc_go" style="color: inherit; text-decoration: inherit;">Vpc</a>
+        <span id="licensemodel_go">
+<a href="#licensemodel_go" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -647,16 +648,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Availability zones where the instance is available.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="engine_nodejs">
-<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -691,8 +682,18 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="licensemodel_nodejs">
-<a href="#licensemodel_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Model</a>
+        <span id="vpc_nodejs">
+<a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="engine_nodejs">
+<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -701,11 +702,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="vpc_nodejs">
-<a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
+        <span id="licensemodel_nodejs">
+<a href="#licensemodel_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Model</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -736,16 +737,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Availability zones where the instance is available.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="engine_python">
-<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -780,8 +771,18 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="license_model_python">
-<a href="#license_model_python" style="color: inherit; text-decoration: inherit;">license_<wbr>model</a>
+        <span id="vpc_python">
+<a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="engine_python">
+<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -790,11 +791,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="vpc_python">
-<a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
+        <span id="license_model_python">
+<a href="#license_model_python" style="color: inherit; text-decoration: inherit;">license_<wbr>model</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
