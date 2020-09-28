@@ -3,127 +3,266 @@ title: Convert Your Azure ARM Template to a Modern Language
 url: /arm2pulumi
 layout: arm2pulumi
 meta_desc: See what your Azure ARM Template would look like in a modern language thanks to Pulumi.
+
+examples:
+    - name: Storage Account
+      filename: azuredeploy.json
+      description:
+      code: |
+        {
+            "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+            "contentVersion": "1.0.0.0",
+            "parameters": {
+                "storageAccountType": {
+                    "type": "string",
+                    "defaultValue": "Standard_LRS",
+                    "allowedValues": [
+                        "Standard_LRS",
+                        "Standard_GRS",
+                        "Standard_ZRS",
+                        "Premium_LRS"
+                    ],
+                    "metadata": {
+                        "description": "Storage Account type"
+                    }
+                },
+                "location": {
+                    "type": "string",
+                    "defaultValue": "[resourceGroup().location]",
+                    "metadata": {
+                        "description": "Location for all resources."
+                    }
+                },
+                "storageAccountName": {
+                    "type": "string"
+                }
+            },
+            "resources": [
+                {
+                    "type": "Microsoft.Storage/storageAccounts",
+                    "apiVersion": "2019-04-01",
+                    "name": "[parameters('storageAccountName')]",
+                    "location": "[parameters('location')]",
+                    "sku": {
+                        "name": "[parameters('storageAccountType')]"
+                    },
+                    "properties": {
+                        "sku": {
+                            "name": "[parameters('storageAccountType')]"
+                        },
+                        "kind": "StorageV2"
+                    }
+                }
+            ],
+            "outputs": {
+                "storageAccountName": {
+                    "type": "string",
+                    "value": "[reference(parameters('storageAccountName')).name]"
+                }
+            }
+        }
+
+    - name: AKS Cluster
+      filename: azuredeploy.json
+      description:
+      code: |
+        {
+            "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+            "contentVersion": "1.0.0.1",
+            "parameters": {
+                "clusterName": {
+                    "type": "string",
+                    "defaultValue": "aks101cluster",
+                    "metadata": {
+                        "description": "The name of the Managed Cluster resource."
+                    }
+                },
+                "location": {
+                    "type": "string",
+                    "defaultValue": "[resourceGroup().location]",
+                    "metadata": {
+                        "description": "The location of the Managed Cluster resource."
+                    }
+                },
+                "dnsPrefix": {
+                    "type": "string",
+                    "metadata": {
+                        "description": "Optional DNS prefix to use with hosted Kubernetes API server FQDN."
+                    }
+                },
+                "osDiskSizeGB": {
+                    "type": "int",
+                    "defaultValue": 0,
+                    "metadata": {
+                        "description": "Disk size (in GB) to provision for each of the agent pool nodes. This value ranges from 0 to 1023. Specifying 0 will apply the default disk size for that agentVMSize."
+                    },
+                    "minValue": 0,
+                    "maxValue": 1023
+                },
+                "agentCount": {
+                    "type": "int",
+                    "defaultValue": 3,
+                    "metadata": {
+                        "description": "The number of nodes for the cluster."
+                    },
+                    "minValue": 1,
+                    "maxValue": 50
+                },
+                "agentVMSize": {
+                    "type": "string",
+                    "defaultValue": "Standard_DS2_v2",
+                    "metadata": {
+                        "description": "The size of the Virtual Machine."
+                    }
+                },
+                "linuxAdminUsername": {
+                    "type": "string",
+                    "metadata": {
+                        "description": "User name for the Linux Virtual Machines."
+                    }
+                },
+                "sshRSAPublicKey": {
+                    "type": "string",
+                    "metadata": {
+                        "description": "Configure all linux machines with the SSH RSA public key string. Your key should include three parts, for example 'ssh-rsa AAAAB...snip...UcyupgH azureuser@linuxvm'"
+                    }
+                },
+                "servicePrincipalClientId": {
+                    "metadata": {
+                        "description": "Client ID (used by cloudprovider)"
+                    },
+                    "type": "securestring"
+                },
+                "servicePrincipalClientSecret": {
+                    "metadata": {
+                        "description": "The Service Principal Client Secret."
+                    },
+                    "type": "securestring"
+                },
+                "osType": {
+                    "type": "string",
+                    "defaultValue": "Linux",
+                    "allowedValues": [
+                        "Linux"
+                    ],
+                    "metadata": {
+                        "description": "The type of operating system."
+                    }
+                }
+            },
+            "resources": [
+                {
+                    "apiVersion": "2020-03-01",
+                    "type": "Microsoft.ContainerService/managedClusters",
+                    "location": "[parameters('location')]",
+                    "name": "[parameters('clusterName')]",
+                    "properties": {
+                        "dnsPrefix": "[parameters('dnsPrefix')]",
+                        "agentPoolProfiles": [
+                            {
+                                "name": "agentpool",
+                                "osDiskSizeGB": "[parameters('osDiskSizeGB')]",
+                                "count": "[parameters('agentCount')]",
+                                "vmSize": "[parameters('agentVMSize')]",
+                                "osType": "[parameters('osType')]",
+                                "storageProfile": "ManagedDisks"
+                            }
+                        ],
+                        "linuxProfile": {
+                            "adminUsername": "[parameters('linuxAdminUsername')]",
+                            "ssh": {
+                                "publicKeys": [
+                                    {
+                                        "keyData": "[parameters('sshRSAPublicKey')]"
+                                    }
+                                ]
+                            }
+                        },
+                        "servicePrincipalProfile": {
+                            "clientId": "[parameters('servicePrincipalClientId')]",
+                            "secret": "[parameters('servicePrincipalClientSecret')]"
+                        }
+                    }
+                }
+            ],
+            "outputs": {
+                "controlPlaneFQDN": {
+                    "type": "string",
+                    "value": "[reference(parameters('clusterName')).fqdn]"
+                }
+            }
+        }
+
+    - name: Container Registry
+      filename: azuredeploy.json
+      description:
+      code: |
+        {
+            "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+            "contentVersion": "1.0.0.0",
+            "parameters": {
+                "acrName": {
+                    "type": "string",
+                    "minLength": 5,
+                    "maxLength": 50,
+                    "metadata": {
+                        "description": "Name of your Azure Container Registry"
+                    }
+                },
+                "acrAdminUserEnabled": {
+                    "type": "bool",
+                    "defaultValue": false,
+                    "metadata": {
+                        "description": "Enable admin user that have push / pull permission to the registry."
+                    }
+                },
+                "location": {
+                    "type": "string",
+                    "defaultValue": "[resourceGroup().location]",
+                    "metadata": {
+                        "description": "Location for all resources."
+                    }
+                },
+                "acrSku": {
+                    "type": "string",
+                    "metadata": {
+                        "description": "Tier of your Azure Container Registry."
+                    },
+                    "defaultValue": "Basic",
+                    "allowedValues": [
+                        "Basic",
+                        "Standard",
+                        "Premium"
+                    ]
+                }
+            },
+            "resources": [
+                {
+                    "name": "[parameters('acrName')]",
+                    "type": "Microsoft.ContainerRegistry/registries",
+                    "apiVersion": "2019-12-01-preview",
+                    "location": "[parameters('location')]",
+                    "comments": "Container registry for storing docker images",
+                    "tags": {
+                        "displayName": "Container Registry",
+                        "container.registry": "[parameters('acrName')]"
+                    },
+                    "properties": {
+                        "adminUserEnabled": "[parameters('acrAdminUserEnabled')]",
+                        "sku": {
+                            "name": "[parameters('acrSku')]"
+                        }
+                    }
+                }
+            ],
+            "outputs": {
+                "acrLoginServer": {
+                    "value": "[reference(parameters('acrName'),'2019-12-01-preview').loginServer]",
+                    "type": "string"
+                }
+            }
+        }
+
 form:
     hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee
 ---
-
-<!-- Load up various Prism JS/CSS files needed to dynamically colorize results -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js" data-manual></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-javascript.min.js" data-manual></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-typescript.min.js" data-manual></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-python.min.js" data-manual></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-python.min.js" data-manual></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-go.min.js" data-manual></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-csharp.min.js" data-manual></script>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism.min.css" />
-<!-- JS for dynamically creating and downloading source as zips. -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
-
-<div class="w-full mx-auto md:flex">
-
-<div class="md:w-1/2 md:mr-2">
-
-<h3 class="text-gray-700 text-center">Enter your ARM template</h3>
-<div class="text-gray-500 text-center m-1 -mb-2 text-xs">
-    (Don't worry, we send it over SSL and don't store it on our servers.)
-</div>
-
-{{< chooser input-kind "code,url,upload" >}}
-
-{{% choosable input-kind "code" %}}
-
-<p class="m-0 -mt-4 p-2 bg-purple-300 text-white font-bold font-mono font-xs"
-    style="font-size: 0.75rem !important; color: #fff !important">azuredeploy.json</p>
-<textarea id="terraform-code" rows="27"
-    class="w-full px-6 py-4 text-gray-700 text-sm font-mono overflow-y-scroll overflow-x-hidden whitespace-pre"
-    title="Enter a single-file ARM template json; see the 'UPLOAD' tab for multi-file programs">
-</textarea>
-
-<p class="text-gray-700 text-xs mb-1">
-    Canned Examples:
-</p>
-<select id="terraform-canned-example" class="text-gray-700 text-xs">
-    <option id="storage_account" selected> Storage Account </option>
-    <option id="aks_cluster"> AKS Cluster </option>
-    <option id="acr"> Azure Container Registry </option>
-    <option id="sqldb"> SQL Database </option>
-</select>
-
-{{% /choosable %}}
-
-{{% choosable input-kind "url" %}}
-
-<input id="terraform-url" type="text" class="px-6 py-4 text-gray-700 text-sm w-full" value="https://"
-    title="Enter a URL to a single azuredeploy.json file (e.g., https://github.com/Azure/azure-quickstart-templates/blob/master/101-app-function/azuredeploy.json); see the 'UPLOAD' tab for multiple files">
-</input>
-
-{{% /choosable %}}
-
-{{% choosable input-kind "upload" %}}
-
-<input id="terraform-upload" type="file" multiple class="px-6 py-4 text-gray-700 text-sm w-full">
-</input>
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-</div>
-
-<div class="md:w-1/2 md:ml-2">
-
-<h3 class="text-gray-700 text-center">Choose your Pulumi Language</h3>
-<div class="text-gray-500 text-center m-1 -mb-2 text-xs">
-    &nbsp;
-</div>
-
-<div id="pulumi-code-download-icon" class="float-right mt-4 mr-1 hidden">
-    <button class="copy-button" onclick="downloadCode('arm2pulumi.zip')"><i class="fa fa-download text-xl" title="Download"></i></button>
-</div>
-
-{{< chooser language "typescript,javascript,python,go,csharp" >}}
-
-{{% choosable language "typescript" %}}
-
-<div id="pulumi-code-typescript-files" class="m-0 p-0"></div>
-
-{{% /choosable %}}
-
-{{% choosable language "javascript" %}}
-
-<div id="pulumi-code-javascript-files" class="m-0 p-0"></div>
-
-{{% /choosable %}}
-
-{{% choosable language "python" %}}
-
-<div id="pulumi-code-python-files" class="m-0 p-0"></div>
-
-{{% /choosable %}}
-
-{{% choosable language "go" %}}
-
-<div id="pulumi-code-go-files" class="m-0 p-0"></div>
-
-{{% /choosable %}}
-
-{{% choosable language "csharp" %}}
-
-<div id="pulumi-code-csharp-files" class="m-0 p-0"></div>
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-</div>
-
-</div>
-
-<pre id="pulumi-errors" class="text-center text-xs font-bold font-mono bg-gray-200 border-0 hidden" style="color:#ff0000"></pre>
-<pre id="pulumi-warnings" class="text-center text-xs font-bold font-mono bg-gray-200 border-0 hidden" style="color:#cc6600"></pre>
-
-<div class="text-center py-8">
-    <a id="pulumi-code-download-button"
-        class="btn btn-lg mr-4 opacity-50 cursor-not-allowed" onclick="downloadCode('arm2pulumi.zip')">Download Code</a>
-</div>

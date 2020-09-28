@@ -1,10 +1,7 @@
 pulumi-convert {
+    display: block;
 
-    // #code-input {
-    //     font-family: monospace;
-    // }
-
-    // #code-output {
-    //     font-family: monospace;
-    // }
+    textarea {
+        opacity: 0;
+    }
 }

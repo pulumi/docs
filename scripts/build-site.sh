@@ -22,9 +22,6 @@ export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack p
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
 
-printf "Vendoring scripts...\n\n"
-make vendor
-
 printf "Building web components...\n\n"
 make build_components
 

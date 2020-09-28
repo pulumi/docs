@@ -49,9 +49,6 @@ yarn run --silent node-sass assets/sass/styles.scss | yarn run --silent postcss 
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
 
-printf "Vendoring scripts...\n\n"
-make vendor
-
 printf "Building web components...\n\n"
 make build_components
 

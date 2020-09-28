@@ -31,9 +31,6 @@ venv/
 /static/js/components.js
 /static/js/components/
 
-# Ignore vendored scripts.
-/static/vendor/*
-
 # Ignore bundled CSS and JS files, which we write to the Hugo static
 # directory in development in order to be able to use livereload.
 static/css/styles.*.css

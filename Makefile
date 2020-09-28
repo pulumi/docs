@@ -57,11 +57,6 @@ generate:
 copy_static_prebuilt:
 	mkdir -p public && cp -R static-prebuilt/* public/
 
-.PHONY: vendor
-vendor:
-	mkdir -p static/vendor/monaco-editor
-	cp -R node_modules/monaco-editor/min static/vendor/monaco-editor/
-
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
