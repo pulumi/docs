@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/civo | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/civo package."
-git_sha: "c62946fd4384f1aad399565d4a03a22fead6323f"
+git_sha: "598bd8a9f1221e7971c4beb815b2f3c91dbbc787"
 block_external_search_index: true
 ---
 
