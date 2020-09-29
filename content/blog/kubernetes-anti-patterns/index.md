@@ -1,6 +1,6 @@
 ---
 title: "Avoiding Kubernetes Anti-Patterns"
-date: 2020-10-01
+date: 2020-09-29
 meta_desc: "Prevent Kubernetes anti-patterns with infrastructure as code."
 meta_image: anti-patterns.png
 authors:
