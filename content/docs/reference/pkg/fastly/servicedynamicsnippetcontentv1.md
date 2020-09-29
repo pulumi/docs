@@ -12,6 +12,190 @@ meta_desc: "Explore the ServiceDynamicSnippetContentv1 resource of the Fastly pa
 
 Defines content that represents blocks of VCL logic that is inserted into your service.  This resource will populate the content of a dynamic snippet and allow it to be manged without the creation of a new service verison.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic usage
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_fastly as fastly
+
+myservice = fastly.Servicev1("myservice",
+    domains=[fastly.Servicev1DomainArgs(
+        name="snippet.fastlytestdomain.com",
+        comment="snippet test",
+    )],
+    backends=[fastly.Servicev1BackendArgs(
+        address="tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com",
+        name="AWS S3 hosting",
+        port=80,
+    )],
+    dynamicsnippets=[fastly.Servicev1DynamicsnippetArgs(
+        name="My Dynamic Snippet",
+        type="recv",
+        priority=110,
+    )],
+    default_host="tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com",
+    force_destroy=True)
+my_dyn_content = fastly.ServiceDynamicSnippetContentv1("myDynContent",
+    service_id=myservice.id,
+    snippet_id=myservice.dynamicsnippets.apply(lambda dynamicsnippets: {s.name: s.snippet_id for s in dynamicsnippets}["My Dynamic Snippet"]),
+    content="""if ( req.url ) {
+ set req.http.my-snippet-test-header = "true";
+}""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fastly from "@pulumi/fastly";
+
+const myservice = new fastly.Servicev1("myservice", {
+    domains: [{
+        name: "snippet.fastlytestdomain.com",
+        comment: "snippet test",
+    }],
+    backends: [{
+        address: "tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com",
+        name: "AWS S3 hosting",
+        port: 80,
+    }],
+    dynamicsnippets: [{
+        name: "My Dynamic Snippet",
+        type: "recv",
+        priority: 110,
+    }],
+    defaultHost: "tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com",
+    forceDestroy: true,
+});
+const myDynContent = new fastly.ServiceDynamicSnippetContentv1("myDynContent", {
+    serviceId: myservice.id,
+    snippetId: myservice.dynamicsnippets.apply(dynamicsnippets => dynamicsnippets.reduce((__obj, s) => { ...__obj, [s.name]: s.snippetId })["My Dynamic Snippet"]),
+    content: `if ( req.url ) {
+ set req.http.my-snippet-test-header = "true";
+}`,
+});
+```
+
+{{% /example %}}
+
+### Multiple dynamic snippets
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_fastly as fastly
+
+myservice = fastly.Servicev1("myservice",
+    domains=[fastly.Servicev1DomainArgs(
+        name="snippet.fastlytestdomain.com",
+        comment="snippet test",
+    )],
+    backends=[fastly.Servicev1BackendArgs(
+        address="tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com",
+        name="AWS S3 hosting",
+        port=80,
+    )],
+    dynamicsnippets=[
+        fastly.Servicev1DynamicsnippetArgs(
+            name="My Dynamic Snippet One",
+            type="recv",
+            priority=110,
+        ),
+        fastly.Servicev1DynamicsnippetArgs(
+            name="My Dynamic Snippet Two",
+            type="recv",
+            priority=110,
+        ),
+    ],
+    default_host="tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com",
+    force_destroy=True)
+my_dyn_content_one = fastly.ServiceDynamicSnippetContentv1("myDynContentOne",
+    service_id=myservice.id,
+    snippet_id=myservice.dynamicsnippets.apply(lambda dynamicsnippets: {s.name: s.snippet_id for s in dynamicsnippets}["My Dynamic Snippet One"]),
+    content="""if ( req.url ) {
+ set req.http.my-snippet-test-header-one = "true";
+}""")
+my_dyn_content_two = fastly.ServiceDynamicSnippetContentv1("myDynContentTwo",
+    service_id=myservice.id,
+    snippet_id=myservice.dynamicsnippets.apply(lambda dynamicsnippets: {s.name: s.snippet_id for s in dynamicsnippets}["My Dynamic Snippet Two"]),
+    content="""if ( req.url ) {
+ set req.http.my-snippet-test-header-two = "true";
+}""")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fastly from "@pulumi/fastly";
+
+const myservice = new fastly.Servicev1("myservice", {
+    domains: [{
+        name: "snippet.fastlytestdomain.com",
+        comment: "snippet test",
+    }],
+    backends: [{
+        address: "tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com",
+        name: "AWS S3 hosting",
+        port: 80,
+    }],
+    dynamicsnippets: [
+        {
+            name: "My Dynamic Snippet One",
+            type: "recv",
+            priority: 110,
+        },
+        {
+            name: "My Dynamic Snippet Two",
+            type: "recv",
+            priority: 110,
+        },
+    ],
+    defaultHost: "tftesting.tftesting.net.s3-website-us-west-2.amazonaws.com",
+    forceDestroy: true,
+});
+const myDynContentOne = new fastly.ServiceDynamicSnippetContentv1("myDynContentOne", {
+    serviceId: myservice.id,
+    snippetId: myservice.dynamicsnippets.apply(dynamicsnippets => dynamicsnippets.reduce((__obj, s) => { ...__obj, [s.name]: s.snippetId })["My Dynamic Snippet One"]),
+    content: `if ( req.url ) {
+ set req.http.my-snippet-test-header-one = "true";
+}`,
+});
+const myDynContentTwo = new fastly.ServiceDynamicSnippetContentv1("myDynContentTwo", {
+    serviceId: myservice.id,
+    snippetId: myservice.dynamicsnippets.apply(dynamicsnippets => dynamicsnippets.reduce((__obj, s) => { ...__obj, [s.name]: s.snippetId })["My Dynamic Snippet Two"]),
+    content: `if ( req.url ) {
+ set req.http.my-snippet-test-header-two = "true";
+}`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServiceDynamicSnippetContentv1 Resource {#create}
@@ -734,6 +918,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
+	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).</dd>
 </dl>
 

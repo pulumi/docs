@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -100,13 +100,13 @@ import pulumi_aws as aws
 import pulumi_fastly as fastly
 
 fastly = fastly.get_fastly_ip_ranges()
-from_fastly = aws.ec2.SecurityGroup("fromFastly", ingress=[{
-    "cidr_blocks": fastly.cidr_blocks,
-    "from_port": "443",
-    "ipv6_cidr_blocks": fastly.ipv6_cidr_blocks,
-    "protocol": "tcp",
-    "to_port": "443",
-}])
+from_fastly = aws.ec2.SecurityGroup("fromFastly", ingress=[aws.ec2.SecurityGroupIngressArgs(
+    cidr_blocks=fastly.cidr_blocks,
+    from_port="443",
+    ipv6_cidr_blocks=fastly.ipv6_cidr_blocks,
+    protocol="tcp",
+    to_port="443",
+)])
 ```
 
 {{% /example %}}
@@ -301,7 +301,7 @@ The following output properties are available:
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The lexically ordered list of ipv4 CIDR blocks.
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}The lexically ordered list of ipv6 CIDR blocks.
 {{% /md %}}</dd>
@@ -346,6 +346,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
+	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).</dd>
 </dl>
 

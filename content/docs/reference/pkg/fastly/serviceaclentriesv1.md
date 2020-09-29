@@ -12,6 +12,162 @@ meta_desc: "Explore the ServiceACLEntriesv1 resource of the Fastly package, incl
 
 Defines a set of Fastly ACL entries that can be used to populate a service ACL.  This resource will populate an ACL with the entries and will track their state.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic usage
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_fastly as fastly
+
+config = pulumi.Config()
+myacl_name = config.get("myaclName")
+if myacl_name is None:
+    myacl_name = "My ACL"
+myservice = fastly.Servicev1("myservice",
+    domains=[fastly.Servicev1DomainArgs(
+        name="demo.notexample.com",
+        comment="demo",
+    )],
+    backends=[fastly.Servicev1BackendArgs(
+        address="demo.notexample.com.s3-website-us-west-2.amazonaws.com",
+        name="AWS S3 hosting",
+        port=80,
+    )],
+    acls=[fastly.Servicev1AclArgs(
+        name=myacl_name,
+    )],
+    force_destroy=True)
+entries = fastly.ServiceACLEntriesv1("entries",
+    service_id=myservice.id,
+    acl_id=myservice.acls.apply(lambda acls: {d.name: d.acl_id for d in acls}[myacl_name]),
+    entries=[fastly.ServiceACLEntriesv1EntryArgs(
+        ip="127.0.0.1",
+        subnet="24",
+        negated=False,
+        comment="ALC Entry 1",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fastly from "@pulumi/fastly";
+
+const config = new pulumi.Config();
+const myaclName = config.get("myaclName") || "My ACL";
+const myservice = new fastly.Servicev1("myservice", {
+    domains: [{
+        name: "demo.notexample.com",
+        comment: "demo",
+    }],
+    backends: [{
+        address: "demo.notexample.com.s3-website-us-west-2.amazonaws.com",
+        name: "AWS S3 hosting",
+        port: 80,
+    }],
+    acls: [{
+        name: myaclName,
+    }],
+    forceDestroy: true,
+});
+const entries = new fastly.ServiceACLEntriesv1("entries", {
+    serviceId: myservice.id,
+    aclId: myservice.acls.apply(acls => acls.reduce((__obj, d) => { ...__obj, [d.name]: d.aclId })[myaclName]),
+    entries: [{
+        ip: "127.0.0.1",
+        subnet: "24",
+        negated: false,
+        comment: "ALC Entry 1",
+    }],
+});
+```
+
+{{% /example %}}
+
+### Complex object usage
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fastly from "@pulumi/fastly";
+
+const aclName = "my_acl";
+const aclEntries = [
+    {
+        ip: "1.2.3.4",
+        comment: "acl_entry_1",
+    },
+    {
+        ip: "1.2.3.5",
+        comment: "acl_entry_2",
+    },
+    {
+        ip: "1.2.3.6",
+        comment: "acl_entry_3",
+    },
+];
+const myservice = new fastly.Servicev1("myservice", {
+    domains: [{
+        name: "demo.notexample.com",
+        comment: "demo",
+    }],
+    backends: [{
+        address: "1.2.3.4",
+        name: "localhost",
+        port: 80,
+    }],
+    acls: [{
+        name: aclName,
+    }],
+    forceDestroy: true,
+});
+const entries = new fastly.ServiceACLEntriesv1("entries", {
+    serviceId: myservice.id,
+    aclId: myservice.acls.apply(acls => acls.reduce((__obj, d) => { ...__obj, [d.name]: d.aclId })[aclName]),
+    dynamic: [{
+        forEach: aclEntries.map(e => {
+            ip: e.ip,
+            comment: e.comment,
+        }),
+        content: [{
+            ip: entry.value.ip,
+            subnet: 22,
+            comment: entry.value.comment,
+            negated: false,
+        }],
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServiceACLEntriesv1 Resource {#create}
@@ -23,7 +179,7 @@ Defines a set of Fastly ACL entries that can be used to populate a service ACL. 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.ServiceACLEntriesv1">ServiceACLEntriesv1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entries</span><span class="p">:</span> <span class="nx">Optional[List[ServiceACLEntriesv1EntryArgs]]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_fastly/#pulumi_fastly.ServiceACLEntriesv1">ServiceACLEntriesv1</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceACLEntriesv1EntryArgs]]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -343,7 +499,7 @@ The ServiceACLEntriesv1 resource accepts the following [input]({{< relref "/docs
 <a href="#entries_python" style="color: inherit; text-decoration: inherit;">entries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaclentriesv1entry">List[Service<wbr>ACLEntriesv1Entry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceaclentriesv1entry">Sequence[Service<wbr>ACLEntriesv1Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Set ACL entries that are applied to the service. Defined below
 {{% /md %}}</dd>
@@ -447,7 +603,7 @@ Get an existing ServiceACLEntriesv1 resource's state with the given name, ID, an
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entries</span><span class="p">:</span> <span class="nx">Optional[List[ServiceACLEntriesv1EntryArgs]]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceACLEntriesv1</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceACLEntriesv1EntryArgs]]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceACLEntriesv1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -698,7 +854,7 @@ The following state arguments are supported:
 <a href="#state_entries_python" style="color: inherit; text-decoration: inherit;">entries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaclentriesv1entry">List[Service<wbr>ACLEntriesv1Entry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceaclentriesv1entry">Sequence[Service<wbr>ACLEntriesv1Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Set ACL entries that are applied to the service. Defined below
 {{% /md %}}</dd>
@@ -1002,6 +1158,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
+	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).</dd>
 </dl>
 

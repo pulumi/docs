@@ -19,6 +19,7 @@ A Pulumi package for creating and managing fastly cloud resources.
     <li><a href="servicecompute" title="ServiceCompute"><span class="symbol resource"></span>ServiceCompute</a></li>
     <li><a href="servicedictionaryitemsv1" title="ServiceDictionaryItemsv1"><span class="symbol resource"></span>ServiceDictionaryItemsv1</a></li>
     <li><a href="servicedynamicsnippetcontentv1" title="ServiceDynamicSnippetContentv1"><span class="symbol resource"></span>ServiceDynamicSnippetContentv1</a></li>
+    <li><a href="servicewafconfiguration" title="ServiceWafConfiguration"><span class="symbol resource"></span>ServiceWafConfiguration</a></li>
     <li><a href="servicev1" title="Servicev1"><span class="symbol resource"></span>Servicev1</a></li>
     <li><a href="userv1" title="Userv1"><span class="symbol resource"></span>Userv1</a></li>
 </ul>
@@ -26,6 +27,7 @@ A Pulumi package for creating and managing fastly cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getfastlyipranges" title="GetFastlyIpRanges"><span class="symbol function"></span>GetFastlyIpRanges</a></li>
+    <li><a href="getwafrules" title="GetWafRules"><span class="symbol function"></span>GetWafRules</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,9 +37,9 @@ A Pulumi package for creating and managing fastly cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
+	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
+	<dd>2.8.1</dd>
 </dl>
 
 
