@@ -220,7 +220,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/transfer/#pulumi_aws.transfer.User">User</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">home_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/transfer/#pulumi_aws.transfer.User">User</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">home_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">home_directory_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserHomeDirectoryMappingArgs]]</span> = None<span class="p">, </span><span class="nx">home_directory_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -438,6 +438,28 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
+        <span id="homedirectorymappings_csharp">
+<a href="#homedirectorymappings_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Directory<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userhomedirectorymapping">List&lt;User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="homedirectorytype_csharp">
+<a href="#homedirectorytype_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Directory<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span> 
@@ -507,6 +529,28 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="homedirectorymappings_go">
+<a href="#homedirectorymappings_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Directory<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userhomedirectorymapping">[]User<wbr>Home<wbr>Directory<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="homedirectorytype_go">
+<a href="#homedirectorytype_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Directory<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -584,6 +628,28 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
+        <span id="homedirectorymappings_nodejs">
+<a href="#homedirectorymappings_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Directory<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userhomedirectorymapping">User<wbr>Home<wbr>Directory<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="homedirectorytype_nodejs">
+<a href="#homedirectorytype_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Directory<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span> 
@@ -653,6 +719,28 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="home_directory_mappings_python">
+<a href="#home_directory_mappings_python" style="color: inherit; text-decoration: inherit;">home_<wbr>directory_<wbr>mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userhomedirectorymapping">Sequence[User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="home_directory_type_python">
+<a href="#home_directory_type_python" style="color: inherit; text-decoration: inherit;">home_<wbr>directory_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -820,7 +908,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">home_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">home_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">home_directory_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserHomeDirectoryMappingArgs]]</span> = None<span class="p">, </span><span class="nx">home_directory_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -958,6 +1046,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_homedirectorymappings_csharp">
+<a href="#state_homedirectorymappings_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Directory<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userhomedirectorymapping">List&lt;User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_homedirectorytype_csharp">
+<a href="#state_homedirectorytype_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Directory<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_policy_csharp">
 <a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span> 
@@ -1038,6 +1148,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_homedirectorymappings_go">
+<a href="#state_homedirectorymappings_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Directory<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userhomedirectorymapping">[]User<wbr>Home<wbr>Directory<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_homedirectorytype_go">
+<a href="#state_homedirectorytype_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Directory<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1126,6 +1258,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_homedirectorymappings_nodejs">
+<a href="#state_homedirectorymappings_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Directory<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userhomedirectorymapping">User<wbr>Home<wbr>Directory<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_homedirectorytype_nodejs">
+<a href="#state_homedirectorytype_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Directory<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_policy_nodejs">
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span> 
@@ -1210,6 +1364,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_home_directory_mappings_python">
+<a href="#state_home_directory_mappings_python" style="color: inherit; text-decoration: inherit;">home_<wbr>directory_<wbr>mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userhomedirectorymapping">Sequence[User<wbr>Home<wbr>Directory<wbr>Mapping<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_home_directory_type_python">
+<a href="#state_home_directory_type_python" style="color: inherit; text-decoration: inherit;">home_<wbr>directory_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_policy_python">
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span> 
@@ -1267,6 +1443,146 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="userhomedirectorymapping">User<wbr>Home<wbr>Directory<wbr>Mapping</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserHomeDirectoryMapping">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserHomeDirectoryMapping">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/transfer?tab=doc#UserHomeDirectoryMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/transfer?tab=doc#UserHomeDirectoryMappingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Transfer.Inputs.UserHomeDirectoryMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Transfer.Outputs.UserHomeDirectoryMapping.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="entry_csharp">
+<a href="#entry_csharp" style="color: inherit; text-decoration: inherit;">Entry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents an entry and a target.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_csharp">
+<a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the map target.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="entry_go">
+<a href="#entry_go" style="color: inherit; text-decoration: inherit;">Entry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents an entry and a target.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_go">
+<a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the map target.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="entry_nodejs">
+<a href="#entry_nodejs" style="color: inherit; text-decoration: inherit;">entry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents an entry and a target.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_nodejs">
+<a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the map target.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="entry_python">
+<a href="#entry_python" style="color: inherit; text-decoration: inherit;">entry</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Represents an entry and a target.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_python">
+<a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the map target.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

@@ -2416,6 +2416,28 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the DynamoDB table to crawl.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scanall_csharp">
+<a href="#scanall_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table.  defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scanrate_csharp">
+<a href="#scanrate_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Rate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of the configured read capacity units to use by the AWS Glue crawler. The valid values are null or a value between 0.1 to 1.5.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2432,6 +2454,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table to crawl.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scanall_go">
+<a href="#scanall_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table.  defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scanrate_go">
+<a href="#scanrate_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Rate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of the configured read capacity units to use by the AWS Glue crawler. The valid values are null or a value between 0.1 to 1.5.
 {{% /md %}}</dd>
 
 </dl>
@@ -2452,6 +2496,28 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the DynamoDB table to crawl.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scanall_nodejs">
+<a href="#scanall_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>All</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table.  defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scanrate_nodejs">
+<a href="#scanrate_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Rate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of the configured read capacity units to use by the AWS Glue crawler. The valid values are null or a value between 0.1 to 1.5.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2468,6 +2534,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table to crawl.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scan_all_python">
+<a href="#scan_all_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>all</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table.  defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scan_rate_python">
+<a href="#scan_rate_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>rate</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The percentage of the configured read capacity units to use by the AWS Glue crawler. The valid values are null or a value between 0.1 to 1.5.
 {{% /md %}}</dd>
 
 </dl>

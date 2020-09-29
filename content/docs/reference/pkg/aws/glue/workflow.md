@@ -198,7 +198,7 @@ const example_inner = new aws.glue.Trigger("example-inner", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Workflow">Workflow</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_run_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Workflow">Workflow</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_run_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_concurrent_runs</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -394,6 +394,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxconcurrentruns_csharp">
+<a href="#maxconcurrentruns_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Runs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -401,6 +412,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -434,6 +456,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxconcurrentruns_go">
+<a href="#maxconcurrentruns_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Runs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -441,6 +474,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -474,6 +518,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxconcurrentruns_nodejs">
+<a href="#maxconcurrentruns_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Runs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -481,6 +536,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -514,6 +580,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="max_concurrent_runs_python">
+<a href="#max_concurrent_runs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>runs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -521,6 +598,17 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -543,6 +631,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Workflow
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -557,6 +656,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Workflow
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -577,6 +687,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Workflow
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -591,6 +712,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Workflow
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -622,7 +754,7 @@ Get an existing Workflow resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_run_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Workflow</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_run_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_concurrent_runs</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Workflow</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -738,6 +870,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Workflow
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultrunproperties_csharp">
 <a href="#state_defaultrunproperties_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Run<wbr>Properties</a>
 </span> 
@@ -760,6 +903,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_maxconcurrentruns_csharp">
+<a href="#state_maxconcurrentruns_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Runs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -769,12 +923,34 @@ The following state arguments are supported:
     <dd>{{% md %}}The name you assign to this workflow.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Workflow
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -800,6 +976,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_maxconcurrentruns_go">
+<a href="#state_maxconcurrentruns_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Runs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -809,12 +996,34 @@ The following state arguments are supported:
     <dd>{{% md %}}The name you assign to this workflow.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Workflow
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -840,6 +1049,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_maxconcurrentruns_nodejs">
+<a href="#state_maxconcurrentruns_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Runs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -849,12 +1069,34 @@ The following state arguments are supported:
     <dd>{{% md %}}The name you assign to this workflow.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Workflow
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -880,6 +1122,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_max_concurrent_runs_python">
+<a href="#state_max_concurrent_runs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>runs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -887,6 +1140,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this workflow.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
 
 </dl>

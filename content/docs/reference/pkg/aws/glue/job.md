@@ -314,7 +314,7 @@ const exampleJob = new aws.glue.Job("exampleJob", {defaultArguments: {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Job">Job</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[JobCommandArgs]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_arguments</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_property</span><span class="p">:</span> <span class="nx">Optional[JobExecutionPropertyArgs]</span> = None<span class="p">, </span><span class="nx">glue_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_property</span><span class="p">:</span> <span class="nx">Optional[JobNotificationPropertyArgs]</span> = None<span class="p">, </span><span class="nx">number_of_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Job">Job</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[JobCommandArgs]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_arguments</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_property</span><span class="p">:</span> <span class="nx">Optional[JobExecutionPropertyArgs]</span> = None<span class="p">, </span><span class="nx">glue_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">non_overridable_arguments</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">notification_property</span><span class="p">:</span> <span class="nx">Optional[JobNotificationPropertyArgs]</span> = None<span class="p">, </span><span class="nx">number_of_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -571,7 +571,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
+    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `number_of_workers` and `worker_type` arguments instead with `glue_version` `2.0` and above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -594,6 +594,17 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nonoverridablearguments_csharp">
+<a href="#nonoverridablearguments_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Overridable<wbr>Arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Non-overridable arguments for this job, specified as name-value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -754,7 +765,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
+    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `number_of_workers` and `worker_type` arguments instead with `glue_version` `2.0` and above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -777,6 +788,17 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nonoverridablearguments_go">
+<a href="#nonoverridablearguments_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Overridable<wbr>Arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Non-overridable arguments for this job, specified as name-value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -937,7 +959,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
+    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `number_of_workers` and `worker_type` arguments instead with `glue_version` `2.0` and above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -960,6 +982,17 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nonoverridablearguments_nodejs">
+<a href="#nonoverridablearguments_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Overridable<wbr>Arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Non-overridable arguments for this job, specified as name-value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1120,7 +1153,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
+    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `number_of_workers` and `worker_type` arguments instead with `glue_version` `2.0` and above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1143,6 +1176,17 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="non_overridable_arguments_python">
+<a href="#non_overridable_arguments_python" style="color: inherit; text-decoration: inherit;">non_<wbr>overridable_<wbr>arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Non-overridable arguments for this job, specified as name-value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1354,7 +1398,7 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[JobCommandArgs]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_arguments</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_property</span><span class="p">:</span> <span class="nx">Optional[JobExecutionPropertyArgs]</span> = None<span class="p">, </span><span class="nx">glue_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_property</span><span class="p">:</span> <span class="nx">Optional[JobNotificationPropertyArgs]</span> = None<span class="p">, </span><span class="nx">number_of_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[JobCommandArgs]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_arguments</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_property</span><span class="p">:</span> <span class="nx">Optional[JobExecutionPropertyArgs]</span> = None<span class="p">, </span><span class="nx">glue_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">non_overridable_arguments</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">notification_property</span><span class="p">:</span> <span class="nx">Optional[JobNotificationPropertyArgs]</span> = None<span class="p">, </span><span class="nx">number_of_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1553,7 +1597,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
+    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `number_of_workers` and `worker_type` arguments instead with `glue_version` `2.0` and above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1576,6 +1620,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nonoverridablearguments_csharp">
+<a href="#state_nonoverridablearguments_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Overridable<wbr>Arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Non-overridable arguments for this job, specified as name-value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1747,7 +1802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
+    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `number_of_workers` and `worker_type` arguments instead with `glue_version` `2.0` and above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1770,6 +1825,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nonoverridablearguments_go">
+<a href="#state_nonoverridablearguments_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Overridable<wbr>Arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Non-overridable arguments for this job, specified as name-value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1941,7 +2007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
+    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `number_of_workers` and `worker_type` arguments instead with `glue_version` `2.0` and above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1964,6 +2030,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nonoverridablearguments_nodejs">
+<a href="#state_nonoverridablearguments_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Overridable<wbr>Arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Non-overridable arguments for this job, specified as name-value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2135,7 +2212,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
+    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `number_of_workers` and `worker_type` arguments instead with `glue_version` `2.0` and above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2158,6 +2235,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_non_overridable_arguments_python">
+<a href="#state_non_overridable_arguments_python" style="color: inherit; text-decoration: inherit;">non_<wbr>overridable_<wbr>arguments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Non-overridable arguments for this job, specified as name-value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
