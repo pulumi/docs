@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bwp = Output.Create(AliCloud.Cen.GetBandwidthPackages.InvokeAsync(new AliCloud.Cen.GetBandwidthPackagesArgs
+        var example = Output.Create(AliCloud.Cen.GetBandwidthPackages.InvokeAsync(new AliCloud.Cen.GetBandwidthPackagesArgs
         {
             InstanceId = "cen-id1",
             NameRegex = "^foo",
         }));
-        this.FirstCenBandwidthPackageId = bwp.Apply(bwp => bwp.Packages[0].Id);
+        this.FirstCenBandwidthPackageId = example.Apply(example => example.Packages[0].Id);
     }
 
     [Output("firstCenBandwidthPackageId")]
@@ -54,14 +54,14 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "cen-id1"
 		opt1 := "^foo"
-		bwp, err := cen.GetBandwidthPackages(ctx, &cen.GetBandwidthPackagesArgs{
+		example, err := cen.GetBandwidthPackages(ctx, &cen.GetBandwidthPackagesArgs{
 			InstanceId: &opt0,
 			NameRegex:  &opt1,
 		}, nil)
 		if err != nil {
 			return err
 		}
-		ctx.Export("firstCenBandwidthPackageId", bwp.Packages[0].Id)
+		ctx.Export("firstCenBandwidthPackageId", example.Packages[0].Id)
 		return nil
 	})
 }
@@ -74,9 +74,9 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-bwp = alicloud.cen.get_bandwidth_packages(instance_id="cen-id1",
+example = alicloud.cen.get_bandwidth_packages(instance_id="cen-id1",
     name_regex="^foo")
-pulumi.export("firstCenBandwidthPackageId", bwp.packages[0].id)
+pulumi.export("firstCenBandwidthPackageId", example.packages[0].id)
 ```
 
 {{% /example %}}
@@ -87,12 +87,11 @@ pulumi.export("firstCenBandwidthPackageId", bwp.packages[0].id)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const bwp = pulumi.output(alicloud.cen.getBandwidthPackages({
+const example = alicloud.cen.getBandwidthPackages({
     instanceId: "cen-id1",
     nameRegex: "^foo",
-}, { async: true }));
-
-export const firstCenBandwidthPackageId = bwp.packages[0].id;
+});
+export const firstCenBandwidthPackageId = example.then(example => example.packages[0].id);
 ```
 
 {{% /example %}}
@@ -111,7 +110,7 @@ export const firstCenBandwidthPackageId = bwp.packages[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bandwidth_packages(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBandwidthPackagesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bandwidth_packages(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">include_reservation_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBandwidthPackagesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -149,6 +148,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="includereservationdata_csharp">
+<a href="#includereservationdata_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Reservation<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}-Indicates whether to include renewal data. Valid values: `true`: Return renewal data in the response. `false`: Do not return renewal data in the response.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
 </span> 
@@ -179,6 +189,17 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, Valid value: `Idle` and `InUse`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -195,6 +216,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Limit search to a list of specific CEN Bandwidth Package IDs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includereservationdata_go">
+<a href="#includereservationdata_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Reservation<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}-Indicates whether to include renewal data. Valid values: `true`: Return renewal data in the response. `false`: Do not return renewal data in the response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -229,6 +261,17 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, Valid value: `Idle` and `InUse`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -245,6 +288,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Limit search to a list of specific CEN Bandwidth Package IDs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includereservationdata_nodejs">
+<a href="#includereservationdata_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Reservation<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}-Indicates whether to include renewal data. Valid values: `true`: Return renewal data in the response. `false`: Do not return renewal data in the response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -279,6 +333,17 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, Valid value: `Idle` and `InUse`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -295,6 +360,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Limit search to a list of specific CEN Bandwidth Package IDs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="include_reservation_data_python">
+<a href="#include_reservation_data_python" style="color: inherit; text-decoration: inherit;">include_<wbr>reservation_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}-Indicates whether to include renewal data. Valid values: `true`: Return renewal data in the response. `false`: Do not return renewal data in the response.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -328,6 +404,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, Valid value: `Idle` and `InUse`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -368,7 +455,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of specific CEN Bandwidth Package IDs.
+* `names` (Available in 1.98.0+) - A list of CEN Bandwidth Package Names.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -393,13 +482,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="includereservationdata_csharp">
+<a href="#includereservationdata_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Reservation<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of CEN instance that owns the CEN Bandwidth Package.
+    <dd>{{% md %}}The ID of the CEN instance that are associated with the bandwidth package.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -421,6 +520,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, including `Idle` and `InUse`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -448,7 +558,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of specific CEN Bandwidth Package IDs.
+* `names` (Available in 1.98.0+) - A list of CEN Bandwidth Package Names.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -473,13 +585,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="includereservationdata_go">
+<a href="#includereservationdata_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Reservation<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of CEN instance that owns the CEN Bandwidth Package.
+    <dd>{{% md %}}The ID of the CEN instance that are associated with the bandwidth package.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -501,6 +623,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, including `Idle` and `InUse`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -528,7 +661,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of specific CEN Bandwidth Package IDs.
+* `names` (Available in 1.98.0+) - A list of CEN Bandwidth Package Names.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -553,13 +688,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="includereservationdata_nodejs">
+<a href="#includereservationdata_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Reservation<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of CEN instance that owns the CEN Bandwidth Package.
+    <dd>{{% md %}}The ID of the CEN instance that are associated with the bandwidth package.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -581,6 +726,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, including `Idle` and `InUse`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -608,7 +764,9 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of specific CEN Bandwidth Package IDs.
+* `names` (Available in 1.98.0+) - A list of CEN Bandwidth Package Names.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -633,13 +791,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="include_reservation_data_python">
+<a href="#include_reservation_data_python" style="color: inherit; text-decoration: inherit;">include_<wbr>reservation_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of CEN instance that owns the CEN Bandwidth Package.
+    <dd>{{% md %}}The ID of the CEN instance that are associated with the bandwidth package.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -661,6 +829,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, including `Idle` and `InUse`.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -712,7 +891,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The billing method, including "POSTPAY" and "PREPAY".
+    <dd>{{% md %}}The billing method, including `POSTPAY` and `PREPAY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -723,18 +902,40 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN Bandwidth Package, including "Normal", "FinancialLocked" and "SecurityLocked".
+    <dd>{{% md %}}Status of the CEN Bandwidth Package, including `Normal`, `FinancialLocked` and `SecurityLocked`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="creationtime_csharp">
-<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+        <span id="cenbandwidthpackageid_csharp">
+<a href="#cenbandwidthpackageid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Bandwidth<wbr>Package<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Creation time of the CEN bandwidth package.
+    <dd>{{% md %}}The ID of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cenbandwidthpackagename_csharp">
+<a href="#cenbandwidthpackagename_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Bandwidth<wbr>Package<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cenids_csharp">
+<a href="#cenids_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of CEN instances that are associated with the bandwidth package.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -747,6 +948,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Description of the CEN Bandwidth Package.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expiredtime_csharp">
+<a href="#expiredtime_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -768,6 +979,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Region ID of the interconnected regions.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="geographicspanid_csharp">
+<a href="#geographicspanid_csharp" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Span<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The area ID of the cross-area connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hasreservationdata_csharp">
+<a href="#hasreservationdata_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Reservation<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether renewal data is involved.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -794,6 +1027,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="iscrossborder_csharp">
+<a href="#iscrossborder_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Cross<wbr>Border</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the bandwidth package is a cross-border bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -805,13 +1049,68 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="paymenttype_csharp">
+<a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The billing method of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationactivetime_csharp">
+<a href="#reservationactivetime_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Active<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The expiration time of the temporary upgrade.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationbandwidth_csharp">
+<a href="#reservationbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Bandwidth</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The restored bandwidth after the temporary upgrade.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationinternetchargetype_csharp">
+<a href="#reservationinternetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Internet<wbr>Charge<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The billing method after the configuration change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationordertype_csharp">
+<a href="#reservationordertype_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Order<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the configuration change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, including "Idle" and "InUse".
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, Valid value: `Idle` and `InUse`.
 {{% /md %}}</dd>
 
 </dl>
@@ -840,7 +1139,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The billing method, including "POSTPAY" and "PREPAY".
+    <dd>{{% md %}}The billing method, including `POSTPAY` and `PREPAY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -851,18 +1150,40 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN Bandwidth Package, including "Normal", "FinancialLocked" and "SecurityLocked".
+    <dd>{{% md %}}Status of the CEN Bandwidth Package, including `Normal`, `FinancialLocked` and `SecurityLocked`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="creationtime_go">
-<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
+        <span id="cenbandwidthpackageid_go">
+<a href="#cenbandwidthpackageid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Bandwidth<wbr>Package<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Creation time of the CEN bandwidth package.
+    <dd>{{% md %}}The ID of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cenbandwidthpackagename_go">
+<a href="#cenbandwidthpackagename_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Bandwidth<wbr>Package<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cenids_go">
+<a href="#cenids_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of CEN instances that are associated with the bandwidth package.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -875,6 +1196,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Description of the CEN Bandwidth Package.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expiredtime_go">
+<a href="#expiredtime_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -896,6 +1227,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Region ID of the interconnected regions.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="geographicspanid_go">
+<a href="#geographicspanid_go" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Span<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The area ID of the cross-area connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hasreservationdata_go">
+<a href="#hasreservationdata_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Reservation<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether renewal data is involved.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -922,6 +1275,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="iscrossborder_go">
+<a href="#iscrossborder_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Cross<wbr>Border</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the bandwidth package is a cross-border bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -933,13 +1297,68 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="paymenttype_go">
+<a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The billing method of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationactivetime_go">
+<a href="#reservationactivetime_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Active<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The expiration time of the temporary upgrade.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationbandwidth_go">
+<a href="#reservationbandwidth_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Bandwidth</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The restored bandwidth after the temporary upgrade.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationinternetchargetype_go">
+<a href="#reservationinternetchargetype_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Internet<wbr>Charge<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The billing method after the configuration change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationordertype_go">
+<a href="#reservationordertype_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Order<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the configuration change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, including "Idle" and "InUse".
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, Valid value: `Idle` and `InUse`.
 {{% /md %}}</dd>
 
 </dl>
@@ -968,7 +1387,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The billing method, including "POSTPAY" and "PREPAY".
+    <dd>{{% md %}}The billing method, including `POSTPAY` and `PREPAY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -979,18 +1398,40 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN Bandwidth Package, including "Normal", "FinancialLocked" and "SecurityLocked".
+    <dd>{{% md %}}Status of the CEN Bandwidth Package, including `Normal`, `FinancialLocked` and `SecurityLocked`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="creationtime_nodejs">
-<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
+        <span id="cenbandwidthpackageid_nodejs">
+<a href="#cenbandwidthpackageid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Bandwidth<wbr>Package<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Creation time of the CEN bandwidth package.
+    <dd>{{% md %}}The ID of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cenbandwidthpackagename_nodejs">
+<a href="#cenbandwidthpackagename_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Bandwidth<wbr>Package<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cenids_nodejs">
+<a href="#cenids_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of CEN instances that are associated with the bandwidth package.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1003,6 +1444,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Description of the CEN Bandwidth Package.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expiredtime_nodejs">
+<a href="#expiredtime_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1024,6 +1475,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Region ID of the interconnected regions.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="geographicspanid_nodejs">
+<a href="#geographicspanid_nodejs" style="color: inherit; text-decoration: inherit;">geographic<wbr>Span<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The area ID of the cross-area connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hasreservationdata_nodejs">
+<a href="#hasreservationdata_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Reservation<wbr>Data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether renewal data is involved.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1050,6 +1523,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="iscrossborder_nodejs">
+<a href="#iscrossborder_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cross<wbr>Border</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the bandwidth package is a cross-border bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1061,13 +1545,68 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="paymenttype_nodejs">
+<a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The billing method of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationactivetime_nodejs">
+<a href="#reservationactivetime_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Active<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The expiration time of the temporary upgrade.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationbandwidth_nodejs">
+<a href="#reservationbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Bandwidth</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The restored bandwidth after the temporary upgrade.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationinternetchargetype_nodejs">
+<a href="#reservationinternetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Internet<wbr>Charge<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The billing method after the configuration change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservationordertype_nodejs">
+<a href="#reservationordertype_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Order<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the configuration change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, including "Idle" and "InUse".
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, Valid value: `Idle` and `InUse`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1096,7 +1635,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The billing method, including "POSTPAY" and "PREPAY".
+    <dd>{{% md %}}The billing method, including `POSTPAY` and `PREPAY`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1107,18 +1646,40 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN Bandwidth Package, including "Normal", "FinancialLocked" and "SecurityLocked".
+    <dd>{{% md %}}Status of the CEN Bandwidth Package, including `Normal`, `FinancialLocked` and `SecurityLocked`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="creation_time_python">
-<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
+        <span id="cen_bandwidth_package_id_python">
+<a href="#cen_bandwidth_package_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>bandwidth_<wbr>package_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Creation time of the CEN bandwidth package.
+    <dd>{{% md %}}The ID of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cen_bandwidth_package_name_python">
+<a href="#cen_bandwidth_package_name_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>bandwidth_<wbr>package_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cen_ids_python">
+<a href="#cen_ids_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of CEN instances that are associated with the bandwidth package.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1131,6 +1692,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Description of the CEN Bandwidth Package.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="expired_time_python">
+<a href="#expired_time_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1152,6 +1723,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Region ID of the interconnected regions.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="geographic_span_id_python">
+<a href="#geographic_span_id_python" style="color: inherit; text-decoration: inherit;">geographic_<wbr>span_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The area ID of the cross-area connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="has_reservation_data_python">
+<a href="#has_reservation_data_python" style="color: inherit; text-decoration: inherit;">has_<wbr>reservation_<wbr>data</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether renewal data is involved.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1178,6 +1771,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="is_cross_border_python">
+<a href="#is_cross_border_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cross_<wbr>border</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the bandwidth package is a cross-border bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1189,13 +1793,68 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="payment_type_python">
+<a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The billing method of the bandwidth package.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservation_active_time_python">
+<a href="#reservation_active_time_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>active_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The expiration time of the temporary upgrade.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservation_bandwidth_python">
+<a href="#reservation_bandwidth_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>bandwidth</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The restored bandwidth after the temporary upgrade.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservation_internet_charge_type_python">
+<a href="#reservation_internet_charge_type_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>internet_<wbr>charge_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The billing method after the configuration change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reservation_order_type_python">
+<a href="#reservation_order_type_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>order_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the configuration change.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, including "Idle" and "InUse".
+    <dd>{{% md %}}Status of the CEN Bandwidth Package in CEN instance, Valid value: `Idle` and `InUse`.
 {{% /md %}}</dd>
 
 </dl>

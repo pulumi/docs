@@ -91,12 +91,11 @@ pulumi.export("firstCenInstanceId", cen_instances_ds.instances[0].id)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const cenInstancesDs = pulumi.output(alicloud.cen.getInstances({
+const cenInstancesDs = alicloud.cen.getInstances({
     ids: ["cen-id1"],
     nameRegex: "^foo",
-}, { async: true }));
-
-export const firstCenInstanceId = cenInstancesDs.instances[0].id;
+});
+export const firstCenInstanceId = cenInstancesDs.then(cenInstancesDs => cenInstancesDs.instances[0].id);
 ```
 
 {{% /example %}}
@@ -115,7 +114,7 @@ export const firstCenInstanceId = cenInstancesDs.instances[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -174,6 +173,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of CEN instance. Valid value: `Active`, `Creating` and `Deleting`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -221,6 +231,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of CEN instance. Valid value: `Active`, `Creating` and `Deleting`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -274,6 +295,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of CEN instance. Valid value: `Active`, `Creating` and `Deleting`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -321,6 +353,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of CEN instance. Valid value: `Active`, `Creating` and `Deleting`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -419,6 +462,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -498,6 +552,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -583,6 +648,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -665,6 +741,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -729,6 +816,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="ceninstancename_csharp">
+<a href="#ceninstancename_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Instance<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the CEN instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span> 
@@ -779,7 +877,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+    <dd>{{% md %}}The status of CEN instance. Valid value: `Active`, `Creating` and `Deleting`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -820,6 +918,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the CEN instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ceninstancename_go">
+<a href="#ceninstancename_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Instance<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the CEN instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -874,7 +983,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+    <dd>{{% md %}}The status of CEN instance. Valid value: `Active`, `Creating` and `Deleting`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -915,6 +1024,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the CEN instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ceninstancename_nodejs">
+<a href="#ceninstancename_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Instance<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the CEN instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -969,7 +1089,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+    <dd>{{% md %}}The status of CEN instance. Valid value: `Active`, `Creating` and `Deleting`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1010,6 +1130,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the CEN instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cen_instance_name_python">
+<a href="#cen_instance_name_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>instance_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the CEN instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1064,7 +1195,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Status of the CEN instance, including "Creating", "Active" and "Deleting".
+    <dd>{{% md %}}The status of CEN instance. Valid value: `Active`, `Creating` and `Deleting`.
 {{% /md %}}</dd>
 
     <dt class="property-required"

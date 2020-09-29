@@ -35,6 +35,7 @@ Explore the resources and functions of the cen module in the AliCloud package.
     <li><a href="getregionrouteentries" title="GetRegionRouteEntries"><span class="symbol function"></span>GetRegionRouteEntries</a></li>
     <li><a href="getrouteentries" title="GetRouteEntries"><span class="symbol function"></span>GetRouteEntries</a></li>
     <li><a href="getroutemaps" title="GetRouteMaps"><span class="symbol function"></span>GetRouteMaps</a></li>
+    <li><a href="getvbrhealthchecks" title="GetVbrHealthChecks"><span class="symbol function"></span>GetVbrHealthChecks</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -46,7 +47,7 @@ Explore the resources and functions of the cen module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.18.0</dd>
+	<dd>2.19.0</dd>
 </dl>
 
 

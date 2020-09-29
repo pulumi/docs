@@ -11,6 +11,7 @@ Explore the resources and functions of the fc module in the AliCloud package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
     <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
     <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
@@ -18,6 +19,7 @@ Explore the resources and functions of the fc module in the AliCloud package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcustomdomains" title="GetCustomDomains"><span class="symbol function"></span>GetCustomDomains</a></li>
     <li><a href="getfunctions" title="GetFunctions"><span class="symbol function"></span>GetFunctions</a></li>
     <li><a href="getservices" title="GetServices"><span class="symbol function"></span>GetServices</a></li>
     <li><a href="gettriggers" title="GetTriggers"><span class="symbol function"></span>GetTriggers</a></li>
@@ -33,7 +35,7 @@ Explore the resources and functions of the fc module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.18.0</dd>
+	<dd>2.19.0</dd>
 </dl>
 
 
