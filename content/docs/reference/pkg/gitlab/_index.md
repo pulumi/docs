@@ -24,6 +24,7 @@ A Pulumi package for creating and managing GitLab resources.
     <li><a href="groupldaplink" title="GroupLdapLink"><span class="symbol resource"></span>GroupLdapLink</a></li>
     <li><a href="groupmembership" title="GroupMembership"><span class="symbol resource"></span>GroupMembership</a></li>
     <li><a href="groupvariable" title="GroupVariable"><span class="symbol resource"></span>GroupVariable</a></li>
+    <li><a href="instancecluster" title="InstanceCluster"><span class="symbol resource"></span>InstanceCluster</a></li>
     <li><a href="label" title="Label"><span class="symbol resource"></span>Label</a></li>
     <li><a href="pipelineschedule" title="PipelineSchedule"><span class="symbol resource"></span>PipelineSchedule</a></li>
     <li><a href="pipelineschedulevariable" title="PipelineScheduleVariable"><span class="symbol resource"></span>PipelineScheduleVariable</a></li>
@@ -31,13 +32,15 @@ A Pulumi package for creating and managing GitLab resources.
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="projectcluster" title="ProjectCluster"><span class="symbol resource"></span>ProjectCluster</a></li>
     <li><a href="projecthook" title="ProjectHook"><span class="symbol resource"></span>ProjectHook</a></li>
+    <li><a href="projectlevelmrapprovals" title="ProjectLevelMrApprovals"><span class="symbol resource"></span>ProjectLevelMrApprovals</a></li>
     <li><a href="projectmembership" title="ProjectMembership"><span class="symbol resource"></span>ProjectMembership</a></li>
-    <li><a href="projectpushrules" title="ProjectPushRules"><span class="symbol resource"></span>ProjectPushRules</a></li>
+    <li><a href="projectmirror" title="ProjectMirror"><span class="symbol resource"></span>ProjectMirror</a></li>
     <li><a href="projectsharegroup" title="ProjectShareGroup"><span class="symbol resource"></span>ProjectShareGroup</a></li>
     <li><a href="projectvariable" title="ProjectVariable"><span class="symbol resource"></span>ProjectVariable</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="servicegithub" title="ServiceGithub"><span class="symbol resource"></span>ServiceGithub</a></li>
     <li><a href="servicejira" title="ServiceJira"><span class="symbol resource"></span>ServiceJira</a></li>
+    <li><a href="servicepipelinesemail" title="ServicePipelinesEmail"><span class="symbol resource"></span>ServicePipelinesEmail</a></li>
     <li><a href="serviceslack" title="ServiceSlack"><span class="symbol resource"></span>ServiceSlack</a></li>
     <li><a href="tagprotection" title="TagProtection"><span class="symbol resource"></span>TagProtection</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
@@ -46,6 +49,7 @@ A Pulumi package for creating and managing GitLab resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getgroupmembership" title="GetGroupMembership"><span class="symbol function"></span>GetGroupMembership</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
     <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
@@ -59,9 +63,9 @@ A Pulumi package for creating and managing GitLab resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/terraform-providers/terraform-provider-gitlab).</dd>
+	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).</dd>
 	<dt>Version</dt>
-	<dd>2.6.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -72,7 +76,7 @@ A Pulumi package for creating and managing GitLab resources.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.html" title="Pulumi.GitLab">Pulumi.GitLab</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#" title="gitlab">gitlab</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#" title="gitlab">gitlab</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#" title="@pulumi/gitlab">@pulumi/gitlab</a></dd>

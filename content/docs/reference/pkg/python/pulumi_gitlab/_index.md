@@ -17,13 +17,18 @@ block_external_search_index: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/issues">terraform-providers/terraform-provider-gitlab repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_gitlab"></span><dl class="py class">
+<dt id="pulumi_gitlab.AwaitableGetGroupMembershipResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">AwaitableGetGroupMembershipResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.AwaitableGetGroupMembershipResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gitlab.AwaitableGetGroupResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_gitlab.AwaitableGetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">archived</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_url_to_repo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_source_branch_after_merge</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippets_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_url_to_repo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_enabled</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">archived</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_url_to_repo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_with_namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_source_branch_after_merge</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippets_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_url_to_repo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_enabled</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -43,7 +48,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py class">
 <dt id="pulumi_gitlab.BranchProtection">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">BranchProtection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_access_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_access_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.BranchProtection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">BranchProtection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">code_owner_approval_required</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_access_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_access_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.BranchProtection" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to protect a specific branch by an access level so that the user with less access level cannot Merge/Push to the branch. GitLab EE features to protect by group or user are not supported.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
@@ -61,6 +66,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the branch.</p></li>
+<li><p><strong>code_owner_approval_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool, defaults to false. Can be set to true to require code owner approval before merging.</p></li>
 <li><p><strong>merge_access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of five levels of access to the project.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project.</p></li>
 <li><p><strong>push_access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of five levels of access to the project.</p></li>
@@ -69,7 +75,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <dl class="py method">
 <dt id="pulumi_gitlab.BranchProtection.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_access_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_access_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.branch_protection.BranchProtection<a class="headerlink" href="#pulumi_gitlab.BranchProtection.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">code_owner_approval_required</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_access_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_access_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.branch_protection.BranchProtection<a class="headerlink" href="#pulumi_gitlab.BranchProtection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing BranchProtection resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -79,6 +85,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the branch.</p></li>
+<li><p><strong>code_owner_approval_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool, defaults to false. Can be set to true to require code owner approval before merging.</p></li>
 <li><p><strong>merge_access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of five levels of access to the project.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project.</p></li>
 <li><p><strong>push_access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of five levels of access to the project.</p></li>
@@ -91,6 +98,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_gitlab.BranchProtection.branch">
 <em class="property">property </em><code class="sig-name descname">branch</code><a class="headerlink" href="#pulumi_gitlab.BranchProtection.branch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the branch.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.BranchProtection.code_owner_approval_required">
+<em class="property">property </em><code class="sig-name descname">code_owner_approval_required</code><a class="headerlink" href="#pulumi_gitlab.BranchProtection.code_owner_approval_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bool, defaults to false. Can be set to true to require code owner approval before merging.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -498,6 +511,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gitlab.GetGroupMembershipResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GetGroupMembershipResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GetGroupMembershipResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getGroupMembership.</p>
+<dl class="py method">
+<dt id="pulumi_gitlab.GetGroupMembershipResult.access_level">
+<em class="property">property </em><code class="sig-name descname">access_level</code><a class="headerlink" href="#pulumi_gitlab.GetGroupMembershipResult.access_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>One of five levels of access to the group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.GetGroupMembershipResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_gitlab.GetGroupMembershipResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.GetGroupMembershipResult.members">
+<em class="property">property </em><code class="sig-name descname">members</code><a class="headerlink" href="#pulumi_gitlab.GetGroupMembershipResult.members" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of group members.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gitlab.GetGroupResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
@@ -577,7 +614,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gitlab.GetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">archived</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_url_to_repo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_source_branch_after_merge</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippets_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_url_to_repo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_enabled</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">archived</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_url_to_repo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_with_namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_source_branch_after_merge</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippets_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_url_to_repo</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_enabled</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
 <dl class="py method">
 <dt id="pulumi_gitlab.GetProjectResult.archived">
@@ -639,6 +676,12 @@ See <code class="docutils literal notranslate"><span class="pre">Group</span></c
 <dt id="pulumi_gitlab.GetProjectResult.path">
 <em class="property">property </em><code class="sig-name descname">path</code><a class="headerlink" href="#pulumi_gitlab.GetProjectResult.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path of the repository.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.GetProjectResult.path_with_namespace">
+<em class="property">property </em><code class="sig-name descname">path_with_namespace</code><a class="headerlink" href="#pulumi_gitlab.GetProjectResult.path_with_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path of the repository with namespace.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -910,32 +953,48 @@ repository via SSH.</p>
 
 <dl class="py class">
 <dt id="pulumi_gitlab.Group">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_devops_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">emails_disabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mentions_disabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_creation_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_two_factor_authentication</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">share_with_group_lock</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subgroup_creation_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">two_factor_grace_period</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Group resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: The description of the group.
-:param pulumi.Input[bool] lfs_enabled: Boolean, defaults to true.  Whether to enable LFS</p>
+:param pulumi.Input[bool] auto_devops_enabled: Boolean, defaults to false.  Default to Auto</p>
 <blockquote>
-<div><p>support for projects in this group.</p>
+<div><p>DevOps pipeline for all projects within this group.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the group.</p></li>
+<li><p><strong>emails_disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.  Disable email notifications</p></li>
+<li><p><strong>lfs_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to true.  Whether to enable LFS
+support for projects in this group.</p></li>
+<li><p><strong>mentions_disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.  Disable the capability
+of a group from getting mentioned</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this group.</p></li>
 <li><p><strong>parent_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Integer, id of the parent group (creates a nested group).</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the group.</p></li>
+<li><p><strong>project_creation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – , defaults to Maintainer.
+Determine if developers can create projects
+in the group. Can be noone (No one), maintainer (Maintainers),
+or developer (Developers + Maintainers).</p></li>
 <li><p><strong>request_access_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.  Whether to
 enable users to request access to the group.</p></li>
-<li><p><strong>visibility_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">public</span></code> to create a public group.
-Valid values are <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span></code>, <code class="docutils literal notranslate"><span class="pre">public</span></code>.
-Groups are created as private by default.</p></li>
+<li><p><strong>require_two_factor_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.
+equire all users in this group to setup Two-factor authentication.</p></li>
+<li><p><strong>share_with_group_lock</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.  Prevent sharing
+a project with another group within this group.</p></li>
+<li><p><strong>subgroup_creation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – , defaults to Owner.
+Allowed to create subgroups.
+Can be owner (Owners), or maintainer (Maintainers).</p></li>
+<li><p><strong>two_factor_grace_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Int, defaults to 48.
+Time before Two-factor authentication is enforced (in hours).</p></li>
+<li><p><strong>visibility_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group’s visibility. Can be <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span></code>, or <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="pulumi_gitlab.Group.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.group.Group<a class="headerlink" href="#pulumi_gitlab.Group.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_devops_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">emails_disabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mentions_disabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_creation_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_two_factor_authentication</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">share_with_group_lock</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subgroup_creation_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">two_factor_grace_period</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.group.Group<a class="headerlink" href="#pulumi_gitlab.Group.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Group resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -944,20 +1003,36 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_devops_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.  Default to Auto
+DevOps pipeline for all projects within this group.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the group.</p></li>
+<li><p><strong>emails_disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.  Disable email notifications</p></li>
 <li><p><strong>full_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the group.</p></li>
 <li><p><strong>full_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full path of the group.</p></li>
 <li><p><strong>lfs_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to true.  Whether to enable LFS
 support for projects in this group.</p></li>
+<li><p><strong>mentions_disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.  Disable the capability
+of a group from getting mentioned</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this group.</p></li>
 <li><p><strong>parent_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Integer, id of the parent group (creates a nested group).</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the group.</p></li>
+<li><p><strong>project_creation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – , defaults to Maintainer.
+Determine if developers can create projects
+in the group. Can be noone (No one), maintainer (Maintainers),
+or developer (Developers + Maintainers).</p></li>
 <li><p><strong>request_access_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.  Whether to
 enable users to request access to the group.</p></li>
+<li><p><strong>require_two_factor_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.
+equire all users in this group to setup Two-factor authentication.</p></li>
 <li><p><strong>runners_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group level registration token to use during runner setup.</p></li>
-<li><p><strong>visibility_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">public</span></code> to create a public group.
-Valid values are <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span></code>, <code class="docutils literal notranslate"><span class="pre">public</span></code>.
-Groups are created as private by default.</p></li>
+<li><p><strong>share_with_group_lock</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, defaults to false.  Prevent sharing
+a project with another group within this group.</p></li>
+<li><p><strong>subgroup_creation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – , defaults to Owner.
+Allowed to create subgroups.
+Can be owner (Owners), or maintainer (Maintainers).</p></li>
+<li><p><strong>two_factor_grace_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Int, defaults to 48.
+Time before Two-factor authentication is enforced (in hours).</p></li>
+<li><p><strong>visibility_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group’s visibility. Can be <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span></code>, or <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p></li>
 <li><p><strong>web_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Web URL of the group.</p></li>
 </ul>
 </dd>
@@ -965,9 +1040,22 @@ Groups are created as private by default.</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_gitlab.Group.auto_devops_enabled">
+<em class="property">property </em><code class="sig-name descname">auto_devops_enabled</code><a class="headerlink" href="#pulumi_gitlab.Group.auto_devops_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, defaults to false.  Default to Auto
+DevOps pipeline for all projects within this group.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_gitlab.Group.description">
 <em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_gitlab.Group.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.Group.emails_disabled">
+<em class="property">property </em><code class="sig-name descname">emails_disabled</code><a class="headerlink" href="#pulumi_gitlab.Group.emails_disabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, defaults to false.  Disable email notifications</p>
 </dd></dl>
 
 <dl class="py method">
@@ -990,6 +1078,13 @@ support for projects in this group.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_gitlab.Group.mentions_disabled">
+<em class="property">property </em><code class="sig-name descname">mentions_disabled</code><a class="headerlink" href="#pulumi_gitlab.Group.mentions_disabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, defaults to false.  Disable the capability
+of a group from getting mentioned</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_gitlab.Group.name">
 <em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_gitlab.Group.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of this group.</p>
@@ -1008,10 +1103,26 @@ support for projects in this group.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_gitlab.Group.project_creation_level">
+<em class="property">property </em><code class="sig-name descname">project_creation_level</code><a class="headerlink" href="#pulumi_gitlab.Group.project_creation_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>, defaults to Maintainer.
+Determine if developers can create projects
+in the group. Can be noone (No one), maintainer (Maintainers),
+or developer (Developers + Maintainers).</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_gitlab.Group.request_access_enabled">
 <em class="property">property </em><code class="sig-name descname">request_access_enabled</code><a class="headerlink" href="#pulumi_gitlab.Group.request_access_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean, defaults to false.  Whether to
 enable users to request access to the group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.Group.require_two_factor_authentication">
+<em class="property">property </em><code class="sig-name descname">require_two_factor_authentication</code><a class="headerlink" href="#pulumi_gitlab.Group.require_two_factor_authentication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, defaults to false.
+equire all users in this group to setup Two-factor authentication.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1021,11 +1132,31 @@ enable users to request access to the group.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_gitlab.Group.share_with_group_lock">
+<em class="property">property </em><code class="sig-name descname">share_with_group_lock</code><a class="headerlink" href="#pulumi_gitlab.Group.share_with_group_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, defaults to false.  Prevent sharing
+a project with another group within this group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.Group.subgroup_creation_level">
+<em class="property">property </em><code class="sig-name descname">subgroup_creation_level</code><a class="headerlink" href="#pulumi_gitlab.Group.subgroup_creation_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>, defaults to Owner.
+Allowed to create subgroups.
+Can be owner (Owners), or maintainer (Maintainers).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.Group.two_factor_grace_period">
+<em class="property">property </em><code class="sig-name descname">two_factor_grace_period</code><a class="headerlink" href="#pulumi_gitlab.Group.two_factor_grace_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Int, defaults to 48.
+Time before Two-factor authentication is enforced (in hours).</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_gitlab.Group.visibility_level">
 <em class="property">property </em><code class="sig-name descname">visibility_level</code><a class="headerlink" href="#pulumi_gitlab.Group.visibility_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set to <code class="docutils literal notranslate"><span class="pre">public</span></code> to create a public group.
-Valid values are <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span></code>, <code class="docutils literal notranslate"><span class="pre">public</span></code>.
-Groups are created as private by default.</p>
+<dd><p>The group’s visibility. Can be <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span></code>, or <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1078,6 +1209,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage group clusters for your GitLab groups.
 For further information on clusters, consult the <a class="reference external" href="https://docs.gitlab.com/ce/user/group/clusters/index.html">gitlab
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;foo-path&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">GroupCluster</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">environment_scope</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+    <span class="n">group</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">kubernetes_api_url</span><span class="o">=</span><span class="s2">&quot;https://124.124.124&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_authorization_type</span><span class="o">=</span><span class="s2">&quot;rbac&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_ca_cert</span><span class="o">=</span><span class="s2">&quot;some-cert&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_token</span><span class="o">=</span><span class="s2">&quot;some-token&quot;</span><span class="p">,</span>
+    <span class="n">management_project_id</span><span class="o">=</span><span class="s2">&quot;123456&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1092,6 +1239,7 @@ documentation</a>.</p>
 <li><p><strong>kubernetes_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TLS certificate (needed if API is using a self-signed TLS certificate).</p></li>
 <li><p><strong>kubernetes_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token to authenticate against Kubernetes.</p></li>
 <li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if cluster is managed by gitlab or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p></li>
+<li><p><strong>management_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the management project for the cluster.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of cluster.</p></li>
 </ul>
 </dd>
@@ -1116,6 +1264,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>kubernetes_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TLS certificate (needed if API is using a self-signed TLS certificate).</p></li>
 <li><p><strong>kubernetes_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token to authenticate against Kubernetes.</p></li>
 <li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if cluster is managed by gitlab or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p></li>
+<li><p><strong>management_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the management project for the cluster.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of cluster.</p></li>
 </ul>
 </dd>
@@ -1174,6 +1323,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_gitlab.GroupCluster.managed">
 <em class="property">property </em><code class="sig-name descname">managed</code><a class="headerlink" href="#pulumi_gitlab.GroupCluster.managed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines if cluster is managed by gitlab or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.GroupCluster.management_project_id">
+<em class="property">property </em><code class="sig-name descname">management_project_id</code><a class="headerlink" href="#pulumi_gitlab.GroupCluster.management_project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the management project for the cluster.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1666,6 +1821,177 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gitlab.InstanceCluster">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">InstanceCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment_scope</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_api_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_authorization_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_ca_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_namespace</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.InstanceCluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource allows you to create and manage instance clusters for your GitLab instances.
+For further information on clusters, consult the <a class="reference external" href="https://docs.gitlab.com/ee/user/instance/clusters/">gitlab
+documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">InstanceCluster</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">environment_scope</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_api_url</span><span class="o">=</span><span class="s2">&quot;https://124.124.124&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_authorization_type</span><span class="o">=</span><span class="s2">&quot;rbac&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_ca_cert</span><span class="o">=</span><span class="s2">&quot;some-cert&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_namespace</span><span class="o">=</span><span class="s2">&quot;namespace&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_token</span><span class="o">=</span><span class="s2">&quot;some-token&quot;</span><span class="p">,</span>
+    <span class="n">management_project_id</span><span class="o">=</span><span class="s2">&quot;123456&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The base domain of the cluster.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if cluster is active or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p></li>
+<li><p><strong>environment_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The associated environment to the cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p></li>
+<li><p><strong>kubernetes_api_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to access the Kubernetes API.</p></li>
+<li><p><strong>kubernetes_authorization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster authorization type. Valid values are <code class="docutils literal notranslate"><span class="pre">rbac</span></code>, <code class="docutils literal notranslate"><span class="pre">abac</span></code>, <code class="docutils literal notranslate"><span class="pre">unknown_authorization</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">rbac</span></code>.</p></li>
+<li><p><strong>kubernetes_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TLS certificate (needed if API is using a self-signed TLS certificate).</p></li>
+<li><p><strong>kubernetes_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique namespace related to the instance.</p></li>
+<li><p><strong>kubernetes_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token to authenticate against Kubernetes. This attribute cannot be read.</p></li>
+<li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if cluster is managed by gitlab or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p></li>
+<li><p><strong>management_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the management project for the cluster.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of cluster.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment_scope</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_api_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_authorization_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_ca_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_namespace</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">platform_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.instance_cluster.InstanceCluster<a class="headerlink" href="#pulumi_gitlab.InstanceCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing InstanceCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The base domain of the cluster.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if cluster is active or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p></li>
+<li><p><strong>environment_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The associated environment to the cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p></li>
+<li><p><strong>kubernetes_api_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to access the Kubernetes API.</p></li>
+<li><p><strong>kubernetes_authorization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster authorization type. Valid values are <code class="docutils literal notranslate"><span class="pre">rbac</span></code>, <code class="docutils literal notranslate"><span class="pre">abac</span></code>, <code class="docutils literal notranslate"><span class="pre">unknown_authorization</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">rbac</span></code>.</p></li>
+<li><p><strong>kubernetes_ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TLS certificate (needed if API is using a self-signed TLS certificate).</p></li>
+<li><p><strong>kubernetes_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique namespace related to the instance.</p></li>
+<li><p><strong>kubernetes_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token to authenticate against Kubernetes. This attribute cannot be read.</p></li>
+<li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if cluster is managed by gitlab or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p></li>
+<li><p><strong>management_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the management project for the cluster.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of cluster.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.domain">
+<em class="property">property </em><code class="sig-name descname">domain</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The base domain of the cluster.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.enabled">
+<em class="property">property </em><code class="sig-name descname">enabled</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if cluster is active or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.environment_scope">
+<em class="property">property </em><code class="sig-name descname">environment_scope</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.environment_scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>The associated environment to the cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.kubernetes_api_url">
+<em class="property">property </em><code class="sig-name descname">kubernetes_api_url</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.kubernetes_api_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL to access the Kubernetes API.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.kubernetes_authorization_type">
+<em class="property">property </em><code class="sig-name descname">kubernetes_authorization_type</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.kubernetes_authorization_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cluster authorization type. Valid values are <code class="docutils literal notranslate"><span class="pre">rbac</span></code>, <code class="docutils literal notranslate"><span class="pre">abac</span></code>, <code class="docutils literal notranslate"><span class="pre">unknown_authorization</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">rbac</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.kubernetes_ca_cert">
+<em class="property">property </em><code class="sig-name descname">kubernetes_ca_cert</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.kubernetes_ca_cert" title="Permalink to this definition">¶</a></dt>
+<dd><p>TLS certificate (needed if API is using a self-signed TLS certificate).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.kubernetes_namespace">
+<em class="property">property </em><code class="sig-name descname">kubernetes_namespace</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.kubernetes_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique namespace related to the instance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.kubernetes_token">
+<em class="property">property </em><code class="sig-name descname">kubernetes_token</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.kubernetes_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>The token to authenticate against Kubernetes. This attribute cannot be read.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.managed">
+<em class="property">property </em><code class="sig-name descname">managed</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.managed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if cluster is managed by gitlab or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.management_project_id">
+<em class="property">property </em><code class="sig-name descname">management_project_id</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.management_project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the management project for the cluster.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of cluster.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.InstanceCluster.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.InstanceCluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gitlab.Label">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Label</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Label" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage labels for your GitLab projects.
@@ -2107,7 +2433,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_gitlab.Project">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">approvals_before_merge</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">archived</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_registry_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initialize_with_readme</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_method</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_source_branch_after_merge</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shared_runners_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shared_with_groups</span><span class="p">:</span> <span class="n">Union[List[Union[ProjectSharedWithGroupArgs, Mapping[str, Any], Awaitable[Union[ProjectSharedWithGroupArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[ProjectSharedWithGroupArgs, Mapping[str, Any], Awaitable[Union[ProjectSharedWithGroupArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippets_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">approvals_before_merge</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">archived</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_registry_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_with_project_templates_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initialize_with_readme</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_method</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">packages_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_rules</span><span class="p">:</span> <span class="n">Union[ProjectPushRulesArgs, Mapping[str, Any], Awaitable[Union[ProjectPushRulesArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_source_branch_after_merge</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shared_runners_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippets_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_project_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_custom_template</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Project resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -2116,6 +2442,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[bool] container_registry_enabled: Enable container registry for the project.
 :param pulumi.Input[str] default_branch: The default branch for the project.
 :param pulumi.Input[str] description: A description of the project.
+:param pulumi.Input[float] group_with_project_templates_id: For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
+:param pulumi.Input[str] import_url: Git URL to a repository to be imported.
 :param pulumi.Input[bool] initialize_with_readme: Create master branch with first commit containing a README.md file.
 :param pulumi.Input[bool] issues_enabled: Enable issue tracking for the project.
 :param pulumi.Input[bool] lfs_enabled: Enable LFS for the project.
@@ -2133,14 +2461,18 @@ Repositories are created with <code class="docutils literal notranslate"><span c
 See <code class="docutils literal notranslate"><span class="pre">Group</span></code> for an example.</p></li>
 <li><p><strong>only_allow_merge_if_all_discussions_are_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if all discussions are resolved.</p></li>
 <li><p><strong>only_allow_merge_if_pipeline_succeeds</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if a pipeline succeeds.</p></li>
+<li><p><strong>packages_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable packages repository for the project.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the repository.</p></li>
 <li><p><strong>pipelines_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable pipelines for the project.</p></li>
+<li><p><strong>push_rules</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectPushRulesArgs'</em><em>]</em><em>]</em>) – Push rules for the project (documented below).</p></li>
 <li><p><strong>remove_source_branch_after_merge</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">source</span> <span class="pre">branch</span></code> option by default for all new merge requests.</p></li>
 <li><p><strong>request_access_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow users to request member access.</p></li>
 <li><p><strong>shared_runners_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable shared runners for this project.</p></li>
-<li><p><strong>shared_with_groups</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectSharedWithGroupArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Enable sharing the project with a list of groups (maps).</p></li>
 <li><p><strong>snippets_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable snippets for the project.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Tags (topics) of the project.</p></li>
+<li><p><strong>template_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with <code class="docutils literal notranslate"><span class="pre">template_project_id</span></code>.</p></li>
+<li><p><strong>template_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with <code class="docutils literal notranslate"><span class="pre">template_name</span></code>.</p></li>
+<li><p><strong>use_custom_template</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).</p></li>
 <li><p><strong>visibility_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">public</span></code> to create a public project.
 Valid values are <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span></code>, <code class="docutils literal notranslate"><span class="pre">public</span></code>.
 Repositories are created as private by default.</p></li>
@@ -2150,7 +2482,7 @@ Repositories are created as private by default.</p></li>
 </dl>
 <dl class="py method">
 <dt id="pulumi_gitlab.Project.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">approvals_before_merge</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">archived</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_registry_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_url_to_repo</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initialize_with_readme</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_method</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_source_branch_after_merge</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shared_runners_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shared_with_groups</span><span class="p">:</span> <span class="n">Union[List[Union[ProjectSharedWithGroupArgs, Mapping[str, Any], Awaitable[Union[ProjectSharedWithGroupArgs, Mapping[str, Any]]], Output[T]]], Awaitable[List[Union[ProjectSharedWithGroupArgs, Mapping[str, Any], Awaitable[Union[ProjectSharedWithGroupArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippets_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_url_to_repo</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.project.Project<a class="headerlink" href="#pulumi_gitlab.Project.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">approvals_before_merge</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">archived</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_registry_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_with_project_templates_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_url_to_repo</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">initialize_with_readme</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_method</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">packages_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_with_namespace</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_rules</span><span class="p">:</span> <span class="n">Union[ProjectPushRulesArgs, Mapping[str, Any], Awaitable[Union[ProjectPushRulesArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_source_branch_after_merge</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shared_runners_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippets_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_url_to_repo</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_project_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_custom_template</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.project.Project<a class="headerlink" href="#pulumi_gitlab.Project.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2164,8 +2496,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>container_registry_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable container registry for the project.</p></li>
 <li><p><strong>default_branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default branch for the project.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the project.</p></li>
+<li><p><strong>group_with_project_templates_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).</p></li>
 <li><p><strong>http_url_to_repo</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL that can be provided to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> to clone the
 repository via HTTP.</p></li>
+<li><p><strong>import_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Git URL to a repository to be imported.</p></li>
 <li><p><strong>initialize_with_readme</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create master branch with first commit containing a README.md file.</p></li>
 <li><p><strong>issues_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable issue tracking for the project.</p></li>
 <li><p><strong>lfs_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable LFS for the project.</p></li>
@@ -2178,17 +2512,22 @@ Repositories are created with <code class="docutils literal notranslate"><span c
 See <code class="docutils literal notranslate"><span class="pre">Group</span></code> for an example.</p></li>
 <li><p><strong>only_allow_merge_if_all_discussions_are_resolved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if all discussions are resolved.</p></li>
 <li><p><strong>only_allow_merge_if_pipeline_succeeds</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true if you want allow merges only if a pipeline succeeds.</p></li>
+<li><p><strong>packages_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable packages repository for the project.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the repository.</p></li>
+<li><p><strong>path_with_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the repository with namespace.</p></li>
 <li><p><strong>pipelines_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable pipelines for the project.</p></li>
+<li><p><strong>push_rules</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectPushRulesArgs'</em><em>]</em><em>]</em>) – Push rules for the project (documented below).</p></li>
 <li><p><strong>remove_source_branch_after_merge</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">source</span> <span class="pre">branch</span></code> option by default for all new merge requests.</p></li>
 <li><p><strong>request_access_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow users to request member access.</p></li>
 <li><p><strong>runners_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Registration token to use during runner setup.</p></li>
 <li><p><strong>shared_runners_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable shared runners for this project.</p></li>
-<li><p><strong>shared_with_groups</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ProjectSharedWithGroupArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Enable sharing the project with a list of groups (maps).</p></li>
 <li><p><strong>snippets_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable snippets for the project.</p></li>
 <li><p><strong>ssh_url_to_repo</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL that can be provided to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> to clone the
 repository via SSH.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Tags (topics) of the project.</p></li>
+<li><p><strong>template_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with <code class="docutils literal notranslate"><span class="pre">template_project_id</span></code>.</p></li>
+<li><p><strong>template_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with <code class="docutils literal notranslate"><span class="pre">template_name</span></code>.</p></li>
+<li><p><strong>use_custom_template</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).</p></li>
 <li><p><strong>visibility_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">public</span></code> to create a public project.
 Valid values are <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span></code>, <code class="docutils literal notranslate"><span class="pre">public</span></code>.
 Repositories are created as private by default.</p></li>
@@ -2230,10 +2569,22 @@ Repositories are created as private by default.</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_gitlab.Project.group_with_project_templates_id">
+<em class="property">property </em><code class="sig-name descname">group_with_project_templates_id</code><a class="headerlink" href="#pulumi_gitlab.Project.group_with_project_templates_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_gitlab.Project.http_url_to_repo">
 <em class="property">property </em><code class="sig-name descname">http_url_to_repo</code><a class="headerlink" href="#pulumi_gitlab.Project.http_url_to_repo" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL that can be provided to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> to clone the
 repository via HTTP.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.Project.import_url">
+<em class="property">property </em><code class="sig-name descname">import_url</code><a class="headerlink" href="#pulumi_gitlab.Project.import_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Git URL to a repository to be imported.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2294,15 +2645,33 @@ See <code class="docutils literal notranslate"><span class="pre">Group</span></c
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_gitlab.Project.packages_enabled">
+<em class="property">property </em><code class="sig-name descname">packages_enabled</code><a class="headerlink" href="#pulumi_gitlab.Project.packages_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable packages repository for the project.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_gitlab.Project.path">
 <em class="property">property </em><code class="sig-name descname">path</code><a class="headerlink" href="#pulumi_gitlab.Project.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path of the repository.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_gitlab.Project.path_with_namespace">
+<em class="property">property </em><code class="sig-name descname">path_with_namespace</code><a class="headerlink" href="#pulumi_gitlab.Project.path_with_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path of the repository with namespace.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_gitlab.Project.pipelines_enabled">
 <em class="property">property </em><code class="sig-name descname">pipelines_enabled</code><a class="headerlink" href="#pulumi_gitlab.Project.pipelines_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable pipelines for the project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.Project.push_rules">
+<em class="property">property </em><code class="sig-name descname">push_rules</code><a class="headerlink" href="#pulumi_gitlab.Project.push_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Push rules for the project (documented below).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2330,12 +2699,6 @@ See <code class="docutils literal notranslate"><span class="pre">Group</span></c
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi_gitlab.Project.shared_with_groups">
-<em class="property">property </em><code class="sig-name descname">shared_with_groups</code><a class="headerlink" href="#pulumi_gitlab.Project.shared_with_groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable sharing the project with a list of groups (maps).</p>
-</dd></dl>
-
-<dl class="py method">
 <dt id="pulumi_gitlab.Project.snippets_enabled">
 <em class="property">property </em><code class="sig-name descname">snippets_enabled</code><a class="headerlink" href="#pulumi_gitlab.Project.snippets_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable snippets for the project.</p>
@@ -2352,6 +2715,24 @@ repository via SSH.</p>
 <dt id="pulumi_gitlab.Project.tags">
 <em class="property">property </em><code class="sig-name descname">tags</code><a class="headerlink" href="#pulumi_gitlab.Project.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tags (topics) of the project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.Project.template_name">
+<em class="property">property </em><code class="sig-name descname">template_name</code><a class="headerlink" href="#pulumi_gitlab.Project.template_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with <code class="docutils literal notranslate"><span class="pre">template_project_id</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.Project.template_project_id">
+<em class="property">property </em><code class="sig-name descname">template_project_id</code><a class="headerlink" href="#pulumi_gitlab.Project.template_project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with <code class="docutils literal notranslate"><span class="pre">template_name</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.Project.use_custom_template">
+<em class="property">property </em><code class="sig-name descname">use_custom_template</code><a class="headerlink" href="#pulumi_gitlab.Project.use_custom_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2418,6 +2799,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage project clusters for your GitLab projects.
 For further information on clusters, consult the <a class="reference external" href="https://docs.gitlab.com/ce/user/project/clusters/index.html">gitlab
 documentation</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ProjectCluster</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+    <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">environment_scope</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_api_url</span><span class="o">=</span><span class="s2">&quot;https://124.124.124&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_authorization_type</span><span class="o">=</span><span class="s2">&quot;rbac&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_ca_cert</span><span class="o">=</span><span class="s2">&quot;some-cert&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_namespace</span><span class="o">=</span><span class="s2">&quot;namespace&quot;</span><span class="p">,</span>
+    <span class="n">kubernetes_token</span><span class="o">=</span><span class="s2">&quot;some-token&quot;</span><span class="p">,</span>
+    <span class="n">management_project_id</span><span class="o">=</span><span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2432,6 +2830,7 @@ documentation</a>.</p>
 <li><p><strong>kubernetes_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique namespace related to the project.</p></li>
 <li><p><strong>kubernetes_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token to authenticate against Kubernetes.</p></li>
 <li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if cluster is managed by gitlab or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p></li>
+<li><p><strong>management_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the management project for the cluster.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of cluster.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project to add the cluster to.</p></li>
 </ul>
@@ -2457,6 +2856,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>kubernetes_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique namespace related to the project.</p></li>
 <li><p><strong>kubernetes_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token to authenticate against Kubernetes.</p></li>
 <li><p><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if cluster is managed by gitlab or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p></li>
+<li><p><strong>management_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the management project for the cluster.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of cluster.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project to add the cluster to.</p></li>
 </ul>
@@ -2516,6 +2916,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_gitlab.ProjectCluster.managed">
 <em class="property">property </em><code class="sig-name descname">managed</code><a class="headerlink" href="#pulumi_gitlab.ProjectCluster.managed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines if cluster is managed by gitlab or not. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This attribute cannot be read.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectCluster.management_project_id">
+<em class="property">property </em><code class="sig-name descname">management_project_id</code><a class="headerlink" href="#pulumi_gitlab.ProjectCluster.management_project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the management project for the cluster.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2745,6 +3151,120 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gitlab.ProjectLevelMrApprovals">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectLevelMrApprovals</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_overriding_approvers_per_merge_request</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_author_approval</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_disable_committers_approval</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_approvals_on_push</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectLevelMrApprovals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ProjectLevelMrApprovals resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] disable_overriding_approvers_per_merge_request: By default, users are able to edit the approval rules in merge requests. If set to true,</p>
+<blockquote>
+<div><p>the approval rules for all new merge requests will be determined by the default approval rules. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>merge_requests_author_approval</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to allow merge request authors to self-approve merge requests. Authors
+also need to be included in the approvers list in order to be able to approve their merge request. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>merge_requests_disable_committers_approval</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to prevent approval of merge requests by merge request committers. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the project to change MR approval configuration.</p></li>
+<li><p><strong>reset_approvals_on_push</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectLevelMrApprovals.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_overriding_approvers_per_merge_request</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_author_approval</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_disable_committers_approval</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reset_approvals_on_push</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.project_level_mr_approvals.ProjectLevelMrApprovals<a class="headerlink" href="#pulumi_gitlab.ProjectLevelMrApprovals.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProjectLevelMrApprovals resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>disable_overriding_approvers_per_merge_request</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – By default, users are able to edit the approval rules in merge requests. If set to true,
+the approval rules for all new merge requests will be determined by the default approval rules. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>merge_requests_author_approval</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to allow merge request authors to self-approve merge requests. Authors
+also need to be included in the approvers list in order to be able to approve their merge request. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>merge_requests_disable_committers_approval</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to prevent approval of merge requests by merge request committers. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the project to change MR approval configuration.</p></li>
+<li><p><strong>reset_approvals_on_push</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectLevelMrApprovals.disable_overriding_approvers_per_merge_request">
+<em class="property">property </em><code class="sig-name descname">disable_overriding_approvers_per_merge_request</code><a class="headerlink" href="#pulumi_gitlab.ProjectLevelMrApprovals.disable_overriding_approvers_per_merge_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>By default, users are able to edit the approval rules in merge requests. If set to true,
+the approval rules for all new merge requests will be determined by the default approval rules. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectLevelMrApprovals.merge_requests_author_approval">
+<em class="property">property </em><code class="sig-name descname">merge_requests_author_approval</code><a class="headerlink" href="#pulumi_gitlab.ProjectLevelMrApprovals.merge_requests_author_approval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to allow merge request authors to self-approve merge requests. Authors
+also need to be included in the approvers list in order to be able to approve their merge request. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectLevelMrApprovals.merge_requests_disable_committers_approval">
+<em class="property">property </em><code class="sig-name descname">merge_requests_disable_committers_approval</code><a class="headerlink" href="#pulumi_gitlab.ProjectLevelMrApprovals.merge_requests_disable_committers_approval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to prevent approval of merge requests by merge request committers. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectLevelMrApprovals.project_id">
+<em class="property">property </em><code class="sig-name descname">project_id</code><a class="headerlink" href="#pulumi_gitlab.ProjectLevelMrApprovals.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project to change MR approval configuration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectLevelMrApprovals.reset_approvals_on_push">
+<em class="property">property </em><code class="sig-name descname">reset_approvals_on_push</code><a class="headerlink" href="#pulumi_gitlab.ProjectLevelMrApprovals.reset_approvals_on_push" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to remove all approvals in a merge request when new commits are pushed to its source branch. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectLevelMrApprovals.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectLevelMrApprovals.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectLevelMrApprovals.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectLevelMrApprovals.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gitlab.ProjectMembership">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectMembership</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectMembership" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to add a current user to an existing project with a set access level.</p>
@@ -2844,32 +3364,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
-<dt id="pulumi_gitlab.ProjectPushRules">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectPushRules</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">author_email_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch_name_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">commit_message_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deny_delete_tag</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_name_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_file_size</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_check</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prevent_secrets</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource allows you to create and manage push rules for your GitLab projects.
-For further information on push rules, consult the <a class="reference external" href="https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules">gitlab
-documentation</a>.</p>
+<dt id="pulumi_gitlab.ProjectMirror">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectMirror</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_divergent_refs</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_protected_branches</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectMirror" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource allows you to add a mirror target for the repository, all changes will be synced to the remote target.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ProjectMirror</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://username:password@github.com/org/repository.git&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>author_email_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commit author emails must match this regex, e.g. “&#64;my-company.com$”</p></li>
-<li><p><strong>branch_name_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All branch names must match this regex, e.g. “(feature|hotfix)/<a href="#id13"><span class="problematic" id="id14">*</span></a>”</p></li>
-<li><p><strong>commit_message_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commit messages must match this regex, e.g. “Fixed d+..*”</p></li>
-<li><p><strong>deny_delete_tag</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Deny deleting a tag</p></li>
-<li><p><strong>file_name_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commited filenames must not match this regex, e.g. “(jar|exe)$”</p></li>
-<li><p><strong>max_file_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum file size (MB)</p></li>
-<li><p><strong>member_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Restrict commits by author (email) to existing GitLab users</p></li>
-<li><p><strong>prevent_secrets</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – GitLab will reject any files that are likely to contain secrets</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the push rules to.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the mirror is enabled.</p></li>
+<li><p><strong>keep_divergent_refs</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if divergent refs are skipped.</p></li>
+<li><p><strong>only_protected_branches</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if only protected branches are mirrored.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project.</p></li>
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the remote repository to be mirrored.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">author_email_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch_name_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">commit_message_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deny_delete_tag</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_name_regex</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_file_size</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_check</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prevent_secrets</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.project_push_rules.ProjectPushRules<a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing ProjectPushRules resource’s state with the given name, id, and optional extra
+<dt id="pulumi_gitlab.ProjectMirror.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_divergent_refs</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mirror_id</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_protected_branches</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.project_mirror.ProjectMirror<a class="headerlink" href="#pulumi_gitlab.ProjectMirror.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProjectMirror resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2877,77 +3399,49 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>author_email_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commit author emails must match this regex, e.g. “&#64;my-company.com$”</p></li>
-<li><p><strong>branch_name_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All branch names must match this regex, e.g. “(feature|hotfix)/<a href="#id15"><span class="problematic" id="id16">*</span></a>”</p></li>
-<li><p><strong>commit_message_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commit messages must match this regex, e.g. “Fixed d+..*”</p></li>
-<li><p><strong>deny_delete_tag</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Deny deleting a tag</p></li>
-<li><p><strong>file_name_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commited filenames must not match this regex, e.g. “(jar|exe)$”</p></li>
-<li><p><strong>max_file_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum file size (MB)</p></li>
-<li><p><strong>member_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Restrict commits by author (email) to existing GitLab users</p></li>
-<li><p><strong>prevent_secrets</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – GitLab will reject any files that are likely to contain secrets</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the push rules to.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the mirror is enabled.</p></li>
+<li><p><strong>keep_divergent_refs</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if divergent refs are skipped.</p></li>
+<li><p><strong>only_protected_branches</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if only protected branches are mirrored.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project.</p></li>
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the remote repository to be mirrored.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.author_email_regex">
-<em class="property">property </em><code class="sig-name descname">author_email_regex</code><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.author_email_regex" title="Permalink to this definition">¶</a></dt>
-<dd><p>All commit author emails must match this regex, e.g. “&#64;my-company.com$”</p>
+<dt id="pulumi_gitlab.ProjectMirror.enabled">
+<em class="property">property </em><code class="sig-name descname">enabled</code><a class="headerlink" href="#pulumi_gitlab.ProjectMirror.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if the mirror is enabled.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.branch_name_regex">
-<em class="property">property </em><code class="sig-name descname">branch_name_regex</code><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.branch_name_regex" title="Permalink to this definition">¶</a></dt>
-<dd><p>All branch names must match this regex, e.g. “(feature|hotfix)/<a href="#id17"><span class="problematic" id="id18">*</span></a>”</p>
+<dt id="pulumi_gitlab.ProjectMirror.keep_divergent_refs">
+<em class="property">property </em><code class="sig-name descname">keep_divergent_refs</code><a class="headerlink" href="#pulumi_gitlab.ProjectMirror.keep_divergent_refs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if divergent refs are skipped.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.commit_message_regex">
-<em class="property">property </em><code class="sig-name descname">commit_message_regex</code><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.commit_message_regex" title="Permalink to this definition">¶</a></dt>
-<dd><p>All commit messages must match this regex, e.g. “Fixed d+..*”</p>
+<dt id="pulumi_gitlab.ProjectMirror.only_protected_branches">
+<em class="property">property </em><code class="sig-name descname">only_protected_branches</code><a class="headerlink" href="#pulumi_gitlab.ProjectMirror.only_protected_branches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if only protected branches are mirrored.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.deny_delete_tag">
-<em class="property">property </em><code class="sig-name descname">deny_delete_tag</code><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.deny_delete_tag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deny deleting a tag</p>
+<dt id="pulumi_gitlab.ProjectMirror.project">
+<em class="property">property </em><code class="sig-name descname">project</code><a class="headerlink" href="#pulumi_gitlab.ProjectMirror.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the project.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.file_name_regex">
-<em class="property">property </em><code class="sig-name descname">file_name_regex</code><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.file_name_regex" title="Permalink to this definition">¶</a></dt>
-<dd><p>All commited filenames must not match this regex, e.g. “(jar|exe)$”</p>
+<dt id="pulumi_gitlab.ProjectMirror.url">
+<em class="property">property </em><code class="sig-name descname">url</code><a class="headerlink" href="#pulumi_gitlab.ProjectMirror.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL of the remote repository to be mirrored.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.max_file_size">
-<em class="property">property </em><code class="sig-name descname">max_file_size</code><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.max_file_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Maximum file size (MB)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.member_check">
-<em class="property">property </em><code class="sig-name descname">member_check</code><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.member_check" title="Permalink to this definition">¶</a></dt>
-<dd><p>Restrict commits by author (email) to existing GitLab users</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.prevent_secrets">
-<em class="property">property </em><code class="sig-name descname">prevent_secrets</code><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.prevent_secrets" title="Permalink to this definition">¶</a></dt>
-<dd><p>GitLab will reject any files that are likely to contain secrets</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.project">
-<em class="property">property </em><code class="sig-name descname">project</code><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name or id of the project to add the push rules to.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gitlab.ProjectMirror.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectMirror.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -2964,8 +3458,8 @@ into a format of their choosing before writing those properties to the resource 
 </dd></dl>
 
 <dl class="py method">
-<dt id="pulumi_gitlab.ProjectPushRules.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gitlab.ProjectMirror.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectMirror.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -3088,6 +3582,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resource allows you to create and manage CI/CD variables for your GitLab projects.
 For further information on variables, consult the <a class="reference external" href="https://docs.gitlab.com/ce/ci/variables/README.html#variables">gitlab
 documentation</a>.</p>
+<blockquote>
+<div><p><strong>Important:</strong> If your GitLab version is older than 13.4, you may see nondeterministic behavior
+when updating or deleting <code class="docutils literal notranslate"><span class="pre">ProjectVariable</span></code> resources with non-unique keys, for example if
+there is another variable with the same key and different environment scope. See
+<a class="reference external" href="https://gitlab.com/gitlab-org/gitlab/-/issues/9912">this GitLab issue</a>.</p>
+</div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
 
@@ -3103,7 +3603,7 @@ documentation</a>.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>environment_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The environment_scope of the variable</p></li>
+<li><p><strong>environment_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The environment_scope of the variable. Defaults to <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the variable.</p></li>
 <li><p><strong>masked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the variable will be masked if it would have been written to the logs. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the hook to.</p></li>
@@ -3124,7 +3624,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>environment_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The environment_scope of the variable</p></li>
+<li><p><strong>environment_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The environment_scope of the variable. Defaults to <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the variable.</p></li>
 <li><p><strong>masked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the variable will be masked if it would have been written to the logs. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the hook to.</p></li>
@@ -3139,7 +3639,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_gitlab.ProjectVariable.environment_scope">
 <em class="property">property </em><code class="sig-name descname">environment_scope</code><a class="headerlink" href="#pulumi_gitlab.ProjectVariable.environment_scope" title="Permalink to this definition">¶</a></dt>
-<dd><p>The environment_scope of the variable</p>
+<dd><p>The environment_scope of the variable. Defaults to <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3474,6 +3974,98 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_gitlab.ServiceJira.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ServiceJira.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_gitlab.ServicePipelinesEmail">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ServicePipelinesEmail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branches_to_be_notified</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_only_broken_pipelines</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recipients</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ServicePipelinesEmail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ServicePipelinesEmail resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] branches_to_be_notified: Branches to send notifications for. Valid options are <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">protected</span></code>, and <code class="docutils literal notranslate"><span class="pre">default_and_protected</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">default</span></code>
+:param pulumi.Input[bool] notify_only_broken_pipelines: Notify only broken pipelines. Default is true.
+:param pulumi.Input[str] project: ID of the project you want to activate integration on.
+:param pulumi.Input[List[pulumi.Input[str]]] recipients: ) email addresses where notifications are sent.</p>
+<dl class="py method">
+<dt id="pulumi_gitlab.ServicePipelinesEmail.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branches_to_be_notified</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_only_broken_pipelines</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recipients</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.service_pipelines_email.ServicePipelinesEmail<a class="headerlink" href="#pulumi_gitlab.ServicePipelinesEmail.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ServicePipelinesEmail resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>branches_to_be_notified</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Branches to send notifications for. Valid options are <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">protected</span></code>, and <code class="docutils literal notranslate"><span class="pre">default_and_protected</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">default</span></code></p></li>
+<li><p><strong>notify_only_broken_pipelines</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Notify only broken pipelines. Default is true.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project you want to activate integration on.</p></li>
+<li><p><strong>recipients</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – ) email addresses where notifications are sent.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ServicePipelinesEmail.branches_to_be_notified">
+<em class="property">property </em><code class="sig-name descname">branches_to_be_notified</code><a class="headerlink" href="#pulumi_gitlab.ServicePipelinesEmail.branches_to_be_notified" title="Permalink to this definition">¶</a></dt>
+<dd><p>Branches to send notifications for. Valid options are <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">protected</span></code>, and <code class="docutils literal notranslate"><span class="pre">default_and_protected</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">default</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ServicePipelinesEmail.notify_only_broken_pipelines">
+<em class="property">property </em><code class="sig-name descname">notify_only_broken_pipelines</code><a class="headerlink" href="#pulumi_gitlab.ServicePipelinesEmail.notify_only_broken_pipelines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify only broken pipelines. Default is true.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ServicePipelinesEmail.project">
+<em class="property">property </em><code class="sig-name descname">project</code><a class="headerlink" href="#pulumi_gitlab.ServicePipelinesEmail.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the project you want to activate integration on.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ServicePipelinesEmail.recipients">
+<em class="property">property </em><code class="sig-name descname">recipients</code><a class="headerlink" href="#pulumi_gitlab.ServicePipelinesEmail.recipients" title="Permalink to this definition">¶</a></dt>
+<dd><p>) email addresses where notifications are sent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ServicePipelinesEmail.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ServicePipelinesEmail.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ServicePipelinesEmail.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ServicePipelinesEmail.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -4014,8 +4606,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_gitlab.get_group_membership">
+<code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">get_group_membership</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.get_group_membership.AwaitableGetGroupMembershipResult<a class="headerlink" href="#pulumi_gitlab.get_group_membership" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides details about a list of group members in the gitlab provider. The results include id, username, name and more about the requested members.</p>
+<p><strong>By group’s ID</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">get_group_membership</span><span class="p">(</span><span class="n">group_id</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>By group’s full path</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">get_group_membership</span><span class="p">(</span><span class="n">full_path</span><span class="o">=</span><span class="s2">&quot;foo/bar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access_level</strong> (<em>str</em>) – Only return members with the desidered access level. Acceptable values are: <code class="docutils literal notranslate"><span class="pre">guest</span></code>, <code class="docutils literal notranslate"><span class="pre">reporter</span></code>, <code class="docutils literal notranslate"><span class="pre">developer</span></code>, <code class="docutils literal notranslate"><span class="pre">maintainer</span></code>, <code class="docutils literal notranslate"><span class="pre">owner</span></code>.</p></li>
+<li><p><strong>full_path</strong> (<em>str</em>) – The full path of the group.</p></li>
+<li><p><strong>group_id</strong> (<em>float</em>) – The ID of the group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_gitlab.get_project">
-<code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">archived</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_branch</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_url_to_repo</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issues_enabled</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lfs_enabled</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_requests_enabled</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines_enabled</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remove_source_branch_after_merge</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_access_enabled</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runners_token</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snippets_enabled</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_url_to_repo</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility_level</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_url</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wiki_enabled</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.get_project.AwaitableGetProjectResult<a class="headerlink" href="#pulumi_gitlab.get_project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.get_project.AwaitableGetProjectResult<a class="headerlink" href="#pulumi_gitlab.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific project in the gitlab provider. The results include the name of the project, path, description, default branch, etc.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
@@ -4025,30 +4646,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>archived</strong> (<em>bool</em>) – Whether the project is in read-only mode (archived).</p></li>
-<li><p><strong>default_branch</strong> (<em>str</em>) – The default branch for the project.</p></li>
-<li><p><strong>description</strong> (<em>str</em>) – A description of the project.</p></li>
-<li><p><strong>http_url_to_repo</strong> (<em>str</em>) – URL that can be provided to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> to clone the
-repository via HTTP.</p></li>
-<li><p><strong>id</strong> (<em>float</em>) – The integer that uniquely identifies the project within the gitlab install.</p></li>
-<li><p><strong>issues_enabled</strong> (<em>bool</em>) – Enable issue tracking for the project.</p></li>
-<li><p><strong>lfs_enabled</strong> (<em>bool</em>) – Enable LFS for the project.</p></li>
-<li><p><strong>merge_requests_enabled</strong> (<em>bool</em>) – Enable merge requests for the project.</p></li>
-<li><p><strong>namespace_id</strong> (<em>float</em>) – The namespace (group or user) of the project. Defaults to your user.
-See <code class="docutils literal notranslate"><span class="pre">Group</span></code> for an example.</p></li>
-<li><p><strong>path</strong> (<em>str</em>) – The path of the repository.</p></li>
-<li><p><strong>pipelines_enabled</strong> (<em>bool</em>) – Enable pipelines for the project.</p></li>
-<li><p><strong>remove_source_branch_after_merge</strong> (<em>bool</em>) – Enable <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">source</span> <span class="pre">branch</span></code> option by default for all new merge requests</p></li>
-<li><p><strong>request_access_enabled</strong> (<em>bool</em>) – Allow users to request member access.</p></li>
-<li><p><strong>runners_token</strong> (<em>str</em>) – Registration token to use during runner setup.</p></li>
-<li><p><strong>snippets_enabled</strong> (<em>bool</em>) – Enable snippets for the project.</p></li>
-<li><p><strong>ssh_url_to_repo</strong> (<em>str</em>) – URL that can be provided to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> to clone the
-repository via SSH.</p></li>
-<li><p><strong>visibility_level</strong> (<em>str</em>) – Repositories are created as private by default.</p></li>
-<li><p><strong>web_url</strong> (<em>str</em>) – URL that can be used to find the project in a browser.</p></li>
-<li><p><strong>wiki_enabled</strong> (<em>bool</em>) – Enable wiki for the project.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>id</strong> (<em>float</em>) – The integer that uniquely identifies the project within the gitlab install.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4094,7 +4692,7 @@ repository via SSH.</p></li>
 <li><p><strong>starred</strong> (<em>bool</em>) – Limit by projects starred by the current user.</p></li>
 <li><p><strong>statistics</strong> (<em>bool</em>) – Include project statistics. Cannot be used with <code class="docutils literal notranslate"><span class="pre">group_id</span></code>.</p></li>
 <li><p><strong>visibility</strong> (<em>str</em>) – Limit by visibility <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span></code>, or <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
-<li><p><strong>with_custom*attributes</strong> (<em>bool</em>) – <p>Include custom attributes in response <a href="#id22"><span class="problematic" id="id23">*</span></a>(admins only)_.</p>
+<li><p><strong>with_custom*attributes</strong> (<em>bool</em>) – <p>Include custom attributes in response <a href="#id16"><span class="problematic" id="id17">*</span></a>(admins only)_.</p>
 </p></li>
 <li><p><strong>with_issues_enabled</strong> (<em>bool</em>) – Limit by projects with issues feature enabled. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>with_merge_requests_enabled</strong> (<em>bool</em>) – Limit by projects with merge requests feature enabled. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
