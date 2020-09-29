@@ -213,7 +213,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of k3s to install (optional, the default is currently the latest available).
+    <dd>{{% md %}}The version of k3s to install (The default is currently the latest available).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -235,7 +235,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to create (optional, the default at the time of writing is 3).
+    <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -257,7 +257,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of each node (optional, the default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g2.small)
 {{% /md %}}</dd>
 
 </dl>
@@ -286,7 +286,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of k3s to install (optional, the default is currently the latest available).
+    <dd>{{% md %}}The version of k3s to install (The default is currently the latest available).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -308,7 +308,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to create (optional, the default at the time of writing is 3).
+    <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -330,7 +330,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of each node (optional, the default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g2.small)
 {{% /md %}}</dd>
 
 </dl>
@@ -359,7 +359,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of k3s to install (optional, the default is currently the latest available).
+    <dd>{{% md %}}The version of k3s to install (The default is currently the latest available).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,7 +381,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to create (optional, the default at the time of writing is 3).
+    <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -403,7 +403,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of each node (optional, the default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g2.small)
 {{% /md %}}</dd>
 
 </dl>
@@ -432,7 +432,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version of k3s to install (optional, the default is currently the latest available).
+    <dd>{{% md %}}The version of k3s to install (The default is currently the latest available).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -454,7 +454,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to create (optional, the default at the time of writing is 3).
+    <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -476,7 +476,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The size of each node (optional, the default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g2.small)
 {{% /md %}}</dd>
 
 </dl>
@@ -1228,7 +1228,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of k3s to install (optional, the default is currently the latest available).
+    <dd>{{% md %}}The version of k3s to install (The default is currently the latest available).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1261,7 +1261,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to create (optional, the default at the time of writing is 3).
+    <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1305,7 +1305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of each node (optional, the default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g2.small)
 {{% /md %}}</dd>
 
 </dl>
@@ -1411,7 +1411,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of k3s to install (optional, the default is currently the latest available).
+    <dd>{{% md %}}The version of k3s to install (The default is currently the latest available).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1444,7 +1444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to create (optional, the default at the time of writing is 3).
+    <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1488,7 +1488,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of each node (optional, the default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g2.small)
 {{% /md %}}</dd>
 
 </dl>
@@ -1594,7 +1594,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of k3s to install (optional, the default is currently the latest available).
+    <dd>{{% md %}}The version of k3s to install (The default is currently the latest available).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1627,7 +1627,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to create (optional, the default at the time of writing is 3).
+    <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1671,7 +1671,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The size of each node (optional, the default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g2.small)
 {{% /md %}}</dd>
 
 </dl>
@@ -1777,7 +1777,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version of k3s to install (optional, the default is currently the latest available).
+    <dd>{{% md %}}The version of k3s to install (The default is currently the latest available).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1810,7 +1810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of instances to create (optional, the default at the time of writing is 3).
+    <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1854,7 +1854,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The size of each node (optional, the default is currently g2.small)
+    <dd>{{% md %}}The size of each node (The default is currently g2.small)
 {{% /md %}}</dd>
 
 </dl>
