@@ -1,16 +1,12 @@
 ---
-meta_desc: Join Pulumi at our Infrastructure As Code Workshop at KubeCon EU and
+meta_desc: Join Pulumi for Hacktoberfest and help us build open source integrations, automation and libraries.
   learn more about cloud programming, infrastructure as code, and many other
   topics.
 title: Hacktoberfest 2020
 subtitle: Help us build new open source capabilities for Pulumi
 unlisted: false
-redirect_to: https://hacktoberfest.digitalocean.com
 event:
-  eventbrite_url: " "
   registration_url: https://hacktoberfest.digitalocean.com
-  calendly_url: " "
-  eventbrite_id: "2"
   start_date: 2020-10-22
   time: 9:00 AM - 11:00 AM
   cost: $0
@@ -21,7 +17,7 @@ event:
   description: Join the Pulumi team and members of the community as we hack new
     integrations, automation, and infrastructure libraries!
 type: events
-url_slug: workshop-amsterdam-eu-kubecon-2020
+url_slug: hacktoberfest-2020
 block_external_search_index: false
 ---
 ## About Hacktoberfest
