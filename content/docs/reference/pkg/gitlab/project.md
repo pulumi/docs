@@ -22,11 +22,11 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.Project">Project</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared_with_groups</span><span class="p">:</span> <span class="nx">Optional[List[ProjectSharedWithGroupArgs]]</span> = None<span class="p">, </span><span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.Project">Project</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_with_project_templates_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">import_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">push_rules</span><span class="p">:</span> <span class="nx">Optional[ProjectPushRulesArgs]</span> = None<span class="p">, </span><span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_project_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">use_custom_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#Project">NewProject</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#Project">NewProject</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -100,7 +100,7 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -120,7 +120,7 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#ProjectArgs">ProjectArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ProjectArgs">ProjectArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -130,7 +130,7 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -251,6 +251,28 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="groupwithprojecttemplatesid_csharp">
+<a href="#groupwithprojecttemplatesid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>With<wbr>Project<wbr>Templates<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="importurl_csharp">
+<a href="#importurl_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Git URL to a repository to be imported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="initializewithreadme_csharp">
 <a href="#initializewithreadme_csharp" style="color: inherit; text-decoration: inherit;">Initialize<wbr>With<wbr>Readme</a>
 </span> 
@@ -353,6 +375,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="packagesenabled_csharp">
+<a href="#packagesenabled_csharp" style="color: inherit; text-decoration: inherit;">Packages<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable packages repository for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span> 
@@ -371,6 +404,17 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pushrules_csharp">
+<a href="#pushrules_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectpushrules">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Project<wbr>Push<wbr>Rules<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -408,17 +452,6 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedwithgroups_csharp">
-<a href="#sharedwithgroups_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">List&lt;Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="snippetsenabled_csharp">
 <a href="#snippetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
 </span> 
@@ -437,6 +470,39 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templatename_csharp">
+<a href="#templatename_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templateprojectid_csharp">
+<a href="#templateprojectid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usecustomtemplate_csharp">
+<a href="#usecustomtemplate_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Custom<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -523,6 +589,28 @@ Repositories are created as private by default.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupwithprojecttemplatesid_go">
+<a href="#groupwithprojecttemplatesid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>With<wbr>Project<wbr>Templates<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="importurl_go">
+<a href="#importurl_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -629,6 +717,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="packagesenabled_go">
+<a href="#packagesenabled_go" style="color: inherit; text-decoration: inherit;">Packages<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable packages repository for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span> 
@@ -647,6 +746,17 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pushrules_go">
+<a href="#pushrules_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectpushrules">Project<wbr>Push<wbr>Rules</a></span>
+    </dt>
+    <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -684,17 +794,6 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedwithgroups_go">
-<a href="#sharedwithgroups_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">[]Project<wbr>Shared<wbr>With<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="snippetsenabled_go">
 <a href="#snippetsenabled_go" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
 </span> 
@@ -713,6 +812,39 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templatename_go">
+<a href="#templatename_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templateprojectid_go">
+<a href="#templateprojectid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usecustomtemplate_go">
+<a href="#usecustomtemplate_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Custom<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -799,6 +931,28 @@ Repositories are created as private by default.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupwithprojecttemplatesid_nodejs">
+<a href="#groupwithprojecttemplatesid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>With<wbr>Project<wbr>Templates<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="importurl_nodejs">
+<a href="#importurl_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,6 +1059,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="packagesenabled_nodejs">
+<a href="#packagesenabled_nodejs" style="color: inherit; text-decoration: inherit;">packages<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable packages repository for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
@@ -923,6 +1088,17 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pushrules_nodejs">
+<a href="#pushrules_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectpushrules">Project<wbr>Push<wbr>Rules</a></span>
+    </dt>
+    <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -960,17 +1136,6 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sharedwithgroups_nodejs">
-<a href="#sharedwithgroups_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>With<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">Project<wbr>Shared<wbr>With<wbr>Group[]</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="snippetsenabled_nodejs">
 <a href="#snippetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">snippets<wbr>Enabled</a>
 </span> 
@@ -989,6 +1154,39 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templatename_nodejs">
+<a href="#templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="templateprojectid_nodejs">
+<a href="#templateprojectid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usecustomtemplate_nodejs">
+<a href="#usecustomtemplate_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Custom<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1028,7 +1226,7 @@ Repositories are created as private by default.
 <a href="#approvals_before_merge_python" style="color: inherit; text-decoration: inherit;">approvals_<wbr>before_<wbr>merge</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd>
@@ -1075,6 +1273,28 @@ Repositories are created as private by default.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_with_project_templates_id_python">
+<a href="#group_with_project_templates_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>with_<wbr>project_<wbr>templates_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="import_url_python">
+<a href="#import_url_python" style="color: inherit; text-decoration: inherit;">import_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1151,7 +1371,7 @@ Repositories are created with `merge` by default
 <a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab.Group` for an example.
@@ -1181,6 +1401,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="packages_enabled_python">
+<a href="#packages_enabled_python" style="color: inherit; text-decoration: inherit;">packages_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable packages repository for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
@@ -1199,6 +1430,17 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="push_rules_python">
+<a href="#push_rules_python" style="color: inherit; text-decoration: inherit;">push_<wbr>rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectpushrules">Project<wbr>Push<wbr>Rules<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1236,17 +1478,6 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shared_with_groups_python">
-<a href="#shared_with_groups_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>with_<wbr>groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">List[Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="snippets_enabled_python">
 <a href="#snippets_enabled_python" style="color: inherit; text-decoration: inherit;">snippets_<wbr>enabled</a>
 </span> 
@@ -1262,9 +1493,42 @@ See `gitlab.Group` for an example.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="template_name_python">
+<a href="#template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="template_project_id_python">
+<a href="#template_project_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>project_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_custom_template_python">
+<a href="#use_custom_template_python" style="color: inherit; text-decoration: inherit;">use_<wbr>custom_<wbr>template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1333,6 +1597,17 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
+        <span id="pathwithnamespace_csharp">
+<a href="#pathwithnamespace_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>With<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the repository with namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="runnerstoken_csharp">
 <a href="#runnerstoken_csharp" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
 </span> 
@@ -1393,6 +1668,17 @@ repository via HTTP.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="pathwithnamespace_go">
+<a href="#pathwithnamespace_go" style="color: inherit; text-decoration: inherit;">Path<wbr>With<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the repository with namespace.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1459,6 +1745,17 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
+        <span id="pathwithnamespace_nodejs">
+<a href="#pathwithnamespace_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>With<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the repository with namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="runnerstoken_nodejs">
 <a href="#runnerstoken_nodejs" style="color: inherit; text-decoration: inherit;">runners<wbr>Token</a>
 </span> 
@@ -1522,6 +1819,17 @@ repository via HTTP.
 
     <dt class="property-"
             title="">
+        <span id="path_with_namespace_python">
+<a href="#path_with_namespace_python" style="color: inherit; text-decoration: inherit;">path_<wbr>with_<wbr>namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the repository with namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="runners_token_python">
 <a href="#runners_token_python" style="color: inherit; text-decoration: inherit;">runners_<wbr>token</a>
 </span> 
@@ -1574,11 +1882,11 @@ Get an existing Project resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">runners_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared_with_groups</span><span class="p">:</span> <span class="nx">Optional[List[ProjectSharedWithGroupArgs]]</span> = None<span class="p">, </span><span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ssh_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_with_project_templates_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">http_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_with_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">push_rules</span><span class="p">:</span> <span class="nx">Optional[ProjectPushRulesArgs]</span> = None<span class="p">, </span><span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">runners_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ssh_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_project_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">use_custom_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1745,6 +2053,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_groupwithprojecttemplatesid_csharp">
+<a href="#state_groupwithprojecttemplatesid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>With<wbr>Project<wbr>Templates<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_httpurltorepo_csharp">
 <a href="#state_httpurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
 </span> 
@@ -1753,6 +2072,17 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_importurl_csharp">
+<a href="#state_importurl_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1859,6 +2189,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_packagesenabled_csharp">
+<a href="#state_packagesenabled_csharp" style="color: inherit; text-decoration: inherit;">Packages<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable packages repository for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span> 
@@ -1870,6 +2211,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_pathwithnamespace_csharp">
+<a href="#state_pathwithnamespace_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>With<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the repository with namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_pipelinesenabled_csharp">
 <a href="#state_pipelinesenabled_csharp" style="color: inherit; text-decoration: inherit;">Pipelines<wbr>Enabled</a>
 </span> 
@@ -1877,6 +2229,17 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_pushrules_csharp">
+<a href="#state_pushrules_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectpushrules">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Project<wbr>Push<wbr>Rules<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1925,17 +2288,6 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_sharedwithgroups_csharp">
-<a href="#state_sharedwithgroups_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">List&lt;Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_snippetsenabled_csharp">
 <a href="#state_snippetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
 </span> 
@@ -1966,6 +2318,39 @@ repository via SSH.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_templatename_csharp">
+<a href="#state_templatename_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_templateprojectid_csharp">
+<a href="#state_templateprojectid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usecustomtemplate_csharp">
+<a href="#state_usecustomtemplate_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Custom<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2067,6 +2452,17 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_groupwithprojecttemplatesid_go">
+<a href="#state_groupwithprojecttemplatesid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>With<wbr>Project<wbr>Templates<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_httpurltorepo_go">
 <a href="#state_httpurltorepo_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
 </span> 
@@ -2075,6 +2471,17 @@ Repositories are created as private by default.
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_importurl_go">
+<a href="#state_importurl_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2181,6 +2588,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_packagesenabled_go">
+<a href="#state_packagesenabled_go" style="color: inherit; text-decoration: inherit;">Packages<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable packages repository for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span> 
@@ -2192,6 +2610,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_pathwithnamespace_go">
+<a href="#state_pathwithnamespace_go" style="color: inherit; text-decoration: inherit;">Path<wbr>With<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the repository with namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_pipelinesenabled_go">
 <a href="#state_pipelinesenabled_go" style="color: inherit; text-decoration: inherit;">Pipelines<wbr>Enabled</a>
 </span> 
@@ -2199,6 +2628,17 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_pushrules_go">
+<a href="#state_pushrules_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectpushrules">Project<wbr>Push<wbr>Rules</a></span>
+    </dt>
+    <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2247,17 +2687,6 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_sharedwithgroups_go">
-<a href="#state_sharedwithgroups_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">[]Project<wbr>Shared<wbr>With<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_snippetsenabled_go">
 <a href="#state_snippetsenabled_go" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
 </span> 
@@ -2288,6 +2717,39 @@ repository via SSH.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_templatename_go">
+<a href="#state_templatename_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_templateprojectid_go">
+<a href="#state_templateprojectid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usecustomtemplate_go">
+<a href="#state_usecustomtemplate_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Custom<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2389,6 +2851,17 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_groupwithprojecttemplatesid_nodejs">
+<a href="#state_groupwithprojecttemplatesid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>With<wbr>Project<wbr>Templates<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_httpurltorepo_nodejs">
 <a href="#state_httpurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url<wbr>To<wbr>Repo</a>
 </span> 
@@ -2397,6 +2870,17 @@ Repositories are created as private by default.
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_importurl_nodejs">
+<a href="#state_importurl_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2503,6 +2987,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_packagesenabled_nodejs">
+<a href="#state_packagesenabled_nodejs" style="color: inherit; text-decoration: inherit;">packages<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable packages repository for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
@@ -2514,6 +3009,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_pathwithnamespace_nodejs">
+<a href="#state_pathwithnamespace_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>With<wbr>Namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the repository with namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_pipelinesenabled_nodejs">
 <a href="#state_pipelinesenabled_nodejs" style="color: inherit; text-decoration: inherit;">pipelines<wbr>Enabled</a>
 </span> 
@@ -2521,6 +3027,17 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_pushrules_nodejs">
+<a href="#state_pushrules_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectpushrules">Project<wbr>Push<wbr>Rules</a></span>
+    </dt>
+    <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2569,17 +3086,6 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_sharedwithgroups_nodejs">
-<a href="#state_sharedwithgroups_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>With<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">Project<wbr>Shared<wbr>With<wbr>Group[]</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_snippetsenabled_nodejs">
 <a href="#state_snippetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">snippets<wbr>Enabled</a>
 </span> 
@@ -2610,6 +3116,39 @@ repository via SSH.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_templatename_nodejs">
+<a href="#state_templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_templateprojectid_nodejs">
+<a href="#state_templateprojectid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usecustomtemplate_nodejs">
+<a href="#state_usecustomtemplate_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Custom<wbr>Template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2660,7 +3199,7 @@ Repositories are created as private by default.
 <a href="#state_approvals_before_merge_python" style="color: inherit; text-decoration: inherit;">approvals_<wbr>before_<wbr>merge</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}Number of merge request approvals required for merging. Default is 0.
 {{% /md %}}</dd>
@@ -2711,6 +3250,17 @@ Repositories are created as private by default.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_group_with_project_templates_id_python">
+<a href="#state_group_with_project_templates_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>with_<wbr>project_<wbr>templates_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}For group-level custom templates, specifies ID of group from which all the custom project templates are sourced. Leave empty for instance-level templates. Requires use_custom_template to be true (enterprise edition).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_http_url_to_repo_python">
 <a href="#state_http_url_to_repo_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url_<wbr>to_<wbr>repo</a>
 </span> 
@@ -2719,6 +3269,17 @@ Repositories are created as private by default.
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_import_url_python">
+<a href="#state_import_url_python" style="color: inherit; text-decoration: inherit;">import_<wbr>url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Git URL to a repository to be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2795,7 +3356,7 @@ Repositories are created with `merge` by default
 <a href="#state_namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab.Group` for an example.
@@ -2825,6 +3386,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_packages_enabled_python">
+<a href="#state_packages_enabled_python" style="color: inherit; text-decoration: inherit;">packages_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable packages repository for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
@@ -2836,6 +3408,17 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_path_with_namespace_python">
+<a href="#state_path_with_namespace_python" style="color: inherit; text-decoration: inherit;">path_<wbr>with_<wbr>namespace</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path of the repository with namespace.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_pipelines_enabled_python">
 <a href="#state_pipelines_enabled_python" style="color: inherit; text-decoration: inherit;">pipelines_<wbr>enabled</a>
 </span> 
@@ -2843,6 +3426,17 @@ See `gitlab.Group` for an example.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_push_rules_python">
+<a href="#state_push_rules_python" style="color: inherit; text-decoration: inherit;">push_<wbr>rules</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectpushrules">Project<wbr>Push<wbr>Rules<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Push rules for the project (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2891,17 +3485,6 @@ See `gitlab.Group` for an example.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_shared_with_groups_python">
-<a href="#state_shared_with_groups_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>with_<wbr>groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsharedwithgroup">List[Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Enable sharing the project with a list of groups (maps).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_snippets_enabled_python">
 <a href="#state_snippets_enabled_python" style="color: inherit; text-decoration: inherit;">snippets_<wbr>enabled</a>
 </span> 
@@ -2929,9 +3512,42 @@ repository via SSH.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags (topics) of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_template_name_python">
+<a href="#state_template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}When used without use_custom_template, name of a built-in project template. When used with use_custom_template, name of a custom project template. This option is mutually exclusive with `template_project_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_template_project_id_python">
+<a href="#state_template_project_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>project_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}When used with use_custom_template, project ID of a custom project template. This is preferable to using template_name since template_name may be ambiguous (enterprise edition). This option is mutually exclusive with `template_name`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_use_custom_template_python">
+<a href="#state_use_custom_template_python" style="color: inherit; text-decoration: inherit;">use_<wbr>custom_<wbr>template</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use either custom instance or group (with group_with_project_templates_id) project template (enterprise edition).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2984,16 +3600,16 @@ Repositories are created as private by default.
 ## Supporting Types
 
 
-<h4 id="projectsharedwithgroup">Project<wbr>Shared<wbr>With<wbr>Group</h4>
+<h4 id="projectpushrules">Project<wbr>Push<wbr>Rules</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/input/#ProjectSharedWithGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/output/#ProjectSharedWithGroup">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/input/#ProjectPushRules">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/output/#ProjectPushRules">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#ProjectSharedWithGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#ProjectSharedWithGroupOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ProjectPushRulesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ProjectPushRulesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Inputs.ProjectSharedWithGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Outputs.ProjectSharedWithGroup.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Inputs.ProjectPushRulesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Outputs.ProjectPushRules.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3002,38 +3618,125 @@ Repositories are created as private by default.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="groupaccesslevel_csharp">
-<a href="#groupaccesslevel_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Access<wbr>Level</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authoremailregex_csharp">
+<a href="#authoremailregex_csharp" style="color: inherit; text-decoration: inherit;">Author<wbr>Email<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Group's sharing permissions. See [group members permission][group_members_permissions] for more info.
-Valid values are `guest`, `reporter`, `developer`, `master`.
+    <dd>{{% md %}}All commit author emails must match this regex, e.g. `@my-company.com$`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="groupid_csharp">
-<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branchnameregex_csharp">
+<a href="#branchnameregex_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}All branch names must match this regex, e.g. `(feature|hotfix)\/*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitcommittercheck_csharp">
+<a href="#commitcommittercheck_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Committer<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Users can only push commits to this repository that were committed with one of their own verified emails.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitmessagenegativeregex_csharp">
+<a href="#commitmessagenegativeregex_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message<wbr>Negative<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}No commit message is allowed to match this regex, for example `ssh\:\/\/`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitmessageregex_csharp">
+<a href="#commitmessageregex_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}All commit messages must match this regex, e.g. `Fixed \d+\..*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="denydeletetag_csharp">
+<a href="#denydeletetag_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Delete<wbr>Tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Deny deleting a tag.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filenameregex_csharp">
+<a href="#filenameregex_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}All commited filenames must not match this regex, e.g. `(jar|exe)$`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxfilesize_csharp">
+<a href="#maxfilesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>File<wbr>Size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Group id of the group you want to share the project with.
+    <dd>{{% md %}}Maximum file size (MB).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupname_csharp">
-<a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+        <span id="membercheck_csharp">
+<a href="#membercheck_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Group's name.
+    <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preventsecrets_csharp">
+<a href="#preventsecrets_csharp" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Secrets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rejectunsignedcommits_csharp">
+<a href="#rejectunsignedcommits_csharp" style="color: inherit; text-decoration: inherit;">Reject<wbr>Unsigned<wbr>Commits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Reject commit when it’s not signed through GPG.
 {{% /md %}}</dd>
 
 </dl>
@@ -3043,38 +3746,125 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="groupaccesslevel_go">
-<a href="#groupaccesslevel_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Access<wbr>Level</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authoremailregex_go">
+<a href="#authoremailregex_go" style="color: inherit; text-decoration: inherit;">Author<wbr>Email<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Group's sharing permissions. See [group members permission][group_members_permissions] for more info.
-Valid values are `guest`, `reporter`, `developer`, `master`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="groupid_go">
-<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Group id of the group you want to share the project with.
+    <dd>{{% md %}}All commit author emails must match this regex, e.g. `@my-company.com$`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupname_go">
-<a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+        <span id="branchnameregex_go">
+<a href="#branchnameregex_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Group's name.
+    <dd>{{% md %}}All branch names must match this regex, e.g. `(feature|hotfix)\/*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitcommittercheck_go">
+<a href="#commitcommittercheck_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Committer<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Users can only push commits to this repository that were committed with one of their own verified emails.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitmessagenegativeregex_go">
+<a href="#commitmessagenegativeregex_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message<wbr>Negative<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}No commit message is allowed to match this regex, for example `ssh\:\/\/`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitmessageregex_go">
+<a href="#commitmessageregex_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Message<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}All commit messages must match this regex, e.g. `Fixed \d+\..*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="denydeletetag_go">
+<a href="#denydeletetag_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Delete<wbr>Tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Deny deleting a tag.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filenameregex_go">
+<a href="#filenameregex_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}All commited filenames must not match this regex, e.g. `(jar|exe)$`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxfilesize_go">
+<a href="#maxfilesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>File<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum file size (MB).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="membercheck_go">
+<a href="#membercheck_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preventsecrets_go">
+<a href="#preventsecrets_go" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Secrets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rejectunsignedcommits_go">
+<a href="#rejectunsignedcommits_go" style="color: inherit; text-decoration: inherit;">Reject<wbr>Unsigned<wbr>Commits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Reject commit when it’s not signed through GPG.
 {{% /md %}}</dd>
 
 </dl>
@@ -3084,38 +3874,125 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="groupaccesslevel_nodejs">
-<a href="#groupaccesslevel_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Access<wbr>Level</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authoremailregex_nodejs">
+<a href="#authoremailregex_nodejs" style="color: inherit; text-decoration: inherit;">author<wbr>Email<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Group's sharing permissions. See [group members permission][group_members_permissions] for more info.
-Valid values are `guest`, `reporter`, `developer`, `master`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="groupid_nodejs">
-<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Group id of the group you want to share the project with.
+    <dd>{{% md %}}All commit author emails must match this regex, e.g. `@my-company.com$`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupname_nodejs">
-<a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+        <span id="branchnameregex_nodejs">
+<a href="#branchnameregex_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name<wbr>Regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Group's name.
+    <dd>{{% md %}}All branch names must match this regex, e.g. `(feature|hotfix)\/*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitcommittercheck_nodejs">
+<a href="#commitcommittercheck_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Committer<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Users can only push commits to this repository that were committed with one of their own verified emails.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitmessagenegativeregex_nodejs">
+<a href="#commitmessagenegativeregex_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Message<wbr>Negative<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}No commit message is allowed to match this regex, for example `ssh\:\/\/`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitmessageregex_nodejs">
+<a href="#commitmessageregex_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Message<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}All commit messages must match this regex, e.g. `Fixed \d+\..*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="denydeletetag_nodejs">
+<a href="#denydeletetag_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Delete<wbr>Tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Deny deleting a tag.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filenameregex_nodejs">
+<a href="#filenameregex_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}All commited filenames must not match this regex, e.g. `(jar|exe)$`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxfilesize_nodejs">
+<a href="#maxfilesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>File<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum file size (MB).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="membercheck_nodejs">
+<a href="#membercheck_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preventsecrets_nodejs">
+<a href="#preventsecrets_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Secrets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rejectunsignedcommits_nodejs">
+<a href="#rejectunsignedcommits_nodejs" style="color: inherit; text-decoration: inherit;">reject<wbr>Unsigned<wbr>Commits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Reject commit when it’s not signed through GPG.
 {{% /md %}}</dd>
 
 </dl>
@@ -3125,38 +4002,125 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="group_access_level_python">
-<a href="#group_access_level_python" style="color: inherit; text-decoration: inherit;">group_<wbr>access_<wbr>level</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="author_email_regex_python">
+<a href="#author_email_regex_python" style="color: inherit; text-decoration: inherit;">author_<wbr>email_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Group's sharing permissions. See [group members permission][group_members_permissions] for more info.
-Valid values are `guest`, `reporter`, `developer`, `master`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="group_id_python">
-<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Group id of the group you want to share the project with.
+    <dd>{{% md %}}All commit author emails must match this regex, e.g. `@my-company.com$`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="group_name_python">
-<a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
+        <span id="branch_name_regex_python">
+<a href="#branch_name_regex_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Group's name.
+    <dd>{{% md %}}All branch names must match this regex, e.g. `(feature|hotfix)\/*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commit_committer_check_python">
+<a href="#commit_committer_check_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>committer_<wbr>check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Users can only push commits to this repository that were committed with one of their own verified emails.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commit_message_negative_regex_python">
+<a href="#commit_message_negative_regex_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>message_<wbr>negative_<wbr>regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}No commit message is allowed to match this regex, for example `ssh\:\/\/`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commit_message_regex_python">
+<a href="#commit_message_regex_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>message_<wbr>regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}All commit messages must match this regex, e.g. `Fixed \d+\..*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deny_delete_tag_python">
+<a href="#deny_delete_tag_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>delete_<wbr>tag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Deny deleting a tag.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_name_regex_python">
+<a href="#file_name_regex_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}All commited filenames must not match this regex, e.g. `(jar|exe)$`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_file_size_python">
+<a href="#max_file_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>file_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum file size (MB).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="member_check_python">
+<a href="#member_check_python" style="color: inherit; text-decoration: inherit;">member_<wbr>check</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prevent_secrets_python">
+<a href="#prevent_secrets_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>secrets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reject_unsigned_commits_python">
+<a href="#reject_unsigned_commits_python" style="color: inherit; text-decoration: inherit;">reject_<wbr>unsigned_<wbr>commits</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Reject commit when it’s not signed through GPG.
 {{% /md %}}</dd>
 
 </dl>
@@ -3177,6 +4141,6 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/terraform-providers/terraform-provider-gitlab).</dd>
+	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).</dd>
 </dl>
 
