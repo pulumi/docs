@@ -20,7 +20,7 @@ Containers are immutable, and a single image can be used throughout the software
 
 Best practice uses ConfigMaps, a Kubernetes native resource that doesn't require integration.   Because configuration is decoupled from the application, building the image at each stage is not necessary. Furthermore, ConfigMaps let you update when the application is running because the configuration is available during runtime.
 
-Let's look at an example where NginX is configured as a reverse-proxy that sends traffic to pulumi.github.io. The configuration is contained in a file, default.conf. Changing the file registers as a change in the ConfigMap's data triggering a rollout of the NginX Deployment. If we change .node.server and .serve.location.proxy_set_header to `google.com`, NginX will redirect requests to google.com. When we run `pulumi up`m the preview shows it will explicitly trigger a rollout in the Deployment by replacing the ConfigMap. In contrast, kubectl will silently sync the new version of the file to the containers.
+Let's look at an example where NginX is configured as a reverse-proxy that sends traffic to `pulumi.github.io`. The configuration is contained in a file, `default.conf`. Changing the file registers as a change in the ConfigMap's data triggering a rollout of the NginX Deployment. If we change `.node.server` and `.serve.location.proxy_set_header` to `google.com`, NginX will redirect requests to google.com. When we run `pulumi up`, the preview shows it will explicitly trigger a rollout in the Deployment by replacing the ConfigMap. In contrast, kubectl will update the ConfigMap, but changes are not automatically applied to running containers.
 
 ![Preview](preview.png)
 
