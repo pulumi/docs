@@ -109,7 +109,7 @@ By default, if a resource must be replaced, Pulumi will attempt to create a new 
 
 ## Naked Pods are prohibited
 
-Pods not bound to a ReplicaSet or Deployment will not be rescheduled in the event of a node failure. A Deployment with a ReplicaSet ensures that the specified number of Pods is always available and a strategy to replace Pods (such as RollingUpdate) better than creating Pods directly.
+Pods not bound to a ReplicaSet or Deployment will not be rescheduled in the event of a node failure. A Deployment with a ReplicaSet ensures that the specified number of Pods is always available and a strategy to replace Pods (such as RollingUpdate) is preferable to creating Pods directly.
 
 Pulumi's policy as code solution, Crossguard, lets you create a policy that checks if there are naked Pods. Learn more about [Crossguard]({{< relref "/docs/guides/crossguard" >}}).
 
