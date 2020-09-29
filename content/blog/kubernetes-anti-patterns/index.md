@@ -26,7 +26,7 @@ Let's look at an example where NginX is configured as a reverse-proxy that sends
 
 ConfigMap
 
-```json
+```
 upstream node {
   server pulumi.github.io;
 }
@@ -197,7 +197,7 @@ The example script below shows how to tag a resource when it's created.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = new aws.ecs.<resource>("foo", {
+const foo = new aws.ecs.cluster("foo", {
    tags: {
         "environment:production",
     },
