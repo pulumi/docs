@@ -366,7 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+    <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -377,7 +377,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitionreference">List&lt;Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -479,7 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+    <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -490,7 +491,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitionreference">[]Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -592,7 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+    <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -603,7 +605,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitionreference">Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -705,7 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+    <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -716,7 +719,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitionreference">Sequence[Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -783,13 +787,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="parametervalues_csharp">
+<a href="#parametervalues_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter values for the referenced policy rule. This field is a json object.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+    <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -800,7 +815,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition that is included in this policy set definition.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -810,7 +826,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique ID within this policy set definition for this policy definition reference.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -821,13 +838,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="parametervalues_go">
+<a href="#parametervalues_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter values for the referenced policy rule. This field is a json object.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+    <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -838,7 +866,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition that is included in this policy set definition.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -848,7 +877,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique ID within this policy set definition for this policy definition reference.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -859,13 +889,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="parametervalues_nodejs">
+<a href="#parametervalues_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter values for the referenced policy rule. This field is a json object.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+    <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -876,7 +917,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition that is included in this policy set definition.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -886,7 +928,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique ID within this policy set definition for this policy definition reference.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -897,13 +940,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="parameter_values_python">
+<a href="#parameter_values_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The parameter values for the referenced policy rule. This field is a json object.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
+    <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -914,7 +968,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition that is included in this policy set definition.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -924,7 +979,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unique ID within this policy set definition for this policy definition reference.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -272,7 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceadditionallocation">List&lt;Get<wbr>Service<wbr>Additional<wbr>Location&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more `additional_location` blocks as defined below
+    <dd>{{% md %}}Zero or more `additional_location` blocks as defined below
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -398,6 +398,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="privateipaddresses_csharp">
+<a href="#privateipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP addresses of the API Management service in the additional location, for instances using virtual network mode.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="publicipaddresses_csharp">
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
 </span> 
@@ -486,7 +497,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceadditionallocation">[]Get<wbr>Service<wbr>Additional<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}One or more `additional_location` blocks as defined below
+    <dd>{{% md %}}Zero or more `additional_location` blocks as defined below
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -612,6 +623,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="privateipaddresses_go">
+<a href="#privateipaddresses_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP addresses of the API Management service in the additional location, for instances using virtual network mode.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="publicipaddresses_go">
 <a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
 </span> 
@@ -700,7 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceadditionallocation">Get<wbr>Service<wbr>Additional<wbr>Location[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `additional_location` blocks as defined below
+    <dd>{{% md %}}Zero or more `additional_location` blocks as defined below
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -826,6 +848,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="privateipaddresses_nodejs">
+<a href="#privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP addresses of the API Management service in the additional location, for instances using virtual network mode.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="publicipaddresses_nodejs">
 <a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
 </span> 
@@ -914,7 +947,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceadditionallocation">Sequence[Get<wbr>Service<wbr>Additional<wbr>Location]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `additional_location` blocks as defined below
+    <dd>{{% md %}}Zero or more `additional_location` blocks as defined below
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1036,6 +1069,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Publisher Portal.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="private_ip_addresses_python">
+<a href="#private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP addresses of the API Management service in the additional location, for instances using virtual network mode.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1168,6 +1212,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="privateipaddresses_csharp">
+<a href="#privateipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP addresses of the API Management service in the additional location, for instances using virtual network mode.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="publicipaddresses_csharp">
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
 </span> 
@@ -1204,6 +1259,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="privateipaddresses_go">
+<a href="#privateipaddresses_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP addresses of the API Management service in the additional location, for instances using virtual network mode.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1248,6 +1314,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="privateipaddresses_nodejs">
+<a href="#privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP addresses of the API Management service in the additional location, for instances using virtual network mode.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="publicipaddresses_nodejs">
 <a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
 </span> 
@@ -1284,6 +1361,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="private_ip_addresses_python">
+<a href="#private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP addresses of the API Management service in the additional location, for instances using virtual network mode.
 {{% /md %}}</dd>
 
     <dt class="property-required"

@@ -1279,7 +1279,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1383,7 +1384,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1487,7 +1489,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1591,7 +1594,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1900,7 +1904,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2203,7 +2208,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2506,7 +2512,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2809,7 +2816,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3011,6 +3019,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddresses_csharp">
+<a href="#privateipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicipaddresses_csharp">
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
 </span> 
@@ -3018,6 +3037,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkconfiguration_csharp">
+<a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3051,6 +3081,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddresses_go">
+<a href="#privateipaddresses_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicipaddresses_go">
 <a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
 </span> 
@@ -3058,6 +3099,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkconfiguration_go">
+<a href="#virtualnetworkconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3091,6 +3143,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddresses_nodejs">
+<a href="#privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicipaddresses_nodejs">
 <a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
 </span> 
@@ -3098,6 +3161,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkconfiguration_nodejs">
+<a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3131,6 +3205,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="private_ip_addresses_python">
+<a href="#private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="public_ip_addresses_python">
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span> 
@@ -3138,6 +3223,107 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_network_configuration_python">
+<a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAdditionalLocationVirtualNetworkConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAdditionalLocationVirtualNetworkConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceAdditionalLocationVirtualNetworkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceAdditionalLocationVirtualNetworkConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.ServiceAdditionalLocationVirtualNetworkConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Outputs.ServiceAdditionalLocationVirtualNetworkConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the subnet that will be used for the API Management.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the subnet that will be used for the API Management.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the subnet that will be used for the API Management.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the subnet that will be used for the API Management.
 {{% /md %}}</dd>
 
 </dl>
@@ -5024,7 +5210,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned` or `SystemAssigned, UserAssigned` (to enable both).
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
 {{% /md %}}</dd>
 
 </dl>
@@ -5075,7 +5261,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned` or `SystemAssigned, UserAssigned` (to enable both).
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
 {{% /md %}}</dd>
 
 </dl>
@@ -5126,7 +5312,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned` or `SystemAssigned, UserAssigned` (to enable both).
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
 {{% /md %}}</dd>
 
 </dl>
@@ -5177,7 +5363,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned` or `SystemAssigned, UserAssigned` (to enable both).
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
 {{% /md %}}</dd>
 
 </dl>

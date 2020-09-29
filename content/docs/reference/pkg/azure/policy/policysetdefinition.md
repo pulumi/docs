@@ -47,10 +47,11 @@ class MyStack : Stack
             {
                 new Azure.Policy.Inputs.PolicySetDefinitionPolicyDefinitionReferenceArgs
                 {
-                    Parameters = 
-                    {
-                        { "listOfAllowedLocations", "[parameters('allowedLocations')]" },
-                    },
+                    ParameterValues = @"    {
+      ""listOfAllowedLocations"": {""value"": ""[parameters('allowedLocations')]""}
+    }
+    
+",
                     PolicyDefinitionId = "/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988",
                 },
             },
@@ -81,9 +82,7 @@ func main() {
 			Parameters:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "    {\n", "        \"allowedLocations\": {\n", "            \"type\": \"Array\",\n", "            \"metadata\": {\n", "                \"description\": \"The list of allowed locations for resources.\",\n", "                \"displayName\": \"Allowed locations\",\n", "                \"strongType\": \"location\"\n", "            }\n", "        }\n", "    }\n", "\n")),
 			PolicyDefinitionReferences: policy.PolicySetDefinitionPolicyDefinitionReferenceArray{
 				&policy.PolicySetDefinitionPolicyDefinitionReferenceArgs{
-					Parameters: pulumi.StringMap{
-						"listOfAllowedLocations": pulumi.String("[parameters('allowedLocations')]"),
-					},
+					ParameterValues:    pulumi.String(fmt.Sprintf("%v%v%v%v", "    {\n", "      \"listOfAllowedLocations\": {\"value\": \"[parameters('allowedLocations')]\"}\n", "    }\n", "    \n")),
 					PolicyDefinitionId: pulumi.String("/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988"),
 				},
 			},
@@ -119,9 +118,11 @@ example = azure.policy.PolicySetDefinition("example",
 
 """,
     policy_definition_references=[azure.policy.PolicySetDefinitionPolicyDefinitionReferenceArgs(
-        parameters={
-            "listOfAllowedLocations": "[parameters('allowedLocations')]",
-        },
+        parameter_values="""    {
+      "listOfAllowedLocations": {"value": "[parameters('allowedLocations')]"}
+    }
+    
+""",
         policy_definition_id="/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988",
     )],
     policy_type="Custom")
@@ -149,9 +150,10 @@ const example = new azure.policy.PolicySetDefinition("example", {
     }
 `,
     policyDefinitionReferences: [{
-        parameters: {
-            listOfAllowedLocations: "[parameters('allowedLocations')]",
-        },
+        parameterValues: `    {
+      "listOfAllowedLocations": {"value": "[parameters('allowedLocations')]"}
+    }
+    `,
         policyDefinitionId: "/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988",
     }],
     policyType: "Custom",
@@ -1525,14 +1527,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="parametervalues_csharp">
+<a href="#parametervalues_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter values for the referenced policy rule. This field is a json object that allows you to assign parameters to this policy rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1565,14 +1578,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="parametervalues_go">
+<a href="#parametervalues_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter values for the referenced policy rule. This field is a json object that allows you to assign parameters to this policy rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1605,14 +1629,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="parametervalues_nodejs">
+<a href="#parametervalues_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter values for the referenced policy rule. This field is a json object that allows you to assign parameters to this policy rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1645,14 +1680,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="parameter_values_python">
+<a href="#parameter_values_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>values</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Parameter values for the referenced policy rule. This field is a json object that allows you to assign parameters to this policy rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
-{{% /md %}}</dd>
+    <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
