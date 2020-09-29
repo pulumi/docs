@@ -3,7 +3,7 @@ title: "Module types/output"
 title_tag: "Module types/output | Package @pulumi/wavefront | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/wavefront package."
-git_sha: "40e2bd2612b6acb96f115b09c3803af8a36543ae"
+git_sha: "78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa"
 block_external_search_index: true
 ---
 
@@ -34,19 +34,19 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="AlertTargetRoute" data-link-title="AlertTargetRoute">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L8">
         interface <strong>AlertTargetRoute</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AlertTargetRoute</span></code></pre>
 <h4 class="pdoc-member-header" id="AlertTargetRoute-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L9">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L9">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="AlertTargetRoute-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L13">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L13">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -54,19 +54,19 @@ block_external_search_index: true
 The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
 
 <h4 class="pdoc-member-header" id="AlertTargetRoute-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L14">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L14">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudIntegrationNewRelicMetricFilter" data-link-title="CloudIntegrationNewRelicMetricFilter">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L17">
         interface <strong>CloudIntegrationNewRelicMetricFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CloudIntegrationNewRelicMetricFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicMetricFilter-appName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L21">property <b>appName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L21">property <b>appName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -74,7 +74,7 @@ The notification method used for notification target. One of `WEBHOOK`, `EMAIL`,
 The name of a NewRelic App
 
 <h4 class="pdoc-member-header" id="CloudIntegrationNewRelicMetricFilter-metricFilterRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L25">property <b>metricFilterRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L25">property <b>metricFilterRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricFilterRegex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -82,14 +82,14 @@ The name of a NewRelic App
 A regular expression that a metric name must match (case-insensitively) in order to be ingested
 
 <h3 class="pdoc-module-header" id="DashboardParameterDetail" data-link-title="DashboardParameterDetail">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L28">
         interface <strong>DashboardParameterDetail</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardParameterDetail</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardParameterDetail-defaultValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L32">property <b>defaultValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L32">property <b>defaultValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -97,7 +97,7 @@ A regular expression that a metric name must match (case-insensitively) in order
 The default value of the parameter
 
 <h4 class="pdoc-member-header" id="DashboardParameterDetail-dynamicFieldType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L37">property <b>dynamicFieldType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L37">property <b>dynamicFieldType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicFieldType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -106,7 +106,7 @@ For `DYNAMIC` parameter types, the type of the field. Valid options are `SOURCE`
 `SOURCE_TAG`, `METRIC_NAME`, `TAG_KEY`, `MATCHING_SOURCE_TAG`
 
 <h4 class="pdoc-member-header" id="DashboardParameterDetail-hideFromView">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L41">property <b>hideFromView</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L41">property <b>hideFromView</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideFromView: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -114,7 +114,7 @@ For `DYNAMIC` parameter types, the type of the field. Valid options are `SOURCE`
 If `true` the parameter will only be shown on the edit view of the dashboard
 
 <h4 class="pdoc-member-header" id="DashboardParameterDetail-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L45">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L45">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -122,7 +122,7 @@ If `true` the parameter will only be shown on the edit view of the dashboard
 The label for the parameter
 
 <h4 class="pdoc-member-header" id="DashboardParameterDetail-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -130,7 +130,7 @@ The label for the parameter
 The name of the parameters
 
 <h4 class="pdoc-member-header" id="DashboardParameterDetail-parameterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L53">property <b>parameterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L53">property <b>parameterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -138,7 +138,7 @@ The name of the parameters
 The type of the parameter. `SIMPLE`, `LIST`, or `DYNAMIC`
 
 <h4 class="pdoc-member-header" id="DashboardParameterDetail-queryValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L57">property <b>queryValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L57">property <b>queryValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryValue?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -146,7 +146,7 @@ The type of the parameter. `SIMPLE`, `LIST`, or `DYNAMIC`
 For `DYNAMIC` parameter types, the query to execute to return values
 
 <h4 class="pdoc-member-header" id="DashboardParameterDetail-tagKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L61">property <b>tagKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L61">property <b>tagKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -154,7 +154,7 @@ For `DYNAMIC` parameter types, the query to execute to return values
 for `TAG_KEY` dynamic field types, the tag key to return
 
 <h4 class="pdoc-member-header" id="DashboardParameterDetail-valuesToReadableStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L66">property <b>valuesToReadableStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L66">property <b>valuesToReadableStrings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valuesToReadableStrings: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -163,14 +163,14 @@ A string->string map.  At least one of the keys must match the value of
 `defaultValue`
 
 <h3 class="pdoc-module-header" id="DashboardSection" data-link-title="DashboardSection">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L69">
         interface <strong>DashboardSection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardSection</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardSection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -178,7 +178,7 @@ A string->string map.  At least one of the keys must match the value of
 Name of this section
 
 <h4 class="pdoc-member-header" id="DashboardSection-rows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L77">property <b>rows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L77">property <b>rows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rows: <a href='#DashboardSectionRow'>DashboardSectionRow</a>[];</code></pre>
@@ -186,14 +186,14 @@ Name of this section
 See dashboard section rows
 
 <h3 class="pdoc-module-header" id="DashboardSectionRow" data-link-title="DashboardSectionRow">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L80">
         interface <strong>DashboardSectionRow</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardSectionRow</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardSectionRow-charts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L84">property <b>charts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L84">property <b>charts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>charts: <a href='#DashboardSectionRowChart'>DashboardSectionRowChart</a>[];</code></pre>
@@ -201,14 +201,14 @@ See dashboard section rows
 Charts in this section. See dashboard chart
 
 <h3 class="pdoc-module-header" id="DashboardSectionRowChart" data-link-title="DashboardSectionRowChart">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L87">
         interface <strong>DashboardSectionRowChart</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardSectionRowChart</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardSectionRowChart-chartSetting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L91">property <b>chartSetting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L91">property <b>chartSetting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>chartSetting: <a href='#DashboardSectionRowChartChartSetting'>DashboardSectionRowChartChartSetting</a>;</code></pre>
@@ -216,7 +216,7 @@ Charts in this section. See dashboard chart
 Chart settings. See chart settings
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChart-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L95">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L95">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -224,7 +224,7 @@ Chart settings. See chart settings
 Description of the chart
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChart-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L99">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L99">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -232,7 +232,7 @@ Description of the chart
 Name of the source
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChart-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L103">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L103">property <b>sources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sources: <a href='#DashboardSectionRowChartSource'>DashboardSectionRowChartSource</a>[];</code></pre>
@@ -240,7 +240,7 @@ Name of the source
 Query expression to plot on the chart. See chart source queries
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChart-summarization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L108">property <b>summarization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L108">property <b>summarization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>summarization: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -249,7 +249,7 @@ Summarization strategy for the chart. MEAN is default. Valid options are, `MEAN`
 `MEDIAN`, `MIN`, `MAX`, `SUM`, `COUNT`, `LAST`, `FIRST`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChart-units">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L112">property <b>units</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L112">property <b>units</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>units: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -257,14 +257,14 @@ Summarization strategy for the chart. MEAN is default. Valid options are, `MEAN`
 String to label the units of the chart on the Y-Axis
 
 <h3 class="pdoc-module-header" id="DashboardSectionRowChartChartSetting" data-link-title="DashboardSectionRowChartChartSetting">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L115">
         interface <strong>DashboardSectionRowChartChartSetting</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardSectionRowChartChartSetting</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-autoColumnTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L119">property <b>autoColumnTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L119">property <b>autoColumnTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoColumnTags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -272,7 +272,7 @@ String to label the units of the chart on the Y-Axis
 deprecated
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-columnTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L123">property <b>columnTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L123">property <b>columnTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>columnTags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -280,7 +280,7 @@ deprecated
 deprecated
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-customTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L127">property <b>customTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L127">property <b>customTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customTags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -288,7 +288,7 @@ deprecated
 For the tabular view, a list of point tags to display when using the `custom` tag display mode
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-expectedDataSpacing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L132">property <b>expectedDataSpacing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L132">property <b>expectedDataSpacing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expectedDataSpacing?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -297,7 +297,7 @@ Threshold (in seconds) for time delta between consecutive points in a series
 above which a dotted line will replace a solid in in line plots. Default 60
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-fixedLegendDisplayStats">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L136">property <b>fixedLegendDisplayStats</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L136">property <b>fixedLegendDisplayStats</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedLegendDisplayStats?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -305,7 +305,7 @@ above which a dotted line will replace a solid in in line plots. Default 60
 For a chart with a fixed legend, a list of statistics to display in the legend
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-fixedLegendEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L140">property <b>fixedLegendEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L140">property <b>fixedLegendEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedLegendEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -313,7 +313,7 @@ For a chart with a fixed legend, a list of statistics to display in the legend
 Whether to enable a fixed tabular legend adjacent to the chart
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-fixedLegendFilterField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L145">property <b>fixedLegendFilterField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L145">property <b>fixedLegendFilterField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedLegendFilterField?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -322,7 +322,7 @@ Statistic to use for determining whether a series is displayed on the fixed lege
 Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-fixedLegendFilterLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L149">property <b>fixedLegendFilterLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L149">property <b>fixedLegendFilterLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedLegendFilterLimit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -330,7 +330,7 @@ Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 Number of series to include in the fixed legend
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-fixedLegendFilterSort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L154">property <b>fixedLegendFilterSort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L154">property <b>fixedLegendFilterSort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedLegendFilterSort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -339,7 +339,7 @@ Whether to display `TOP` or `BOTTOM` ranked series in a fixed legend. Valid opti
 are `TOP`, and `BOTTOM`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-fixedLegendHideLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L158">property <b>fixedLegendHideLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L158">property <b>fixedLegendHideLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedLegendHideLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -347,7 +347,7 @@ are `TOP`, and `BOTTOM`
 deprecated
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-fixedLegendPosition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L163">property <b>fixedLegendPosition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L163">property <b>fixedLegendPosition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedLegendPosition?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -356,7 +356,7 @@ Where the fixed legend should be displayed with respect ot the chart.
 Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-fixedLegendUseRawStats">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L167">property <b>fixedLegendUseRawStats</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L167">property <b>fixedLegendUseRawStats</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedLegendUseRawStats?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -364,7 +364,7 @@ Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 If `true`, the legend uses non-summarized stats instead of summarized
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-groupBySource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L173">property <b>groupBySource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L173">property <b>groupBySource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupBySource?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -374,7 +374,7 @@ If `false`, each source is displayed in its own row.  if `true`, multiple metric
 columns in the same row
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-invertDynamicLegendHoverControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L178">property <b>invertDynamicLegendHoverControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L178">property <b>invertDynamicLegendHoverControl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invertDynamicLegendHoverControl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -383,7 +383,7 @@ Whether to disable the display of the floating legend (but
 reenable it when the ctrl-key is pressed)
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-lineType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L183">property <b>lineType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L183">property <b>lineType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lineType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -392,7 +392,7 @@ Plot interpolation type.  `linear` is default. Valid options are `linear`, `step
 `step-after`, `basis`, `cardinal`, `monotone`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-max">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L187">property <b>max</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L187">property <b>max</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>max?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -400,7 +400,7 @@ Plot interpolation type.  `linear` is default. Valid options are `linear`, `step
 Max value of the Y-axis. Set to null or leave blank for auto
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-min">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L191">property <b>min</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L191">property <b>min</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>min?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -408,7 +408,7 @@ Max value of the Y-axis. Set to null or leave blank for auto
 Min value of the Y-axis. Set to null or leave blank for auto
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-numTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L195">property <b>numTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L195">property <b>numTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numTags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -416,7 +416,7 @@ Min value of the Y-axis. Set to null or leave blank for auto
 For the tabular view, how many point tags to display
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-plainMarkdownContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L199">property <b>plainMarkdownContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L199">property <b>plainMarkdownContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plainMarkdownContent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -424,7 +424,7 @@ For the tabular view, how many point tags to display
 The markdown content for a Markdown display, in plain text.
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-showHosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L203">property <b>showHosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L203">property <b>showHosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>showHosts?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -432,7 +432,7 @@ The markdown content for a Markdown display, in plain text.
 For the tabular view, whether to display sources. Default is `true`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-showLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L207">property <b>showLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L207">property <b>showLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>showLabels?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -440,7 +440,7 @@ For the tabular view, whether to display sources. Default is `true`
 For the tabular view, whether to display labels. Default is `true`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-showRawValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L211">property <b>showRawValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L211">property <b>showRawValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>showRawValues?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -448,7 +448,7 @@ For the tabular view, whether to display labels. Default is `true`
 For the tabular view, whether to display raw values. Default is `false`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sortValuesDescending">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L215">property <b>sortValuesDescending</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L215">property <b>sortValuesDescending</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortValuesDescending?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -456,7 +456,7 @@ For the tabular view, whether to display raw values. Default is `false`
 For the tabular view, whether to display display values in descending order. Default is `false`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineDecimalPrecision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L219">property <b>sparklineDecimalPrecision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L219">property <b>sparklineDecimalPrecision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineDecimalPrecision?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -464,7 +464,7 @@ For the tabular view, whether to display display values in descending order. Def
 For the single stat view, the decimal precision of the displayed number
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineDisplayColor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L224">property <b>sparklineDisplayColor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L224">property <b>sparklineDisplayColor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineDisplayColor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -473,7 +473,7 @@ For the single stat view, the color of the displayed text (when not dynamically 
 Values should be in `rgba(,,,,)` format
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineDisplayFontSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L228">property <b>sparklineDisplayFontSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L228">property <b>sparklineDisplayFontSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineDisplayFontSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -481,7 +481,7 @@ Values should be in `rgba(,,,,)` format
 For the single stat view, the font size of the displayed text, in percent
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineDisplayHorizontalPosition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L233">property <b>sparklineDisplayHorizontalPosition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L233">property <b>sparklineDisplayHorizontalPosition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineDisplayHorizontalPosition?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -490,7 +490,7 @@ For the single stat view, the horizontal position of the displayed text.
 Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineDisplayPostfix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L237">property <b>sparklineDisplayPostfix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L237">property <b>sparklineDisplayPostfix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineDisplayPostfix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -498,7 +498,7 @@ Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 For the single stat view, a string to append to the displayed text
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineDisplayPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L241">property <b>sparklineDisplayPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L241">property <b>sparklineDisplayPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineDisplayPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -506,7 +506,7 @@ For the single stat view, a string to append to the displayed text
 For the single stat view, a string to add before the displayed text
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineDisplayValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L246">property <b>sparklineDisplayValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L246">property <b>sparklineDisplayValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineDisplayValueType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -515,7 +515,7 @@ For the single stat view, where to display the name of the query or the value of
 Valid options are `VALUE` or `LABEL`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineDisplayVerticalPosition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L250">property <b>sparklineDisplayVerticalPosition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L250">property <b>sparklineDisplayVerticalPosition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineDisplayVerticalPosition?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -523,7 +523,7 @@ Valid options are `VALUE` or `LABEL`
 deprecated
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineFillColor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L255">property <b>sparklineFillColor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L255">property <b>sparklineFillColor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineFillColor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -532,7 +532,7 @@ For the single stat view, the color of the background fill.  Values should be
 in `rgba(,,,,)`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineLineColor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L259">property <b>sparklineLineColor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L259">property <b>sparklineLineColor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineLineColor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -540,7 +540,7 @@ in `rgba(,,,,)`
 For the single stat view, the color of the line.  Values should be in `rgba(,,,,)` format
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L264">property <b>sparklineSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L264">property <b>sparklineSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -549,7 +549,7 @@ For the single stat view, This determines whether the sparkline of the statistic
 Valid options are `BACKGROUND`, `BOTTOM`, `NONE`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineValueColorMapApplyTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L269">property <b>sparklineValueColorMapApplyTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L269">property <b>sparklineValueColorMapApplyTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineValueColorMapApplyTo?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -558,7 +558,7 @@ For the single stat view, whether to apply dyunamic color settings to
 the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineValueColorMapColors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L274">property <b>sparklineValueColorMapColors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L274">property <b>sparklineValueColorMapColors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineValueColorMapColors?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -567,7 +567,7 @@ For the single stat view, A list of colors that differing query values map to.
 Must contain one more element than `sparklineValueColorMapValuesV2`. Values should be in `rgba(,,,,)`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineValueColorMapValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L278">property <b>sparklineValueColorMapValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L278">property <b>sparklineValueColorMapValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineValueColorMapValues?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -575,7 +575,7 @@ Must contain one more element than `sparklineValueColorMapValuesV2`. Values shou
 deprecated
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineValueColorMapValuesV2s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L283">property <b>sparklineValueColorMapValuesV2s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L283">property <b>sparklineValueColorMapValuesV2s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineValueColorMapValuesV2s?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -584,7 +584,7 @@ For the single stat view, a list of boundaries for mapping different
 query values to colors.  Must contain one less element than `sparklineValueColorMapColors`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineValueTextMapTexts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L288">property <b>sparklineValueTextMapTexts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L288">property <b>sparklineValueTextMapTexts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineValueTextMapTexts?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -593,7 +593,7 @@ For the single stat view, a list of display text values that different query
 values map to.  Must contain one more element than `sparklineValueTextMapThresholds`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-sparklineValueTextMapThresholds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L293">property <b>sparklineValueTextMapThresholds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L293">property <b>sparklineValueTextMapThresholds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sparklineValueTextMapThresholds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -602,7 +602,7 @@ For the single stat view, a list of threshold boundaries for
 mapping different query values to display text.  Must contain one less element than `sparklineValueTextMapText`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-stackType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L299">property <b>stackType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L299">property <b>stackType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -612,7 +612,7 @@ stacked from y=0. `expand` means normalized from 0 to 1.  `wiggle` means minimiz
 center the stream. Valid options are `zero`, `expand`, `wiggle`, `silhouette`, `bars`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-tagMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L304">property <b>tagMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L304">property <b>tagMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -621,7 +621,7 @@ For the tabular view, which mode to use to determine which point tags to display
 Valid options are `all`, `top`, or `custom`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-timeBasedColoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L308">property <b>timeBasedColoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L308">property <b>timeBasedColoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeBasedColoring?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -629,7 +629,7 @@ Valid options are `all`, `top`, or `custom`
 For x-y scatterplots, whether to color more recent points as darker than older points
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L316">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L316">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -641,7 +641,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 `top-k`, `status-list`, `histogram`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-windowSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L320">property <b>windowSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L320">property <b>windowSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -649,7 +649,7 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 Width, in minutes, of the time window to use for `last` windowing
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-windowing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L325">property <b>windowing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L325">property <b>windowing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowing?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -658,7 +658,7 @@ For the tabular view, whether to use the full time window for the query or the l
 Valid options are `full` or `last`
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-xmax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L329">property <b>xmax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L329">property <b>xmax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmax?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -666,7 +666,7 @@ Valid options are `full` or `last`
 For x-y scatterplots, max value for the X-axis. Set to null for auto
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-xmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L333">property <b>xmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L333">property <b>xmin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmin?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -674,7 +674,7 @@ For x-y scatterplots, max value for the X-axis. Set to null for auto
 For x-y scatterplots, min value for the X-axis. Set to null for auto
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-y0ScaleSiBy1024">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L337">property <b>y0ScaleSiBy1024</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L337">property <b>y0ScaleSiBy1024</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>y0ScaleSiBy1024?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -682,7 +682,7 @@ For x-y scatterplots, min value for the X-axis. Set to null for auto
 Whether to scale numerical magnitude labels for left Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-y0UnitAutoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L341">property <b>y0UnitAutoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L341">property <b>y0UnitAutoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>y0UnitAutoscaling?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -690,7 +690,7 @@ Whether to scale numerical magnitude labels for left Y-axis by 1024 in the IEC/B
 Whether to automatically adjust magnitude labels and units for the left Y-axis to favor smaller magnitudes and larger units
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-y1ScaleSiBy1024">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L345">property <b>y1ScaleSiBy1024</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L345">property <b>y1ScaleSiBy1024</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>y1ScaleSiBy1024?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -698,7 +698,7 @@ Whether to automatically adjust magnitude labels and units for the left Y-axis t
 Whether to scale numerical magnitude labels for right Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-y1UnitAutoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L349">property <b>y1UnitAutoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L349">property <b>y1UnitAutoscaling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>y1UnitAutoscaling?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -706,7 +706,7 @@ Whether to scale numerical magnitude labels for right Y-axis by 1024 in the IEC/
 Whether to automatically adjust magnitude labels and units for the right Y-axis to favor smaller magnitudes and larger units
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-y1Units">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L353">property <b>y1Units</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L353">property <b>y1Units</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>y1Units?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -714,7 +714,7 @@ Whether to automatically adjust magnitude labels and units for the right Y-axis 
 For plots with multiple Y-axes, units for right side Y-axis
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-y1max">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L357">property <b>y1max</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L357">property <b>y1max</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>y1max?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -722,7 +722,7 @@ For plots with multiple Y-axes, units for right side Y-axis
 For plots with multiple Y-axes, max value for the right side Y-axis. Set null for auto
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-y1min">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L361">property <b>y1min</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L361">property <b>y1min</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>y1min?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -730,7 +730,7 @@ For plots with multiple Y-axes, max value for the right side Y-axis. Set null fo
 For plots with multiple Y-axes, min value for the right side Y-axis. Set null for auto
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-ymax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L365">property <b>ymax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L365">property <b>ymax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ymax?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -738,7 +738,7 @@ For plots with multiple Y-axes, min value for the right side Y-axis. Set null fo
 For x-y scatterplots, max value for the Y-axis. Set to null for auto
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartChartSetting-ymin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L369">property <b>ymin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L369">property <b>ymin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ymin?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -746,14 +746,14 @@ For x-y scatterplots, max value for the Y-axis. Set to null for auto
 For x-y scatterplots, min value for the Y-axis. Set to null for auto
 
 <h3 class="pdoc-module-header" id="DashboardSectionRowChartSource" data-link-title="DashboardSectionRowChartSource">
-    <a href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L372">
+    <a href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L372">
         interface <strong>DashboardSectionRowChartSource</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardSectionRowChartSource</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartSource-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L376">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L376">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -761,7 +761,7 @@ For x-y scatterplots, min value for the Y-axis. Set to null for auto
 Whether the source is disabled
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartSource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L380">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L380">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -769,7 +769,7 @@ Whether the source is disabled
 Name of the source
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartSource-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L384">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L384">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -777,7 +777,7 @@ Name of the source
 Query expression to plot on the chart
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartSource-queryBuilderEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L388">property <b>queryBuilderEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L388">property <b>queryBuilderEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryBuilderEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -785,7 +785,7 @@ Query expression to plot on the chart
 Whether oir not this source line should have the query builder enabled
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartSource-scatterPlotSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L392">property <b>scatterPlotSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L392">property <b>scatterPlotSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scatterPlotSource?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -793,7 +793,7 @@ Whether oir not this source line should have the query builder enabled
 For scatter plots, does this query source the X-axis or the Y-axis, `X`, or `Y`.
 
 <h4 class="pdoc-member-header" id="DashboardSectionRowChartSource-sourceDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/40e2bd2612b6acb96f115b09c3803af8a36543ae/sdk/nodejs/types/output.ts#L396">property <b>sourceDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-wavefront/blob/78ed5abe35bb6d94d7b390cb92a745c4ba44c9fa/sdk/nodejs/types/output.ts#L396">property <b>sourceDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceDescription?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
