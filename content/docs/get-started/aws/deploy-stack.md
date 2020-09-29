@@ -97,7 +97,7 @@ $ pulumi stack output BucketName
 
 {{% /choosable %}}
 
-Running that command will print out the name of your bucket. If you are using a Pulumi managed backend, you can follow the Permalink displayed at the end of the CLI output. This will open the update in the Pulumi [Console](https://app.pulumi.com), where you can view the output as shown below and explore detailed information about your stack such as its activity, resources and configuration.
+Running that command will print out the name of your bucket. If you are using a Pulumi managed backend, you can follow the Permalink displayed at the end of the CLI output. This will open the update in the Pulumi [Console](https://app.pulumi.com), where you can view the output and explore detailed information about your stack such as its activity, resources and configuration.
 
 <img src="/images/getting-started/console-update.png">
 
