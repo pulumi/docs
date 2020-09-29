@@ -1,7 +1,5 @@
 ---
 meta_desc: Join Pulumi for Hacktoberfest and help us build open source integrations, automation and libraries.
-  learn more about cloud programming, infrastructure as code, and many other
-  topics.
 title: Hacktoberfest 2020
 subtitle: Help us build new open source capabilities for Pulumi
 unlisted: false
@@ -33,7 +31,7 @@ This year, Pulumi is participating in Hacktoberfest with three areas where the c
 ## How to get started
 
 1. **[Register](https://hacktoberfest.digitalocean.com)** on the Hacktoberfest site for access to get credit for your open source contributions.
-2. [**Join the Pulumi Community Slack** ](https://slack.pulumi.com)and head over to the #Hacktoberfest channel.
+2. [**Join the Pulumi Community Slack**](https://slack.pulumi.com)and head over to the #Hacktoberfest channel.
 3. **Recruit a team to work on your idea** - we'll pin a form on the #Hacktoberfest channel for you to register your team.
 4. **Start hacking** - The Pulumi team will share tutorials on this page to help you get started during the hackathon.
 
