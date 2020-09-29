@@ -2649,6 +2649,158 @@ in other resources that support group memberships. s</p>
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_wavefront.MaintenanceWindow">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_wavefront.</code><code class="sig-name descname">MaintenanceWindow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_time_in_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_tag_group_host_names_group_anded</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reason</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relevant_customer_tags</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relevant_host_names</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relevant_host_tags</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relevant_host_tags_anded</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time_in_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Wavefront Maintenance Window Resource. This allows maintenance windows to be created, updated, and deleted.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_wavefront</span> <span class="k">as</span> <span class="nn">wavefront</span>
+
+<span class="n">basic</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">MaintenanceWindow</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span>
+    <span class="n">end_time_in_seconds</span><span class="o">=</span><span class="mi">1601123456</span><span class="p">,</span>
+    <span class="n">reason</span><span class="o">=</span><span class="s2">&quot;Routine maintenance for 2020&quot;</span><span class="p">,</span>
+    <span class="n">relevant_host_names</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;my_hostname&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;my_other_hostname&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">start_time_in_seconds</span><span class="o">=</span><span class="mi">1600123456</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Routine maintenance&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>end_time_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – end time in seconds after 1 Jan 1970 GMT.</p></li>
+<li><p><strong>host_tag_group_host_names_group_anded</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, a source/host must be in ‘relevantHostNames’ and have tags matching the specification formed by ‘relevantHostTags’ and ‘relevantHostTagsAnded’ in order for this maintenance window to apply. If false, a source/host must either be in ‘relevantHostNames’ or match ‘relevantHostTags’ and ‘relevantHostTagsAnded’. Default: false</p></li>
+<li><p><strong>reason</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The reason for the maintenance window</p></li>
+<li><p><strong>relevant_customer_tags</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of alert tags whose matching alerts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevant_host_names is required.</p></li>
+<li><p><strong>relevant_host_names</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of source/host names that will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevant_host_names is required.</p></li>
+<li><p><strong>relevant_host_tags</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of source/host tags whose matching sources/hosts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevant_host_names is required.</p></li>
+<li><p><strong>relevant_host_tags_anded</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to AND source/host tags listed in relevantHostTags. If true, a source/host must contain all tags in order for the maintenance window to apply. If false, the tags are OR’ed, and a source/host must contain one of the tags. Default: false</p></li>
+<li><p><strong>start_time_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – start time in seconds after 1 Jan 1970 GMT.</p></li>
+<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of the maintenance window</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_time_in_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_tag_group_host_names_group_anded</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reason</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relevant_customer_tags</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relevant_host_names</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relevant_host_tags</span><span class="p">:</span> <span class="n">Union[List[Union[str, Awaitable[str], Output[T]]], Awaitable[List[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">relevant_host_tags_anded</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time_in_seconds</span><span class="p">:</span> <span class="n">Union[float, Awaitable[float], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_wavefront.maintenance_window.MaintenanceWindow<a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MaintenanceWindow resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>end_time_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – end time in seconds after 1 Jan 1970 GMT.</p></li>
+<li><p><strong>host_tag_group_host_names_group_anded</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, a source/host must be in ‘relevantHostNames’ and have tags matching the specification formed by ‘relevantHostTags’ and ‘relevantHostTagsAnded’ in order for this maintenance window to apply. If false, a source/host must either be in ‘relevantHostNames’ or match ‘relevantHostTags’ and ‘relevantHostTagsAnded’. Default: false</p></li>
+<li><p><strong>reason</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The reason for the maintenance window</p></li>
+<li><p><strong>relevant_customer_tags</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of alert tags whose matching alerts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevant_host_names is required.</p></li>
+<li><p><strong>relevant_host_names</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of source/host names that will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevant_host_names is required.</p></li>
+<li><p><strong>relevant_host_tags</strong> (<em>pulumi.Input</em><em>[</em><em>List</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of source/host tags whose matching sources/hosts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevant_host_names is required.</p></li>
+<li><p><strong>relevant_host_tags_anded</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to AND source/host tags listed in relevantHostTags. If true, a source/host must contain all tags in order for the maintenance window to apply. If false, the tags are OR’ed, and a source/host must contain one of the tags. Default: false</p></li>
+<li><p><strong>start_time_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – start time in seconds after 1 Jan 1970 GMT.</p></li>
+<li><p><strong>title</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of the maintenance window</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.end_time_in_seconds">
+<em class="property">property </em><code class="sig-name descname">end_time_in_seconds</code><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.end_time_in_seconds" title="Permalink to this definition">¶</a></dt>
+<dd><p>end time in seconds after 1 Jan 1970 GMT.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.host_tag_group_host_names_group_anded">
+<em class="property">property </em><code class="sig-name descname">host_tag_group_host_names_group_anded</code><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.host_tag_group_host_names_group_anded" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, a source/host must be in ‘relevantHostNames’ and have tags matching the specification formed by ‘relevantHostTags’ and ‘relevantHostTagsAnded’ in order for this maintenance window to apply. If false, a source/host must either be in ‘relevantHostNames’ or match ‘relevantHostTags’ and ‘relevantHostTagsAnded’. Default: false</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.reason">
+<em class="property">property </em><code class="sig-name descname">reason</code><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.reason" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reason for the maintenance window</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.relevant_customer_tags">
+<em class="property">property </em><code class="sig-name descname">relevant_customer_tags</code><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.relevant_customer_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of alert tags whose matching alerts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevant_host_names is required.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.relevant_host_names">
+<em class="property">property </em><code class="sig-name descname">relevant_host_names</code><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.relevant_host_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of source/host names that will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevant_host_names is required.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.relevant_host_tags">
+<em class="property">property </em><code class="sig-name descname">relevant_host_tags</code><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.relevant_host_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of source/host tags whose matching sources/hosts will be put into maintenance because of this maintenance window. At least one of relevant_customer_tags, relevant_host_tags, or relevant_host_names is required.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.relevant_host_tags_anded">
+<em class="property">property </em><code class="sig-name descname">relevant_host_tags_anded</code><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.relevant_host_tags_anded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to AND source/host tags listed in relevantHostTags. If true, a source/host must contain all tags in order for the maintenance window to apply. If false, the tags are OR’ed, and a source/host must contain one of the tags. Default: false</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.start_time_in_seconds">
+<em class="property">property </em><code class="sig-name descname">start_time_in_seconds</code><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.start_time_in_seconds" title="Permalink to this definition">¶</a></dt>
+<dd><p>start time in seconds after 1 Jan 1970 GMT.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.title">
+<em class="property">property </em><code class="sig-name descname">title</code><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>The title of the maintenance window</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_wavefront.MaintenanceWindow.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.MaintenanceWindow.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_wavefront.Provider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_wavefront.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">http_proxy</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the wavefront package. By default, resources use package-wide configuration
