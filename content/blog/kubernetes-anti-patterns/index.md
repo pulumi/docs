@@ -63,7 +63,7 @@ const nginxConfig = new k8s.core.v1.ConfigMap(appName, {
     metadata: { labels: appLabels },
     data: { "default.conf": fs.readFileSync("default.conf").toString() },
 });
-const nginxConfigName = nginxConfig.metadata.apply(m => m.name);
+const nginxConfigName = nginxConfig.metadata.name;
 
 // Deploy 1 nginx replica, mounting the configuration data into the nginx
 // container.
