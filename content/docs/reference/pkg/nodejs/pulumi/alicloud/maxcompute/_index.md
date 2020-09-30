@@ -3,7 +3,7 @@ title: "Module maxcompute"
 title_tag: "Module maxcompute | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "maxcompute"
 meta_desc: "Explore members of the maxcompute module in the @pulumi/alicloud package."
-git_sha: "ca4043b3a94508445af8216c347834b91e15036f"
+git_sha: "53a14196404e14d4db003ca4874e5c6735471578"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Project" data-link-title="Project">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L26">
         Resource <strong>Project</strong>
     </a>
 </h3>
@@ -56,7 +56,7 @@ const example = new alicloud.maxcompute.Project("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Project-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -70,7 +70,7 @@ Create a Project resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Project-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -81,14 +81,14 @@ Get an existing Project resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Project-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Project-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -99,7 +99,7 @@ Returns true if the given object is an instance of Project.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Project-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -108,7 +108,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Project-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -116,7 +116,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the maxcompute project.
 
 <h4 class="pdoc-member-header" id="Project-orderType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L61">property <b>orderType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L61">property <b>orderType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>orderType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ The name of the maxcompute project.
 The type of payment, only `PayAsYouGo` supported currently.
 
 <h4 class="pdoc-member-header" id="Project-specificationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L65">property <b>specificationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L65">property <b>specificationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>specificationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -132,7 +132,7 @@ The type of payment, only `PayAsYouGo` supported currently.
 The type of resource Specification, only `OdpsStandard` supported currently.
 
 <h4 class="pdoc-member-header" id="Project-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -144,7 +144,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ProjectArgs" data-link-title="ProjectArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L126">
         interface <strong>ProjectArgs</strong>
     </a>
 </h3>
@@ -154,7 +154,7 @@ deployments.
 The set of arguments for constructing a Project resource.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ The set of arguments for constructing a Project resource.
 The name of the maxcompute project.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-orderType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L134">property <b>orderType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L134">property <b>orderType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ The name of the maxcompute project.
 The type of payment, only `PayAsYouGo` supported currently.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-specificationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L138">property <b>specificationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L138">property <b>specificationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>specificationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ The type of payment, only `PayAsYouGo` supported currently.
 The type of resource Specification, only `OdpsStandard` supported currently.
 
 <h3 class="pdoc-module-header" id="ProjectState" data-link-title="ProjectState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L108">
         interface <strong>ProjectState</strong>
     </a>
 </h3>
@@ -188,7 +188,7 @@ The type of resource Specification, only `OdpsStandard` supported currently.
 Input properties used for looking up and filtering Project resources.
 
 <h4 class="pdoc-member-header" id="ProjectState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L112">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L112">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ Input properties used for looking up and filtering Project resources.
 The name of the maxcompute project.
 
 <h4 class="pdoc-member-header" id="ProjectState-orderType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L116">property <b>orderType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L116">property <b>orderType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ The name of the maxcompute project.
 The type of payment, only `PayAsYouGo` supported currently.
 
 <h4 class="pdoc-member-header" id="ProjectState-specificationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ca4043b3a94508445af8216c347834b91e15036f/sdk/nodejs/maxcompute/project.ts#L120">property <b>specificationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/53a14196404e14d4db003ca4874e5c6735471578/sdk/nodejs/maxcompute/project.ts#L120">property <b>specificationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>specificationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
