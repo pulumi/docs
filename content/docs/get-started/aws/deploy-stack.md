@@ -101,7 +101,6 @@ Running that command will print out the name of your bucket. If you are using a 
 
 <img src="/images/getting-started/console-update.png">
 
-
 Now that your bucket has been provisioned, let's modify the bucket to host a static website.
 
 {{< get-started-stepper >}}
