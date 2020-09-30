@@ -24,7 +24,7 @@ Explore the resources and functions of the oidc module in the Keycloak package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -35,7 +35,7 @@ Explore the resources and functions of the oidc module in the Keycloak package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Oidc.html" title="Pulumi.Keycloak.Oidc">Pulumi.Keycloak.Oidc</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/oidc?tab=doc#" title="keycloak/oidc">keycloak/oidc</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/oidc?tab=doc#" title="keycloak/oidc">keycloak/oidc</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/oidc/#" title="@pulumi/keycloak/oidc">@pulumi/keycloak/oidc</a></dd>

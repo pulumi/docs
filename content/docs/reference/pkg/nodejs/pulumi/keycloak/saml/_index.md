@@ -3,7 +3,7 @@ title: "Module saml"
 title_tag: "Module saml | Package @pulumi/keycloak | Node.js SDK"
 linktitle: "saml"
 meta_desc: "Explore members of the saml module in the @pulumi/keycloak package."
-git_sha: "4cf18b3420d44b48908d3b78052298738354daa4"
+git_sha: "745e7cfedbec5785145818bf820ccc5cd617990d"
 block_external_search_index: true
 ---
 
@@ -51,75 +51,42 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Client" data-link-title="Client">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L35">
         Resource <strong>Client</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Client</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 
-#### # keycloak.saml.Client
-
 Allows for creating and managing Keycloak clients that use the SAML protocol.
 
-Clients are entities that can use Keycloak for user authentication. Typically,
-clients are applications that redirect users to Keycloak for authentication
-in order to take advantage of Keycloak's user sessions for SSO.
+Clients are entities that can use Keycloak for user authentication. Typically, clients are applications that redirect users
+to Keycloak for authentication in order to take advantage of Keycloak's user sessions for SSO.
 
-##### Example Usage
+#### Example Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as fs from "fs";
 import * as keycloak from "@pulumi/keycloak";
+import * from "fs";
 
 const realm = new keycloak.Realm("realm", {
-    enabled: true,
     realm: "my-realm",
+    enabled: true,
 });
-const samlClient = new keycloak.saml.Client("saml_client", {
-    clientId: "test-saml-client",
-    includeAuthnStatement: true,
+const samlClient = new keycloak.saml.Client("samlClient", {
     realmId: realm.id,
-    signAssertions: true,
+    clientId: "saml-client",
     signDocuments: false,
-    signingCertificate: fs.readFileSync("saml-cert.pem", "utf-8"),
-    signingPrivateKey: fs.readFileSync("saml-key.pem", "utf-8"),
+    signAssertions: true,
+    includeAuthnStatement: true,
+    signingCertificate: fs.readFileSync("saml-cert.pem"),
+    signingPrivateKey: fs.readFileSync("saml-key.pem"),
 });
 ```
 
-##### Argument Reference
-
-The following arguments are supported:
-
-- `realmId` - (Required) The realm this client is attached to.
-- `clientId` - (Required) The unique ID of this client, referenced in the URI during authentication and in issued tokens.
-- `name` - (Optional) The display name of this client in the GUI.
-- `enabled` - (Optional) When false, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
-- `description` - (Optional) The description of this client in the GUI.
-- `includeAuthnStatement` - (Optional) When `true`, an `AuthnStatement` will be included in the SAML response.
-- `signDocuments` - (Optional) When `true`, the SAML document will be signed by Keycloak using the realm's private key.
-- `signAssertions` - (Optional) When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
-- `clientSignatureRequired` - (Optional) When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signingCertificate` and `signingPrivateKey`.
-- `forcePostBinding` - (Optional) When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
-- `frontChannelLogout` - (Optional) When `true`, this client will require a browser redirect in order to perform a logout.
-- `nameIdFormat` - (Optional) Sets the Name ID format for the subject.
-- `rootUrl` - (Optional) When specified, this value is prepended to all relative URLs.
-- `validRedirectUris` - (Optional) When specified, Keycloak will use this list to validate given Assertion Consumer URLs specified in the authentication request.
-- `baseUrl` - (Optional) When specified, this URL will be used whenever Keycloak needs to link to this client.
-- `masterSamlProcessingUrl` - (Optional) When specified, this URL will be used for all SAML requests.
-- `signingCertificate` - (Optional) If documents or assertions from the client are signed, this certificate will be used to verify the signature.
-- `signingPrivateKey` - (Optional) If documents or assertions from the client are signed, this private key will be used to verify the signature.
-- `idpInitiatedSsoUrlName` - (Optional) URL fragment name to reference client when you want to do IDP Initiated SSO.
-- `idpInitiatedSsoRelayState` - (Optional) Relay state you want to send with SAML request when you want to do IDP Initiated SSO.
-- `assertionConsumerPostUrl` - (Optional) SAML POST Binding URL for the client's assertion consumer service (login responses).
-- `assertionConsumerRedirectUrl` - (Optional) SAML Redirect Binding URL for the client's assertion consumer service (login responses).
-- `logoutServicePostBindingUrl` - (Optional) SAML POST Binding URL for the client's single logout service.
-- `logoutServiceRedirectBindingUrl` - (Optional) SAML Redirect Binding URL for the client's single logout service.
-- `fullScopeAllowed` - (Optional) - Allow to include all roles mappings in the access token
-
 <h4 class="pdoc-member-header" id="Client-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L124"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L178"> <b>constructor</b></a>
 </h4>
 
 
@@ -133,7 +100,7 @@ Create a Client resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Client-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -144,14 +111,14 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Client-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L68">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Client-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L89">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -162,72 +129,111 @@ Returns true if the given object is an instance of Client.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Client-assertionConsumerPostUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L96">property <b>assertionConsumerPostUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L66">property <b>assertionConsumerPostUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assertionConsumerPostUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+SAML POST Binding URL for the client's assertion consumer service (login responses).
+
 <h4 class="pdoc-member-header" id="Client-assertionConsumerRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L97">property <b>assertionConsumerRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L70">property <b>assertionConsumerRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assertionConsumerRedirectUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+SAML Redirect Binding URL for the client's assertion consumer service (login responses).
+
 <h4 class="pdoc-member-header" id="Client-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L98">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L74">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>baseUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+When specified, this URL will be used whenever Keycloak needs to link to this client.
+
 <h4 class="pdoc-member-header" id="Client-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L99">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L78">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The unique ID of this client, referenced in the URI during authentication and in issued tokens.
+
 <h4 class="pdoc-member-header" id="Client-clientSignatureRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L100">property <b>clientSignatureRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L82">property <b>clientSignatureRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSignatureRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signingCertificate` and `signingPrivateKey`.
+
 <h4 class="pdoc-member-header" id="Client-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L101">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L86">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The description of this client in the GUI.
+
 <h4 class="pdoc-member-header" id="Client-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L102">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L90">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+When false, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
+
 <h4 class="pdoc-member-header" id="Client-encryptAssertions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L103">property <b>encryptAssertions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L94">property <b>encryptAssertions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptAssertions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+
 <h4 class="pdoc-member-header" id="Client-encryptionCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L104">property <b>encryptionCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L98">property <b>encryptionCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptionCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+If assertions for the client are encrypted, this certificate will be used for encryption.
+
 <h4 class="pdoc-member-header" id="Client-forceNameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L105">property <b>forceNameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L102">property <b>forceNameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceNameIdFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Ignore requested NameID subject format and use the one defined in `nameIdFormat` instead.
+
 <h4 class="pdoc-member-header" id="Client-forcePostBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L106">property <b>forcePostBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L106">property <b>forcePostBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forcePostBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+
 <h4 class="pdoc-member-header" id="Client-frontChannelLogout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L107">property <b>frontChannelLogout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L110">property <b>frontChannelLogout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frontChannelLogout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, this client will require a browser redirect in order to perform a logout.
+
 <h4 class="pdoc-member-header" id="Client-fullScopeAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L108">property <b>fullScopeAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L114">property <b>fullScopeAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fullScopeAllowed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+- Allow to include all roles mappings in the access token
+
 <h4 class="pdoc-member-header" id="Client-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -236,82 +242,127 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Client-idpInitiatedSsoRelayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L109">property <b>idpInitiatedSsoRelayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L118">property <b>idpInitiatedSsoRelayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idpInitiatedSsoRelayState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Relay state you want to send with SAML request when you want to do IDP Initiated SSO.
+
 <h4 class="pdoc-member-header" id="Client-idpInitiatedSsoUrlName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L110">property <b>idpInitiatedSsoUrlName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L122">property <b>idpInitiatedSsoUrlName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idpInitiatedSsoUrlName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+URL fragment name to reference client when you want to do IDP Initiated SSO.
+
 <h4 class="pdoc-member-header" id="Client-includeAuthnStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L111">property <b>includeAuthnStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L126">property <b>includeAuthnStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>includeAuthnStatement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, an `AuthnStatement` will be included in the SAML response.
+
 <h4 class="pdoc-member-header" id="Client-logoutServicePostBindingUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L112">property <b>logoutServicePostBindingUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L130">property <b>logoutServicePostBindingUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logoutServicePostBindingUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+SAML POST Binding URL for the client's single logout service.
+
 <h4 class="pdoc-member-header" id="Client-logoutServiceRedirectBindingUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L113">property <b>logoutServiceRedirectBindingUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L134">property <b>logoutServiceRedirectBindingUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logoutServiceRedirectBindingUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+SAML Redirect Binding URL for the client's single logout service.
+
 <h4 class="pdoc-member-header" id="Client-masterSamlProcessingUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L114">property <b>masterSamlProcessingUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L138">property <b>masterSamlProcessingUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterSamlProcessingUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+When specified, this URL will be used for all SAML requests.
+
 <h4 class="pdoc-member-header" id="Client-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this client in the GUI.
+
 <h4 class="pdoc-member-header" id="Client-nameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L116">property <b>nameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L146">property <b>nameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nameIdFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Sets the Name ID format for the subject.
+
 <h4 class="pdoc-member-header" id="Client-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L117">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L150">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this client is attached to.
+
 <h4 class="pdoc-member-header" id="Client-rootUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L118">property <b>rootUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L154">property <b>rootUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rootUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+When specified, this value is prepended to all relative URLs.
+
 <h4 class="pdoc-member-header" id="Client-signAssertions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L119">property <b>signAssertions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L158">property <b>signAssertions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signAssertions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+
 <h4 class="pdoc-member-header" id="Client-signDocuments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L120">property <b>signDocuments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L162">property <b>signDocuments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signDocuments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+
 <h4 class="pdoc-member-header" id="Client-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L121">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L166">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signatureAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
+
 <h4 class="pdoc-member-header" id="Client-signingCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L122">property <b>signingCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L170">property <b>signingCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signingCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+If documents or assertions from the client are signed, this certificate will be used to verify the signature.
+
 <h4 class="pdoc-member-header" id="Client-signingPrivateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L123">property <b>signingPrivateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L174">property <b>signingPrivateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signingPrivateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+If documents or assertions from the client are signed, this private key will be used to verify the signature.
+
 <h4 class="pdoc-member-header" id="Client-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L68">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -320,19 +371,22 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Client-validRedirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L124">property <b>validRedirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L178">property <b>validRedirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validRedirectUris: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+When specified, Keycloak will use this list to validate given Assertion Consumer URLs specified in the authentication request.
+
 <h3 class="pdoc-module-header" id="ClientDefaultScope" data-link-title="ClientDefaultScope">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L7">
         Resource <strong>ClientDefaultScope</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientDefaultScope</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientDefaultScope-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L37"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L46"> <b>constructor</b></a>
 </h4>
 
 
@@ -346,7 +400,7 @@ Create a ClientDefaultScope resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScope-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -357,14 +411,14 @@ Get an existing ClientDefaultScope resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScope-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientDefaultScope-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -375,17 +429,23 @@ Returns true if the given object is an instance of ClientDefaultScope.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScope-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L35">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L38">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the client to attach default scopes to. Note that this is the unique ID of the client generated by Keycloak.
+
 <h4 class="pdoc-member-header" id="ClientDefaultScope-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L36">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L42">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
+
+An array of client scope names to attach to this client.
+
 <h4 class="pdoc-member-header" id="ClientDefaultScope-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -394,12 +454,15 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScope-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L37">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L46">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this client and scopes exists in.
+
 <h4 class="pdoc-member-header" id="ClientDefaultScope-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -408,14 +471,36 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientScope" data-link-title="ClientScope">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L29">
         Resource <strong>ClientScope</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientScope</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Allows for creating and managing Keycloak client scopes that can be attached to clients that use the SAML protocol.
+
+Client Scopes can be used to share common protocol and role mappings between multiple clients within a realm.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    realm: "my-realm",
+    enabled: true,
+});
+const samlClientScope = new keycloak.saml.ClientScope("samlClientScope", {
+    realmId: realm.id,
+    description: "This scope will map a user's group memberships to SAML assertion",
+    guiOrder: 1,
+});
+```
+
 <h4 class="pdoc-member-header" id="ClientScope-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L39"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -429,7 +514,7 @@ Create a ClientScope resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientScope-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -440,14 +525,14 @@ Get an existing ClientScope resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientScope-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientScope-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -458,22 +543,31 @@ Returns true if the given object is an instance of ClientScope.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientScope-consentScreenText">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L35">property <b>consentScreenText</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L60">property <b>consentScreenText</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>consentScreenText: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+When set, a consent screen will be displayed to users authenticating to clients with this scope attached. The consent screen will display the string value of this attribute.
+
 <h4 class="pdoc-member-header" id="ClientScope-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L36">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L64">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The description of this client scope in the GUI.
+
 <h4 class="pdoc-member-header" id="ClientScope-guiOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L37">property <b>guiOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L68">property <b>guiOrder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>guiOrder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Specify order of the client scope in GUI (such as in Consent page) as integer.
+
 <h4 class="pdoc-member-header" id="ClientScope-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -482,17 +576,23 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientScope-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this client scope in the GUI.
+
 <h4 class="pdoc-member-header" id="ClientScope-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L39">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L76">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this client scope belongs to.
+
 <h4 class="pdoc-member-header" id="ClientScope-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -501,76 +601,44 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IdentityProvider" data-link-title="IdentityProvider">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L37">
         Resource <strong>IdentityProvider</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>IdentityProvider</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 
-#### # keycloak.saml.IdentityProvider
+Allows for creating and managing SAML Identity Providers within Keycloak.
 
-Allows to create and manage SAML Identity Providers within Keycloak.
+SAML (Security Assertion Markup Language) identity providers allows users to authenticate through a third-party system using the SAML protocol.
 
-SAML (Security Assertion Markup Language) identity providers allows to authenticate through a third-party system, using SAML standard.
-
-##### Example Usage
+#### Example Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as keycloak from "@pulumi/keycloak";
 
-const realmIdentityProvider = new keycloak.saml.IdentityProvider("realm_identity_provider", {
-    alias: "my-idp",
-    backchannelSupported: true,
-    forceAuthn: true,
-    postBindingAuthnRequest: true,
-    postBindingLogout: true,
-    postBindingResponse: true,
+const realm = new keycloak.Realm("realm", {
     realm: "my-realm",
-    singleLogoutServiceUrl: "https://domain.com/adfs/ls/?wa=wsignout1.0",
+    enabled: true,
+});
+const realmSamlIdentityProvider = new keycloak.saml.IdentityProvider("realmSamlIdentityProvider", {
+    realm: realm.id,
+    alias: "my-saml-idp",
     singleSignOnServiceUrl: "https://domain.com/adfs/ls/",
+    singleLogoutServiceUrl: "https://domain.com/adfs/ls/?wa=wsignout1.0",
+    backchannelSupported: true,
+    postBindingResponse: true,
+    postBindingLogout: true,
+    postBindingAuthnRequest: true,
     storeToken: false,
     trustEmail: true,
+    forceAuthn: true,
 });
 ```
 
-##### Argument Reference
-
-The following arguments are supported:
-
-- `realm` - (Required) The name of the realm. This is unique across Keycloak.
-- `alias` - (Optional) The uniq name of identity provider.
-- `enabled` - (Optional) When false, users and clients will not be able to access this realm. Defaults to `true`.
-- `displayName` - (Optional) The display name for the realm that is shown when logging in to the admin console.
-- `storeToken` - (Optional) Enable/disable if tokens must be stored after authenticating users. Defaults to `true`.
-- `addReadTokenRoleOnCreate` - (Optional) Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role. Defaults to `false`.
-- `trustEmail` - (Optional) If enabled then email provided by this provider is not verified even if verification is enabled for the realm. Defaults to `false`.
-- `linkOnly` - (Optional) If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't want to allow login from the provider, but want to integrate with a provider. Defaults to `false`.
-- `hideOnLoginPage` - (Optional) If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
-- `firstBrokerLoginFlowAlias` - (Optional) Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
-- `postBrokerLoginFlowAlias` - (Optional) Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
-- `authenticateByDefault` - (Optional) Authenticate users by default. Defaults to `false`.
-
-#### SAML Configuration
-
-- `singleSignOnServiceUrl` - (Optional) The Url that must be used to send authentication requests (SAML AuthnRequest).
-- `singleLogoutServiceUrl` - (Optional) The Url that must be used to send logout requests.
-- `backchannelSupported` - (Optional) Does the external IDP support back-channel logout ?.
-- `nameIdPolicyFormat` - (Optional) Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
-- `postBindingResponse` - (Optional) Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
-- `postBindingAuthnRequest` - (Optional) Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-- `postBindingLogout` - (Optional) Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-- `wantAssertionsSigned` - (Optional) Indicates whether this service provider expects a signed Assertion.
-- `wantAssertionsEncrypted` - (Optional) Indicates whether this service provider expects an encrypted Assertion.
-- `forceAuthn` - (Optional) Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
-- `validateSignature` - (Optional) Enable/disable signature validation of SAML responses.
-- `signingCertificate` - (Optional) Signing Certificate.
-- `signatureAlgorithm` - (Optional) Signing Algorithm. Defaults to empty.
-- `xmlSignKeyInfoKeyNameTransformer` - (Optional) Sign Key Transformer. Defaults to empty.
-
 <h4 class="pdoc-member-header" id="IdentityProvider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L209"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L172"> <b>constructor</b></a>
 </h4>
 
 
@@ -584,7 +652,7 @@ Create a IdentityProvider resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L79">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -595,14 +663,14 @@ Get an existing IdentityProvider resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L69">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IdentityProvider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L90">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -613,80 +681,79 @@ Returns true if the given object is an instance of IdentityProvider.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-addReadTokenRoleOnCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L100">property <b>addReadTokenRoleOnCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L68">property <b>addReadTokenRoleOnCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addReadTokenRoleOnCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
+When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L104">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L72">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
+The unique name of identity provider.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-authenticateByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L108">property <b>authenticateByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L76">property <b>authenticateByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authenticateByDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Enable/disable authenticate users by default.
+Authenticate users by default. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-backchannelSupported">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L112">property <b>backchannelSupported</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L80">property <b>backchannelSupported</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backchannelSupported: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Does the external IDP support backchannel logout?
+Does the external IDP support back-channel logout ?.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L116">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L84">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Friendly name for Identity Providers.
+The display name for the realm that is shown when logging in to the admin console.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L120">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L88">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Enable/disable this identity provider.
+When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-firstBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L125">property <b>firstBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L92">property <b>firstBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firstBrokerLoginFlowAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
-that there is not yet existing Keycloak account linked with the authenticated identity provider account.
+Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-forceAuthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L129">property <b>forceAuthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L96">property <b>forceAuthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceAuthn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Require Force Authn.
+Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-hideOnLoginPage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L133">property <b>hideOnLoginPage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L100">property <b>hideOnLoginPage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideOnLoginPage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Hide On Login Page.
+If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -695,7 +762,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-internalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L137">property <b>internalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L104">property <b>internalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -703,75 +770,71 @@ deployments and may be missing (undefined) during planning phases.
 Internal Identity Provider Id
 
 <h4 class="pdoc-member-header" id="IdentityProvider-linkOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L142">property <b>linkOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L108">property <b>linkOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>linkOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
-want to allow login from the provider, but want to integrate with a provider
+When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-nameIdPolicyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L146">property <b>nameIdPolicyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L112">property <b>nameIdPolicyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nameIdPolicyFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Name ID Policy Format.
+Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-postBindingAuthnRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L150">property <b>postBindingAuthnRequest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L116">property <b>postBindingAuthnRequest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postBindingAuthnRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Post Binding Authn Request.
+Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-postBindingLogout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L154">property <b>postBindingLogout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L120">property <b>postBindingLogout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postBindingLogout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Post Binding Logout.
+Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-postBindingResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L158">property <b>postBindingResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L124">property <b>postBindingResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postBindingResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Post Binding Response.
+Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
 
 <h4 class="pdoc-member-header" id="IdentityProvider-postBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L165">property <b>postBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L128">property <b>postBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postBrokerLoginFlowAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
-additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
-you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
-authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
+Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-realm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L169">property <b>realm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L132">property <b>realm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Realm Name
+The name of the realm. This is unique across Keycloak.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L173">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L136">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signatureAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Signing Algorithm.
+Signing Algorithm. Defaults to empty.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-signingCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L177">property <b>signingCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L140">property <b>signingCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signingCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -779,39 +842,39 @@ Signing Algorithm.
 Signing Certificate.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-singleLogoutServiceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L181">property <b>singleLogoutServiceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L144">property <b>singleLogoutServiceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>singleLogoutServiceUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Logout URL.
+The Url that must be used to send logout requests.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-singleSignOnServiceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L185">property <b>singleSignOnServiceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L148">property <b>singleSignOnServiceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>singleSignOnServiceUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-SSO Logout URL.
+The Url that must be used to send authentication requests (SAML AuthnRequest).
 
 <h4 class="pdoc-member-header" id="IdentityProvider-storeToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L189">property <b>storeToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L152">property <b>storeToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storeToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Enable/disable if tokens must be stored after authenticating users.
+When `true`, tokens will be stored after authenticating users. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-trustEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L193">property <b>trustEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L156">property <b>trustEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>trustEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
+When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L69">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -820,7 +883,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-validateSignature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L197">property <b>validateSignature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L160">property <b>validateSignature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validateSignature: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -828,85 +891,70 @@ deployments.
 Enable/disable signature validation of SAML responses.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-wantAssertionsEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L201">property <b>wantAssertionsEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L164">property <b>wantAssertionsEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>wantAssertionsEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Want Assertions Encrypted.
+Indicates whether this service provider expects an encrypted Assertion.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-wantAssertionsSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L205">property <b>wantAssertionsSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L168">property <b>wantAssertionsSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>wantAssertionsSigned: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Want Assertions Signed.
+Indicates whether this service provider expects a signed Assertion.
 
 <h4 class="pdoc-member-header" id="IdentityProvider-xmlSignKeyInfoKeyNameTransformer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L209">property <b>xmlSignKeyInfoKeyNameTransformer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L172">property <b>xmlSignKeyInfoKeyNameTransformer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>xmlSignKeyInfoKeyNameTransformer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Sign Key Transformer.
+Sign Key Transformer. Defaults to empty.
 
 <h3 class="pdoc-module-header" id="UserAttributeProtocolMapper" data-link-title="UserAttributeProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L39">
         Resource <strong>UserAttributeProtocolMapper</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>UserAttributeProtocolMapper</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 
-#### # keycloak.saml.UserAttributeProtocolMapper
+Allows for creating and managing user attribute protocol mappers for SAML clients within Keycloak.
 
-Allows for creating and managing user attribute protocol mappers for
-SAML clients within Keycloak.
+SAML user attribute protocol mappers allow you to map custom attributes defined for a user within Keycloak to an attribute
+in a SAML assertion.
 
-SAML user attribute protocol mappers allow you to map custom attributes defined
-for a user within Keycloak to an attribute in a SAML assertion. Protocol mappers
-can be defined for a single client, or they can be defined for a client scope which
-can be shared between multiple different clients.
+Protocol mappers can be defined for a single client, or they can be defined for a client scope which can be shared between
+multiple different clients.
 
-##### Example Usage (Client)
+#### Example Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as keycloak from "@pulumi/keycloak";
 
 const realm = new keycloak.Realm("realm", {
-    enabled: true,
     realm: "my-realm",
+    enabled: true,
 });
-const samlClient = new keycloak.saml.Client("saml_client", {
-    clientId: "test-saml-client",
-    realmId: keycloak_realm_test.id,
+const samlClient = new keycloak.saml.Client("samlClient", {
+    realmId: keycloak_realm.test.id,
+    clientId: "saml-client",
 });
-const samlUserAttributeMapper = new keycloak.saml.UserAttributeProtocolMapper("saml_user_attribute_mapper", {
+const samlUserAttributeMapper = new keycloak.saml.UserAttributeProtocolMapper("samlUserAttributeMapper", {
+    realmId: keycloak_realm.test.id,
     clientId: samlClient.id,
-    realmId: keycloak_realm_test.id,
+    userAttribute: "displayName",
     samlAttributeName: "displayName",
     samlAttributeNameFormat: "Unspecified",
-    userAttribute: "displayName",
 });
 ```
 
-##### Argument Reference
-
-The following arguments are supported:
-
-- `realmId` - (Required) The realm this protocol mapper exists within.
-- `clientId` - (Required if `clientScopeId` is not specified) The SAML client this protocol mapper is attached to.
-- `clientScopeId` - (Required if `clientId` is not specified) The SAML client scope this protocol mapper is attached to.
-- `name` - (Required) The display name of this protocol mapper in the GUI.
-- `userAttribute` - (Required) The custom user attribute to map.
-- `friendlyName` - (Optional) An optional human-friendly name for this attribute.
-- `samlAttributeName` - (Required) The name of the SAML attribute.
-- `samlAttributeNameFormat` - (Required) The SAML attribute Name Format. Can be one of `Unspecified`, `Basic`, or `URI Reference`.
-
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -920,7 +968,7 @@ Create a UserAttributeProtocolMapper resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -931,14 +979,14 @@ Get an existing UserAttributeProtocolMapper resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L54">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -949,22 +997,31 @@ Returns true if the given object is an instance of UserAttributeProtocolMapper. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L82">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L70">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L83">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L74">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L84">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L78">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>friendlyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+An optional human-friendly name for this attribute.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -973,27 +1030,39 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this protocol mapper in the GUI.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L86">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L86">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this protocol mapper exists within.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-samlAttributeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L87">property <b>samlAttributeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L90">property <b>samlAttributeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>samlAttributeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the SAML attribute.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-samlAttributeNameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L88">property <b>samlAttributeNameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L94">property <b>samlAttributeNameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>samlAttributeNameFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The SAML attribute Name Format. Can be one of `Unspecified`, `Basic`, or `URI Reference`.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L54">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1002,66 +1071,54 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-userAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L89">property <b>userAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L98">property <b>userAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The custom user attribute to map.
+
 <h3 class="pdoc-module-header" id="UserPropertyProtocolMapper" data-link-title="UserPropertyProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L39">
         Resource <strong>UserPropertyProtocolMapper</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>UserPropertyProtocolMapper</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 
-#### # keycloak.saml.UserPropertyProtocolMapper
-
-Allows for creating and managing user property protocol mappers for
-SAML clients within Keycloak.
+Allows for creating and managing user property protocol mappers for SAML clients within Keycloak.
 
 SAML user property protocol mappers allow you to map properties of the Keycloak
-user model to an attribute in a SAML assertion. Protocol mappers
-can be defined for a single client, or they can be defined for a client scope which
-can be shared between multiple different clients.
+user model to an attribute in a SAML assertion.
 
-##### Example Usage (Client)
+Protocol mappers can be defined for a single client, or they can be defined for a client scope which can be shared between
+multiple different clients.
+
+#### Example Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as keycloak from "@pulumi/keycloak";
 
 const realm = new keycloak.Realm("realm", {
-    enabled: true,
     realm: "my-realm",
+    enabled: true,
 });
-const samlClient = new keycloak.saml.Client("saml_client", {
-    clientId: "test-saml-client",
-    realmId: keycloak_realm_test.id,
+const samlClient = new keycloak.saml.Client("samlClient", {
+    realmId: keycloak_realm.test.id,
+    clientId: "saml-client",
 });
-const samlUserPropertyMapper = new keycloak.saml.UserPropertyProtocolMapper("saml_user_property_mapper", {
+const samlUserPropertyMapper = new keycloak.saml.UserPropertyProtocolMapper("samlUserPropertyMapper", {
+    realmId: keycloak_realm.test.id,
     clientId: samlClient.id,
-    realmId: keycloak_realm_test.id,
+    userProperty: "email",
     samlAttributeName: "email",
     samlAttributeNameFormat: "Unspecified",
-    userProperty: "email",
 });
 ```
 
-##### Argument Reference
-
-The following arguments are supported:
-
-- `realmId` - (Required) The realm this protocol mapper exists within.
-- `clientId` - (Required if `clientScopeId` is not specified) The SAML client this protocol mapper is attached to.
-- `clientScopeId` - (Required if `clientId` is not specified) The SAML client scope this protocol mapper is attached to.
-- `name` - (Required) The display name of this protocol mapper in the GUI.
-- `userProperty` - (Required) The property of the Keycloak user model to map.
-- `friendlyName` - (Optional) An optional human-friendly name for this attribute.
-- `samlAttributeName` - (Required) The name of the SAML attribute.
-- `samlAttributeNameFormat` - (Required) The SAML attribute Name Format. Can be one of `Unspecified`, `Basic`, or `URI Reference`.
-
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -1075,7 +1132,7 @@ Create a UserPropertyProtocolMapper resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -1086,14 +1143,14 @@ Get an existing UserPropertyProtocolMapper resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L54">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1104,22 +1161,31 @@ Returns true if the given object is an instance of UserPropertyProtocolMapper.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L82">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L70">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L83">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L74">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L84">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L78">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>friendlyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+An optional human-friendly name for this attribute.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1128,27 +1194,39 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this protocol mapper in the GUI.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L86">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L86">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this protocol mapper exists within.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-samlAttributeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L87">property <b>samlAttributeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L90">property <b>samlAttributeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>samlAttributeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the SAML attribute.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-samlAttributeNameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L88">property <b>samlAttributeNameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L94">property <b>samlAttributeNameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>samlAttributeNameFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The SAML attribute Name Format. Can be one of `Unspecified`, `Basic`, or `URI Reference`.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L54">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1157,14 +1235,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-userProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L89">property <b>userProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L98">property <b>userProperty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userProperty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
+The property of the Keycloak user model to map.
+
+
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getClientInstallationProvider" data-link-title="getClientInstallationProvider">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L12">
         Function <strong>getClientInstallationProvider</strong>
     </a>
 </h3>
@@ -1173,9 +1254,12 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getClientInstallationProvider(args: <a href='#GetClientInstallationProviderArgs'>GetClientInstallationProviderArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetClientInstallationProviderResult'>GetClientInstallationProviderResult</a>&gt;</code></pre>
 
 
+This data source can be used to retrieve Installation Provider of a SAML Client.
+
+
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClientArgs" data-link-title="ClientArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L254">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L395">
         interface <strong>ClientArgs</strong>
     </a>
 </h3>
@@ -1185,152 +1269,239 @@ deployments.
 The set of arguments for constructing a Client resource.
 
 <h4 class="pdoc-member-header" id="ClientArgs-assertionConsumerPostUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L255">property <b>assertionConsumerPostUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L399">property <b>assertionConsumerPostUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assertionConsumerPostUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+SAML POST Binding URL for the client's assertion consumer service (login responses).
+
 <h4 class="pdoc-member-header" id="ClientArgs-assertionConsumerRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L256">property <b>assertionConsumerRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L403">property <b>assertionConsumerRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assertionConsumerRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+SAML Redirect Binding URL for the client's assertion consumer service (login responses).
+
 <h4 class="pdoc-member-header" id="ClientArgs-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L257">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L407">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When specified, this URL will be used whenever Keycloak needs to link to this client.
+
 <h4 class="pdoc-member-header" id="ClientArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L258">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L411">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The unique ID of this client, referenced in the URI during authentication and in issued tokens.
+
 <h4 class="pdoc-member-header" id="ClientArgs-clientSignatureRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L259">property <b>clientSignatureRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L415">property <b>clientSignatureRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSignatureRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signingCertificate` and `signingPrivateKey`.
+
 <h4 class="pdoc-member-header" id="ClientArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L260">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L419">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The description of this client in the GUI.
+
 <h4 class="pdoc-member-header" id="ClientArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L261">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L423">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When false, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
+
 <h4 class="pdoc-member-header" id="ClientArgs-encryptAssertions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L262">property <b>encryptAssertions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L427">property <b>encryptAssertions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptAssertions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+
 <h4 class="pdoc-member-header" id="ClientArgs-encryptionCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L263">property <b>encryptionCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L431">property <b>encryptionCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+If assertions for the client are encrypted, this certificate will be used for encryption.
+
 <h4 class="pdoc-member-header" id="ClientArgs-forceNameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L264">property <b>forceNameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L435">property <b>forceNameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceNameIdFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Ignore requested NameID subject format and use the one defined in `nameIdFormat` instead.
+
 <h4 class="pdoc-member-header" id="ClientArgs-forcePostBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L265">property <b>forcePostBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L439">property <b>forcePostBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forcePostBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+
 <h4 class="pdoc-member-header" id="ClientArgs-frontChannelLogout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L266">property <b>frontChannelLogout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L443">property <b>frontChannelLogout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frontChannelLogout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, this client will require a browser redirect in order to perform a logout.
+
 <h4 class="pdoc-member-header" id="ClientArgs-fullScopeAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L267">property <b>fullScopeAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L447">property <b>fullScopeAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullScopeAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+- Allow to include all roles mappings in the access token
+
 <h4 class="pdoc-member-header" id="ClientArgs-idpInitiatedSsoRelayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L268">property <b>idpInitiatedSsoRelayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L451">property <b>idpInitiatedSsoRelayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpInitiatedSsoRelayState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Relay state you want to send with SAML request when you want to do IDP Initiated SSO.
+
 <h4 class="pdoc-member-header" id="ClientArgs-idpInitiatedSsoUrlName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L269">property <b>idpInitiatedSsoUrlName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L455">property <b>idpInitiatedSsoUrlName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpInitiatedSsoUrlName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+URL fragment name to reference client when you want to do IDP Initiated SSO.
+
 <h4 class="pdoc-member-header" id="ClientArgs-includeAuthnStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L270">property <b>includeAuthnStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L459">property <b>includeAuthnStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeAuthnStatement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, an `AuthnStatement` will be included in the SAML response.
+
 <h4 class="pdoc-member-header" id="ClientArgs-logoutServicePostBindingUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L271">property <b>logoutServicePostBindingUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L463">property <b>logoutServicePostBindingUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logoutServicePostBindingUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+SAML POST Binding URL for the client's single logout service.
+
 <h4 class="pdoc-member-header" id="ClientArgs-logoutServiceRedirectBindingUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L272">property <b>logoutServiceRedirectBindingUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L467">property <b>logoutServiceRedirectBindingUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logoutServiceRedirectBindingUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+SAML Redirect Binding URL for the client's single logout service.
+
 <h4 class="pdoc-member-header" id="ClientArgs-masterSamlProcessingUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L273">property <b>masterSamlProcessingUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L471">property <b>masterSamlProcessingUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterSamlProcessingUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When specified, this URL will be used for all SAML requests.
+
 <h4 class="pdoc-member-header" id="ClientArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L274">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L475">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this client in the GUI.
+
 <h4 class="pdoc-member-header" id="ClientArgs-nameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L275">property <b>nameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L479">property <b>nameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameIdFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Sets the Name ID format for the subject.
+
 <h4 class="pdoc-member-header" id="ClientArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L276">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L483">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this client is attached to.
+
 <h4 class="pdoc-member-header" id="ClientArgs-rootUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L277">property <b>rootUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L487">property <b>rootUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When specified, this value is prepended to all relative URLs.
+
 <h4 class="pdoc-member-header" id="ClientArgs-signAssertions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L278">property <b>signAssertions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L491">property <b>signAssertions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signAssertions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+
 <h4 class="pdoc-member-header" id="ClientArgs-signDocuments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L279">property <b>signDocuments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L495">property <b>signDocuments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signDocuments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+
 <h4 class="pdoc-member-header" id="ClientArgs-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L280">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L499">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
+
 <h4 class="pdoc-member-header" id="ClientArgs-signingCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L281">property <b>signingCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L503">property <b>signingCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signingCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+If documents or assertions from the client are signed, this certificate will be used to verify the signature.
+
 <h4 class="pdoc-member-header" id="ClientArgs-signingPrivateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L282">property <b>signingPrivateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L507">property <b>signingPrivateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signingPrivateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+If documents or assertions from the client are signed, this private key will be used to verify the signature.
+
 <h4 class="pdoc-member-header" id="ClientArgs-validRedirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L283">property <b>validRedirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L511">property <b>validRedirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validRedirectUris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+When specified, Keycloak will use this list to validate given Assertion Consumer URLs specified in the authentication request.
+
 <h3 class="pdoc-module-header" id="ClientDefaultScopeArgs" data-link-title="ClientDefaultScopeArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L110">
         interface <strong>ClientDefaultScopeArgs</strong>
     </a>
 </h3>
@@ -1340,22 +1511,31 @@ The set of arguments for constructing a Client resource.
 The set of arguments for constructing a ClientDefaultScope resource.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopeArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L93">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L114">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the client to attach default scopes to. Note that this is the unique ID of the client generated by Keycloak.
+
 <h4 class="pdoc-member-header" id="ClientDefaultScopeArgs-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L94">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L118">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+An array of client scope names to attach to this client.
+
 <h4 class="pdoc-member-header" id="ClientDefaultScopeArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L95">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L122">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this client and scopes exists in.
+
 <h3 class="pdoc-module-header" id="ClientDefaultScopeState" data-link-title="ClientDefaultScopeState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L92">
         interface <strong>ClientDefaultScopeState</strong>
     </a>
 </h3>
@@ -1365,22 +1545,31 @@ The set of arguments for constructing a ClientDefaultScope resource.
 Input properties used for looking up and filtering ClientDefaultScope resources.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopeState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L84">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L96">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the client to attach default scopes to. Note that this is the unique ID of the client generated by Keycloak.
+
 <h4 class="pdoc-member-header" id="ClientDefaultScopeState-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L85">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L100">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+An array of client scope names to attach to this client.
+
 <h4 class="pdoc-member-header" id="ClientDefaultScopeState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientDefaultScope.ts#L86">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientDefaultScope.ts#L104">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this client and scopes exists in.
+
 <h3 class="pdoc-module-header" id="ClientScopeArgs" data-link-title="ClientScopeArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L146">
         interface <strong>ClientScopeArgs</strong>
     </a>
 </h3>
@@ -1390,32 +1579,47 @@ Input properties used for looking up and filtering ClientDefaultScope resources.
 The set of arguments for constructing a ClientScope resource.
 
 <h4 class="pdoc-member-header" id="ClientScopeArgs-consentScreenText">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L95">property <b>consentScreenText</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L150">property <b>consentScreenText</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consentScreenText?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When set, a consent screen will be displayed to users authenticating to clients with this scope attached. The consent screen will display the string value of this attribute.
+
 <h4 class="pdoc-member-header" id="ClientScopeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L96">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L154">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The description of this client scope in the GUI.
+
 <h4 class="pdoc-member-header" id="ClientScopeArgs-guiOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L97">property <b>guiOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L158">property <b>guiOrder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>guiOrder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+Specify order of the client scope in GUI (such as in Consent page) as integer.
+
 <h4 class="pdoc-member-header" id="ClientScopeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this client scope in the GUI.
+
 <h4 class="pdoc-member-header" id="ClientScopeArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L99">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L166">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this client scope belongs to.
+
 <h3 class="pdoc-module-header" id="ClientScopeState" data-link-title="ClientScopeState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L120">
         interface <strong>ClientScopeState</strong>
     </a>
 </h3>
@@ -1425,32 +1629,47 @@ The set of arguments for constructing a ClientScope resource.
 Input properties used for looking up and filtering ClientScope resources.
 
 <h4 class="pdoc-member-header" id="ClientScopeState-consentScreenText">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L84">property <b>consentScreenText</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L124">property <b>consentScreenText</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consentScreenText?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When set, a consent screen will be displayed to users authenticating to clients with this scope attached. The consent screen will display the string value of this attribute.
+
 <h4 class="pdoc-member-header" id="ClientScopeState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L85">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L128">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The description of this client scope in the GUI.
+
 <h4 class="pdoc-member-header" id="ClientScopeState-guiOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L86">property <b>guiOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L132">property <b>guiOrder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>guiOrder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+Specify order of the client scope in GUI (such as in Consent page) as integer.
+
 <h4 class="pdoc-member-header" id="ClientScopeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this client scope in the GUI.
+
 <h4 class="pdoc-member-header" id="ClientScopeState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/clientScope.ts#L88">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/clientScope.ts#L140">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this client scope belongs to.
+
 <h3 class="pdoc-module-header" id="ClientState" data-link-title="ClientState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L219">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L273">
         interface <strong>ClientState</strong>
     </a>
 </h3>
@@ -1460,152 +1679,239 @@ Input properties used for looking up and filtering ClientScope resources.
 Input properties used for looking up and filtering Client resources.
 
 <h4 class="pdoc-member-header" id="ClientState-assertionConsumerPostUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L220">property <b>assertionConsumerPostUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L277">property <b>assertionConsumerPostUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assertionConsumerPostUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+SAML POST Binding URL for the client's assertion consumer service (login responses).
+
 <h4 class="pdoc-member-header" id="ClientState-assertionConsumerRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L221">property <b>assertionConsumerRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L281">property <b>assertionConsumerRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assertionConsumerRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+SAML Redirect Binding URL for the client's assertion consumer service (login responses).
+
 <h4 class="pdoc-member-header" id="ClientState-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L222">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L285">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When specified, this URL will be used whenever Keycloak needs to link to this client.
+
 <h4 class="pdoc-member-header" id="ClientState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L223">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L289">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The unique ID of this client, referenced in the URI during authentication and in issued tokens.
+
 <h4 class="pdoc-member-header" id="ClientState-clientSignatureRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L224">property <b>clientSignatureRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L293">property <b>clientSignatureRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSignatureRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signingCertificate` and `signingPrivateKey`.
+
 <h4 class="pdoc-member-header" id="ClientState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L225">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L297">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The description of this client in the GUI.
+
 <h4 class="pdoc-member-header" id="ClientState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L226">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L301">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When false, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
+
 <h4 class="pdoc-member-header" id="ClientState-encryptAssertions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L227">property <b>encryptAssertions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L305">property <b>encryptAssertions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptAssertions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
+
 <h4 class="pdoc-member-header" id="ClientState-encryptionCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L228">property <b>encryptionCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L309">property <b>encryptionCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+If assertions for the client are encrypted, this certificate will be used for encryption.
+
 <h4 class="pdoc-member-header" id="ClientState-forceNameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L229">property <b>forceNameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L313">property <b>forceNameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceNameIdFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Ignore requested NameID subject format and use the one defined in `nameIdFormat` instead.
+
 <h4 class="pdoc-member-header" id="ClientState-forcePostBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L230">property <b>forcePostBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L317">property <b>forcePostBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forcePostBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
+
 <h4 class="pdoc-member-header" id="ClientState-frontChannelLogout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L231">property <b>frontChannelLogout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L321">property <b>frontChannelLogout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frontChannelLogout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, this client will require a browser redirect in order to perform a logout.
+
 <h4 class="pdoc-member-header" id="ClientState-fullScopeAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L232">property <b>fullScopeAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L325">property <b>fullScopeAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullScopeAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+- Allow to include all roles mappings in the access token
+
 <h4 class="pdoc-member-header" id="ClientState-idpInitiatedSsoRelayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L233">property <b>idpInitiatedSsoRelayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L329">property <b>idpInitiatedSsoRelayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpInitiatedSsoRelayState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Relay state you want to send with SAML request when you want to do IDP Initiated SSO.
+
 <h4 class="pdoc-member-header" id="ClientState-idpInitiatedSsoUrlName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L234">property <b>idpInitiatedSsoUrlName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L333">property <b>idpInitiatedSsoUrlName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpInitiatedSsoUrlName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+URL fragment name to reference client when you want to do IDP Initiated SSO.
+
 <h4 class="pdoc-member-header" id="ClientState-includeAuthnStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L235">property <b>includeAuthnStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L337">property <b>includeAuthnStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeAuthnStatement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, an `AuthnStatement` will be included in the SAML response.
+
 <h4 class="pdoc-member-header" id="ClientState-logoutServicePostBindingUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L236">property <b>logoutServicePostBindingUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L341">property <b>logoutServicePostBindingUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logoutServicePostBindingUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+SAML POST Binding URL for the client's single logout service.
+
 <h4 class="pdoc-member-header" id="ClientState-logoutServiceRedirectBindingUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L237">property <b>logoutServiceRedirectBindingUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L345">property <b>logoutServiceRedirectBindingUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logoutServiceRedirectBindingUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+SAML Redirect Binding URL for the client's single logout service.
+
 <h4 class="pdoc-member-header" id="ClientState-masterSamlProcessingUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L238">property <b>masterSamlProcessingUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L349">property <b>masterSamlProcessingUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterSamlProcessingUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When specified, this URL will be used for all SAML requests.
+
 <h4 class="pdoc-member-header" id="ClientState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L239">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L353">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this client in the GUI.
+
 <h4 class="pdoc-member-header" id="ClientState-nameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L240">property <b>nameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L357">property <b>nameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameIdFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Sets the Name ID format for the subject.
+
 <h4 class="pdoc-member-header" id="ClientState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L241">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L361">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this client is attached to.
+
 <h4 class="pdoc-member-header" id="ClientState-rootUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L242">property <b>rootUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L365">property <b>rootUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When specified, this value is prepended to all relative URLs.
+
 <h4 class="pdoc-member-header" id="ClientState-signAssertions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L243">property <b>signAssertions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L369">property <b>signAssertions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signAssertions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
+
 <h4 class="pdoc-member-header" id="ClientState-signDocuments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L244">property <b>signDocuments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L373">property <b>signDocuments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signDocuments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When `true`, the SAML document will be signed by Keycloak using the realm's private key.
+
 <h4 class="pdoc-member-header" id="ClientState-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L245">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L377">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
+
 <h4 class="pdoc-member-header" id="ClientState-signingCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L246">property <b>signingCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L381">property <b>signingCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signingCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+If documents or assertions from the client are signed, this certificate will be used to verify the signature.
+
 <h4 class="pdoc-member-header" id="ClientState-signingPrivateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L247">property <b>signingPrivateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L385">property <b>signingPrivateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signingPrivateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+If documents or assertions from the client are signed, this private key will be used to verify the signature.
+
 <h4 class="pdoc-member-header" id="ClientState-validRedirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/client.ts#L248">property <b>validRedirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/client.ts#L389">property <b>validRedirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validRedirectUris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+When specified, Keycloak will use this list to validate given Assertion Consumer URLs specified in the authentication request.
+
 <h3 class="pdoc-module-header" id="GetClientInstallationProviderArgs" data-link-title="GetClientInstallationProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L30">
         interface <strong>GetClientInstallationProviderArgs</strong>
     </a>
 </h3>
@@ -1615,22 +1921,31 @@ Input properties used for looking up and filtering Client resources.
 A collection of arguments for invoking getClientInstallationProvider.
 
 <h4 class="pdoc-member-header" id="GetClientInstallationProviderArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L28">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L34">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The ID of the SAML client. The `id` attribute of a `keycloakClient` resource should be used here.
+
 <h4 class="pdoc-member-header" id="GetClientInstallationProviderArgs-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L29">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L38">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The ID of the SAML installation provider. Could be one of `saml-idp-descriptor`, `keycloak-saml`, `saml-sp-descriptor`, `keycloak-saml-subsystem`, `mod-auth-mellon`, etc.
+
 <h4 class="pdoc-member-header" id="GetClientInstallationProviderArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L30">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L42">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The realm that the SAML client exists within.
+
 <h3 class="pdoc-module-header" id="GetClientInstallationProviderResult" data-link-title="GetClientInstallationProviderResult">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L48">
         interface <strong>GetClientInstallationProviderResult</strong>
     </a>
 </h3>
@@ -1640,12 +1955,12 @@ A collection of arguments for invoking getClientInstallationProvider.
 A collection of values returned by getClientInstallationProvider.
 
 <h4 class="pdoc-member-header" id="GetClientInstallationProviderResult-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L37">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L49">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientInstallationProviderResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1653,22 +1968,25 @@ A collection of values returned by getClientInstallationProvider.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClientInstallationProviderResult-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L42">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L54">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientInstallationProviderResult-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L43">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L55">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientInstallationProviderResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/getClientInstallationProvider.ts#L44">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/getClientInstallationProvider.ts#L59">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+(Computed) The returned document needed for SAML installation.
+
 <h3 class="pdoc-module-header" id="IdentityProviderArgs" data-link-title="IdentityProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L422">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L380">
         interface <strong>IdentityProviderArgs</strong>
     </a>
 </h3>
@@ -1678,148 +1996,143 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a IdentityProvider resource.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-addReadTokenRoleOnCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L426">property <b>addReadTokenRoleOnCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L384">property <b>addReadTokenRoleOnCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addReadTokenRoleOnCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
+When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L430">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L388">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
+The unique name of identity provider.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-authenticateByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L434">property <b>authenticateByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L392">property <b>authenticateByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticateByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable/disable authenticate users by default.
+Authenticate users by default. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-backchannelSupported">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L438">property <b>backchannelSupported</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L396">property <b>backchannelSupported</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backchannelSupported?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Does the external IDP support backchannel logout?
+Does the external IDP support back-channel logout ?.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L442">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L400">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Friendly name for Identity Providers.
+The display name for the realm that is shown when logging in to the admin console.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L446">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L404">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable/disable this identity provider.
+When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-firstBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L451">property <b>firstBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L408">property <b>firstBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
-that there is not yet existing Keycloak account linked with the authenticated identity provider account.
+Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-forceAuthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L455">property <b>forceAuthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L412">property <b>forceAuthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceAuthn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Require Force Authn.
+Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-hideOnLoginPage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L459">property <b>hideOnLoginPage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L416">property <b>hideOnLoginPage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideOnLoginPage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Hide On Login Page.
+If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-linkOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L464">property <b>linkOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L420">property <b>linkOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
-want to allow login from the provider, but want to integrate with a provider
+When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-nameIdPolicyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L468">property <b>nameIdPolicyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L424">property <b>nameIdPolicyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameIdPolicyFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Name ID Policy Format.
+Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-postBindingAuthnRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L472">property <b>postBindingAuthnRequest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L428">property <b>postBindingAuthnRequest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBindingAuthnRequest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Post Binding Authn Request.
+Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-postBindingLogout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L476">property <b>postBindingLogout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L432">property <b>postBindingLogout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBindingLogout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Post Binding Logout.
+Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-postBindingResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L480">property <b>postBindingResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L436">property <b>postBindingResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBindingResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Post Binding Response.
+Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-postBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L487">property <b>postBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L440">property <b>postBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
-additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
-you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
-authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
+Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-realm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L491">property <b>realm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L444">property <b>realm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Realm Name
+The name of the realm. This is unique across Keycloak.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L495">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L448">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Signing Algorithm.
+Signing Algorithm. Defaults to empty.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-signingCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L499">property <b>signingCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L452">property <b>signingCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signingCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1827,39 +2140,39 @@ Signing Algorithm.
 Signing Certificate.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-singleLogoutServiceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L503">property <b>singleLogoutServiceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L456">property <b>singleLogoutServiceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>singleLogoutServiceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Logout URL.
+The Url that must be used to send logout requests.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-singleSignOnServiceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L507">property <b>singleSignOnServiceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L460">property <b>singleSignOnServiceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>singleSignOnServiceUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-SSO Logout URL.
+The Url that must be used to send authentication requests (SAML AuthnRequest).
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-storeToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L511">property <b>storeToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L464">property <b>storeToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storeToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable/disable if tokens must be stored after authenticating users.
+When `true`, tokens will be stored after authenticating users. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-trustEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L515">property <b>trustEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L468">property <b>trustEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
+When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-validateSignature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L519">property <b>validateSignature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L472">property <b>validateSignature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validateSignature?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1867,31 +2180,31 @@ If enabled then email provided by this provider is not verified even if verifica
 Enable/disable signature validation of SAML responses.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-wantAssertionsEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L523">property <b>wantAssertionsEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L476">property <b>wantAssertionsEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wantAssertionsEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Want Assertions Encrypted.
+Indicates whether this service provider expects an encrypted Assertion.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-wantAssertionsSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L527">property <b>wantAssertionsSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L480">property <b>wantAssertionsSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wantAssertionsSigned?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Want Assertions Signed.
+Indicates whether this service provider expects a signed Assertion.
 
 <h4 class="pdoc-member-header" id="IdentityProviderArgs-xmlSignKeyInfoKeyNameTransformer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L531">property <b>xmlSignKeyInfoKeyNameTransformer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L484">property <b>xmlSignKeyInfoKeyNameTransformer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlSignKeyInfoKeyNameTransformer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Sign Key Transformer.
+Sign Key Transformer. Defaults to empty.
 
 <h3 class="pdoc-module-header" id="IdentityProviderState" data-link-title="IdentityProviderState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L303">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L266">
         interface <strong>IdentityProviderState</strong>
     </a>
 </h3>
@@ -1901,80 +2214,79 @@ Sign Key Transformer.
 Input properties used for looking up and filtering IdentityProvider resources.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-addReadTokenRoleOnCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L307">property <b>addReadTokenRoleOnCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L270">property <b>addReadTokenRoleOnCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addReadTokenRoleOnCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
+When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L311">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L274">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
+The unique name of identity provider.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-authenticateByDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L315">property <b>authenticateByDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L278">property <b>authenticateByDefault</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticateByDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable/disable authenticate users by default.
+Authenticate users by default. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-backchannelSupported">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L319">property <b>backchannelSupported</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L282">property <b>backchannelSupported</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backchannelSupported?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Does the external IDP support backchannel logout?
+Does the external IDP support back-channel logout ?.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L323">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L286">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Friendly name for Identity Providers.
+The display name for the realm that is shown when logging in to the admin console.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L327">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L290">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable/disable this identity provider.
+When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-firstBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L332">property <b>firstBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L294">property <b>firstBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
-that there is not yet existing Keycloak account linked with the authenticated identity provider account.
+Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-forceAuthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L336">property <b>forceAuthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L298">property <b>forceAuthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceAuthn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Require Force Authn.
+Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-hideOnLoginPage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L340">property <b>hideOnLoginPage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L302">property <b>hideOnLoginPage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideOnLoginPage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Hide On Login Page.
+If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-internalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L344">property <b>internalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L306">property <b>internalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1982,75 +2294,71 @@ Hide On Login Page.
 Internal Identity Provider Id
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-linkOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L349">property <b>linkOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L310">property <b>linkOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
-want to allow login from the provider, but want to integrate with a provider
+When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-nameIdPolicyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L353">property <b>nameIdPolicyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L314">property <b>nameIdPolicyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameIdPolicyFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Name ID Policy Format.
+Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-postBindingAuthnRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L357">property <b>postBindingAuthnRequest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L318">property <b>postBindingAuthnRequest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBindingAuthnRequest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Post Binding Authn Request.
+Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-postBindingLogout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L361">property <b>postBindingLogout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L322">property <b>postBindingLogout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBindingLogout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Post Binding Logout.
+Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-postBindingResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L365">property <b>postBindingResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L326">property <b>postBindingResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBindingResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Post Binding Response.
+Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-postBrokerLoginFlowAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L372">property <b>postBrokerLoginFlowAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L330">property <b>postBrokerLoginFlowAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postBrokerLoginFlowAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
-additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
-you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
-authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
+Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-realm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L376">property <b>realm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L334">property <b>realm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Realm Name
+The name of the realm. This is unique across Keycloak.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L380">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L338">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Signing Algorithm.
+Signing Algorithm. Defaults to empty.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-signingCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L384">property <b>signingCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L342">property <b>signingCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signingCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2058,39 +2366,39 @@ Signing Algorithm.
 Signing Certificate.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-singleLogoutServiceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L388">property <b>singleLogoutServiceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L346">property <b>singleLogoutServiceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>singleLogoutServiceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Logout URL.
+The Url that must be used to send logout requests.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-singleSignOnServiceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L392">property <b>singleSignOnServiceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L350">property <b>singleSignOnServiceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>singleSignOnServiceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-SSO Logout URL.
+The Url that must be used to send authentication requests (SAML AuthnRequest).
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-storeToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L396">property <b>storeToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L354">property <b>storeToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storeToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable/disable if tokens must be stored after authenticating users.
+When `true`, tokens will be stored after authenticating users. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-trustEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L400">property <b>trustEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L358">property <b>trustEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trustEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
+When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-validateSignature">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L404">property <b>validateSignature</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L362">property <b>validateSignature</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validateSignature?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2098,31 +2406,31 @@ If enabled then email provided by this provider is not verified even if verifica
 Enable/disable signature validation of SAML responses.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-wantAssertionsEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L408">property <b>wantAssertionsEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L366">property <b>wantAssertionsEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wantAssertionsEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Want Assertions Encrypted.
+Indicates whether this service provider expects an encrypted Assertion.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-wantAssertionsSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L412">property <b>wantAssertionsSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L370">property <b>wantAssertionsSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wantAssertionsSigned?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Want Assertions Signed.
+Indicates whether this service provider expects a signed Assertion.
 
 <h4 class="pdoc-member-header" id="IdentityProviderState-xmlSignKeyInfoKeyNameTransformer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/identityProvider.ts#L416">property <b>xmlSignKeyInfoKeyNameTransformer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/identityProvider.ts#L374">property <b>xmlSignKeyInfoKeyNameTransformer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlSignKeyInfoKeyNameTransformer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Sign Key Transformer.
+Sign Key Transformer. Defaults to empty.
 
 <h3 class="pdoc-module-header" id="UserAttributeProtocolMapperArgs" data-link-title="UserAttributeProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L195">
         interface <strong>UserAttributeProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -2132,47 +2440,71 @@ Sign Key Transformer.
 The set of arguments for constructing a UserAttributeProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L163">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L199">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L164">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L203">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L165">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L207">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional human-friendly name for this attribute.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L211">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this protocol mapper in the GUI.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L167">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L215">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this protocol mapper exists within.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-samlAttributeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L168">property <b>samlAttributeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L219">property <b>samlAttributeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samlAttributeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the SAML attribute.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-samlAttributeNameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L169">property <b>samlAttributeNameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L223">property <b>samlAttributeNameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samlAttributeNameFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The SAML attribute Name Format. Can be one of `Unspecified`, `Basic`, or `URI Reference`.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-userAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L170">property <b>userAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L227">property <b>userAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The custom user attribute to map.
+
 <h3 class="pdoc-module-header" id="UserAttributeProtocolMapperState" data-link-title="UserAttributeProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L157">
         interface <strong>UserAttributeProtocolMapperState</strong>
     </a>
 </h3>
@@ -2182,47 +2514,71 @@ The set of arguments for constructing a UserAttributeProtocolMapper resource.
 Input properties used for looking up and filtering UserAttributeProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L149">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L161">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L150">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L165">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L151">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L169">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional human-friendly name for this attribute.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L173">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this protocol mapper in the GUI.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L153">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L177">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this protocol mapper exists within.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-samlAttributeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L154">property <b>samlAttributeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L181">property <b>samlAttributeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samlAttributeName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the SAML attribute.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-samlAttributeNameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L155">property <b>samlAttributeNameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L185">property <b>samlAttributeNameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samlAttributeNameFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The SAML attribute Name Format. Can be one of `Unspecified`, `Basic`, or `URI Reference`.
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-userAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L156">property <b>userAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userAttributeProtocolMapper.ts#L189">property <b>userAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The custom user attribute to map.
+
 <h3 class="pdoc-module-header" id="UserPropertyProtocolMapperArgs" data-link-title="UserPropertyProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L195">
         interface <strong>UserPropertyProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -2232,47 +2588,71 @@ Input properties used for looking up and filtering UserAttributeProtocolMapper r
 The set of arguments for constructing a UserPropertyProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L163">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L199">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L164">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L203">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L165">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L207">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional human-friendly name for this attribute.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L211">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this protocol mapper in the GUI.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L167">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L215">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this protocol mapper exists within.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-samlAttributeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L168">property <b>samlAttributeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L219">property <b>samlAttributeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samlAttributeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the SAML attribute.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-samlAttributeNameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L169">property <b>samlAttributeNameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L223">property <b>samlAttributeNameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samlAttributeNameFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The SAML attribute Name Format. Can be one of `Unspecified`, `Basic`, or `URI Reference`.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-userProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L170">property <b>userProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L227">property <b>userProperty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userProperty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The property of the Keycloak user model to map.
+
 <h3 class="pdoc-module-header" id="UserPropertyProtocolMapperState" data-link-title="UserPropertyProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L157">
         interface <strong>UserPropertyProtocolMapperState</strong>
     </a>
 </h3>
@@ -2282,42 +2662,66 @@ The set of arguments for constructing a UserPropertyProtocolMapper resource.
 Input properties used for looking up and filtering UserPropertyProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L149">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L161">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L150">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L165">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L151">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L169">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional human-friendly name for this attribute.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L173">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name of this protocol mapper in the GUI.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L153">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L177">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The realm this protocol mapper exists within.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-samlAttributeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L154">property <b>samlAttributeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L181">property <b>samlAttributeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samlAttributeName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the SAML attribute.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-samlAttributeNameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L155">property <b>samlAttributeNameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L185">property <b>samlAttributeNameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samlAttributeNameFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The SAML attribute Name Format. Can be one of `Unspecified`, `Basic`, or `URI Reference`.
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-userProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/4cf18b3420d44b48908d3b78052298738354daa4/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L156">property <b>userProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/745e7cfedbec5785145818bf820ccc5cd617990d/sdk/nodejs/saml/userPropertyProtocolMapper.ts#L189">property <b>userProperty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The property of the Keycloak user model to map.
+

@@ -22,11 +22,11 @@ meta_desc: "Explore the CustomUserFederation resource of the Keycloak package, i
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/#pulumi_keycloak.CustomUserFederation">CustomUserFederation</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">provider_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/#pulumi_keycloak.CustomUserFederation">CustomUserFederation</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">provider_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#CustomUserFederation">NewCustomUserFederation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#CustomUserFederationArgs">CustomUserFederationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#CustomUserFederation">CustomUserFederation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#CustomUserFederation">NewCustomUserFederation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#CustomUserFederationArgs">CustomUserFederationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#CustomUserFederation">CustomUserFederation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -100,7 +100,7 @@ meta_desc: "Explore the CustomUserFederation resource of the Keycloak package, i
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -120,7 +120,7 @@ meta_desc: "Explore the CustomUserFederation resource of the Keycloak package, i
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#CustomUserFederationArgs">CustomUserFederationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#CustomUserFederationArgs">CustomUserFederationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -130,7 +130,7 @@ meta_desc: "Explore the CustomUserFederation resource of the Keycloak package, i
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -202,8 +202,7 @@ The CustomUserFederation resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the UserStorageProviderFactory
-interface
+    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the `UserStorageProviderFactory` interface.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -214,7 +213,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
+    <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -225,7 +224,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -235,7 +235,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The provider configuration handed over to your custom user federation provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -245,7 +246,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+    <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,7 +268,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+    <dd>{{% md %}}Must be set to the realms' `internal_id`  when it differs from the realm. This can happen when existing resources are imported into the state.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -278,7 +279,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd>
 
 </dl>
@@ -296,8 +297,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the UserStorageProviderFactory
-interface
+    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the `UserStorageProviderFactory` interface.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -308,7 +308,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
+    <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -319,7 +319,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -329,7 +330,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The provider configuration handed over to your custom user federation provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -339,7 +341,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+    <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,7 +363,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+    <dd>{{% md %}}Must be set to the realms' `internal_id`  when it differs from the realm. This can happen when existing resources are imported into the state.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -372,7 +374,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd>
 
 </dl>
@@ -390,8 +392,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the UserStorageProviderFactory
-interface
+    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the `UserStorageProviderFactory` interface.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -402,7 +403,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
+    <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -413,7 +414,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -423,7 +425,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The provider configuration handed over to your custom user federation provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -433,7 +436,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+    <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -455,7 +458,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+    <dd>{{% md %}}Must be set to the realms' `internal_id`  when it differs from the realm. This can happen when existing resources are imported into the state.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -466,7 +469,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd>
 
 </dl>
@@ -484,8 +487,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the UserStorageProviderFactory
-interface
+    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the `UserStorageProviderFactory` interface.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -496,7 +498,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
+    <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -507,7 +509,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -517,7 +520,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The provider configuration handed over to your custom user federation provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -527,7 +531,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+    <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -549,7 +553,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+    <dd>{{% md %}}Must be set to the realms' `internal_id`  when it differs from the realm. This can happen when existing resources are imported into the state.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -558,9 +562,9 @@ interface
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd>
 
 </dl>
@@ -662,11 +666,11 @@ Get an existing CustomUserFederation resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">provider_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomUserFederation</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">provider_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomUserFederation</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCustomUserFederation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#CustomUserFederationState">CustomUserFederationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#CustomUserFederation">CustomUserFederation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCustomUserFederation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#CustomUserFederationState">CustomUserFederationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#CustomUserFederation">CustomUserFederation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -784,7 +788,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -794,7 +799,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The provider configuration handed over to your custom user federation provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -804,7 +810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+    <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -826,7 +832,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+    <dd>{{% md %}}Must be set to the realms' `internal_id`  when it differs from the realm. This can happen when existing resources are imported into the state.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -837,7 +843,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -848,8 +854,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the UserStorageProviderFactory
-interface
+    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the `UserStorageProviderFactory` interface.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -860,7 +865,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
+    <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd>
 
 </dl>
@@ -878,7 +883,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -888,7 +894,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The provider configuration handed over to your custom user federation provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -898,7 +905,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+    <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -920,7 +927,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+    <dd>{{% md %}}Must be set to the realms' `internal_id`  when it differs from the realm. This can happen when existing resources are imported into the state.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -931,7 +938,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -942,8 +949,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the UserStorageProviderFactory
-interface
+    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the `UserStorageProviderFactory` interface.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -954,7 +960,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
+    <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd>
 
 </dl>
@@ -972,7 +978,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -982,7 +989,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The provider configuration handed over to your custom user federation provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -992,7 +1000,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+    <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1014,7 +1022,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+    <dd>{{% md %}}Must be set to the realms' `internal_id`  when it differs from the realm. This can happen when existing resources are imported into the state.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1025,7 +1033,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1036,8 +1044,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the UserStorageProviderFactory
-interface
+    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the `UserStorageProviderFactory` interface.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1048,7 +1055,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
+    <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd>
 
 </dl>
@@ -1066,7 +1073,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1076,7 +1084,8 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The provider configuration handed over to your custom user federation provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1086,7 +1095,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+    <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1108,7 +1117,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The parent_id of the generated component. will use realm_id if not specified.
+    <dd>{{% md %}}Must be set to the realms' `internal_id`  when it differs from the realm. This can happen when existing resources are imported into the state.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1117,9 +1126,9 @@ interface
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1130,8 +1139,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the UserStorageProviderFactory
-interface
+    <dd>{{% md %}}The unique ID of the custom provider, specified in the `getId` implementation for the `UserStorageProviderFactory` interface.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1142,7 +1150,7 @@ interface
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The realm (name) this provider will provide user federation for.
+    <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd>
 
 </dl>

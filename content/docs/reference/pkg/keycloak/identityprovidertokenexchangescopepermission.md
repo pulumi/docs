@@ -22,11 +22,11 @@ meta_desc: "Explore the IdentityProviderTokenExchangeScopePermission resource of
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission">IdentityProviderTokenExchangeScopePermission</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clients</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_keycloak/#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission">IdentityProviderTokenExchangeScopePermission</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermission">NewIdentityProviderTokenExchangeScopePermission</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermissionArgs">IdentityProviderTokenExchangeScopePermissionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermission">IdentityProviderTokenExchangeScopePermission</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermission">NewIdentityProviderTokenExchangeScopePermission</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermissionArgs">IdentityProviderTokenExchangeScopePermissionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermission">IdentityProviderTokenExchangeScopePermission</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -100,7 +100,7 @@ meta_desc: "Explore the IdentityProviderTokenExchangeScopePermission resource of
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -120,7 +120,7 @@ meta_desc: "Explore the IdentityProviderTokenExchangeScopePermission resource of
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermissionArgs">IdentityProviderTokenExchangeScopePermissionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermissionArgs">IdentityProviderTokenExchangeScopePermissionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -130,7 +130,7 @@ meta_desc: "Explore the IdentityProviderTokenExchangeScopePermission resource of
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -202,7 +202,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Ids of the clients for which a policy will be created and set on scope based token exchange permission
+    <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -213,7 +213,8 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alias of the identity provider.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -223,7 +224,8 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The realm that the identity provider exists in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -233,7 +235,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of policy that is created. At the moment only 'client' type is supported
+    <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -251,7 +253,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Ids of the clients for which a policy will be created and set on scope based token exchange permission
+    <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -262,7 +264,8 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alias of the identity provider.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -272,7 +275,8 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The realm that the identity provider exists in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -282,7 +286,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of policy that is created. At the moment only 'client' type is supported
+    <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -300,7 +304,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Ids of the clients for which a policy will be created and set on scope based token exchange permission
+    <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -311,7 +315,8 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alias of the identity provider.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -321,7 +326,8 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The realm that the identity provider exists in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -331,7 +337,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of policy that is created. At the moment only 'client' type is supported
+    <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -347,9 +353,9 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
 <a href="#clients_python" style="color: inherit; text-decoration: inherit;">clients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Ids of the clients for which a policy will be created and set on scope based token exchange permission
+    <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -360,7 +366,8 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alias of the identity provider.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -370,7 +377,8 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The realm that the identity provider exists in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -380,7 +388,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of policy that is created. At the moment only 'client' type is supported
+    <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -409,7 +417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource id representing the identity provider, this automatically created by keycloak
+    <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -420,7 +428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource server id representing the realm management client on which this permission is managed
+    <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -431,8 +439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Permission id representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id',
-this automatically created by keycloak, the policy id will be set on this permission
+    <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -453,8 +460,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
-the reference identity provider
+    <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -472,7 +478,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource id representing the identity provider, this automatically created by keycloak
+    <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -483,7 +489,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource server id representing the realm management client on which this permission is managed
+    <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -494,8 +500,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Permission id representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id',
-this automatically created by keycloak, the policy id will be set on this permission
+    <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -516,8 +521,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
-the reference identity provider
+    <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -535,7 +539,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource id representing the identity provider, this automatically created by keycloak
+    <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -546,7 +550,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource server id representing the realm management client on which this permission is managed
+    <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -557,8 +561,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Permission id representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id',
-this automatically created by keycloak, the policy id will be set on this permission
+    <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -579,8 +582,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
-the reference identity provider
+    <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -598,7 +600,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource id representing the identity provider, this automatically created by keycloak
+    <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -609,7 +611,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource server id representing the realm management client on which this permission is managed
+    <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -620,8 +622,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Permission id representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id',
-this automatically created by keycloak, the policy id will be set on this permission
+    <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -642,8 +643,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
-the reference identity provider
+    <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
 {{% /md %}}</dd>
 
 </dl>
@@ -666,11 +666,11 @@ Get an existing IdentityProviderTokenExchangeScopePermission resource's state wi
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_idp_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_resource_server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_token_exchange_scope_permission_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clients</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IdentityProviderTokenExchangeScopePermission</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_idp_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_resource_server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_token_exchange_scope_permission_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clients</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IdentityProviderTokenExchangeScopePermission</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIdentityProviderTokenExchangeScopePermission<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermissionState">IdentityProviderTokenExchangeScopePermissionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermission">IdentityProviderTokenExchangeScopePermission</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIdentityProviderTokenExchangeScopePermission<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermissionState">IdentityProviderTokenExchangeScopePermissionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#IdentityProviderTokenExchangeScopePermission">IdentityProviderTokenExchangeScopePermission</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -788,7 +788,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource id representing the identity provider, this automatically created by keycloak
+    <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -799,7 +799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource server id representing the realm management client on which this permission is managed
+    <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -810,8 +810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Permission id representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id',
-this automatically created by keycloak, the policy id will be set on this permission
+    <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -822,7 +821,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Ids of the clients for which a policy will be created and set on scope based token exchange permission
+    <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -833,8 +832,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
-the reference identity provider
+    <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -845,7 +843,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of policy that is created. At the moment only 'client' type is supported
+    <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -856,7 +854,8 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alias of the identity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -866,7 +865,8 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The realm that the identity provider exists in.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -883,7 +883,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource id representing the identity provider, this automatically created by keycloak
+    <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -894,7 +894,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource server id representing the realm management client on which this permission is managed
+    <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,8 +905,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Permission id representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id',
-this automatically created by keycloak, the policy id will be set on this permission
+    <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -917,7 +916,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Ids of the clients for which a policy will be created and set on scope based token exchange permission
+    <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -928,8 +927,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
-the reference identity provider
+    <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -940,7 +938,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of policy that is created. At the moment only 'client' type is supported
+    <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -951,7 +949,8 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alias of the identity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -961,7 +960,8 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The realm that the identity provider exists in.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -978,7 +978,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource id representing the identity provider, this automatically created by keycloak
+    <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -989,7 +989,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource server id representing the realm management client on which this permission is managed
+    <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1000,8 +1000,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Permission id representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id',
-this automatically created by keycloak, the policy id will be set on this permission
+    <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1012,7 +1011,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Ids of the clients for which a policy will be created and set on scope based token exchange permission
+    <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1023,8 +1022,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
-the reference identity provider
+    <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1035,7 +1033,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of policy that is created. At the moment only 'client' type is supported
+    <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1046,7 +1044,8 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alias of the identity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1056,7 +1055,8 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The realm that the identity provider exists in.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1073,7 +1073,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource id representing the identity provider, this automatically created by keycloak
+    <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1084,7 +1084,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource server id representing the realm management client on which this permission is managed
+    <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1095,8 +1095,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Permission id representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id',
-this automatically created by keycloak, the policy id will be set on this permission
+    <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1105,9 +1104,9 @@ this automatically created by keycloak, the policy id will be set on this permis
 <a href="#state_clients_python" style="color: inherit; text-decoration: inherit;">clients</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Ids of the clients for which a policy will be created and set on scope based token exchange permission
+    <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1118,8 +1117,7 @@ this automatically created by keycloak, the policy id will be set on this permis
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Policy id that will be set on the scope based token exchange permission automatically created by enabling permissions on
-the reference identity provider
+    <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1130,7 +1128,7 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of policy that is created. At the moment only 'client' type is supported
+    <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1141,7 +1139,8 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Alias of the identity provider.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1151,7 +1150,8 @@ the reference identity provider
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The realm that the identity provider exists in.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
