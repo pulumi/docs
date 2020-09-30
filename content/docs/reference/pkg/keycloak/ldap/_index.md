@@ -31,7 +31,7 @@ Explore the resources and functions of the ldap module in the Keycloak package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -42,7 +42,7 @@ Explore the resources and functions of the ldap module in the Keycloak package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Ldap.html" title="Pulumi.Keycloak.Ldap">Pulumi.Keycloak.Ldap</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/ldap?tab=doc#" title="keycloak/ldap">keycloak/ldap</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/ldap?tab=doc#" title="keycloak/ldap">keycloak/ldap</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/ldap/#" title="@pulumi/keycloak/ldap">@pulumi/keycloak/ldap</a></dd>

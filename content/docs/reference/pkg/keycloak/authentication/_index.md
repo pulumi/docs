@@ -26,7 +26,7 @@ Explore the resources and functions of the authentication module in the Keycloak
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -37,7 +37,7 @@ Explore the resources and functions of the authentication module in the Keycloak
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Authentication.html" title="Pulumi.Keycloak.Authentication">Pulumi.Keycloak.Authentication</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/authentication?tab=doc#" title="keycloak/authentication">keycloak/authentication</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/authentication?tab=doc#" title="keycloak/authentication">keycloak/authentication</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/authentication/#" title="@pulumi/keycloak/authentication">@pulumi/keycloak/authentication</a></dd>

@@ -62,7 +62,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -73,7 +73,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.html" title="Pulumi.Keycloak">Pulumi.Keycloak</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#" title="keycloak">keycloak</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#" title="keycloak">keycloak</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#" title="@pulumi/keycloak">@pulumi/keycloak</a></dd>
