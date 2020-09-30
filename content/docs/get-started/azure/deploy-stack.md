@@ -59,9 +59,7 @@ Duration: 26s
 
 The storage account's connection string that we exported is shown as a [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}).
 
- If you are using a Pulumi managed backend, you can follow the Permalink displayed at the end of the CLI output. This will open the update in the Pulumi [Console](https://app.pulumi.com), where you can view the output and explore detailed information about your stack such as its activity, resources and configuration.
-
-<img src="/images/getting-started/console-update.png">
+{{< console-note >}}
 
 Next, we'll make some modifications to the program.
 
