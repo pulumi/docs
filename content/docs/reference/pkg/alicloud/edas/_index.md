@@ -26,6 +26,7 @@ Explore the resources and functions of the edas module in the AliCloud package.
     <li><a href="getapplications" title="GetApplications"><span class="symbol function"></span>GetApplications</a></li>
     <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
     <li><a href="getdeploygroups" title="GetDeployGroups"><span class="symbol function"></span>GetDeployGroups</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,7 +38,7 @@ Explore the resources and functions of the edas module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.19.0</dd>
+	<dd>2.20.0</dd>
 </dl>
 
 

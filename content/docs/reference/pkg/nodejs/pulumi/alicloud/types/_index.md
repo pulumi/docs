@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/alicloud package."
-git_sha: "ca4043b3a94508445af8216c347834b91e15036f"
+git_sha: "53a14196404e14d4db003ca4874e5c6735471578"
 block_external_search_index: true
 ---
 

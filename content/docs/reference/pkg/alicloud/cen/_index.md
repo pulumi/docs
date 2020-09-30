@@ -21,6 +21,7 @@ Explore the resources and functions of the cen module in the AliCloud package.
     <li><a href="privatezone" title="PrivateZone"><span class="symbol resource"></span>PrivateZone</a></li>
     <li><a href="routeentry" title="RouteEntry"><span class="symbol resource"></span>RouteEntry</a></li>
     <li><a href="routemap" title="RouteMap"><span class="symbol resource"></span>RouteMap</a></li>
+    <li><a href="routeservice" title="RouteService"><span class="symbol resource"></span>RouteService</a></li>
     <li><a href="vbrhealthcheck" title="VbrHealthCheck"><span class="symbol resource"></span>VbrHealthCheck</a></li>
 </ul>
 
@@ -47,7 +48,7 @@ Explore the resources and functions of the cen module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.19.0</dd>
+	<dd>2.20.0</dd>
 </dl>
 
 
