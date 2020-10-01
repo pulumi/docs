@@ -4,7 +4,7 @@ date: 2020-10-01
 meta_desc: "Discover the next evolution for building cloud infrastructure."
 meta_image: cloud_engineering.png
 authors:
-    - sophia-parafina
+    - joe-duffy
 tags:
     - infrastructure as code
     - policy as code
@@ -58,6 +58,8 @@ This month, Pulumi is launching the first-ever Cloud Engineering Summit, in part
 The summit brings together cloud engineering leaders and practitioners to share best practices and end-user stories on a broad range of topics with over 23 sessions and 40+ speakers This summit will equip you and your organization to achieve the next level of cloud velocity, innovating faster than ever before, informed and inspired by real-world expertise.
 
 Here is just a sample of the sessions that you don't want to miss:
+
+
 
 <div style="clear:both;">
     <div style="float:left;clear:both;border-width:2px;">
@@ -158,18 +160,6 @@ Here is just a sample of the sessions that you don't want to miss:
             <b>Managing Your Cloud Application and Infrastructure Deployments in One CI/CD Pipeline</b>
             <ul style="list-style-type:none;">
                 <li>Nenne Adaora (Adora) Nwodo, Software Engineer, Microsoft</li>
-            </ul>
-        </div>
-    </span>
-</div>
-
-<div style="display:inline-block;vertical-align:top;">
-    <span>
-        <img src="charity-majors.jpg" alt="img" style="float:left;display:inline;clear:both;width:100px;height:100px;postion:absolute;border-width:2px;"/>
-        <div style="padding-left:120px;padding-top:5px;padding-bottom:70px;">
-            <b>Testing in Production</b>
-            <ul style="list-style-type:none;">
-                <li>Charity Majors CTO and Co-founder, Honeycomb</li>
             </ul>
         </div>
     </span>
