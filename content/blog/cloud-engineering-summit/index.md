@@ -61,8 +61,8 @@ Here is just a sample of the sessions that you don't want to miss:
 
 <div style="clear:both;">
     <div style="float:left;clear:both;border-width:2px;">
-        <div style="display:inline-block;vertical-align:top;">
-            <div style="float:left;">
+        <div style="display:inline-block;vertical-align:top;padding-rigt:2px;">
+            <div style="float:left;;">
                 <img src="joe-beda.jpeg" alt="Joe Beda" style="float:left;width:100px;height:100px;"/>
             </div>
             <div style="padding-top:105px;">
@@ -92,7 +92,7 @@ Here is just a sample of the sessions that you don't want to miss:
 
 <div style="clear:both;padding-top:20px;">
     <div style="float:left;border-width:2px;">
-        <div style="display:inline-block;vertical-align:top;">
+        <div style="display:inline-block;vertical-align:top;padding-rigt:2px;">
             <div style="float:left;">
                 <img src="maya-kaczorowski.jpeg" alt="img" style="float:left;width:100px;height:100px;"/>
             </div>
@@ -122,7 +122,7 @@ Here is just a sample of the sessions that you don't want to miss:
 
 <div style="clear:both;padding-top:20px;">
     <div style="float:left;border-width:2px;">
-        <div style="display:inline-block;vertical-align:top;">
+        <div style="display:inline-block;vertical-align:top;padding-rigt:2px;">
             <div style="float:left;">
                 <img src="abby-kearns.jpeg" alt="img" style="float:left;width:100px;height:100px;"/>
             </div>
